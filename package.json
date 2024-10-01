@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
     "cnbuilder": "^3.1.0",
     "next": "14.2.14",
     "react": "^18",
