@@ -23,7 +23,7 @@ export const TimelineBanner = ({
   ...props
 }: TimelineBannerProps) => (
   <Container {...props} as="section" bgColor="red-gradient" width="site" py={9} className={styles.root}>
-    <FlexBox alignItems="start" justifyContent="between" className={styles.wrapper}>
+    <FlexBox alignItems="start" justifyContent="between" gap className={styles.wrapper}>
       {imageSrc && (
         <div className={styles.imageWrapper}>
           <img
