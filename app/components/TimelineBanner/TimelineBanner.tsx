@@ -19,7 +19,7 @@ export const TimelineBanner = ({
   superhead,
   body,
   cta,
-  imageSrc="https://placecats.com/neo/600/600",
+  imageSrc='https://placecats.com/neo/600/600',
   ...props
 }: TimelineBannerProps) => (
   <Container {...props} as="section" bgColor="red-gradient" width="site" py={9} className={styles.root}>
