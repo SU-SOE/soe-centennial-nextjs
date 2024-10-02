@@ -14,7 +14,7 @@ export type TypographyProps = {
   variant?: types.TextVariantType;
   leading?: types.FontLeadingType;
   /**
-   * If true, use default tracking for the font - for Druk and Druk Wide
+   * If true, use default tracking for the font - for DM Sans
    */
   useDefaultTracking?: boolean;
   italic?: boolean;
@@ -38,10 +38,10 @@ export const Text = ({
   color = 'default',
   variant,
   leading,
-  useDefaultTracking = font === 'druk-wide',
+  useDefaultTracking = font === 'ds-sans',
   italic,
   srOnly,
-  uppercase = font === 'druk',
+  uppercase = font === 'ds-sans',
   icon,
   iconProps,
   className,
@@ -66,7 +66,7 @@ export const Text = ({
           srOnly ? 'sr-only' : '',
           uppercase ? 'uppercase' : '',
           useDefaultTracking ? 'tracking-normal' : '',
-          font === 'druk' ? 'tracking-normal sm:tracking-wide' : '',
+          font === 'ds-sans' ? 'tracking-normal sm:tracking-wide' : '',
           className,
         )
       }

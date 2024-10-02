@@ -1,21 +1,20 @@
 import './globals.css';
 import localFont from 'next/font/local';
-import { Source_Sans_3, Source_Serif_4 } from 'next/font/google';
+import { Source_Sans_3, DM_Sans } from 'next/font/google';
 import { cnb } from 'cnbuilder';
 
+const dm_sans = DM_Sans({
+  subsets: ['latin'],
+  style: ['italic','normal'],
+  display: 'swap',
+  variable: '--font-dm-sans',
+});
 
 const source_sans = Source_Sans_3({
   subsets: ['latin'],
   style: ['italic','normal'],
   display: 'swap',
   variable: '--font-source-sans',
-});
-
-const source_serif = Source_Serif_4({
-  subsets: ['latin'],
-  style: ['italic','normal'],
-  display: 'swap',
-  variable: '--font-source-serif',
 });
 
 const stanford = localFont({
@@ -33,8 +32,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cnb(
+          dm_sans.variable,
           source_sans.variable,
-          source_serif.variable,
           stanford.variable,
         )}
       >
