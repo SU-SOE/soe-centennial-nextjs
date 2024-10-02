@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint \"{components,utilities}/**/*.{ts,tsx,js,jsx}\" --quiet --fix",
+    "typecheck": "tsc --noEmit",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
