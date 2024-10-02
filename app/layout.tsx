@@ -1,5 +1,5 @@
-import "./globals.css";
-import localFont from "next/font/local";
+import './globals.css';
+import localFont from 'next/font/local';
 import { Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import { cnb } from 'cnbuilder';
 
