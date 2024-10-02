@@ -2,8 +2,8 @@ import { TimelineBanner } from './components/TimelineBanner';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <TimelineBanner />
+    <div>
+      <TimelineBanner heading='Headline lorem ipsum dolar sit' superhead='1983' body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim." />
     </div>
   );
 }
