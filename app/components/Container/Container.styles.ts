@@ -8,5 +8,5 @@ export const bgColors = {
   black: 'bg--black text-white',
   white: 'bg-white text-black',
   'fog-light': 'bg-fog-light text-black',
-  'red-gradient': 'bg-soe-red-gradient text-white'
+  'red-gradient': 'bg-soe-red-gradient text-white',
 };
