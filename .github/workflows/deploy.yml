@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: Deploy PR previews
+name: Deploy Main
 on:
   push:
     branches:
@@ -16,4 +16,3 @@ jobs:
           branch: gh-pages
           clean-exclude: pr-preview
           force: false
-          
