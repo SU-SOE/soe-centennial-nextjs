@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../contentlayer.config.ts"],
-  "sourcesContent": ["import { defineDocumentType, makeSource } from 'contentlayer/source-files';\n\nexport const Page = defineDocumentType(() => ({\n  name: 'Page',\n  filePathPattern: '**/*.md*',\n  contentType: 'mdx',\n  fields: {\n    title: { type: 'string', required: true },\n    lastUpdatedDate: { type: 'date', required: true },\n  },\n  computedFields: {\n    url: {\n      type: 'string',\n      resolve: (post) => (post._raw.sourceFileName === 'index.mdx' ? '/' : `/${post._raw.flattenedPath}`),\n    },\n  },\n}));\n\nexport default makeSource({\n  contentDirPath: 'content',\n  documentTypes: [Page],\n});\n"],
-  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAExC,IAAM,OAAO,mBAAmB,OAAO;AAAA,EAC5C,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,aAAa;AAAA,EACb,QAAQ;AAAA,IACN,OAAO,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACxC,iBAAiB,EAAE,MAAM,QAAQ,UAAU,KAAK;AAAA,EAClD;AAAA,EACA,gBAAgB;AAAA,IACd,KAAK;AAAA,MACH,MAAM;AAAA,MACN,SAAS,CAAC,SAAU,KAAK,KAAK,mBAAmB,cAAc,MAAM,IAAI,KAAK,KAAK,aAAa;AAAA,IAClG;AAAA,EACF;AACF,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA,EAChB,eAAe,CAAC,IAAI;AACtB,CAAC;",
-  "names": []
-}
