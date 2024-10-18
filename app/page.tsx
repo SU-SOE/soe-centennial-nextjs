@@ -24,7 +24,7 @@ export default function Home() {
   const posts = allPages.sort((a, b) => compareDesc(new Date(a.lastUpdatedDate), new Date(b.lastUpdatedDate)));
 
   return (
-    <div className="mx-auto max-w-xl py-8">
+    <div>
       <Heading>SOE Centennial</Heading>
       <ShapeAnimation />
       <TimelineBanner heading='Headline lorem ipsum dolar sit' superhead='1983' body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim." />
