@@ -51,7 +51,7 @@ export const ShapeAnimation = () => {
 
   return (
     <div>
-      <motion.svg width="100%" height="100%" viewBox="0 0 1820 1700">
+      <motion.svg width="500px" height="100%" viewBox="0 0 1820 1700">
         <motion.path d={currentPath} fill="none" stroke="black" strokeWidth="3" />
       </motion.svg>
     </div>
