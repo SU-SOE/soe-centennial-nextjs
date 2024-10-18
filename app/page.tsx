@@ -21,7 +21,9 @@ function PostCard(page: Page) {
 }
 
 export default function Home() {
-  const posts = allPages.sort((a, b) => compareDesc(new Date(a.lastUpdatedDate), new Date(b.lastUpdatedDate)));
+  const posts = allPages.sort(
+    (a: Page, b: Page) => compareDesc(new Date(a.lastUpdatedDate), new Date(b.lastUpdatedDate)),
+  );
 
   return (
     <div>
