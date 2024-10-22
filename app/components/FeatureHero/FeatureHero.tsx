@@ -22,11 +22,11 @@ export const FeatureHero = ({
 
 
   return (
-    <FlexBox {...props} as="section" alignItems="start" justifyContent="between" className="flex-col bg-soe-black">
+    <FlexBox {...props} as="section" alignItems="start" justifyContent="between" className="relative flex-col bg-soe-black h-auto w-full aspect-[16/9]">
       <Container width="full" className='order-last flex flex-col rs-p-9 *:text-white z-50 lg:max-w-[50%] *:font-dm-sans bg-soe-black lg:bg-transparent'>
         {children}
       </Container>
-      <div className="relative aspect-[16/9] lg:aspect-auto w-full bg-cool-grey lg:absolute lg:top-0 lg:h-full overflow-hidden z-10">
+      <div className="relative w-full bg-cool-grey lg:absolute lg:top-0 lg:left-0 h-auto z-10">
         <Image className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
           src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg`}
