@@ -18,7 +18,7 @@ export const FeatureHero = ({
   ...props
 }: FeatureHeroProps) => {
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
 
   return (
@@ -27,25 +27,23 @@ export const FeatureHero = ({
         {children}
       </Container>
       <div className="relative aspect-[16/9] lg:aspect-auto w-full bg-cool-grey lg:absolute lg:top-0 lg:h-full overflow-hidden z-10">
-        <Image className="absolute top-0 left-0 lg:left-[300px] z-0"
+        <Image className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
           src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg`}
           width={0}
           height={0}
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }} />
+          sizes="100vw" />
         <motion.div className="absolute w-full h-full top-0 left-0 z-10" style={{ opacity }} >
           <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
           <ShapeA className="absolute bottom-10 left-10 lg:left-[300px] z-20 *:stroke-plum" height={1200} />
         </motion.div>
         <div className='absolute top-0 left-0 bg-transparent lg:bg-feature-gradient-rl bg-feature-gradient-bt w-full h-full z-50' />
-        <Image className="absolute top-0 left-0 lg:left-[300px] z-20"
+        <Image className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"
           alt=""
           src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png`}
           width={0}
           height={0}
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }} />
+          sizes="100vw" />
         <div className='absolute top-0 left-0 bg-feature-gradient-bt w-full h-full z-50' />
       </div>
     </FlexBox>
