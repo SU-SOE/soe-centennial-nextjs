@@ -2,7 +2,6 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { Source_Sans_3, DM_Sans } from 'next/font/google';
 import { cnb } from 'cnbuilder';
-import CustomMDXProvider from './MDXProvider';
 
 const dm_sans = DM_Sans({
   subsets: ['latin'],
@@ -38,9 +37,7 @@ export default function RootLayout({
           stanford.variable,
         )}
       >
-        <CustomMDXProvider>
-          {children}
-        </CustomMDXProvider>
+        {children}
       </body>
     </html>
   );
