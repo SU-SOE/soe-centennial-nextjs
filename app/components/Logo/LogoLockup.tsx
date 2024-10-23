@@ -30,7 +30,7 @@ export const LogoLockup = ({
   const LockupContent = (
     <FlexBox className={styles.contentWrapper}>
       <StanfordLogo
-        color={color === 'white' ? 'white' : 'cardinal-red'}
+        color={color === 'default' ? 'black' : 'digital-red'}
         isLink={false}
         className={cnb(styles.logo)}
       />
