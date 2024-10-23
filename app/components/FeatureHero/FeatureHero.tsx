@@ -20,7 +20,6 @@ export const FeatureHero = ({
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
-
   return (
     <FlexBox {...props} as="section" alignItems="start" justifyContent="between" className="relative flex-col bg-soe-black h-auto w-full z-10">
       <Container width="full" className='order-last flex flex-col rs-p-9 *:text-white z-50 lg:max-w-[50%] *:font-dm-sans bg-soe-black lg:bg-transparent'>
