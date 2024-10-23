@@ -3,6 +3,7 @@ import { ShapeAnimation } from '@/components/ShapeAnimation';
 import { TimelineBanner } from '@/components/TimelineBanner';
 import { Masthead } from './components/Masthead';
 import { FeatureHero } from './components/FeatureHero';
+import TimelineOverview from './components/Timeline/TimelineOverview';
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
         superhead="1983"
         body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
       />
+      <TimelineOverview />
     </div>
   );
 }
