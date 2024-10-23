@@ -26,7 +26,7 @@ export const Masthead = ({
       <LogoLockup
         isLink
         color={isLight ? 'default' : 'white'}
-        text="Centennial"
+        text="Engineering Centennial"
         className={styles.lockup}
       />
       <FlexBox alignItems="center" className={styles.flexbox}>
