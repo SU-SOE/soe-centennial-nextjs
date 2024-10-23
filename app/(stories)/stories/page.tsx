@@ -3,7 +3,6 @@ import path from 'path';
 import Link from 'next/link';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { Container } from '@/components/Container';
-import { useId } from 'react';
 
 export const metadata = {
   title: 'Stories',
@@ -12,7 +11,6 @@ export const metadata = {
 
 export default async function generateStaticParams() {
   const filenames = await fs.readdir(path.join(process.cwd(), '/stories'));
-  const id = useId;
 
   interface Frontmatter {
     title: string;
@@ -41,9 +39,9 @@ export default async function generateStaticParams() {
           Impact Stories
         </h1>
           <ul>
-            {stories.map(({ filename, slug }) => {
+            {stories.map(({ idx, filename, slug  }) => {
               return (
-                <li key={id}>
+                <li key={idx}>
                   <Link href={`/stories/${slug}`}>{ filename }</Link>
                 </li>
               );
