@@ -2,7 +2,8 @@ import { compileMDX } from 'next-mdx-remote/rsc';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { Container } from '@/components/Container';
-import { Heading } from '@/components/Typography';
+import { Heading, Text } from '@/components/Typography';
+import { FeatureHero } from '@/components/FeatureHero';
 
 // Generate static parameters (slugs) for each story
 export async function generateStaticParams() {
@@ -27,11 +28,13 @@ export default async function ProjectPage({ params }: { params: { storySlug: str
     components: {
       // Add components here
       Heading,
+      Text,
+      FeatureHero,
     },
   });
 
   return (
-    <Container className="mt-10">
+    <Container width='full'>
       {data.content}
     </Container>
   );

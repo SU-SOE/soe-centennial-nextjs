@@ -18,6 +18,7 @@ export default async function generateStaticParams() {
 
   const stories = await Promise.all(filenames.map(async (filename) => {
     const content = await fs.readFile(path.join(process.cwd(), '/stories', filename), 'utf-8');
+    const slug = filename.replace('.mdx', '');
     const { frontmatter } = await compileMDX<Frontmatter>({
       source: content,
       options: {
@@ -26,7 +27,8 @@ export default async function generateStaticParams() {
     });
     return {
       filename,
-      slug: filename.replace('.mdx', ''),
+      slug: slug,
+      uuid: `story-${slug}`,
       ...frontmatter,
     };
   }));
@@ -39,9 +41,9 @@ export default async function generateStaticParams() {
           Impact Stories
         </h1>
           <ul>
-            {stories.map(({ idx, filename, slug  }) => {
+            {stories.map(({ filename, slug, uuid }) => {
               return (
-                <li key={idx}>
+                <li key={uuid}>
                   <Link href={`/stories/${slug}`}>{ filename }</Link>
                 </li>
               );
