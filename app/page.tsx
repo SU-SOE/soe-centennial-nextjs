@@ -7,7 +7,7 @@ import { FeatureHero } from './components/FeatureHero';
 export default function Home() {
   return (
     <div>
-      <Masthead isLight />
+      <Masthead />
       <FeatureHero>
         <Heading
           as="h1"
