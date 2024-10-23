@@ -30,7 +30,7 @@ export const fontSizes = {
   f8: 'fluid-type-8',
   f9: 'fluid-type-9',
   // Curated font size for homepage hero slightly smaller than f9
-  splash: 'gc-splash',
+  splash: 'splash',
   hero: 'hero',
 };
 
@@ -54,7 +54,7 @@ export const textAligns = {
 
 export const textColors = {
   default: '', // Interit from the base
-  black: 'text-gc-black',
+  black: 'text-black',
   'cool-grey': 'text-cool-grey',
   white: 'text-white',
   'black-20': 'text-black-20',
@@ -72,17 +72,17 @@ export const textVariants = {
   big: 'big-paragraph',
   subheading: 'subheading',
   /**
-   * Momentum typography styles
-   * (-gc ones are Decanter styles with Momentum modifications)
+   * Centennial typography styles
+   * (-soe ones are Decanter styles with Centennial modifications)
    */
-  caption: 'gc-caption',
-  card: 'gc-card',
+  caption: 'caption',
+  card: 'card',
   changemaker: 'text-18 sm:text-15 3xl:text-16 leading-snug 3xl:leading-cozy',
   changemakerHorizontal: 'leading-cozy 2xl:leading text-18 sm:text-15 md:text-17 xl:text-19 2xl:text-22',
-  intro: 'gc-intro-text',
+  intro: 'intro-text',
   /**
-   * Momentum only styles
-   * No gc- prefix because no Decanter equivalent
+   * Centennial only styles
+   * No  prefix because no Decanter equivalent
    */
   overview: 'overview',
 };
