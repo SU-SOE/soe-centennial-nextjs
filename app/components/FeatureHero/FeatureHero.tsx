@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { HTMLAttributes } from 'react';
 import { Container } from '../Container';
@@ -20,13 +20,12 @@ export const FeatureHero = ({
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
-
   return (
-    <FlexBox {...props} as="section" alignItems="start" justifyContent="between" className="relative flex-col bg-soe-black h-auto w-full aspect-[16/9]">
+    <FlexBox {...props} as="section" alignItems="start" justifyContent="between" className="relative flex-col bg-soe-black h-auto w-full z-10">
       <Container width="full" className='order-last flex flex-col rs-p-9 *:text-white z-50 lg:max-w-[50%] *:font-dm-sans bg-soe-black lg:bg-transparent'>
         {children}
       </Container>
-      <div className="relative w-full bg-cool-grey lg:absolute lg:top-0 lg:left-0 h-auto z-10">
+      <div className="relative w-full aspect-[16/9] bg-cool-grey lg:absolute lg:top-0 lg:left-0 h-auto z-10 overflow-hidden">
         <Image className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
           src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg`}
@@ -47,4 +46,4 @@ export const FeatureHero = ({
         <div className='absolute top-0 left-0 bg-feature-gradient-bt w-full h-full z-50' />
       </div>
     </FlexBox>
-)};
+);};
