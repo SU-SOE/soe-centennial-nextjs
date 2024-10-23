@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint \"{components,utilities}/**/*.{ts,tsx,js,jsx}\" --quiet --fix",
+    "lint:fix": "eslint \"app/{components,utilities}/**/*.{ts,tsx,js,jsx}\" --quiet --fix",
     "typecheck": "tsc --noEmit",
     "tsc": "tsc"
   },
@@ -17,7 +17,7 @@
     "@types/mdx": "^2.0.13",
     "cnbuilder": "^3.1.0",
     "flubber": "^0.4.2",
-    "framer-motion": "^11.9.0",
+    "framer-motion": "^11.11.9",
     "next": "14.2.14",
     "next-mdx-remote": "^5.0.0",
     "react": "^18",
