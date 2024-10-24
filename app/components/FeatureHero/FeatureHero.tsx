@@ -10,11 +10,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 type FeatureHeroProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
-  imageSrc?: string;
+  backgroundImage: string;
+  overlayImage: string;
 };
 
 export const FeatureHero = ({
   children,
+  backgroundImage,
+  overlayImage,
   ...props
 }: FeatureHeroProps) => {
   const { scrollYProgress } = useScroll();
@@ -28,7 +31,7 @@ export const FeatureHero = ({
       <div className="relative w-full aspect-[16/9] bg-cool-grey lg:absolute lg:top-0 lg:left-0 h-auto z-10 overflow-hidden">
         <Image className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
-          src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg`}
+          src={backgroundImage}
           width={0}
           height={0}
           sizes="100vw" />
@@ -39,7 +42,7 @@ export const FeatureHero = ({
         <div className='absolute top-0 left-0 bg-transparent lg:bg-feature-gradient-rl bg-feature-gradient-bt w-full h-full z-50' />
         <Image className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"
           alt=""
-          src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png`}
+          src={overlayImage}
           width={0}
           height={0}
           sizes="100vw" />

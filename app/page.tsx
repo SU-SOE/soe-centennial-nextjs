@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Masthead />
-      <FeatureHero>
+      <FeatureHero backgroundImage="assets/images/Hawa-Racine-Thiam.jpg" overlayImage="assets/images/Hawa-Racine-Thiam_silhouette.png">
         <Heading
           as="h1"
           leading="none"
