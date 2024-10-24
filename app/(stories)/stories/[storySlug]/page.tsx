@@ -30,13 +30,14 @@ export default async function ProjectPage({ params }: { params: { storySlug: str
       Heading,
       Text,
       FeatureHero,
+      Container,
     },
   });
 
   console.log('data', data.content);
 
   return (
-    <Container width='full'>
+    <Container width='full' className="*:font-dm-sans">
       {data.content}
     </Container>
   );
