@@ -33,6 +33,8 @@ export default async function ProjectPage({ params }: { params: { storySlug: str
     },
   });
 
+  console.log('data', data.content);
+
   return (
     <Container width='full'>
       {data.content}
