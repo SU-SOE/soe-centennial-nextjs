@@ -8,7 +8,7 @@ import { ShapeAnimation } from '@/components/ShapeAnimation';
 import { TimelineBanner } from '@/components/TimelineBanner';
 import { Container } from '@/components/Container';
 
-<FeatureHero>
+<FeatureHero backgroundImage="/assets/images/Hawa-Racine-Thiam.jpg" overlayImage="/assets/images/Hawa-Racine-Thiam_silhouette.png">
   <Heading
     as="h1"
     leading="none"
@@ -28,10 +28,10 @@ import { Container } from '@/components/Container';
     weight="normal"
     className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
   >
-    The Sarafan ChEM-H Institute scholar is building a multidisciplinary
-    lab to explore the reengineering of immune cells. Before coming to
-    Stanford, she says, “I was thinking in terms of understanding. Now I
-    feel that I can start thinking in terms of creating.”
+    The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to
+    explore the reengineering of immune cells. Before coming to Stanford, she
+    says, “I was thinking in terms of understanding. Now I feel that I can start
+    thinking in terms of creating.”
   </Text>
   <Text
     variant="overview"
@@ -42,10 +42,11 @@ import { Container } from '@/components/Container';
   </Text>
 </FeatureHero>
 
-<Container width="site" py={5}>
-<Text>
-Overview style lorem ipsum dolar sit amet vestibulum parimentium elit rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod nisi, pharetra raesent nec. Aliquam dignissim nisi convalis quis, leo vestibulum duis euismod. 
-</Text>
+<Container width="site" py={5} className="wysiwyg">
+  <Text size={3}>
+  Overview style lorem ipsum dolar sit amet vestibulum parimentium elit rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod nisi, pharetra raesent nec. Aliquam dignissim nisi convalis quis, leo vestibulum duis euismod. 
+  </Text>
+
 Long copy paragraph text style raesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim, sit amet
 
 ## Header Two
@@ -56,7 +57,7 @@ Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum erat, imperdi
 
 Aenean sollicitudin facilisis ex, in tincidunt velit sodales ac. Nullam consequat leo ut sem pharetra, a fringilla massa commodo. Etiam molestie, justo nec congue ultricies, augue massa tempus ante, nec sagittis dui tellus ac lectus. Duis aliquam euismod enim, sit amet lobortis ante porttitor. Donec efficitur scelerisque urna et sollicitudin. Duis aliquam euismod enim, sit amet.
 
-#### Header Four 
+#### Header Four
 
 Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in.
 
@@ -65,26 +66,24 @@ Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum erat, imperdi
 Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim, sit amet lobortis ante porttitor. Donec efficitur scelerisque urna et sollicitudin. Duis aliquam euismod enim, sit amet.
 
 <Heading>
-  <a href="/">
-    Header Link style (for all headers)
-  </a>
+  <a href="/">Header Link style (for all headers)</a>
 </Heading>
 
 Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec efficitur scelerisque urna et sollicitudin.
 
-- Fusce sem enim, tempus nec massa id, mollis faucibus sem. 
-- Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu fermentum nec   massa mollis donec efficitur scelerisque urna et sollicitudin. 
-- Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi praesent dapibus odio aliquam dignissim nisi nisi pharetra faucibus elit 
-- Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis,  quis suscipit leo vestibulum. Duis aliquam euismod enim lobortis ante porttitor   aliquam praesent
-- Sodales consequat arcu in egestas Aliquam condimentum viverra eros,  in dapibus purus faucibus ut 
+- Fusce sem enim, tempus nec massa id, mollis faucibus sem.
+- Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu fermentum nec massa mollis donec efficitur scelerisque urna et sollicitudin.
+- Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi praesent dapibus odio aliquam dignissim nisi nisi pharetra faucibus elit
+- Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim lobortis ante porttitor aliquam praesent
+- Sodales consequat arcu in egestas Aliquam condimentum viverra eros, in dapibus purus faucibus ut
 
 Duis aliquam euismod enim, sit amet lobortis ante porttitor a. Aliquam sodales consequat arcu in egestas. Aliquam condimentum viverra eros, in dapibus purus faucibus ut. Proin rhoncus felis justo, sed mattis.
 
-1. Fusce sem enim, tempus nec massa id, mollis faucibus sem. 
-2. Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu fermentum nec   massa mollis donec efficitur scelerisque urna et sollicitudin. 
-3. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi praesent dapibus odio aliquam dignissim nisi nisi pharetra faucibus elit 
-4. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis,  quis suscipit leo vestibulum. Duis aliquam euismod enim lobortis ante porttitor   aliquam praesent
-5. Sodales consequat arcu in egestas Aliquam condimentum viverra eros,  in dapibus purus faucibus ut 
+1. Fusce sem enim, tempus nec massa id, mollis faucibus sem.
+2. Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu fermentum nec massa mollis donec efficitur scelerisque urna et sollicitudin.
+3. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi praesent dapibus odio aliquam dignissim nisi nisi pharetra faucibus elit
+4. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim lobortis ante porttitor aliquam praesent
+5. Sodales consequat arcu in egestas Aliquam condimentum viverra eros, in dapibus purus faucibus ut
 
 Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec efficitur scelerisque urna et sollicitudin.
 

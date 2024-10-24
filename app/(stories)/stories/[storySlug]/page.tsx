@@ -4,6 +4,7 @@ import path from 'path';
 import { Container } from '@/components/Container';
 import { Heading, Text } from '@/components/Typography';
 import { FeatureHero } from '@/components/FeatureHero';
+import { Masthead } from '@/components/Masthead';
 
 // Generate static parameters (slugs) for each story
 export async function generateStaticParams() {
@@ -34,10 +35,9 @@ export default async function ProjectPage({ params }: { params: { storySlug: str
     },
   });
 
-  console.log('data', data.content);
-
   return (
     <Container width='full' className="*:font-dm-sans">
+      <Masthead />
       {data.content}
     </Container>
   );
