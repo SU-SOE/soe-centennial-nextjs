@@ -1,56 +1,41 @@
+import { Container } from '@/components/Container';
 import TimelineItem from './TimelineItem';
+import timelineData from '@/data/timelineData.json';
+import { cnb } from 'cnbuilder';
+
 
 const TimelineOverview = () => {
-  // const TimelineOverview = ({ items }) => {
+  const rows = [];
+
+  // Split items into alternating rows of 5 and 4
+  let index = 0;
+  while (index < timelineData.length) {
+    rows.push(timelineData.slice(index, index + 5)); // Row with 5 items
+    index += 5;
+
+    if (index < timelineData.length) {
+      rows.push(timelineData.slice(index, index + 4)); // Row with 4 items
+      index += 4;
+    }
+  }
+
   return (
-    <div className="flex flex-row gap-50">
-      <div className="trapezoid-1 hocus:transform-none">
-        <img
-          alt=""
-          src="https://placecats.com/neo/600/600"
-          width={360}
-          height={360}
-          className="rounded-lg"
-        />
-      </div>
-      <div className="trapezoid-2 w-300 h-auto hocus:transform-none">
-        <img
-          alt=""
-          src="https://placecats.com/neo/600/600"
-          width={360}
-          height={360}
-          className="rounded-lg"
-        />
-      </div>
-      <div className="trapezoid-3 w-300 h-auto hocus:transform-none">
-        <img
-          alt=""
-          src="https://placecats.com/neo/600/600"
-          width={360}
-          height={360}
-          className="rounded-lg"
-        />
-      </div>
-      <div className="trapezoid-4 w-300 h-auto hocus:transform-none">
-        <img
-          alt=""
-          src="https://placecats.com/neo/600/600"
-          width={360}
-          height={360}
-          className="rounded-lg"
-        />
-      </div>
-      {/* {items.map((item, idx) => (
-        <TimelineItem
-          key={idx}
-          year={item.year}
-          heading={item.heading}
-          intro={item.intro}
-          image={item.image} // Pass the image field
-          body={item.mdxSource}
-        />
-      ))} */}
-    </div>
+    <Container width="site" py={5} bgColor='fog-light'>
+      {rows.map((row, rowIndex) => (
+        <div
+          key={rowIndex}
+          className={cnb('grid gap-50 mb-50 py-25', rowIndex % 2 === 0 ? 'grid-cols-5' : 'grid-cols-4')}
+        >
+          {row.map((item, idx) => (
+            <TimelineItem
+                key={idx}
+                {...item}
+                className="rounded-lg flex items-center justify-center"
+            />
+          ))}
+        </div>
+      ))}
+    </Container>
   );
 };
 
