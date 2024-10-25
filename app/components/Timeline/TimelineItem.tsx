@@ -13,11 +13,18 @@ interface TimelineItemProps {
 const TimelineItem: React.FC<TimelineItemProps> = ({
  year, heading, subtitle, body, image, className,
 }) => {
+  const sizes = [
+    'w-300 h-300',
+    'w-200 h-200',
+    'w-150 h-150',
+  ];
+
+  const imageSize = sizes[Math.floor(Math.random() * sizes.length)];
   const trapezoid = `trapezoid-` + (Math.floor(Math.random() * 4)+1);
 
   return (
     <div className={cnb('hocus:transform-none', trapezoid, className)}>
-      <div className="relative w-300 h-300 aspect-[1/1]">
+      <div className={cnb('relative aspect-[1/1]', imageSize)}>
         <img
           alt=""
           src={image}
