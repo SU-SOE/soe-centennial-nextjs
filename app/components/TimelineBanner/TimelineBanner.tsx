@@ -80,7 +80,6 @@ export const TimelineBanner = ({
         )}
         {cta}
       </Container>
-
       {image && (
         <div
           className={cnb(styles.imageWrapper, {
