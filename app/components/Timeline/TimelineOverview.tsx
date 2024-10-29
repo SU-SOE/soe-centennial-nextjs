@@ -6,6 +6,7 @@ import TimelineItem from './TimelineItem';
 import { cnb } from 'cnbuilder';
 import { useState } from 'react';
 import { TimelineBanner } from '../TimelineBanner';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type TimelineItem = {
   year: string;
@@ -67,12 +68,22 @@ const TimelineOverview = ({timelineData}: TimelineProps) => {
             })}
           </div>
           {/* Conditionally render the banner if an item in this row is expanded */}
-          {expandedItemIndex !== null &&
-            expandedItemIndex >= rowIndex * 5 &&
-            expandedItemIndex <
-              (rowIndex + 1) * 5 + (rowIndex % 2 === 0 ? 5 : 4) && (
-            <TimelineBanner {...timelineData[expandedItemIndex]}/>
-            )}
+          <AnimatePresence>
+            {expandedItemIndex !== null &&
+              expandedItemIndex >= rowIndex * 5 &&
+              expandedItemIndex <
+                (rowIndex + 1) * 5 + (rowIndex % 2 === 0 ? 5 : 4) && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  className="overflow-hidden"
+                >
+                  <TimelineBanner {...timelineData[expandedItemIndex]} />
+                </motion.div>
+              )}
+          </AnimatePresence>
         </div>
       ))}
     </Container>

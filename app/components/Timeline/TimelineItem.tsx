@@ -1,13 +1,14 @@
 import { cnb } from 'cnbuilder';
 
 interface TimelineItemProps {
+  year: string;
   image: string;
   className?: string;
   onClick?: () => void; 
 }
 
 const TimelineItem = ({
- image, className, ...props
+  year,image, className, ...props
 }: TimelineItemProps) => {
   const sizes = [
     'w-300 h-300',
@@ -27,6 +28,7 @@ const TimelineItem = ({
           className="inset-0 w-full h-full object-cover rounded-lg"
         />
       </div>
+      <p>{year}</p>
     </div>
   );
 };
