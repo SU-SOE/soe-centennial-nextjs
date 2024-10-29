@@ -4,14 +4,14 @@ import { Heading, Text } from '../Typography';
 interface TimelineItemProps {
   year: string;
   heading: string;
-  subtitle: string;
+  dek: string;
   body: string;
   image: string;
   className?: string;
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({
- year, heading, subtitle, body, image, className,
+ year, heading, dek, body, image, className,
 }) => {
   const sizes = [
     'w-300 h-300',

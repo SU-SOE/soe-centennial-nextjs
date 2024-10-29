@@ -2,7 +2,7 @@
   {
     "year": "1990",
     "heading": "The Beginning",
-    "subtitle": "A New Era",
+    "dek": "A New Era",
     "body": "In 1990, the company was founded with a vision to revolutionize the tech industry.",
     "href": "https://example.com/1990",
     "image": "https://placecats.com/neo/300/200"
@@ -10,7 +10,7 @@
   {
     "year": "2000",
     "heading": "The Growth Phase",
-    "subtitle": "Expanding Horizons",
+    "dek": "Expanding Horizons",
     "body": "By 2000, the company had grown exponentially, reaching international markets.",
     "href": "https://example.com/2000",
     "image": "https://placecats.com/millie/300/200"
@@ -18,7 +18,7 @@
   {
     "year": "2010",
     "heading": "The Digital Age",
-    "subtitle": "Embracing Innovation",
+    "dek": "Embracing Innovation",
     "body": "The 2010s marked the company's shift to digital-first strategies, leading the way in AI and machine learning.",
     "href": null,
     "image": "https://placecats.com/neo_banana/300/200"
@@ -26,14 +26,14 @@
   {
     "year": "2020",
     "heading": "The Modern Era",
-    "subtitle": "A Global Powerhouse",
+    "dek": "A Global Powerhouse",
     "body": "In 2020, the company cemented its status as a global leader, influencing the tech world in unprecedented ways.",
     "image": "https://placecats.com/bella/300/200"
   },
   {
     "year": "2025",
     "heading": "A Leap Forward",
-    "subtitle": "AI and Beyond",
+    "dek": "AI and Beyond",
     "body": "By 2025, the company ventured into advanced AI technologies, bringing new products that shaped the future of automation.",
     "href": "https://example.com/2025",
     "image": "https://placecats.com/neo/300/200"
@@ -41,7 +41,7 @@
   {
     "year": "2030",
     "heading": "The Sustainability Push",
-    "subtitle": "Green Technology",
+    "dek": "Green Technology",
     "body": "The 2030s marked a major commitment to sustainability, with innovative green technology solutions and global environmental initiatives.",
     "href": "https://example.com/2030",
     "image": "https://placecats.com/bella/300/200"
@@ -49,7 +49,7 @@
   {
     "year": "2040",
     "heading": "The Global Frontier",
-    "subtitle": "Space Exploration",
+    "dek": "Space Exploration",
     "body": "By 2040, the company expanded into space exploration, developing technologies to aid in interplanetary travel and settlement.",
     "href": null,
     "image": "https://placecats.com/neo_2/300/200"
@@ -57,7 +57,7 @@
   {
     "year": "2021",
     "heading": "New Innovations",
-    "subtitle": "Pushing Boundaries",
+    "dek": "Pushing Boundaries",
     "body": "In 2021, the company introduced groundbreaking technologies that set a new industry standard.",
     "href": "https://example.com/2021",
     "image": "https://placecats.com/millie/300/200"
@@ -65,7 +65,7 @@
   {
     "year": "2022",
     "heading": "Sustainability Focus",
-    "subtitle": "Eco-Friendly Solutions",
+    "dek": "Eco-Friendly Solutions",
     "body": "The company made strides towards sustainability, implementing green technologies across its product line.",
     "href": "https://example.com/2022",
     "image": "https://placecats.com/neo_banana/300/200"
@@ -73,7 +73,7 @@
   {
     "year": "2023",
     "heading": "AI Revolution",
-    "subtitle": "A Step into the Future",
+    "dek": "A Step into the Future",
     "body": "By 2023, the company had integrated advanced AI into all its platforms, driving new levels of innovation.",
     "href": "https://example.com/2023",
     "image": "https://placecats.com/neo/300/200"
@@ -81,7 +81,7 @@
   {
     "year": "2024",
     "heading": "Global Expansion",
-    "subtitle": "Reaching New Markets",
+    "dek": "Reaching New Markets",
     "body": "The company continued its expansion into new global markets, making its products available to more people than ever.",
     "href": "https://example.com/2024",
     "image": "https://placecats.com/millie/300/200"
@@ -89,7 +89,7 @@
   {
     "year": "2025",
     "heading": "Milestone Achievement",
-    "subtitle": "Celebrating 35 Years",
+    "dek": "Celebrating 35 Years",
     "body": "In 2025, the company celebrated its 35th anniversary, marking decades of innovation and success.",
     "href": "https://example.com/2025",
     "image": "https://placecats.com/bella/300/200"
@@ -97,7 +97,7 @@
   {
     "year": "2026",
     "heading": "Quantum Leap",
-    "subtitle": "The Next Frontier",
+    "dek": "The Next Frontier",
     "body": "The company made its first foray into quantum computing, pushing the boundaries of what was possible.",
     "href": "https://example.com/2026",
     "image": "https://placecats.com/neo/300/200"
@@ -105,7 +105,7 @@
   {
     "year": "2027",
     "heading": "Community Outreach",
-    "subtitle": "Giving Back",
+    "dek": "Giving Back",
     "body": "With a focus on corporate responsibility, the company launched new initiatives to support underserved communities.",
     "href": "https://example.com/2027",
     "image": "https://placecats.com/neo_banana/300/200"
@@ -113,7 +113,7 @@
   {
     "year": "2028",
     "heading": "AI-Powered Solutions",
-    "subtitle": "Automation Everywhere",
+    "dek": "Automation Everywhere",
     "body": "In 2028, the company unveiled a suite of AI-powered tools aimed at transforming everyday life.",
     "href": "https://example.com/2028",
     "image": "https://placecats.com/millie/300/200"
@@ -121,7 +121,7 @@
   {
     "year": "2029",
     "heading": "Pioneering Robotics",
-    "subtitle": "The Future is Here",
+    "dek": "The Future is Here",
     "body": "The company became a leader in robotics, developing advanced systems for both home and industry use.",
     "href": "https://example.com/2029",
     "image": "https://placecats.com/neo_banana/300/200"
@@ -129,7 +129,7 @@
   {
     "year": "2030",
     "heading": "A Vision for the Future",
-    "subtitle": "Looking Ahead",
+    "dek": "Looking Ahead",
     "body": "As 2030 approached, the company continued to look forward, with plans for new technologies and innovations.",
     "href": "https://example.com/2030",
     "image": "https://placecats.com/millie/300/200"
