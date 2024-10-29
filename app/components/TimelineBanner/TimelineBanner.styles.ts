@@ -5,5 +5,5 @@ export const heading = '2xl:whitespace-pre-line -mt-01em rs-mb-2 xl:max-w-1200';
 export const superhead = 'order-first mb-38';
 export const dek = 'max-w-[50ch] type-3 rs-mb-3 *:*:leading-snug';
 export const body = 'max-w-[50ch] rs-mb-3 *:*:leading-snug';
-export const imageWrapper = 'group relative w-300 h-300 perspective-600';
-export const image = 'object-cover w-full h-full transform rotate-y-30 group-hocus:-rotate-y-30 skew-y-12  ease-in duration-300 rounded-[30px]';
+export const imageWrapper = 'aspect-[1/1] group relative w-500 h-500 perspective-600';
+export const image = 'inset-0 w-full h-full object-cover rounded-lg transform ease-in-out duration-500';
