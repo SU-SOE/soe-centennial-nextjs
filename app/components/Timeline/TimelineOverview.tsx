@@ -61,7 +61,7 @@ const TimelineOverview = ({timelineData}: TimelineProps) => {
             {row.map((item, idx) => {
               const itemIndex = rowIndex * 5 + idx;
 
-              // Assign the size and trapezoid styles based on index
+              // Assign the size and trapezoid styles based on the item's index
               const sizeIndex = itemIndex % sizes.length;
               const trapezoidIndex = itemIndex % trapezoids.length;
               const isSelected = expandedItemIndex === itemIndex;
@@ -79,12 +79,11 @@ const TimelineOverview = ({timelineData}: TimelineProps) => {
               );
             })}
           </div>
-          {/* Conditionally render the banner if an item in this row is expanded */}
+          {/* Conditionally render the timeline banner if an item in this row is expanded */}
           <AnimatePresence>
             {expandedItemIndex !== null &&
               expandedItemIndex >= rowIndex * 5 &&
-              expandedItemIndex <
-                (rowIndex + 1) * 5 + (rowIndex % 2 === 0 ? 5 : 4) && (
+              expandedItemIndex < rowIndex * 5 + row.length && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
