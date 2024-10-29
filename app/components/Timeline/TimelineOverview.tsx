@@ -7,6 +7,7 @@ import { cnb } from 'cnbuilder';
 import { useState } from 'react';
 import { TimelineBanner } from '../TimelineBanner';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SizeType, TrapezoidType } from './TimelineItem.types';
 
 type TimelineItem = {
   year: string;
@@ -21,12 +22,14 @@ type TimelineProps = {
   timelineData: TimelineItem[];
 };
 
+const sizes: SizeType[] = ['small', 'medium', 'large'];
+const trapezoids: TrapezoidType[] = [1, 2, 3, 4];
+
 const TimelineOverview = ({timelineData}: TimelineProps) => {
   const [expandedItemIndex, setExpandedItemIndex] = useState<number | null>(
     null,
   );
   const rows = [];
-  console.log('timelineData', timelineData);
 
   // Split items into alternating rows of 5 and 4
   let index = 0;
@@ -57,10 +60,19 @@ const TimelineOverview = ({timelineData}: TimelineProps) => {
           >
             {row.map((item, idx) => {
               const itemIndex = rowIndex * 5 + idx;
+
+              // Assign the size and trapezoid styles based on index
+              const sizeIndex = itemIndex % sizes.length;
+              const trapezoidIndex = itemIndex % trapezoids.length;
+              const isSelected = expandedItemIndex === itemIndex;
+
               return (
                 <TimelineItem
                   key={idx}
                   {...item}
+                  size={sizes[sizeIndex]}
+                  trapezoid={trapezoids[trapezoidIndex]}
+                  isSelected={isSelected} 
                   className="rounded-lg flex items-center justify-center"
                   onClick={() => handleExpand(itemIndex)}
                 />
