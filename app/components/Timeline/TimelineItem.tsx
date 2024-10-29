@@ -1,18 +1,14 @@
 import { cnb } from 'cnbuilder';
-import { Heading, Text } from '../Typography';
 
 interface TimelineItemProps {
-  year: string;
-  heading: string;
-  dek: string;
-  body: string;
   image: string;
   className?: string;
+  onClick?: () => void; 
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({
- year, heading, dek, body, image, className,
-}) => {
+const TimelineItem = ({
+ image, className, ...props
+}: TimelineItemProps) => {
   const sizes = [
     'w-300 h-300',
     'w-200 h-200',
@@ -23,7 +19,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   const trapezoid = `trapezoid-` + (Math.floor(Math.random() * 4)+1);
 
   return (
-    <div className={cnb('hocus:transform-none', trapezoid, className)}>
+    <div  {...props} className={cnb('hocus:transform-none', trapezoid, className)}>
       <div className={cnb('relative aspect-[1/1]', imageSize)}>
         <img
           alt=""

@@ -1,12 +1,30 @@
+'use client';
+
 import { Container } from '@/components/Container';
 import TimelineItem from './TimelineItem';
 // import timelineData from '@/data/timelineData.json';
 import { cnb } from 'cnbuilder';
-import { loadTimelineData } from '@/utilities/loadTimelineData';
+import { useState } from 'react';
+import { TimelineBanner } from '../TimelineBanner';
 
-const TimelineOverview = async () => {
+type TimelineItem = {
+  year: string;
+  heading: string;
+  subtitle: string;
+  body: string;
+  href?: string;
+  image: string;
+};
+
+type TimelineProps = {
+  timelineData: TimelineItem[];
+};
+
+const TimelineOverview = ({timelineData}: TimelineProps) => {
+  const [expandedItemIndex, setExpandedItemIndex] = useState<number | null>(
+    null,
+  );
   const rows = [];
-  const timelineData = await loadTimelineData();
   console.log('timelineData', timelineData);
 
   // Split items into alternating rows of 5 and 4
@@ -21,20 +39,40 @@ const TimelineOverview = async () => {
     }
   }
 
+  // Handler for expanding an item
+  const handleExpand = (index: number) => {
+    setExpandedItemIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
-    <Container width="site" py={5} bgColor='fog-light'>
+    <Container width="site" py={5} bgColor="fog-light">
       {rows.map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className={cnb('grid gap-50 mb-50 py-25', rowIndex % 2 === 0 ? 'grid-cols-5' : 'grid-cols-4')}
-        >
-          {row.map((item, idx) => (
-            <TimelineItem
-                key={idx}
-                {...item}
-                className="rounded-lg flex items-center justify-center"
-            />
-          ))}
+        <div key={rowIndex} className="mb-50">
+          <div
+            className={cnb(
+              'grid gap-50 py-25',
+              rowIndex % 2 === 0 ? 'grid-cols-5' : 'grid-cols-4',
+            )}
+          >
+            {row.map((item, idx) => {
+              const itemIndex = rowIndex * 5 + idx;
+              return (
+                <TimelineItem
+                  key={idx}
+                  {...item}
+                  className="rounded-lg flex items-center justify-center"
+                  onClick={() => handleExpand(itemIndex)}
+                />
+              );
+            })}
+          </div>
+          {/* Conditionally render the banner if an item in this row is expanded */}
+          {expandedItemIndex !== null &&
+            expandedItemIndex >= rowIndex * 5 &&
+            expandedItemIndex <
+              (rowIndex + 1) * 5 + (rowIndex % 2 === 0 ? 5 : 4) && (
+            <TimelineBanner {...timelineData[expandedItemIndex]}/>
+            )}
         </div>
       ))}
     </Container>

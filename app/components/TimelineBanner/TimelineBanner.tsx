@@ -5,30 +5,32 @@ import { FlexBox } from '../FlexBox';
 import * as styles from './TimelineBanner.styles';
 
 type TimelineBannerProps = HTMLAttributes<HTMLDivElement> & {
-  heading?: string;
-  superhead?: string;
-  // isSmallHeading?: boolean;
-  body?: React.ReactNode;
+  heading: string;
+  year: string;
+  dek?: string;
+  body: string;
   cta?: React.ReactNode;
-  imageSrc?: string;
-  // bgColor?: BgTextColorPairBlackWhiteType;
+  image: string;
+  bgColor?: 'fog-light' | 'red-gradient';
 };
 
 export const TimelineBanner = ({
   heading,
-  superhead,
+  year,
+  dek,
   body,
   cta,
-  imageSrc='https://placecats.com/neo/600/600',
+  image = 'https://placecats.com/neo/600/600',
+  bgColor = 'fog-light',
   ...props
 }: TimelineBannerProps) => (
-  <Container {...props} as="section" bgColor="red-gradient" width="site" py={9} className={styles.root}>
+  <Container {...props} as="section" bgColor={bgColor} width="site" py={9} className={styles.root}>
     <FlexBox alignItems="start" justifyContent="between" gap className={styles.wrapper}>
-      {imageSrc && (
+      {image && (
         <div className={styles.imageWrapper}>
           <img
             alt=""
-            src={imageSrc}
+            src={image}
             className={styles.image}
             width={360}
             height={360}
@@ -44,16 +46,22 @@ export const TimelineBanner = ({
               {heading}
             </Heading>
         )}
-        {superhead && (
+        {year && (
             <Text font="serif" variant="overview" weight="normal" className={styles.superhead}>
-              {superhead}
-            </Text>)}
-          {body && (
-            <Text font="serif" variant="overview" weight="normal" className={styles.body}>
-              {body}
-            </Text>
-          )}
-          {cta}
+              {year}
+          </Text>
+        )}
+        {dek && (
+            <Text font="serif" variant="overview" weight="normal" className={styles.dek}>
+              {dek}
+          </Text>
+        )}
+        {body && (
+          <Text font="serif" variant="overview" weight="normal" className={styles.body}>
+            {body}
+          </Text>
+        )}
+        {cta}
       </Container>
 
     </FlexBox>

@@ -1,11 +1,15 @@
 import { Masthead } from '@/components/Masthead';
 import TimelineOverview from '@/components/Timeline/TimelineOverview';
+import { loadTimelineData } from '@/utilities/loadTimelineData';
 
-export default function Timeline() {
+const TimelinePage = async () => {
+  const timelineData = await loadTimelineData();
   return (
     <div>
       <Masthead isLight />
-      <TimelineOverview />
+      <TimelineOverview timelineData={timelineData}  />
     </div>
   );
-}
+};
+
+export default TimelinePage;
