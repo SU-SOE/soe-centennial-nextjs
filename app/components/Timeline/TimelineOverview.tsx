@@ -1,19 +1,21 @@
 import { Container } from '@/components/Container';
 import TimelineItem from './TimelineItem';
-import timelineData from '@/data/timelineData.json';
+// import timelineData from '@/data/timelineData.json';
 import { cnb } from 'cnbuilder';
+import { loadTimelineData } from '@/utilities/loadTimelineData';
 
-
-const TimelineOverview = () => {
+const TimelineOverview = async () => {
   const rows = [];
+  const timelineData = await loadTimelineData();
+  console.log('timelineData', timelineData);
 
   // Split items into alternating rows of 5 and 4
   let index = 0;
-  while (index < timelineData.length) {
+  while (index < timelineData?.length) {
     rows.push(timelineData.slice(index, index + 5)); // Row with 5 items
     index += 5;
 
-    if (index < timelineData.length) {
+    if (index < timelineData?.length) {
       rows.push(timelineData.slice(index, index + 4)); // Row with 4 items
       index += 4;
     }

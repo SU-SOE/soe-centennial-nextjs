@@ -1,11 +1,10 @@
-import { TimelineBanner } from '@/components/TimelineBanner';
 import { Masthead } from '@/components/Masthead';
 import TimelineOverview from '@/components/Timeline/TimelineOverview';
 
-export default function Home() {
+export default function Timeline() {
   return (
     <div>
-      <Masthead />
+      <Masthead isLight />
       <TimelineOverview />
     </div>
   );
