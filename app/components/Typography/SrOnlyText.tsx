@@ -9,5 +9,5 @@ export const SrOnlyText = ({
     as="span"
     srOnly
     className="white-space-pre"
-  >{` ${children}`}</Text>
+  >{` ${String(children)}`}</Text>
 );
