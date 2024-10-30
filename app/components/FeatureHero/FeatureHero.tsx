@@ -32,9 +32,11 @@ export const FeatureHero = ({
           width={0}
           height={0}
           sizes="100vw" />
-        <motion.div className="absolute w-full h-full top-0 left-0 z-10" style={{ opacity }} >
-          <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
-          <ShapeA className="absolute bottom-10 left-10 lg:left-[300px] z-20 *:stroke-plum" height={1200} />
+        <motion.div style={{ opacity }} >
+          <div className="absolute w-full h-full top-0 left-0 z-10">
+            <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
+            <ShapeA className="absolute bottom-10 left-10 lg:left-[300px] z-20 *:stroke-plum" height={1200} />
+          </div>
         </motion.div>
         <div className='absolute top-0 left-0 bg-transparent lg:bg-feature-gradient-rl bg-feature-gradient-bt w-full h-full z-50' />
         <Image className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"

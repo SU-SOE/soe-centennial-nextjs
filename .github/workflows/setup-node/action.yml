@@ -9,6 +9,14 @@ runs:
       with:
         node-version: 20
 
+    - name: Enable Corepack
+      shell: bash
+      run: corepack enable
+
+    - name: Prepare Yarn Version
+      shell: bash
+      run: corepack prepare yarn@4.5.1 --activate
+
     - name: Cache dependencies ⚡
       id: cache_dependencies
       uses: actions/cache@v3
@@ -19,4 +27,5 @@ runs:
     - name: Install dependencies 🔧
       shell: bash
       if: steps.cache_dependencies.outputs.cache-hit != 'true'
-      run: npm ci
+      run: 
+        yarn install
