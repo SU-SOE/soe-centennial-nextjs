@@ -1,12 +1,14 @@
 import fs from "fs";
 import path from "path";
 
-interface TimelineItem {
+type TimelineItem = {
   year: string;
   heading: string;
-  intro: string;
-  content: string;
-}
+  dek: string;
+  body: string;
+  href?: string;
+  image: string;
+};
 
 export async function loadTimelineData(): Promise<TimelineItem[]> {
   const directoryPath = path.join(process.cwd(), "data/timeline");

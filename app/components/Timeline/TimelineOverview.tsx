@@ -11,7 +11,7 @@ import { SizeType, TrapezoidType } from "./TimelineItem.types";
 type TimelineItemData = {
   year: string;
   heading: string;
-  subtitle: string;
+  dek: string;
   body: string;
   href?: string;
   image: string;
