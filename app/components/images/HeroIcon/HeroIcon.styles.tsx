@@ -20,26 +20,26 @@ import {
   PlayCircleIcon,
   PlusIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline';
-import { CheckIcon } from '@heroicons/react/16/solid';
-import { PlayIcon } from '@heroicons/react/20/solid';
+} from "@heroicons/react/24/outline";
+import { CheckIcon } from "@heroicons/react/16/solid";
+import { PlayIcon } from "@heroicons/react/20/solid";
 
 export const iconMap = {
   action: ChevronRightIcon,
-  'arrow-right': ArrowRightIcon,
-  'arrow-left': ArrowLeftIcon,
-  'arrow-up': ArrowUpIcon,
-  'arrow-down': ArrowDownIcon,
+  "arrow-right": ArrowRightIcon,
+  "arrow-left": ArrowLeftIcon,
+  "arrow-up": ArrowUpIcon,
+  "arrow-down": ArrowDownIcon,
   back: ArrowLeftIcon,
   copy: DocumentDuplicateIcon,
   check: CheckIcon,
-  'chevron-down': ChevronDownIcon,
-  'chevron-right': ChevronRightIcon,
-  'chevron-up': ChevronUpIcon,
+  "chevron-down": ChevronDownIcon,
+  "chevron-right": ChevronRightIcon,
+  "chevron-up": ChevronUpIcon,
   download: ArrowDownTrayIcon,
-  'triangle-down': PlayIcon,
-  'triangle-right': PlayIcon,
-  'triangle-up': PlayIcon,
+  "triangle-down": PlayIcon,
+  "triangle-right": PlayIcon,
+  "triangle-up": PlayIcon,
   cursor: CursorArrowRaysIcon,
   close: XMarkIcon,
   email: EnvelopeIcon,
@@ -53,7 +53,7 @@ export const iconMap = {
   more: ArrowRightIcon,
   pause: PauseCircleIcon,
   play: PlayIcon,
-  'play-outline': PlayCircleIcon,
+  "play-outline": PlayCircleIcon,
   plus: PlusIcon,
   right: ArrowRightIcon,
   up: ArrowUpIcon,
@@ -71,19 +71,19 @@ type IconBaseStyleType = Partial<{
   [Key in IconType]: string;
 }>;
 
-export const iconBaseStyleDefault = 'w-1em';
+export const iconBaseStyleDefault = "w-1em";
 export const iconBaseStyle: IconBaseStyleType = {
-  'arrow-left': 'w-09em -mt-01em',
-  'arrow-right': 'w-09em -mt-01em',
-  'triangle-right': 'w-09em scale-x-90 mt-01em',
-  'triangle-down': 'w-09em scale-x-90 rotate-90 mt-01em',
-  'triangle-up': 'w-09em scale-x-90 -rotate-90 mt-02em',
-  download: 'w-09em',
-  email: 'w-1em',
-  external: 'w-08em stroke-[2.5]',
-  left: 'w-08em',
-  link: 'w-09em -mt-01em',
-  more: 'w-08em',
-  plus: 'w-08em',
-  right: 'w-08em',
+  "arrow-left": "w-09em -mt-01em",
+  "arrow-right": "w-09em -mt-01em",
+  "triangle-right": "w-09em scale-x-90 mt-01em",
+  "triangle-down": "w-09em scale-x-90 rotate-90 mt-01em",
+  "triangle-up": "w-09em scale-x-90 -rotate-90 mt-02em",
+  download: "w-09em",
+  email: "w-1em",
+  external: "w-08em stroke-[2.5]",
+  left: "w-08em",
+  link: "w-09em -mt-01em",
+  more: "w-08em",
+  plus: "w-08em",
+  right: "w-08em",
 };

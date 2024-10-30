@@ -5,22 +5,6 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set the correct Node version using nvm
-        shell: bash -l {0}
-        run: nvm install
-      - uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
-      - name: Lint
-        run: npm run lint
-      - name: Typecheck
-        run: npm run tsc
-
-jobs:
-  lint:
     name: Lint & TS Check
     runs-on: ubuntu-latest
     steps:
@@ -35,6 +19,15 @@ jobs:
           restore-keys: |
             lint-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
             lint-${{ hashFiles('package.json') }}-
+
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+
+      - name: Prepare Yarn Version
+        shell: bash
+        run: corepack prepare yarn@4.5.1 --activate
+        
       - name: Lint
         run: |
           yarn

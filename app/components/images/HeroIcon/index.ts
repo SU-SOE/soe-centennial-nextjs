@@ -1,2 +1,2 @@
-export * from './HeroIcon';
-export * from './HeroIcon.styles';
+export * from "./HeroIcon";
+export * from "./HeroIcon.styles";

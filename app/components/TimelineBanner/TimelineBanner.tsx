@@ -1,61 +1,105 @@
-import { HTMLAttributes } from 'react';
-import { Container } from '../Container';
-import { Heading, Text } from '../Typography';
-import { FlexBox } from '../FlexBox';
-import * as styles from './TimelineBanner.styles';
+import { HTMLAttributes } from "react";
+import { Container } from "../Container";
+import { Heading, Text } from "../Typography";
+import { FlexBox } from "../FlexBox";
+import * as styles from "./TimelineBanner.styles";
+import { cnb } from "cnbuilder";
 
 type TimelineBannerProps = HTMLAttributes<HTMLDivElement> & {
-  heading?: string;
-  superhead?: string;
-  // isSmallHeading?: boolean;
-  body?: React.ReactNode;
+  heading: string;
+  year: string;
+  dek?: string;
+  body: string;
   cta?: React.ReactNode;
-  imageSrc?: string;
-  // bgColor?: BgTextColorPairBlackWhiteType;
+  image: string;
+  bgColor?: "fog-light" | "red-gradient";
+  align?: "right" | "left";
+  width?: "full" | "narrow";
 };
 
 export const TimelineBanner = ({
   heading,
-  superhead,
+  year,
+  dek,
   body,
   cta,
-  imageSrc='https://placecats.com/neo/600/600',
+  image = "https://placecats.com/neo/600/600",
+  bgColor = "fog-light",
+  align = "left",
   ...props
 }: TimelineBannerProps) => (
-  <Container {...props} as="section" bgColor="red-gradient" width="site" py={9} className={styles.root}>
-    <FlexBox alignItems="start" justifyContent="between" gap className={styles.wrapper}>
-      {imageSrc && (
-        <div className={styles.imageWrapper}>
+  <Container
+    {...props}
+    as="section"
+    bgColor={bgColor}
+    width="site"
+    py={9}
+    className={styles.root}
+  >
+    <FlexBox
+      alignItems="start"
+      justifyContent="between"
+      gap
+      className={styles.wrapper}
+    >
+      <Container className={cnb(styles.contentWrapper)}>
+        {heading && (
+          <Heading leading="none" className={styles.heading}>
+            {heading}
+          </Heading>
+        )}
+        {year && (
+          <Text
+            font="serif"
+            variant="overview"
+            weight="normal"
+            className={styles.superhead}
+          >
+            {year}
+          </Text>
+        )}
+        {dek && (
+          <Text
+            font="serif"
+            variant="overview"
+            weight="normal"
+            className={styles.dek}
+          >
+            {dek}
+          </Text>
+        )}
+        {body && (
+          <Text
+            font="serif"
+            variant="overview"
+            weight="normal"
+            className={styles.body}
+          >
+            {body}
+          </Text>
+        )}
+        {cta}
+      </Container>
+      {image && (
+        <div
+          className={cnb(styles.imageWrapper, {
+            "order-first": align === "left",
+          })}
+        >
           <img
             alt=""
-            src={imageSrc}
-            className={styles.image}
-            width={360}
-            height={360}
+            src={image}
+            className={cnb(styles.image, {
+              "rotate-y-[25deg] group-hocus:rotate-y-[-25deg]":
+                align === "left",
+              "rotate-y-[-25deg] group-hocus:rotate-y-[25deg]":
+                align === "right",
+            })}
+            width={500}
+            height={500}
           />
-          </div>
+        </div>
       )}
-      <Container className={styles.contentWrapper}>
-      {heading && (
-            <Heading
-              leading="none"
-              className={styles.heading}
-            >
-              {heading}
-            </Heading>
-        )}
-        {superhead && (
-            <Text font="serif" variant="overview" weight="normal" className={styles.superhead}>
-              {superhead}
-            </Text>)}
-          {body && (
-            <Text font="serif" variant="overview" weight="normal" className={styles.body}>
-              {body}
-            </Text>
-          )}
-          {cta}
-      </Container>
-
     </FlexBox>
   </Container>
 );

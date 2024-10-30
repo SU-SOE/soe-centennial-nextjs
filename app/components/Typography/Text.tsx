@@ -1,8 +1,12 @@
-import { ReactNode, TimeHTMLAttributes } from 'react';
-import { cnb } from 'cnbuilder';
-import { HeroIcon, type HeroIconProps, type IconType } from '../images/HeroIcon';
-import * as styles from './typography.styles';
-import * as types from './typography.types';
+import { ReactNode, TimeHTMLAttributes } from "react";
+import { cnb } from "cnbuilder";
+import {
+  HeroIcon,
+  type HeroIconProps,
+  type IconType,
+} from "../images/HeroIcon";
+import * as styles from "./typography.styles";
+import * as types from "./typography.types";
 
 export type TypographyProps = {
   as?: types.TextType;
@@ -21,27 +25,29 @@ export type TypographyProps = {
   srOnly?: boolean;
   uppercase?: boolean;
   icon?: IconType;
-  iconProps?: Omit<HeroIconProps, 'icon' | 'noBaseStyle'>;
+  iconProps?: Omit<HeroIconProps, "icon" | "noBaseStyle">;
   className?: string;
   children?: ReactNode;
 };
 
 // The TimeHTMLAttributes<HTMLElement> is for the dateTime attribute when using as="time"
-export type TextProps = TypographyProps & React.HTMLAttributes<HTMLElement> & TimeHTMLAttributes<HTMLElement>;
+export type TextProps = TypographyProps &
+  React.HTMLAttributes<HTMLElement> &
+  TimeHTMLAttributes<HTMLElement>;
 
 export const Text = ({
-  as: AsComponent = 'div',
-  font = 'sans',
+  as: AsComponent = "div",
+  font = "sans",
   size,
   weight,
   align,
-  color = 'default',
+  color = "default",
   variant,
   leading,
-  useDefaultTracking = font === 'ds-sans',
+  useDefaultTracking = font === "ds-sans",
   italic,
   srOnly,
-  uppercase = font === 'ds-sans',
+  uppercase = font === "ds-sans",
   icon,
   iconProps,
   className,
@@ -53,23 +59,21 @@ export const Text = ({
   return (
     <AsComponent
       {...rest}
-      className={
-        cnb(
-          font ? styles.fontFamilies[font] : '',
-          size ? styles.fontSizes[size] : '',
-          weight ? styles.fontWeights[weight] : '',
-          align ? styles.textAligns[align] : '',
-          color ? styles.textColors[color] : '',
-          variant ? styles.textVariants[variant] : '',
-          leading ? styles.fontLeadings[leading] : '',
-          italic ? 'italic' : '',
-          srOnly ? 'sr-only' : '',
-          uppercase ? 'uppercase' : '',
-          useDefaultTracking ? 'tracking-normal' : '',
-          font === 'ds-sans' ? 'tracking-normal sm:tracking-wide' : '',
-          className,
-        )
-      }
+      className={cnb(
+        font ? styles.fontFamilies[font] : "",
+        size ? styles.fontSizes[size] : "",
+        weight ? styles.fontWeights[weight] : "",
+        align ? styles.textAligns[align] : "",
+        color ? styles.textColors[color] : "",
+        variant ? styles.textVariants[variant] : "",
+        leading ? styles.fontLeadings[leading] : "",
+        italic ? "italic" : "",
+        srOnly ? "sr-only" : "",
+        uppercase ? "uppercase" : "",
+        useDefaultTracking ? "tracking-normal" : "",
+        font === "ds-sans" ? "tracking-normal sm:tracking-wide" : "",
+        className,
+      )}
     >
       {children}
       {icon && (

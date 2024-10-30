@@ -1,51 +1,33 @@
-import { Heading, Text } from '@/components/Typography';
-import { ShapeAnimation } from '@/components/ShapeAnimation';
-import { TimelineBanner } from '@/components/TimelineBanner';
-import { Masthead } from './components/Masthead';
-import { FeatureHero } from './components/FeatureHero';
+import { Masthead } from "@/components/Masthead";
+import { TimelineBanner } from "@/components/TimelineBanner";
+import { PageTitle } from "@/components/PageTitle";
 
 export default function Home() {
   return (
     <div>
-      <Masthead />
-      <FeatureHero>
-        <Heading
-          as="h1"
-          leading="none"
-          className="2xl:whitespace-pre-line font-normal -mt-01em rs-mb-8 xl:max-w-1200"
-        >
-          Exploring the reengineering of immune cells
-        </Heading>
-        <Text
-          variant="overview"
-          weight="normal"
-          className="order-first mb-38 underline underline-offset-[6px] decoration-2 decoration-digital-red-xlight"
-        >
-          Change Makers
-        </Text>
-        <Text
-          variant="overview"
-          weight="normal"
-          className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
-        >
-          The Sarafan ChEM-H Institute scholar is building a multidisciplinary
-          lab to explore the reengineering of immune cells. Before coming to
-          Stanford, she says, “I was thinking in terms of understanding. Now I
-          feel that I can start thinking in terms of creating.”
-        </Text>
-        <Text
-          variant="overview"
-          weight="normal"
-          className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
-        >
-          by Jess Alvarenga
-        </Text>
-      </FeatureHero>
-      <ShapeAnimation />
+      <Masthead isLight />
+      <PageTitle heading="100 years of" bigText="Impact" />
       <TimelineBanner
-        heading="Headline lorem ipsum dolar sit"
-        superhead="1983"
+        heading="The first African-American woman in space"
+        year="1983"
         body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
+        image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
+        width="narrow"
+      />
+      <TimelineBanner
+        heading="First remote classs from the Stanford Instructional Television Network"
+        year="1969"
+        body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
+        image="https://images.unsplash.com/photo-1491770042090-0810a7e20f46?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        align="right"
+        width="narrow"
+      />
+      <TimelineBanner
+        heading="The Stanford Dish Radiotelescope completed in 1962"
+        year="1983"
+        body="Enabling vastly expanded studies of scattering effects in the earth’s ionosphere and was used to detect Soviet radar and still used today for satellite calibrations, spacecraft command and telemetry, and radio astronomy measurements."
+        image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
+        width="narrow"
       />
     </div>
   );

@@ -1,1 +1,1 @@
-export * from './StanfordLogo';
+export * from "./StanfordLogo";
