@@ -1,16 +1,16 @@
-import { HTMLAttributes, ReactNode } from 'react';
-import { cnb } from 'cnbuilder';
-import * as styles from './StanfordLogo.styles';
+import { HTMLAttributes, ReactNode } from "react";
+import { cnb } from "cnbuilder";
+import * as styles from "./StanfordLogo.styles";
 
 type StanfordLogoProps = HTMLAttributes<HTMLElement> & {
   color?: styles.LogoColorType;
-  type?: 'short' | 'full' | 'stacked';
+  type?: "short" | "full" | "stacked";
   isLink?: boolean;
 };
 
 export const StanfordLogo = ({
   className,
-  color = 'black',
+  color = "black",
   type,
   isLink,
   ...rest
@@ -18,11 +18,11 @@ export const StanfordLogo = ({
   let logoText: string | ReactNode;
 
   switch (type) {
-    case 'full':
-      logoText = 'Stanford University';
+    case "full":
+      logoText = "Stanford University";
       break;
 
-    case 'stacked':
+    case "stacked":
       logoText = (
         <>
           Stanford
@@ -32,9 +32,9 @@ export const StanfordLogo = ({
       );
       break;
 
-    case 'short':
+    case "short":
     default:
-      logoText = 'Stanford';
+      logoText = "Stanford";
       break;
   }
 
@@ -44,7 +44,11 @@ export const StanfordLogo = ({
       <a
         {...rest}
         href="https://www.stanford.edu"
-        className={cnb('logo', color ? styles.logoColors[color] : '', className)}
+        className={cnb(
+          "logo",
+          color ? styles.logoColors[color] : "",
+          className,
+        )}
       >
         {logoText}
       </a>
@@ -52,7 +56,10 @@ export const StanfordLogo = ({
   }
 
   return (
-    <div {...rest} className={cnb('logo', color ? styles.logoColors[color] : '', className)}>
+    <div
+      {...rest}
+      className={cnb("logo", color ? styles.logoColors[color] : "", className)}
+    >
       {logoText}
     </div>
   );

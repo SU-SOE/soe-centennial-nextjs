@@ -1,10 +1,10 @@
-import { HTMLAttributes } from 'react';
-import { Container } from '../Container';
-import { Heading, Text } from '../Typography';
-import { FlexBox } from '../FlexBox';
-import * as styles from './TimelineDetails.styles';
-import { cnb } from 'cnbuilder';
-import { XCircleIcon } from '@heroicons/react/24/outline';
+import { HTMLAttributes } from "react";
+import { Container } from "../Container";
+import { Heading, Text } from "../Typography";
+import { FlexBox } from "../FlexBox";
+import * as styles from "./TimelineDetails.styles";
+import { cnb } from "cnbuilder";
+import { XCircleIcon } from "@heroicons/react/24/outline";
 
 type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -13,9 +13,9 @@ type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   body: string;
   cta?: React.ReactNode;
   image: string;
-  bgColor?: 'fog-light' | 'red-gradient';
-  align?: 'right' | 'left';
-  width?: 'full' | 'narrow';
+  bgColor?: "fog-light" | "red-gradient";
+  align?: "right" | "left";
+  width?: "full" | "narrow";
   isSelected?: boolean;
   onClose: () => void;
 };
@@ -27,8 +27,8 @@ export const TimelineDetails = ({
   body,
   cta,
   image,
-  bgColor = 'fog-light',
-  align = 'left',
+  bgColor = "fog-light",
+  align = "left",
   isSelected,
   onClose,
   ...props
@@ -88,17 +88,17 @@ export const TimelineDetails = ({
       {image && (
         <div
           className={cnb(styles.imageWrapper, {
-            'order-first': align === 'left',
+            "order-first": align === "left",
           })}
         >
           <img
             alt=""
             src={image}
             className={cnb(styles.image, {
-              'rotate-y-[25deg] group-hocus:rotate-y-[-25deg]':
-                align === 'left',
-              'rotate-y-[-25deg] group-hocus:rotate-y-[25deg]':
-                align === 'right',
+              "rotate-y-[25deg] group-hocus:rotate-y-[-25deg]":
+                align === "left",
+              "rotate-y-[-25deg] group-hocus:rotate-y-[25deg]":
+                align === "right",
             })}
             width={500}
             height={500}
@@ -107,7 +107,10 @@ export const TimelineDetails = ({
       )}
       <button className="group" onClick={onClose}>
         <span className="sr-only">Close {heading} details</span>
-        <XCircleIcon width={50} className="text-black group-hocus:text-digital-red" />
+        <XCircleIcon
+          width={50}
+          className="text-black group-hocus:text-digital-red"
+        />
       </button>
     </FlexBox>
   </Container>

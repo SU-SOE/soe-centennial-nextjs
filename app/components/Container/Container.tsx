@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react';
-import { cnb } from 'cnbuilder';
+import { HTMLAttributes } from "react";
+import { cnb } from "cnbuilder";
 import {
   paddingTops,
   paddingBottoms,
@@ -9,9 +9,9 @@ import {
   marginVerticals,
   type MarginType,
   type PaddingType,
-} from '@/utilities/datasource';
-import * as styles from './Container.styles';
-import * as types from './Container.types';
+} from "@/utilities/datasource";
+import * as styles from "./Container.styles";
+import * as types from "./Container.types";
 
 export type ContainerProps = HTMLAttributes<HTMLElement> & {
   as?: types.ContainerElementType;
@@ -27,8 +27,8 @@ export type ContainerProps = HTMLAttributes<HTMLElement> & {
 };
 
 export const Container = ({
-  as: AsComponent = 'div',
-  width = 'site',
+  as: AsComponent = "div",
+  width = "site",
   py,
   pt,
   pb,
@@ -45,14 +45,14 @@ export const Container = ({
     {...props}
     style={style}
     className={cnb(
-      bgColor ? styles.bgColors[bgColor] : '',
-      py ? paddingVerticals[py] : '',
-      pt ? paddingTops[pt] : '',
-      pb ? paddingBottoms[pb] : '',
-      my ? marginVerticals[my] : '',
-      mt ? marginTops[mt] : '',
-      mb ? marginBottoms[mb] : '',
-      width ? styles.widths[width] : '',
+      bgColor ? styles.bgColors[bgColor] : "",
+      py ? paddingVerticals[py] : "",
+      pt ? paddingTops[pt] : "",
+      pb ? paddingBottoms[pb] : "",
+      my ? marginVerticals[my] : "",
+      mt ? marginTops[mt] : "",
+      mb ? marginBottoms[mb] : "",
+      width ? styles.widths[width] : "",
       className,
     )}
   >

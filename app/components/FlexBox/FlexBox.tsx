@@ -1,7 +1,7 @@
-import React, { ReactNode, HTMLAttributes } from 'react';
-import { cnb } from 'cnbuilder';
-import * as styles from './FlexBox.styles';
-import * as types from './FlexBox.types';
+import React, { ReactNode, HTMLAttributes } from "react";
+import { cnb } from "cnbuilder";
+import * as styles from "./FlexBox.styles";
+import * as types from "./FlexBox.types";
 
 type FlexBoxProps = HTMLAttributes<HTMLElement> & {
   as?: types.FlexElementType;
@@ -15,7 +15,7 @@ type FlexBoxProps = HTMLAttributes<HTMLElement> & {
 };
 
 export const FlexBox = ({
-  as: AsComponent = 'div',
+  as: AsComponent = "div",
   direction,
   gap,
   wrap,
@@ -29,13 +29,13 @@ export const FlexBox = ({
   <AsComponent
     {...props}
     className={cnb(
-      'flex',
-      direction ? styles.flexDirection[direction] : '',
-      wrap ? styles.flexWrap[wrap] : '',
-      justifyContent ? styles.flexJustifyContent[justifyContent] : '',
-      alignContent ? styles.flexAlignContent[alignContent] : '',
-      alignItems ? styles.flexAlignItems[alignItems] : '',
-      gap ? 'grid-gap' : '',
+      "flex",
+      direction ? styles.flexDirection[direction] : "",
+      wrap ? styles.flexWrap[wrap] : "",
+      justifyContent ? styles.flexJustifyContent[justifyContent] : "",
+      alignContent ? styles.flexAlignContent[alignContent] : "",
+      alignItems ? styles.flexAlignItems[alignItems] : "",
+      gap ? "grid-gap" : "",
       className,
     )}
   >

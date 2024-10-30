@@ -1,9 +1,9 @@
-import { HTMLAttributes } from 'react';
-import { Container } from '../Container';
-import { Heading, Text } from '../Typography';
-import { FlexBox } from '../FlexBox';
-import * as styles from './TimelineBanner.styles';
-import { cnb } from 'cnbuilder';
+import { HTMLAttributes } from "react";
+import { Container } from "../Container";
+import { Heading, Text } from "../Typography";
+import { FlexBox } from "../FlexBox";
+import * as styles from "./TimelineBanner.styles";
+import { cnb } from "cnbuilder";
 
 type TimelineBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -12,9 +12,9 @@ type TimelineBannerProps = HTMLAttributes<HTMLDivElement> & {
   body: string;
   cta?: React.ReactNode;
   image: string;
-  bgColor?: 'fog-light' | 'red-gradient';
-  align?: 'right' | 'left';
-  width?: 'full' | 'narrow';
+  bgColor?: "fog-light" | "red-gradient";
+  align?: "right" | "left";
+  width?: "full" | "narrow";
 };
 
 export const TimelineBanner = ({
@@ -23,9 +23,9 @@ export const TimelineBanner = ({
   dek,
   body,
   cta,
-  image = 'https://placecats.com/neo/600/600',
-  bgColor = 'fog-light',
-  align = 'left',
+  image = "https://placecats.com/neo/600/600",
+  bgColor = "fog-light",
+  align = "left",
   ...props
 }: TimelineBannerProps) => (
   <Container
@@ -83,17 +83,17 @@ export const TimelineBanner = ({
       {image && (
         <div
           className={cnb(styles.imageWrapper, {
-            'order-first': align === 'left',
+            "order-first": align === "left",
           })}
         >
           <img
             alt=""
             src={image}
             className={cnb(styles.image, {
-              'rotate-y-[25deg] group-hocus:rotate-y-[-25deg]':
-                align === 'left',
-              'rotate-y-[-25deg] group-hocus:rotate-y-[25deg]':
-                align === 'right',
+              "rotate-y-[25deg] group-hocus:rotate-y-[-25deg]":
+                align === "left",
+              "rotate-y-[-25deg] group-hocus:rotate-y-[25deg]":
+                align === "right",
             })}
             width={500}
             height={500}

@@ -1,9 +1,9 @@
-import { HTMLAttributes } from 'react';
-import { cnb } from 'cnbuilder';
-import { FlexBox } from '@/components/FlexBox';
-import { LogoLockup } from '@/components/Logo/LogoLockup';
-import { Skiplink } from '@/components/SkipLink';
-import * as styles from './Masthead.styles';
+import { HTMLAttributes } from "react";
+import { cnb } from "cnbuilder";
+import { FlexBox } from "@/components/FlexBox";
+import { LogoLockup } from "@/components/Logo/LogoLockup";
+import { Skiplink } from "@/components/SkipLink";
+import * as styles from "./Masthead.styles";
 
 type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   isLight?: boolean;
@@ -25,7 +25,7 @@ export const Masthead = ({
     >
       <LogoLockup
         isLink
-        color={isLight ? 'default' : 'white'}
+        color={isLight ? "default" : "white"}
         text="Engineering Centennial"
         className={styles.lockup}
       />

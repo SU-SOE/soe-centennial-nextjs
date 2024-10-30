@@ -1,2 +1,2 @@
-export * from './PageTitle';
-export * from './PageTitle.styles';
+export * from "./PageTitle";
+export * from "./PageTitle.styles";

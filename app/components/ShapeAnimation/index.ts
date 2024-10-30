@@ -1,1 +1,1 @@
-export * from './ShapeAnimation';
+export * from "./ShapeAnimation";

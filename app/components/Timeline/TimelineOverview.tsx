@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { Container } from '@/components/Container';
-import TimelineItem from './TimelineItem';
-import { cnb } from 'cnbuilder';
-import { useState } from 'react';
-import { TimelineDetails } from './TimelineDetails';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SizeType, TrapezoidType } from './TimelineItem.types';
+import { Container } from "@/components/Container";
+import TimelineItem from "./TimelineItem";
+import { cnb } from "cnbuilder";
+import { useState } from "react";
+import { TimelineDetails } from "./TimelineDetails";
+import { motion, AnimatePresence } from "framer-motion";
+import { SizeType, TrapezoidType } from "./TimelineItem.types";
 
 type TimelineItemData = {
   year: string;
@@ -21,12 +21,12 @@ type TimelineProps = {
   timelineData: TimelineItemData[];
 };
 
-const sizes: SizeType[] = ['small', 'medium', 'large'];
+const sizes: SizeType[] = ["small", "medium", "large"];
 const trapezoids: TrapezoidType[] = [1, 2, 3, 4];
 
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [expandedItemIndex, setExpandedItemIndex] = useState<number | null>(
-    null
+    null,
   );
   // Create rows of items (5 items for odd rows, 4 items for even rows)
   const rows: TimelineItemData[][] = [];
@@ -51,8 +51,8 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
           <div key={rowIndex} className="mb-50">
             <div
               className={cnb(
-                'grid gap-50 py-25',
-                rowSize === 5 ? 'grid-cols-5' : 'grid-cols-4 px-200'
+                "grid gap-50 py-25",
+                rowSize === 5 ? "grid-cols-5" : "grid-cols-4 px-200",
               )}
             >
               {row.map((item, idx) => {
@@ -80,9 +80,9 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                   rows.slice(0, rowIndex + 1).flat().length && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
+                    animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     <TimelineDetails
                       {...timelineData[expandedItemIndex]}

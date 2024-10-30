@@ -1,2 +1,2 @@
-export * from './TimelineBanner';
-export * from './TimelineBanner.styles';
+export * from "./TimelineBanner";
+export * from "./TimelineBanner.styles";

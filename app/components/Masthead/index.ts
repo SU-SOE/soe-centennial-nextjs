@@ -1,2 +1,2 @@
-export * from './Masthead';
-export * from './Masthead.styles';
+export * from "./Masthead";
+export * from "./Masthead.styles";

@@ -1,18 +1,18 @@
-import { HTMLAttributes } from 'react';
-import { Container } from '../Container';
-import { Heading } from '../Typography';
-import * as styles from './PageTitle.styles';
+import { HTMLAttributes } from "react";
+import { Container } from "../Container";
+import { Heading } from "../Typography";
+import * as styles from "./PageTitle.styles";
 
 type PageTitleProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   bigText: string;
-  bgColor?: 'fog-light' | 'red-gradient';
+  bgColor?: "fog-light" | "red-gradient";
 };
 
 export const PageTitle = ({
   heading,
   bigText,
-  bgColor = 'fog-light',
+  bgColor = "fog-light",
   ...props
 }: PageTitleProps) => (
   <Container
