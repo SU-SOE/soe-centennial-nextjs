@@ -4,6 +4,7 @@ import { Heading, Text } from '../Typography';
 import { FlexBox } from '../FlexBox';
 import * as styles from './TimelineDetails.styles';
 import { cnb } from 'cnbuilder';
+import { XCircleIcon } from '@heroicons/react/24/outline';
 
 type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -15,6 +16,8 @@ type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: 'fog-light' | 'red-gradient';
   align?: 'right' | 'left';
   width?: 'full' | 'narrow';
+  isSelected?: boolean;
+  onClose: () => void;
 };
 
 export const TimelineDetails = ({
@@ -23,9 +26,11 @@ export const TimelineDetails = ({
   dek,
   body,
   cta,
-  image = 'https://placecats.com/neo/600/600',
+  image,
   bgColor = 'fog-light',
   align = 'left',
+  isSelected,
+  onClose,
   ...props
 }: TimelineDetailsProps) => (
   <Container
@@ -100,6 +105,10 @@ export const TimelineDetails = ({
           />
         </div>
       )}
+      <button className="group" onClick={onClose}>
+        <span className="sr-only">Close {heading} details</span>
+        <XCircleIcon width={50} className="text-black group-hocus:text-digital-red" />
+      </button>
     </FlexBox>
   </Container>
 );

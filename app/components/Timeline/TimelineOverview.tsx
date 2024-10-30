@@ -85,7 +85,10 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <TimelineDetails {...timelineData[expandedItemIndex]} />
+                    <TimelineDetails
+                      {...timelineData[expandedItemIndex]}
+                      onClose={() => setExpandedItemIndex(null)}
+                    />
                   </motion.div>
                 )}
             </AnimatePresence>
