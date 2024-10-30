@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint \"app/{components,utilities}/**/*.{ts,tsx,js,jsx}\" --quiet --fix",
+    "lint:fix": "eslint \"app/{components,utilities}/**/*.{ts,tsx,js,jsx}\" --fix",
     "typecheck": "tsc --noEmit",
     "tsc": "tsc"
   },
@@ -17,11 +17,9 @@
     "@heroicons/react": "^2.1.5",
     "@tailwindcss/container-queries": "^0.1.1",
     "cnbuilder": "^3.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
     "flubber": "^0.4.2",
     "framer-motion": "^11.11.9",
     "next": "15.0.2",
-    "prettier": "^3.3.3",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "typescript-eslint": "^8.12.2"
@@ -35,7 +33,10 @@
     "decanter": "^7.3.0",
     "eslint": "^9.13.0",
     "eslint-config-next": "15.0.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "postcss": "^8",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
