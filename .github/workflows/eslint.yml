@@ -19,6 +19,15 @@ jobs:
           restore-keys: |
             lint-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
             lint-${{ hashFiles('package.json') }}-
+
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+
+      - name: Prepare Yarn Version
+        shell: bash
+        run: corepack prepare yarn@4.5.1 --activate
+        
       - name: Lint
         run: |
           yarn
