@@ -26,15 +26,14 @@ const trapezoids: TrapezoidType[] = [1, 2, 3, 4];
 
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [expandedItemIndex, setExpandedItemIndex] = useState<number | null>(
-    null,
+    null
   );
-
-  // Create rows of items (5 items odd row; 4 items even row)
+  // Create rows of items (5 items for odd rows, 4 items for even rows)
   const rows: TimelineItemData[][] = [];
   let index = 0;
 
   while (index < timelineData.length) {
-    const rowSize = index % 9 === 0 && index !== 0 ? 4 : 5; // Alternate between 5 and 4 grid item layout
+    const rowSize = rows.length % 2 === 0 ? 5 : 4; // Alternate: 5 items for odd rows, 4 items for even rows
     rows.push(timelineData.slice(index, index + rowSize));
     index += rowSize;
   }
@@ -53,11 +52,11 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
             <div
               className={cnb(
                 'grid gap-50 py-25',
-                rowSize === 5 ? 'grid-cols-5' : 'grid-cols-4',
+                rowSize === 5 ? 'grid-cols-5' : 'grid-cols-4 px-200'
               )}
             >
               {row.map((item, idx) => {
-                const itemIndex = rows.slice(0, rowIndex).flat().length + idx; 
+                const itemIndex = rows.slice(0, rowIndex).flat().length + idx;
                 const isSelected = expandedItemIndex === itemIndex;
 
                 return (
