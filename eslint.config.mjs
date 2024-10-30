@@ -23,6 +23,7 @@ const esLintConfig = tseslint.config(eslint.configs.recommended, ...tseslint.con
     prettier
   },
   rules: {
+    "quotes": ["error", "double", { "avoidEscape": true }],
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/no-redundant-type-constituents": "off",
     "@typescript-eslint/no-unsafe-argument": "off",

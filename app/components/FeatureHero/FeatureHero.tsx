@@ -35,7 +35,7 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
         <Image
           className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
-          src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg`}
+          src={"soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg"}
           width={0}
           height={0}
           sizes="100vw"
@@ -53,7 +53,9 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
         <Image
           className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"
           alt=""
-          src={`soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png`}
+          src={
+            "soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png"
+          }
           width={0}
           height={0}
           sizes="100vw"
