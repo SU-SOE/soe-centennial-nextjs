@@ -9,6 +9,12 @@ runs:
       with:
         node-version: 20
 
+    - name: Enable Corepack
+      run: corepack enable
+
+    - name: Prepare Yarn Version
+      run: corepack prepare yarn@4.5.1 --activate
+
     - name: Cache dependencies ⚡
       id: cache_dependencies
       uses: actions/cache@v3
