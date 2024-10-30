@@ -4,7 +4,7 @@ import { Container } from '@/components/Container';
 import TimelineItem from './TimelineItem';
 import { cnb } from 'cnbuilder';
 import { useState } from 'react';
-import { TimelineBanner } from '../TimelineBanner';
+import { TimelineDetails } from './TimelineDetails';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SizeType, TrapezoidType } from './TimelineItem.types';
 
@@ -86,7 +86,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <TimelineBanner {...timelineData[expandedItemIndex]} />
+                    <TimelineDetails {...timelineData[expandedItemIndex]} />
                   </motion.div>
                 )}
             </AnimatePresence>
