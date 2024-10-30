@@ -1,11 +1,10 @@
-import { Heading, Text } from '@/components/Typography';
-import { ShapeAnimation } from '@/components/ShapeAnimation';
-import { Masthead } from '@/components/Masthead';
-import { FeatureHero } from '@/components/FeatureHero';
-import { PageTitle } from '@/components/PageTitle';
-import TimelineOverview from '@/components/Timeline/TimelineOverview';
-import { loadTimelineData } from '@/utilities/loadTimelineData';
-
+import { Heading, Text } from "@/components/Typography";
+import { ShapeAnimation } from "@/components/ShapeAnimation";
+import { Masthead } from "@/components/Masthead";
+import { FeatureHero } from "@/components/FeatureHero";
+import { PageTitle } from "@/components/PageTitle";
+import TimelineOverview from "@/components/Timeline/TimelineOverview";
+import { loadTimelineData } from "@/utilities/loadTimelineData";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
@@ -47,7 +46,7 @@ const ExamplePage = async () => {
       </FeatureHero>
       <ShapeAnimation />
       <PageTitle heading="100 years of" bigText="Impact" />
-      <TimelineOverview timelineData={timelineData}  />
+      <TimelineOverview timelineData={timelineData} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import { Masthead } from '@/components/Masthead';
-import { TimelineBanner } from '@/components/TimelineBanner';
-import { PageTitle } from '@/components/PageTitle';
+import { Masthead } from "@/components/Masthead";
+import { TimelineBanner } from "@/components/TimelineBanner";
+import { PageTitle } from "@/components/PageTitle";
 
 export default function Home() {
   return (
