@@ -24,6 +24,7 @@ const esLintConfig = tseslint.config(eslint.configs.recommended, ...tseslint.con
   },
   rules: {
     "quotes": ["error", "double", { "avoidEscape": true }],
+    "prettier/prettier": ["error", { "singleQuote": false }],
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/no-redundant-type-constituents": "off",
     "@typescript-eslint/no-unsafe-argument": "off",
@@ -34,7 +35,6 @@ const esLintConfig = tseslint.config(eslint.configs.recommended, ...tseslint.con
     "no-console": ["error", { allow: ["warn", "error"] }],
     "no-fallthrough": "off",
     "no-restricted-syntax": ["error", "Literal[value=/text-m[\\d]/i]"],
-    "prettier/prettier": ["error"],
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
