@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { HTMLAttributes, useRef } from 'react';
-import { Container } from '@/components/Container';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { HTMLAttributes, useRef } from "react";
+import { Container } from "@/components/Container";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type GradientBannerProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
@@ -18,9 +18,9 @@ export const GradientBanner = ({ children, ...props }: GradientBannerProps) => {
     scrollYProgress,
     [0, 1],
     [
-      'linear-gradient(90deg, #C74632 20%, #610058 100%)',
-      'linear-gradient(90deg, #610058 20%, #C74632 100%)',
-    ]
+      "linear-gradient(90deg, #C74632 20%, #610058 100%)",
+      "linear-gradient(90deg, #610058 20%, #C74632 100%)",
+    ],
   );
 
   return (

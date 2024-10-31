@@ -1,11 +1,11 @@
-import { Heading, Text } from '@/components/Typography';
-import { ShapeAnimation } from '@/components/ShapeAnimation';
-import { Masthead } from '@/components/Masthead';
-import { FeatureHero } from '@/components/FeatureHero';
-import { PageTitle } from '@/components/PageTitle';
-import TimelineOverview from '@/components/Timeline/TimelineOverview';
-import { loadTimelineData } from '@/utilities/loadTimelineData';
-import { GradientBanner } from '@/components/GradientBanner/GradientBanner';
+import { Heading, Text } from "@/components/Typography";
+import { ShapeAnimation } from "@/components/ShapeAnimation";
+import { Masthead } from "@/components/Masthead";
+import { FeatureHero } from "@/components/FeatureHero";
+import { PageTitle } from "@/components/PageTitle";
+import TimelineOverview from "@/components/Timeline/TimelineOverview";
+import { loadTimelineData } from "@/utilities/loadTimelineData";
+import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();

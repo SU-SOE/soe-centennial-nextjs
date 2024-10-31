@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { useInView, m, useReducedMotion } from 'framer-motion';
-import { AnimationMap, type AnimationType } from './AnimationMap';
+import { useRef } from "react";
+import { useInView, m, useReducedMotion } from "framer-motion";
+import { AnimationMap, type AnimationType } from "./AnimationMap";
 
 type AnimateInViewProps = {
   animation?: AnimationType;
@@ -14,7 +14,7 @@ type AnimateInViewProps = {
 };
 
 export const AnimateInView = ({
-  animation = 'zoomIn',
+  animation = "zoomIn",
   once = true,
   duration = 0.6,
   delay,
@@ -27,11 +27,13 @@ export const AnimateInView = ({
   const isInView = useInView(ref, { once });
 
   // Don't animate if the user has "reduced motion" enabled
-  if (animation === 'none') {
+  if (animation === "none") {
     return <div>{children}</div>;
   }
 
-  const beforeAnimationState = prefersReducedMotion ? 'hiddenReduced' : 'hidden';
+  const beforeAnimationState = prefersReducedMotion
+    ? "hiddenReduced"
+    : "hidden";
 
   return (
     <m.div
@@ -40,10 +42,10 @@ export const AnimateInView = ({
       transition={{
         delay,
         duration,
-        ease: 'easeOut',
+        ease: "easeOut",
       }}
       initial="hidden"
-      animate={isInView ? 'visible' : beforeAnimationState}
+      animate={isInView ? "visible" : beforeAnimationState}
       className={className}
       {...props}
     >
