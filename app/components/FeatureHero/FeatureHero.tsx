@@ -3,7 +3,6 @@
 import { HTMLAttributes } from "react";
 import { Container } from "../Container";
 import { FlexBox } from "../FlexBox";
-// import * as styles from './FeatureHero.styles';
 import Image from "next/image";
 import ShapeA from "../images/shape-a";
 import { motion, useScroll, useTransform } from "framer-motion";
