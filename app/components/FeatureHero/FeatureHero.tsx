@@ -3,20 +3,15 @@
 import { HTMLAttributes } from "react";
 import { Container } from "../Container";
 import { FlexBox } from "../FlexBox";
-// import * as styles from './FeatureHero.styles';
 import Image from "next/image";
 import ShapeA from "../images/shape-a";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 type FeatureHeroProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
-  imageSrc?: string;
 };
 
 export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
-  const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
-
   return (
     <FlexBox
       {...props}
@@ -35,25 +30,29 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
         <Image
           className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
-          src={"soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg"}
+          src="/soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg"
           width={0}
           height={0}
           sizes="100vw"
         />
-        <motion.div className="absolute w-full h-full top-0 left-0 z-10" style={{ opacity }}>
-            <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
-            <ShapeA
-              className="absolute bottom-10 left-10 lg:left-[300px] z-20 *:stroke-plum"
-              height={1200}
-            />
+        <motion.div
+          className="absolute w-full h-full top-0 left-0 z-10"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 3 }}
+        >
+          <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
+          <ShapeA
+            className="absolute bottom-10 left-10 lg:left-[300px] z-20 *:stroke-plum"
+            height={800}
+          />
         </motion.div>
         <div className="absolute top-0 left-0 bg-transparent lg:bg-feature-gradient-rl bg-feature-gradient-bt w-full h-full z-50" />
         <Image
           className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"
           alt=""
-          src={
-            "soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png"
-          }
+          src="/soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png"
           width={0}
           height={0}
           sizes="100vw"

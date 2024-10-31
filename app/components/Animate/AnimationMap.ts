@@ -28,31 +28,31 @@ export const AnimationMap = {
     hidden: {
       opacity: 0.3,
       scale: 0.6,
-      filter: 'blur(20px)',
+      filter: "blur(20px)",
     },
     hiddenReduced: {
       opacity: 0.3,
       scale: 0.8,
-      filter: 'blur(10px)',
+      filter: "blur(10px)",
     },
     visible: {
       opacity: 1,
       scale: 1,
-      filter: 'blur(0px)',
+      filter: "blur(0px)",
     },
   },
   sharpen: {
     hidden: {
       opacity: 0.3,
-      filter: 'blur(20px)',
+      filter: "blur(20px)",
     },
     hiddenReduced: {
       opacity: 0.3,
-      filter: 'blur(10px)',
+      filter: "blur(10px)",
     },
     visible: {
       opacity: 1,
-      filter: 'blur(0px)',
+      filter: "blur(0px)",
     },
   },
   slideInFromLeft: {
@@ -118,12 +118,12 @@ export const AnimationMap = {
     },
     hiddenReduced: {
       opacity: 1,
-      height: 'auto',
+      height: "auto",
     },
     visible: {
       opacity: 1,
-      height: 'auto',
+      height: "auto",
     },
   },
 };
-export type AnimationType = keyof typeof AnimationMap | 'none';
+export type AnimationType = keyof typeof AnimationMap | "none";
