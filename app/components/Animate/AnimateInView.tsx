@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useInView, m, useReducedMotion } from "framer-motion";
+import { useInView, motion, useReducedMotion } from "framer-motion";
 import { AnimationMap, type AnimationType } from "./AnimationMap";
 
 type AnimateInViewProps = {
@@ -22,9 +22,9 @@ export const AnimateInView = ({
   className,
   ...props
 }: AnimateInViewProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
-  const isInView = useInView(ref, { once });
+  const isInView = useInView(ref as React.RefObject<Element>, { once });
 
   // Don't animate if the user has "reduced motion" enabled
   if (animation === "none") {
@@ -36,7 +36,7 @@ export const AnimateInView = ({
     : "hidden";
 
   return (
-    <m.div
+    <motion.div
       ref={ref}
       variants={AnimationMap[animation]}
       transition={{
@@ -50,6 +50,6 @@ export const AnimateInView = ({
       {...props}
     >
       {children}
-    </m.div>
+    </motion.div>
   );
 };

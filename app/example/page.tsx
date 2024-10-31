@@ -6,6 +6,7 @@ import { PageTitle } from "@/components/PageTitle";
 import TimelineOverview from "@/components/Timeline/TimelineOverview";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
+import TimelineEven from "@/components/TimelineEven/TimelineOverview";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
@@ -74,6 +75,7 @@ const ExamplePage = async () => {
         </div>
       </GradientBanner>
       <TimelineOverview timelineData={timelineData} />
+      <TimelineEven timelineData={timelineData} />
     </div>
   );
 };
