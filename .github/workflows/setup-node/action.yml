@@ -23,9 +23,12 @@ runs:
       with:
         path: node_modules
         key: node-modules-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+        restore-keys: |
+          node-modules-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+          node-modules-${{ hashFiles('package.json') }}-
+          node-modules-
 
     - name: Install dependencies 🔧
       shell: bash
-      if: steps.cache_dependencies.outputs.cache-hit != 'true'
       run: 
         yarn install
