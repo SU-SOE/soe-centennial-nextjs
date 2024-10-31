@@ -26,7 +26,6 @@ runs:
         restore-keys: |
           node-modules-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
           node-modules-${{ hashFiles('package.json') }}-
-          node-modules-
 
     - name: Install dependencies 🔧
       shell: bash
