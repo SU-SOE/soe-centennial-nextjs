@@ -40,7 +40,7 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 3 }} 
+          transition={{ duration: 3 }}
         >
           <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
           <ShapeA
