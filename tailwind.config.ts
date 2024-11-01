@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin'
 
 // const path = require('path');
 const decanter = require('decanter');
@@ -36,5 +37,11 @@ export default {
   plugins: [
     require('@tailwindcss/container-queries'),
     require('@xpd/tailwind-3dtransforms'),
+    plugin(function ({ addVariant }) {
+      const nthVariants = [2, 3, 4];
+      nthVariants.forEach((n) => {
+        addVariant(`nth-${n}n`, `&:nth-child(${n}n)`);
+      });
+    }),
   ],
 } satisfies Config;

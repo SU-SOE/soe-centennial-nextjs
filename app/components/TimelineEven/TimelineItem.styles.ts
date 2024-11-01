@@ -1,7 +1,7 @@
 export const size = {
-  small: "w-150 h-150",
-  medium: "w-200 h-200",
-  large: "w-300 h-300",
+  small: "max-w-150 max-h-150",
+  medium: "max-w-200 max-h-200",
+  large: "max-w-300 max-h-300",
 };
 
 export const trapezoid = {

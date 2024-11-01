@@ -25,12 +25,11 @@ const TimelineItem = ({
   const trapezoidType = styles.trapezoid[trapezoid];
 
   return (
-    <div {...props} className="flex flex-col">
+    <div {...props} className={cnb("flex flex-col", className)}>
       <button
         className={cnb(
-          "group relative hocus:transform-none",
+          "group relative hocus:transform-none rounded-lg flex items-center justify-center",
           trapezoidType,
-          className,
         )}
       >
         <div
