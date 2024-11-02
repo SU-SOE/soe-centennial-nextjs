@@ -24,10 +24,15 @@ export const bar = "hidden sm:block w-1 h-1em mx-03em";
 export const text =
   "font-dm-sans text-15 sm:text-[1.05em] mt-03em -ml-01em sm:ml-0";
 export const textColor = {
-  default: "text-black-60",
-  white: "text-white",
+  default: "text-black-60 fill-stone-dark",
+  white: "text-white fill-black-60",
 };
 export const barColor = {
   default: "bg-black-60",
   white: "bg-white",
+};
+
+export const hundredColor = {
+  default: "fill-digital-red-xlight",
+  white: "fill-white",
 };

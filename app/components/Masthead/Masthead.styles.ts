@@ -2,7 +2,7 @@ export const root = "group w-full absolute top-0 z-50 transition-colors";
 
 // Use a wider centered container (1800px wide at 4XL (2000px) breakpoint)
 export const wrapper =
-  "cc 3xl:px-100 4xl:px-[calc((100%-1800px)/2)] py-12 sm:py-13 lg:py-20 transition";
+  "cc 3xl:px-100 4xl:px-[calc((100%-1800px)/2)] rs-pt-2 rs-pb-1 transition";
 
 // Pass in a root style for the lock up to scale everything within proportionally
 // We use the group-has- TW selector to make the lockup white when the main nav is open
