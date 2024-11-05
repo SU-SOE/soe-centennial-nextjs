@@ -30,7 +30,7 @@ export const Masthead = ({
         text="Engineering Centennial"
         className={styles.lockup}
       /> */}
-      <EngLogoLockup />
+      <EngLogoLockup color={isLight ? "default" : "white"} />
       <FlexBox alignItems="center" className={styles.flexbox}>
         {mainNav}
       </FlexBox>

@@ -25,7 +25,7 @@ export const text =
   "font-dm-sans text-15 sm:text-[1.05em] mt-03em -ml-01em sm:ml-0";
 export const textColor = {
   default: "text-black-60 fill-stone-dark",
-  white: "text-white fill-black-60",
+  white: "text-white fill-white",
 };
 export const barColor = {
   default: "bg-black-60",
