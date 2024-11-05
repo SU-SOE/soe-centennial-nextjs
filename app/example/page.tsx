@@ -7,6 +7,7 @@ import TimelineOverview from "@/components/Timeline/TimelineOverview";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
 import TimelineEven from "@/components/TimelineEven/TimelineOverview";
+import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
@@ -47,6 +48,10 @@ const ExamplePage = async () => {
         </Text>
       </FeatureHero>
       <ShapeAnimation />
+      <MediaCaptionImage
+        imageSrc="https://placecats.com/neo/1500/1000"
+        caption="Caption/credit lorem ipsum"
+      />
       <PageTitle heading="100 years of" bigText="Impact" />
       <GradientBanner>
         <Heading
