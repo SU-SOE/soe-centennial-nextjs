@@ -9,6 +9,8 @@ interface MediaCaptionImageProps extends HTMLAttributes<HTMLElement> {
   imageAlt?: string;
   link?: string;
   caption: string;
+  imageClasses?: string;
+  aspectRatio?: "default" | "square";
 }
 
 const MediaCaptionImage = ({
@@ -17,6 +19,8 @@ const MediaCaptionImage = ({
   imageAlt = "",
   link,
   caption,
+  aspectRatio = "default",
+  imageClasses,
   ...props
 }: MediaCaptionImageProps) => {
   return (
@@ -27,7 +31,13 @@ const MediaCaptionImage = ({
         props.className,
       )}
     >
-      <div className="relative aspect-[16/9] w-full">
+      <div
+        className={cnb(
+          "relative w-full overflow-hidden",
+          aspectRatio === "square" ? "aspect-[1/1]" : "aspect-[16/9]",
+          imageClasses,
+        )}
+      >
         <Image
           className="object-cover"
           src={imageSrc}

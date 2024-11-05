@@ -1,7 +1,7 @@
 export const fontFamilies = {
   sans: "font-sans",
   serif: "font-serif",
-  "ds-sans": "font-ds-sans",
+  "dm-sans": "font-dm-sans",
 };
 
 export const fontWeights = {

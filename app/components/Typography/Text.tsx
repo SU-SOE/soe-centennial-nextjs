@@ -37,17 +37,17 @@ export type TextProps = TypographyProps &
 
 export const Text = ({
   as: AsComponent = "div",
-  font = "sans",
+  font = "dm-sans",
   size,
   weight,
   align,
   color = "default",
   variant,
   leading,
-  useDefaultTracking = font === "ds-sans",
+  useDefaultTracking = font === "dm-sans",
   italic,
   srOnly,
-  uppercase = font === "ds-sans",
+  uppercase,
   icon,
   iconProps,
   className,
@@ -60,6 +60,7 @@ export const Text = ({
     <AsComponent
       {...rest}
       className={cnb(
+        "rs-mb-2",
         font ? styles.fontFamilies[font] : "",
         size ? styles.fontSizes[size] : "",
         weight ? styles.fontWeights[weight] : "",
@@ -71,7 +72,7 @@ export const Text = ({
         srOnly ? "sr-only" : "",
         uppercase ? "uppercase" : "",
         useDefaultTracking ? "tracking-normal" : "",
-        font === "ds-sans" ? "tracking-normal sm:tracking-wide" : "",
+        font === "dm-sans" ? "tracking-normal sm:tracking-wide" : "",
         className,
       )}
     >
