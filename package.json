@@ -22,6 +22,7 @@
     "next": "15.0.2",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-slick": "^0.30.2",
     "typescript-eslint": "^8.12.2"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "@types/node": "^22.8.4",
     "@types/react": "^19.0.0-rc.1",
     "@types/react-dom": "19.0.0-rc.1",
+    "@types/react-slick": "^0",
     "@xpd/tailwind-3dtransforms": "^1.0.3",
     "decanter": "^7.3.0",
     "eslint": "^9.13.0",
