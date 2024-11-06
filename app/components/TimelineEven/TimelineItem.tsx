@@ -14,7 +14,7 @@ interface TimelineItemProps {
   animationProps?: MotionProps;
 }
 
-const TimelineItem = ({
+export const TimelineItem = ({
   heading,
   year,
   image,
@@ -73,5 +73,3 @@ const TimelineItem = ({
     </div>
   );
 };
-
-export default TimelineItem;

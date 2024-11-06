@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import TimelineItem from "./TimelineItem";
+import { TimelineItem } from "./TimelineItem";
 import { SizeType } from "./TimelineItem.types";
 import { cnb } from "cnbuilder";
 

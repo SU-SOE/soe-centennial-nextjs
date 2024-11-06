@@ -9,6 +9,7 @@ import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
 import TimelineEven from "@/components/TimelineEven/TimelineOverview";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
+import { AlumniBanner } from "@/components/AlumniBanner";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
@@ -177,6 +178,7 @@ const ExamplePage = async () => {
           efficitur scelerisque urna et sollicitudin.
         </Text>
       </Container>
+      <AlumniBanner />
       <GradientBanner>
         <Heading
           as="h1"
