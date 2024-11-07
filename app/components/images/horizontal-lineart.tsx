@@ -1,7 +1,8 @@
 "use client";
 
 import { cnb } from "cnbuilder";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface HorizontalLineartProps {
   className?: string;
@@ -11,8 +12,15 @@ export const HorizontalLineart = ({
   className,
   ...props
 }: HorizontalLineartProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div {...props} className={cnb("flex justify-end rs-py-3", className)}>
+    <div
+      {...props}
+      ref={ref}
+      className={cnb("flex justify-end rs-py-3", className)}
+    >
       <motion.svg
         width="1538"
         height="82"
@@ -25,7 +33,7 @@ export const HorizontalLineart = ({
           stroke="#F83535"
           strokeWidth="4"
           initial={{ pathLength: 1, pathOffset: 1 }}
-          animate={{ pathLength: 1, pathOffset: 0 }}
+          animate={isInView && { pathLength: 1, pathOffset: 0 }}
           transition={{
             duration: 3,
             ease: "easeInOut",
