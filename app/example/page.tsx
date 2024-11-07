@@ -52,6 +52,7 @@ const ExamplePage = async () => {
       </FeatureHero>
       <ShapeAnimation />
       <HorizontalLineart className="rs-pl-10" />
+      <HorizontalLineart className="rs-pl-10" isLeft={false} />
       <PageTitle heading="100 years of" bigText="Impact" />
       <Container width="site" py={9} className="font-dm-sans">
         <MediaCaptionImage
