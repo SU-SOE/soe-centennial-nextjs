@@ -10,6 +10,7 @@ import TimelineEven from "@/components/TimelineEven/TimelineOverview";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
 import { AlumniBanner } from "@/components/AlumniBanner";
+import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
@@ -50,6 +51,7 @@ const ExamplePage = async () => {
         </Text>
       </FeatureHero>
       <ShapeAnimation />
+      <HorizontalLineart className="rs-pl-10" />
       <PageTitle heading="100 years of" bigText="Impact" />
       <Container width="site" py={9} className="font-dm-sans">
         <MediaCaptionImage
