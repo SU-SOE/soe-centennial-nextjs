@@ -1,12 +1,9 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import TimelineItem from "./TimelineItem";
+import { TimelineItem } from "./TimelineItem";
+import { SizeType } from "./TimelineItem.types";
 import { cnb } from "cnbuilder";
-import { useState } from "react";
-import { TimelineDetails } from "./TimelineDetails";
-import { motion, AnimatePresence } from "framer-motion";
-import { SizeType, TrapezoidType } from "./TimelineItem.types";
 
 type TimelineItemData = {
   year: string;
@@ -19,81 +16,59 @@ type TimelineItemData = {
 
 type TimelineProps = {
   timelineData: TimelineItemData[];
+  hasBorder?: boolean;
 };
 
-const sizes: SizeType[] = ["small", "medium", "large"];
-const trapezoids: TrapezoidType[] = [1, 2, 3, 4];
+// Helper function to generate a random delay between a specified range
+function getRandomDelay(min = 0.5, max = 5) {
+  return Math.random() * (max - min) + min;
+}
 
-const TimelineOverview = ({ timelineData }: TimelineProps) => {
-  const [expandedItemIndex, setExpandedItemIndex] = useState<number | null>(
-    null,
-  );
-  // Create rows of items (5 items for odd rows, 4 items for even rows)
-  const rows: TimelineItemData[][] = [];
-  let index = 0;
+// Animation variant with random delay for overlay fade-out
+const overlayFadeOutVariant = {
+  visible: { opacity: 1 },
+  hidden: (custom: number) => ({
+    opacity: 0,
+    transition: {
+      duration: 1,
+      delay: custom, // Use the random delay
+    },
+  }),
+};
 
-  while (index < timelineData.length) {
-    const rowSize = rows.length % 2 === 0 ? 5 : 4; // Alternate: 5 items for odd rows, 4 items for even rows
-    rows.push(timelineData.slice(index, index + rowSize));
-    index += rowSize;
-  }
-
-  const handleExpand = (index: number) => {
-    setExpandedItemIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
+const TimelineOverview = ({ timelineData, hasBorder }: TimelineProps) => {
+  const sizePattern: SizeType[] = ["large", "medium", "small"];
 
   return (
-    <Container width="site" py={5} bgColor="fog-light">
-      {rows.map((row, rowIndex) => {
-        const rowSize = row.length; // Determine the size of the current row
+    <Container width="site" py={5} bgColor="fog-light" className="mb-50">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        {timelineData.map((item, idx) => {
+          const trapezoid = idx % 2 === 0 ? "right" : "left";
+          const size = sizePattern[idx % sizePattern.length];
+          const randomDelay = getRandomDelay();
 
-        return (
-          <div key={rowIndex} className="mb-50">
-            <div
+          return (
+            <TimelineItem
+              key={idx}
+              {...item}
+              size={size}
+              trapezoid={trapezoid}
               className={cnb(
-                "grid gap-50 py-25",
-                rowSize === 5 ? "grid-cols-5" : "grid-cols-4 px-200",
+                "rs-pb-3 rs-pt-5 rs-px-4",
+                hasBorder &&
+                  "border-r-3 border-black nth-2n:border-0 md:nth-2n:border-r-3 md:nth-3n:border-0 xl:nth-3n:border-r-3 xl:nth-4n:border-0",
               )}
-            >
-              {row.map((item, idx) => {
-                const itemIndex = rows.slice(0, rowIndex).flat().length + idx;
-                const isSelected = expandedItemIndex === itemIndex;
-
-                return (
-                  <TimelineItem
-                    key={itemIndex}
-                    {...item}
-                    size={sizes[itemIndex % sizes.length]}
-                    trapezoid={trapezoids[itemIndex % trapezoids.length]}
-                    isSelected={isSelected}
-                    className="rounded-lg flex items-center justify-center"
-                    onClick={() => handleExpand(itemIndex)}
-                  />
-                );
-              })}
-            </div>
-            {/* Conditionally render the banner if an item in this row is expanded */}
-            <AnimatePresence>
-              {expandedItemIndex !== null &&
-                expandedItemIndex >= rows.slice(0, rowIndex).flat().length &&
-                expandedItemIndex <
-                  rows.slice(0, rowIndex + 1).flat().length && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                  >
-                    <TimelineDetails
-                      {...timelineData[expandedItemIndex]}
-                      onClose={() => setExpandedItemIndex(null)}
-                    />
-                  </motion.div>
-                )}
-            </AnimatePresence>
-          </div>
-        );
-      })}
+              animationProps={{
+                custom: randomDelay,
+                initial: "visible",
+                animate: "hidden",
+                exit: "visible",
+                variants: overlayFadeOutVariant,
+              }}
+            />
+          );
+        })}
+      </div>
     </Container>
   );
 };

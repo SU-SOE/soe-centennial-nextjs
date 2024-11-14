@@ -1,58 +1,66 @@
 import { cnb } from "cnbuilder";
 import * as styles from "./TimelineItem.styles";
 import * as types from "./TimelineItem.types";
-import { XCircleIcon } from "@heroicons/react/24/outline";
+import { Heading, Text } from "../Typography";
+import { AnimatePresence, MotionProps } from "framer-motion";
 
 interface TimelineItemProps {
+  heading: string;
   year: string;
   image: string;
   size?: types.SizeType;
   trapezoid?: types.TrapezoidType;
   className?: string;
-  onClick?: () => void;
-  isSelected?: boolean;
+  animationProps?: MotionProps;
 }
 
-const TimelineItem = ({
+export const TimelineItem = ({
+  heading,
   year,
   image,
   size = "medium",
-  trapezoid = 1,
-  isSelected,
+  trapezoid = "left",
   className,
+  animationProps,
   ...props
 }: TimelineItemProps) => {
   const imageSize = styles.size[size];
   const trapezoidType = styles.trapezoid[trapezoid];
 
   return (
-    <button
+    <div
       {...props}
-      className={cnb(
-        "group relative hocus:transform-none",
-        trapezoidType,
-        className,
-        isSelected && "transform-none",
-      )}
+      className={cnb("flex flex-col items-center justify-center", className)}
     >
-      <div className={cnb("relative aspect-[1/1]", imageSize)}>
-        <img
-          alt=""
-          src={image}
-          className="inset-0 w-full h-full object-cover rounded-lg"
-        />
-      </div>
-      {isSelected && (
-        <XCircleIcon
-          width={50}
-          className="z-50 absolute flex items-center justify-center text-white group-hocus:text-digital-red"
-        />
-      )}
-      <p className="z-10 absolute bottom-0 left-0 p-10 rounded bg-black-30">
-        {year}
-      </p>
-    </button>
+      <AnimatePresence>
+        <button className={cnb("group relative", trapezoidType)}>
+          <div
+            className={cnb(
+              "aspect-[1/1] relative perspective-600 group-hocus:scale-105 transform ease-in-out duration-1000",
+              imageSize,
+            )}
+          >
+            <img
+              alt=""
+              src={image}
+              className="inset-0 w-full h-full object-cover rounded-lg transform ease-in-out duration-1000"
+            />
+          </div>
+        </button>
+        <div className="flex flex-col *:font-dm-sans">
+          <Heading className="type-0" weight="normal">
+            {heading}
+          </Heading>
+          <Text
+            font="serif"
+            variant="overview"
+            weight="normal"
+            className="order-first mt-28"
+          >
+            {year}
+          </Text>
+        </div>
+      </AnimatePresence>
+    </div>
   );
 };
-
-export default TimelineItem;

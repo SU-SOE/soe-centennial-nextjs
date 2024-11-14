@@ -4,7 +4,7 @@ import { FeatureHero } from "@/components/FeatureHero";
 import { Container } from "@/components/Container";
 import { AlumniBanner } from "@/components/AlumniBanner";
 import { FlexBox } from "@/components/FlexBox";
-import { TimelineSidebar } from "@/components/TimelineEven";
+import { TimelineSidebar } from "@/components/Timeline";
 
 const ExampleStoryPage = async () => {
   return (

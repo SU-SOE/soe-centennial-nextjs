@@ -6,7 +6,6 @@ import { PageTitle } from "@/components/PageTitle";
 import TimelineOverview from "@/components/Timeline/TimelineOverview";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
-import TimelineEven from "@/components/TimelineEven/TimelineOverview";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
 import { AlumniBanner } from "@/components/AlumniBanner";
@@ -209,7 +208,6 @@ const ExamplePage = async () => {
         </div>
       </GradientBanner>
       <TimelineOverview timelineData={timelineData} />
-      <TimelineEven timelineData={timelineData} />
     </div>
   );
 };
