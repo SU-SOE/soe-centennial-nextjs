@@ -14,7 +14,7 @@ const dm_mono = DM_Mono({
   subsets: ["latin"],
   style: ["italic", "normal"],
   display: "swap",
-  variable: "--font-font-dm-mono",
+  variable: "--font-dm-mono",
   weight: "300",
 });
 
