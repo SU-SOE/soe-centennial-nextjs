@@ -1,8 +1,7 @@
 import { cnb } from "cnbuilder";
-import * as styles from "./TimelineItem.styles";
 import * as types from "./TimelineItem.types";
 import { Heading, Text } from "../Typography";
-import { AnimatePresence, MotionProps } from "framer-motion";
+import { TimelineImage } from "./TimelineImage";
 
 interface TimelineItemProps {
   heading: string;
@@ -11,7 +10,7 @@ interface TimelineItemProps {
   size?: types.SizeType;
   trapezoid?: types.TrapezoidType;
   className?: string;
-  animationProps?: MotionProps;
+  onClick?: () => void;
 }
 
 export const TimelineItem = ({
@@ -21,46 +20,36 @@ export const TimelineItem = ({
   size = "medium",
   trapezoid = "left",
   className,
-  animationProps,
+  onClick,
   ...props
 }: TimelineItemProps) => {
-  const imageSize = styles.size[size];
-  const trapezoidType = styles.trapezoid[trapezoid];
-
   return (
-    <div
+    <button
       {...props}
-      className={cnb("flex flex-col items-center justify-center", className)}
+      className={cnb("flex flex-col", className)}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
     >
-      <AnimatePresence>
-        <button className={cnb("group relative", trapezoidType)}>
-          <div
-            className={cnb(
-              "aspect-[1/1] relative perspective-600 group-hocus:scale-105 transform ease-in-out duration-1000",
-              imageSize,
-            )}
-          >
-            <img
-              alt=""
-              src={image}
-              className="inset-0 w-full h-full object-cover rounded-lg transform ease-in-out duration-1000"
-            />
-          </div>
-        </button>
-        <div className="flex flex-col *:font-dm-sans">
-          <Heading className="type-0" weight="normal">
-            {heading}
-          </Heading>
-          <Text
-            font="serif"
-            variant="overview"
-            weight="normal"
-            className="order-first mt-28"
-          >
-            {year}
-          </Text>
-        </div>
-      </AnimatePresence>
-    </div>
+      <TimelineImage
+        src={image}
+        alt={heading}
+        size={size}
+        trapezoidAngle={trapezoid}
+      />
+      <div className="flex flex-col *:font-dm-sans">
+        <Heading className="type-0" weight="normal">
+          {heading}
+        </Heading>
+        <Text
+          font="serif"
+          variant="overview"
+          weight="normal"
+          className="order-first mt-28"
+        >
+          {year}
+        </Text>
+      </div>
+    </button>
   );
 };

@@ -1,11 +1,12 @@
 export const size = {
-  small: "max-w-150 max-h-150",
-  medium: "max-w-200 max-h-200",
-  large: "max-w-300 max-h-300",
+  small: "w-250 h-250",
+  medium: "w-[340px] h-[340px]",
+  large: "w-[420px] h-[420px]",
+  xlarge: "w-600 h-600",
   full: "w-full h-full",
 };
 
 export const trapezoid = {
-  left: "rotate-y-[25deg] hocus:rotate-y-[-25deg]",
-  right: "rotate-y-[-25deg] hocus:rotate-y-[25deg]",
+  left: "rotate-y-[20deg] hocus:rotate-y-[-20deg]",
+  right: "rotate-y-[-20deg] hocus:rotate-y-[20deg]",
 };

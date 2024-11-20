@@ -5,11 +5,12 @@ import { FlexBox } from "../FlexBox";
 import * as styles from "./TimelineDetails.styles";
 import { cnb } from "cnbuilder";
 import { XCircleIcon } from "@heroicons/react/24/outline";
+import { TimelineImage } from "./TimelineImage";
 
 type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   year: string;
-  dek?: string;
+  href?: string;
   body: string;
   cta?: React.ReactNode;
   image: string;
@@ -17,13 +18,13 @@ type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   align?: "right" | "left";
   width?: "full" | "narrow";
   isSelected?: boolean;
-  onClose: () => void;
+  onClose?: () => void;
 };
 
 export const TimelineDetails = ({
   heading,
   year,
-  dek,
+  href,
   body,
   cta,
   image,
@@ -63,16 +64,6 @@ export const TimelineDetails = ({
             {year}
           </Text>
         )}
-        {dek && (
-          <Text
-            font="serif"
-            variant="overview"
-            weight="normal"
-            className={styles.dek}
-          >
-            {dek}
-          </Text>
-        )}
         {body && (
           <Text
             font="serif"
@@ -91,18 +82,7 @@ export const TimelineDetails = ({
             "order-first": align === "left",
           })}
         >
-          <img
-            alt=""
-            src={image}
-            className={cnb(styles.image, {
-              "rotate-y-[25deg] group-hocus:rotate-y-[-25deg]":
-                align === "left",
-              "rotate-y-[-25deg] group-hocus:rotate-y-[25deg]":
-                align === "right",
-            })}
-            width={500}
-            height={500}
-          />
+          <TimelineImage src={image} />
         </div>
       )}
       <button className="group" onClick={onClose}>

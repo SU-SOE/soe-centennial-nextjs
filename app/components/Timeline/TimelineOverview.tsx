@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
+import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./TimelineItem.types";
-import { cnb } from "cnbuilder";
+import { motion, AnimatePresence } from "framer-motion";
 
 type TimelineItemData = {
   year: string;
@@ -19,55 +21,62 @@ type TimelineProps = {
   hasBorder?: boolean;
 };
 
-// Helper function to generate a random delay between a specified range
-function getRandomDelay(min = 0.5, max = 5) {
-  return Math.random() * (max - min) + min;
-}
-
-// Animation variant with random delay for overlay fade-out
-const overlayFadeOutVariant = {
-  visible: { opacity: 1 },
-  hidden: (custom: number) => ({
-    opacity: 0,
-    transition: {
-      duration: 1,
-      delay: custom, // Use the random delay
-    },
-  }),
-};
-
-const TimelineOverview = ({ timelineData, hasBorder }: TimelineProps) => {
+const TimelineOverview = ({ timelineData }: TimelineProps) => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const sizePattern: SizeType[] = ["large", "medium", "small"];
+
+  const handleToggle = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  const rows = [];
+  for (let i = 0; i < timelineData.length; i += 3) {
+    rows.push(timelineData.slice(i, i + 3));
+  }
 
   return (
     <Container width="site" py={5} bgColor="fog-light" className="mb-50">
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-        {timelineData.map((item, idx) => {
-          const trapezoid = idx % 2 === 0 ? "right" : "left";
-          const size = sizePattern[idx % sizePattern.length];
-          const randomDelay = getRandomDelay();
+      <div className="grid gap-4">
+        {rows.map((row, rowIndex) => (
+          <div key={`row-${rowIndex}`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+              {row.map((item, itemIndex) => {
+                const globalIndex = rowIndex * 3 + itemIndex;
+                const trapezoid = globalIndex % 2 === 0 ? "right" : "left";
+                const size = sizePattern[globalIndex % sizePattern.length];
 
-          return (
-            <TimelineItem
-              key={idx}
-              {...item}
-              size={size}
-              trapezoid={trapezoid}
-              className={cnb(
-                "rs-pb-3 rs-pt-5 rs-px-4",
-                hasBorder &&
-                  "border-r-3 border-black nth-2n:border-0 md:nth-2n:border-r-3 md:nth-3n:border-0 xl:nth-3n:border-r-3 xl:nth-4n:border-0",
-              )}
-              animationProps={{
-                custom: randomDelay,
-                initial: "visible",
-                animate: "hidden",
-                exit: "visible",
-                variants: overlayFadeOutVariant,
-              }}
-            />
-          );
-        })}
+                return (
+                  <TimelineItem
+                    key={globalIndex}
+                    {...item}
+                    size={size}
+                    trapezoid={trapezoid}
+                    onClick={() => handleToggle(globalIndex)}
+                  />
+                );
+              })}
+            </div>
+
+            <AnimatePresence>
+              {expandedIndex !== null &&
+                expandedIndex >= rowIndex * 3 &&
+                expandedIndex < (rowIndex + 1) * 3 && (
+                  <motion.div
+                    className="timeline-detail col-span-full"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <TimelineDetails
+                      {...timelineData[expandedIndex]}
+                      onClose={() => setExpandedIndex(null)}
+                    />
+                  </motion.div>
+                )}
+            </AnimatePresence>
+          </div>
+        ))}
       </div>
     </Container>
   );

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .timeline-grid {
+    display: grid;
+    grid-template-areas:
+      'item item item'
+      'detail detail detail';
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .timeline-detail {
+    grid-area: 'detail';
+  }
+}
