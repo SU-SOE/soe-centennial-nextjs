@@ -20,6 +20,8 @@ export default {
   ],
   theme: {
     extend: {
+      // Centennial Override
+      "soe-centennial": require(`${dir}/theme/soe-centennial.js`)(),
       colors: require(`${dir}/theme/soe-colors.js`)(),
       backgroundImage: require(`${dir}/theme/soe-gradients.js`)(),
       fontFamily: require(`${dir}/theme/soe-fontFamily.js`)(),

@@ -1,5 +1,5 @@
 /**
- * Momentum fonts
+ * Centennial fonts
  */
 module.exports = function () {
   return {

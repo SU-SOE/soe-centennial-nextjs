@@ -1,16 +1,16 @@
-import { Heading, Text } from "@/components/Typography";
-import { ShapeAnimation } from "@/components/ShapeAnimation";
-import { Masthead } from "@/components/Masthead";
-import { FeatureHero } from "@/components/FeatureHero";
-import { PageTitle } from "@/components/PageTitle";
-import TimelineOverview from "@/components/Timeline/TimelineOverview";
+import { Heading, Text } from "../../components/Typography";
+import { ShapeAnimation } from "../../components/ShapeAnimation";
+import { Masthead } from "../../components/Masthead";
+import { FeatureHero } from "../../components/FeatureHero";
+import { PageTitle } from "../../components/PageTitle";
+import TimelineOverview from "../../components/Timeline/TimelineOverview";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
-import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
-import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
-import { Container } from "@/components/Container";
-import { AlumniBanner } from "@/components/AlumniBanner";
-import { HorizontalLineart } from "@/components/images/horizontal-lineart";
-import { Quote } from "@/components/Quote";
+import { GradientBanner } from "../../components/GradientBanner/GradientBanner";
+import MediaCaptionImage from "../../components/MediaCaptionImage/MediaCaptionImage";
+import { Container } from "../../components/Container";
+import { AlumniBanner } from "../../components/AlumniBanner";
+import { HorizontalLineart } from "../../components/images/horizontal-lineart";
+import { Quote } from "../../components/Quote";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();

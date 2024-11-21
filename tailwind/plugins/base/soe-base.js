@@ -1,5 +1,5 @@
 /**
- * Momentum custom base styles extending Decanter 7 base
+ * Centennial custom base styles extending Decanter 7 base
  */
 
 module.exports = function () {
