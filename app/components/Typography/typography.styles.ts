@@ -33,6 +33,10 @@ export const fontSizes = {
   // Curated font size for homepage hero slightly smaller than f9
   splash: "splash",
   hero: "hero",
+  // Centennial typograpy
+  "quote-lg": "soe-quote-lg",
+  "quote-md": "soe-quote-md",
+  "quote-sm": "soe-quote-sm",
 };
 
 // Line heights

@@ -8,28 +8,24 @@ import { EngLogoLockup } from "../Logo/EngLogoLockup";
 
 type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   isLight?: boolean;
+  isOverlap?: boolean;
   mainNav?: React.ReactNode;
 };
 
 export const Masthead = ({
   isLight,
+  isOverlap = true,
   mainNav,
   className,
   ...props
 }: MastheadProps) => (
-  <header className={cnb(styles.root, className)} {...props}>
+  <header className={cnb(styles.root(isOverlap), className)} {...props}>
     <Skiplink />
     <FlexBox
       justifyContent="between"
       alignItems="center"
       className={styles.wrapper}
     >
-      {/* <LogoLockup
-        isLink
-        color={isLight ? "default" : "white"}
-        text="Engineering Centennial"
-        className={styles.lockup}
-      /> */}
       <EngLogoLockup color={isLight ? "default" : "white"} />
       <FlexBox alignItems="center" className={styles.flexbox}>
         {mainNav}

@@ -1,4 +1,11 @@
-export const root = "group w-full absolute top-0 z-50 transition-colors";
+import { cnb } from "cnbuilder";
+
+export const root = (isOverlap: boolean) => {
+  return cnb("group w-full transition-colors", {
+    "absolute top-0 z-50": isOverlap,
+    relative: !isOverlap,
+  });
+};
 
 // Use a wider centered container (1800px wide at 4XL (2000px) breakpoint)
 export const wrapper =
