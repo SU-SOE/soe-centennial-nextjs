@@ -8,6 +8,7 @@ type TimelineItem = {
   body: string;
   href?: string;
   image: string;
+  uuid: number;
 };
 
 export async function loadTimelineData(): Promise<TimelineItem[]> {

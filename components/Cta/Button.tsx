@@ -21,7 +21,7 @@ export const Button = ({
   ...props
 }: Props) => {
   const standardClasses =
-    "flex items-center w-fit btn btn--secondary transition text-digital-red hocus:text-white hocus:bg-digital-red border-2 border-digital-red hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red py-4 px-16 font-normal rounded-full";
+    "font-dm-sans w-fit transition text-digital-red-light hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-py-1 rs-px-3 font-normal";
 
   if (!href || buttonElem) {
     return (
