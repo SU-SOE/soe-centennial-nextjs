@@ -60,7 +60,6 @@ export const Text = ({
     <AsComponent
       {...rest}
       className={cnb(
-        "rs-mb-2",
         font ? styles.fontFamilies[font] : "",
         size ? styles.fontSizes[size] : "",
         weight ? styles.fontWeights[weight] : "",
@@ -72,7 +71,7 @@ export const Text = ({
         srOnly ? "sr-only" : "",
         uppercase ? "uppercase" : "",
         useDefaultTracking ? "tracking-normal" : "",
-        font === "dm-sans" ? "tracking-normal sm:tracking-wide" : "",
+        font === "serif" ? "tracking-normal sm:tracking-wide" : "",
         className,
       )}
     >

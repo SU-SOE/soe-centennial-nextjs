@@ -7,6 +7,6 @@ export const size = {
 };
 
 export const trapezoid = {
-  left: "rotate-y-[20deg] hocus:rotate-y-[-20deg]",
-  right: "rotate-y-[-20deg] hocus:rotate-y-[20deg]",
+  left: "rotate-y-[15deg] hocus:rotate-y-[-15deg]",
+  right: "rotate-y-[-15deg] hocus:rotate-y-[15deg]",
 };

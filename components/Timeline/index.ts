@@ -5,3 +5,4 @@ export * from "./TimelineItem.types";
 export * from "./TimelineDetails";
 export * from "./TimelineDetails.styles";
 export * from "./TimelineSidebar";
+export * from "./TimelineCard";

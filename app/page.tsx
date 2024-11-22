@@ -1,5 +1,5 @@
 import { Masthead } from "@/components/Masthead";
-import { TimelineBanner } from "@/components/TimelineBanner";
+import { TimelineCard } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
 
 export default function Home() {
@@ -7,14 +7,14 @@ export default function Home() {
     <div>
       <Masthead isLight />
       <PageTitle heading="100 years of" bigText="Impact" />
-      <TimelineBanner
+      <TimelineCard
         heading="The first African-American woman in space"
         year="1983"
         body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
         image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
         width="narrow"
       />
-      <TimelineBanner
+      <TimelineCard
         heading="First remote classs from the Stanford Instructional Television Network"
         year="1969"
         body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
@@ -22,7 +22,7 @@ export default function Home() {
         align="right"
         width="narrow"
       />
-      <TimelineBanner
+      <TimelineCard
         heading="The Stanford Dish Radiotelescope completed in 1962"
         year="1983"
         body="Enabling vastly expanded studies of scattering effects in the earth’s ionosphere and was used to detect Soviet radar and still used today for satellite calibrations, spacecraft command and telemetry, and radio astronomy measurements."

@@ -14,4 +14,10 @@
   .timeline-detail {
     grid-area: 'detail';
   }
+
+  .font-inherit {
+    font: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
 }

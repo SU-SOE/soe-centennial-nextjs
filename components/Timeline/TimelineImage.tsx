@@ -22,10 +22,10 @@ export const TimelineImage = ({
   const trapezoidType = styles.trapezoid[trapezoidAngle];
 
   return (
-    <div className={cnb("group relative", trapezoidType)}>
+    <div className={cnb("group relative flex justify-center", trapezoidType)}>
       <div
         className={cnb(
-          "aspect-[1/1] relative perspective-600 group-hocus:scale-105 transform ease-in-out duration-1000",
+          "aspect-[1/1] relative perspective-1000 transform ease-in-out duration-1000",
           imageSize,
           className,
         )}
