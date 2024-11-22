@@ -10,8 +10,10 @@ const NextArrow = ({ className, onClick }: CustomArrowProps) => {
   return (
     <button
       className={cnb(
-        "hocus:outline-3 absolute right-0 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark",
+        "hocus:outline-3 absolute right-0 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
         {
+          "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
+            !slickDisabled,
           "bg-black-10 hocus:bg-black-10 hocus:outline-0": slickDisabled,
         },
       )}
@@ -19,7 +21,10 @@ const NextArrow = ({ className, onClick }: CustomArrowProps) => {
       aria-label="Next"
       disabled={slickDisabled}
     >
-      <ChevronRightIcon width={40} className="text-white" />
+      <ChevronRightIcon
+        width={40}
+        className={slickDisabled ? "text-black-30" : "text-white"}
+      />
     </button>
   );
 };
@@ -29,8 +34,10 @@ const PrevArrow = ({ className, onClick }: CustomArrowProps) => {
   return (
     <button
       className={cnb(
-        "hocus:outline-3 absolute right-40 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark",
+        "hocus:outline-3 absolute right-40 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
         {
+          "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
+            !slickDisabled,
           "bg-black-10 hocus:bg-black-10 hocus:outline-0": slickDisabled,
         },
       )}
@@ -40,9 +47,7 @@ const PrevArrow = ({ className, onClick }: CustomArrowProps) => {
     >
       <ChevronLeftIcon
         width={40}
-        className={cnb("text-white", {
-          "text-black-30": slickDisabled,
-        })}
+        className={slickDisabled ? "text-black-30" : "text-white"}
       />
     </button>
   );

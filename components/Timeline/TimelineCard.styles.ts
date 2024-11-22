@@ -1,8 +1,8 @@
 import { cnb } from "cnbuilder";
 export const wrapper = (align: string, isHorizontal: boolean) =>
-  cnb("flex-col w-fit", {
+  cnb("relative z-50 flex-col w-fit", {
     "lg:flex-row": isHorizontal,
-    "lg:ml-auto": align === "right",
+    "ml-auto": isHorizontal && align === "right",
   });
 export const contentWrapper = (isHorizontal: boolean) =>
   cnb("rs-px-2 flex flex-col", {

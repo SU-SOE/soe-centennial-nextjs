@@ -8,7 +8,17 @@ import { TimelineImage } from "./TimelineImage";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { AnimateInView, AnimationType } from "@/components/Animate";
-import { PaddingType, paddingVerticals } from "@/utilities/datasource";
+import {
+  paddingTops,
+  paddingBottoms,
+  paddingVerticals,
+  marginTops,
+  marginBottoms,
+  marginVerticals,
+  type MarginType,
+  type PaddingType,
+} from "@/utilities/datasource";
+import { Trapezoid } from "../images/trapezoid";
 
 type TimelineCardProps = HTMLAttributes<HTMLDivElement> & {
   as?: types.TimelineCardElementType;
@@ -23,12 +33,22 @@ type TimelineCardProps = HTMLAttributes<HTMLDivElement> & {
   align?: "right" | "left";
   width?: types.WidthType;
   isHorizontal?: boolean;
+  pt?: PaddingType;
+  pb?: PaddingType;
   py?: PaddingType;
+  mt?: MarginType;
+  mb?: MarginType;
+  my?: MarginType;
 };
 
 export const TimelineCard = ({
   as: AsComponent = "div",
-  py = 5,
+  py,
+  pt = 9,
+  pb = 3,
+  mt = 3,
+  mb,
+  my,
   heading,
   year,
   body,
@@ -50,11 +70,28 @@ export const TimelineCard = ({
       <AsComponent
         {...props}
         className={cnb(
+          "h-fit relative",
           bgColor ? styles.bgColors[bgColor] : "",
           py ? paddingVerticals[py] : "",
+          pt ? paddingTops[pt] : "",
+          pb ? paddingBottoms[pb] : "",
+          my ? marginVerticals[my] : "",
+          mt ? marginTops[mt] : "",
+          mb ? marginBottoms[mb] : "",
           width ? styles.widths[width] : "",
         )}
       >
+        {isHorizontal && (
+          <Trapezoid
+            className={cnb(
+              "absolute top-0 z-0 flex items-center overflow-hidden",
+              {
+                "right-0": align === "right",
+                "left-0 rotate-180": align === "left",
+              },
+            )}
+          />
+        )}
         <FlexBox
           alignItems="center"
           className={styles.wrapper(align, isHorizontal)}
