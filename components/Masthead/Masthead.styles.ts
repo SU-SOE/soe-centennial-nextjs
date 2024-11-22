@@ -21,3 +21,11 @@ export const flexbox = "gap-x-12 sm:gap-x-20 md:gap-x-30";
 // We use the group-has- TW selector to make the Giving link white when the main nav is open
 export const cta =
   'relative z-[300] group-has-[nav[data-headlessui-state="open"]]:text-white group-has-[nav[data-headlessui-state="open"]]:decoration-white';
+
+export const bgColors = {
+  black: "bg-black text-white",
+  white: "bg-white text-black",
+  "fog-light": "bg-fog-light text-black",
+};
+
+export type BgColorType = keyof typeof bgColors | "";
