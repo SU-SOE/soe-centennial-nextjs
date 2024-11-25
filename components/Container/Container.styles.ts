@@ -6,7 +6,8 @@ export const widths = {
 
 export const bgColors = {
   black: "bg-black text-white",
-  white: "bg-white text-black",
-  "fog-light": "bg-fog-light text-black",
+  white: "bg-white text-stone-dark",
+  blue: "soe-blue-xlight",
+  "fog-light": "bg-fog-light text-stone-dark",
   "red-gradient": "bg-soe-red-gradient text-white",
 };

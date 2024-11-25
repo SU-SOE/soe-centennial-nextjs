@@ -7,6 +7,7 @@ import {
 } from "../images/HeroIcon";
 import * as styles from "./typography.styles";
 import * as types from "./typography.types";
+import { marginBottoms, MarginType } from "@/utilities/datasource";
 
 export type TypographyProps = {
   as?: types.TextType;
@@ -17,6 +18,7 @@ export type TypographyProps = {
   color?: types.TextColorType;
   variant?: types.TextVariantType;
   leading?: types.FontLeadingType;
+  mb?: MarginType;
   /**
    * If true, use default tracking for the font - for DM Sans
    */
@@ -44,6 +46,7 @@ export const Text = ({
   color = "default",
   variant,
   leading,
+  mb,
   useDefaultTracking = font === "dm-sans",
   italic,
   srOnly,
@@ -67,6 +70,7 @@ export const Text = ({
         color ? styles.textColors[color] : "",
         variant ? styles.textVariants[variant] : "",
         leading ? styles.fontLeadings[leading] : "",
+        mb ? marginBottoms[mb] : marginBottoms[2],
         italic ? "italic" : "",
         srOnly ? "sr-only" : "",
         uppercase ? "uppercase" : "",

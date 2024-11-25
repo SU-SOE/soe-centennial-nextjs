@@ -1,15 +1,10 @@
 import { Heading, Text } from "@/components/Typography";
 import { Masthead } from "@/components/Masthead";
-import TimelineOverview from "@/components/Timeline/TimelineOverview";
-import { loadTimelineData } from "@/utilities/loadTimelineData";
-import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
-import { AlumniBanner } from "@/components/AlumniBanner";
-import { Quote } from "@/components/Quote";
+import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 
 const TextareaExamplePage = async () => {
-  const timelineData = await loadTimelineData();
   return (
     <div>
       <Masthead />
@@ -140,39 +135,12 @@ const TextareaExamplePage = async () => {
           efficitur scelerisque urna et sollicitudin.
         </Text>
       </Container>
-      <AlumniBanner />
-      <GradientBanner>
-        <Heading
-          as="h1"
-          leading="none"
-          className="2xl:whitespace-pre-line font-normal -mt-01em rs-mb-8 xl:max-w-1200"
-        >
-          Events
-        </Heading>
-        <div className="grid grid-cols-2 gap-[15.8rem]">
-          <Text>
-            Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet
-            sapien, quis venenatis ante odio sit amet eros. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos
-            hymenaeos. Quisque libero metus, condimentum nec, tempor a, commodo
-            mollis, magna. Ut a nisl id ante tempus hendrerit. Nunc sed turpis.
-          </Text>
-          <Text>
-            Vivamus consectetuer hendrerit lacus. Maecenas tempus, tellus eget
-            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
-            neque sed ipsum. Donec vitae orci sed dolor rutrum auctor. Nunc
-            interdum lacus sit amet orci. Proin pretium, leo ac pellentesque
-            mollis, felis nunc ultrices eros, sed gravida augue augue mollis
-            justo.
-          </Text>
-        </div>
-      </GradientBanner>
-      <Quote
-        teaser="We each get a chance to choose our own path..."
-        body="Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem."
-        source="Mae C. Jemison"
-      />
-      <TimelineOverview timelineData={timelineData} />
+      <ContributeStoryBanner />
+      <ContributeStoryBanner hasLineArt />
+      <ContributeStoryBanner bgColor="fog-light" />
+      <ContributeStoryBanner bgColor="fog-light" hasLineArt />
+      <ContributeStoryBanner bgColor="blue" />
+      <ContributeStoryBanner bgColor="blue" hasLineArt />
     </div>
   );
 };

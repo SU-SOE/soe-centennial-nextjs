@@ -8,7 +8,7 @@ import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
-import { AlumniBanner } from "@/components/AlumniBanner";
+import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { Quote } from "@/components/Quote";
 
@@ -181,7 +181,7 @@ const ExamplePage = async () => {
           efficitur scelerisque urna et sollicitudin.
         </Text>
       </Container>
-      <AlumniBanner />
+      <ContributeStoryBanner />
       <GradientBanner>
         <Heading
           as="h1"

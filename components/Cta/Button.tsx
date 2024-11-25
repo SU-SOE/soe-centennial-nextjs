@@ -6,6 +6,7 @@ import { cnb } from "cnbuilder";
 
 type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> & {
   href?: string;
+  isLight?: boolean;
   buttonElem?: boolean;
   onClick?: MouseEventHandler;
   prefetch?: LinkProps["prefetch"];
@@ -15,18 +16,23 @@ type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> & {
 
 export const Button = ({
   href,
+  isLight = false,
   buttonElem = false,
   children,
   className,
   ...props
 }: Props) => {
-  const standardClasses =
-    "font-dm-sans w-fit transition text-digital-red-light hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-py-1 rs-px-3 font-normal";
-
   if (!href || buttonElem) {
     return (
       <button
-        className={cnb(standardClasses, className)}
+        className={cnb(
+          "font-dm-sans w-fit transition hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-py-1 rs-px-3 font-normal ",
+          {
+            "text-digital-red-light ": isLight,
+            "text-white ": !isLight,
+          },
+          className,
+        )}
         type="button"
         {...props}
       >
@@ -38,7 +44,14 @@ export const Button = ({
   return (
     <Link
       href={href}
-      className={cnb(standardClasses, className?.replace("button", ""))}
+      className={cnb(
+        "font-dm-sans w-fit transition hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-py-1 rs-px-3 font-normal ",
+        {
+          "text-digital-red-light ": isLight,
+          "text-white ": !isLight,
+        },
+        className?.replace("button", ""),
+      )}
       {...props}
     >
       {children}

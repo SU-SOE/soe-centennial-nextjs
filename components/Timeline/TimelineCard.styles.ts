@@ -10,7 +10,7 @@ export const contentWrapper = (isHorizontal: boolean) =>
     "rs-pt-2 w-full": !isHorizontal,
   });
 export const heading =
-  "2xl:whitespace-pre-line -mt-01em rs-mb-0 last:mb-0 xl:max-w-1200";
+  "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";
 export const superhead = "order-first rs-mb-2";
 export const imageWrapper = (align: string, isHorizontal: boolean) =>
   cnb("rs-mb-2 lg:mb-0 w-[420px] order-first", {

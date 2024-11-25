@@ -2,7 +2,7 @@ import { Heading, Text } from "@/components/Typography";
 import { Masthead } from "@/components/Masthead";
 import { FeatureHero } from "@/components/FeatureHero";
 import { Container } from "@/components/Container";
-import { AlumniBanner } from "@/components/AlumniBanner";
+import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { FlexBox } from "@/components/FlexBox";
 import { TimelineSidebar } from "@/components/Timeline";
 
@@ -84,7 +84,7 @@ const ExampleStoryPage = async () => {
           <TimelineSidebar className="w-1/3" />
         </FlexBox>
       </Container>
-      <AlumniBanner />
+      <ContributeStoryBanner />
     </div>
   );
 };

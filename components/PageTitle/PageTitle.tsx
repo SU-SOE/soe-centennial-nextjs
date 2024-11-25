@@ -23,7 +23,7 @@ export const PageTitle = ({
     py={9}
     className={styles.root}
   >
-    <Heading leading="none" className={styles.heading}>
+    <Heading mb="base" leading="none" className={styles.heading}>
       <span className="font-semibold type-1">{heading}</span>
       <span className="font-bold type-8">{bigText}</span>
     </Heading>
