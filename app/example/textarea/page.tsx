@@ -1,0 +1,180 @@
+import { Heading, Text } from "@/components/Typography";
+import { Masthead } from "@/components/Masthead";
+import TimelineOverview from "@/components/Timeline/TimelineOverview";
+import { loadTimelineData } from "@/utilities/loadTimelineData";
+import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
+import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
+import { Container } from "@/components/Container";
+import { AlumniBanner } from "@/components/AlumniBanner";
+import { Quote } from "@/components/Quote";
+
+const TextareaExamplePage = async () => {
+  const timelineData = await loadTimelineData();
+  return (
+    <div>
+      <Masthead />
+      <Container width="site" py={9} className="font-dm-sans">
+        <MediaCaptionImage
+          imageSrc="https://placecats.com/neo/1500/1000"
+          caption="Caption/credit lorem ipsum aspect ratio square"
+          aspectRatio="square"
+          imageClasses="w-[500px] rounded-lg"
+        />
+        <MediaCaptionImage
+          imageSrc="https://placecats.com/neo/1500/1000"
+          caption="Caption/credit lorem ipsum aspect ratio 16/9"
+        />
+        <p className="intro-text">
+          Overview style lorem ipsum dolar sit amet vestibulum parimentium elit
+          rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod
+          nisi, pharetra raesent nec. Aliquam dignissim nisi convalis quis, leo
+          vestibulum duis euismod.
+        </p>
+        <p className="big-paragraph">
+          Long copy paragraph text style raesent nec dapibus odio. Aliquam
+          dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec
+          efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui
+          convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim,
+          sit amet
+        </p>
+        <h2>Header Two</h2>
+        <p className="big-paragraph">
+          Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
+          erat, imperdiet eu fermentum sed in text link. Praesent nec dapibus
+          odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in.
+          Donec efficitur scelerisque urna et sollicitudin. Duis aliquam euismod
+          enim, sit amet in text link hover state. Aliquam sodales consequat
+          arcu in egestas. Aliquam condimentum viverra eros.Donec efficitur
+          scelerisque urna et sollicitudin. Duis aliquam euismod enim, sit amet.
+        </p>
+        <Heading as="h3">Header Three</Heading>
+        <Text className="big-paragraph">
+          Aenean sollicitudin facilisis ex, in tincidunt velit sodales ac.
+          Nullam consequat leo ut sem pharetra, a fringilla massa commodo. Etiam
+          molestie, justo nec congue ultricies, augue massa tempus ante, nec
+          sagittis dui tellus ac lectus. Duis aliquam euismod enim, sit amet
+          lobortis ante porttitor. Donec efficitur scelerisque urna et
+          sollicitudin. Duis aliquam euismod enim, sit amet.
+        </Text>
+        <Heading as="h4">Header Four</Heading>
+        <Text className="big-paragraph">
+          Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
+          erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
+          dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit
+          rhoncus in.
+        </Text>
+        <Heading as="h5">Header Five</Heading>
+        <Text className="big-paragraph">
+          Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
+          erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
+          dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit
+          rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
+          euismod enim a dui convallis, quis suscipit leo vestibulum. Duis
+          aliquam euismod enim, sit amet lobortis ante porttitor. Donec
+          efficitur scelerisque urna et sollicitudin. Duis aliquam euismod enim,
+          sit amet.
+        </Text>
+        <Text className="big-paragraph">
+          Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
+          erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
+          dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit
+          rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
+          efficitur scelerisque urna et sollicitudin.
+        </Text>
+        <Text className="big-paragraph">
+          <ul>
+            <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
+            <li>
+              Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu
+              fermentum nec massa mollis donec efficitur scelerisque urna et
+              sollicitudin.
+            </li>
+            <li>
+              Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi
+              praesent dapibus odio aliquam dignissim nisi nisi pharetra
+              faucibus elit
+            </li>
+            <li>
+              Donec efficitur scelerisque urna et sollicitudin. Donec euismod
+              enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam
+              euismod enim lobortis ante porttitor aliquam praesent Sodales
+              consequat arcu in egestas Aliquam condimentum viverra eros, in
+              dapibus purus faucibus ut
+            </li>
+          </ul>
+        </Text>
+        <Text className="big-paragraph">
+          Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
+          erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
+          dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit
+          rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
+          efficitur scelerisque urna et sollicitudin.
+        </Text>
+        <Text className="big-paragraph">
+          <ol>
+            <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
+            <li>
+              Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu
+              fermentum nec massa mollis donec efficitur scelerisque urna et
+              sollicitudin.
+            </li>
+            <li>
+              Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi
+              praesent dapibus odio aliquam dignissim nisi nisi pharetra
+              faucibus elit
+            </li>
+            <li>
+              Donec efficitur scelerisque urna et sollicitudin. Donec euismod
+              enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam
+              euismod enim lobortis ante porttitor aliquam praesent Sodales
+              consequat arcu in egestas Aliquam condimentum viverra eros, in
+              dapibus purus faucibus ut
+            </li>
+          </ol>
+        </Text>
+        <Text className="big-paragraph">
+          Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
+          erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
+          dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit
+          rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
+          efficitur scelerisque urna et sollicitudin.
+        </Text>
+      </Container>
+      <AlumniBanner />
+      <GradientBanner>
+        <Heading
+          as="h1"
+          leading="none"
+          className="2xl:whitespace-pre-line font-normal -mt-01em rs-mb-8 xl:max-w-1200"
+        >
+          Events
+        </Heading>
+        <div className="grid grid-cols-2 gap-[15.8rem]">
+          <Text>
+            Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet
+            sapien, quis venenatis ante odio sit amet eros. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            hymenaeos. Quisque libero metus, condimentum nec, tempor a, commodo
+            mollis, magna. Ut a nisl id ante tempus hendrerit. Nunc sed turpis.
+          </Text>
+          <Text>
+            Vivamus consectetuer hendrerit lacus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
+            neque sed ipsum. Donec vitae orci sed dolor rutrum auctor. Nunc
+            interdum lacus sit amet orci. Proin pretium, leo ac pellentesque
+            mollis, felis nunc ultrices eros, sed gravida augue augue mollis
+            justo.
+          </Text>
+        </div>
+      </GradientBanner>
+      <Quote
+        teaser="We each get a chance to choose our own path..."
+        body="Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem."
+        source="Mae C. Jemison"
+      />
+      <TimelineOverview timelineData={timelineData} />
+    </div>
+  );
+};
+
+export default TextareaExamplePage;
