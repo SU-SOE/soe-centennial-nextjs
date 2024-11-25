@@ -11,6 +11,7 @@ import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { Quote } from "@/components/Quote";
+import { ImpactStoryBanner } from "@/components/ImpactStoryBanner";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
@@ -51,6 +52,13 @@ const ExamplePage = async () => {
         </Text>
       </FeatureHero>
       <ShapeAnimation />
+      <ImpactStoryBanner
+        heading="Exploring the reengineering of immune cells"
+        superhead="Change Makers"
+        body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
+        byline="by Jess Alvarenga"
+        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+      />
       <HorizontalLineart className="rs-pl-10" />
       <HorizontalLineart className="rs-pl-10" isLeft={false} />
       <PageTitle heading="100 years of" bigText="Impact" />

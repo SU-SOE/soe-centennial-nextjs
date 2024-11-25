@@ -9,5 +9,7 @@ export const bgColors = {
   white: "bg-white text-stone-dark",
   blue: "soe-blue-xlight",
   "fog-light": "bg-fog-light text-stone-dark",
+  red: "bg-cardinal-red-dark text-white",
   "red-gradient": "bg-soe-red-gradient text-white",
+  "stone-dark": "bg-stone-dark text-white",
 };

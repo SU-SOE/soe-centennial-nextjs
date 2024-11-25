@@ -21,12 +21,12 @@ export const Masthead = ({
   ...props
 }: MastheadProps) => (
   <header
+    {...props}
     className={cnb(
-      styles.bgColors[bgColor || "white"],
+      styles.bgColors[bgColor || "none"],
       styles.root(isOverlap),
       className,
     )}
-    {...props}
   >
     <Skiplink />
     <FlexBox

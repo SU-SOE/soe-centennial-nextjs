@@ -2,7 +2,7 @@ import { cnb } from "cnbuilder";
 
 export const root = (isOverlap: boolean) => {
   return cnb("group w-full transition-colors", {
-    "absolute top-0 z-50": isOverlap,
+    "absolute top-0 right-0 z-50": isOverlap,
     relative: !isOverlap,
   });
 };
@@ -23,9 +23,13 @@ export const cta =
   'relative z-[300] group-has-[nav[data-headlessui-state="open"]]:text-white group-has-[nav[data-headlessui-state="open"]]:decoration-white';
 
 export const bgColors = {
+  none: "bg-transparent",
   black: "bg-black text-white",
-  white: "bg-white text-black",
-  "fog-light": "bg-fog-light text-black",
+  white: "bg-white text-stone-dark",
+  blue: "soe-blue-xlight",
+  "fog-light": "bg-fog-light text-stone-dark",
+  "red-gradient": "bg-soe-red-gradient text-white",
+  "stone-dark": "bg-stone-dark text-white",
 };
 
 export type BgColorType = keyof typeof bgColors | "";

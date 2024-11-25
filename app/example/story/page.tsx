@@ -1,48 +1,24 @@
 import { Heading, Text } from "@/components/Typography";
 import { Masthead } from "@/components/Masthead";
-import { FeatureHero } from "@/components/FeatureHero";
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { FlexBox } from "@/components/FlexBox";
 import { TimelineSidebar } from "@/components/Timeline";
+import { ImpactStoryBanner } from "@/components/ImpactStoryBanner";
 
 const ExampleStoryPage = async () => {
   return (
     <div>
-      <Masthead />
-      <FeatureHero>
-        <Heading
-          as="h1"
-          leading="none"
-          className="2xl:whitespace-pre-line font-normal -mt-01em rs-mb-8 xl:max-w-1200"
-        >
-          Exploring the reengineering of immune cells
-        </Heading>
-        <Text
-          variant="overview"
-          weight="normal"
-          className="order-first mb-38 underline underline-offset-[6px] decoration-2 decoration-digital-red-xlight"
-        >
-          Change Makers
-        </Text>
-        <Text
-          variant="overview"
-          weight="normal"
-          className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
-        >
-          The Sarafan ChEM-H Institute scholar is building a multidisciplinary
-          lab to explore the reengineering of immune cells. Before coming to
-          Stanford, she says, “I was thinking in terms of understanding. Now I
-          feel that I can start thinking in terms of creating.”
-        </Text>
-        <Text
-          variant="overview"
-          weight="normal"
-          className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
-        >
-          by Jess Alvarenga
-        </Text>
-      </FeatureHero>
+      <Masthead isOverlap />
+      <ImpactStoryBanner
+        bgColor="stone-dark"
+        heading="Exploring the reengineering of immune cells"
+        superhead="Change Makers"
+        body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
+        byline="by Jess Alvarenga"
+        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+      />
       <Container width="site" py={9} className="font-dm-sans">
         <FlexBox direction="row" className="cc" gap>
           <Container width="full" className="w-2/3">
