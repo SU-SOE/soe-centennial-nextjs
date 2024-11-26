@@ -26,7 +26,7 @@ export const ContributeStoryBanner = ({
   >
     <Container
       className={cnb(
-        "relative flex flex-col lg:flex-row items-center rs-pt-3 rs-pb-1 rs-px-9 h-full min-h-500 justify-between gap-50",
+        "relative flex flex-col lg:flex-row items-center lg:rs-pt-3 lg:rs-pb-1 lg:rs-px-9 h-full min-h-500 justify-between gap-50",
         {
           "*:text-white": bgColor === "red-gradient",
           "*:text-stone-dark": bgColor !== "red-gradient",
@@ -34,7 +34,10 @@ export const ContributeStoryBanner = ({
       )}
       width="full"
     >
-      <FlexBox direction="col" className="z-50 max-w-[670px] mt-50 rs-mb-6">
+      <FlexBox
+        direction="col"
+        className="z-50 max-w-full lg:max-w-[670px] mt-50 lg:rs-mb-6"
+      >
         <Heading mb={5} className="font-normal">
           Contribute{" "}
           <span

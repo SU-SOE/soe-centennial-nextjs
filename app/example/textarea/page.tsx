@@ -7,7 +7,7 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 const TextareaExamplePage = async () => {
   return (
     <div>
-      <Masthead />
+      <Masthead isLight />
       <Container width="site" py={9} className="font-dm-sans">
         <MediaCaptionImage
           imageSrc="https://placecats.com/neo/1500/1000"
@@ -76,7 +76,7 @@ const TextareaExamplePage = async () => {
           rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
           efficitur scelerisque urna et sollicitudin.
         </Text>
-        <Text className="big-paragraph">
+        <Text as="div" className="big-paragraph">
           <ul>
             <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
             <li>
@@ -105,7 +105,7 @@ const TextareaExamplePage = async () => {
           rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
           efficitur scelerisque urna et sollicitudin.
         </Text>
-        <Text className="big-paragraph">
+        <Text as="div" className="big-paragraph">
           <ol>
             <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
             <li>
