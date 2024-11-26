@@ -38,7 +38,7 @@ export type TextProps = TypographyProps &
   TimeHTMLAttributes<HTMLElement>;
 
 export const Text = ({
-  as: AsComponent = "div",
+  as: AsComponent = "p",
   font = "dm-sans",
   size,
   weight,

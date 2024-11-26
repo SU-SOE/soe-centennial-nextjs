@@ -13,6 +13,7 @@ type ImpactStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: BgColorType;
   caption?: string;
   hasBgImage?: boolean;
+  isHorizontal?: boolean;
   src: string;
   alt?: string;
 };
@@ -25,6 +26,7 @@ export const ImpactStoryBanner = ({
   bgColor = "white",
   caption,
   hasBgImage = false,
+  isHorizontal = false,
   src,
   alt,
   ...props
@@ -53,10 +55,17 @@ export const ImpactStoryBanner = ({
         )}
         <FlexBox
           alignItems="center"
-          className="flex flex-col lg:flex-row z-50 relative"
+          className={cnb("flex flex-col z-50 relative", {
+            "lg:flex-row": !isHorizontal,
+          })}
           gap
         >
-          <div className="flex flex-col lg:w-1/2 max-w-700 text-center lg:text-left rs-mb-8 rs-mt-7 lg:m-0">
+          <div
+            className={cnb("flex flex-col text-center rs-mb-8 rs-mt-7", {
+              "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isHorizontal,
+              "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0": !isHorizontal,
+            })}
+          >
             <Heading size={6} weight="normal" mb="none">
               {heading}
             </Heading>
@@ -72,8 +81,18 @@ export const ImpactStoryBanner = ({
               </Text>
             )}
           </div>
-          <FlexBox direction="col" className="w-full h-full lg:w-1/2">
-            <div className="aspect-[3/2] lg:aspect-[2/3] w-full lg:max-h-[960px] overflow-hidden relative rounded-[30px] mb-10">
+          <FlexBox
+            direction="col"
+            className={cnb("w-full h-full", {
+              "md:1/3 lg:w-1/2": !isHorizontal,
+            })}
+          >
+            <div
+              className={cnb(
+                "aspect-[3/2] w-full xl:max-h-[960px] overflow-hidden relative rounded-[30px] mb-10",
+                { "md:aspect-[2/3]": !isHorizontal },
+              )}
+            >
               <Image src={src} alt={alt || ""} fill className="object-cover" />
             </div>
             {bgColor === "white" && (
