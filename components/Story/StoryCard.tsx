@@ -8,7 +8,7 @@ import * as styles from "@/components/Container/Container.styles";
 type StoryCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead?: string;
-  body: string;
+  body?: string;
   href: string;
   headerTag?: "h2" | "h3";
   isHeadingLarge?: boolean;
@@ -40,7 +40,7 @@ export const StoryCard = ({
     <CardWrapper
       {...props}
       className={cnb(
-        "overflow-hidden rs-mb-5 w-full rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] stretched-link transition duration-500 hocus:shadow-2xl",
+        "overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] stretched-link transition duration-500 hocus:shadow-2xl",
         { "flex flex-col md:flex-row items-center": isHorizontal },
         bgColor && styles.bgColors[bgColor],
         className,
@@ -71,9 +71,11 @@ export const StoryCard = ({
             {superhead}
           </Text>
         )}
-        <Text size="base" mb="none" className="rs-mt-neg1">
-          {body}
-        </Text>
+        {body && (
+          <Text size="base" mb="none" className="rs-mt-neg1">
+            {body}
+          </Text>
+        )}
       </div>
     </CardWrapper>
   );

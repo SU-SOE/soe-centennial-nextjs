@@ -49,7 +49,11 @@ export const ContributeStoryBanner = ({
             your stories
           </span>
         </Heading>
-        <Text mb="none" className="order-first font-dm-mono mb-1 mt-50">
+        <Text
+          mb="none"
+          font="dm-mono"
+          className="order-first font-dm-mono mb-1 mt-50"
+        >
           Get involved
         </Text>
         <Text mb="none">

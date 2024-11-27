@@ -2,9 +2,11 @@ import { Masthead } from "@/components/Masthead";
 import { TimelineCard } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { ThreeCol } from "@/components/Layout";
-import { StoryCard } from "@/components/StoryCard";
+import { ThreeCol, TwoCol } from "@/components/Layout";
+import { StoryCard } from "@/components/Story";
 import { Container } from "@/components/Container";
+import { StoryFeature } from "@/components/Story/StoryFeature";
+import { Heading } from "@/components/Typography";
 
 export default function Home() {
   return (
@@ -70,6 +72,41 @@ export default function Home() {
           href="/"
         />
       </ThreeCol>
+      <StoryFeature>
+        <TwoCol className="rs-mb-8 items-center">
+          <Heading size={5} weight="normal" className="rs-mr-8">
+            Fundamental work in science and transformational breakthroughs for
+            one hundred years.
+          </Heading>
+          <StoryCard
+            superhead="Impact"
+            heading="Lorem ipsum dolor sit amet consect hendrerit"
+            imageUrl="https://placecats.com/neo_banana/300/200"
+            href="/"
+            className="max-w-full"
+          />
+        </TwoCol>
+        <ThreeCol>
+          <StoryCard
+            superhead="Innovation"
+            heading="The Foundation of a New Era in Engineering"
+            imageUrl="https://placecats.com/neo_banana/300/200"
+            href="/"
+          />
+          <StoryCard
+            superhead="1975 - 1984"
+            heading="Computation, outer space, the nanoscale, and the fragility of planet Earth"
+            imageUrl="https://placecats.com/neo_banana/300/200"
+            href="/"
+          />
+          <StoryCard
+            superhead="1985 - 1994"
+            heading="Mae Jemison: “We each get a chance to choose our own path”"
+            imageUrl="https://placecats.com/neo_banana/300/200"
+            href="/"
+          />
+        </ThreeCol>
+      </StoryFeature>
     </div>
   );
 }

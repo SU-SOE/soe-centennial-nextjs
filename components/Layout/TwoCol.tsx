@@ -27,7 +27,7 @@ export const TwoCol = ({
       className={cnb(
         "flex flex-col w-full max-w-full lg:flex-row gap-20",
         {
-          "lg:*:max-w-1/2": !isSidebar,
+          "lg:*:w-1/2": !isSidebar,
           "lg:first:max-w-2/3 lg:last:max-w-1/3": isSidebar,
         },
         className,
