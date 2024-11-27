@@ -18,7 +18,7 @@ export const ThreeCol = ({ children, className, ...props }: ColProps) => {
   return (
     <Container
       {...props}
-      className={cnb("grid grid-cols-1 md:grid-cols-3", className)}
+      className={cnb("grid grid-cols-1 md:grid-cols-3 gap-50", className)}
     >
       {children}
     </Container>

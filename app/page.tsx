@@ -2,6 +2,9 @@ import { Masthead } from "@/components/Masthead";
 import { TimelineCard } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
+import { ThreeCol } from "@/components/Layout";
+import { StoryCard } from "@/components/StoryCard";
+import { Container } from "@/components/Container";
 
 export default function Home() {
   return (
@@ -34,6 +37,39 @@ export default function Home() {
         width="site"
       />
       <TimelineFeature uuids={[12, 3, 10, 4]} />
+      <Container width="site" py={6}>
+        <StoryCard
+          isHorizontal
+          bgColor="blue"
+          heading="Untangling the web of racial inequality"
+          body="Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo."
+          imageUrl="https://placecats.com/neo_banana/300/200"
+          href="/"
+        />
+      </Container>
+      <ThreeCol>
+        <StoryCard
+          heading="Lorem ipsum dolor sit amet consect hendrerit"
+          superhead="Change makers"
+          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
+          imageUrl="https://placecats.com/neo_banana/300/200"
+          href="/"
+        />
+        <StoryCard
+          heading="Lorem ipsum dolor sit amet consect hendrerit"
+          superhead="Change makers"
+          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
+          imageUrl="https://placecats.com/neo_banana/300/200"
+          href="/"
+        />
+        <StoryCard
+          heading="Lorem ipsum dolor sit amet consect hendrerit"
+          superhead="Change makers"
+          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
+          imageUrl="https://placecats.com/neo_banana/300/200"
+          href="/"
+        />
+      </ThreeCol>
     </div>
   );
 }
