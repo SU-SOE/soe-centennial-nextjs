@@ -19,6 +19,7 @@ export const OneCol = ({ children, className, ...props }: ColProps) => {
     <Container
       {...props}
       className={cnb("flex flex-col items-center *:max-w-[725px]", className)}
+      mb={6}
     >
       {children}
     </Container>

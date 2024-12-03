@@ -32,6 +32,7 @@ export const TwoCol = ({
         },
         className,
       )}
+      mb={6}
     >
       {children}
     </Container>
