@@ -3,10 +3,15 @@ import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
+import Metadata from "@/components/Layout/Metadata";
 
 const TextareaExamplePage = async () => {
   return (
     <div>
+      <Metadata
+        title="Example Textarea"
+        description="Example page containing typography styles"
+      />
       <Masthead isLight />
       <Container width="site" py={9} className="font-dm-sans">
         <MediaCaptionImage

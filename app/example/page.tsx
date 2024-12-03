@@ -12,11 +12,16 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { Quote } from "@/components/Quote";
 import { ImpactStoryBanner } from "@/components/ImpactStoryBanner";
+import Metadata from "@/components/Layout/Metadata";
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
   return (
     <div>
+      <Metadata
+        title="Example Components"
+        description="Example page containing majority of the components available for usage on this site"
+      />
       <Masthead />
       <FeatureHero>
         <Heading

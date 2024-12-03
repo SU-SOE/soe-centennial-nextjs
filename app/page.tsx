@@ -7,10 +7,16 @@ import { StoryCard } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading } from "@/components/Typography";
+import Metadata from "@/components/Layout/Metadata";
 
 export default function Home() {
   return (
     <div>
+      <Metadata
+        isHome
+        title="100 years of Impact"
+        description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
+      />
       <Masthead isLight />
       <PageTitle heading="100 years of" bigText="Impact" />
       <TimelineCard
