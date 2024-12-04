@@ -26,18 +26,17 @@ export const ContributeStoryBanner = ({
   >
     <Container
       className={cnb(
-        "relative flex flex-col lg:flex-row items-center lg:rs-pt-3 lg:rs-pb-1 lg:rs-px-9 h-full min-h-500 justify-between gap-50",
+        "relative flex flex-col xl:flex-row items-center h-full min-h-500 justify-between gap-50",
         {
           "*:text-white": bgColor === "red-gradient",
           "*:text-stone-dark": bgColor !== "red-gradient",
+          "rs-py-10 rs-px-8": hasLineArt,
+          "rs-py-5 rs-px-2": !hasLineArt,
         },
       )}
       width="full"
     >
-      <FlexBox
-        direction="col"
-        className="z-50 max-w-full lg:max-w-[670px] mt-50 lg:rs-mb-6"
-      >
+      <FlexBox direction="col" className="z-50 max-w-full lg:max-w-[670px] ">
         <Heading mb={5} className="font-normal">
           Contribute{" "}
           <span
@@ -62,7 +61,7 @@ export const ContributeStoryBanner = ({
           mi blandit lobortis eget in enim.
         </Text>
       </FlexBox>
-      <div className="shrink-0 z-50 mt-50">
+      <div className="shrink-0 z-50 rs-mt-3">
         <Button isLight={bgColor !== "red-gradient" ? true : false} href="/">
           Submit your story
         </Button>
