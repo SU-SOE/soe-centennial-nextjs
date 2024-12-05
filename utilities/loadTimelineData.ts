@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { v4 as uuidv4 } from "uuid";
 
 type TimelineItem = {
   year: string;
@@ -8,7 +9,7 @@ type TimelineItem = {
   body: string;
   href?: string;
   image: string;
-  uuid: number;
+  uuid: string;
 };
 
 export async function loadTimelineData(): Promise<TimelineItem[]> {
@@ -23,11 +24,11 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
     const parsedData: unknown = JSON.parse(fileContents);
 
     if (Array.isArray(parsedData)) {
-      // Validate and return if the data is an array of TimelineItem
-      return parsedData.filter(isTimelineItem);
+      // Validate, assign UUID, and return if the data is an array of TimelineItem
+      return parsedData.filter(isTimelineItem).map(assignUuid);
     } else if (isTimelineItem(parsedData)) {
-      // Return single object as an array if it is a valid TimelineItem
-      return [parsedData];
+      // Assign UUID to single object and return as an array
+      return [assignUuid(parsedData)];
     } else {
       console.warn(`Invalid data format in file: ${fileName}`);
       return [];
@@ -40,6 +41,11 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
   return timelineData;
 }
 
+// Assign a UUID to a TimelineItem
+function assignUuid(item: TimelineItem): TimelineItem {
+  return { ...item, uuid: uuidv4() };
+}
+
 // Type guard to ensure parsed data matches TimelineItem type
 function isTimelineItem(data: unknown): data is TimelineItem {
   if (typeof data !== "object" || data === null) return false;
@@ -50,8 +56,7 @@ function isTimelineItem(data: unknown): data is TimelineItem {
     typeof item.heading === "string" &&
     typeof item.dek === "string" &&
     typeof item.body === "string" &&
-    typeof item.uuid === "number" &&
-    (item.href === undefined || typeof item.href === "string") &&
-    typeof item.image === "string"
+    typeof item.image === "string" &&
+    (item.href === undefined || typeof item.href === "string")
   );
 }

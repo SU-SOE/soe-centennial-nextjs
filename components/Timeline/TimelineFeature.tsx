@@ -6,7 +6,7 @@ import { Slideshow } from "../Slideshow/Slideshow";
 import { Button } from "../Cta";
 
 type TimelineFeatureProps = {
-  uuids: number[];
+  uuids: string[];
 };
 
 export const TimelineFeature = async ({ uuids }: TimelineFeatureProps) => {

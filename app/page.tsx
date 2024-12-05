@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineCard } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
-import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
+// import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { ThreeCol, TwoCol } from "@/components/Layout";
 import { StoryCard } from "@/components/Story";
 import { Container } from "@/components/Container";
@@ -44,7 +44,7 @@ export default function Home() {
         image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
         width="site"
       />
-      <TimelineFeature uuids={[12, 3, 10, 4]} />
+      {/* <TimelineFeature uuids={[12, 3, 10, 4]} /> */}
       <Container width="site" py={6}>
         <StoryCard
           isHorizontal

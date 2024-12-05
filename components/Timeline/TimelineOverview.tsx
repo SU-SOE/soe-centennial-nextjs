@@ -6,8 +6,10 @@ import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./TimelineItem.types";
 import { motion, AnimatePresence } from "framer-motion";
+import { useMediaQuery } from "usehooks-ts";
 
 type TimelineItemData = {
+  uuid: string;
   year: string;
   heading: string;
   dek: string;
@@ -22,45 +24,63 @@ type TimelineProps = {
 };
 
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const sizePattern: SizeType[] = ["large", "medium", "small"];
+  const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
 
-  const handleToggle = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+  // Define breakpoints using useMediaQuery hook
+  const isLg = useMediaQuery("(min-width: 1024px)");
+  const isMd = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
+  const isSm = useMediaQuery("(min-width: 640px) and (max-width: 767px)");
+
+  // Determine the number of items per row
+  const itemsPerRow = isLg ? 3 : isMd || isSm ? 2 : 1;
+
+  // Group timeline data into rows based on itemsPerRow
+  const rows = timelineData.reduce<TimelineItemData[][]>((acc, item, index) => {
+    const rowIndex = Math.floor(index / itemsPerRow);
+    if (!acc[rowIndex]) acc[rowIndex] = [];
+    acc[rowIndex].push(item);
+    return acc;
+  }, []);
+
+  const handleToggle = (uuid: string) => {
+    setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
   };
-
-  const rows = [];
-  for (let i = 0; i < timelineData.length; i += 3) {
-    rows.push(timelineData.slice(i, i + 3));
-  }
 
   return (
     <Container width="site" py={5} bgColor="fog-light" className="mb-50">
       <div className="grid gap-4">
         {rows.map((row, rowIndex) => (
           <div key={`row-${rowIndex}`}>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {/* Dynamically set grid columns based on itemsPerRow */}
+            <div
+              className={`grid gap-4 ${
+                itemsPerRow === 3
+                  ? "grid-cols-3"
+                  : itemsPerRow === 2
+                    ? "grid-cols-2"
+                    : "grid-cols-1"
+              }`}
+            >
               {row.map((item, itemIndex) => {
-                const globalIndex = rowIndex * 3 + itemIndex;
-                const trapezoid = globalIndex % 2 === 0 ? "right" : "left";
-                const size = sizePattern[globalIndex % sizePattern.length];
+                const sizePattern: SizeType[] = ["large", "medium", "small"];
+                const size = sizePattern[itemIndex % sizePattern.length];
+                const trapezoid = itemIndex % 2 === 0 ? "right" : "left";
 
                 return (
                   <TimelineItem
-                    key={globalIndex}
+                    key={item.uuid}
                     {...item}
                     size={size}
                     trapezoid={trapezoid}
-                    onClick={() => handleToggle(globalIndex)}
+                    onClick={() => handleToggle(item.uuid)}
                   />
                 );
               })}
             </div>
 
             <AnimatePresence>
-              {expandedIndex !== null &&
-                expandedIndex >= rowIndex * 3 &&
-                expandedIndex < (rowIndex + 1) * 3 && (
+              {expandedUuid &&
+                row.some((item) => item.uuid === expandedUuid) && (
                   <motion.div
                     className="timeline-detail col-span-full"
                     initial={{ opacity: 0, height: 0 }}
@@ -69,8 +89,10 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     transition={{ duration: 0.5 }}
                   >
                     <TimelineDetails
-                      {...timelineData[expandedIndex]}
-                      onClose={() => setExpandedIndex(null)}
+                      {...timelineData.find(
+                        (item) => item.uuid === expandedUuid,
+                      )!}
+                      onClose={() => setExpandedUuid(null)}
                     />
                   </motion.div>
                 )}
