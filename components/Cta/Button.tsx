@@ -22,20 +22,17 @@ export const Button = ({
   className,
   ...props
 }: Props) => {
+  const buttonStyle = cnb(
+    "flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-p-1 sm:rs-py-1 sm:rs-px-3 font-normal ",
+    {
+      "text-digital-red-light ": isLight,
+      "text-white ": !isLight,
+    },
+  );
+
   if (!href || buttonElem) {
     return (
-      <button
-        className={cnb(
-          "font-dm-sans w-fit transition hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-py-1 rs-px-3 font-normal ",
-          {
-            "text-digital-red-light ": isLight,
-            "text-white ": !isLight,
-          },
-          className,
-        )}
-        type="button"
-        {...props}
-      >
+      <button className={cnb(buttonStyle, className)} type="button" {...props}>
         {children}
       </button>
     );
@@ -44,14 +41,7 @@ export const Button = ({
   return (
     <Link
       href={href}
-      className={cnb(
-        "font-dm-sans w-fit transition hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-py-1 rs-px-3 font-normal ",
-        {
-          "text-digital-red-light ": isLight,
-          "text-white ": !isLight,
-        },
-        className?.replace("button", ""),
-      )}
+      className={cnb(buttonStyle, className?.replace("button", ""))}
       {...props}
     >
       {children}
