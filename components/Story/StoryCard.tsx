@@ -40,7 +40,7 @@ export const StoryCard = ({
     <CardWrapper
       {...props}
       className={cnb(
-        "overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] stretched-link transition duration-500 hocus:shadow-2xl",
+        "overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] stretched-link group transition duration-500 hocus:shadow-2xl",
         { "flex flex-col md:flex-row items-center": isHorizontal },
         bgColor && styles.bgColors[bgColor],
         className,
@@ -63,6 +63,7 @@ export const StoryCard = ({
           size={isHeadingLarge ? 3 : 2}
           weight="normal"
           mb="none"
+          isInvertLinkStyle
         >
           <a href={href}>{heading}</a>
         </Heading>

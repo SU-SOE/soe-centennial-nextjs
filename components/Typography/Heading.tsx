@@ -6,6 +6,7 @@ type HeadingProps = Omit<TypographyProps, "as"> &
   React.HTMLAttributes<HTMLHeadingElement> & {
     as?: types.HeadingType;
     className?: string;
+    isInvertLinkStyle?: boolean;
   };
 
 // Convenience component for paragraphs
@@ -13,10 +14,12 @@ export const Heading = ({
   as = "h2",
   weight = "bold",
   className,
+  isInvertLinkStyle = false,
   ...rest
 }: HeadingProps) => {
-  const headingLinkClasses =
-    "[&_a]:text-stone-dark [&_a]:underline [&_a]:underline-offset-[5px] [&_a]:decoration-digital-red-light [&_a]:cursor-pointer [&_a]:decoration-4";
+  const headingLinkClasses = isInvertLinkStyle
+    ? "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:group-hocus:underline [&_a]:underline-offset-[5px] [&_a]:group-hocus:decoration-digital-red-light [&_a]:group-hocus:cursor-pointer [&_a]:decoration-4"
+    : "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:underline [&_a]:underline-offset-[5px] [&_a]:decoration-digital-red-light [&_a]:cursor-pointer [&_a]:decoration-4";
   return (
     <Text
       {...rest}
