@@ -1,9 +1,6 @@
 {
   "year": "2026",
   "heading": "Quantum Leap",
-  "dek": "The Next Frontier",
   "body": "The company made its first foray into quantum computing, pushing the boundaries of what was possible.",
-  "href": "https://example.com/2026",
-  "image": "https://placecats.com/neo/300/200",
-  "uuid":  9
+  "image": "https://placecats.com/neo/300/200"
 }

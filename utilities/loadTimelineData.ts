@@ -2,10 +2,9 @@ import fs from "fs";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
 
-type TimelineItem = {
+export type TimelineItem = {
   year: string;
   heading: string;
-  dek: string;
   body: string;
   href?: string;
   image: string;
@@ -13,50 +12,84 @@ type TimelineItem = {
 };
 
 export async function loadTimelineData(): Promise<TimelineItem[]> {
-  const directoryPath = path.join(process.cwd(), "data/timeline");
-  const fileNames = fs.readdirSync(directoryPath);
+  const baseDirectory = path.join(process.cwd(), "data/timeline");
+  const decadeDirectories = fs.readdirSync(baseDirectory);
 
-  const timelineData: TimelineItem[] = fileNames.flatMap((fileName) => {
-    const filePath = path.join(directoryPath, fileName);
-    const fileContents = fs.readFileSync(filePath, "utf8");
+  const allTimelineData: TimelineItem[] = [];
 
-    // Parse the JSON file content
-    const parsedData: unknown = JSON.parse(fileContents);
+  for (const decadeDir of decadeDirectories) {
+    const decadePath = path.join(baseDirectory, decadeDir);
 
-    if (Array.isArray(parsedData)) {
-      // Validate, assign UUID, and return if the data is an array of TimelineItem
-      return parsedData.filter(isTimelineItem).map(assignUuid);
-    } else if (isTimelineItem(parsedData)) {
-      // Assign UUID to single object and return as an array
-      return [assignUuid(parsedData)];
-    } else {
-      console.warn(`Invalid data format in file: ${fileName}`);
-      return [];
+    // Skip if it's not a directory
+    if (!fs.statSync(decadePath).isDirectory()) {
+      console.warn(`Skipping non-directory: ${decadeDir}`);
+      continue;
     }
-  });
 
-  // Sort the combined timeline data by year
-  timelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
+    const files = fs.readdirSync(decadePath);
 
-  return timelineData;
+    for (const file of files) {
+      const filePath = path.join(decadePath, file);
+      const fileContents = fs.readFileSync(filePath, "utf8");
+
+      try {
+        const parsedData: unknown = JSON.parse(fileContents);
+
+        // Handle arrays or single objects
+        if (Array.isArray(parsedData)) {
+          const validatedItems = parsedData
+            .filter(isTimelineItem)
+            .map(assignUuidAndHref);
+          allTimelineData.push(...validatedItems);
+        } else if (isTimelineItem(parsedData)) {
+          allTimelineData.push(assignUuidAndHref(parsedData));
+        } else {
+          console.warn(`Invalid data format in file: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error parsing JSON in file: ${filePath}`);
+        console.error(error);
+      }
+    }
+  }
+
+  // Sort all timeline items by year
+  allTimelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
+  return allTimelineData;
 }
 
-// Assign a UUID to a TimelineItem
-function assignUuid(item: TimelineItem): TimelineItem {
-  return { ...item, uuid: uuidv4() };
+function assignUuidAndHref(
+  item: Omit<TimelineItem, "uuid" | "href">,
+): TimelineItem {
+  if (!item.heading) {
+    throw new Error(`Missing heading for timeline item with year ${item.year}`);
+  }
+
+  const sanitizedHeading = sanitizeForUrl(item.heading);
+  const href = `/${item.year}-${sanitizedHeading}`;
+  const uuid = uuidv4(); // Always generate a new UUID
+
+  return { ...item, uuid, href };
 }
 
-// Type guard to ensure parsed data matches TimelineItem type
-function isTimelineItem(data: unknown): data is TimelineItem {
+function sanitizeForUrl(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "") // Remove non-alphanumeric characters
+    .trim()
+    .replace(/\s+/g, "-"); // Replace spaces with hyphens
+}
+
+function isTimelineItem(
+  data: unknown,
+): data is Omit<TimelineItem, "uuid" | "href"> {
   if (typeof data !== "object" || data === null) return false;
 
   const item = data as Partial<TimelineItem>;
   return (
     typeof item.year === "string" &&
     typeof item.heading === "string" &&
-    typeof item.dek === "string" &&
     typeof item.body === "string" &&
-    typeof item.image === "string" &&
-    (item.href === undefined || typeof item.href === "string")
+    typeof item.image === "string"
   );
 }

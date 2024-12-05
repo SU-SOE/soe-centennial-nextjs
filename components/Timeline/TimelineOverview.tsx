@@ -7,16 +7,7 @@ import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./TimelineItem.types";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
-
-type TimelineItemData = {
-  uuid: string;
-  year: string;
-  heading: string;
-  dek: string;
-  body: string;
-  href?: string;
-  image: string;
-};
+import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 
 type TimelineProps = {
   timelineData: TimelineItemData[];

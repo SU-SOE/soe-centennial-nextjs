@@ -9,13 +9,15 @@
     "lint": "next lint",
     "lint:fix": "eslint \"app/**/*.{ts,tsx,js,jsx}\" --fix",
     "typecheck": "tsc --noEmit",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "validate:timeline": "node scripts/validate-timeline.mjs"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.13.0",
     "@heroicons/react": "^2.1.5",
     "@tailwindcss/container-queries": "^0.1.1",
+    "ajv": "^8.17.1",
     "cnbuilder": "^3.1.0",
     "flubber": "^0.4.2",
     "framer-motion": "^12.0.0-alpha.1",
