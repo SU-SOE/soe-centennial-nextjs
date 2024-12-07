@@ -18,11 +18,11 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
       as="section"
       alignItems="start"
       justifyContent="between"
-      className="relative flex-col bg-soe-black h-auto w-full z-10"
+      className="relative flex-col bg-cen-black h-auto w-full z-10"
     >
       <Container
         width="full"
-        className="order-last flex flex-col rs-p-9 *:text-white z-50 lg:max-w-[50%] *:font-dm-sans bg-soe-black lg:bg-transparent"
+        className="order-last flex flex-col rs-p-9 *:text-white z-50 lg:max-w-[50%] *:font-dm-sans bg-cen-black lg:bg-transparent"
       >
         {children}
       </Container>
@@ -30,7 +30,7 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
         <Image
           className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
           alt=""
-          src="/soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg"
+          src="/cen-centennial-nextjs/assets/images/Hawa-Racine-Thiam.jpg"
           width={0}
           height={0}
           sizes="100vw"
@@ -52,7 +52,7 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
         <Image
           className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"
           alt=""
-          src="/soe-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png"
+          src="/cen-centennial-nextjs/assets/images/Hawa-Racine-Thiam_silhouette.png"
           width={0}
           height={0}
           sizes="100vw"

@@ -20,16 +20,16 @@ export default {
   ],
   theme: {
     extend: {
-      colors: require(`${dir}/theme/soe-colors.js`)(),
-      backgroundImage: require(`${dir}/theme/soe-gradients.js`)(),
-      fontFamily: require(`${dir}/theme/soe-fontFamily.js`)(),
+      colors: require(`${dir}/theme/cen-colors.js`)(),
+      backgroundImage: require(`${dir}/theme/cen-gradients.js`)(),
+      fontFamily: require(`${dir}/theme/cen-fontFamily.js`)(),
     },
   },
   plugins: [
     require("@tailwindcss/container-queries"),
     require("@xpd/tailwind-3dtransforms"),
-    require(`${dir}/base/soe-base.js`)(),
-    require(`${dir}/components/soe-typography.js`)(),
+    require(`${dir}/base/cen-base.js`)(),
+    require(`${dir}/components/cen-typography.js`)(),
     plugin(function ({ addVariant }: { addVariant: AddVariantFunction }) {
       const nthVariants = [2, 3, 4];
       nthVariants.forEach((n) => {

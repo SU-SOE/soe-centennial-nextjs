@@ -34,9 +34,9 @@ export const fontSizes = {
   splash: "splash",
   hero: "hero",
   // Centennial typograpy
-  "quote-lg": "soe-quote-lg",
-  "quote-md": "soe-quote-md",
-  "quote-sm": "soe-quote-sm",
+  "quote-lg": "cen-quote-lg",
+  "quote-md": "cen-quote-md",
+  "quote-sm": "cen-quote-sm",
 };
 
 // Line heights

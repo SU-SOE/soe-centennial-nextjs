@@ -3,7 +3,7 @@
  */
 module.exports = function () {
   return {
-    'soe-black': "#181818",
-    'soe-blue-xlight': "#F4F8FA"
+    'cen-black': "#181818",
+    'cen-blue-xlight': "#F4F8FA"
   };
 };
