@@ -1,5 +1,5 @@
 /**
- * Momentum custom base styles extending Decanter 7 base
+ * Centennial custom base styles extending Decanter 7 base
  */
 
 module.exports = function () {
@@ -17,9 +17,6 @@ module.exports = function () {
         },
         '@screen lg': {
           fontSize: '2.1rem',
-        },
-        '@screen 2xl': {
-          fontSize: '2.3rem',
         },
       },
       a: {

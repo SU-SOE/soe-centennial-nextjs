@@ -1,5 +1,5 @@
 /**
- * Momentum specific typography styles
+ * Centennial specific typography styles
  */
 module.exports = function () {
   return function ({ addComponents, theme }) {
