@@ -10,7 +10,7 @@ module.exports = function () {
         fontWeight: theme('fontWeight.normal'),
       },
       '.cen-caption': {
-        fontSize: 'max(1.5rem, 0.81em)',
+        fontSize: 'max(1.6rem, 0.7em)',
       },
       '.cen-card': {
         fontSize: '0.93em',

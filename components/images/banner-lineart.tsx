@@ -3,9 +3,154 @@ import React from "react";
 
 interface BannerLineartProps {
   className?: string;
+  variant?: "oval" | "triangle";
 }
 
-const BannerLineart = ({ className }: BannerLineartProps) => {
+const BannerLineart = ({ className, variant = "oval" }: BannerLineartProps) => {
+  if (variant === "triangle") {
+    return (
+      <>
+        <svg
+          width="1508"
+          height="986"
+          viewBox="0 0 1508 986"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cnb("hidden 2xl:block", className)}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <path
+            vectorEffect="non-scaling-stroke"
+            d="M1505 159C1505 159 1505 923 1505 947C1505 971 1495 983 1467 983C1439 983 65 983 37 983C9 983 3 973 3 947C3 921 3 119 3 94.9999C3 70.9999 5 52.9999 37 52.9999C69 52.9999 1132 53 1142 53C1152 53 1316 149 1374 183C1387.48 190.9 1420 199 1420 159C1420 119 1420 59 1420 47C1420 20 1419 3 1381 3C1343 3 1309 3 1287 3C1270 3 1254.69 32.2295 1287 47.0008C1357 79.0005 1505 151 1505 159Z"
+            stroke="#F83535"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </svg>
+        {/* XL SVG */}
+        <svg
+          width="1001"
+          height="986"
+          viewBox="0 0 1001 986"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cnb("hidden xl:block 2xl:hidden", className)}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <path
+            vectorEffect="non-scaling-stroke"
+            d="M997.994 167C997.994 167 997.994 923 997.994 947C997.994 971 987.994 983 959.994 983C931.994 983 65.0102 983 37.0102 983C9.0102 983 3.01019 973 3.01019 947C3.01019 921 3.01019 119 3.01019 95C3.01019 71 5.01019 53 37.0102 53C69.0102 53 627.996 53 637.996 53C647.996 53 808.996 142.5 866.997 173.5C886.496 183.922 912.997 179.5 912.997 149.5C912.997 109.5 912.997 59 912.997 47C912.997 20 911.999 3 873.999 3C835.999 3 801.997 3 779.997 3C762.997 3 748.22 31.1126 779.997 47.0008C840 77.002 997.998 164 997.994 167Z"
+            stroke="#F83535"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </svg>
+        {/* LG SVG */}
+        <svg
+          width="814"
+          height="986"
+          viewBox="0 0 814 986"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cnb("hidden lg:block xl:hidden", className)}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <path
+            vectorEffect="non-scaling-stroke"
+            d="M810.998 113C810.998 113 810.998 923 810.998 947C810.998 971 800.998 983 772.998 983C744.998 983 65.024 983 37.024 983C9.02399 983 3.02399 973 3.02399 947C3.02399 921 3.02399 119 3.02399 95C3.02399 71 5.02399 53 37.024 53C69.024 53 577 53 581.5 53C586 53 668 91 714 113C728.092 119.74 741.001 109.129 741.001 89C741.001 49 741.001 38 741.001 26C741.001 9 739.001 3 722 3C684 3 670 3 648 3C631 3 620.751 24.2165 648 36C717 65.8378 800.5 107.5 810.998 113Z"
+            stroke="#F83535"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </svg>
+        {/* MD SVG */}
+        <svg
+          width="697"
+          height="776"
+          viewBox="0 0 697 776"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cnb("hidden md:block lg:hidden", className)}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <path
+            vectorEffect="non-scaling-stroke"
+            d="M693.998 98.5C693.998 98.5 693.998 713 693.998 737C693.998 761 683.998 773 655.998 773C627.998 773 65 773 37 773C9 773 3 763 3 737C3 711 3 119 3 95C3 71 5 53 37 53C69 53 511 53 515.5 53C520 53 578 81 622 102C636.097 108.728 649.001 99.4091 649.001 79.2804C649.001 39.2804 649.001 38 649.001 26C649.001 9 647.001 3 630 3C592 3 578 3 556 3C543.5 3 534.343 25.821 556 36C606 59.5 683.5 93 693.998 98.5Z"
+            stroke="#F83535"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </svg>
+        {/* SM SVG */}
+        <svg
+          width="509"
+          height="617"
+          viewBox="0 0 509 617"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cnb("hidden sm:block md:hidden", className)}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <path
+            vectorEffect="non-scaling-stroke"
+            d="M506.998 57C506.998 57 506.998 582.452 506.998 600C506.998 611 503.5 615 494 615C473.537 615 36.9632 615 16.5 615C5.65384 615 1.99805 608.322 1.99805 598.5C1.99805 588.678 1.99805 62.8156 1.99805 45.2675C1.99805 32 9.99805 27.5584 21.8462 27.5584C45.2326 27.5584 387.258 27.5584 390.547 27.5584C393.836 27.5584 432.224 48.0312 464.38 63.3857C474.683 68.3052 484.113 72.4913 484.113 57.7738C484.113 28.5271 484.113 20.774 484.113 12C484.113 5 482.27 2 474.498 2C466.727 2 435.133 2 425.998 2C416.863 2 414.498 13.706 422.145 17.3019C458.687 34.4844 499.326 52.9786 506.998 57Z"
+            stroke="#F83535"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+        </svg>
+        {/* XS SVG */}
+        <svg
+          width="322"
+          height="778"
+          viewBox="0 0 322 778"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cnb("block sm:hidden", className)}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <path
+            vectorEffect="non-scaling-stroke"
+            d="M320.5 50.5C320.5 50.5 320.5 743.452 320.5 761C320.5 772 317.002 776 307.502 776C287.039 776 36.9651 776 16.502 776C5.65579 776 2 769.322 2 759.5C2 749.678 2 62.8156 2 45.2675C2 32 10 27.5584 21.8481 27.5584C45.2346 27.5584 223.211 27.5584 226.5 27.5584C229.789 27.5584 255.677 41.0312 287.833 56.3857C291.5 58.1367 297.615 57.5 297.615 50.7738C297.615 21.5271 297.615 20.774 297.615 12C297.615 5 295.771 2 288 2C280.228 2 262.135 2 253 2C243.865 2 241.5 13.706 249.147 17.3019C285.689 34.4844 312.828 46.4786 320.5 50.5Z"
+            stroke="#F83535"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </>
+    );
+  }
+
   return (
     <>
       <svg

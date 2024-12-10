@@ -1,11 +1,11 @@
 import { Masthead } from "@/components/Masthead";
-import { ImpactStoryBanner } from "@/components/ImpactStoryBanner";
+import { ImpactBanner } from "@/components/StoryBanners";
 
 const ExampleStoryPage = async () => {
   return (
     <div>
       <Masthead isOverlap />
-      <ImpactStoryBanner
+      <ImpactBanner
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -14,7 +14,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         hasBgImage
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
@@ -24,7 +24,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         bgColor="red"
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -33,7 +33,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         hasBgImage
         bgColor="red"
         heading="Exploring the reengineering of immune cells"
@@ -43,7 +43,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
@@ -51,7 +51,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         isHorizontal
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
@@ -61,7 +61,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         isHorizontal
         hasBgImage
         bgColor="stone-dark"
@@ -72,7 +72,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         isHorizontal
         bgColor="red"
         heading="Exploring the reengineering of immune cells"
@@ -82,7 +82,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         isHorizontal
         hasBgImage
         bgColor="red"
@@ -93,7 +93,7 @@ const ExampleStoryPage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactStoryBanner
+      <ImpactBanner
         isHorizontal
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"

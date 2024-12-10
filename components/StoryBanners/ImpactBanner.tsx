@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
 
-type ImpactStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
+type ImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead: string;
   body: string;
@@ -18,7 +18,7 @@ type ImpactStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
   alt?: string;
 };
 
-export const ImpactStoryBanner = ({
+export const ImpactBanner = ({
   heading,
   superhead,
   body,
@@ -30,7 +30,7 @@ export const ImpactStoryBanner = ({
   src,
   alt,
   ...props
-}: ImpactStoryBannerProps) => {
+}: ImpactBannerProps) => {
   const pb = bgColor === "white" ? 10 : 8;
   return (
     <Container {...props} width="full" mb={7} className="relative">
@@ -55,10 +55,10 @@ export const ImpactStoryBanner = ({
         )}
         <FlexBox
           alignItems="center"
-          className={cnb("flex flex-col z-50 relative", {
+          className={cnb("flex flex-col z-50 relative md:grid-gap", {
             "lg:flex-row": !isHorizontal,
+            "w-full max-w-[1100px] mx-auto": isHorizontal,
           })}
-          gap
         >
           <div
             className={cnb("flex flex-col text-center rs-mb-8 rs-mt-7", {
@@ -89,8 +89,9 @@ export const ImpactStoryBanner = ({
           >
             <div
               className={cnb(
-                "aspect-[3/2] w-full xl:max-h-[960px] overflow-hidden relative rounded-[30px] mb-10",
-                { "md:aspect-[2/3]": !isHorizontal },
+                "w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10",
+                { "aspect-[3/2]": isHorizontal },
+                { "aspect-[1/1] md:aspect-[2/3]": !isHorizontal },
               )}
             >
               <Image src={src} alt={alt || ""} fill className="object-cover" />

@@ -1,21 +1,28 @@
 import { HTMLAttributes } from "react";
-import { Container } from "@/components/Container";
+import { BgColorType, Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import BannerLineart from "@/components/images/banner-lineart";
 import { cnb } from "cnbuilder";
 import { Button } from "../Cta";
 import { FlexBox } from "@/components/FlexBox";
 
-type ContributeStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
-  bgColor?: "fog-light" | "red-gradient" | "blue";
+type LineBannerProps = HTMLAttributes<HTMLDivElement> & {
   hasLineArt?: boolean;
+  heading: string;
+  superhead: string;
+  body: string;
+  byline?: string;
+  bgColor?: BgColorType;
+  caption?: string;
+  src: string;
+  alt?: string;
 };
 
-export const ContributeStoryBanner = ({
+export const LineBanner = ({
   bgColor = "red-gradient",
   hasLineArt = false,
   ...props
-}: ContributeStoryBannerProps) => (
+}: LineBannerProps) => (
   <Container
     {...props}
     as="section"
@@ -57,9 +64,7 @@ export const ContributeStoryBanner = ({
             size={2}
             mb="none"
             font="dm-mono"
-            className={cnb("order-first font-dm-mono mb-1", {
-              "mt-70": hasLineArt,
-            })}
+            className="order-first font-dm-mono mb-1 mt-70"
           >
             Get involved
           </Text>

@@ -3,14 +3,14 @@ import { Masthead } from "@/components/Masthead";
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { TimelineSidebar } from "@/components/Timeline";
-import { ImpactStoryBanner } from "@/components/ImpactStoryBanner";
+import { ImpactBanner } from "@/components/StoryBanners";
 import { TwoCol } from "@/components/Layout";
 
 const ExampleStoryPage = async () => {
   return (
     <div>
       <Masthead isOverlap />
-      <ImpactStoryBanner
+      <ImpactBanner
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"

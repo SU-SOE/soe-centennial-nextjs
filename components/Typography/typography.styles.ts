@@ -78,9 +78,9 @@ export const textVariants = {
   subheading: "subheading",
   /**
    * Centennial typography styles
-   * (-soe ones are Decanter styles with Centennial modifications)
+   * (cen- ones are Decanter styles with Centennial modifications)
    */
-  caption: "caption",
+  caption: "cen-caption",
   card: "card",
   changemaker: "text-18 sm:text-15 3xl:text-16 leading-snug 3xl:leading-cozy",
   changemakerHorizontal:
