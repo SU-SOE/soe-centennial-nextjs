@@ -3,7 +3,6 @@ import { BgColorType, Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import BannerLineart from "@/components/images/banner-lineart";
 import { cnb } from "cnbuilder";
-import { Button } from "../Cta";
 import { FlexBox } from "@/components/FlexBox";
 
 type LineBannerProps = HTMLAttributes<HTMLDivElement> & {
@@ -16,11 +15,20 @@ type LineBannerProps = HTMLAttributes<HTMLDivElement> & {
   caption?: string;
   src: string;
   alt?: string;
+  lineVariant?: "a" | "b" | "default";
 };
 
 export const LineBanner = ({
   bgColor = "red-gradient",
   hasLineArt = false,
+  heading,
+  superhead,
+  body,
+  byline,
+  caption,
+  src,
+  alt,
+  lineVariant,
   ...props
 }: LineBannerProps) => (
   <Container
@@ -45,40 +53,28 @@ export const LineBanner = ({
       width="full"
     >
       {hasLineArt && (
-        <BannerLineart className="absolute top-0 left-0 flex justify-center items-center z-10" />
+        <BannerLineart
+          variant={lineVariant}
+          className="absolute top-0 left-0 flex justify-center items-center z-10"
+        />
       )}
       <div className="w-full 2xl:max-w-[1050px] flex flex-col xl:flex-row items-center sm:items-start xl:items-center justify-center h-full justify-between xl:gap-50">
         <FlexBox direction="col" className="z-50 max-w-full lg:max-w-[670px]">
-          <Heading mb={5} className="font-normal">
-            Contribute{" "}
-            <span
-              className={cnb("underline decoration-4 underline-offset-8", {
-                "text-digital-red-xlight": bgColor === "red-gradient",
-                "text-stone-dark": bgColor !== "red-gradient",
-              })}
-            >
-              your stories
-            </span>
+          <Heading size={6} weight="normal" mb="none">
+            {heading}
           </Heading>
-          <Text
-            size={2}
-            mb="none"
-            font="dm-mono"
-            className="order-first font-dm-mono mb-1 mt-70"
-          >
-            Get involved
+          <Text className="order-first" mb={2} font="dm-mono">
+            {superhead}
           </Text>
-          <Text size={1} mb="none">
-            Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam.
-            Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id
-            mi blandit lobortis eget in enim.
+          <Text variant="overview" mb="none" className="rs-mt-5">
+            {body}
           </Text>
+          {byline && (
+            <Text mb="none" size="base" className="rs-mt-4">
+              {byline}
+            </Text>
+          )}
         </FlexBox>
-        <div className="shrink-0 z-50 my-48 md:mb-0">
-          <Button isLight={bgColor !== "red-gradient" ? true : false} href="/">
-            Submit your story
-          </Button>
-        </div>
       </div>
     </Container>
   </Container>
