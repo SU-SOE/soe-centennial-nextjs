@@ -2,19 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+}
+
 @layer utilities {
-  .timeline-grid {
-    display: grid;
-    grid-template-areas:
-      'item item item'
-      'detail detail detail';
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .timeline-detail {
-    grid-area: 'detail';
-  }
-
   .font-inherit {
     font: inherit;
     font-size: inherit;

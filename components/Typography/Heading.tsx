@@ -12,7 +12,7 @@ type HeadingProps = Omit<TypographyProps, "as"> &
 // Convenience component for paragraphs
 export const Heading = ({
   as = "h2",
-  weight = "bold",
+  weight = "medium",
   className,
   isInvertLinkStyle = false,
   ...rest

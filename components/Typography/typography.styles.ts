@@ -1,15 +1,15 @@
 export const fontFamilies = {
   sans: "font-sans",
   serif: "font-serif",
-  "dm-sans": "font-dm-sans",
-  "dm-mono": "font-dm-mono",
+  "dm-sans": "font-dm-sans tracking-tight",
+  "dm-mono": "font-dm-mono tracking-[0.3em]",
 };
 
 export const fontWeights = {
   normal: "font-normal",
+  medium: "font-medium",
   semibold: "font-semibold",
   bold: "font-bold",
-  black: "font-black", // 900, needed for Druk font
 };
 
 // Modular typography - already includes responsive font sizes
@@ -74,12 +74,12 @@ export const textVariants = {
   /**
    * Decanter typography styles
    */
-  big: "big-paragraph",
   subheading: "subheading",
   /**
    * Centennial typography styles
    * (cen- ones are Decanter styles with Centennial modifications)
    */
+  big: "cen-big-paragraph",
   caption: "cen-caption",
   card: "card",
   changemaker: "text-18 sm:text-15 3xl:text-16 leading-snug 3xl:leading-cozy",

@@ -9,6 +9,13 @@ module.exports = function () {
         lineHeight: theme('lineHeight.cozy'),
         fontWeight: theme('fontWeight.normal'),
       },
+      '.cen-big-paragraph': {
+        ...theme('decanter.typography.type0'),
+        lineHeight: theme('lineHeight.cozy'),
+        '@screen md': {
+          lineHeight: theme('lineHeight.DEFAULT'),
+        },
+      },
       '.cen-caption': {
         fontSize: 'max(1.6rem, 0.7em)',
       },
