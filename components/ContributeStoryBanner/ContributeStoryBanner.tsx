@@ -54,7 +54,7 @@ export const ContributeStoryBanner = ({
             </span>
           </Heading>
           <Text
-            size={2}
+            size={1}
             mb="none"
             font="dm-mono"
             className={cnb("order-first font-dm-mono mb-1", {
@@ -63,7 +63,7 @@ export const ContributeStoryBanner = ({
           >
             Get involved
           </Text>
-          <Text size={1} mb="none">
+          <Text size="base" mb="none">
             Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam.
             Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id
             mi blandit lobortis eget in enim.
