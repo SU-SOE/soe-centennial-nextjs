@@ -89,7 +89,7 @@ const TextareaExamplePage = async () => {
           faucibus elit rhoncus in. Donec efficitur scelerisque urna et
           sollicitudin. Donec efficitur scelerisque urna et sollicitudin.
         </Text>
-        <Text as="div" className="big-paragraph">
+        <Text as="div">
           <ul>
             <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
             <li>

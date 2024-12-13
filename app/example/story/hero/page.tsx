@@ -10,7 +10,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="a"
       />
@@ -21,7 +21,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="a"
       />
@@ -31,7 +31,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="b"
       />
@@ -41,7 +41,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="b"
         bgColor="stone-dark"
@@ -52,7 +52,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="a"
         bgColor="stone-dark"
@@ -63,7 +63,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="b"
         bgColor="stone-dark"
@@ -74,7 +74,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -84,7 +84,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -93,7 +93,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -103,7 +103,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -111,7 +111,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -121,7 +121,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -132,7 +132,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -142,7 +142,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -153,7 +153,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <ImpactBanner
@@ -162,7 +162,7 @@ const ExampleStoryPage = async () => {
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
-        src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
     </div>

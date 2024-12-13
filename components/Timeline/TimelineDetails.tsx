@@ -39,7 +39,7 @@ export const TimelineDetails = ({
     as="section"
     bgColor={bgColor}
     width="site"
-    py={9}
+    py={5}
     className={styles.root}
   >
     <FlexBox
