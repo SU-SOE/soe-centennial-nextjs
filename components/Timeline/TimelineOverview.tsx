@@ -8,7 +8,6 @@ import { SizeType } from "./TimelineItem.types";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
-import { cnb } from "cnbuilder";
 import { ClipLoader } from "react-spinners";
 
 type TimelineProps = {
@@ -50,12 +49,15 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
 
   return (
     <Container width="site" pb={5} bgColor="fog-light" className="mb-50">
-      <div className="grid gap-[76px]">
+      <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
         {rows.map((row, rowIndex) => (
-          <div key={`row-${rowIndex}`}>
+          <div
+            key={`row-${rowIndex}`}
+            className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
+          >
             <div
               role="tablist"
-              className="flex flex-col md:flex-row md:justify-between"
+              className="flex flex-col items-center md:items-start md:flex-row md:justify-between"
             >
               {row.map((item, itemIndex) => {
                 const sizePattern: SizeType[] = ["large", "medium", "small"];
@@ -70,10 +72,10 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     aria-selected={expandedUuid === item.uuid}
                     aria-controls={`tabpanel-${item.uuid}`}
                     key={item.uuid}
+                    isExpanded={expandedUuid === item.uuid}
                     size={size}
                     trapezoid={trapezoid}
                     onClick={() => handleToggle(item.uuid)}
-                    className={itemIndex % 2 === 0 ? "" : "rs-pt-7"}
                   />
                 );
               })}

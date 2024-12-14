@@ -2,7 +2,6 @@ import { HTMLAttributes } from "react";
 import { Container } from "../Container";
 import { Heading, Text } from "../Typography";
 import { FlexBox } from "../FlexBox";
-import * as styles from "./TimelineDetails.styles";
 import { cnb } from "cnbuilder";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import { TimelineImage } from "./TimelineImage";
@@ -40,56 +39,64 @@ export const TimelineDetails = ({
     bgColor={bgColor}
     width="site"
     py={5}
-    className={styles.root}
+    className="overflow-hidden"
   >
     <FlexBox
       alignItems="start"
       justifyContent="between"
       gap
-      className={styles.wrapper}
+      className="relative mr-0 au-ml-auto flex-col lg:flex-row"
     >
-      <Container className={cnb(styles.contentWrapper)}>
+      <Container className="w-1/2 lg:rs-pr-9 ml-0 flex flex-col">
         {heading && (
-          <Heading leading="none" className={styles.heading}>
+          <Heading
+            align="left"
+            font="dm-sans"
+            size={3}
+            weight="normal"
+            className="2xl:whitespace-pre-line -mt-01em xl:max-w-1200"
+          >
             {heading}
           </Heading>
         )}
         {year && (
           <Text
-            font="serif"
-            variant="overview"
+            font="dm-mono"
             weight="normal"
-            className={styles.superhead}
+            mb="none"
+            size={2}
+            className="order-first mt-28 mb-38"
           >
             {year}
           </Text>
         )}
         {body && (
           <Text
-            font="serif"
-            variant="overview"
+            font="dm-sans"
+            variant="big"
             weight="normal"
-            className={styles.body}
+            className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
           >
             {body}
           </Text>
         )}
         {cta}
       </Container>
-      {image && (
-        <div
-          className={cnb(styles.imageWrapper, {
+      <div
+        className={cnb(
+          "aspect-[1/1] group relative w-1/2 h-full perspective-600",
+          {
             "order-first": align === "left",
-          })}
-        >
-          <TimelineImage src={image} />
-        </div>
-      )}
-      <button className="group" onClick={onClose}>
+          },
+        )}
+      >
+        <TimelineImage size="full" src={image} />
+      </div>
+      <button className="absolute top-0 right-0 group" onClick={onClose}>
         <span className="sr-only">Close {heading} details</span>
         <XCircleIcon
           width={50}
-          className="text-black group-hocus:text-digital-red"
+          className="text-fog-dark group-hocus:text-digital-red"
         />
       </button>
     </FlexBox>
