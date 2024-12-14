@@ -22,19 +22,25 @@ export const TimelineImage = ({
   const trapezoidType = styles.trapezoid[trapezoidAngle];
 
   return (
-    <div className={cnb("group relative flex justify-center", trapezoidType)}>
+    <div
+      className={cnb(
+        "group relative flex justify-center stretch-link",
+        className,
+      )}
+    >
       <div
         className={cnb(
-          "aspect-[1/1] relative perspective-1000 transform ease-in-out duration-1000",
+          "aspect-[1/1] relative w-full perspective-1000 transform ease-in-out duration-1000",
+          trapezoidType,
           imageSize,
-          className,
         )}
       >
         <Image
           alt={alt}
           src={src}
+          sizes="100vw"
           fill
-          className="object-cover rounded-lg shadow-lg transform ease-in-out duration-1000"
+          className="object-cover overflow-hidden rounded-[20px] shadow-lg transform ease-in-out duration-1000"
         />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { cnb } from "cnbuilder";
+import * as styles from "./TimelineItem.styles";
 import * as types from "./TimelineItem.types";
 import { Heading, Text } from "../Typography";
 import { TimelineImage } from "./TimelineImage";
@@ -28,12 +29,13 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
     },
     ref,
   ) => {
+    const imageSize = styles.size[size];
     return (
       <button
         {...props}
         ref={ref}
         type="button"
-        className={cnb("flex flex-col", className)}
+        className={cnb("flex flex-col", className, imageSize)}
         onClick={onClick}
         role="button"
         tabIndex={0}
@@ -44,14 +46,21 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
           size={size}
           trapezoidAngle={trapezoid}
         />
-        <div className="flex flex-col *:font-dm-sans">
-          <Heading className="type-0" weight="normal">
+        <div className="flex flex-col items-start">
+          <Heading
+            align="left"
+            font="dm-sans"
+            size="base"
+            weight="normal"
+            className="mt-18"
+          >
             {heading}
           </Heading>
           <Text
-            font="serif"
-            variant="overview"
+            font="dm-mono"
             weight="normal"
+            mb="none"
+            size={2}
             className="order-first mt-28"
           >
             {year}

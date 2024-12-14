@@ -44,28 +44,23 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
     setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
   };
 
-  // Prevent rendering of mismatched HTML
   if (!isMounted) {
     return <ClipLoader />;
   }
 
   return (
-    <Container width="site" py={5} bgColor="fog-light" className="mb-50">
+    <Container width="site" pb={5} bgColor="fog-light" className="mb-50">
       <div className="grid gap-[76px]">
         {rows.map((row, rowIndex) => (
           <div key={`row-${rowIndex}`}>
             <div
               role="tablist"
-              className={cnb(" grid gap-4", {
-                "grid-cols-3": itemsPerRow === 3,
-                "grid-cols-2": itemsPerRow === 2,
-                "grid-cols-1": itemsPerRow === 1,
-              })}
+              className="flex flex-col md:flex-row md:justify-between"
             >
               {row.map((item, itemIndex) => {
                 const sizePattern: SizeType[] = ["large", "medium", "small"];
                 const size = sizePattern[itemIndex % sizePattern.length];
-                const trapezoid = itemIndex % 2 === 0 ? "right" : "left";
+                const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
 
                 return (
                   <TimelineItem
@@ -78,6 +73,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     size={size}
                     trapezoid={trapezoid}
                     onClick={() => handleToggle(item.uuid)}
+                    className={itemIndex % 2 === 0 ? "" : "rs-pt-7"}
                   />
                 );
               })}
@@ -90,7 +86,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     id={`tabpanel-${expandedUuid}`}
                     role="tabpanel"
                     aria-labelledby={`tab-${expandedUuid}`}
-                    className="col-span-full"
+                    className="w-full"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
