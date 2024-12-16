@@ -40,10 +40,9 @@ export const TimelineImage = ({
       >
         {isExpanded && (
           <>
-            <XMarkIcon
-              width={34}
-              className="absolute bg-stone-dark text-white rounded-full w-34 h-34 z-50"
-            />
+            <div className="absolute bg-stone-dark rounded-full rs-p-0 z-50">
+              <XMarkIcon width={34} className="text-white" />
+            </div>
             <div
               className={cnb(
                 "absolute top-0 left-0 bg-[#c4c4c4] opacity-80 w-full h-full z-10 overflow-hidden rounded-[20px] shadow-lg transform ease-in-out duration-1000",

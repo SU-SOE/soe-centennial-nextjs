@@ -45,9 +45,9 @@ export const TimelineDetails = ({
       alignItems="start"
       justifyContent="between"
       gap
-      className="relative mr-0 au-ml-auto flex-col lg:flex-row"
+      className="relative mr-0 au-ml-auto flex-col sm:flex-row"
     >
-      <Container className="w-1/2 lg:rs-pr-9 ml-0 flex flex-col">
+      <Container className="order-last w-full sm:w-1/2 lg:rs-pr-9 ml-0 flex flex-col">
         {heading && (
           <Heading
             align="left"
@@ -75,7 +75,7 @@ export const TimelineDetails = ({
             font="dm-sans"
             variant="big"
             weight="normal"
-            className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
+            className="hidden md:block max-w-[50ch] rs-mb-3 *:*:leading-snug"
           >
             {body}
           </Text>
@@ -84,15 +84,18 @@ export const TimelineDetails = ({
       </Container>
       <div
         className={cnb(
-          "aspect-[1/1] group relative w-1/2 h-full perspective-600",
+          "aspect-[1/1] group relative w-full sm:w-1/2 h-full perspective-600",
           {
-            "order-first": align === "left",
+            "sm:order-first": align === "left",
           },
         )}
       >
         <TimelineImage size="full" src={image} />
       </div>
-      <button className="absolute top-0 right-0 group" onClick={onClose}>
+      <button
+        className="ml-auto sm:m-0 order-first relative sm:order-none sm:absolute top-0 right-0 group"
+        onClick={onClose}
+      >
         <span className="sr-only">Close {heading} details</span>
         <XCircleIcon
           width={50}
@@ -100,5 +103,16 @@ export const TimelineDetails = ({
         />
       </button>
     </FlexBox>
+
+    {body && (
+      <Text
+        font="dm-sans"
+        variant="big"
+        weight="normal"
+        className="block md:hidden max-w-[50ch] rs-mb-3 *:*:leading-snug"
+      >
+        {body}
+      </Text>
+    )}
   </Container>
 );

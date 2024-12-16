@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useMediaQuery } from "usehooks-ts";
+import { ClipLoader } from "react-spinners";
+
 import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./TimelineItem.types";
-import { motion, AnimatePresence } from "framer-motion";
-import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
-import { ClipLoader } from "react-spinners";
 
 type TimelineProps = {
   timelineData: TimelineItemData[];
@@ -17,12 +19,23 @@ type TimelineProps = {
 
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
-  const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
+  const [activeTabIndex, setActiveTabIndex] = useState<number | null>(null);
+  const activePanelRef = useRef<HTMLDivElement | null>(null);
 
   // Ensure the component is mounted before running media queries
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Focus the first focusable element in the active panel when it opens
+  useEffect(() => {
+    if (activePanelRef.current) {
+      const firstFocusable = activePanelRef.current.querySelector<HTMLElement>(
+        "a, button, [tabindex='0']",
+      );
+      firstFocusable?.focus();
+    }
+  }, [activeTabIndex]);
 
   // Define breakpoints using useMediaQuery hook
   const isLg = useMediaQuery("(min-width: 1024px)");
@@ -39,8 +52,11 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
     return acc;
   }, []);
 
-  const handleToggle = (uuid: string) => {
-    setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
+  const handleTabClick = (index: number) => {
+    // Toggle the tab open/close
+    setActiveTabIndex((currentIndex) =>
+      currentIndex === index ? null : index,
+    );
   };
 
   if (!isMounted) {
@@ -49,63 +65,62 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
 
   return (
     <Container width="site" pb={5} bgColor="fog-light" className="mb-50">
-      <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
-        {rows.map((row, rowIndex) => (
-          <div
-            key={`row-${rowIndex}`}
-            className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
-          >
+      <TabGroup selectedIndex={activeTabIndex ?? -1} onChange={() => {}}>
+        <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
+          {rows.map((row, rowIndex) => (
             <div
-              role="tablist"
-              className="flex flex-col items-center md:items-start md:flex-row md:justify-between"
+              key={`row-${rowIndex}`}
+              className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
             >
-              {row.map((item, itemIndex) => {
-                const sizePattern: SizeType[] = ["large", "medium", "small"];
-                const size = sizePattern[itemIndex % sizePattern.length];
-                const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
+              <TabList className="flex flex-col items-center md:items-start md:flex-row md:justify-between">
+                {row.map((item, itemIndex) => {
+                  const sizePattern: SizeType[] = ["large", "medium", "small"];
+                  const size = sizePattern[itemIndex % sizePattern.length];
+                  const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
 
-                return (
-                  <TimelineItem
-                    {...item}
-                    id={`tab-${item.uuid}`}
-                    role="tab"
-                    aria-selected={expandedUuid === item.uuid}
-                    aria-controls={`tabpanel-${item.uuid}`}
+                  return (
+                    <Tab
+                      key={item.uuid}
+                      as="button"
+                      onClick={() => handleTabClick(itemIndex)}
+                    >
+                      {({ selected }) => (
+                        <TimelineItem
+                          {...item}
+                          size={size}
+                          trapezoid={trapezoid}
+                          isExpanded={selected}
+                        />
+                      )}
+                    </Tab>
+                  );
+                })}
+              </TabList>
+
+              <TabPanels>
+                {row.map((item, itemIndex) => (
+                  <TabPanel
                     key={item.uuid}
-                    isExpanded={expandedUuid === item.uuid}
-                    size={size}
-                    trapezoid={trapezoid}
-                    onClick={() => handleToggle(item.uuid)}
-                  />
-                );
-              })}
-            </div>
-
-            <AnimatePresence>
-              {expandedUuid &&
-                row.some((item) => item.uuid === expandedUuid) && (
-                  <motion.div
-                    id={`tabpanel-${expandedUuid}`}
-                    role="tabpanel"
-                    aria-labelledby={`tab-${expandedUuid}`}
                     className="w-full"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.5 }}
+                    ref={itemIndex === activeTabIndex ? activePanelRef : null}
                   >
-                    <TimelineDetails
-                      {...timelineData.find(
-                        (item) => item.uuid === expandedUuid,
-                      )!}
-                      onClose={() => setExpandedUuid(null)}
-                    />
-                  </motion.div>
-                )}
-            </AnimatePresence>
-          </div>
-        ))}
-      </div>
+                    <AnimatePresence>
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <TimelineDetails {...item} />
+                      </motion.div>
+                    </AnimatePresence>
+                  </TabPanel>
+                ))}
+              </TabPanels>
+            </div>
+          ))}
+        </div>
+      </TabGroup>
     </Container>
   );
 };
