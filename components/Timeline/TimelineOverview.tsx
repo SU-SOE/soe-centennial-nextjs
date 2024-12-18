@@ -19,6 +19,7 @@ type TimelineProps = {
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
+  const [itemId, setItemid] = useState<string>("");
 
   // Reference to the TimelineItems and TimelineDetails for accessibility focus management
   const itemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
@@ -27,7 +28,17 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
   // Ensure the component is mounted before running media queries
   useEffect(() => {
     setIsMounted(true);
-  }, []);
+
+    // Check if the URL has a hash
+    const anchor = window.location.hash.replace("#", ""); // Remove '#' character
+
+    if (anchor) {
+      // Validate hash against timeline data
+      timelineData.find((item) => {
+        if (item.anchor === anchor) return setExpandedUuid(item.uuid);
+      });
+    }
+  }, [timelineData]);
 
   // Focus on the TimelineDetails when it is expanded
   useEffect(() => {
@@ -56,8 +67,9 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
     return acc;
   }, []);
 
-  const handleToggle = (uuid: string) => {
+  const handleToggle = (uuid: string, anchor: string) => {
     setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
+    setItemid((currentAnchor) => (currentAnchor === anchor ? "" : anchor));
   };
 
   if (!isMounted) {
@@ -94,7 +106,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                       isExpanded={expandedUuid === item.uuid}
                       size={size}
                       trapezoid={trapezoid}
-                      onClick={() => handleToggle(item.uuid)}
+                      onClick={() => handleToggle(item.uuid, item.anchor)}
                       ref={(el) => {
                         itemRefs.current[item.uuid] = el;
                       }}
@@ -108,7 +120,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
               {expandedUuid &&
                 row.some((item) => item.uuid === expandedUuid) && (
                   <motion.div
-                    id={`drawer-${expandedUuid}`}
+                    id={itemId}
                     className="w-full"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}

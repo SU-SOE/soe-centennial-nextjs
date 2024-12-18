@@ -6,7 +6,7 @@ export type TimelineItem = {
   year: string;
   heading: string;
   body: string;
-  href?: string;
+  anchor: string;
   image: string;
   uuid: string;
 };
@@ -39,10 +39,10 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
         if (Array.isArray(parsedData)) {
           const validatedItems = parsedData
             .filter(isTimelineItem)
-            .map(assignUuidAndHref);
+            .map(assignUuidAndAnchor);
           allTimelineData.push(...validatedItems);
         } else if (isTimelineItem(parsedData)) {
-          allTimelineData.push(assignUuidAndHref(parsedData));
+          allTimelineData.push(assignUuidAndAnchor(parsedData));
         } else {
           console.warn(`Invalid data format in file: ${filePath}`);
         }
@@ -58,18 +58,18 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
   return allTimelineData;
 }
 
-function assignUuidAndHref(
-  item: Omit<TimelineItem, "uuid" | "href">,
+function assignUuidAndAnchor(
+  item: Omit<TimelineItem, "uuid" | "anchor">,
 ): TimelineItem {
   if (!item.heading) {
     throw new Error(`Missing heading for timeline item with year ${item.year}`);
   }
 
   const sanitizedHeading = sanitizeForUrl(item.heading);
-  const href = `/${item.year}-${sanitizedHeading}`;
+  const anchor = `${item.year}-${sanitizedHeading}`;
   const uuid = uuidv4(); // Always generate a new UUID
 
-  return { ...item, uuid, href };
+  return { ...item, uuid, anchor };
 }
 
 function sanitizeForUrl(text: string): string {
@@ -82,7 +82,7 @@ function sanitizeForUrl(text: string): string {
 
 function isTimelineItem(
   data: unknown,
-): data is Omit<TimelineItem, "uuid" | "href"> {
+): data is Omit<TimelineItem, "uuid" | "anchor"> {
   if (typeof data !== "object" || data === null) return false;
 
   const item = data as Partial<TimelineItem>;
