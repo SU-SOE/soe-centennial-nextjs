@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./TimelineItem.types";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
@@ -116,36 +116,31 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
               })}
             </div>
 
-            <AnimatePresence>
-              {expandedUuid &&
-                row.some((item) => item.uuid === expandedUuid) && (
-                  <motion.div
-                    id={itemId}
-                    className="w-full"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.5 }}
-                    ref={detailsRef}
-                    tabIndex={-1}
-                  >
-                    <TimelineDetails
-                      {...timelineData.find(
-                        (item) => item.uuid === expandedUuid,
-                      )!}
-                      onClose={() => {
-                        if (expandedUuid) {
-                          const itemButton = itemRefs.current[expandedUuid];
-                          if (itemButton) {
-                            itemButton.focus();
-                          }
-                        }
-                        setExpandedUuid(null);
-                      }}
-                    />
-                  </motion.div>
-                )}
-            </AnimatePresence>
+            {expandedUuid && row.some((item) => item.uuid === expandedUuid) && (
+              <motion.div
+                id={itemId}
+                className="w-full"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5 }}
+                ref={detailsRef}
+                tabIndex={-1}
+              >
+                <TimelineDetails
+                  {...timelineData.find((item) => item.uuid === expandedUuid)!}
+                  onClose={() => {
+                    if (expandedUuid) {
+                      const itemButton = itemRefs.current[expandedUuid];
+                      if (itemButton) {
+                        itemButton.focus();
+                      }
+                    }
+                    setExpandedUuid(null);
+                  }}
+                />
+              </motion.div>
+            )}
           </div>
         ))}
       </div>
