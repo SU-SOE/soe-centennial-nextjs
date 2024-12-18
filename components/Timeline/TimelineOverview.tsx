@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
+import { AnimateInView } from "../Animate";
 
 type TimelineProps = {
   timelineData: TimelineItemData[];
@@ -68,18 +69,19 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                 const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
 
                 return (
-                  <TimelineItem
-                    {...item}
-                    id={`tab-${item.uuid}`}
-                    role="tab"
-                    aria-expanded={expandedUuid === item.uuid}
-                    aria-controls={`drawer-${item.uuid}`}
-                    key={item.uuid}
-                    isExpanded={expandedUuid === item.uuid}
-                    size={size}
-                    trapezoid={trapezoid}
-                    onClick={() => handleToggle(item.uuid)}
-                  />
+                  <AnimateInView key={item.uuid}>
+                    <TimelineItem
+                      {...item}
+                      id={`tab-${item.uuid}`}
+                      role="tab"
+                      aria-expanded={expandedUuid === item.uuid}
+                      aria-controls={`drawer-${item.uuid}`}
+                      isExpanded={expandedUuid === item.uuid}
+                      size={size}
+                      trapezoid={trapezoid}
+                      onClick={() => handleToggle(item.uuid)}
+                    />
+                  </AnimateInView>
                 );
               })}
             </div>
