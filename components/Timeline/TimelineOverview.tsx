@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
+import { AnimateInView } from "../Animate";
 
 type TimelineProps = {
   timelineData: TimelineItemData[];
@@ -18,13 +19,22 @@ type TimelineProps = {
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
-  const [expandedRowIndex, setExpandedRowIndex] = useState<number | null>(null);
-  const [focusedTabIndex, setFocusedTabIndex] = useState<number>(0);
+
+  // Reference to the TimelineItems and TimelineDetails for accessibility focus management
+  const itemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const detailsRef = useRef<HTMLDivElement>(null);
 
   // Ensure the component is mounted before running media queries
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Focus on the TimelineDetails when it is expanded
+  useEffect(() => {
+    if (expandedUuid && detailsRef.current) {
+      detailsRef.current.focus();
+    }
+  }, [expandedUuid]);
 
   // Define breakpoints using useMediaQuery hook
   const isLg = useMediaQuery("(min-width: 1024px)");
@@ -41,55 +51,8 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
     return acc;
   }, []);
 
-  const handleToggle = (uuid: string, rowIndex: number) => {
-    setExpandedUuid((currentUuid) => {
-      const isSameRow = rowIndex === expandedRowIndex;
-      const isSameItem = uuid === currentUuid;
-
-      if (isSameRow) return isSameItem ? null : uuid;
-
-      setExpandedRowIndex(rowIndex);
-      return uuid;
-    });
-  };
-
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLButtonElement>,
-    itemUuid: string,
-    rowIndex: number,
-  ) => {
-    switch (event.key) {
-      case "Enter":
-      case " ":
-        event.preventDefault();
-        handleToggle(itemUuid, rowIndex);
-        break;
-      case "ArrowRight":
-      case "ArrowDown":
-        event.preventDefault();
-        setFocusedTabIndex(
-          (prevIndex) => (prevIndex + 1) % timelineData.length,
-        );
-        break;
-      case "ArrowLeft":
-      case "ArrowUp":
-        event.preventDefault();
-        setFocusedTabIndex(
-          (prevIndex) =>
-            (prevIndex - 1 + timelineData.length) % timelineData.length,
-        );
-        break;
-      case "Home":
-        event.preventDefault();
-        setFocusedTabIndex(0);
-        break;
-      case "End":
-        event.preventDefault();
-        setFocusedTabIndex(timelineData.length - 1);
-        break;
-      default:
-        break;
-    }
+  const handleToggle = (uuid: string) => {
+    setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
   };
 
   if (!isMounted) {
@@ -110,62 +73,57 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
             key={`row-${rowIndex}`}
             className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
           >
-            <div
-              role="tablist"
-              aria-label={`Timeline row ${rowIndex + 1}`}
-              className="flex flex-col items-center md:items-start md:flex-row md:justify-between"
-            >
+            <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between">
               {row.map((item, itemIndex) => {
                 const sizePattern: SizeType[] = ["large", "medium", "small"];
                 const size = sizePattern[itemIndex % sizePattern.length];
                 const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
-                const globalIndex = rowIndex * itemsPerRow + itemIndex;
 
                 return (
-                  <TimelineItem
-                    {...item}
-                    id={`tab-${item.uuid}`}
-                    role="tab"
-                    aria-selected={expandedUuid === item.uuid}
-                    aria-controls={`tabpanel-${item.uuid}`}
-                    key={item.uuid}
-                    isExpanded={expandedUuid === item.uuid}
-                    size={size}
-                    trapezoid={trapezoid}
-                    onClick={() => handleToggle(item.uuid, rowIndex)}
-                    tabIndex={focusedTabIndex === globalIndex ? 0 : -1}
-                    onKeyDown={(e) => handleKeyDown(e, item.uuid, rowIndex)}
-                    ref={(el) => {
-                      if (focusedTabIndex === globalIndex) {
-                        el?.focus();
-                      }
-                    }}
-                  />
+                  <AnimateInView key={item.uuid}>
+                    <TimelineItem
+                      {...item}
+                      id={item.uuid}
+                      aria-expanded={expandedUuid === item.uuid}
+                      aria-controls={`drawer-${item.uuid}`}
+                      isExpanded={expandedUuid === item.uuid}
+                      size={size}
+                      trapezoid={trapezoid}
+                      onClick={() => handleToggle(item.uuid)}
+                      ref={(el) => {
+                        itemRefs.current[item.uuid] = el;
+                      }}
+                    />
+                  </AnimateInView>
                 );
               })}
             </div>
 
             <AnimatePresence>
               {expandedUuid &&
-                expandedRowIndex === rowIndex &&
                 row.some((item) => item.uuid === expandedUuid) && (
                   <motion.div
-                    id={`tabpanel-${expandedUuid}`}
-                    role="tabpanel"
-                    aria-labelledby={`tab-${expandedUuid}`}
+                    id={`drawer-${expandedUuid}`}
                     className="w-full"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.5 }}
+                    ref={detailsRef}
+                    tabIndex={-1}
                   >
                     <TimelineDetails
                       {...timelineData.find(
                         (item) => item.uuid === expandedUuid,
                       )!}
                       onClose={() => {
+                        if (expandedUuid) {
+                          const itemButton = itemRefs.current[expandedUuid];
+                          if (itemButton) {
+                            itemButton.focus();
+                          }
+                        }
                         setExpandedUuid(null);
-                        setExpandedRowIndex(null);
                       }}
                     />
                   </motion.div>
