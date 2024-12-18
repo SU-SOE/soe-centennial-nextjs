@@ -18,8 +18,6 @@ type TimelineProps = {
 const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
-  const [expandedRowIndex, setExpandedRowIndex] = useState<number | null>(null);
-  const [focusedTabIndex, setFocusedTabIndex] = useState<number>(0);
 
   // Ensure the component is mounted before running media queries
   useEffect(() => {
@@ -41,55 +39,8 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
     return acc;
   }, []);
 
-  const handleToggle = (uuid: string, rowIndex: number) => {
-    setExpandedUuid((currentUuid) => {
-      const isSameRow = rowIndex === expandedRowIndex;
-      const isSameItem = uuid === currentUuid;
-
-      if (isSameRow) return isSameItem ? null : uuid;
-
-      setExpandedRowIndex(rowIndex);
-      return uuid;
-    });
-  };
-
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLButtonElement>,
-    itemUuid: string,
-    rowIndex: number,
-  ) => {
-    switch (event.key) {
-      case "Enter":
-      case " ":
-        event.preventDefault();
-        handleToggle(itemUuid, rowIndex);
-        break;
-      case "ArrowRight":
-      case "ArrowDown":
-        event.preventDefault();
-        setFocusedTabIndex(
-          (prevIndex) => (prevIndex + 1) % timelineData.length,
-        );
-        break;
-      case "ArrowLeft":
-      case "ArrowUp":
-        event.preventDefault();
-        setFocusedTabIndex(
-          (prevIndex) =>
-            (prevIndex - 1 + timelineData.length) % timelineData.length,
-        );
-        break;
-      case "Home":
-        event.preventDefault();
-        setFocusedTabIndex(0);
-        break;
-      case "End":
-        event.preventDefault();
-        setFocusedTabIndex(timelineData.length - 1);
-        break;
-      default:
-        break;
-    }
+  const handleToggle = (uuid: string) => {
+    setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
   };
 
   if (!isMounted) {
@@ -110,36 +61,24 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
             key={`row-${rowIndex}`}
             className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
           >
-            <div
-              role="tablist"
-              aria-label={`Timeline row ${rowIndex + 1}`}
-              className="flex flex-col items-center md:items-start md:flex-row md:justify-between"
-            >
+            <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between">
               {row.map((item, itemIndex) => {
                 const sizePattern: SizeType[] = ["large", "medium", "small"];
                 const size = sizePattern[itemIndex % sizePattern.length];
                 const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
-                const globalIndex = rowIndex * itemsPerRow + itemIndex;
 
                 return (
                   <TimelineItem
                     {...item}
                     id={`tab-${item.uuid}`}
                     role="tab"
-                    aria-selected={expandedUuid === item.uuid}
-                    aria-controls={`tabpanel-${item.uuid}`}
+                    aria-expanded={expandedUuid === item.uuid}
+                    aria-controls={`drawer-${item.uuid}`}
                     key={item.uuid}
                     isExpanded={expandedUuid === item.uuid}
                     size={size}
                     trapezoid={trapezoid}
-                    onClick={() => handleToggle(item.uuid, rowIndex)}
-                    tabIndex={focusedTabIndex === globalIndex ? 0 : -1}
-                    onKeyDown={(e) => handleKeyDown(e, item.uuid, rowIndex)}
-                    ref={(el) => {
-                      if (focusedTabIndex === globalIndex) {
-                        el?.focus();
-                      }
-                    }}
+                    onClick={() => handleToggle(item.uuid)}
                   />
                 );
               })}
@@ -147,12 +86,9 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
 
             <AnimatePresence>
               {expandedUuid &&
-                expandedRowIndex === rowIndex &&
                 row.some((item) => item.uuid === expandedUuid) && (
                   <motion.div
-                    id={`tabpanel-${expandedUuid}`}
-                    role="tabpanel"
-                    aria-labelledby={`tab-${expandedUuid}`}
+                    id={`drawer-${expandedUuid}`}
                     className="w-full"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
@@ -165,7 +101,6 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                       )!}
                       onClose={() => {
                         setExpandedUuid(null);
-                        setExpandedRowIndex(null);
                       }}
                     />
                   </motion.div>
