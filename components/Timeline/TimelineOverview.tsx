@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
@@ -20,10 +20,21 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
 
+  // Reference to the TimelineItems and TimelineDetails for accessibility focus management
+  const itemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const detailsRef = useRef<HTMLDivElement>(null);
+
   // Ensure the component is mounted before running media queries
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Focus on the TimelineDetails when it is expanded
+  useEffect(() => {
+    if (expandedUuid && detailsRef.current) {
+      detailsRef.current.focus();
+    }
+  }, [expandedUuid]);
 
   // Define breakpoints using useMediaQuery hook
   const isLg = useMediaQuery("(min-width: 1024px)");
@@ -72,14 +83,16 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                   <AnimateInView key={item.uuid}>
                     <TimelineItem
                       {...item}
-                      id={`tab-${item.uuid}`}
-                      role="tab"
+                      id={item.uuid}
                       aria-expanded={expandedUuid === item.uuid}
                       aria-controls={`drawer-${item.uuid}`}
                       isExpanded={expandedUuid === item.uuid}
                       size={size}
                       trapezoid={trapezoid}
                       onClick={() => handleToggle(item.uuid)}
+                      ref={(el) => {
+                        itemRefs.current[item.uuid] = el;
+                      }}
                     />
                   </AnimateInView>
                 );
@@ -96,12 +109,20 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.5 }}
+                    ref={detailsRef}
+                    tabIndex={-1}
                   >
                     <TimelineDetails
                       {...timelineData.find(
                         (item) => item.uuid === expandedUuid,
                       )!}
                       onClose={() => {
+                        if (expandedUuid) {
+                          const itemButton = itemRefs.current[expandedUuid];
+                          if (itemButton) {
+                            itemButton.focus();
+                          }
+                        }
                         setExpandedUuid(null);
                       }}
                     />
