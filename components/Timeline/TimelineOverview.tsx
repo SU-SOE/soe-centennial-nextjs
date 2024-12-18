@@ -32,6 +32,11 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
   // Focus on the TimelineDetails when it is expanded
   useEffect(() => {
     if (expandedUuid && detailsRef.current) {
+      detailsRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
       detailsRef.current.focus();
     }
   }, [expandedUuid]);
