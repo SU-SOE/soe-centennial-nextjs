@@ -77,13 +77,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
   }
 
   return (
-    <Container
-      id="main-content"
-      width="site"
-      pb={5}
-      bgColor="fog-light"
-      className="mb-50"
-    >
+    <Container id="main-content" width="site" pb={5} bgColor="fog-light">
       <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
         {rows.map((row, rowIndex) => (
           <div

@@ -1,4 +1,6 @@
 import { Container } from "@/components/Container";
+import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
+import { Footer } from "@/components/Footer";
 import { Masthead } from "@/components/Masthead";
 import TimelineOverview from "@/components/Timeline/TimelineOverview";
 import { Heading, Text } from "@/components/Typography";
@@ -25,6 +27,8 @@ const TimelinePage = async () => {
         </Text>
       </Container>
       <TimelineOverview timelineData={timelineData} />
+      <ContributeStoryBanner hasLineArt />
+      <Footer bgColor="blue" />
     </div>
   );
 };

@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "scripts/validate-timeline.mjs"
-  ],
+, "components/Footer"  ],
   "exclude": ["node_modules"]
 }
