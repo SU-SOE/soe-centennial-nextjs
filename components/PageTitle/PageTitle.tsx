@@ -20,12 +20,13 @@ export const PageTitle = ({
     as="section"
     bgColor={bgColor}
     width="site"
-    py={9}
+    pt={6}
+    pb={8}
     className={styles.root}
   >
     <Heading mb="base" leading="none" className={styles.heading}>
-      <span className="font-semibold type-1">{heading}</span>
-      <span className="font-bold type-8">{bigText}</span>
+      <span className="font-semibold type-0 w-[5ch]">{heading}</span>
+      <span className="font-bold type-6">{bigText}</span>
     </Heading>
   </Container>
 );

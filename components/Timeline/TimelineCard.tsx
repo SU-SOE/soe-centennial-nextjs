@@ -25,7 +25,7 @@ type TimelineCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   year: string;
   body: string;
-  cta?: string;
+  anchor?: string;
   image: string;
   animation?: AnimationType;
   delay?: number;
@@ -52,7 +52,7 @@ export const TimelineCard = ({
   heading,
   year,
   body,
-  cta = "/",
+  anchor = "/",
   image = "https://placecats.com/neo/600/600",
   animation,
   delay,
@@ -84,7 +84,7 @@ export const TimelineCard = ({
         {isHorizontal && (
           <Trapezoid
             className={cnb(
-              "absolute top-0 z-0 flex items-center overflow-hidden",
+              "absolute top-0 z-0 flex items-center overflow-hidden w-250 md:w-[300px] lg:w-[340px] xl:w-[420px] 2xl:w-600",
               {
                 "right-0": align === "right",
                 "left-0 rotate-180": align === "left",
@@ -105,7 +105,7 @@ export const TimelineCard = ({
                 weight="normal"
                 className={styles.heading}
               >
-                <Link className="font-inherit" href={cta}>
+                <Link className="font-inherit" href={`/timeline#${anchor}`}>
                   {heading}
                   <ArrowRightIcon
                     width={20}
@@ -127,7 +127,11 @@ export const TimelineCard = ({
           </div>
           {image && (
             <div className={styles.imageWrapper(align, isHorizontal)}>
-              <TimelineImage src={image} trapezoidAngle={align} size="full" />
+              <TimelineImage
+                src={image}
+                trapezoidAngle={align}
+                size={isHorizontal ? "xlarge" : "large"}
+              />
             </div>
           )}
         </FlexBox>

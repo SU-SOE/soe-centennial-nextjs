@@ -13,8 +13,7 @@ export const heading =
   "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";
 export const superhead = "order-first rs-mb-2";
 export const imageWrapper = (align: string, isHorizontal: boolean) =>
-  cnb("rs-mb-2 lg:mb-0 w-[420px] order-first", {
-    "lg:w-600": isHorizontal,
+  cnb("relative rs-mb-2 lg:mb-0 w-[420px] order-first", {
     "lg:order-first": align === "left",
     "lg:order-last": align === "right",
     "lg:rs-mr-4": align === "left" && isHorizontal,

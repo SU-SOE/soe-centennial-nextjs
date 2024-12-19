@@ -14,7 +14,7 @@ type MastheadProps = HTMLAttributes<HTMLDivElement> & {
 
 export const Masthead = ({
   isLight,
-  isOverlap = true,
+  isOverlap = false,
   bgColor,
   mainNav,
   className,

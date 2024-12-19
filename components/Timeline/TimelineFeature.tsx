@@ -6,16 +6,16 @@ import { Slideshow } from "../Slideshow/Slideshow";
 import { Button } from "../Cta";
 
 type TimelineFeatureProps = {
-  uuids: string[];
+  anchors: string[];
 };
 
-export const TimelineFeature = async ({ uuids }: TimelineFeatureProps) => {
+export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
   // Fetch the timeline data
   const timelineData = await loadTimelineData();
 
   // Filter timeline items based on the provided uuids
   const featureTimelineData = timelineData.filter((item) =>
-    uuids.includes(item.uuid),
+    anchors.includes(item.anchor),
   );
 
   return (

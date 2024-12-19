@@ -9,8 +9,8 @@ interface TrapezoidProps {
 
 export const Trapezoid = ({
   fill,
-  height = "909",
-  width = "495",
+  height = "100%",
+  width = "100%",
   className,
 }: TrapezoidProps) => {
   return (

@@ -39,19 +39,10 @@ export const TimelineImage = ({
         )}
       >
         {isExpanded && (
-          <>
-            <XMarkIcon
-              width={34}
-              className="absolute bg-stone-dark text-white rounded-full w-34 h-34 z-50"
-            />
-            <div
-              className={cnb(
-                "absolute top-0 left-0 bg-[#c4c4c4] opacity-80 w-full h-full z-10 overflow-hidden rounded-[20px] shadow-lg transform ease-in-out duration-1000",
-                trapezoidType,
-                imageSize,
-              )}
-            />
-          </>
+          <XMarkIcon
+            width={34}
+            className="absolute bg-stone-dark text-white rounded-full w-34 h-34 z-50"
+          />
         )}
         <Image
           alt={alt}
@@ -59,6 +50,7 @@ export const TimelineImage = ({
           fill
           className={cnb(
             "z-0 object-cover overflow-hidden rounded-[20px] shadow-lg transform ease-in-out duration-1000",
+            { "contrast-50": isExpanded },
           )}
         />
       </div>

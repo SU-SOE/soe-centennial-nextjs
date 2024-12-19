@@ -4,7 +4,7 @@ export const size = {
   small: "w-200 md:w-250",
   medium: "w-250 md:w-[300px] xl:w-[340px]",
   large: "w-250 md:w-[300px] xl:w-[420px]",
-  xlarge: "w-250 md:w-[300px] lg:w-[420px] xl:w-600",
+  xlarge: "w-250 md:w-[300px] lg:w-[340px] xl:w-[420px] 2xl:w-600",
   full: "w-full",
 };
 

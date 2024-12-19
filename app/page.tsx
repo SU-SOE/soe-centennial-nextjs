@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineCard } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
-// import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
+import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { ThreeCol, TwoCol } from "@/components/Layout";
 import { StoryCard } from "@/components/Story";
 import { Container } from "@/components/Container";
@@ -10,6 +10,13 @@ import { Heading } from "@/components/Typography";
 import Metadata from "@/components/Layout/Metadata";
 
 export default function Home() {
+  const timelineCardItems = [
+    "1937-foundational-technology-in-the-burgeoning-microwave-industry",
+    "1910-1915-the-engineering-corner",
+    "1943-training-for-war",
+    "1939-aviation-and-aeronautical-engineering",
+    "1944-stanford-engineerings-third-dean",
+  ];
   return (
     <div>
       <Metadata
@@ -17,7 +24,7 @@ export default function Home() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead isLight />
+      <Masthead isLight bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
       <TimelineCard
         isHorizontal
@@ -44,7 +51,7 @@ export default function Home() {
         image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
         width="site"
       />
-      {/* <TimelineFeature uuids={[12, 3, 10, 4]} /> */}
+      <TimelineFeature anchors={timelineCardItems} />
       <Container width="site" py={6}>
         <StoryCard
           isHorizontal
