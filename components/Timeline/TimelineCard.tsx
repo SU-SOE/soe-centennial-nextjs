@@ -1,8 +1,8 @@
 import { HTMLAttributes } from "react";
 import { Heading, Text } from "../Typography";
 import { FlexBox } from "../FlexBox";
-import * as styles from "./TimelineCard.styles";
-import * as types from "./TimelineCard.types";
+import * as styles from "./Timeline.styles";
+import * as types from "./Timeline.types";
 import { cnb } from "cnbuilder";
 import { TimelineImage } from "./TimelineImage";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";

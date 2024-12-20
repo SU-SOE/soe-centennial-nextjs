@@ -1,5 +1,6 @@
-import * as styles from "./TimelineCard.styles";
+import * as styles from "./Timeline.styles";
 
+// Timeline Card
 export type TimelineCardElementType =
   | "div"
   | "section"
@@ -10,3 +11,6 @@ export type TimelineCardElementType =
 export type WidthType = keyof typeof styles.widths;
 
 export type BgColorType = keyof typeof styles.bgColors | "";
+
+// Timeline Image
+export type SizeType = keyof typeof styles.size;

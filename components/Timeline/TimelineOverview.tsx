@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
-import { SizeType } from "./TimelineItem.types";
+import { SizeType } from "./Timeline.types";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";

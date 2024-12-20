@@ -1,4 +1,6 @@
 import { cnb } from "cnbuilder";
+
+// Timeline Card
 export const wrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative z-50 flex-col w-fit", {
     "lg:flex-row": isHorizontal,
@@ -32,4 +34,18 @@ export const bgColors = {
   white: "bg-white text-black",
   "fog-light": "bg-fog-light text-black",
   "red-gradient": "bg-cen-red-gradient text-white",
+};
+
+// Timeline Image
+export const size = {
+  small: "w-200 md:w-250",
+  medium: "w-250 md:w-[300px] xl:w-[340px]",
+  large: "w-250 md:w-[300px] xl:w-[420px]",
+  xlarge: "w-250 md:w-[300px] lg:w-[340px] xl:w-[420px] 2xl:w-600",
+  full: "w-full",
+};
+
+export const trapezoid = {
+  left: "rotate-y-[15deg] hocus:rotate-y-[-15deg]",
+  right: "rotate-y-[-15deg] hocus:rotate-y-[15deg]",
 };

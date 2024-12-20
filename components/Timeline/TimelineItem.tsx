@@ -1,6 +1,6 @@
 import { cnb } from "cnbuilder";
-import * as styles from "./TimelineItem.styles";
-import * as types from "./TimelineItem.types";
+import * as styles from "./Timeline.styles";
+import * as types from "./Timeline.types";
 import { Heading, Text } from "../Typography";
 import { TimelineImage } from "./TimelineImage";
 import { HTMLAttributes, forwardRef } from "react";
@@ -57,7 +57,8 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
             font="dm-sans"
             size="base"
             weight="normal"
-            className="mt-18 leading-[2] transition duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light cursor-pointer decoration-4 group-hover:no-underline"
+            leading="normal"
+            className="transition duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light cursor-pointer decoration-[2.5px] group-hover:no-underline"
           >
             {heading}
             <ArrowRightIcon
@@ -70,7 +71,7 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
             weight="normal"
             mb="none"
             size={2}
-            className="order-first mt-28"
+            className="order-first rs-mt-2"
           >
             {year}
           </Text>
