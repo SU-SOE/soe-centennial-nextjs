@@ -22,7 +22,7 @@ export const TimelineImage = ({
   isExpanded = false,
 }: TimelineImageProps) => {
   const imageSize = styles.size[size];
-  const trapezoidType = styles.trapezoid[trapezoidAngle];
+  const trapezoidType = styles.trapezoid(trapezoidAngle, isExpanded);
 
   return (
     <div
@@ -33,16 +33,15 @@ export const TimelineImage = ({
     >
       <div
         className={cnb(
-          "aspect-[1/1] relative h-full perspective-1000 transform ease-in-out duration-2000 flex items-center justify-center",
-          { "rotate-y-0": isExpanded },
+          "aspect-[1/1] relative h-full transform ease-in-out perspective-1000 flex items-center justify-center",
           trapezoidType,
           imageSize,
         )}
       >
         {isExpanded && (
           <XMarkIcon
-            width={34}
-            className="absolute bg-stone-dark text-white rounded-full w-34 h-34 z-50"
+            width={60}
+            className="absolute bg-stone-dark text-white rounded-full z-50 border-2 border-fog-dark"
           />
         )}
         <Image
@@ -50,8 +49,10 @@ export const TimelineImage = ({
           src={src}
           fill
           className={cnb(
-            "z-0 object-cover overflow-hidden rounded-[20px] shadow-lg transform ease-in-out duration-1000",
-            { "contrast-50 brightness-100": isExpanded },
+            "z-0 object-cover overflow-hidden rounded-[20px] shadow-lg transform ease-in-out perspective-1000 duration-[2s] hocus:perspective-0 hocus:rotate-y-0",
+            {
+              "contrast-50 brightness-100 perspective-0 rotate-y-0": isExpanded,
+            },
           )}
         />
       </div>

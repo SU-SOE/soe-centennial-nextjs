@@ -82,11 +82,15 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
         {rows.map((row, rowIndex) => (
           <div
             key={`row-${rowIndex}`}
+            id={`${rowIndex}`}
             className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
           >
             <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between">
               {row.map((item, itemIndex) => {
-                const sizePattern: SizeType[] = ["large", "medium", "small"];
+                const sizePattern: SizeType[] =
+                  rowIndex % 2 === 0
+                    ? ["large", "medium", "small"]
+                    : ["small", "large", "medium"];
                 const size = sizePattern[itemIndex % sizePattern.length];
                 const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
 

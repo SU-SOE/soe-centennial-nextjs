@@ -45,7 +45,12 @@ export const size = {
   full: "w-full",
 };
 
-export const trapezoid = {
-  left: "rotate-y-[15deg] hocus:rotate-y-[-15deg]",
-  right: "rotate-y-[-15deg] hocus:rotate-y-[15deg]",
-};
+export const trapezoid = (
+  trapezoidAngle: "left" | "right",
+  isExpanded: boolean,
+) =>
+  cnb({
+    "rotate-y-[15deg]": trapezoidAngle === "left",
+    "rotate-y-[-15deg]": trapezoidAngle === "right",
+    "rotate-y-0 perspective-0": isExpanded,
+  });
