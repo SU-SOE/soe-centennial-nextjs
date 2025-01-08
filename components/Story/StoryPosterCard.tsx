@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
 
-type ImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
+type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead: string;
   body: string;
@@ -13,12 +13,12 @@ type ImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: BgColorType;
   caption?: string;
   hasBgImage?: boolean;
-  isHorizontal?: boolean;
+  isNarrow?: boolean;
   src: string;
   alt?: string;
 };
 
-export const ImpactBanner = ({
+export const StoryPosterCard = ({
   heading,
   superhead,
   body,
@@ -26,14 +26,14 @@ export const ImpactBanner = ({
   bgColor = "white",
   caption,
   hasBgImage = false,
-  isHorizontal = false,
+  // isNarrow = false,
   src,
   alt,
   ...props
-}: ImpactBannerProps) => {
+}: StoryPosterCardProps) => {
   const pb = bgColor === "white" ? 10 : 8;
   return (
-    <Container {...props} width="full" mb={7} className="relative">
+    <Container {...props} width="site" mb={7} className="relative">
       <Container bgColor={bgColor} width="site" pt={9} pb={pb}>
         {hasBgImage && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
@@ -55,17 +55,9 @@ export const ImpactBanner = ({
         )}
         <FlexBox
           alignItems="center"
-          className={cnb("flex flex-col z-50 relative md:grid-gap", {
-            "lg:flex-row": !isHorizontal,
-            "w-full max-w-[1100px] mx-auto": isHorizontal,
-          })}
+          className="flex flex-col z-50 relative md:grid-gap w-full max-w-[1100px] mx-auto"
         >
-          <div
-            className={cnb("flex flex-col text-center rs-mb-8 rs-mt-7", {
-              "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isHorizontal,
-              "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0": !isHorizontal,
-            })}
-          >
+          <div className="flex flex-col text-center rs-mb-8 rs-mt-7 items-center [&_p]:max-w-800 [&_h*]:max-w-1100">
             <Heading size={6} weight="normal" mb="none">
               {heading}
             </Heading>
@@ -81,19 +73,8 @@ export const ImpactBanner = ({
               </Text>
             )}
           </div>
-          <FlexBox
-            direction="col"
-            className={cnb("w-full h-full", {
-              "md:1/3 lg:w-1/2": !isHorizontal,
-            })}
-          >
-            <div
-              className={cnb(
-                "w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10",
-                { "aspect-[3/2]": isHorizontal },
-                { "aspect-[1/1] md:aspect-[2/3]": !isHorizontal },
-              )}
-            >
+          <FlexBox direction="col" className="w-full h-full">
+            <div className="w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1]">
               <Image src={src} alt={alt || ""} fill className="object-cover" />
             </div>
             {bgColor === "white" && (

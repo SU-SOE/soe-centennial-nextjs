@@ -11,7 +11,7 @@ import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { Quote } from "@/components/Quote";
-import { ImpactBanner } from "@/components/StoryBanners";
+import { StoryImpactBanner } from "@/components/Story";
 import Metadata from "@/components/Layout/Metadata";
 
 const ExamplePage = async () => {
@@ -57,7 +57,7 @@ const ExamplePage = async () => {
         </Text>
       </FeatureHero>
       <ShapeAnimation />
-      <ImpactBanner
+      <StoryImpactBanner
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."

@@ -6,7 +6,7 @@ import { cnb } from "cnbuilder";
 import { FlexBox } from "@/components/FlexBox";
 import Image from "next/image";
 
-type LineBannerProps = HTMLAttributes<HTMLDivElement> & {
+type StoryLineBannerProps = HTMLAttributes<HTMLDivElement> & {
   hasLineArt?: boolean;
   heading: string;
   superhead: string;
@@ -19,7 +19,7 @@ type LineBannerProps = HTMLAttributes<HTMLDivElement> & {
   lineVariant?: "a" | "b" | "default";
 };
 
-export const LineBanner = ({
+export const StoryLineBanner = ({
   bgColor = "red",
   hasLineArt = false,
   heading,
@@ -31,7 +31,7 @@ export const LineBanner = ({
   alt,
   lineVariant,
   ...props
-}: LineBannerProps) => (
+}: StoryLineBannerProps) => (
   <Container
     {...props}
     as="section"

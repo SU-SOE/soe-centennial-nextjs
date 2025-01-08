@@ -1,11 +1,11 @@
 import { Masthead } from "@/components/Masthead";
-import { ImpactBanner, LineBanner } from "@/components/StoryBanners";
+import { StoryImpactBanner, StoryLineBanner } from "@/components/Story";
 
 const ExampleStoryPage = async () => {
   return (
     <div>
       <Masthead isOverlap />
-      <LineBanner
+      <StoryLineBanner
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
@@ -15,7 +15,7 @@ const ExampleStoryPage = async () => {
         lineVariant="a"
       />
 
-      <LineBanner
+      <StoryLineBanner
         hasLineArt
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -25,7 +25,7 @@ const ExampleStoryPage = async () => {
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         lineVariant="a"
       />
-      <LineBanner
+      <StoryLineBanner
         hasLineArt
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -36,7 +36,7 @@ const ExampleStoryPage = async () => {
         lineVariant="b"
       />
 
-      <LineBanner
+      <StoryLineBanner
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
@@ -46,7 +46,7 @@ const ExampleStoryPage = async () => {
         lineVariant="b"
         bgColor="stone-dark"
       />
-      <LineBanner
+      <StoryLineBanner
         hasLineArt
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -57,7 +57,7 @@ const ExampleStoryPage = async () => {
         lineVariant="a"
         bgColor="stone-dark"
       />
-      <LineBanner
+      <StoryLineBanner
         hasLineArt
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -68,7 +68,7 @@ const ExampleStoryPage = async () => {
         lineVariant="b"
         bgColor="stone-dark"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -77,7 +77,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
@@ -87,7 +87,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         bgColor="red"
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
@@ -96,7 +96,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         hasBgImage
         bgColor="red"
         heading="Exploring the reengineering of immune cells"
@@ -106,7 +106,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
@@ -114,7 +114,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         isHorizontal
         bgColor="stone-dark"
         heading="Exploring the reengineering of immune cells"
@@ -124,7 +124,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         isHorizontal
         hasBgImage
         bgColor="stone-dark"
@@ -135,7 +135,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         isHorizontal
         bgColor="red"
         heading="Exploring the reengineering of immune cells"
@@ -145,7 +145,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         isHorizontal
         hasBgImage
         bgColor="red"
@@ -156,7 +156,7 @@ const ExampleStoryPage = async () => {
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
-      <ImpactBanner
+      <StoryImpactBanner
         isHorizontal
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"
