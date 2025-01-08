@@ -6,7 +6,7 @@ type HeadingProps = Omit<TypographyProps, "as"> &
   React.HTMLAttributes<HTMLHeadingElement> & {
     as?: types.HeadingType;
     className?: string;
-    isInvertLinkStyle?: boolean;
+    linkType?: "story" | "poster" | "default";
   };
 
 // Convenience component for paragraphs
@@ -14,12 +14,25 @@ export const Heading = ({
   as = "h2",
   weight = "medium",
   className,
-  isInvertLinkStyle = false,
+  linkType,
   ...rest
 }: HeadingProps) => {
-  const headingLinkClasses = isInvertLinkStyle
-    ? "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:group-hocus:underline [&_a]:underline-offset-[5px] [&_a]:group-hocus:decoration-digital-red-light [&_a]:group-hocus:cursor-pointer [&_a]:decoration-4"
-    : "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:underline [&_a]:underline-offset-[5px] [&_a]:decoration-digital-red-light [&_a]:cursor-pointer [&_a]:decoration-4";
+  let headingLinkClasses =
+    "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:underline [&_a]:underline-offset-[5px] [&_a]:decoration-digital-red-light [&_a]:cursor-pointer [&_a]:decoration-4";
+
+  switch (linkType) {
+    case "story":
+      headingLinkClasses =
+        "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:group-hocus:underline [&_a]:underline-offset-[5px] [&_a]:group-hocus:decoration-digital-red-light [&_a]:group-hocus:cursor-pointer [&_a]:decoration-4";
+      break;
+    case "poster":
+      headingLinkClasses =
+        "[&_a]:transition [&_a]:duration-500 [&_a]:text-white [&_a]:font-normal [&_a]:group-hocus:underline [&_a]:underline-offset-[5px] [&_a]:group-hocus:decoration-white [&_a]:group-hocus:cursor-pointer [&_a]:decoration-4";
+      break;
+    default:
+      break;
+  }
+
   return (
     <Text
       {...rest}

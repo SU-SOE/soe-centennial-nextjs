@@ -4,10 +4,12 @@ import { FlexBox } from "../FlexBox";
 import Image from "next/image";
 import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
+import { ChapterLabel } from "./ChapterLabel";
 
 type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead: string;
+  chapter?: string;
   body: string;
   byline?: string;
   bgColor?: BgColorType;
@@ -16,25 +18,39 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   isNarrow?: boolean;
   src: string;
   alt?: string;
+  link: string;
 };
 
 export const StoryPosterCard = ({
   heading,
   superhead,
+  chapter,
   body,
   byline,
   bgColor = "white",
   caption,
   hasBgImage = false,
-  // isNarrow = false,
+  isNarrow = false,
   src,
   alt,
+  link,
   ...props
 }: StoryPosterCardProps) => {
-  const pb = bgColor === "white" ? 10 : 8;
   return (
-    <Container {...props} width="site" mb={7} className="relative">
-      <Container bgColor={bgColor} width="site" pt={9} pb={pb}>
+    <Container
+      {...props}
+      width="site"
+      mb={7}
+      className="2xl:p-0 2xl:w-full 2xl:max-w-[1600px]"
+    >
+      <Container
+        bgColor={bgColor}
+        width="full"
+        className={cnb("relative rounded-[30px] overflow-hidden group", {
+          "rs-py-5 rs-px-2 lg:rs-px-4": isNarrow,
+          "rs-py-7 rs-px-4": !isNarrow,
+        })}
+      >
         {hasBgImage && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
             <Image
@@ -55,16 +71,29 @@ export const StoryPosterCard = ({
         )}
         <FlexBox
           alignItems="center"
-          className="flex flex-col z-50 relative md:grid-gap w-full max-w-[1100px] mx-auto"
+          className="flex flex-col md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
-          <div className="flex flex-col text-center rs-mb-8 rs-mt-7 items-center [&_p]:max-w-800 [&_h*]:max-w-1100">
-            <Heading size={6} weight="normal" mb="none">
-              {heading}
+          <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
+            <Heading
+              size="f5"
+              weight="normal"
+              className="rs-mb-3 lg:rs-mb-5"
+              linkType="poster"
+            >
+              <a href={link} className="stretched-link">
+                {heading}
+              </a>
             </Heading>
+            {chapter && (
+              <ChapterLabel
+                text={chapter}
+                className="order-first mt-0 md:rs-mt-2"
+              />
+            )}
             <Text className="order-first" mb={2} font="dm-mono">
               {superhead}
             </Text>
-            <Text variant="overview" mb="none" className="rs-mt-5">
+            <Text variant="overview" mb="none">
               {body}
             </Text>
             {byline && (
@@ -73,23 +102,11 @@ export const StoryPosterCard = ({
               </Text>
             )}
           </div>
-          <FlexBox direction="col" className="w-full h-full">
-            <div className="w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1]">
-              <Image src={src} alt={alt || ""} fill className="object-cover" />
-            </div>
-            {bgColor === "white" && (
-              <Text variant="caption" className="mt-13">
-                {caption}
-              </Text>
-            )}
-          </FlexBox>
+          <div className="w-full h-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px] overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent group-hocus:border-digital-red-xlight">
+            <Image src={src} alt={alt || ""} fill className="object-cover" />
+          </div>
         </FlexBox>
       </Container>
-      {bgColor !== "white" && (
-        <Text variant="caption" className="mt-13 cc">
-          {caption}
-        </Text>
-      )}
     </Container>
   );
 };

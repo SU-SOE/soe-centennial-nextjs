@@ -37,6 +37,7 @@ export const fontSizes = {
   "quote-lg": "cen-quote-lg",
   "quote-md": "cen-quote-md",
   "quote-sm": "cen-quote-sm",
+  small: "text-17 md:text-18",
 };
 
 // Line heights

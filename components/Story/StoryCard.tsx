@@ -63,7 +63,7 @@ export const StoryCard = ({
           size={isHeadingLarge ? 3 : 2}
           weight="normal"
           mb="none"
-          isInvertLinkStyle
+          linkType="story"
         >
           <a href={href}>{heading}</a>
         </Heading>
