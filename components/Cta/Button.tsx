@@ -6,6 +6,8 @@ import { cnb } from "cnbuilder";
 
 type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> & {
   href?: string;
+  solid?: boolean;
+  big?: boolean;
   isLight?: boolean;
   buttonElem?: boolean;
   onClick?: MouseEventHandler;
@@ -16,6 +18,8 @@ type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> & {
 
 export const Button = ({
   href,
+  big = false,
+  solid = false,
   isLight = false,
   buttonElem = false,
   children,
@@ -23,10 +27,14 @@ export const Button = ({
   ...props
 }: Props) => {
   const buttonStyle = cnb(
-    "flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition hocus:text-white hocus:bg-digital-red-light border-4 rounded border-digital-red-light hocus:border-white no-underline hocus:underline hocus:outline hocus:outline-3 hocus:outline-digital-red-light rs-p-1 sm:rs-py-1 sm:rs-px-3 font-normal ",
+    "flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
     {
-      "text-digital-red-light ": isLight,
-      "text-white ": !isLight,
+      "text-digital-red-light": isLight && !solid,
+      "text-white": !isLight,
+      "text-white bg-digital-red-light hocus:bg-digital-red": solid && big,
+      "text-white bg-digital-red": solid,
+      "px-48 py-22": big,
+      "rs-px-1 rs-py-0": !big,
     },
   );
 

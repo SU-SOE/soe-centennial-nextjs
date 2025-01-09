@@ -4,6 +4,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import Metadata from "@/components/Layout/Metadata";
+import { Button } from "@/components/Cta";
 
 const TextareaExamplePage = async () => {
   return (
@@ -13,8 +14,7 @@ const TextareaExamplePage = async () => {
         description="Example page containing typography styles"
       />
       <Masthead isLight />
-
-      <Container width="site" py={9} className="font-dm-sans">
+      <Container width="site" py={8} className="font-dm-sans">
         <MediaCaptionImage
           imageSrc="https://placecats.com/neo/1500/1000"
           caption="Caption/credit lorem ipsum aspect ratio square"
@@ -147,6 +147,44 @@ const TextareaExamplePage = async () => {
           rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
           efficitur scelerisque urna et sollicitudin.
         </Text>
+      </Container>
+      <Container
+        as="div"
+        py={4}
+        className="flex flex-col items-center *:rs-mb-1"
+      >
+        <Heading as="h3" id="buttons">
+          Buttons
+        </Heading>
+        <Button href="/timeline" isLight>
+          Explore 100 years in Engineering
+        </Button>
+        <Button href="/timeline" isLight solid>
+          Explore 100 years in Engineering
+        </Button>
+        <Button href="/timeline" isLight big>
+          Explore 100 years in Engineering
+        </Button>
+        <Button href="/timeline" isLight solid big>
+          Explore 100 years in Engineering
+        </Button>
+      </Container>
+      <Container
+        bgColor="stone-dark"
+        as="div"
+        py={4}
+        className="flex flex-col items-center *:rs-mb-1"
+      >
+        <Button href="/timeline">Explore 100 years in Engineering</Button>
+        <Button href="/timeline" solid>
+          Explore 100 years in Engineering
+        </Button>
+        <Button href="/timeline" big>
+          Explore 100 years in Engineering
+        </Button>
+        <Button href="/timeline" solid big>
+          Explore 100 years in Engineering
+        </Button>
       </Container>
       <ContributeStoryBanner />
       <ContributeStoryBanner hasLineArt />
