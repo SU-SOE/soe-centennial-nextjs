@@ -76,7 +76,7 @@ export const StoryImpactBanner = ({
               {body}
             </Text>
             {byline && (
-              <Text mb="none" size="base" className="rs-mt-4">
+              <Text mb="none" size="base" className="rs-mt-0">
                 {byline}
               </Text>
             )}
