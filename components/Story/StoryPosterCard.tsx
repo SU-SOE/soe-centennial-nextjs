@@ -27,7 +27,7 @@ export const StoryPosterCard = ({
   chapter,
   body,
   byline,
-  bgColor = "white",
+  bgColor = "stone-dark",
   caption,
   hasBgImage = false,
   isNarrow = false,
@@ -46,10 +46,13 @@ export const StoryPosterCard = ({
       <Container
         bgColor={bgColor}
         width="full"
-        className={cnb("relative rounded-[30px] overflow-hidden group", {
-          "rs-py-5 rs-px-2 lg:rs-px-4": isNarrow,
-          "rs-py-7 rs-px-4": !isNarrow,
-        })}
+        className={cnb(
+          "relative rounded-[30px] overflow-hidden group transition duration-500",
+          {
+            "rs-py-5 rs-px-2 lg:rs-px-4": isNarrow,
+            "rs-py-7 rs-px-4": !isNarrow,
+          },
+        )}
       >
         {hasBgImage && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
@@ -87,7 +90,7 @@ export const StoryPosterCard = ({
             {chapter && (
               <ChapterLabel
                 text={chapter}
-                className="order-first mt-0 md:rs-mt-2"
+                className="order-first mt-0 md:rs-mt-2 rs-mb-2"
               />
             )}
             <Text className="order-first" mb={2} font="dm-mono">

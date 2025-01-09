@@ -21,8 +21,9 @@ export const ChapterLabel = ({
       weight="bold"
       size="small"
       leading="snug"
+      mb="none"
       className={cnb(
-        "pt-6 px-13 pb-8 rounded-xl w-fit",
+        "text-white pt-6 px-13 pb-8 rounded-xl w-fit",
         {
           "bg-stone-dark": isLight,
           "bg-archway-dark": !isLight,

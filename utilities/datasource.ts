@@ -312,7 +312,7 @@ export const marginTops = {
 };
 
 export const marginBottoms = {
-  none: "mb-0",
+  none: "",
   "01em": "mb-01em",
   "02em": "mb-02em",
   "03em": "mb-03em",

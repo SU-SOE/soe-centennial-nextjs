@@ -4,11 +4,13 @@ import { BgColorType } from "@/components/Container/Container.types";
 import { cnb } from "cnbuilder";
 import { Heading, Text } from "@/components/Typography";
 import * as styles from "@/components/Container/Container.styles";
+import { ChapterLabel } from "./ChapterLabel";
 
 type StoryCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead?: string;
   body?: string;
+  chapter?: string;
   href: string;
   headerTag?: "h2" | "h3";
   isHeadingLarge?: boolean;
@@ -23,6 +25,7 @@ export const StoryCard = ({
   heading,
   superhead,
   body,
+  chapter,
   href,
   headerTag = "h2",
   isHeadingLarge = false,
@@ -40,7 +43,7 @@ export const StoryCard = ({
     <CardWrapper
       {...props}
       className={cnb(
-        "overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] stretched-link group transition duration-500 hocus:shadow-2xl",
+        "relative overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] group transition duration-500 hocus:shadow-2xl hocus:outline hocus:outline-4 hocus:outline-digital-red-xlight",
         { "flex flex-col md:flex-row items-center": isHorizontal },
         bgColor && styles.bgColors[bgColor],
         className,
@@ -65,10 +68,12 @@ export const StoryCard = ({
           mb="none"
           linkType="story"
         >
-          <a href={href}>{heading}</a>
+          <a href={href} className="stretched-link">
+            {heading}
+          </a>
         </Heading>
         {superhead && (
-          <Text className="order-first" size="base" mb="base" font="dm-mono">
+          <Text className="order-first" size="small" mb="base" font="dm-mono">
             {superhead}
           </Text>
         )}
@@ -77,6 +82,7 @@ export const StoryCard = ({
             {body}
           </Text>
         )}
+        {chapter && <ChapterLabel text={chapter} className="rs-mt-1" />}
       </div>
     </CardWrapper>
   );

@@ -23,7 +23,7 @@ export const Heading = ({
   switch (linkType) {
     case "story":
       headingLinkClasses =
-        "[&_a]:transition [&_a]:duration-500 [&_a]:text-stone-dark [&_a]:group-hocus:underline [&_a]:underline-offset-[5px] [&_a]:group-hocus:decoration-digital-red-light [&_a]:group-hocus:cursor-pointer [&_a]:decoration-4";
+        "[&_a]:transition [&_a]:duration-500 [&_a]:font-normal [&_a]:text-stone-dark [&_a]:group-hocus:underline [&_a]:underline-offset-[5px] [&_a]:group-hocus:decoration-stone-dark [&_a]:group-hocus:cursor-pointer [&_a]:decoration-2";
       break;
     case "poster":
       headingLinkClasses =

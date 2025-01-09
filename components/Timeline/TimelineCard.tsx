@@ -66,9 +66,8 @@ export const TimelineCard = ({
   const animationType =
     animation || align === "left" ? "slideInFromLeft" : "slideInFromRight";
   return (
-    <AnimateInView animation={animationType} className={className}>
+    <AnimateInView {...props} animation={animationType} className={className}>
       <AsComponent
-        {...props}
         className={cnb(
           "h-fit relative",
           bgColor ? styles.bgColors[bgColor] : "",
