@@ -25,12 +25,7 @@ export const TimelineImage = ({
   const trapezoidType = styles.trapezoid(trapezoidAngle, isExpanded);
 
   return (
-    <div
-      className={cnb(
-        "group relative flex justify-center stretch-link z-50",
-        className,
-      )}
-    >
+    <div className={cnb("flex justify-center z-50 mx-10", className)}>
       <div
         className={cnb(
           "aspect-[1/1] relative h-full transform ease-in-out perspective-1000 flex items-center justify-center",
@@ -49,9 +44,10 @@ export const TimelineImage = ({
           src={src}
           fill
           className={cnb(
-            "z-0 object-cover overflow-hidden rounded-[20px] shadow-lg transform ease-in-out perspective-1000 duration-[2s] hocus:perspective-0 hocus:rotate-y-0",
+            "z-0 object-cover rounded-[20px] shadow-lg transform ease-in-out perspective-1000 duration-[1500ms] group-hocus-within:perspective-0 group-hocus-within:rotate-y-0 hocus:perspective-0 hocus:rotate-y-0 outline outline-4 group-hocus-within:outline-stone",
             {
-              "contrast-50 brightness-100 perspective-0 rotate-y-0": isExpanded,
+              "contrast-50 brightness-100 perspective-0 rotate-y-0 outline-stone":
+                isExpanded,
             },
           )}
         />

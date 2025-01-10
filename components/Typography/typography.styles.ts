@@ -2,7 +2,7 @@ export const fontFamilies = {
   sans: "font-sans",
   serif: "font-serif",
   "dm-sans": "font-dm-sans tracking-tight",
-  "dm-mono": "font-dm-mono tracking-[0.3em]",
+  "dm-mono": "font-dm-mono tracking-[0.3rem]",
 };
 
 export const fontWeights = {

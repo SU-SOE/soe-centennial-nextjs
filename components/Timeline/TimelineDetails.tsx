@@ -3,7 +3,7 @@ import { Container } from "../Container";
 import { Heading, Text } from "../Typography";
 import { FlexBox } from "../FlexBox";
 import { cnb } from "cnbuilder";
-import { XCircleIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/16/solid";
 import { TimelineImage } from "./TimelineImage";
 
 type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
@@ -45,7 +45,7 @@ export const TimelineDetails = ({
       alignItems="start"
       justifyContent="between"
       gap
-      className="relative mr-0 au-ml-auto flex-col lg:flex-row"
+      className="relative mr-0 au-ml-auto flex-col lg:flex-row items-center"
     >
       <Container className="w-1/2 lg:rs-pr-9 ml-0 flex flex-col">
         {heading && (
@@ -94,9 +94,9 @@ export const TimelineDetails = ({
       </div>
       <button className="absolute top-0 right-0 group" onClick={onClose}>
         <span className="sr-only">Close {heading} details</span>
-        <XCircleIcon
+        <XMarkIcon
           width={50}
-          className="text-fog-dark group-hocus:text-digital-red"
+          className="transition p-6 rounded-full text-fog-dark border-fog-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
         />
       </button>
     </FlexBox>

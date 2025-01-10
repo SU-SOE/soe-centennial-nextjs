@@ -39,7 +39,7 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
         {...props}
         ref={ref}
         type="button"
-        className={cnb("group flex flex-col", className, imageSize)}
+        className={cnb("group flex flex-col relative", className, imageSize)}
         onClick={onClick}
         role="button"
         tabIndex={0}
@@ -51,27 +51,28 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}
         />
-        <div className="flex flex-col items-start md:px-28">
+        <div className="flex flex-col items-start md:rs-px-1">
           <Heading
             align="left"
             font="dm-sans"
             size="base"
             weight="normal"
             leading="normal"
-            className="transition duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light cursor-pointer decoration-[2.5px] group-hover:no-underline"
+            className="stretched-link transition text-stone-dark underline underline-offset-[5px] decoration-digital-red-light cursor-pointer decoration-[2.5px] group-hover:no-underline"
           >
             {heading}
             <ArrowRightIcon
               width={21}
-              className="ml-03em text-digital-red-light inline-block"
+              className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline-block"
             />
           </Heading>
           <Text
             font="dm-mono"
             weight="normal"
-            mb="none"
+            mb="base"
             size={2}
             className="order-first rs-mt-2"
+            align="left"
           >
             {year}
           </Text>
