@@ -3,11 +3,11 @@ import { BgColorType, Container } from "@/components/Container";
 import { cnb } from "cnbuilder";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
+  content: React.ReactNode;
   bgColor?: BgColorType;
 };
 
-export const OneCol = ({ children, className, ...props }: ColProps) => {
+export const OneCol = ({ content, className, ...props }: ColProps) => {
   return (
     <Container
       {...props}
@@ -17,7 +17,7 @@ export const OneCol = ({ children, className, ...props }: ColProps) => {
       )}
       mb={6}
     >
-      {children}
+      {content}
     </Container>
   );
 };

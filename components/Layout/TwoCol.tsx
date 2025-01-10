@@ -4,16 +4,16 @@ import { cnb } from "cnbuilder";
 import { OneCol } from "./OneCol";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  leftItems: React.ReactNode;
-  rightItems: React.ReactNode;
+  leftContent: React.ReactNode;
+  rightContent: React.ReactNode;
   columnWidth?: "sidebar" | "default";
   isNarrow?: boolean;
   bgColor?: BgColorType;
 };
 
 export const TwoCol = ({
-  leftItems,
-  rightItems,
+  leftContent,
+  rightContent,
   className,
   columnWidth = "default",
   isNarrow,
@@ -37,8 +37,8 @@ export const TwoCol = ({
       )}
       width="site"
     >
-      <OneCol>{leftItems}</OneCol>
-      <OneCol>{rightItems}</OneCol>
+      <OneCol content={leftContent} />
+      <OneCol content={rightContent} />
     </Container>
   );
 };
