@@ -2,11 +2,8 @@ import { Masthead } from "@/components/Masthead";
 import { TimelineCard } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { ThreeCol, TwoCol } from "@/components/Layout";
-import { StoryCard } from "@/components/Story";
+import { StoryCard, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
-import { StoryFeature } from "@/components/Story/StoryFeature";
-import { Heading } from "@/components/Typography";
 import Metadata from "@/components/Layout/Metadata";
 
 export default function Home() {
@@ -26,6 +23,16 @@ export default function Home() {
       />
       <Masthead isLight bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
+      <StoryPosterCard
+        hasBgImage
+        heading="The foundation of a new era in engineering"
+        superhead="100 Years of Impact"
+        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        chapter="Chapter 1"
+        link="/"
+      />
       <TimelineCard
         isHorizontal
         heading="The first African-American woman in space"
@@ -62,64 +69,6 @@ export default function Home() {
           href="/"
         />
       </Container>
-      <ThreeCol>
-        <StoryCard
-          heading="Lorem ipsum dolor sit amet consect hendrerit"
-          superhead="Change makers"
-          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-          imageUrl="https://placecats.com/neo_banana/300/200"
-          href="/"
-        />
-        <StoryCard
-          heading="Lorem ipsum dolor sit amet consect hendrerit"
-          superhead="Change makers"
-          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-          imageUrl="https://placecats.com/neo_banana/300/200"
-          href="/"
-        />
-        <StoryCard
-          heading="Lorem ipsum dolor sit amet consect hendrerit"
-          superhead="Change makers"
-          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-          imageUrl="https://placecats.com/neo_banana/300/200"
-          href="/"
-        />
-      </ThreeCol>
-      <StoryFeature>
-        <TwoCol className="rs-mb-8 items-center">
-          <Heading size={5} weight="normal" className="rs-mr-8">
-            Fundamental work in science and transformational breakthroughs for
-            one hundred years.
-          </Heading>
-          <StoryCard
-            superhead="Impact"
-            heading="Lorem ipsum dolor sit amet consect hendrerit"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-            className="max-w-full"
-          />
-        </TwoCol>
-        <ThreeCol>
-          <StoryCard
-            superhead="Innovation"
-            heading="The Foundation of a New Era in Engineering"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-          />
-          <StoryCard
-            superhead="1975 - 1984"
-            heading="Computation, outer space, the nanoscale, and the fragility of planet Earth"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-          />
-          <StoryCard
-            superhead="1985 - 1994"
-            heading="Mae Jemison: “We each get a chance to choose our own path”"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-          />
-        </ThreeCol>
-      </StoryFeature>
     </div>
   );
 }

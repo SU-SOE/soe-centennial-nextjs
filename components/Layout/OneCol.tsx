@@ -1,27 +1,29 @@
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
-import { MarginType, PaddingType } from "@/utilities/datasource";
 import { cnb } from "cnbuilder";
+import { renderDynamicComponent } from "@/utilities/renderDynamicComponent";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
-  pt?: PaddingType;
-  pb?: PaddingType;
-  py?: PaddingType;
-  mt?: MarginType;
-  mb?: MarginType;
-  my?: MarginType;
+  content: React.ReactNode | { type: string; props: any };
   bgColor?: BgColorType;
 };
 
-export const OneCol = ({ children, className, ...props }: ColProps) => {
+export const OneCol = ({ content, className, ...props }: ColProps) => {
+  const renderedContent =
+    typeof content === "object" && "type" in content
+      ? renderDynamicComponent(content.type, content.props)
+      : content;
+
   return (
     <Container
       {...props}
-      className={cnb("flex flex-col items-center *:max-w-[725px]", className)}
+      className={cnb(
+        "space-y-16 @container flex flex-col w-full *:max-w-[725px]",
+        className,
+      )}
       mb={6}
     >
-      {children}
+      {renderedContent}
     </Container>
   );
 };

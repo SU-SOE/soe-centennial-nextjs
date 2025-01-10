@@ -1,10 +1,6 @@
 import { Container } from "@/components/Container";
-import { FlexBox } from "@/components/FlexBox";
-import { ThreeCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
-import { StoryCard, StoryFeature, StoryPosterCard } from "@/components/Story";
-import { Heading, Text } from "@/components/Typography";
-
+import { StoryCard, StoryPosterCard } from "@/components/Story";
 const ExampleCardPage = async () => {
   return (
     <div>
@@ -20,75 +16,6 @@ const ExampleCardPage = async () => {
           href="/"
         />
       </Container>
-      <ThreeCol>
-        <StoryCard
-          bgColor="blue"
-          heading="Lorem ipsum dolor sit amet consect hendrerit"
-          superhead="Change makers"
-          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-          imageUrl="https://placecats.com/neo_banana/300/200"
-          href="/"
-          chapter="Chapter 1"
-        />
-        <StoryCard
-          heading="Lorem ipsum dolor sit amet consect hendrerit"
-          superhead="Change makers"
-          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-          imageUrl="https://placecats.com/neo_banana/300/200"
-          href="/"
-        />
-        <StoryCard
-          heading="Lorem ipsum dolor sit amet consect hendrerit"
-          superhead="Change makers"
-          body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-          imageUrl="https://placecats.com/neo_banana/300/200"
-          href="/"
-        />
-      </ThreeCol>
-      <StoryFeature>
-        <TwoCol className="rs-mb-8 items-center">
-          <FlexBox direction="col">
-            <Heading size="f4" weight="normal" className="rs-mr-8">
-              Fundamental work in science and transformational breakthroughs for
-              one hundred years.
-            </Heading>
-            <Text className="order-first" mb={2} font="dm-mono">
-              Stories
-            </Text>
-          </FlexBox>
-          <StoryCard
-            superhead="Impact"
-            heading="Lorem ipsum dolor sit amet consect hendrerit"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-            className="max-w-full"
-            chapter="1985 - 1994"
-          />
-        </TwoCol>
-        <ThreeCol>
-          <StoryCard
-            superhead="Change makers"
-            heading="The Foundation of a New Era in Engineering"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-            chapter="Innovation"
-          />
-          <StoryCard
-            superhead="Change makers"
-            heading="Computation, outer space, the nanoscale, and the fragility of planet Earth"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-            chapter="1985 - 1994"
-          />
-          <StoryCard
-            superhead="Change makers"
-            heading="Mae Jemison: “We each get a chance to choose our own path”"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-            chapter="1985 - 1994"
-          />
-        </ThreeCol>
-      </StoryFeature>
       <StoryPosterCard
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"

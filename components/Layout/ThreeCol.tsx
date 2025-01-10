@@ -1,27 +1,37 @@
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
-import { MarginType, PaddingType } from "@/utilities/datasource";
-import { cnb } from "cnbuilder";
+import { renderDynamicComponent } from "@/utilities/renderDynamicComponent";
+import { OneCol } from "./OneCol";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
-  pt?: PaddingType;
-  pb?: PaddingType;
-  py?: PaddingType;
-  mt?: MarginType;
-  mb?: MarginType;
-  my?: MarginType;
+  leftContent: React.ReactNode | { type: string; props: any }[];
+  mainContent: React.ReactNode | { type: string; props: any }[];
+  rightContent: React.ReactNode | { type: string; props: any }[];
   bgColor?: BgColorType;
 };
 
-export const ThreeCol = ({ children, className, ...props }: ColProps) => {
+export const ThreeCol = ({
+  leftContent,
+  mainContent,
+  rightContent,
+  className,
+  ...props
+}: ColProps) => {
+  const renderContent = (content: any[]) =>
+    content.map((item, index) =>
+      typeof item === "object" && "type" in item
+        ? renderDynamicComponent(item.type, item.props)
+        : item,
+    );
+
   return (
     <Container
       {...props}
-      className={cnb("grid grid-cols-1 lg:grid-cols-3 gap-50", className)}
-      mb={6}
+      className="gutters grid gap-10 w-full md:grid-cols-3 md:gap-20"
     >
-      {children}
+      <OneCol content={renderContent(leftContent as any[])} />
+      <OneCol content={renderContent(mainContent as any[])} />
+      <OneCol content={renderContent(rightContent as any[])} />
     </Container>
   );
 };
