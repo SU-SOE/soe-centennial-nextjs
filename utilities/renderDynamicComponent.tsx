@@ -1,61 +1,38 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import { Heading, Text } from "@/components/Typography";
+import {
+  StoryCard,
+  StoryImpactBanner,
+  StoryLineBanner,
+  StoryPosterCard,
+  StorySidebar,
+} from "@/components/Story";
+import { OneCol, ThreeCol, TwoCol } from "@/components/Layout";
 
-const componentMap: Record<
-  string,
-  React.LazyExoticComponent<React.ComponentType<any>>
-> = {
-  StoryImpactBanner: lazy(() =>
-    import("@/components/Story/StoryImpactBanner").then((mod) => ({
-      default: mod.StoryImpactBanner,
-    })),
-  ),
-  StoryCard: lazy(() =>
-    import("@/components/Story/StoryCard").then((mod) => ({
-      default: mod.StoryCard,
-    })),
-  ),
-  StorySidebar: lazy(() =>
-    import("@/components/Story/StorySidebar").then((mod) => ({
-      default: mod.StorySidebar,
-    })),
-  ),
-  OneCol: lazy(() =>
-    import("@/components/Layout/OneCol").then((mod) => ({
-      default: mod.OneCol,
-    })),
-  ),
-  TwoCol: lazy(() =>
-    import("@/components/Layout/TwoCol").then((mod) => ({
-      default: mod.TwoCol,
-    })),
-  ),
-  ThreeCol: lazy(() =>
-    import("@/components/Layout/ThreeCol").then((mod) => ({
-      default: mod.ThreeCol,
-    })),
-  ),
-  Text: lazy(() =>
-    import("@/components/Typography/Text").then((mod) => ({
-      default: mod.Text,
-    })),
-  ),
-  Heading: lazy(() =>
-    import("@/components/Typography/Heading").then((mod) => ({
-      default: mod.Heading,
-    })),
-  ),
+const componentMap: Record<string, React.ElementType<any>> = {
+  Heading,
+  Text,
+  StoryCard,
+  StoryPosterCard,
+  StoryImpactBanner,
+  StoryLineBanner,
+  StorySidebar,
+  OneCol,
+  TwoCol,
+  ThreeCol,
 };
 
-export function renderDynamicComponent(type: string, props: any) {
+export const renderDynamicComponent = (
+  type: string,
+  props: Record<string, any>,
+): React.ReactNode => {
   const Component = componentMap[type];
+
   if (!Component) {
     console.warn(`No component found for type: ${type}`);
     return null;
   }
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Component {...props} />
-    </Suspense>
-  );
-}
+
+  return <Component {...props} />;
+};

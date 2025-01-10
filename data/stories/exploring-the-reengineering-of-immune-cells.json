@@ -2,16 +2,14 @@
   {
     "type": "StoryImpactBanner",
     "props": {
-      "heading": "",
-      "superhead": "",
-      "body": "",
-      "byline": "",
-      "bgColor": "stone-dark",
-      "caption": "",
-      "hasBgImage": "true",
       "isHorizontal": "true",
-      "src": "",
-      "alt": ""
+      "bgColor":"stone-dark",
+      "heading":"Exploring the reengineering of immune cells",
+      "superhead":"Change Makers",
+      "body":"The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating.",
+      "byline":"by Jess Alvarenga",
+      "src":"https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg",
+      "caption":"Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
     }
   },
   {
@@ -63,7 +61,7 @@
       ],
       "rightContent": [
         {
-          "type": "TimelineSidebar"
+          "type": "StorySidebar"
         }
       ]
     }
@@ -73,19 +71,19 @@
     "props": {
       "content": {
         "type": "Heading",
-        "children": "Explore more stories"
+        "props": {
+          "children": "Explore more stories"
+        }
       }
     }
   },
   {
     "type": "ThreeCol",
     "props": {
-      "columnWidth": "sidebar",
       "leftContent": [
         {
           "type": "StoryCard",
           "props": {
-            "isHorizontal": "true",
             "bgColor":"blue",
             "heading":"Untangling the web of racial inequality",
             "body":"Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
@@ -98,7 +96,6 @@
         {
           "type": "StoryCard",
           "props": {
-            "isHorizontal": "true",
             "bgColor":"blue",
             "heading":"Untangling the web of racial inequality",
             "body":"Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
@@ -110,7 +107,6 @@
         {
           "type": "StoryCard",
           "props": {
-            "isHorizontal": "true",
             "bgColor":"blue",
             "heading":"Untangling the web of racial inequality",
             "body":"Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",

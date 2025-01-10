@@ -19,7 +19,9 @@ export default {
     "./utilities/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    containers: require(`${dir}/theme/cen-containers.js`)(),
     extend: {
+      gridTemplateColumns: require(`${dir}/theme/cen-grid.js`)(),
       colors: require(`${dir}/theme/cen-colors.js`)(),
       backgroundImage: require(`${dir}/theme/cen-gradients.js`)(),
       fontFamily: require(`${dir}/theme/cen-fontFamily.js`)(),

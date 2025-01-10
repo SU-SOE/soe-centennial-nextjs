@@ -1,11 +1,12 @@
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
+import { renderDynamicComponent } from "@/utilities/renderDynamicComponent";
 import { OneCol } from "./OneCol";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  leftContent: React.ReactNode;
-  rightContent: React.ReactNode;
-  mainContent: React.ReactNode;
+  leftContent: React.ReactNode | { type: string; props: any }[];
+  mainContent: React.ReactNode | { type: string; props: any }[];
+  rightContent: React.ReactNode | { type: string; props: any }[];
   bgColor?: BgColorType;
 };
 
@@ -16,14 +17,21 @@ export const ThreeCol = ({
   className,
   ...props
 }: ColProps) => {
+  const renderContent = (content: any[]) =>
+    content.map((item, index) =>
+      typeof item === "object" && "type" in item
+        ? renderDynamicComponent(item.type, item.props)
+        : item,
+    );
+
   return (
     <Container
       {...props}
-      className="centered grid gap-10 @9xl:grid-cols-3 @9xl:gap-20"
+      className="gutters grid gap-10 w-full md:grid-cols-3 md:gap-20"
     >
-      <OneCol content={leftContent} />
-      <OneCol content={mainContent} />
-      <OneCol content={rightContent} />
+      <OneCol content={renderContent(leftContent as any[])} />
+      <OneCol content={renderContent(mainContent as any[])} />
+      <OneCol content={renderContent(rightContent as any[])} />
     </Container>
   );
 };
