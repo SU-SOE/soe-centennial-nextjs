@@ -2,17 +2,14 @@
 
 import { Heading } from "@/components/Typography";
 import SidebarLineart from "@/components/images/sidebar-lineart";
-import { TimelineItem } from "./TimelineItem";
+import { TimelineItem } from "../Timeline/TimelineItem";
 import { cnb } from "cnbuilder";
 
-interface TimelineSidebarProps {
+interface StorySidebarProps {
   className?: string;
 }
 
-export const TimelineSidebar = ({
-  className,
-  ...props
-}: TimelineSidebarProps) => {
+export const StorySidebar = ({ className, ...props }: StorySidebarProps) => {
   return (
     <div
       {...props}

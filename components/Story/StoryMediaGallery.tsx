@@ -7,11 +7,16 @@ type ColProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: BgColorType;
 };
 
-export const ThreeCol = ({ children, className, ...props }: ColProps) => {
+export const StoryMediaGallery = ({
+  children,
+  className,
+  ...props
+}: ColProps) => {
   return (
     <Container
       {...props}
-      className={cnb("grid grid-cols-1 lg:grid-cols-3 gap-50", className)}
+      className={cnb("grid gap-10 md:grid-cols-2", className)}
+      width="site"
       mb={6}
     >
       {children}

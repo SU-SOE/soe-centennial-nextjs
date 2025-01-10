@@ -1,40 +1,44 @@
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
-import { MarginType, PaddingType } from "@/utilities/datasource";
 import { cnb } from "cnbuilder";
+import { OneCol } from "./OneCol";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
-  isSidebar?: boolean;
-  pt?: PaddingType;
-  pb?: PaddingType;
-  py?: PaddingType;
-  mt?: MarginType;
-  mb?: MarginType;
-  my?: MarginType;
+  leftItems: React.ReactNode;
+  rightItems: React.ReactNode;
+  columnWidth?: "sidebar" | "default";
+  isNarrow?: boolean;
   bgColor?: BgColorType;
 };
 
 export const TwoCol = ({
-  children,
+  leftItems,
+  rightItems,
   className,
-  isSidebar = false,
+  columnWidth = "default",
+  isNarrow,
   ...props
 }: ColProps) => {
+  let gridCols = "md:grid-cols-2";
+  if (columnWidth === "sidebar") {
+    gridCols = "@6xl:grid-cols-2-1";
+  }
+
   return (
     <Container
       {...props}
       className={cnb(
-        "flex flex-col w-full max-w-full lg:flex-row gap-20",
+        "w-full",
         {
-          "lg:*:w-1/2": !isSidebar,
-          "lg:first:max-w-2/3 lg:last:max-w-1/3": isSidebar,
+          "xl:mx-auto xl:w-900 2xl:w-1300": isNarrow,
         },
+        gridCols,
         className,
       )}
-      mb={6}
+      width="site"
     >
-      {children}
+      <OneCol>{leftItems}</OneCol>
+      <OneCol>{rightItems}</OneCol>
     </Container>
   );
 };
