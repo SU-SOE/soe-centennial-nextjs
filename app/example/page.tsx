@@ -3,7 +3,7 @@ import { ShapeAnimation } from "@/components/ShapeAnimation";
 import { Masthead } from "@/components/Masthead";
 import { FeatureHero } from "@/components/FeatureHero";
 import { PageTitle } from "@/components/PageTitle";
-import TimelineOverview from "@/components/Timeline/TimelineOverview";
+import TimelineList from "@/components/Timeline/TimelineList";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
@@ -226,7 +226,7 @@ const ExamplePage = async () => {
         body="Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem."
         source="Mae C. Jemison"
       />
-      <TimelineOverview timelineData={timelineData} />
+      <TimelineList timelineData={timelineData} />
     </div>
   );
 };

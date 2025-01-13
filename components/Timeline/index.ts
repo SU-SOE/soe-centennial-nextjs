@@ -1,4 +1,4 @@
-export * from "./TimelineOverview";
+export * from "./TimelineList";
 export * from "./TimelineItem";
 export * from "./TimelineDetails";
 export * from "./TimelineSidebar";
