@@ -3,6 +3,8 @@ import { renderDynamicComponent } from "@/utilities/renderDynamicComponent";
 import { StoryData } from "@/types/storyPage";
 import fs from "fs";
 import path from "path";
+import { Container } from "@/components/Container";
+import { addIdsToValidObjects } from "@/utilities/addIdsToValidObjects";
 
 export async function generateStaticParams() {
   const storiesDir = path.join(process.cwd(), "data/stories");
@@ -18,16 +20,21 @@ type StoryPageProps = {
 };
 
 export default async function StoryPage({ params }: StoryPageProps) {
-  const storyData: StoryData | null = await fetchStoryData(
+  const rawStoryData: StoryData | null = await fetchStoryData(
     (await params).storySlug,
   );
 
-  if (!storyData) {
+  if (!rawStoryData) {
     return <p>Story not found.</p>;
   }
 
+  const storyData = addIdsToValidObjects(rawStoryData);
+
+  // Find the ID of the first object with a valid ID
+  const firstObjectId = storyData.find((block) => block.props?.id)?.props.id;
+
   return (
-    <div>
+    <Container as="article" width="full" aria-labelledby={firstObjectId}>
       {storyData.map((block, index) => {
         return (
           <div key={index}>
@@ -35,6 +42,6 @@ export default async function StoryPage({ params }: StoryPageProps) {
           </div>
         );
       })}
-    </div>
+    </Container>
   );
 }

@@ -4,6 +4,7 @@ export interface ComponentProps {
 }
 
 export interface StoryComponent {
+  id: string;
   type: string; // e.g., "StoryImpactBanner", "TwoCol"
   props: ComponentProps; // Props specific to the component
 }

@@ -1,50 +1,57 @@
 [
   {
+    
     "type": "StoryImpactBanner",
     "props": {
-      "isHorizontal": "true",
-      "bgColor":"stone-dark",
-      "heading":"Exploring the reengineering of immune cells",
-      "superhead":"Change Makers",
-      "body":"The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating.",
-      "byline":"by Jess Alvarenga",
-      "src":"https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg",
-      "caption":"Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+      "isHorizontal": true,
+      "bgColor": "stone-dark",
+      "heading": "Exploring the reengineering of immune cells",
+      "superhead": "Change Makers",
+      "body": "The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating.",
+      "byline": "by Jess Alvarenga",
+      "src": "https://res.cloudinary.com/dsqi5touf/image/upload/v1734120089/lt-flynn-1994_uyac4s.jpg",
+      "caption": "Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
     }
   },
   {
+    
     "type": "TwoCol",
     "props": {
       "columnWidth": "sidebar",
       "leftContent": [
         {
+          
           "type": "Text",
           "props": {
-            "className":"type-3 intro-text",
+            "className": "type-3 intro-text",
             "children": "Overview style lorem ipsum dolar sit amet vestibulum parimentium elit rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod nisi, pharetra raesent nec. Aliquam dignissim nisi convalis quis, leo vestibulum duis euismod."
           }
         },
         {
+          
           "type": "Text",
           "props": {
-            "className":"type-3 intro-text",
+            "className": "type-3 intro-text",
             "children": "Long copy paragraph text style raesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim, sit amet."
           }
         },
         {
+          
           "type": "Heading",
           "props": {
             "children": "Heading Two"
           }
         },
         {
+          
           "type": "Text",
           "props": {
-            "className":"big-paragraph",
+            "className": "big-paragraph",
             "children": "Long copy paragraph text style raesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim, sit amet."
           }
         },
         {
+          
           "type": "Heading",
           "props": {
             "as": "h3",
@@ -52,69 +59,76 @@
           }
         },
         {
+          
           "type": "Text",
           "props": {
-            "className":"big-paragraph",
+            "className": "big-paragraph",
             "children": "Long copy paragraph text style raesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra faucibus elit rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim, sit amet."
           }
         }
       ],
       "rightContent": [
         {
+          
           "type": "StorySidebar"
         }
       ]
     }
   },
   {
+    
     "type": "OneCol",
     "props": {
-      "content": {
-        "type": "Heading",
-        "props": {
-          "children": "Explore more stories"
-        }
+      "content": {"type": "Heading",
+      "props": {
+        "children": "Explore more stories"
       }
     }
-  },
-  {
-    "type": "ThreeCol",
-    "props": {
-      "leftContent": [
-        {
-          "type": "StoryCard",
-          "props": {
-            "bgColor":"blue",
-            "heading":"Untangling the web of racial inequality",
-            "body":"Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
-            "imageUrl":"https://placecats.com/neo_banana/300/200",
-            "href":"/"
-          }
-        }
-      ],
-      "mainContent": [
-        {
-          "type": "StoryCard",
-          "props": {
-            "bgColor":"blue",
-            "heading":"Untangling the web of racial inequality",
-            "body":"Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
-            "imageUrl":"https://placecats.com/neo_banana/300/200",
-            "href":"/"
-          }
-        }],
-      "rightContent": [
-        {
-          "type": "StoryCard",
-          "props": {
-            "bgColor":"blue",
-            "heading":"Untangling the web of racial inequality",
-            "body":"Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
-            "imageUrl":"https://placecats.com/neo_banana/300/200",
-            "href":"/"
-          }
-        }
-      ]
-    }
   }
+},
+{
+  
+  "type": "ThreeCol",
+  "props": {
+    "leftContent": [
+      {
+        
+        "type": "StoryCard",
+        "props": {
+          "bgColor": "blue",
+          "heading": "Untangling the web of racial inequality",
+          "body": "Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
+          "imageUrl": "https://placecats.com/neo_banana/300/200",
+          "href": "/"
+        }
+      }
+    ],
+    "mainContent": [
+      {
+        
+        "type": "StoryCard",
+        "props": {
+          "bgColor": "blue",
+          "heading": "Untangling the web of racial inequality",
+          "body": "Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
+          "imageUrl": "https://placecats.com/neo_banana/300/200",
+          "href": "/"
+        }
+      }
+    ],
+    "rightContent": [
+      {
+        
+        "type": "StoryCard",
+        "props": {
+          "bgColor": "blue",
+          "heading": "Untangling the web of racial inequality",
+          "body": "Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo.",
+          "imageUrl": "https://placecats.com/neo_banana/300/200",
+          "href": "/"
+        }
+      }
+    ]
+  }
+}
 ]
