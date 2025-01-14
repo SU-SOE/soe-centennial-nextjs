@@ -14,7 +14,6 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
       style={{
         height: "100%",
         width: "100%",
-        maxWidth: "465px",
       }}
       preserveAspectRatio="none"
     >

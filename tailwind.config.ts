@@ -35,6 +35,13 @@ export default {
       nthVariants.forEach((n) => {
         addVariant(`nth-${n}n`, `&:nth-child(${n}n)`);
       });
+      const customNthVariants = [
+        { name: "nth-4n-2", formula: "4n+2" },
+        { name: "nth-4n-3", formula: "4n+3" },
+      ];
+      customNthVariants.forEach(({ name, formula }) => {
+        addVariant(name, `&:nth-child(${formula})`);
+      });
     }),
   ],
 } satisfies Config;

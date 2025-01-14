@@ -11,6 +11,7 @@ interface MediaCaptionImageProps extends HTMLAttributes<HTMLElement> {
   caption: string;
   imageClasses?: string;
   aspectRatio?: "default" | "square";
+  rounded?: boolean;
 }
 
 const MediaCaptionImage = ({
@@ -19,6 +20,7 @@ const MediaCaptionImage = ({
   imageAlt = "",
   link,
   caption,
+  rounded,
   aspectRatio = "default",
   imageClasses,
   ...props
@@ -36,6 +38,7 @@ const MediaCaptionImage = ({
           "relative w-full overflow-hidden",
           aspectRatio === "square" ? "aspect-[1/1]" : "aspect-[16/9]",
           imageClasses,
+          { "rounded-2xl": rounded },
         )}
       >
         <Image

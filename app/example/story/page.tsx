@@ -2,7 +2,6 @@ import { Heading, Text } from "@/components/Typography";
 import { Masthead } from "@/components/Masthead";
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
-import { TimelineSidebar } from "@/components/Timeline";
 import { StoryImpactBanner } from "@/components/Story";
 import { TwoCol } from "@/components/Layout";
 
@@ -55,7 +54,6 @@ const ExampleStoryPage = async () => {
             sollicitudin. Duis aliquam euismod enim, sit amet.
           </Text>
         </Container>
-        <TimelineSidebar />
       </TwoCol>
       <ContributeStoryBanner />
     </div>
