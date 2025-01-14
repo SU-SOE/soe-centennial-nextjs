@@ -16,7 +16,7 @@ type TimelineProps = {
   hasBorder?: boolean;
 };
 
-const TimelineOverview = ({ timelineData }: TimelineProps) => {
+const TimelineList = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
   const [itemId, setItemid] = useState<string>("");
@@ -43,12 +43,13 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
   // Focus on the TimelineDetails when it is expanded
   useEffect(() => {
     if (expandedUuid && detailsRef.current) {
-      detailsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-
-      detailsRef.current.focus();
+      setTimeout(() => {
+        detailsRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        detailsRef.current?.focus();
+      }, 0);
     }
   }, [expandedUuid]);
 
@@ -100,7 +101,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
                       {...item}
                       id={item.uuid}
                       aria-expanded={expandedUuid === item.uuid}
-                      aria-controls={`drawer-${item.uuid}`}
+                      aria-controls={item.anchor}
                       isExpanded={expandedUuid === item.uuid}
                       size={size}
                       trapezoid={trapezoid}
@@ -117,6 +118,7 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
             {expandedUuid && row.some((item) => item.uuid === expandedUuid) && (
               <motion.div
                 id={itemId}
+                aria-labelledby={expandedUuid}
                 className="w-full"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
@@ -146,4 +148,4 @@ const TimelineOverview = ({ timelineData }: TimelineProps) => {
   );
 };
 
-export default TimelineOverview;
+export default TimelineList;
