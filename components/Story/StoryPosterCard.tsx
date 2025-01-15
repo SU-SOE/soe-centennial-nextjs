@@ -47,7 +47,7 @@ export const StoryPosterCard = ({
         bgColor={bgColor}
         width="full"
         className={cnb(
-          "relative rounded-[30px] overflow-hidden group transition duration-500",
+          "relative rounded-[30px] overflow-hidden group transition duration-1000",
           {
             "rs-py-5 rs-px-2 lg:rs-px-4": isNarrow,
             "rs-py-7 rs-px-4": !isNarrow,
@@ -105,7 +105,7 @@ export const StoryPosterCard = ({
               </Text>
             )}
           </div>
-          <div className="w-full h-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px] overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent group-hocus:border-digital-red-xlight">
+          <div className="w-full h-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px] overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
             <Image src={src} alt={alt || ""} fill className="object-cover" />
           </div>
         </FlexBox>

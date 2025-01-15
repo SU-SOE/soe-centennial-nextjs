@@ -19,7 +19,7 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
   );
 
   return (
-    <Container width="site" py={5} id="featured-timeline">
+    <Container width="site" id="featured-timeline">
       <Slideshow>
         {featureTimelineData.length > 0 ? (
           featureTimelineData.map((item, idx) => (
