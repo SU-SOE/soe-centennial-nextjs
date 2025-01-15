@@ -38,7 +38,7 @@ export default function Home() {
         link="/"
         hasBgImage
       />
-      <Container mt={10} mb={10}>
+      <Container mt={10} mb={10} width="full">
         <AnimatedLineartBanner>
           <div className="flex flex-col items-start md:rs-px-1">
             <Heading

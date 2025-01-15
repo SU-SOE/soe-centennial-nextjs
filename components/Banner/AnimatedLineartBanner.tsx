@@ -15,9 +15,7 @@ export const AnimatedLineartBanner = ({
   return (
     <Container {...props} as="section" width="full" className="mb-[-10rem]">
       <Container width="site">{children}</Container>
-      <div className="rs-pl-2 md:rs-pl-6">
-        <HorizontalLineart />
-      </div>
+      <HorizontalLineart className="ml-auto rs-pl-5 md:rs-pl-8 max-w-[160rem] 2xl:max-w-[200rem] 3xl:max-w-full" />
     </Container>
   );
 };

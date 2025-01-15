@@ -43,7 +43,7 @@ export const StoryCard = ({
     <CardWrapper
       {...props}
       className={cnb(
-        "relative overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] group transition duration-500 hocus:shadow-2xl hocus:outline hocus:outline-4 hocus:outline-digital-red-xlight",
+        "relative overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
         { "flex flex-col md:flex-row items-center": isHorizontal },
         bgColor && styles.bgColors[bgColor],
         className,
@@ -52,7 +52,7 @@ export const StoryCard = ({
       {imageUrl && (
         <div className="relative aspect-[1/1] w-full">
           <Image
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
             src={imageUrl}
             alt={imageAlt || ""}
             fill

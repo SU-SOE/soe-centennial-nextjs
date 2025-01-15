@@ -100,7 +100,7 @@ export const Slideshow = ({
     prevArrow: <PrevArrow />,
     slidesToScroll: 1,
     slidesToShow: 3,
-    speed: 500,
+    speed: 2000,
     responsive: [
       {
         breakpoint: 1200,

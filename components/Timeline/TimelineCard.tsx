@@ -69,7 +69,7 @@ export const TimelineCard = ({
     <AnimateInView {...props} animation={animationType} className={className}>
       <AsComponent
         className={cnb(
-          "h-fit relative",
+          "h-fit relative group",
           bgColor ? styles.bgColors[bgColor] : "",
           py ? paddingVerticals[py] : "",
           pt ? paddingTops[pt] : "",
@@ -88,18 +88,24 @@ export const TimelineCard = ({
           <div className={cnb(styles.contentWrapper(isHorizontal))}>
             {heading && (
               <Heading
-                leading="display"
+                leading="normal"
                 size={1}
                 font="dm-sans"
                 weight="normal"
                 className={styles.heading}
               >
-                <Link className="font-inherit" href={`/timeline#${anchor}`}>
+                <Link
+                  className="font-inherit stretched-link"
+                  href={`/timeline#${anchor}`}
+                >
                   {heading}
-                  <ArrowRightIcon
-                    width={20}
-                    className="ml-2 inline-block shrink-0 text-digital-red-light"
-                  />
+                  <span className="whitespace-nowrap">
+                    &#65279;
+                    <ArrowRightIcon
+                      width={25}
+                      className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline"
+                    />
+                  </span>
                 </Link>
               </Heading>
             )}

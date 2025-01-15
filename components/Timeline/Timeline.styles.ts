@@ -9,7 +9,7 @@ export const wrapper = (align: string, isHorizontal: boolean) =>
 export const contentWrapper = (isHorizontal: boolean) =>
   cnb("rs-px-2 flex flex-col z-50", {
     "w-full max-w-[420px] lg:w-600": isHorizontal,
-    "rs-pt-2 w-full": !isHorizontal,
+    "rs-pt-3 w-full": !isHorizontal,
   });
 export const heading =
   "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";

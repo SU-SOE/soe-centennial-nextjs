@@ -14,10 +14,23 @@ const ExampleCardPage = async () => {
         <StoryCard
           isHorizontal
           bgColor="blue"
+          superhead="Change makers"
           heading="Untangling the web of racial inequality"
           body="Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo."
           imageUrl="https://placecats.com/neo_banana/300/200"
           href="/"
+        />
+      </Container>
+      <Container width="site" pb={6}>
+        <StoryCard
+          isHorizontal
+          bgColor="blue"
+          superhead="Change makers"
+          heading="Untangling the web of racial inequality"
+          body="Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo."
+          imageUrl="https://placecats.com/neo_banana/300/200"
+          href="/"
+          chapter="Chapter 1"
         />
       </Container>
       <ThreeCol>
