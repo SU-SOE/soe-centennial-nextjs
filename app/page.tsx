@@ -6,8 +6,9 @@ import { ThreeCol, TwoCol } from "@/components/Layout";
 import { StoryCard } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
-import { Heading } from "@/components/Typography";
+import { Heading, Text } from "@/components/Typography";
 import Metadata from "@/components/Layout/Metadata";
+import { AnimatedLineartBanner } from "@/components/Banner";
 
 export default function Home() {
   const timelineCardItems = [
@@ -26,6 +27,34 @@ export default function Home() {
       />
       <Masthead isLight bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
+      <AnimatedLineartBanner>
+        <div className="flex flex-col items-start md:rs-px-1">
+          <Heading
+            align="left"
+            font="dm-sans"
+            size="f5"
+            weight="normal"
+            leading="tight"
+            className="mt-10"
+          >
+            Experience{" "}
+            <span className="text-digital-red-xlight underline decoration-4 underline-offset-8">
+              100 years
+            </span>{" "}
+            of milestones
+          </Heading>
+          <Text
+            font="dm-mono"
+            weight="normal"
+            mb="base"
+            size={2}
+            className="order-first"
+            align="left"
+          >
+            Timeline
+          </Text>
+        </div>
+      </AnimatedLineartBanner>
       <TimelineCard
         isHorizontal
         heading="The first African-American woman in space"

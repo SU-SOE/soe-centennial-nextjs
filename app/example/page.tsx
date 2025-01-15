@@ -1,11 +1,11 @@
 import { Heading, Text } from "@/components/Typography";
 import { ShapeAnimation } from "@/components/ShapeAnimation";
 import { Masthead } from "@/components/Masthead";
-import { FeatureHero } from "@/components/FeatureHero";
+import { FeatureHero } from "@/components/Banner";
 import { PageTitle } from "@/components/PageTitle";
 import TimelineList from "@/components/Timeline/TimelineList";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
-import { GradientBanner } from "@/components/GradientBanner/GradientBanner";
+import { GradientBanner } from "@/components/Story/GradientBanner";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";

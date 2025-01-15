@@ -1,1 +1,1 @@
-export * from "./GradientBanner";
+export * from "../Story/GradientBanner";

@@ -8,7 +8,7 @@ export const wrapper = (align: string, isHorizontal: boolean) =>
   });
 export const contentWrapper = (isHorizontal: boolean) =>
   cnb("rs-px-2 flex flex-col z-50", {
-    "w-[420px] lg:w-600": isHorizontal,
+    "w-full max-w-[420px] lg:w-600": isHorizontal,
     "rs-pt-2 w-full": !isHorizontal,
   });
 export const heading =
