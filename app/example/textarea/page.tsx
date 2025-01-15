@@ -5,6 +5,7 @@ import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import Metadata from "@/components/Layout/Metadata";
 import { Button } from "@/components/Cta";
+import { H2, H3, H4, H5 } from "@/components/Typography/Header";
 
 const TextareaExamplePage = async () => {
   return (
@@ -44,7 +45,7 @@ const TextareaExamplePage = async () => {
           convallis, quis suscipit leo vestibulum. Duis aliquam euismod enim,
           sit amet
         </p>
-        <h2>Header Two</h2>
+        <H2>Header Two</H2>
         <p>
           Default paragraph p tag usce sem enim, tempus nec massa id, mollis
           faucibus sem. Ut ipsum erat, imperdiet eu fermentum sed in text link.
@@ -55,7 +56,7 @@ const TextareaExamplePage = async () => {
           viverra eros.Donec efficitur scelerisque urna et sollicitudin. Duis
           aliquam euismod enim, sit amet.
         </p>
-        <Heading as="h3">Header Three</Heading>
+        <H3>Header Three</H3>
         <Text variant="big">
           Text paragraph big aenean sollicitudin facilisis ex, in tincidunt
           velit sodales ac. Nullam consequat leo ut sem pharetra, a fringilla
@@ -64,14 +65,14 @@ const TextareaExamplePage = async () => {
           enim, sit amet lobortis ante porttitor. Donec efficitur scelerisque
           urna et sollicitudin. Duis aliquam euismod enim, sit amet.
         </Text>
-        <Heading as="h4">Header Four</Heading>
+        <H4>Header Four</H4>
         <Text variant="subheading">
           Text paragraph subheading sem enim, tempus nec massa id, mollis
           faucibus sem. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis
           mi. Praesent nec dapibus odio. Aliquam dignissim nisi nisi, pharetra
           faucibus elit rhoncus in.
         </Text>
-        <Heading as="h5">Header Five</Heading>
+        <H5>Header Five</H5>
         <Text variant="caption">
           Text paragraph caption sem enim, tempus nec massa id, mollis faucibus
           sem. Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi.
