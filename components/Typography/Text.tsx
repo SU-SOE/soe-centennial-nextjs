@@ -30,6 +30,7 @@ export type TypographyProps = {
   iconProps?: Omit<HeroIconProps, "icon" | "noBaseStyle">;
   className?: string;
   children?: ReactNode;
+  footnoteRefs?: { id: string; number: number }[];
 };
 
 // The TimeHTMLAttributes<HTMLElement> is for the dateTime attribute when using as="time"
@@ -55,6 +56,7 @@ export const Text = ({
   iconProps,
   className,
   children,
+  footnoteRefs,
   ...rest
 }: TextProps) => {
   const { className: iconClasses, ...iProps } = iconProps || {};
@@ -87,6 +89,18 @@ export const Text = ({
           {...iProps}
         />
       )}
+      {footnoteRefs &&
+        footnoteRefs.map(({ id, number }) => (
+          <sup key={id} className="top-0 ml-03em">
+            <a
+              href={`#${id}`}
+              id={`ref-${id}`}
+              className="font-normal text-stone-dark hocus:text-digital-red-xlight"
+            >
+              ({number})
+            </a>
+          </sup>
+        ))}
     </AsComponent>
   );
 };

@@ -6,12 +6,110 @@ import { OneCol, ThreeCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Quote } from "@/components/Quote";
-import { StoryCard, StoryImpactBanner, StorySidebar } from "@/components/Story";
+import {
+  Footnotes,
+  StoryCard,
+  StoryImpactBanner,
+  StorySidebar,
+} from "@/components/Story";
 import { StoryGrid } from "@/components/Story/StoryGrid";
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
 
 export default function page() {
+  const footnotes = [
+    {
+      number: 1,
+      id: "footnote1",
+      text: "C. Stewart Gillmor, *Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley* (Stanford University Press, 2004), 263–265.",
+    },
+    { number: 2, id: "footnote2", text: "Ibid., 263." },
+    { number: 3, id: "footnote3", text: "Ibid., 265." },
+    {
+      number: 4,
+      id: "footnote4",
+      text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
+    },
+    { number: 5, id: "footnote5", text: "Ibid." },
+    { number: 6, id: "footnote6", text: "Gillmor, *Fred Terman at Stanford*." },
+    {
+      number: 7,
+      id: "footnote7",
+      text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
+    },
+    {
+      number: 8,
+      id: "footnote8",
+      text: "Gillmor, *Fred Terman at Stanford*, 267.",
+    },
+    {
+      number: 9,
+      id: "footnote9",
+      text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 24–25.",
+    },
+    {
+      number: 10,
+      id: "footnote10",
+      text: "US Inflation Calculator, ",
+      sourceLink: "https://www.usinflationcalculator.com",
+    },
+    {
+      number: 11,
+      id: "footnote11",
+      text: "Stuart W. Leslie, “Playing the Education Game to Win: The Military and Interdisciplinary Research at Stanford,” *Historical Studies in the Physical and Biological Sciences* 18, no. 1 (1987): 55–88.",
+    },
+    {
+      number: 12,
+      id: "footnote12",
+      text: "Stanford Electrical Engineering, “Electrical Engineering Timeline,” ",
+      sourceLink:
+        "https://archive.ph/20120731042240/http:/ee.stanford.edu/timeline.php",
+    },
+    {
+      number: 13,
+      id: "footnote13",
+      text: "Leslie, “Playing the Education Game to Win,” 67.",
+    },
+    {
+      number: 14,
+      id: "footnote14",
+      text: "*Annual Report of the President of Stanford University for the Fifty-Sixth Academic Year Ending August 31, 1947*, 121.",
+    },
+    { number: 15, id: "footnote15", text: "Ibid." },
+    {
+      number: 16,
+      id: "footnote16",
+      text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 152.",
+    },
+    {
+      number: 17,
+      id: "footnote17",
+      text: "Gillmor, *Fred Terman at Stanford*.",
+    },
+    { number: 18, id: "footnote18", text: "Ibid." },
+    { number: 19, id: "footnote19", text: "Ibid., 307–308." },
+    { number: 20, id: "footnote20", text: "Ibid., 302." },
+    { number: 21, id: "footnote21", text: "Ibid., 307–308." },
+    { number: 22, id: "footnote22", text: "Ibid." },
+    { number: 23, id: "footnote23", text: "Ibid." },
+    {
+      number: 24,
+      id: "footnote24",
+      text: "*A Chronology of Stanford University and Its Founders*, edited by Karen Bartholomew, Claude Stout Brinegar, and Roxanne Nilan (Stanford Historical Society, 2001), 77.",
+    },
+    {
+      number: 25,
+      id: "footnote25",
+      text: "Gillmor, *Fred Terman at Stanford*.",
+    },
+    {
+      number: 26,
+      id: "footnote26",
+      text: "Stanford Center for Professional Development, “Our History,” ",
+      sourceLink: "https://scpd.stanford.edu/our-history",
+    },
+  ];
+
   return (
     <Container as="article" width="full">
       <Masthead isOverlap />
@@ -26,14 +124,17 @@ export default function page() {
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <OneCol>
-        <Text variant="overview">
+        <Text
+          variant="overview"
+          footnoteRefs={[{ id: "footnote1", number: 1 }]}
+        >
           Samuel Morris recommended Frederick Terman to be his successor as dean
           of the School of Engineering. Terman, on leave from Stanford at the
           time, had been serving since 1942 in a wartime appointment as head of
           the top-secret Radio Research Laboratory at Harvard University. Yet
           throughout the war, Terman was anticipating a period after the war he
           believed would be defined by unprecedented technological advancement
-          led by engineers. (1)
+          led by engineers.
         </Text>
       </OneCol>
       <TwoCol isSidebar>
@@ -43,12 +144,11 @@ export default function page() {
             Tresidder named Terman the third dean of the Stanford School of
             Engineering, with a strong endorsement from the engineering faculty.
           </Text>
-          <Text>
-            {" "}
+          <Text footnoteRefs={[{ id: "footnote2", number: 2 }]}>
             “Dr. Terman’s scholarly contributions in the field of electrical
             engineering and his administration of one of America’s largest war
             research projects place him among the outstanding engineers in the
-            country,” Tresidder said, announcing Terman’s appointment. (2)
+            country,” Tresidder said, announcing Terman’s appointment.
           </Text>
           <Text>
             Hugh H. Skilling, acting head of electric engineering, served for a
@@ -353,7 +453,7 @@ export default function page() {
           Terman himself. As the school’s third decade came to a close, the Fred
           Terman era was etched into history.
         </Text>
-        <Text>FOOTNOTES COMPONENT COMING SOON</Text>
+        <Footnotes footnotes={footnotes} />
       </OneCol>
       <Container mb={9}>
         <Heading>Explore more book chapters</Heading>
