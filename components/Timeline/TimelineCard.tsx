@@ -78,6 +78,7 @@ export const TimelineCard = ({
           mt ? marginTops[mt] : "",
           mb ? marginBottoms[mb] : "",
           width ? styles.widths[width] : "",
+          className,
         )}
       >
         {isHorizontal && (

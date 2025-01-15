@@ -20,3 +20,11 @@
     line-height: inherit;
   }
 }
+
+#featured-timeline .slick-slide {
+  width: 100% !important;
+}
+
+#featured-timeline .slick-slide > div > div {
+  width: fit-content !important;
+}

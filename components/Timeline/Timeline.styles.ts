@@ -15,10 +15,10 @@ export const heading =
   "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";
 export const superhead = "order-first rs-mb-2";
 export const imageWrapper = (align: string, isHorizontal: boolean) =>
-  cnb("relative rs-mb-2 lg:mb-0 w-[420px] order-first", {
+  cnb("relative rs-mb-2 lg:mb-0 order-first", {
     "lg:order-first": align === "left",
     "lg:order-last": align === "right",
-    "lg:rs-mr-4": align === "left" && isHorizontal,
+    "lg:rs-mr-4 w-[420px]": align === "left" && isHorizontal,
     "lg:rs-ml-4": align === "right" && isHorizontal,
   });
 
@@ -39,9 +39,9 @@ export const bgColors = {
 // Timeline Image
 export const size = {
   small: "w-200 md:w-250",
-  medium: "w-250 md:w-[300px] xl:w-[340px]",
-  large: "w-250 md:w-[300px] lg:w-[340px] xl:w-[420px]",
-  xlarge: "w-250 md:w-[300px] lg:w-[340px] xl:w-[420px] 2xl:w-600",
+  medium: "w-250 md:w-300 xl:w-[340px]",
+  large: "w-250 md:w-300 lg:w-[340px] xl:w-[420px]",
+  xlarge: "w-250 md:w-300 lg:w-[340px] xl:w-[420px] 2xl:w-600",
   full: "w-full",
 };
 
