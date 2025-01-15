@@ -453,8 +453,12 @@ export default function page() {
           Terman himself. As the school’s third decade came to a close, the Fred
           Terman era was etched into history.
         </Text>
-        <Footnotes footnotes={footnotes} />
       </OneCol>
+      <Container mt={4} mb={7}>
+        <OneCol>
+          <Footnotes footnotes={footnotes} />
+        </OneCol>
+      </Container>
       <Container mb={9}>
         <Heading>Explore more book chapters</Heading>
         <ThreeCol>
