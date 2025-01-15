@@ -81,17 +81,6 @@ export const TimelineCard = ({
           className,
         )}
       >
-        {isHorizontal && (
-          <Trapezoid
-            className={cnb(
-              "absolute top-0 z-0 flex items-center overflow-hidden w-250 md:w-[300px] lg:w-[340px] xl:w-[420px] 2xl:w-600",
-              {
-                "right-0": align === "right",
-                "left-0 rotate-180": align === "left",
-              },
-            )}
-          />
-        )}
         <FlexBox
           alignItems="center"
           className={styles.wrapper(align, isHorizontal)}
@@ -131,7 +120,19 @@ export const TimelineCard = ({
                 src={image}
                 trapezoidAngle={align}
                 size={isHorizontal ? "xlarge" : "large"}
+                className="relative z-10"
               />
+              {isHorizontal && (
+                <Trapezoid
+                  className={cnb(
+                    "absolute top-[-25%] z-0 flex items-center overflow-hidden w-350 md:w-[430px] lg:w-[536px] xl:w-[637px] 2xl:w-900 h-350 md:h-[430px] lg:h-[536px] xl:h-[637px] 2xl:h-900",
+                    {
+                      "right-[-50%]": align === "right",
+                      "left-[-50%] rotate-180": align === "left",
+                    },
+                  )}
+                />
+              )}
             </div>
           )}
         </FlexBox>

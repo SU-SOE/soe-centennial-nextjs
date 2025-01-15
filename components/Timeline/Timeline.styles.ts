@@ -7,7 +7,7 @@ export const wrapper = (align: string, isHorizontal: boolean) =>
     "ml-auto": isHorizontal && align === "right",
   });
 export const contentWrapper = (isHorizontal: boolean) =>
-  cnb("rs-px-2 flex flex-col", {
+  cnb("rs-px-2 flex flex-col z-50", {
     "w-[420px] lg:w-600": isHorizontal,
     "rs-pt-2 w-full": !isHorizontal,
   });
@@ -18,7 +18,7 @@ export const imageWrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative rs-mb-2 lg:mb-0 order-first", {
     "lg:order-first": align === "left",
     "lg:order-last": align === "right",
-    "lg:rs-mr-4 w-[420px]": align === "left" && isHorizontal,
+    "lg:rs-mr-4": align === "left" && isHorizontal,
     "lg:rs-ml-4": align === "right" && isHorizontal,
   });
 
