@@ -5,7 +5,7 @@ import { Container } from "../Container";
 import { FlexBox } from "../FlexBox";
 import Image from "next/image";
 import ShapeA from "../images/shape-a";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 type FeatureHeroProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;

@@ -6,7 +6,7 @@
 
 import { HTMLAttributes, useRef } from "react";
 import { Container } from "@/components/Container";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 
 type GradientBannerProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;

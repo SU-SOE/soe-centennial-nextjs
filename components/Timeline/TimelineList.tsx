@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./Timeline.types";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
