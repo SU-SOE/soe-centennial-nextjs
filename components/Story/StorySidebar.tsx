@@ -16,12 +16,12 @@ export const StorySidebar = ({
     <div
       {...props}
       className={cnb(
-        "relative pt-[22rem] pb-65 rs-px-3 w-full lg:max-w-[463px]",
+        "relative pt-100 sm:pt-150 lg:pt-220 pb-65 rs-px-3 w-full lg:max-w-[463px] h-fit",
         className,
       )}
     >
-      <SidebarLineart className="absolute top-0 left-0 flex justify-center items-center rs-p-0 z-10" />
-      <div className="w-full z-50 flex flex-col gap-[65px] justify-center items-center ">
+      <SidebarLineart className="absolute top-0 left-0 rs-p-0 z-10" />
+      <div className="w-full relative z-50 flex flex-col gap-20 justify-center items-center ">
         {children}
       </div>
     </div>

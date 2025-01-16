@@ -178,14 +178,16 @@ export default function page() {
         <StorySidebar>
           <MediaCaptionImage
             rounded
-            aspectRatio="square"
+            className="mb-0"
+            aspectRatio="portrait"
             imageSrc="https://i.ibb.co/0f2ZH7f/1944-Stanford-Engineering-s-third-Dean.jpg"
             caption="Fred Terman, dean of the School of Engineering, circa 1950."
           />
           <MediaCaptionImage
             rounded
+            className="mb-0"
             imageSrc="https://i.ibb.co/VxbHFBC/NS537.jpg"
-            aspectRatio="square"
+            aspectRatio="portrait"
             caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945."
           />
         </StorySidebar>
