@@ -9,8 +9,9 @@ interface MediaCaptionImageProps extends HTMLAttributes<HTMLElement> {
   imageAlt?: string;
   link?: string;
   caption: string;
+  fontColorClasses?: string;
   imageClasses?: string;
-  aspectRatio?: "default" | "square";
+  aspectRatio?: "default" | "square" | "rectangle";
   rounded?: boolean;
 }
 
@@ -21,8 +22,9 @@ const MediaCaptionImage = ({
   link,
   caption,
   rounded,
-  aspectRatio = "default",
+  fontColorClasses,
   imageClasses,
+  aspectRatio = "default",
   ...props
 }: MediaCaptionImageProps) => {
   return (
@@ -36,9 +38,13 @@ const MediaCaptionImage = ({
       <div
         className={cnb(
           "relative w-full overflow-hidden",
-          aspectRatio === "square" ? "aspect-[1/1]" : "aspect-[16/9]",
+          {
+            "rounded-2xl": rounded,
+            "aspect-[7/5]": aspectRatio === "rectangle",
+            "aspect-[1/1]": aspectRatio === "square",
+            "aspect-[16/9]": aspectRatio === "default",
+          },
           imageClasses,
-          { "rounded-2xl": rounded },
         )}
       >
         <Image
@@ -51,7 +57,9 @@ const MediaCaptionImage = ({
       </div>
 
       <figcaption className="mt-20 mx-20">
-        <Text className="text-15 text-black-70">{caption}</Text>
+        <Text className={cnb("text-15 text-black-70", fontColorClasses)}>
+          {caption}
+        </Text>
       </figcaption>
     </figure>
   );

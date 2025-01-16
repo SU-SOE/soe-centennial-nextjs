@@ -248,36 +248,49 @@ export default function page() {
         </Text>
       </OneCol>
       <StoryGrid
+        hasBgImage
         src="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
         bgColor="stone-dark"
       >
         <MediaCaptionImage
           rounded
+          aspectRatio="rectangle"
+          fontColorClasses="text-fog"
           imageSrc="https://i.ibb.co/H20ggKd/prof-edward-1.png"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
         <MediaCaptionImage
           rounded
+          aspectRatio="rectangle"
+          fontColorClasses="text-fog"
           imageSrc="https://i.ibb.co/0rQcwJW/prof-edward-2.png"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
         <MediaCaptionImage
           rounded
+          aspectRatio="rectangle"
+          fontColorClasses="text-fog"
           imageSrc="https://i.ibb.co/K9vwrm4/mark-2.png"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC). "
         />
         <MediaCaptionImage
           rounded
+          aspectRatio="rectangle"
+          fontColorClasses="text-fog"
           imageSrc="https://i.ibb.co/QCs0JVf/mark-2-2.png"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
         />
         <MediaCaptionImage
           rounded
+          aspectRatio="rectangle"
+          fontColorClasses="text-fog"
           imageSrc="https://i.ibb.co/mc5xzt1/william-w-hansen.png"
           caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL)."
         />
         <MediaCaptionImage
           rounded
+          aspectRatio="rectangle"
+          fontColorClasses="text-fog"
           imageSrc="https://i.ibb.co/cxt1gS1/felix-bloch.png"
           caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
         />
@@ -310,6 +323,7 @@ export default function page() {
         <MediaCaptionImage
           className="w-full mb-0"
           rounded
+          aspectRatio="rectangle"
           imageSrc="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
           caption="Aerial view of the Stanford University campus, 1948."
         />
@@ -393,12 +407,14 @@ export default function page() {
       </TwoCol>
       <StoryGrid bgColor="blue">
         <MediaCaptionImage
-          rounded
+          aspectRatio="rectangle"
+          imageClasses="border-stone-light border-[50px] rounded-2xl"
           imageSrc="https://i.ibb.co/H20ggKd/prof-edward-1.png"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
         <MediaCaptionImage
-          rounded
+          aspectRatio="rectangle"
+          imageClasses="border-stone-light border-[50px] rounded-2xl"
           imageSrc="https://i.ibb.co/0rQcwJW/prof-edward-2.png"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
