@@ -20,11 +20,11 @@ import {
 } from "@/utilities/datasource";
 import { Trapezoid } from "../images/trapezoid";
 
-type TimelineCardProps = HTMLAttributes<HTMLDivElement> & {
+export type TimelineCardProps = HTMLAttributes<HTMLDivElement> & {
   as?: types.TimelineCardElementType;
   heading: string;
   year: string;
-  body: string;
+  body?: string;
   anchor?: string;
   image: string;
   animation?: AnimationType;
