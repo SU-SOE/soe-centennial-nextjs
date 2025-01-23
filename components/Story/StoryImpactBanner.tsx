@@ -34,7 +34,13 @@ export const StoryImpactBanner = ({
   const pb = bgColor === "white" ? 10 : 8;
   return (
     <Container {...props} width="full" mb={7} className="relative">
-      <Container bgColor={bgColor} width="site" pt={9} pb={pb}>
+      <Container
+        bgColor={bgColor}
+        width="site"
+        pt={9}
+        pb={pb}
+        className="relative"
+      >
         {hasBgImage && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
             <Image
