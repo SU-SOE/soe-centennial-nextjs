@@ -43,7 +43,7 @@ export const StoryGrid = ({
         )}
         <Container
           width="full"
-          className="relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 nth-4n-2:*:rs-mt-8 nth-4n-3:*:rs-mt-8 *:mb-0"
+          className="relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8 *:mb-0"
         >
           {children}
         </Container>
