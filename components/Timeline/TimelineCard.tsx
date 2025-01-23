@@ -1,4 +1,3 @@
-import { HTMLAttributes } from "react";
 import { Heading, Text } from "../Typography";
 import { FlexBox } from "../FlexBox";
 import * as styles from "./Timeline.styles";
@@ -7,7 +6,7 @@ import { cnb } from "cnbuilder";
 import { TimelineImage } from "./TimelineImage";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { AnimateInView, AnimationType } from "@/components/Animate";
+import { AnimateInView } from "@/components/Animate";
 import {
   paddingTops,
   paddingBottoms,
@@ -15,31 +14,7 @@ import {
   marginTops,
   marginBottoms,
   marginVerticals,
-  type MarginType,
-  type PaddingType,
 } from "@/utilities/datasource";
-import { Trapezoid } from "../images/trapezoid";
-
-export type TimelineCardProps = HTMLAttributes<HTMLDivElement> & {
-  as?: types.TimelineCardElementType;
-  heading: string;
-  year: string;
-  body?: string;
-  anchor?: string;
-  image: string;
-  animation?: AnimationType;
-  delay?: number;
-  bgColor?: types.BgColorType;
-  align?: "right" | "left";
-  width?: types.WidthType;
-  isHorizontal?: boolean;
-  pt?: PaddingType;
-  pb?: PaddingType;
-  py?: PaddingType;
-  mt?: MarginType;
-  mb?: MarginType;
-  my?: MarginType;
-};
 
 export const TimelineCard = ({
   as: AsComponent = "div",
@@ -53,16 +28,15 @@ export const TimelineCard = ({
   year,
   body,
   anchor = "/",
-  image = "https://placecats.com/neo/600/600",
+  image,
   animation,
   delay,
   bgColor,
   width = "fit",
   align = "left",
-  isHorizontal = false,
   className,
   ...props
-}: TimelineCardProps) => {
+}: types.TimelineCardProps) => {
   const animationType =
     animation || align === "left" ? "slideInFromLeft" : "slideInFromRight";
   return (
@@ -81,11 +55,8 @@ export const TimelineCard = ({
           className,
         )}
       >
-        <FlexBox
-          alignItems="center"
-          className={styles.wrapper(align, isHorizontal)}
-        >
-          <div className={cnb(styles.contentWrapper(isHorizontal))}>
+        <FlexBox alignItems="center" className={styles.wrapper(align, false)}>
+          <div className={cnb(styles.contentWrapper(false))}>
             {heading && (
               <Heading
                 leading="normal"
@@ -115,30 +86,20 @@ export const TimelineCard = ({
                 size={2}
                 weight="normal"
                 className={styles.superhead}
+                mb="base"
               >
                 {year}
               </Text>
             )}
           </div>
           {image && (
-            <div className={styles.imageWrapper(align, isHorizontal)}>
+            <div className={styles.imageWrapper(align, false)}>
               <TimelineImage
                 src={image}
                 trapezoidAngle={align}
-                size={isHorizontal ? "xlarge" : "large"}
+                size={"large"}
                 className="relative z-10"
               />
-              {isHorizontal && (
-                <Trapezoid
-                  className={cnb(
-                    "absolute top-[-25%] z-0 flex items-center overflow-hidden w-350 md:w-[430px] lg:w-[536px] xl:w-[637px] 2xl:w-900 h-350 md:h-[430px] lg:h-[536px] xl:h-[637px] 2xl:h-900",
-                    {
-                      "right-[-50%]": align === "right",
-                      "left-[-50%] rotate-180": align === "left",
-                    },
-                  )}
-                />
-              )}
             </div>
           )}
         </FlexBox>

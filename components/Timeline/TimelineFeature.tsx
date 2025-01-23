@@ -35,7 +35,7 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
         )}
       </Slideshow>
       <Container as="div" mt={8} mb={10} className="flex flex-col items-center">
-        <Button href="/timeline" isLight>
+        <Button solid href="/timeline" isLight>
           Explore 100 years in Engineering
         </Button>
       </Container>

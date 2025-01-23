@@ -107,7 +107,7 @@ const ExampleCardPage = async () => {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         chapter="Chapter 1"
         link="/"
@@ -136,7 +136,7 @@ const ExampleCardPage = async () => {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact (Narrow Example)"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         link="/"
       />
@@ -146,7 +146,7 @@ const ExampleCardPage = async () => {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact (Narrow Example)"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         link="/"
       />
@@ -156,7 +156,7 @@ const ExampleCardPage = async () => {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact (Narrow Example)"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         link="/"
       />
@@ -167,7 +167,7 @@ const ExampleCardPage = async () => {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         link="/"
       />

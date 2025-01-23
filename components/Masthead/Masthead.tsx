@@ -34,7 +34,7 @@ export const Masthead = ({
       alignItems="center"
       className={styles.wrapper}
     >
-      <EngLogoLockup color={isLight ? "default" : "white"} />
+      <EngLogoLockup color={isLight ? "default" : "white"} isLink />
       <FlexBox alignItems="center" className={styles.flexbox}>
         {mainNav}
       </FlexBox>

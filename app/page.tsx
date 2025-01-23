@@ -1,5 +1,8 @@
 import { Masthead } from "@/components/Masthead";
-import { TimelineCard, TimelineCardProps } from "@/components/Timeline";
+import {
+  TimelineHorizontalCard,
+  TimelineCardProps,
+} from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { ThreeCol, TwoCol } from "@/components/Layout";
@@ -10,9 +13,10 @@ import { Heading, Text } from "@/components/Typography";
 import Metadata from "@/components/Layout/Metadata";
 import { AnimatedLineartBanner } from "@/components/Banner";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
+import { AnimateInView } from "@/components/Animate";
 
 export default function Home() {
-  const timelineFeatureCard: TimelineCardProps[] = [
+  const timelineHorizontalCards: TimelineCardProps[] = [
     {
       align: "left",
       heading:
@@ -37,7 +41,7 @@ export default function Home() {
         "https://res.cloudinary.com/dsqi5touf/image/upload/v1737062695/stanford-dish_cgacpq.jpg",
     },
   ];
-  const timelineCardItems = [
+  const timelineFeatureCards = [
     "1937-foundational-technology-in-the-burgeoning-microwave-industry",
     "1910-1915-the-engineering-corner",
     "1943-training-for-war",
@@ -57,7 +61,7 @@ export default function Home() {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1734567986/1926_-_The_largest_university_electrical_lab_of_its_time_c3orrt.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         chapter="Chapter 1"
         link="/"
@@ -92,10 +96,10 @@ export default function Home() {
             </Text>
           </div>
         </AnimatedLineartBanner>
-        {timelineFeatureCard.map((item, idx) => (
-          <TimelineCard key={idx} isHorizontal width="site" {...item} />
+        {timelineHorizontalCards.map((item, idx) => (
+          <TimelineHorizontalCard key={idx} width="site" {...item} />
         ))}
-        <TimelineFeature anchors={timelineCardItems} />
+        <TimelineFeature anchors={timelineFeatureCards} />
       </Container>
       <StoryFeature>
         <TwoCol className="rs-mb-8 items-center">
@@ -112,29 +116,33 @@ export default function Home() {
           />
         </TwoCol>
         <ThreeCol>
-          <StoryCard
-            heading="New Spaces and Expanding Influence"
-            superhead="The 5th Decade"
-            chapter="Chapter 5"
-            href="/"
-            imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
-          />
-
-          <StoryCard
-            heading="Bridging Worlds: Chips, Code, and Cosmos"
-            superhead="The 6th Decade"
-            chapter="Chapter 6"
-            href="/"
-            imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
-          />
-
-          <StoryCard
-            heading="Redevelopment and an Earthquake"
-            superhead="The 7th Decade"
-            chapter="Chapter 7"
-            href="/"
-            imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
-          />
+          <AnimateInView animation="slideUp" duration={1}>
+            <StoryCard
+              heading="New Spaces and Expanding Influence"
+              superhead="The 5th Decade"
+              chapter="Chapter 5"
+              href="/"
+              imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
+            />
+          </AnimateInView>
+          <AnimateInView animation="slideUp" duration={2}>
+            <StoryCard
+              heading="Bridging Worlds: Chips, Code, and Cosmos"
+              superhead="The 6th Decade"
+              chapter="Chapter 6"
+              href="/"
+              imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
+            />
+          </AnimateInView>
+          <AnimateInView animation="slideUp" duration={0.5}>
+            <StoryCard
+              heading="Redevelopment and an Earthquake"
+              superhead="The 7th Decade"
+              chapter="Chapter 7"
+              href="/"
+              imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
+            />
+          </AnimateInView>
         </ThreeCol>
       </StoryFeature>
       <ContributeStoryBanner bgColor="blue" />

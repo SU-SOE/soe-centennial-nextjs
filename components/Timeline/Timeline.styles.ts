@@ -1,6 +1,10 @@
 import { cnb } from "cnbuilder";
 
 // Timeline Card
+export const heading =
+  "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";
+export const superhead = "order-first rs-mb-2";
+
 export const wrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative z-50 flex-col w-fit", {
     "lg:flex-row": isHorizontal,
@@ -8,12 +12,9 @@ export const wrapper = (align: string, isHorizontal: boolean) =>
   });
 export const contentWrapper = (isHorizontal: boolean) =>
   cnb("rs-px-2 flex flex-col z-50", {
-    "w-full max-w-[420px] lg:w-600": isHorizontal,
+    "w-full max-w-500 lg:w-600": isHorizontal,
     "rs-pt-3 w-full": !isHorizontal,
   });
-export const heading =
-  "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";
-export const superhead = "order-first rs-mb-2";
 export const imageWrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative rs-mb-2 lg:mb-0 order-first", {
     "lg:order-first": align === "left",
