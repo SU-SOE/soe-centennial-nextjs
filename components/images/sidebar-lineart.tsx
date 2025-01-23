@@ -50,7 +50,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
       {/* MD */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={cnb("hidden md:block lg:hidden", className)}
+        className={cnb("hidden sm:block lg:hidden", className)}
         style={{
           height: "100%",
           width: "100%",
@@ -70,7 +70,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
       {/* SM */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={cnb("hidden sm:block md:hidden", className)}
+        className={cnb("block sm:hidden", className)}
         style={{
           height: "100%",
           width: "100%",
@@ -88,7 +88,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
         />
       </svg>
       {/* XS */}
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         className={cnb("block sm:hidden", className)}
         style={{
@@ -106,7 +106,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
           stroke="#F83535"
           strokeWidth="3"
         />
-      </svg>
+      </svg> */}
     </>
   );
 };
