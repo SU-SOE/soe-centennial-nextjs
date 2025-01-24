@@ -23,6 +23,9 @@ export default {
       colors: require(`${dir}/theme/cen-colors.js`)(),
       backgroundImage: require(`${dir}/theme/cen-gradients.js`)(),
       fontFamily: require(`${dir}/theme/cen-fontFamily.js`)(),
+      screens: {
+        "3xl": "2400px",
+      },
     },
   },
   plugins: [

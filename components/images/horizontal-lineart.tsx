@@ -4,7 +4,7 @@ import { cnb } from "cnbuilder";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
-interface HorizontalLineartProps {
+export interface HorizontalLineartProps {
   className?: string;
   isLeft?: boolean;
 }
