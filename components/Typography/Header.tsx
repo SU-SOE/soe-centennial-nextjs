@@ -10,7 +10,7 @@ type Props = Omit<TypographyProps, "as"> &
 
 export const H1 = ({ children, className, ...props }: Props) => {
   return (
-    <Heading as="h1" {...props}>
+    <Heading {...props} as="h1" className={cnb("rs-mt-2", className)}>
       {children}
     </Heading>
   );
@@ -18,7 +18,7 @@ export const H1 = ({ children, className, ...props }: Props) => {
 
 export const H2 = ({ children, className, ...props }: Props) => {
   return (
-    <Heading {...props} as="h2" size={2} className={cnb("rs-mt-1", className)}>
+    <Heading {...props} as="h2" size={2} className={cnb("rs-mt-2", className)}>
       {children}
     </Heading>
   );
@@ -26,7 +26,7 @@ export const H2 = ({ children, className, ...props }: Props) => {
 
 export const H3 = ({ children, className, ...props }: Props) => {
   return (
-    <Heading {...props} as="h3" size={1} className={cnb("rs-mt-0", className)}>
+    <Heading {...props} as="h3" size={1} className={cnb("rs-mt-2", className)}>
       {children}
     </Heading>
   );
@@ -38,7 +38,7 @@ export const H4 = ({ children, className, ...props }: Props) => {
       {...props}
       as="h4"
       size="base"
-      className={cnb("rs-mt-0", className)}
+      className={cnb("rs-mt-2", className)}
       mb={1}
     >
       {children}
