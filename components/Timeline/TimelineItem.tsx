@@ -58,14 +58,14 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
             size="base"
             weight="normal"
             leading="normal"
-            className="stretched-link transition duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
+            className="stretched-link transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
           >
             {heading}
             <span className="whitespace-nowrap">
               &#65279;
               <ArrowRightIcon
                 width={21}
-                className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline-block"
+                className="transition-all ease-in-out duration-1000 ml-03em group-hocus:translate-x-02em text-digital-red-light inline-block"
               />
             </span>
           </Heading>
