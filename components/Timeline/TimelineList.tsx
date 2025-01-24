@@ -95,8 +95,17 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                 const size = sizePattern[itemIndex % sizePattern.length];
                 const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
 
+                // Animation
+                const delayPattern =
+                  rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
+                const delay = delayPattern[itemIndex % delayPattern.length];
+
                 return (
-                  <AnimateInView key={item.uuid}>
+                  <AnimateInView
+                    key={item.uuid}
+                    animation="slideUp"
+                    delay={delay}
+                  >
                     <TimelineItem
                       {...item}
                       id={item.uuid}
