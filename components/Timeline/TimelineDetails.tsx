@@ -5,13 +5,13 @@ import { FlexBox } from "../FlexBox";
 import { cnb } from "cnbuilder";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { TimelineImage } from "./TimelineImage";
+import { AnimateInView } from "../Animate";
 
 type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   year: string;
   href?: string;
   body: string;
-  cta?: React.ReactNode;
   image: string;
   bgColor?: "fog-light" | "red-gradient";
   align?: "right" | "left";
@@ -25,7 +25,6 @@ export const TimelineDetails = ({
   year,
   href,
   body,
-  cta,
   image,
   bgColor = "fog-light",
   align = "left",
@@ -49,38 +48,47 @@ export const TimelineDetails = ({
     >
       <Container className="w-1/2 lg:rs-pr-9 ml-0 flex flex-col">
         {heading && (
-          <Heading
-            align="left"
-            font="dm-sans"
-            size={3}
-            weight="normal"
-            className="2xl:whitespace-pre-line -mt-01em xl:max-w-1200"
-          >
-            {heading}
-          </Heading>
+          <AnimateInView delay={0.8} animation="slideInFromRight">
+            <Heading
+              align="left"
+              font="dm-sans"
+              size={3}
+              weight="normal"
+              className="2xl:whitespace-pre-line -mt-01em xl:max-w-1200"
+            >
+              {heading}
+            </Heading>
+          </AnimateInView>
         )}
         {year && (
-          <Text
-            font="dm-mono"
-            weight="normal"
-            mb="none"
-            size={2}
-            className="order-first mt-28 mb-38"
+          <AnimateInView
+            delay={0.5}
+            animation="slideDown"
+            className="order-first "
           >
-            {year}
-          </Text>
+            <Text
+              font="dm-mono"
+              weight="normal"
+              mb="none"
+              size={2}
+              className="mt-28 mb-38"
+            >
+              {year}
+            </Text>
+          </AnimateInView>
         )}
         {body && (
-          <Text
-            font="dm-sans"
-            variant="big"
-            weight="normal"
-            className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
-          >
-            {body}
-          </Text>
+          <AnimateInView delay={1} animation="slideUp">
+            <Text
+              font="dm-sans"
+              variant="big"
+              weight="normal"
+              className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
+            >
+              {body}
+            </Text>
+          </AnimateInView>
         )}
-        {cta}
       </Container>
       <div
         className={cnb(
@@ -90,7 +98,9 @@ export const TimelineDetails = ({
           },
         )}
       >
-        <TimelineImage size="full" src={image} />
+        <AnimateInView duration={1} delay={0.8} animation="slideInFromLeft">
+          <TimelineImage size="full" src={image} />
+        </AnimateInView>
       </div>
       <button className="absolute top-0 right-0 group" onClick={onClose}>
         <span className="sr-only">Close {heading} details</span>
