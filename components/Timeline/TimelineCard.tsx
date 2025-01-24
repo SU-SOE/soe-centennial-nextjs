@@ -30,6 +30,7 @@ export const TimelineCard = ({
   anchor = "/",
   image,
   animation,
+  duration,
   delay,
   bgColor,
   width = "fit",
@@ -37,10 +38,8 @@ export const TimelineCard = ({
   className,
   ...props
 }: types.TimelineCardProps) => {
-  const animationType =
-    animation || align === "left" ? "slideInFromLeft" : "slideInFromRight";
   return (
-    <AnimateInView {...props} animation={animationType} className={className}>
+    <AnimateInView {...props}>
       <AsComponent
         className={cnb(
           "h-fit relative group",

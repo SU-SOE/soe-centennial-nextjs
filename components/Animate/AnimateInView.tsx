@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useInView, motion, useReducedMotion } from "motion/react";
 import { AnimationMap, type AnimationType } from "./AnimationMap";
 
-type AnimateInViewProps = {
+export type AnimateInViewProps = {
   animation?: AnimationType;
   once?: boolean;
   duration?: number;

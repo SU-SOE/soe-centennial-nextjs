@@ -22,14 +22,20 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
     <Container width="site" id="featured-timeline">
       <Slideshow>
         {featureTimelineData.length > 0 ? (
-          featureTimelineData.map((item, idx) => (
-            <TimelineCard
-              {...item}
-              key={item.uuid || idx}
-              animation="none"
-              py="none"
-            />
-          ))
+          featureTimelineData.map((item, idx) => {
+            const baseDelay = 1;
+            const delay = baseDelay + idx * 0.5;
+            return (
+              <TimelineCard
+                {...item}
+                key={item.uuid || idx}
+                animation="slideInFromRight"
+                duration={1}
+                delay={delay}
+                py="none"
+              />
+            );
+          })
         ) : (
           <p>No timeline items can be found at this time.</p>
         )}

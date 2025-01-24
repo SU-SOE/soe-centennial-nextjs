@@ -3,7 +3,7 @@ import { cnb } from "cnbuilder";
 // Timeline Card
 export const heading =
   "2xl:whitespace-pre-line -mt-01em last:mb-0 xl:max-w-1200";
-export const superhead = "order-first rs-mb-2";
+export const superhead = "order-first";
 
 export const wrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative z-50 flex-col w-fit", {

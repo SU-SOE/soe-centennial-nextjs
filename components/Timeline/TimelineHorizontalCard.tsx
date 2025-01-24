@@ -95,7 +95,8 @@ export const TimelineHorizontalCard = ({
         {image && (
           <div className={styles.imageWrapper(align, true)}>
             <AnimateInView
-              duration={0.2}
+              duration={0.8}
+              delay={0.6}
               animation={animationType}
               className={cnb("absolute top-[-25%] z-0 flex items-center ", {
                 "right-[-50%]": align === "right",
@@ -111,7 +112,7 @@ export const TimelineHorizontalCard = ({
                 )}
               />
             </AnimateInView>
-            <AnimateInView duration={5} animation={animationType}>
+            <AnimateInView duration={5} delay={2} animation={animationType}>
               <TimelineImage
                 src={image}
                 trapezoidAngle={align}
