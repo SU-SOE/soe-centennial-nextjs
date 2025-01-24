@@ -5,12 +5,14 @@ import Image from "next/image";
 import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
 import { ChapterLabel } from "./ChapterLabel";
+import { AnimateInView } from "../Animate";
 
 type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead: string;
   chapter?: string;
-  body: string;
+  dek?: string;
+  body?: string;
   byline?: string;
   bgColor?: BgColorType;
   caption?: string;
@@ -25,6 +27,7 @@ export const StoryPosterCard = ({
   heading,
   superhead,
   chapter,
+  dek,
   body,
   byline,
   bgColor = "stone-dark",
@@ -74,40 +77,62 @@ export const StoryPosterCard = ({
         )}
         <FlexBox
           alignItems="center"
-          className="flex flex-col md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
+          className="flex flex-col justify-between md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
-            <Heading
-              size="f5"
-              weight="normal"
-              className="rs-mb-3 lg:rs-mb-5"
-              linkType="poster"
+            <AnimateInView animation="slideUp" delay={0.8}>
+              <Heading
+                size="f5"
+                weight="normal"
+                className="rs-mb-3 lg:rs-mb-5"
+                linkType="poster"
+              >
+                <a href={link} className="stretched-link">
+                  {heading}
+                </a>
+              </Heading>
+            </AnimateInView>
+            <AnimateInView
+              animation="slideUp"
+              delay={0.5}
+              className="order-first"
             >
-              <a href={link} className="stretched-link">
-                {heading}
-              </a>
-            </Heading>
-            {chapter && (
-              <ChapterLabel
-                text={chapter}
-                className="order-first mt-0 md:rs-mt-2 rs-mb-2"
-              />
-            )}
-            <Text className="order-first" mb={2} font="dm-mono">
-              {superhead}
-            </Text>
-            <Text variant="overview" mb="none">
-              {body}
-            </Text>
+              {chapter && <ChapterLabel text={chapter} />}
+              {superhead && (
+                <Text mb={2} font="dm-mono">
+                  {superhead}
+                </Text>
+              )}
+            </AnimateInView>
+            <AnimateInView animation="slideUp" delay={1}>
+              {dek && (
+                <Text size={2} mb="none" className="rs-mt-4">
+                  {dek}
+                </Text>
+              )}
+              {body && (
+                <Text variant="overview" mb="none">
+                  {body}
+                </Text>
+              )}
+            </AnimateInView>
             {byline && (
-              <Text mb="none" size="base" className="rs-mt-4">
-                {byline}
-              </Text>
+              <AnimateInView animation="slideUp" delay={1}>
+                <Text mb="none" size="base" className="rs-mt-4">
+                  {byline}
+                </Text>
+              </AnimateInView>
             )}
           </div>
-          <div className="w-full h-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px] overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
-            <Image src={src} alt={alt || ""} fill className="object-cover" />
-          </div>
+          <AnimateInView
+            animation="slideUp"
+            delay={0.5}
+            className="w-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px]"
+          >
+            <div className="w-full h-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
+              <Image src={src} alt={alt || ""} fill className="object-cover" />
+            </div>
+          </AnimateInView>
         </FlexBox>
       </Container>
     </Container>

@@ -103,11 +103,15 @@ export default function Home() {
       </Container>
       <StoryFeature>
         <TwoCol className="rs-mb-8 items-center">
-          <Heading size={5} weight="normal" className="rs-mr-8">
-            Fundamental work in science and transformational breakthroughs for
-            one hundred years.
-          </Heading>
+          <AnimateInView animation="slideInFromLeft" duration={2}>
+            <Heading size={5} weight="normal" className="rs-mr-8">
+              Fundamental work in science and transformational breakthroughs for
+              one hundred years.
+            </Heading>
+          </AnimateInView>
           <StoryCard
+            animation="slideInFromRight"
+            duration={2}
             superhead="Impact"
             heading="Lorem ipsum dolor sit amet consect hendrerit"
             imageUrl="https://placecats.com/neo_banana/300/200"
@@ -116,33 +120,36 @@ export default function Home() {
           />
         </TwoCol>
         <ThreeCol>
-          <AnimateInView animation="slideUp" duration={1}>
-            <StoryCard
-              heading="New Spaces and Expanding Influence"
-              superhead="The 5th Decade"
-              chapter="Chapter 5"
-              href="/"
-              imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
-            />
-          </AnimateInView>
-          <AnimateInView animation="slideUp" duration={2}>
-            <StoryCard
-              heading="Bridging Worlds: Chips, Code, and Cosmos"
-              superhead="The 6th Decade"
-              chapter="Chapter 6"
-              href="/"
-              imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
-            />
-          </AnimateInView>
-          <AnimateInView animation="slideUp" duration={0.5}>
-            <StoryCard
-              heading="Redevelopment and an Earthquake"
-              superhead="The 7th Decade"
-              chapter="Chapter 7"
-              href="/"
-              imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
-            />
-          </AnimateInView>
+          <StoryCard
+            animation="slideUp"
+            duration={2}
+            delay={0.8}
+            heading="New Spaces and Expanding Influence"
+            superhead="The 5th Decade"
+            chapter="Chapter 5"
+            href="/"
+            imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
+          />
+          <StoryCard
+            animation="slideUp"
+            duration={2}
+            delay={1.5}
+            heading="Bridging Worlds: Chips, Code, and Cosmos"
+            superhead="The 6th Decade"
+            chapter="Chapter 6"
+            href="/"
+            imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
+          />
+          <StoryCard
+            animation="slideUp"
+            duration={2}
+            delay={0.5}
+            heading="Redevelopment and an Earthquake"
+            superhead="The 7th Decade"
+            chapter="Chapter 7"
+            href="/"
+            imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
+          />
         </ThreeCol>
       </StoryFeature>
       <ContributeStoryBanner bgColor="blue" />
