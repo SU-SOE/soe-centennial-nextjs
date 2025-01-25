@@ -41,12 +41,11 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
         type="button"
         className={cnb("group flex flex-col relative", className, imageSize)}
         onClick={onClick}
-        role="button"
         tabIndex={0}
       >
         <TimelineImage
           src={image}
-          alt={heading}
+          alt=""
           size={size}
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}

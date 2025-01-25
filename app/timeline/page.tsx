@@ -10,11 +10,11 @@ const TimelinePage = async () => {
   const timelineData = await loadTimelineData();
   return (
     <div>
-      <Masthead isLight isOverlap={false} bgColor="fog-light" />
+      <Masthead isLight bgColor="fog-light" />
       <Container as="section" bgColor="fog-light" width="site" py={8}>
         <Heading leading="tight" size={6} as="h1" className="flex flex-col">
           <span className="underline underline-offset-[14px] decoration-4">
-            100 years
+            100 years{" "}
           </span>
           <span>of impact</span>
         </Heading>

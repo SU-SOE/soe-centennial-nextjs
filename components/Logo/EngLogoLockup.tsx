@@ -24,9 +24,7 @@ export const EngLogoLockup = ({
   const LockupContent = (
     <FlexBox className={styles.contentWrapper}>
       <StanfordEngLogo color={color} />
-      <span className="sr-only">
-        100 Years of Stanford Engineering: 1925 to 2025
-      </span>
+      <span className="sr-only">Stanford Engineering 1925-2025</span>
     </FlexBox>
   );
 

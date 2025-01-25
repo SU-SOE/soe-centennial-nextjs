@@ -5,7 +5,7 @@ import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
 
-type MastheadProps = HTMLAttributes<HTMLDivElement> & {
+export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   isLight?: boolean;
   isOverlap?: boolean;
   bgColor?: styles.BgColorType;
