@@ -179,7 +179,7 @@ export default function page() {
           <MediaCaptionImage
             rounded
             className="mb-0"
-            aspectRatio="portrait"
+            aspectRatio="1x1"
             imageSrc="https://i.ibb.co/0f2ZH7f/1944-Stanford-Engineering-s-third-Dean.jpg"
             caption="Fred Terman, dean of the School of Engineering, circa 1950."
           />
@@ -187,7 +187,7 @@ export default function page() {
             rounded
             className="mb-0"
             imageSrc="https://i.ibb.co/VxbHFBC/NS537.jpg"
-            aspectRatio="portrait"
+            aspectRatio="1x1"
             caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945."
           />
         </StorySidebar>
@@ -256,43 +256,43 @@ export default function page() {
       >
         <MediaCaptionImage
           rounded
-          aspectRatio="rectangle"
-          fontColorClasses="text-fog"
+          aspectRatio="4x3"
+          captionBgColor="black"
           imageSrc="https://i.ibb.co/H20ggKd/prof-edward-1.png"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
         <MediaCaptionImage
           rounded
-          aspectRatio="rectangle"
-          fontColorClasses="text-fog"
+          aspectRatio="4x3"
+          captionBgColor="black"
           imageSrc="https://i.ibb.co/0rQcwJW/prof-edward-2.png"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
         <MediaCaptionImage
           rounded
-          aspectRatio="rectangle"
-          fontColorClasses="text-fog"
+          aspectRatio="4x3"
+          captionBgColor="black"
           imageSrc="https://i.ibb.co/K9vwrm4/mark-2.png"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC). "
         />
         <MediaCaptionImage
           rounded
-          aspectRatio="rectangle"
-          fontColorClasses="text-fog"
+          aspectRatio="4x3"
+          captionBgColor="black"
           imageSrc="https://i.ibb.co/QCs0JVf/mark-2-2.png"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
         />
         <MediaCaptionImage
           rounded
-          aspectRatio="rectangle"
-          fontColorClasses="text-fog"
+          aspectRatio="4x3"
+          captionBgColor="black"
           imageSrc="https://i.ibb.co/mc5xzt1/william-w-hansen.png"
           caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL)."
         />
         <MediaCaptionImage
           rounded
-          aspectRatio="rectangle"
-          fontColorClasses="text-fog"
+          aspectRatio="4x3"
+          captionBgColor="black"
           imageSrc="https://i.ibb.co/cxt1gS1/felix-bloch.png"
           caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
         />
@@ -322,14 +322,17 @@ export default function page() {
           pure science are turned to practical uses that advance industrial
           technology and create new industries.”
         </Text>
+      </OneCol>
+      <Container>
         <MediaCaptionImage
-          className="w-full mb-0"
+          isParallax
           rounded
-          aspectRatio="rectangle"
+          animation="fadeIn"
+          className="w-full mb-0"
           imageSrc="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
           caption="Aerial view of the Stanford University campus, 1948."
         />
-      </OneCol>
+      </Container>
       <Quote
         quoteColor="red"
         body="... great new era of industrialization"
@@ -409,12 +412,12 @@ export default function page() {
       </TwoCol>
       <StoryGrid bgColor="blue">
         <MediaCaptionImage
-          aspectRatio="rectangle"
+          aspectRatio="4x3"
           imageSrc="https://i.ibb.co/H20ggKd/prof-edward-1.png"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
         <MediaCaptionImage
-          aspectRatio="rectangle"
+          aspectRatio="4x3"
           imageSrc="https://i.ibb.co/0rQcwJW/prof-edward-2.png"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />

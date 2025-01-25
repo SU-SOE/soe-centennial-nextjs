@@ -19,8 +19,7 @@ const TextareaExamplePage = async () => {
         <MediaCaptionImage
           imageSrc="https://placecats.com/neo/1500/1000"
           caption="Caption/credit lorem ipsum aspect ratio square"
-          aspectRatio="square"
-          imageClasses="w-[500px] rounded-lg"
+          aspectRatio="1x1"
         />
         <MediaCaptionImage
           imageSrc="https://placecats.com/neo/1500/1000"
