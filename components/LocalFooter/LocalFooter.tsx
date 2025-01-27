@@ -5,7 +5,7 @@ import * as styles from "./LocalFooter.styles";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { Button } from "@/components/Cta";
 
-export const LocalFooterMvp = () => (
+export const LocalFooter = () => (
   <Container as="nav" bgColor="red" py={10} aria-label="Local footer menu">
     <FlexBox className={styles.flexWrapper}>
       <EngLogoLockup color="white" isLink className={styles.logo} />

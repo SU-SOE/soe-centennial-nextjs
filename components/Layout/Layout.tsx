@@ -22,9 +22,7 @@ const Layout: React.FC<LayoutProps> = ({
         <Masthead isLight={isLight} isOverlap={isOverlap} bgColor={bgColor} />
         <title>{title}</title>
       </Head>
-      <header>{/* <nav>Add your navigation links here</nav> */}</header>
       <main>{children}</main>
-      {/* <footer>Add your footer content here</footer> */}
     </div>
   );
 };
