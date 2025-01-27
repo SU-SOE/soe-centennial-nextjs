@@ -9,7 +9,7 @@ import { AnimateInView } from "../Animate";
 
 type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
-  superhead: string;
+  superhead?: string;
   chapter?: string;
   dek?: string;
   body?: string;

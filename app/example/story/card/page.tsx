@@ -104,9 +104,8 @@ const ExampleCardPage = async () => {
       </StoryFeature>
       <StoryPosterCard
         hasBgImage
-        heading="The foundation of a new era in engineering"
-        superhead="100 Years of Impact"
-        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
+        heading="“Preparing Roads over which Culture May Ride in Comfort”"
+        dek="The 1st Decade"
         src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         chapter="Chapter 1"
@@ -114,10 +113,9 @@ const ExampleCardPage = async () => {
       />
       <StoryPosterCard
         bgColor="red"
-        heading="The foundation of a new era in engineering"
-        superhead="100 Years of Impact"
-        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://i.ibb.co/bX4ysck/1926-The-largest-university-electrical-lab-of-its-time.jpg"
+        heading="“Preparing Roads over which Culture May Ride in Comfort”"
+        dek="The 1st Decade"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         link="/"
       />
@@ -127,7 +125,7 @@ const ExampleCardPage = async () => {
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://i.ibb.co/bX4ysck/1926-The-largest-university-electrical-lab-of-its-time.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
         link="/"
       />
