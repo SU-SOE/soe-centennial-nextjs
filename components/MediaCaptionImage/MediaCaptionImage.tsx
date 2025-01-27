@@ -72,15 +72,15 @@ const MediaCaptionImage = ({
           >
             {!!imageSrc && (
               <Parallax offset={isParallax ? 60 : 0}>
-                <picture>
+                <picture className={styles.innerImageWrapper(isParallax)}>
                   <Image
                     src={imageSrc}
                     alt={alt || ""}
                     fill
-                    sizes="(max-width: 768px) 100vw, 1500px"
+                    sizes="(max-width: 768px) 100vw, 1000px"
                     className={cnb(
                       rounded && "rounded-2xl",
-                      styles.image(isParallax, isLarge),
+                      styles.image(isLarge),
                     )}
                   />
                 </picture>

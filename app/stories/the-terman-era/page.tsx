@@ -341,7 +341,6 @@ export default function page() {
           isLarge
           rounded
           animation="fadeIn"
-          className="w-full mb-0"
           imageSrc="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
           caption="Aerial view of the Stanford University campus, 1948."
         />
