@@ -75,20 +75,12 @@ export type CaptionBgColorType = keyof typeof captionBgColors;
 
 export const root = (isFullHeight?: boolean) =>
   cnb(isFullHeight ? "h-full" : "");
-export const animateWrapper = (isFullHeight?: boolean) =>
-  cnb(isFullHeight ? "h-full" : "");
-export const figure = (isFullHeight: boolean) =>
-  cnb(isFullHeight ? "h-full" : "");
-export const imageWrapper = (isFullHeight: boolean, isParallax: boolean) =>
-  cnb(
-    "relative",
-    isFullHeight ? "h-full" : "",
-    isParallax ? "overflow-hidden" : "",
-  );
-export const image = (isParallax: boolean) =>
+export const imageWrapper = "relative w-full h-fit overflow-hidden";
+export const image = (isParallax: boolean, isLarge: boolean) =>
   cnb(
     "w-full object-cover",
-    isParallax ? "h-[calc(100%_+_12rem)] -mt-60" : "h-full",
+    isParallax ? "h-[calc(100%_+_12rem)]" : "h-full",
+    isLarge ? "max-w-1500" : "max-w-800",
   );
 export const captionWrapper = "mt-0";
 export const caption = (captionBgColor: CaptionBgColorType) =>

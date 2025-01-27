@@ -326,6 +326,7 @@ export default function page() {
       <Container>
         <MediaCaptionImage
           isParallax
+          isLarge
           rounded
           animation="fadeIn"
           className="w-full mb-0"

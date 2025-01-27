@@ -29,6 +29,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     rounded?: boolean;
     aspectRatio?: ImageAspectRatioType;
     isFullHeight?: boolean;
+    isLarge?: boolean;
     boundingWidth?: "site" | "full";
     width?: WidthType;
     spacingTop?: PaddingType;
@@ -44,6 +45,7 @@ const MediaCaptionImage = ({
   caption,
   aspectRatio = "16x9",
   isFullHeight = false,
+  isLarge = false,
   boundingWidth = "full",
   spacingTop,
   spacingBottom,
@@ -64,22 +66,22 @@ const MediaCaptionImage = ({
       className={cnb(className, styles.root(isFullHeight))}
     >
       <AnimateInView animation={animation} delay={delay}>
-        <figure className={styles.figure(isFullHeight)}>
+        <figure>
           <div
-            className={cnb(
-              imageAspectRatios[aspectRatio],
-              rounded && "rounded-2xl",
-              styles.imageWrapper(isFullHeight, isParallax),
-            )}
+            className={cnb(imageAspectRatios[aspectRatio], styles.imageWrapper)}
           >
             {!!imageSrc && (
               <Parallax offset={isParallax ? 60 : 0}>
-                <picture className={styles.image(isParallax)}>
+                <picture>
                   <Image
                     src={imageSrc}
                     alt={alt || ""}
                     fill
-                    sizes="(max-width: 768px) 100vw, 1000px"
+                    sizes="(max-width: 768px) 100vw, 1500px"
+                    className={cnb(
+                      rounded && "rounded-2xl",
+                      styles.image(isParallax, isLarge),
+                    )}
                   />
                 </picture>
               </Parallax>

@@ -1,7 +1,7 @@
 "use client";
 import { useRef, ReactNode } from "react";
 import {
-  m,
+  motion,
   useScroll,
   useTransform,
   useSpring,
@@ -33,8 +33,8 @@ export const Parallax = ({ children, offset = 60 }: ParallaxProps) => {
   const conditionalY = prefersReducedMotion ? 0 : y;
 
   return (
-    <m.div ref={ref} style={{ y: conditionalY }}>
+    <motion.div ref={ref} style={{ y: conditionalY }}>
       {children}
-    </m.div>
+    </motion.div>
   );
 };
