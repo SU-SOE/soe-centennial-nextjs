@@ -27,8 +27,7 @@ const TimelinePage = async () => {
         </Text>
       </Container>
       <TimelineList timelineData={timelineData} />
-      <ContributeStoryBanner hasLineArt />
-      <Footer bgColor="blue" />
+      <ContributeStoryBanner bgColor="blue" />
     </div>
   );
 };
