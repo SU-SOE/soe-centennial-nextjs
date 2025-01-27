@@ -9,7 +9,7 @@ module.exports = function () {
         color: '#544948', // Stone Dark
       },
       body: {
-        fontSize: '1.8rem',
+        fontSize: '1.6rem',
         color: '#544948',
 
         '@screen md': {
