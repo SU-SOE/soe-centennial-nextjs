@@ -14,6 +14,7 @@ import Metadata from "@/components/Layout/Metadata";
 import { AnimatedLineartBanner } from "@/components/Banner";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { AnimateInView } from "@/components/Animate";
+import HomepageMasthead from "@/components/Masthead/HomepageMasthead";
 
 export default function Home() {
   const timelineHorizontalCards: TimelineCardProps[] = [
@@ -55,8 +56,9 @@ export default function Home() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead isLight bgColor="fog-light" />
-      <PageTitle heading="100 years of" bigText="Impact" />
+      <HomepageMasthead />
+      {/* <Masthead isLight bgColor="fog-light" />
+      <PageTitle heading="100 years of" bigText="Impact" /> */}
       <StoryPosterCard
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
