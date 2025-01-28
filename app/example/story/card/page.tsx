@@ -1,9 +1,9 @@
+import { AnimateInView } from "@/components/Animate";
 import { Container } from "@/components/Container";
-import { FlexBox } from "@/components/FlexBox";
 import { ThreeCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import { StoryCard, StoryFeature, StoryPosterCard } from "@/components/Story";
-import { Heading, Text } from "@/components/Typography";
+import { Heading } from "@/components/Typography";
 
 const ExampleCardPage = async () => {
   return (
@@ -58,47 +58,55 @@ const ExampleCardPage = async () => {
           href="/"
         />
       </ThreeCol>
+
       <StoryFeature>
         <TwoCol className="rs-mb-8 items-center">
-          <FlexBox direction="col">
-            <Heading size="f4" weight="normal" className="rs-mr-8">
+          <AnimateInView animation="slideInFromLeft" duration={2}>
+            <Heading size={5} weight="normal" className="rs-mr-8">
               Fundamental work in science and transformational breakthroughs for
               one hundred years.
             </Heading>
-            <Text className="order-first" mb={2} font="dm-mono">
-              Stories
-            </Text>
-          </FlexBox>
+          </AnimateInView>
           <StoryCard
+            animation="slideInFromRight"
+            duration={2}
             superhead="Impact"
             heading="Lorem ipsum dolor sit amet consect hendrerit"
             imageUrl="https://placecats.com/neo_banana/300/200"
             href="/"
             className="max-w-full"
-            chapter="1985 - 1994"
           />
         </TwoCol>
         <ThreeCol>
           <StoryCard
-            superhead="Change makers"
-            heading="The Foundation of a New Era in Engineering"
-            imageUrl="https://placecats.com/neo_banana/300/200"
+            animation="slideUp"
+            duration={2}
+            delay={0.8}
+            heading="New Spaces and Expanding Influence"
+            superhead="The 5th Decade"
+            chapter="Chapter 5"
             href="/"
-            chapter="Innovation"
+            imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
           />
           <StoryCard
-            superhead="Change makers"
-            heading="Computation, outer space, the nanoscale, and the fragility of planet Earth"
-            imageUrl="https://placecats.com/neo_banana/300/200"
+            animation="slideUp"
+            duration={2}
+            delay={1.5}
+            heading="Bridging Worlds: Chips, Code, and Cosmos"
+            superhead="The 6th Decade"
+            chapter="Chapter 6"
             href="/"
-            chapter="1985 - 1994"
+            imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
           />
           <StoryCard
-            superhead="Change makers"
-            heading="Mae Jemison: “We each get a chance to choose our own path”"
-            imageUrl="https://placecats.com/neo_banana/300/200"
+            animation="slideUp"
+            duration={2}
+            delay={0.5}
+            heading="Redevelopment and an Earthquake"
+            superhead="The 7th Decade"
+            chapter="Chapter 7"
             href="/"
-            chapter="1985 - 1994"
+            imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
           />
         </ThreeCol>
       </StoryFeature>

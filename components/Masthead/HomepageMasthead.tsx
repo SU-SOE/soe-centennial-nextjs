@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { ShapeAnimation } from "../ShapeAnimation";
 import { AnimateInView } from "../Animate";
