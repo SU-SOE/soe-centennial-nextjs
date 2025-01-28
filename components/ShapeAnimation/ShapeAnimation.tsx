@@ -23,9 +23,9 @@ export const ShapeAnimation = () => {
 
   useEffect(() => {
     animate(progress, pathIndex, {
-      duration: 0.5,
+      duration: 0.3,
       ease: "easeInOut",
-      delay: 0.5,
+      delay: 0.3,
       onComplete: () => {
         setPathIndex(pathIndex + 1);
       },
@@ -34,7 +34,7 @@ export const ShapeAnimation = () => {
 
   return (
     <div className="cc rs-py-2">
-      <motion.svg width="100%" height="500px" viewBox="0 0 1820 1700">
+      <motion.svg width="100%" height="1000px" viewBox="0 0 1820 1700">
         <motion.path d={path} fill="#F83535" />
       </motion.svg>
     </div>
