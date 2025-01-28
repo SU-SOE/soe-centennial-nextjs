@@ -3,6 +3,7 @@ import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { ShapeAnimation } from "../ShapeAnimation";
+import { AnimateInView } from "../Animate";
 
 export default function HomepageMasthead() {
   const [bgColor, setBgColor] = useState("bg-digital-red");
@@ -29,13 +30,13 @@ export default function HomepageMasthead() {
       />
 
       {/* SVG animation */}
-      <AnimatePresence>
-        {svgVisible && (
-          <div className="absolute top-1/2 left-1/2 z-50">
+      {svgVisible && (
+        <div className="absolute top-1/2 left-1/2 z-50">
+          <AnimateInView animation="fadeIn" duration={1} delay={2}>
             <ShapeAnimation />
-          </div>
-        )}
-      </AnimatePresence>
+          </AnimateInView>
+        </div>
+      )}
     </div>
   );
 }
