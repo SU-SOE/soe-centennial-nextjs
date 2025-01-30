@@ -49,7 +49,7 @@ export const fontLeadings = {
   cozy: "leading-cozy", // 1.4
   normal: "leading", // 1.5
   trim: "leading-trim", // 0.75
-  druk: "leading-druk", // 0.9
+  narrow: "leading-narrow", // 0.9
 };
 
 export const textAligns = {
