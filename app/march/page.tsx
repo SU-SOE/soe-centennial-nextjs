@@ -13,6 +13,8 @@ export default function MvpHome() {
       body: "Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. ",
       href: "/",
     },
+  ];
+
   return (
     <div>
       <Metadata
