@@ -257,6 +257,7 @@ export default function page() {
         <MediaCaptionImage
           animation="fadeIn"
           delay={0.2}
+          duration={1}
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
@@ -266,6 +267,7 @@ export default function page() {
         <MediaCaptionImage
           animation="fadeIn"
           delay={0.4}
+          duration={1}
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
@@ -275,6 +277,7 @@ export default function page() {
         <MediaCaptionImage
           animation="fadeIn"
           delay={0.4}
+          duration={1}
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
@@ -284,6 +287,7 @@ export default function page() {
         <MediaCaptionImage
           animation="fadeIn"
           delay={0.2}
+          duration={1}
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
@@ -293,6 +297,7 @@ export default function page() {
         <MediaCaptionImage
           animation="fadeIn"
           delay={0.2}
+          duration={1}
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
@@ -302,6 +307,7 @@ export default function page() {
         <MediaCaptionImage
           animation="fadeIn"
           delay={0.4}
+          duration={1}
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
