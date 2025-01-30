@@ -112,7 +112,7 @@ export const TimelineHorizontalCard = ({
                 )}
               />
             </AnimateInView>
-            <AnimateInView duration={5} delay={2} animation={animationType}>
+            <AnimateInView duration={1} delay={1.5} animation={animationType}>
               <TimelineImage
                 src={image}
                 trapezoidAngle={align}
