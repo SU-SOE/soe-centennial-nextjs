@@ -25,7 +25,7 @@ export const TimelineAnimateImage = ({
   return (
     <div
       className={cnb(
-        "flex justify-center z-50 mx-10 transform perspective-1000 group",
+        "flex justify-center z-50 mx-10 transform perspective-1000",
         className,
       )}
     >
@@ -36,11 +36,9 @@ export const TimelineAnimateImage = ({
         animate={{
           rotateY: trapezoidAngle === "left" ? 15 : -15,
         }}
-        whileHover={{ rotateY: 0 }}
-        whileFocus={{ rotateY: 0 }}
-        transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
+        transition={{ delay: 2, duration: 2, ease: "easeInOut" }}
         className={cnb(
-          "aspect-[1/1] relative h-full flex items-center justify-center",
+          "aspect-[1/1] relative h-full flex items-center justify-center group-hocus-within:!rotate-y-0 group-hocus:!rotate-y-0 hocus:!rotate-y-0",
           imageSize,
         )}
       >
@@ -48,7 +46,7 @@ export const TimelineAnimateImage = ({
           alt={alt}
           src={src}
           fill
-          className="z-0 object-cover rounded-[20px] shadow-lg  duration-[1500ms] group-hocus-within:perspective-0 group-hocus-within:rotate-y-0 hocus:perspective-0 hocus:rotate-y-0"
+          className="z-0 object-cover rounded-[20px] shadow-lg"
         />
       </motion.div>
     </div>
