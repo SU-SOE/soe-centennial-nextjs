@@ -68,7 +68,7 @@ export default function Home() {
         hasBgImage
       />
       <Container mt={10} mb={10} width="full">
-        <AnimatedLineartBanner>
+        <AnimatedLineartBanner className="mb-[-10rem]">
           <div className="flex flex-col items-start md:rs-px-1">
             <Heading
               align="left"

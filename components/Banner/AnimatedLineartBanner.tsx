@@ -14,11 +14,12 @@ type AnimatedLineartBannerProps = HTMLAttributes<HTMLDivElement> &
 
 export const AnimatedLineartBanner = ({
   children,
+  className,
   isLeft = false,
   ...props
 }: AnimatedLineartBannerProps) => {
   return (
-    <Container {...props} as="section" width="full" className="mb-[-10rem]">
+    <Container {...props} as="section" width="full" className={className}>
       <Container width="site">{children}</Container>
       <HorizontalLineart
         isLeft={isLeft}
