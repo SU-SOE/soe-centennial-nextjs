@@ -4,6 +4,7 @@ import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { TimelineCard } from "./TimelineCard";
 import { Slideshow } from "../Slideshow/Slideshow";
 import { Button } from "../Cta";
+import { AnimateInView } from "../Animate";
 
 type TimelineFeatureProps = {
   anchors: string[];
@@ -24,16 +25,16 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
         {featureTimelineData.length > 0 ? (
           featureTimelineData.map((item, idx) => {
             const baseDelay = 1;
-            const delay = baseDelay + idx * 0.5;
+            const delay = idx < 4 ? baseDelay + idx * 0.5 : baseDelay;
             return (
-              <TimelineCard
-                {...item}
+              <AnimateInView
                 key={item.uuid || idx}
-                animation="slideInFromRight"
+                animation="slideInFromLeft"
                 duration={1}
                 delay={delay}
-                py="none"
-              />
+              >
+                <TimelineCard {...item} py="none" />
+              </AnimateInView>
             );
           })
         ) : (
