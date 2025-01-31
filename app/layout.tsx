@@ -50,11 +50,11 @@ const icons: Icon[] = [16, 32, 96, 128, 192, 196].map((size) => ({
 }));
 
 export const metadata = {
-  metadataBase: new URL("https://su-soe.github.io/soe-centennial-nextjs/"),
+  metadataBase: new URL("https://soe-centennial-nextjs.vercel.app/"),
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://su-soe.github.io/soe-centennial-nextjs/",
+    url: "https://soe-centennial-nextjs.vercel.app/",
     siteName: process.env.NEXT_PUBLIC_SITE_NAME,
   },
   twitter: {

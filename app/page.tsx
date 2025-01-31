@@ -14,6 +14,7 @@ import Metadata from "@/components/Layout/Metadata";
 import { AnimatedLineartBanner } from "@/components/Banner";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { AnimateInView } from "@/components/Animate";
+import Link from "next/link";
 
 export default function Home() {
   const timelineHorizontalCards: TimelineCardProps[] = [
@@ -68,7 +69,7 @@ export default function Home() {
         hasBgImage
       />
       <Container mt={10} mb={10} width="full">
-        <AnimatedLineartBanner className="mb-[-10rem]">
+        <AnimatedLineartBanner className="mb-[-4rem]">
           <div className="flex flex-col items-start md:rs-px-1">
             <Heading
               align="left"
@@ -79,9 +80,12 @@ export default function Home() {
               className="mt-10"
             >
               Experience{" "}
-              <span className="text-digital-red-xlight underline decoration-4 underline-offset-8">
+              <Link
+                href="/timeline"
+                className="text-digital-red-xlight underline decoration-4 underline-offset-8 hocus:text-stone-dark"
+              >
                 100 years
-              </span>{" "}
+              </Link>{" "}
               of milestones
             </Heading>
             <Text
