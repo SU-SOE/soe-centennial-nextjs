@@ -38,7 +38,7 @@ export const TimelineAnimateImage = ({
         viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of it is visible
         transition={{ delay: 1.5, duration: 2, ease: "easeInOut" }}
         className={cnb(
-          "aspect-[1/1] relative h-full flex items-center justify-center group-focus-within/root:!rotate-y-0 group-hover-within/root:!rotate-y-0 group-hover/root:!rotate-y-0 group-focus/root:!rotate-y-0",
+          "aspect-[1/1] relative h-full flex items-center justify-center group-focus-within:!rotate-y-0 group-hover-within:!rotate-y-0 group-hover:!rotate-y-0 group-focus:!rotate-y-0",
           imageSize,
         )}
       >
