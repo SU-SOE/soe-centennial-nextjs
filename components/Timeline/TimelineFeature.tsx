@@ -24,8 +24,7 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
       <Slideshow>
         {featureTimelineData.length > 0 ? (
           featureTimelineData.map((item, idx) => {
-            const baseDelay = 1;
-            const delay = idx < 4 ? baseDelay + idx * 0.5 : baseDelay;
+            const delay = idx < 4 ? 1 + idx * 0.5 : 0;
             return (
               <AnimateInView
                 key={item.uuid || idx}
