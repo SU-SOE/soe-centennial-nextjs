@@ -3,7 +3,6 @@ import { FlexBox } from "../FlexBox";
 import * as styles from "./Timeline.styles";
 import * as types from "./Timeline.types";
 import { cnb } from "cnbuilder";
-import { TimelineImage } from "./TimelineImage";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { AnimateInView } from "@/components/Animate";
@@ -16,6 +15,7 @@ import {
   marginVerticals,
 } from "@/utilities/datasource";
 import { Trapezoid } from "../images/trapezoid";
+import { TimelineAnimateImage } from "./TimelineAnimateImage";
 
 export const TimelineHorizontalCard = ({
   as: AsComponent = "div",
@@ -75,7 +75,7 @@ export const TimelineHorizontalCard = ({
                   &#65279;
                   <ArrowRightIcon
                     width={25}
-                    className="transition-all ease-in-out duration-1000 ml-03em group-hocus:translate-x-02em text-digital-red-light inline"
+                    className="transition-all ease-in-out duration-1000 ml-03em group-hover:translate-x-02em group-focus:translate-x-02em text-digital-red-light inline"
                   />
                 </span>
               </Link>
@@ -113,7 +113,7 @@ export const TimelineHorizontalCard = ({
               />
             </AnimateInView>
             <AnimateInView duration={1} delay={1.5} animation={animationType}>
-              <TimelineImage
+              <TimelineAnimateImage
                 src={image}
                 trapezoidAngle={align}
                 size={"xlarge"}
