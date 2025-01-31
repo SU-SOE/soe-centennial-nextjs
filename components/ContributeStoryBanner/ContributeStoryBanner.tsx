@@ -21,7 +21,7 @@ export const ContributeStoryBanner = ({
     as="section"
     bgColor={bgColor}
     width="full"
-    className="cc lg:w-full lg:rs-px-7 flex items-center justify-center"
+    className="cc lg:w-full lg:rs-px-7 flex items-center justify-center border-b-4 border-white"
     pt={2}
     pb={6}
   >

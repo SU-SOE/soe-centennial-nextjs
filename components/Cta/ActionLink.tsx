@@ -1,23 +1,38 @@
-import Link from "@/components/Cta/Link";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { cnb } from "cnbuilder";
+import Link from "next/link";
 import { HtmlHTMLAttributes } from "react";
 
 type Props = HtmlHTMLAttributes<HTMLAnchorElement> & {
   href: string;
+  whiteText?: boolean;
 };
 
-export const ActionLink = ({ children, className, ...props }: Props) => {
+export const ActionLink = ({
+  children,
+  className,
+  whiteText,
+  ...props
+}: Props) => {
   return (
     <Link
       {...props}
       className={cnb(
-        "relative flex w-fit flex-row items-center no-underline hocus:underline",
-        className?.replace("link--action", ""),
+        "group relative flex w-fit flex-row items-center transition-all ease-in-out duration-1000 underline underline-offset-[5px] cursor-pointer decoration-4",
+        whiteText
+          ? "text-white hocus:text-digital-red-xlight decoration-digital-red-xlight"
+          : "text-stone-dark hocus:decoration-stone-dark decoration-digital-red-light",
+        className,
       )}
     >
       {children}
-      <ArrowRightIcon width={20} className="ml-2 inline-block shrink-0" />
+      <ArrowRightIcon
+        width={27}
+        className={cnb(
+          "transition-all ease-in-out duration-1000 ml-03em group-hocus:translate-x-02em inline",
+          whiteText ? "text-digital-red-xlight" : "text-digital-red-light ",
+        )}
+      />
     </Link>
   );
 };
