@@ -26,13 +26,14 @@ export const text =
 export const textColor = {
   default: "text-black-60 fill-stone-dark",
   white: "text-white fill-white",
+  "white-red": "text-white fill-white",
 };
 export const barColor = {
   default: "bg-black-60",
   white: "bg-white",
 };
-
 export const hundredColor = {
   default: "fill-digital-red-xlight",
   white: "fill-white",
+  "white-red": "fill-digital-red-xlight",
 };

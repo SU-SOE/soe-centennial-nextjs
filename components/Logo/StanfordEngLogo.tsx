@@ -1,10 +1,10 @@
 import { HtmlHTMLAttributes } from "react";
 import * as styles from "./Logo.styles";
 
-type Props = HtmlHTMLAttributes<SVGSVGElement> & {
+type StanfordEngLogoProps = HtmlHTMLAttributes<SVGSVGElement> & {
   height?: number | string;
   width?: number | string;
-  color?: "default" | "white";
+  color?: "default" | "white" | "white-red";
 };
 
 const StanfordEngLogo = ({
@@ -12,7 +12,7 @@ const StanfordEngLogo = ({
   width = 261,
   color = "default",
   ...props
-}: Props) => {
+}: StanfordEngLogoProps) => {
   const levers: { [key: string]: string } = {};
   levers.textColor = styles.textColor[color];
   levers.hundredColor = styles.hundredColor[color];

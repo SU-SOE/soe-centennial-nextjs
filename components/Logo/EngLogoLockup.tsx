@@ -10,7 +10,7 @@ import StanfordEngLogo from "./StanfordEngLogo";
  */
 type EngLogoLockupProps = {
   isLink?: boolean;
-  color?: "default" | "white";
+  color?: "default" | "white" | "white-red";
   className?: string;
 };
 

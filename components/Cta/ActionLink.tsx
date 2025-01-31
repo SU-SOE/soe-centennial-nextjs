@@ -18,7 +18,7 @@ export const ActionLink = ({
     <Link
       {...props}
       className={cnb(
-        "group relative flex w-fit flex-row items-center transition-all ease-in-out duration-1000 underline underline-offset-[5px] cursor-pointer decoration-4",
+        "group transition-all ease-in-out duration-1000 underline underline-offset-[5px] cursor-pointer decoration-4",
         whiteText
           ? "text-white hocus:text-digital-red-xlight decoration-digital-red-xlight"
           : "text-stone-dark hocus:decoration-stone-dark decoration-digital-red-light",

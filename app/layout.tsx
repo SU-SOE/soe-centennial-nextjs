@@ -86,6 +86,7 @@ export default function RootLayout({
         {children}
         <footer className="relative">
           <LocalFooterMvp />
+          <p className="text-center m-0">temp space here for footer review</p>
           <LocalFooter />
           <GlobalFooter />
         </footer>

@@ -8,20 +8,20 @@ import { ActionLink, Button } from "@/components/Cta";
 export const LocalFooter = () => (
   <Container as="nav" bgColor="red" py={10} aria-label="Local footer menu">
     <FlexBox className={styles.flexWrapper}>
-      <EngLogoLockup color="white" isLink className={styles.logo} />
-      <FlexBox direction="col" className="gap-95 w-full max-w-[110rem]">
-        <FlexBox className={styles.contentWrapper}>
-          <Text size={2}>
+      <EngLogoLockup color="white-red" isLink className={styles.logo} />
+      <FlexBox direction="col" className={styles.wrapper}>
+        <FlexBox className={styles.linksWrapper}>
+          <Text className={styles.link} size={2}>
             <ActionLink whiteText className="font-normal" href="/stories">
               Impact stories
             </ActionLink>
           </Text>
-          <Text size={2}>
+          <Text className={styles.link} size={2}>
             <ActionLink whiteText className="font-normal" href="/timeline">
               Timeline
             </ActionLink>
           </Text>
-          <Text size={2}>
+          <Text className={styles.link} size={2}>
             <ActionLink whiteText className="font-normal" href="/">
               Centennial book online
             </ActionLink>
