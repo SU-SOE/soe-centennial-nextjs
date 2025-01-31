@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { cnb } from "cnbuilder";
+import { AnimateInView } from "@/components/Animate";
 import * as styles from "./Timeline.styles";
 import * as types from "./Timeline.types";
 import { motion } from "motion/react";
@@ -29,16 +30,12 @@ export const TimelineAnimateImage = ({
         className,
       )}
     >
-      <motion.div
-        initial={{ rotateY: 0, opacity: 0 }}
-        whileInView={{
-          rotateY: trapezoidAngle === "left" ? 15 : -15,
-          opacity: 1,
-        }}
-        viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of it is visible
-        transition={{ delay: 1.5, duration: 2, ease: "easeInOut" }}
+      <AnimateInView
+        animation={trapezoidAngle === "left" ? "rotateInLeft" : "rotateInRight"}
+        delay={1.5}
+        duration={2}
         className={cnb(
-          "aspect-[1/1] relative h-full flex items-center justify-center group-focus-within:!rotate-y-0 group-hover-within:!rotate-y-0 group-hover:!rotate-y-0 group-focus:!rotate-y-0",
+          "aspect-[1/1] relative h-full flex items-center justify-center group-hover/cardroot:![transform:rotateY(0deg)] group-focus-within/cardroot:![transform:rotateY(0deg)] duration-300",
           imageSize,
         )}
       >
@@ -48,7 +45,7 @@ export const TimelineAnimateImage = ({
           fill
           className="z-0 object-cover rounded-[20px] shadow-lg"
         />
-      </motion.div>
+      </AnimateInView>
     </div>
   );
 };
