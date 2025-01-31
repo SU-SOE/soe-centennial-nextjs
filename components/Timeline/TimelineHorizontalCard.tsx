@@ -44,7 +44,7 @@ export const TimelineHorizontalCard = ({
     <AsComponent
       {...props}
       className={cnb(
-        "h-fit relative group",
+        "h-fit relative group/cardroot",
         bgColor ? styles.bgColors[bgColor] : "",
         py ? paddingVerticals[py] : "",
         pt ? paddingTops[pt] : "",
@@ -67,7 +67,7 @@ export const TimelineHorizontalCard = ({
               className={styles.heading}
             >
               <Link
-                className="font-inherit stretched-link"
+                className="font-inherit stretched-link group-hover/cardroot:decoration-stone-dark group-focus-within:decoration-stone-dark"
                 href={`/timeline#${anchor}`}
               >
                 {heading}
@@ -75,7 +75,7 @@ export const TimelineHorizontalCard = ({
                   &#65279;
                   <ArrowRightIcon
                     width={25}
-                    className="transition-all ease-in-out duration-1000 ml-03em group-hover:translate-x-02em group-focus:translate-x-02em text-digital-red-light inline"
+                    className="transition-all ease-in-out duration-1000 ml-03em group-hover/cardroot:translate-x-02em group-focus-within/cardroot:translate-x-02em text-digital-red-light inline"
                   />
                 </span>
               </Link>
