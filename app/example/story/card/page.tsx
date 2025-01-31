@@ -61,15 +61,16 @@ const ExampleCardPage = async () => {
 
       <StoryFeature>
         <TwoCol className="rs-mb-8 items-center">
-          <AnimateInView animation="slideInFromLeft" duration={2}>
+          <AnimateInView animation="slideUp" duration={2}>
             <Heading size={5} weight="normal" className="rs-mr-8">
               Fundamental work in science and transformational breakthroughs for
               one hundred years.
             </Heading>
           </AnimateInView>
           <StoryCard
-            animation="slideInFromRight"
+            animation="slideUp"
             duration={2}
+            delay={0.5}
             superhead="Impact"
             heading="Lorem ipsum dolor sit amet consect hendrerit"
             imageUrl="https://placecats.com/neo_banana/300/200"
