@@ -4,7 +4,6 @@ import { cnb } from "cnbuilder";
 import { AnimateInView } from "@/components/Animate";
 import * as styles from "./Timeline.styles";
 import * as types from "./Timeline.types";
-import { motion } from "motion/react";
 
 interface TimelineAnimateImageProps {
   src: string;
