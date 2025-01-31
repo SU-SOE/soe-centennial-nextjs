@@ -68,6 +68,7 @@ const ExampleCardPage = async () => {
             </Heading>
           </AnimateInView>
           <StoryCard
+            isHeadingLarge
             animation="slideUp"
             duration={2}
             delay={0.5}

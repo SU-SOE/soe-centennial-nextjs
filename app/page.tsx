@@ -110,6 +110,7 @@ export default function Home() {
             </Heading>
           </AnimateInView>
           <StoryCard
+            isHeadingLarge
             animation="slideUp"
             duration={2}
             delay={0.5}
