@@ -64,6 +64,19 @@ export const metadata = {
     icon: [{ url: "/favicon.ico" }, ...icons],
     apple: appleIcons,
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export const revalidate = false;
