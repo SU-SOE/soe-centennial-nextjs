@@ -33,13 +33,14 @@ export const ShapeAnimation = () => {
   }, [pathIndex, progress]);
 
   return (
-    <svg
+    <motion.svg
       width="100%"
       height="100%"
       viewBox="0 0 760 496"
       preserveAspectRatio="none"
+      className="flex "
     >
       <motion.path d={path} fill="#F83535" />
-    </svg>
+    </motion.svg>
   );
 };

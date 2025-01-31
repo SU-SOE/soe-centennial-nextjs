@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ShapeAnimation } from "../ShapeAnimation";
+// import { cnb } from "cnbuilder";
 // import { EngLogoLockup } from "../Logo/EngLogoLockup";
 
 const words = ["lead,", "discover,", "inspire,", "educate,"];
@@ -9,7 +10,7 @@ const words = ["lead,", "discover,", "inspire,", "educate,"];
 export default function HomepageMasthead() {
   const [bgColor, setBgColor] = useState("bg-digital-red");
   const [svgVisible, setSvgVisible] = useState(false);
-  const [svgShifted, setSvgShifted] = useState(false);
+  // const [svgShifted, setSvgShifted] = useState(false);
   const [textVisible, setTextVisible] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
   const [textFadedOut, setTextFadedOut] = useState(false);
@@ -53,30 +54,29 @@ export default function HomepageMasthead() {
         <div className="relative w-full max-h-500 h-full cc flex flex-row items-center justify-center">
           {/* Step 2 & 3: SVG Animation + Shift Left */}
           {svgVisible && (
-            <div className="w-1/3 flex justify-end">
+            <motion.div
+              initial={{ width: "100%" }}
+              animate={{ width: "25%" }}
+              transition={{ delay: 6, duration: 0.5 }}
+              onAnimationComplete={() => setTextVisible(true)} // Step 4: Show text after shift
+              className="flex justify-center items-center"
+            >
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 onAnimationComplete={() => {
                   // Step 3: Shift SVG after morphing completes
-                  setTimeout(() => setSvgShifted(true), 6000); // Delay for morphing
+                  // setTimeout(() => setSvgShifted(true), 6000); // Delay for morphing
                 }}
-                className="w-full h-fit"
               >
-                <motion.div
-                  animate={svgShifted ? { x: "-10%" } : {}}
-                  transition={{ duration: 0.5 }}
-                  onAnimationComplete={() => setTextVisible(true)} // Step 4: Show text after shift
-                >
-                  <ShapeAnimation />
-                </motion.div>
+                <ShapeAnimation />
               </motion.div>
-            </div>
+            </motion.div>
           )}
           {/* Step 4 & 5: Hero Text + Word Cycling */}
           {!textFadedOut && textVisible && (
-            <div className="w-1/2">
+            <div className="w-2/3">
               <motion.div
                 className="font-dm-sans fluid-type-6 leading-tight z-50"
                 initial={{ opacity: 0 }}
