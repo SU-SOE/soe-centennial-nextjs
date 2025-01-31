@@ -30,15 +30,15 @@ export const TimelineAnimateImage = ({
       )}
     >
       <motion.div
-        initial={{
-          rotateY: 0,
-        }}
-        animate={{
+        initial={{ rotateY: 0, opacity: 0 }}
+        whileInView={{
           rotateY: trapezoidAngle === "left" ? 15 : -15,
+          opacity: 1,
         }}
-        transition={{ delay: 2, duration: 2, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of it is visible
+        transition={{ delay: 1.5, duration: 2, ease: "easeInOut" }}
         className={cnb(
-          "aspect-[1/1] relative h-full flex items-center justify-center group-hocus-within:!rotate-y-0 group-hocus:!rotate-y-0 hocus:!rotate-y-0",
+          "aspect-[1/1] relative h-full flex items-center justify-center group-focus-within/root:!rotate-y-0 group-hover-within/root:!rotate-y-0 group-hover/root:!rotate-y-0 group-focus/root:!rotate-y-0",
           imageSize,
         )}
       >
