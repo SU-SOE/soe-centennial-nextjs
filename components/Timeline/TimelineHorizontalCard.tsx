@@ -67,7 +67,7 @@ export const TimelineHorizontalCard = ({
               className={styles.heading}
             >
               <Link
-                className="font-inherit stretched-link hocus-visible:decoration-stone-dark"
+                className="font-inherit stretched-link group-hover/cardroot:decoration-stone-dark group-focus-within:decoration-stone-dark"
                 href={`/timeline#${anchor}`}
               >
                 {heading}
