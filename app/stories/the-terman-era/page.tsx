@@ -178,6 +178,7 @@ export default function page() {
         <StorySidebar>
           <MediaCaptionImage
             rounded
+            isPortriat
             className="mb-0"
             aspectRatio="1x1"
             imageSrc="https://i.ibb.co/0f2ZH7f/1944-Stanford-Engineering-s-third-Dean.jpg"
@@ -185,6 +186,7 @@ export default function page() {
           />
           <MediaCaptionImage
             rounded
+            isPortriat
             className="mb-0"
             imageSrc="https://i.ibb.co/VxbHFBC/NS537.jpg"
             aspectRatio="1x1"

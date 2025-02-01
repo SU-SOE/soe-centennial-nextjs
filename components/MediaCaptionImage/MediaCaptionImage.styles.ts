@@ -75,15 +75,29 @@ export type CaptionBgColorType = keyof typeof captionBgColors;
 
 export const root = (isFullHeight?: boolean) =>
   cnb(isFullHeight ? "h-full" : "");
-export const imageWrapper = "relative w-full h-fit overflow-hidden";
+
+export const figure = (isPortriat: boolean) =>
+  cnb("flex flex-col", {
+    "gap-20 sm:flex-row lg:flex-col": isPortriat,
+  });
+
+export const imageWrapper = (isPortriat: boolean) =>
+  cnb("relative overflow-hidden shrink-0 ", {
+    "w-100 md:w-180 lg:w-full h-100 md:h-180 lg:h-full": isPortriat,
+    "w-full h-full": !isPortriat,
+  });
+
 export const innerImageWrapper = (isParallax: boolean) =>
   cnb("w-full", isParallax ? "h-[calc(100%_+_12rem)] -mt-30" : "h-full");
+
 export const image = (isLarge: boolean) =>
   cnb(
     "relative w-full object-cover h-full",
     isLarge ? "max-w-1500" : "max-w-800",
   );
+
 export const captionWrapper = "mt-0";
+
 export const caption = (captionBgColor: CaptionBgColorType) =>
   cnb(
     "*:*:leading-display max-w-prose-wide first:*:*:mt-0",

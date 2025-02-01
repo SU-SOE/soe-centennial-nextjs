@@ -143,7 +143,7 @@ export const gradientVias = {
 export type GradientViaType = keyof typeof gradientVias;
 
 export const imageAspectRatios = {
-  "1x1": "aspect-w-1 aspect-h-1",
+  "1x1": "aspect-[1/1]",
   "1x2": "aspect-w-1 aspect-h-2",
   "2x1": "aspect-w-2 aspect-h-1",
   "2x3": "aspect-w-2 aspect-h-3",

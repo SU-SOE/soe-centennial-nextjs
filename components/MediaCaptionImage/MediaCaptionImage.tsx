@@ -30,6 +30,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     aspectRatio?: ImageAspectRatioType;
     isFullHeight?: boolean;
     isLarge?: boolean;
+    isPortriat?: boolean;
     boundingWidth?: "site" | "full";
     width?: WidthType;
     spacingTop?: PaddingType;
@@ -53,6 +54,7 @@ const MediaCaptionImage = ({
   captionBgColor = "transparent",
   rounded = false,
   animation = "none",
+  isPortriat = false,
   delay,
   className,
   ...props
@@ -66,9 +68,12 @@ const MediaCaptionImage = ({
       className={cnb(className, styles.root(isFullHeight))}
     >
       <AnimateInView animation={animation} delay={delay}>
-        <figure>
+        <figure className={styles.figure(isPortriat)}>
           <div
-            className={cnb(imageAspectRatios[aspectRatio], styles.imageWrapper)}
+            className={cnb(
+              imageAspectRatios[aspectRatio],
+              styles.imageWrapper(isPortriat),
+            )}
           >
             {!!imageSrc && (
               <Parallax offset={isParallax ? 60 : 0}>
