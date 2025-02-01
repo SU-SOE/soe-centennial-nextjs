@@ -5,6 +5,21 @@ import TimelineList from "@/components/Timeline/TimelineList";
 import { Heading, Text } from "@/components/Typography";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 
+export const metadata = {
+  title: "Timeline - 100 Years of Impact",
+  description:
+    "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
+  keywords: [
+    "timeline",
+    "100 years",
+    "impact",
+    "School of Engineering",
+    "science",
+    "breakthroughs",
+  ],
+  author: "School of Engineering",
+};
+
 const TimelinePage = async () => {
   const timelineData = await loadTimelineData();
   return (
