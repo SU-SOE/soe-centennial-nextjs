@@ -7,7 +7,7 @@ export const superhead = "order-first";
 
 export const wrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative z-50 flex-col w-fit", {
-    "lg:flex-row": isHorizontal,
+    "md:flex-row": isHorizontal,
     "ml-auto": isHorizontal && align === "right",
   });
 export const contentWrapper = (isHorizontal: boolean) =>
@@ -17,8 +17,8 @@ export const contentWrapper = (isHorizontal: boolean) =>
   });
 export const imageWrapper = (align: string, isHorizontal: boolean) =>
   cnb("relative rs-mb-2 lg:mb-0 order-first", {
-    "lg:order-first": align === "left",
-    "lg:order-last": align === "right",
+    "md:order-first": align === "left",
+    "md:order-last": align === "right",
     "lg:rs-mr-4": align === "left" && isHorizontal,
     "lg:rs-ml-4": align === "right" && isHorizontal,
   });
@@ -42,7 +42,7 @@ export const size = {
   small: "w-200 md:w-250",
   medium: "w-250 md:w-300 xl:w-[340px]",
   large: "w-250 md:w-300 lg:w-[340px] xl:w-[420px]",
-  xlarge: "w-250 md:w-300 lg:w-[340px] xl:w-[420px] 2xl:w-600",
+  xlarge: "w-250 md:w-240 lg:w-[340px] xl:w-[420px] 2xl:w-600",
   full: "w-full",
 };
 
@@ -55,3 +55,17 @@ export const trapezoid = (
     "rotate-y-[-15deg]": trapezoidAngle === "right",
     "rotate-y-0 perspective-0": isExpanded,
   });
+
+export const trapezoidWrapper = (align: string) =>
+  cnb("absolute  z-0 flex items-center top-[-38%] lg:top-[-25%] ", {
+    "right-[-50%]": align === "right",
+    "left-[-50%] rotate-180": align === "left",
+  });
+
+export const trapezoidSvg = (align: string) =>
+  cnb(
+    "flex items-center overflow-hidden w-350 md:w-[430px] lg:w-[536px] xl:w-[637px] 2xl:w-900 h-350 md:h-[430px] lg:h-[536px] xl:h-[637px] 2xl:h-900",
+    {
+      "rotate-180": align === "left",
+    },
+  );

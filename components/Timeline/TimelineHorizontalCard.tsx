@@ -98,19 +98,9 @@ export const TimelineHorizontalCard = ({
               duration={0.8}
               delay={0.6}
               animation={animationType}
-              className={cnb("absolute top-[-25%] z-0 flex items-center ", {
-                "right-[-50%]": align === "right",
-                "left-[-50%] rotate-180": align === "left",
-              })}
+              className={styles.trapezoidWrapper(align)}
             >
-              <Trapezoid
-                className={cnb(
-                  "flex items-center overflow-hidden w-350 md:w-[430px] lg:w-[536px] xl:w-[637px] 2xl:w-900 h-350 md:h-[430px] lg:h-[536px] xl:h-[637px] 2xl:h-900",
-                  {
-                    "rotate-180": align === "left",
-                  },
-                )}
-              />
+              <Trapezoid className={styles.trapezoidSvg(align)} />
             </AnimateInView>
             <AnimateInView duration={1} delay={1.5} animation={animationType}>
               <TimelineAnimateImage
