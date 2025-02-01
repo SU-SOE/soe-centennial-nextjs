@@ -10,7 +10,7 @@ import {
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
 
-type StoryCardProps = HTMLAttributes<HTMLDivElement> &
+export type StoryCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
     heading: string;
     superhead?: string;
@@ -48,7 +48,7 @@ export const StoryCard = ({
     <AnimateInView {...props} className={className}>
       <CardWrapper
         className={cnb(
-          "relative overflow-hidden rs-mb-5 w-full h-fit rounded-[25px] shadow-lg lg:mb-0 lg:max-w-[920px] xl:max-w-[980px] group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
+          "relative overflow-hidden w-full h-fit rounded-[25px] shadow-lg lg:max-w-[920px] xl:max-w-[980px] group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
           { "flex flex-col md:flex-row items-center": isHorizontal },
           bgColor && styles.bgColors[bgColor],
         )}
@@ -67,7 +67,7 @@ export const StoryCard = ({
         <div className="flex flex-col rs-pt-3 rs-pb-4 rs-px-2">
           <Heading
             as={headerTag}
-            size={isHeadingLarge ? 3 : 2}
+            size={isHeadingLarge ? "f3" : 2}
             weight="normal"
             mb="none"
             linkType="story"

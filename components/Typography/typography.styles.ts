@@ -24,6 +24,7 @@ export const fontSizes = {
   7: "type-7",
   8: "type-8",
   9: "type-9",
+  f3: "fluid-type-3",
   f4: "fluid-type-4",
   f5: "fluid-type-5",
   f6: "fluid-type-6",

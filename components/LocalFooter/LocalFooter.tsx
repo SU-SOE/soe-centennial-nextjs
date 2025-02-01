@@ -6,7 +6,13 @@ import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { ActionLink, Button } from "@/components/Cta";
 
 export const LocalFooter = () => (
-  <Container as="nav" bgColor="red" py={10} aria-label="Local footer menu">
+  <Container
+    as="nav"
+    bgColor="red"
+    pt={7}
+    pb={8}
+    aria-label="Local footer menu"
+  >
     <FlexBox className={styles.flexWrapper}>
       <EngLogoLockup color="white-red" isLink className={styles.logo} />
       <FlexBox direction="col" className={styles.wrapper}>

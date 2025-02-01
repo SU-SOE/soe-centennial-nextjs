@@ -12,7 +12,7 @@ export const StoryFeature = ({ children, ...props }: StoryFeatureProps) => {
         width="site"
         py={8}
         bgColor="blue"
-        className="rounded-[25px] flex flex-col rs-px-9"
+        className="rounded-[25px] flex flex-col rs-px-6"
       >
         {children}
       </Container>

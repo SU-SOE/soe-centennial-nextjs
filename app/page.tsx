@@ -5,8 +5,8 @@ import {
 } from "@/components/Timeline";
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { ThreeCol, TwoCol } from "@/components/Layout";
-import { StoryCard, StoryPosterCard } from "@/components/Story";
+import { TwoCol } from "@/components/Layout";
+import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -15,6 +15,7 @@ import { AnimatedLineartBanner } from "@/components/Banner";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { AnimateInView } from "@/components/Animate";
 import Link from "next/link";
+import { ExploreMore } from "@/components/Story/ExploreMore";
 
 export default function Home() {
   const timelineHorizontalCards: TimelineCardProps[] = [
@@ -48,6 +49,30 @@ export default function Home() {
     "1943-training-for-war",
     "1939-aviation-and-aeronautical-engineering",
     "1944-stanford-engineerings-third-dean",
+  ];
+  const storyData: StoryCardProps[] = [
+    {
+      heading: "New Spaces and Expanding Influence",
+      superhead: "The 5th Decade",
+      chapter: "Chapter 5",
+      href: "/",
+      imageUrl:
+        "https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png",
+    },
+    {
+      heading: "Bridging Worlds: Chips, Code, and Cosmos",
+      superhead: "The 6th Decade",
+      chapter: "Chapter 6",
+      href: "/",
+      imageUrl: "https://i.ibb.co/TK4yBZ5/bridging-worlds.png",
+    },
+    {
+      heading: "Redevelopment and an Earthquake",
+      superhead: "The 7th Decade",
+      chapter: "Chapter 7",
+      href: "/",
+      imageUrl: "https://i.ibb.co/hF4zTc1/redevelopment.png",
+    },
   ];
   return (
     <div>
@@ -106,9 +131,9 @@ export default function Home() {
         <TimelineFeature anchors={timelineFeatureCards} />
       </Container>
       <StoryFeature>
-        <TwoCol className="rs-mb-8 items-center">
+        <TwoCol className="rs-mb-8 items-center max-w-[140rem]">
           <AnimateInView animation="slideUp" duration={2}>
-            <Heading size={5} weight="normal" className="rs-mr-8">
+            <Heading size={5} weight="normal">
               Fundamental work in science and transformational breakthroughs for
               one hundred years.
             </Heading>
@@ -125,38 +150,7 @@ export default function Home() {
             className="max-w-full"
           />
         </TwoCol>
-        <ThreeCol>
-          <StoryCard
-            animation="slideUp"
-            duration={2}
-            delay={0.8}
-            heading="New Spaces and Expanding Influence"
-            superhead="The 5th Decade"
-            chapter="Chapter 5"
-            href="/"
-            imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
-          />
-          <StoryCard
-            animation="slideUp"
-            duration={2}
-            delay={1.5}
-            heading="Bridging Worlds: Chips, Code, and Cosmos"
-            superhead="The 6th Decade"
-            chapter="Chapter 6"
-            href="/"
-            imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
-          />
-          <StoryCard
-            animation="slideUp"
-            duration={2}
-            delay={0.5}
-            heading="Redevelopment and an Earthquake"
-            superhead="The 7th Decade"
-            chapter="Chapter 7"
-            href="/"
-            imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
-          />
-        </ThreeCol>
+        <ExploreMore stories={storyData} />
       </StoryFeature>
       <ContributeStoryBanner bgColor="blue" />
     </div>
