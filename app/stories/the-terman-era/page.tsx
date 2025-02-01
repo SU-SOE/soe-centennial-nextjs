@@ -12,11 +12,37 @@ import {
   StoryImpactBanner,
   StorySidebar,
 } from "@/components/Story";
+import { ExploreMore } from "@/components/Story/ExploreMore";
 import { StoryGrid } from "@/components/Story/StoryGrid";
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
 
 export default function page() {
+  const storyData = [
+    {
+      heading: "New Spaces and Expanding Influence",
+      superhead: "The 5th Decade",
+      chapter: "Chapter 5",
+      href: "/",
+      imageUrl:
+        "https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png",
+    },
+    {
+      heading: "Bridging Worlds: Chips, Code, and Cosmos",
+      superhead: "The 6th Decade",
+      chapter: "Chapter 6",
+      href: "/",
+      imageUrl: "https://i.ibb.co/TK4yBZ5/bridging-worlds.png",
+    },
+    {
+      heading: "Redevelopment and an Earthquake",
+      superhead: "The 7th Decade",
+      chapter: "Chapter 7",
+      href: "/",
+      imageUrl: "https://i.ibb.co/hF4zTc1/redevelopment.png",
+    },
+  ];
+
   const footnotes = [
     {
       number: 1,
@@ -498,6 +524,13 @@ export default function page() {
           <Footnotes footnotes={footnotes} />
         </OneCol>
       </Container>
+      <ExploreMore
+        width="site"
+        stories={storyData}
+        sectionHeading="Explore more book chapters"
+        buttonLink="/stories"
+        buttonText="Explore all book chapters"
+      />
       <Container mb={9}>
         <Heading>Explore more book chapters</Heading>
         <ThreeCol>
