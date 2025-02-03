@@ -4,6 +4,7 @@ import { StoryPosterCard } from "@/components/Story";
 import Metadata from "@/components/Layout/Metadata";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
+import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
 
 export default function MvpHome() {
   const events = [
@@ -32,6 +33,14 @@ export default function MvpHome() {
         chapter="Chapter 1"
         link="/"
         hasBgImage
+      />
+
+      <ChapterTeaser
+        isHeadingLarge
+        superhead="Centennial Book"
+        heading="Chapters released monthly"
+        imageUrl="https://placecats.com/neo_banana/300/200"
+        href="/"
       />
       <EventsSection events={events} />
       <ContributeStoryBanner bgColor="blue" />
