@@ -1,11 +1,12 @@
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
-import { FlexBox } from "../FlexBox";
+import { FlexBox } from "@/components/FlexBox";
 import Image from "next/image";
-import { Heading, Text } from "../Typography";
+import { Heading, Text } from "@/components/Typography";
 import { cnb } from "cnbuilder";
 import { ChapterLabel } from "./ChapterLabel";
-import { AnimateInView } from "../Animate";
+import { AnimateInView } from "@/components/Animate";
+import { Link } from "@/components/Cta/Link";
 
 type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -81,15 +82,10 @@ export const StoryPosterCard = ({
         >
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
             <AnimateInView animation="slideUp" delay={0.8}>
-              <Heading
-                size="f5"
-                weight="normal"
-                className="rs-mb-3 lg:rs-mb-5"
-                linkType="poster"
-              >
-                <a href={link} className="stretched-link">
+              <Heading size="f5" weight="normal" className="rs-mb-3 lg:rs-mb-5">
+                <Link href={link} className="stretched-link" linkType="poster">
                   {heading}
-                </a>
+                </Link>
               </Heading>
             </AnimateInView>
             <AnimateInView

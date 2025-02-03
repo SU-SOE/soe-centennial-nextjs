@@ -5,7 +5,7 @@ import * as types from "./Timeline.types";
 import { cnb } from "cnbuilder";
 import { TimelineImage } from "./TimelineImage";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import Link from "next/link";
+import { Link } from "@/components/Cta/Link";
 import { AnimateInView } from "@/components/Animate";
 import {
   paddingTops,
@@ -65,6 +65,7 @@ export const TimelineCard = ({
                 className={styles.heading}
               >
                 <Link
+                  linkType="timeline"
                   className="font-inherit stretched-link"
                   href={`/timeline#${anchor}`}
                 >

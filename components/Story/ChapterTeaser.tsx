@@ -7,8 +7,8 @@ import {
   AnimateInView,
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
-import { Container } from "../Container";
-import Link from "next/link";
+import { Container } from "@/components/Container";
+import { Link } from "@/components/Cta/Link";
 
 export type ChapterTeaserProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
@@ -61,9 +61,8 @@ export const ChapterTeaser = ({
               size={isHeadingLarge ? "f5" : "f4"}
               weight="normal"
               mb="none"
-              linkType="story"
             >
-              <Link href={href} className="stretch-link">
+              <Link href={href} className="stretch-link" linkType="story">
                 {heading}
               </Link>
             </Heading>

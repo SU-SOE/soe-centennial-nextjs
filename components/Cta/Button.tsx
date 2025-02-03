@@ -1,4 +1,4 @@
-import Link from "@/components/Cta/Link";
+import Link from "next/link";
 import { HtmlHTMLAttributes, MouseEventHandler } from "react";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { LinkProps } from "next/dist/client/link";
@@ -47,11 +47,7 @@ export const Button = ({
   }
 
   return (
-    <Link
-      href={href}
-      className={cnb(buttonStyle, className?.replace("button", ""))}
-      {...props}
-    >
+    <Link href={href} className={cnb(buttonStyle, className)} {...props}>
       {children}
       <ArrowRightIcon width={20} className="ml-2 inline-block" />
     </Link>

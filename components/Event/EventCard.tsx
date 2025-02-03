@@ -4,6 +4,7 @@ import {
   AnimateInView,
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
+import { Link } from "@/components/Cta/Link";
 
 export type EventCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
@@ -24,10 +25,10 @@ export const EventCard = ({
   return (
     <AnimateInView {...props} className={className}>
       <article className="flex flex-col rs-mb-5 w-full h-fit lg:max-w-[500px] xl:max-w-[700px]">
-        <Heading as="h3" size={2} weight="normal" mb="none" linkType="story">
-          <a href={href} className="stretched-link">
+        <Heading as="h3" size={2} weight="normal" mb="none">
+          <Link href={href} linkType="story" className="stretched-link">
             {heading}
-          </a>
+          </Link>
         </Heading>
         {superhead && (
           <Text className="order-first" size="small" mb="base" font="dm-mono">

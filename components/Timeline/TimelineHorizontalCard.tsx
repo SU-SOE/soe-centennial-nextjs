@@ -4,7 +4,6 @@ import * as styles from "./Timeline.styles";
 import * as types from "./Timeline.types";
 import { cnb } from "cnbuilder";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import Link from "next/link";
 import { AnimateInView } from "@/components/Animate";
 import {
   paddingTops,
@@ -16,6 +15,7 @@ import {
 } from "@/utilities/datasource";
 import { Trapezoid } from "../images/trapezoid";
 import { TimelineAnimateImage } from "./TimelineAnimateImage";
+import { Link } from "@/components/Cta/Link";
 
 export const TimelineHorizontalCard = ({
   as: AsComponent = "div",
@@ -67,6 +67,7 @@ export const TimelineHorizontalCard = ({
               className={styles.heading}
             >
               <Link
+                linkType="timeline"
                 className="font-inherit stretched-link group-hover/cardroot:decoration-stone-dark group-focus-within:decoration-stone-dark"
                 href={`/timeline#${anchor}`}
               >

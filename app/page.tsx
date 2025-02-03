@@ -14,7 +14,7 @@ import Metadata from "@/components/Layout/Metadata";
 import { AnimatedLineartBanner } from "@/components/Banner";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { AnimateInView } from "@/components/Animate";
-import Link from "next/link";
+import { Link } from "@/components/Cta/Link";
 import { ExploreMore } from "@/components/Story/ExploreMore";
 
 export default function Home() {
@@ -107,7 +107,7 @@ export default function Home() {
               Experience{" "}
               <Link
                 href="/timeline"
-                className="text-digital-red-xlight underline decoration-4 underline-offset-8 hocus:text-stone-dark"
+                className="text-digital-red-light font-normal"
               >
                 100 years
               </Link>{" "}

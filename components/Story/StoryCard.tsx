@@ -9,6 +9,7 @@ import {
   AnimateInView,
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
+import { Link } from "@/components/Cta/Link";
 
 export type StoryCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
@@ -70,11 +71,10 @@ export const StoryCard = ({
             size={isHeadingLarge ? "f3" : 2}
             weight="normal"
             mb="none"
-            linkType="story"
           >
-            <a href={href} className="stretched-link">
+            <Link href={href} className="stretched-link" linkType="story">
               {heading}
-            </a>
+            </Link>
           </Heading>
           {superhead && (
             <Text className="order-first" size="small" mb="base" font="dm-mono">
