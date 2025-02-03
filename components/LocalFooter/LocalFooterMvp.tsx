@@ -16,7 +16,7 @@ export const LocalFooterMvp = () => (
     <FlexBox className={styles.flexWrapper}>
       <EngLogoLockup color="white" isLink className={styles.logo} />
 
-      <div className="w-full">
+      <div className="w-full max-w-900">
         <FlexBox className={styles.contentWrapper}>
           <section className={styles.column}>
             <Heading size={2} as="h2" mb="base">

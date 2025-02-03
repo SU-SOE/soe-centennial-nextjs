@@ -35,10 +35,10 @@ export const LocalFooter = () => (
         </FlexBox>
         <FlexBox className={styles.contentWrapper}>
           <section className={styles.column}>
-            <Heading size={2} as="h2">
+            <Heading size={2} as="h2" mb="base">
               Contribute your stories
             </Heading>
-            <Text>
+            <Text mb={2}>
               Lorem ipsum dolar sit amet vestibulum periment ium dismaret
             </Text>
             <Button solid href="/">
@@ -46,10 +46,10 @@ export const LocalFooter = () => (
             </Button>
           </section>
           <section className={styles.column}>
-            <Heading size={2} as="h2">
+            <Heading size={2} as="h2" mb="base">
               Make a gift
             </Heading>
-            <Text>
+            <Text mb={2}>
               Lorem ipsum dolar sit amet vestibulum periment ium dismaret
             </Text>
             <Button href="/">Ways to give</Button>

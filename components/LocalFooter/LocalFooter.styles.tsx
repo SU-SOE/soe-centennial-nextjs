@@ -7,7 +7,7 @@ export const contentWrapper =
 export const column = "w-full md:w-1/2 max-w-500";
 
 //  Local Footer April Release
-export const wrapper = "gap-45 md:gap-95 w-full max-w-[110rem]";
+export const wrapper = "gap-45 md:gap-95 w-full max-w-900";
 export const linksWrapper =
   "flex-col md:flex-row w-full gap-30 justify-between";
 export const link = "";
