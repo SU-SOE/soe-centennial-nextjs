@@ -18,7 +18,7 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
     case "timeline":
       linkStyles =
         "transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light hocus:decoration-stone-dark group-hocus:decoration-stone-dark cursor-pointer decoration-4";
-
+      break;
     case "story":
       linkStyles =
         "transition-all ease-in-out duration-1000 font-normal text-stone-dark underline decoration-transparent underline-offset-[5px] hocus:decoration-stone-dark hocus:cursor-pointer group-hocus:decoration-stone-dark group-hocus:cursor-pointer decoration-2";

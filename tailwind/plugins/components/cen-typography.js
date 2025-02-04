@@ -43,9 +43,6 @@ module.exports = function () {
       '.hero': {
         fontSize: 'clamp(4.5rem, 7.01vw + 1.98rem, 16rem)',
       },
-      '.fluid-type-3': {
-        fontSize: 'clamp(2.7rem, 2.19vw + 2.31rem, 4.1rem)',
-      },
       '.cen-quote-lg': {
         ...theme('decanter.typography.type3'),
         lineHeight: theme('lineHeight.display'),

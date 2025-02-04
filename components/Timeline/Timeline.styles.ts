@@ -58,8 +58,8 @@ export const trapezoid = (
 
 export const trapezoidWrapper = (align: string) =>
   cnb("absolute  z-0 flex items-center top-[-38%] lg:top-[-25%] ", {
-    "right-[-50%]": align === "right",
-    "left-[-50%] rotate-180": align === "left",
+    "right-[-80%] md:right-[-50%]": align === "right",
+    "left-[-80%] md:left-[-50%] rotate-180": align === "left",
   });
 
 export const trapezoidSvg = (align: string) =>
