@@ -5,6 +5,7 @@ import {
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
 import { Link } from "@/components/Cta/Link";
+import * as styles from "./Event.styles";
 
 export type EventCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
@@ -24,7 +25,7 @@ export const EventCard = ({
 }: EventCardProps) => {
   return (
     <AnimateInView {...props} className={className}>
-      <article className="flex flex-col rs-mb-5 w-full h-fit lg:max-w-[500px] xl:max-w-[700px]">
+      <article className={styles.cardWrapper}>
         <Heading as="h3" size={2} weight="normal" mb="none">
           <Link href={href} linkType="story" className="stretched-link">
             {heading}

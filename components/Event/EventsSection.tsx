@@ -1,8 +1,9 @@
 import React from "react";
-import { AnimatedLineartBanner } from "../Banner";
-import { Heading } from "../Typography";
+import { AnimatedLineartBanner } from "@/components/Banner";
+import { Heading } from "@/components/Typography";
+import { Container } from "@/components/Container";
 import { EventCard, EventCardProps } from "./EventCard";
-import { Container } from "../Container";
+import * as styles from "./Event.styles";
 
 interface EventsSectionProps {
   events: EventCardProps[];
@@ -23,7 +24,7 @@ export const EventsSection = ({ events }: EventsSectionProps) => {
           Events
         </Heading>
       </AnimatedLineartBanner>
-      <Container className="flex flex-wrap flex-col justify-center md:*:w-1/2 md:flex-row gap-38 sm:gap-78 md:gap-60 xl:gap-100">
+      <Container className={styles.eventsWrapper}>
         {events.map((event, idx) => (
           <EventCard key={idx} {...event} animation="sharpen" duration={1} />
         ))}
