@@ -16,7 +16,7 @@ export const StorySidebar = ({
     <div
       {...props}
       className={cnb(
-        "@container relative pt-100 sm:pt-150 lg:pt-220 pb-20 rs-px-3 w-full lg:max-w-[32rem] xl:max-w-400 h-fit",
+        "@container relative pt-100 sm:pt-150 lg:pt-220 pb-20 md:pb-45 rs-px-3 w-full lg:max-w-[32rem] xl:max-w-400 h-fit",
         className,
       )}
     >
