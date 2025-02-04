@@ -15,7 +15,7 @@ export const EventsSection = ({ events }: EventsSectionProps) => {
         <Heading
           align="left"
           font="dm-sans"
-          size="f5"
+          size={4}
           weight="normal"
           leading="tight"
           className="mt-10"
