@@ -70,7 +70,10 @@ export const ContributeStoryBanner = ({
           </Text>
         </FlexBox>
         <div className="shrink-0 z-50 my-48 md:mb-0">
-          <Button isLight={bgColor !== "red-gradient" ? true : false} href="/">
+          <Button
+            isLight={bgColor !== "red-gradient" ? true : false}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
+          >
             Submit your story
           </Button>
         </div>

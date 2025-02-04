@@ -41,7 +41,10 @@ export const LocalFooter = () => (
             <Text mb={2}>
               Lorem ipsum dolar sit amet vestibulum periment ium dismaret
             </Text>
-            <Button solid href="/">
+            <Button
+              solid
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
+            >
               Submit your story
             </Button>
           </section>
