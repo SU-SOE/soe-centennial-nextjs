@@ -13,7 +13,6 @@ type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   href?: string;
   body: string;
   image: string;
-  bgColor?: "fog-light" | "red-gradient";
   align?: "right" | "left";
   width?: "full" | "narrow";
   isSelected?: boolean;
@@ -26,7 +25,6 @@ export const TimelineDetails = ({
   href,
   body,
   image,
-  bgColor = "fog-light",
   align = "left",
   isSelected,
   onClose,
@@ -35,7 +33,6 @@ export const TimelineDetails = ({
   <Container
     {...props}
     as="section"
-    bgColor={bgColor}
     width="site"
     py={5}
     className="overflow-hidden"
