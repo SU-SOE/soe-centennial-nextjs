@@ -16,6 +16,34 @@ import { ExploreMore } from "@/components/Story/ExploreMore";
 import { StoryGrid } from "@/components/Story/StoryGrid";
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Terman Era - The 3rd Decade",
+  description:
+    "Duis porttitor, dolor eget iaculis finibus, turpis urna blandit ligula, non consequat velit enim ut risus.",
+  keywords: ["Terman Era", "history", "impact"],
+  openGraph: {
+    title: "The Terman Era - The 3rd Decade",
+    description:
+      "Duis porttitor, dolor eget iaculis finibus, turpis urna blandit ligula, non consequat velit enim ut risus.",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dsqi5touf/image/upload/v1737060928/terman_uv6swj.jpg",
+        alt: "Caption/credit lorem ipsum dolar sit amet vestibulum perimentium",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Terman Era - The 3rd Decade",
+    description:
+      "Duis porttitor, dolor eget iaculis finibus, turpis urna blandit ligula, non consequat velit enim ut risus.",
+    images: [
+      "https://res.cloudinary.com/dsqi5touf/image/upload/v1737060928/terman_uv6swj.jpg",
+    ],
+  },
+};
 
 export default function page() {
   const storyData = [
@@ -146,7 +174,7 @@ export default function page() {
         superhead="The 3rd Decade"
         body="Duis porttitor, dolor eget iaculis finibus, turpis urna blandit ligula, non consequat velit enim ut risus. In nisi tellus, lacinia ac placerat a, cursus ac nulla."
         byline="by Jess Alvarenga"
-        src="https://i.ibb.co/7nKSCYp/kn908nr7305.jpg"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060928/terman_uv6swj.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <OneCol>
