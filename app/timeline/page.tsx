@@ -25,7 +25,7 @@ const TimelinePage = async () => {
   const timelineData = await loadTimelineData();
   return (
     <div className="bg-fog-light">
-      <div className="rs-pt-8 fixed top-0 right-0 w-[calc(100%_-_50rem)] z-0">
+      <div className="rs-pt-8 fixed top-0 right-0 w-full md:w-[calc(100%_-_50rem)] z-0">
         <TimelineAnimation />
       </div>
       <div className="relative top-0 z-50">
