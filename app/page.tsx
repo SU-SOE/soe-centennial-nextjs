@@ -133,7 +133,7 @@ export default function Home() {
       <StoryFeature>
         <TwoCol className="rs-mb-8 items-center max-w-[140rem]">
           <AnimateInView animation="slideUp" duration={2}>
-            <Heading size={5} weight="normal">
+            <Heading size="f5" weight="normal">
               Fundamental work in science and transformational breakthroughs for
               one hundred years.
             </Heading>
