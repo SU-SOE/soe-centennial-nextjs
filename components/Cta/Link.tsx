@@ -7,7 +7,13 @@ import { cnb } from "cnbuilder";
 type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> &
   LinkProps & {
     href: string;
-    linkType?: "timeline" | "story" | "poster" | "heading" | "default";
+    linkType?:
+      | "timeline"
+      | "story"
+      | "story-invert"
+      | "poster"
+      | "heading"
+      | "default";
   };
 
 const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
@@ -22,6 +28,10 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
     case "story":
       linkStyles =
         "transition-all ease-in-out duration-1000 font-normal text-stone-dark underline decoration-transparent underline-offset-[5px] hocus:decoration-stone-dark hocus:cursor-pointer group-hocus:decoration-stone-dark group-hocus:cursor-pointer decoration-2";
+      break;
+    case "story-invert":
+      linkStyles =
+        "transition-all ease-in-out duration-1000 font-normal text-white underline decoration-transparent underline-offset-[5px] hocus:text-white hocus:decoration-white hocus:cursor-pointer group-hocus:decoration-white group-hocus:cursor-pointer decoration-2";
       break;
     case "poster":
       linkStyles =

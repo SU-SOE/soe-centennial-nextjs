@@ -13,6 +13,7 @@ export type EventCardProps = HTMLAttributes<HTMLDivElement> &
     superhead?: string;
     body?: string;
     href: string;
+    isLight?: boolean;
   };
 
 export const EventCard = ({
@@ -21,13 +22,18 @@ export const EventCard = ({
   body,
   href,
   className,
+  isLight,
   ...props
 }: EventCardProps) => {
   return (
     <AnimateInView {...props} className={className}>
       <article className={styles.cardWrapper}>
         <Heading as="h3" size={2} weight="normal" mb="none">
-          <Link href={href} linkType="story" className="stretched-link">
+          <Link
+            href={href}
+            linkType={isLight ? "story" : "story-invert"}
+            className="stretched-link"
+          >
             {heading}
           </Link>
         </Heading>

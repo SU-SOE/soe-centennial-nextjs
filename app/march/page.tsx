@@ -43,6 +43,10 @@ export default function MvpHome() {
         href="/"
       />
       <EventsSection events={events} />
+      <EventsSection
+        src="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
+        events={events}
+      />
       <ContributeStoryBanner bgColor="blue" />
     </div>
   );
