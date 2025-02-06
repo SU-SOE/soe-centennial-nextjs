@@ -2,10 +2,43 @@ import { AnimateInView } from "@/components/Animate";
 import { Container } from "@/components/Container";
 import { ThreeCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
-import { StoryCard, StoryFeature, StoryPosterCard } from "@/components/Story";
+import {
+  StoryCard,
+  StoryCardProps,
+  StoryFeature,
+  StoryPosterCard,
+} from "@/components/Story";
+import { ExploreMore } from "@/components/Story/ExploreMore";
 import { Heading } from "@/components/Typography";
 
 const ExampleCardPage = async () => {
+  const storyData: StoryCardProps[] = [
+    {
+      heading: "New Spaces and Expanding Influence",
+      superhead: "The 5th Decade",
+      chapter: "Chapter 5",
+      href: "/",
+      imageUrl:
+        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/new-spaces-and-expanding-influence_dcvv7j.jpg",
+    },
+    {
+      heading: "Bridging Worlds: Chips, Code, and Cosmos",
+      superhead: "The 6th Decade",
+      chapter: "Chapter 6",
+      href: "/",
+      imageUrl:
+        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/bridging-worlds_ma3ixq.jpg",
+    },
+    {
+      heading: "Redevelopment and an Earthquake",
+      superhead: "The 7th Decade",
+      chapter: "Chapter 7",
+      href: "/",
+      imageUrl:
+        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/redevelopment_vprsob.jpg",
+    },
+  ];
+
   return (
     <div>
       <Masthead isLight />
@@ -60,9 +93,9 @@ const ExampleCardPage = async () => {
       </ThreeCol>
 
       <StoryFeature>
-        <TwoCol className="rs-mb-8 items-center">
+        <TwoCol className="rs-mb-8 items-center max-w-[140rem]">
           <AnimateInView animation="slideUp" duration={2}>
-            <Heading size={5} weight="normal" className="rs-mr-8">
+            <Heading size="f5" weight="normal">
               Fundamental work in science and transformational breakthroughs for
               one hundred years.
             </Heading>
@@ -79,38 +112,7 @@ const ExampleCardPage = async () => {
             className="max-w-full"
           />
         </TwoCol>
-        <ThreeCol>
-          <StoryCard
-            animation="slideUp"
-            duration={2}
-            delay={0.8}
-            heading="New Spaces and Expanding Influence"
-            superhead="The 5th Decade"
-            chapter="Chapter 5"
-            href="/"
-            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/new-spaces-and-expanding-influence_dcvv7j.jpg"
-          />
-          <StoryCard
-            animation="slideUp"
-            duration={2}
-            delay={1.5}
-            heading="Bridging Worlds: Chips, Code, and Cosmos"
-            superhead="The 6th Decade"
-            chapter="Chapter 6"
-            href="/"
-            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/bridging-worlds_ma3ixq.jpg"
-          />
-          <StoryCard
-            animation="slideUp"
-            duration={2}
-            delay={0.5}
-            heading="Redevelopment and an Earthquake"
-            superhead="The 7th Decade"
-            chapter="Chapter 7"
-            href="/"
-            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/redevelopment_vprsob.jpg"
-          />
-        </ThreeCol>
+        <ExploreMore stories={storyData} />
       </StoryFeature>
       <StoryPosterCard
         hasBgImage
