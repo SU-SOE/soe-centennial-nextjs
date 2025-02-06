@@ -28,7 +28,7 @@ export const EventCard = ({
   return (
     <AnimateInView {...props} className={className}>
       <article className={styles.cardWrapper}>
-        <Heading as="h3" size={2} weight="normal" mb="none">
+        <Heading as="h3" size={4} weight="normal" mb={1}>
           <Link
             href={href}
             linkType={isLight ? "story" : "story-invert"}
@@ -43,7 +43,7 @@ export const EventCard = ({
           </Text>
         )}
         {body && (
-          <Text size="base" mb="none" className="rs-mt-neg1">
+          <Text size="base" mb="none">
             {body}
           </Text>
         )}
