@@ -53,21 +53,23 @@ export default function page() {
       chapter: "Chapter 5",
       href: "/",
       imageUrl:
-        "https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png",
+        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/new-spaces-and-expanding-influence_dcvv7j.jpg",
     },
     {
       heading: "Bridging Worlds: Chips, Code, and Cosmos",
       superhead: "The 6th Decade",
       chapter: "Chapter 6",
       href: "/",
-      imageUrl: "https://i.ibb.co/TK4yBZ5/bridging-worlds.png",
+      imageUrl:
+        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/bridging-worlds_ma3ixq.jpg",
     },
     {
       heading: "Redevelopment and an Earthquake",
       superhead: "The 7th Decade",
       chapter: "Chapter 7",
       href: "/",
-      imageUrl: "https://i.ibb.co/hF4zTc1/redevelopment.png",
+      imageUrl:
+        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/redevelopment_vprsob.jpg",
     },
   ];
 
@@ -235,14 +237,14 @@ export default function page() {
             isPortriat
             className="mb-0"
             aspectRatio="1x1"
-            imageSrc="https://i.ibb.co/0f2ZH7f/1944-Stanford-Engineering-s-third-Dean.jpg"
+            imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1944_-_Stanford_Engineering_s_third_Dean_leujr9.jpg"
             caption="Fred Terman, dean of the School of Engineering, circa 1950."
           />
           <MediaCaptionImage
             rounded
             isPortriat
             className="mb-0"
-            imageSrc="https://i.ibb.co/VxbHFBC/NS537.jpg"
+            imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060928/skilling_umi5ca.jpg"
             aspectRatio="1x1"
             caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945."
           />
@@ -317,7 +319,7 @@ export default function page() {
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
-          imageSrc="https://i.ibb.co/H20ggKd/prof-edward-1.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/prof-edward-1_cfwklw.jpg"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
         <MediaCaptionImage
@@ -327,7 +329,7 @@ export default function page() {
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
-          imageSrc="https://i.ibb.co/0rQcwJW/prof-edward-2.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861406/prof-edward-2_xecpct.jpg"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
         <MediaCaptionImage
@@ -337,7 +339,7 @@ export default function page() {
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
-          imageSrc="https://i.ibb.co/K9vwrm4/mark-2.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/mark-2_nncexe.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC). "
         />
         <MediaCaptionImage
@@ -347,7 +349,7 @@ export default function page() {
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
-          imageSrc="https://i.ibb.co/QCs0JVf/mark-2-2.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861407/mark-2-2_jf2xmm.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
         />
         <MediaCaptionImage
@@ -357,7 +359,7 @@ export default function page() {
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
-          imageSrc="https://i.ibb.co/mc5xzt1/william-w-hansen.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861407/william-w-hansen_osvbzp.jpg"
           caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL)."
         />
         <MediaCaptionImage
@@ -367,7 +369,7 @@ export default function page() {
           rounded
           aspectRatio="4x3"
           captionBgColor="black"
-          imageSrc="https://i.ibb.co/cxt1gS1/felix-bloch.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861406/felix-bloch_dg6ato.jpg"
           caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
         />
       </StoryGrid>
@@ -475,11 +477,11 @@ export default function page() {
         </div>
         <div>
           <MediaCaptionImage
-            imageSrc="https://i.ibb.co/zGQbmfN/stephen-p-timoshenko.png"
+            imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/stephen-p-timoshenko_rr0uke.jpg"
             caption="Stephen P. Timoshenko teaching a class, 1948. A renowned expert, teacher, and writer widely regarded as the “father” of applied mechanics in the United States, he was born in the Russian Empire in 1878. Timoshenko taught at Stanford from 1936 to 1963 and was instrumental in the formation of the Division of Engineering Mechanics in 1949."
           />
           <MediaCaptionImage
-            imageSrc="https://i.ibb.co/7rz8D7B/david-packard-william.png"
+            imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/david-packard-william_l1tf3k.jpg"
             caption="Left to right: David Packard, William Hewlett, and Dean of Engineering Fred Terman attend the dedication of the Hewlett-Packard wing in Stanford's Electronics Research Laboratory, 1952. Stanford News Service."
           />
         </div>
@@ -487,12 +489,12 @@ export default function page() {
       <StoryGrid bgColor="blue">
         <MediaCaptionImage
           aspectRatio="4x3"
-          imageSrc="https://i.ibb.co/H20ggKd/prof-edward-1.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/prof-edward-1_cfwklw.jpg"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
         <MediaCaptionImage
           aspectRatio="4x3"
-          imageSrc="https://i.ibb.co/0rQcwJW/prof-edward-2.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861406/prof-edward-2_xecpct.jpg"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
       </StoryGrid>
@@ -567,7 +569,7 @@ export default function page() {
             superhead="The 5th Decade"
             chapter="Chapter 5"
             href="/"
-            imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
+            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/new-spaces-and-expanding-influence_dcvv7j.jpg"
           />
 
           <StoryCard
@@ -575,7 +577,7 @@ export default function page() {
             superhead="The 6th Decade"
             chapter="Chapter 6"
             href="/"
-            imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
+            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/bridging-worlds_ma3ixq.jpg"
           />
 
           <StoryCard
@@ -583,7 +585,7 @@ export default function page() {
             superhead="The 7th Decade"
             chapter="Chapter 7"
             href="/"
-            imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
+            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/redevelopment_vprsob.jpg"
           />
         </ThreeCol>
         <Button isLight href="/stories" className="mx-auto">

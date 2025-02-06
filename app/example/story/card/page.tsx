@@ -88,7 +88,7 @@ const ExampleCardPage = async () => {
             superhead="The 5th Decade"
             chapter="Chapter 5"
             href="/"
-            imageUrl="https://i.ibb.co/8YGpx87/new-spaces-and-expanding-influence.png"
+            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/new-spaces-and-expanding-influence_dcvv7j.jpg"
           />
           <StoryCard
             animation="slideUp"
@@ -98,7 +98,7 @@ const ExampleCardPage = async () => {
             superhead="The 6th Decade"
             chapter="Chapter 6"
             href="/"
-            imageUrl="https://i.ibb.co/TK4yBZ5/bridging-worlds.png"
+            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/bridging-worlds_ma3ixq.jpg"
           />
           <StoryCard
             animation="slideUp"
@@ -108,7 +108,7 @@ const ExampleCardPage = async () => {
             superhead="The 7th Decade"
             chapter="Chapter 7"
             href="/"
-            imageUrl="https://i.ibb.co/hF4zTc1/redevelopment.png"
+            imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/redevelopment_vprsob.jpg"
           />
         </ThreeCol>
       </StoryFeature>
