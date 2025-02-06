@@ -7,12 +7,12 @@ import { cnb } from "cnbuilder";
 type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> &
   LinkProps & {
     href: string;
-    linkType?: "timeline" | "story" | "poster" | "default";
+    linkType?: "timeline" | "story" | "poster" | "heading" | "default";
   };
 
 const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
   let linkStyles =
-    "transition-all ease-in-out duration-1000 text-digital-red-light hocus:text-stone-dark underline underline-offset-[5px] decoration-digital-red-light hocus:decoration-stone-dark group-hocus:decoration-stone-dark cursor-pointer decoration-4";
+    "transition-all ease-in-out duration-1000 underline text-stone-dark hocus:text-digital-red hocus:decoration-digital-red";
 
   switch (linkType) {
     case "timeline":
@@ -27,6 +27,9 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
       linkStyles =
         "transition-all ease-in-out duration-1000 text-white hocus:text-white font-normal underline decoration-transparent underline-offset-[5px] hocus:decoration-white hocus:cursor-pointer group-hocus:decoration-white group-hocus:cursor-pointer decoration-4";
       break;
+    case "heading":
+      linkStyles =
+        "transition-all ease-in-out duration-1000 text-digital-red-light hocus:text-stone-dark underline underline-offset-[5px] decoration-digital-red-light hocus:decoration-stone-dark group-hocus:decoration-stone-dark cursor-pointer decoration-4";
     default:
       break;
   }

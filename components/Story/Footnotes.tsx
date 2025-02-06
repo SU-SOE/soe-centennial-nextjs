@@ -1,5 +1,7 @@
-import FootnotesLineart from "../images/footnotes-lineart";
-import { Heading, Text } from "../Typography";
+import { Link } from "@/components/Cta";
+import FootnotesLineart from "@/components/images/footnotes-lineart";
+import { Heading, Text } from "@/components/Typography";
+import { ArrowUturnLeftIcon } from "@heroicons/react/24/outline";
 
 /**
  * Props for the Footnotes component, which displays a list of footnotes.
@@ -28,26 +30,24 @@ export const Footnotes: React.FC<FootnotesProps> = ({ footnotes }) => {
         <Text as="ol" className=" m-0 p-0">
           {footnotes.map(({ id, text, number, sourceLink }) => (
             <li key={id} id={id}>
-              <p className="items-center mb-0">
+              <p className="mb-0">
                 {sourceLink && (
-                  <a
+                  <Link
                     href={sourceLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-normal group"
+                    className="font-normal decoration-auto text-stone-dark decoration-stone-dark hocus:text-digital-red"
                   >
                     {text}
-                  </a>
+                  </Link>
                 )}
                 {!sourceLink && text}
                 <a
                   href={`#ref-${id}`}
                   role="doc-backlink"
-                  className="ml-03em inline-block group relative translate-all duration-1000 text-stone-dark hocus:text-digital-red"
+                  className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red hocus:text-stone-dark"
                   aria-label={`Back to ${number} in text`}
                   title={`Back to ${number} in text`}
                 >
-                  <span className="sr-only">Back to {number} in text</span>↩
+                  <ArrowUturnLeftIcon width={20} />
                 </a>
               </p>
             </li>

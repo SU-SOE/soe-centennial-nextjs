@@ -106,6 +106,7 @@ export default function Home() {
             >
               Experience{" "}
               <Link
+                linkType="heading"
                 href="/timeline"
                 className="text-digital-red-light font-normal"
               >
