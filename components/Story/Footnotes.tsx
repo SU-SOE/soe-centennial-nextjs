@@ -43,7 +43,7 @@ export const Footnotes: React.FC<FootnotesProps> = ({ footnotes }) => {
                 <a
                   href={`#ref-${id}`}
                   role="doc-backlink"
-                  className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red hocus:text-stone-dark"
+                  className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red hocus:text-digital-red-xlight border-b-2 border-transparent hocus:border-digital-red-xlight"
                   aria-label={`Back to ${number} in text`}
                   title={`Back to ${number} in text`}
                 >
