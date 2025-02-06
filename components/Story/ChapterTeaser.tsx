@@ -37,15 +37,15 @@ export const ChapterTeaser = ({
   ...props
 }: ChapterTeaserProps) => {
   return (
-    <AnimateInView {...props} className={className}>
-      <Container>
+    <Container {...props} mt={9} mb={9} className={className}>
+      <AnimateInView>
         <article
           className={cnb(
-            "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-900 xl:max-w-[110rem]",
+            "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[110rem] xl:max-w-[130rem]",
           )}
         >
           {imageUrl && (
-            <div className="relative rounded-xl trnaslate-all ease-in-out duration-500 rotate-[10deg] group-hocus:rotate-[8deg] mx-28 aspect-[2/3] w-full max-w-300 overflow-hidden">
+            <div className="relative shadow-2xl trnaslate-all ease-in-out duration-500 rotate-[10deg] group-hocus:rotate-[8deg] mx-28 aspect-[2/3] w-full max-w-300 overflow-hidden">
               <Image
                 className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
                 src={imageUrl}
@@ -61,6 +61,7 @@ export const ChapterTeaser = ({
               size={isHeadingLarge ? "f5" : "f4"}
               weight="normal"
               mb="none"
+              className="mb-0"
             >
               <Link href={href} className="stretch-link" linkType="story">
                 {heading}
@@ -78,13 +79,13 @@ export const ChapterTeaser = ({
             )}
             {chapter && <ChapterLabel text={chapter} className="order-first" />}
             {body && (
-              <Text size="base" mb="none" className="rs-mt-neg1">
+              <Text size="base" mb="none" className="rs-mt-3">
                 {body}
               </Text>
             )}
           </div>
         </article>
-      </Container>
-    </AnimateInView>
+      </AnimateInView>
+    </Container>
   );
 };

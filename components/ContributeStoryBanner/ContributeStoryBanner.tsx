@@ -8,7 +8,7 @@ import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./ContributeStoryBanner.styles";
 
 type ContributeStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
-  bgColor?: "fog-light" | "red" | "blue";
+  bgColor?: "fog-light" | "red" | "blue" | "white";
   hasLineArt?: boolean;
 };
 

@@ -38,16 +38,16 @@ export default function MvpHome() {
       <ChapterTeaser
         isHeadingLarge
         superhead="Centennial Book"
-        heading="Chapters released monthly"
-        imageUrl="https://placecats.com/neo_banana/300/200"
+        heading="Chapters released monthly, starting in April"
+        body="Read each chapter, from 1925 – 2025 from our Stanford Engineering Centennial book. Check back in April for The First Decade, chapter 1."
+        imageUrl="https://res.cloudinary.com/dsqi5touf/image/upload/v1738811648/BookCover_optimized_piu8wz.jpg"
         href="/"
       />
-      <EventsSection events={events} />
       <EventsSection
-        src="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1738812005/stangord-campus-1948_d7gus7.jpg"
         events={events}
       />
-      <ContributeStoryBanner bgColor="blue" />
+      <ContributeStoryBanner bgColor="white" hasLineArt />
     </div>
   );
 }

@@ -307,7 +307,7 @@ export default function page() {
       </OneCol>
       <StoryGrid
         hasBgImage
-        src="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
+        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1738812005/stangord-campus-1948_d7gus7.jpg"
         bgColor="stone-dark"
       >
         <MediaCaptionImage
@@ -403,7 +403,7 @@ export default function page() {
           isLarge
           rounded
           animation="fadeIn"
-          imageSrc="https://i.ibb.co/zH1XYD7/stangord-campus-1948.png"
+          imageSrc="https://res.cloudinary.com/dsqi5touf/image/upload/v1738812005/stangord-campus-1948_d7gus7.jpg"
           caption="Aerial view of the Stanford University campus, 1948."
         />
       </Container>

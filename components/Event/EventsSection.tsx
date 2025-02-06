@@ -5,7 +5,6 @@ import { Container } from "@/components/Container";
 import { EventCard, EventCardProps } from "./EventCard";
 import Image from "next/image";
 import * as styles from "./Event.styles";
-import { cnb } from "cnbuilder";
 
 interface EventsSectionProps {
   events: EventCardProps[];
