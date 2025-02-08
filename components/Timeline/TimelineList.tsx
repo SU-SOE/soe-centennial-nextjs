@@ -10,6 +10,7 @@ import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
 import { AnimateInView } from "../Animate";
+import { cnb } from "cnbuilder";
 
 type TimelineProps = {
   timelineData: TimelineItemData[];
@@ -80,78 +81,121 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
   return (
     <Container as="main" id="main-content" width="site" pb={5}>
       <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
-        {rows.map((row, rowIndex) => (
-          <div
-            key={`row-${rowIndex}`}
-            id={`${rowIndex}`}
-            className="odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6"
-          >
-            <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between">
-              {row.map((item, itemIndex) => {
-                const sizePattern: SizeType[] =
-                  rowIndex % 2 === 0
-                    ? ["large", "medium", "small"]
-                    : ["small", "large", "medium"];
-                const size = sizePattern[itemIndex % sizePattern.length];
-                const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
-
-                // Animation
-                const delayPattern =
-                  rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
-                const delay = delayPattern[itemIndex % delayPattern.length];
-
-                return (
+        {rows.map((row, rowIndex) => {
+          const isFullWidthRow = (rowIndex + 1) % 3 === 0;
+          return (
+            <div
+              key={`row-${rowIndex}`}
+              id={`${rowIndex}`}
+              className={cnb(
+                "odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6",
+                { "w-full": isFullWidthRow },
+              )}
+            >
+              <div
+                className={cnb(
+                  "flex flex-col items-center ",
+                  {
+                    "md:items-start md:flex-row md:justify-between":
+                      !isFullWidthRow,
+                  },
+                  { "flex-row justify-center w-full": isFullWidthRow },
+                )}
+              >
+                {isFullWidthRow && (
+                  // Render a single item in full-width rows
                   <AnimateInView
-                    key={item.uuid}
+                    key={row[0].uuid}
                     animation="slideUp"
-                    delay={delay}
+                    delay={0.5}
                   >
                     <TimelineItem
-                      {...item}
-                      id={item.uuid}
-                      aria-expanded={expandedUuid === item.uuid}
-                      aria-controls={item.anchor}
-                      isExpanded={expandedUuid === item.uuid}
-                      size={size}
-                      trapezoid={trapezoid}
-                      onClick={() => handleToggle(item.uuid, item.anchor)}
+                      {...row[0]} // Only take the first item
+                      id={row[0].uuid}
+                      aria-expanded={expandedUuid === row[0].uuid}
+                      aria-controls={row[0].anchor}
+                      isExpanded={expandedUuid === row[0].uuid}
+                      size="xlarge"
+                      trapezoid="left"
+                      isHorizontal
+                      onClick={() => handleToggle(row[0].uuid, row[0].anchor)}
                       ref={(el) => {
-                        itemRefs.current[item.uuid] = el;
+                        itemRefs.current[row[0].uuid] = el;
                       }}
                     />
                   </AnimateInView>
-                );
-              })}
-            </div>
+                )}
+                {!isFullWidthRow &&
+                  row.map((item, itemIndex) => {
+                    const sizePattern: SizeType[] =
+                      rowIndex % 2 === 0
+                        ? ["large", "medium", "small"]
+                        : ["small", "large", "medium"];
+                    const size = sizePattern[itemIndex % sizePattern.length];
+                    const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
 
-            {expandedUuid && row.some((item) => item.uuid === expandedUuid) && (
-              <motion.div
-                id={itemId}
-                aria-labelledby={expandedUuid}
-                className="w-full"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5 }}
-                ref={detailsRef}
-                tabIndex={-1}
-              >
-                <TimelineDetails
-                  {...timelineData.find((item) => item.uuid === expandedUuid)!}
-                  onClose={() => {
-                    if (expandedUuid) {
-                      const itemButton = itemRefs.current[expandedUuid];
-                      if (itemButton) {
-                        itemButton.focus();
-                      }
-                    }
-                    setExpandedUuid(null);
-                  }}
-                />
-              </motion.div>
-            )}
-          </div>
-        ))}
+                    // Animation
+                    const delayPattern =
+                      rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
+                    const delay = delayPattern[itemIndex % delayPattern.length];
+
+                    return (
+                      <AnimateInView
+                        key={item.uuid}
+                        animation="slideUp"
+                        delay={delay}
+                      >
+                        <TimelineItem
+                          {...item}
+                          id={item.uuid}
+                          aria-expanded={expandedUuid === item.uuid}
+                          aria-controls={item.anchor}
+                          isExpanded={expandedUuid === item.uuid}
+                          size={size}
+                          trapezoid={trapezoid}
+                          isHorizontal={isFullWidthRow}
+                          onClick={() => handleToggle(item.uuid, item.anchor)}
+                          ref={(el) => {
+                            itemRefs.current[item.uuid] = el;
+                          }}
+                        />
+                      </AnimateInView>
+                    );
+                  })}
+              </div>
+
+              {expandedUuid &&
+                row.some((item) => item.uuid === expandedUuid) && (
+                  <motion.div
+                    id={itemId}
+                    aria-labelledby={expandedUuid}
+                    className="w-full"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.5 }}
+                    ref={detailsRef}
+                    tabIndex={-1}
+                  >
+                    <TimelineDetails
+                      {...timelineData.find(
+                        (item) => item.uuid === expandedUuid,
+                      )!}
+                      onClose={() => {
+                        if (expandedUuid) {
+                          const itemButton = itemRefs.current[expandedUuid];
+                          if (itemButton) {
+                            itemButton.focus();
+                          }
+                        }
+                        setExpandedUuid(null);
+                      }}
+                    />
+                  </motion.div>
+                )}
+            </div>
+          );
+        })}
       </div>
     </Container>
   );
