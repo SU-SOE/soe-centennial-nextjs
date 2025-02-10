@@ -79,7 +79,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
   }
 
   return (
-    <Container as="main" id="main-content" width="site" pb={5}>
+    <Container width="site" pb={5}>
       <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
         {rows.map((row, rowIndex) => {
           const isFullWidthRow = (rowIndex + 1) % 3 === 0;
