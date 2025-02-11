@@ -67,10 +67,11 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
           size={size}
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}
+          className={isHorizontal ? "w-1/2 h-full" : ""}
         />
         <div
           className={cnb("flex flex-col items-start md:rs-px-1", {
-            "w-full": isHorizontal,
+            "w-1/2": isHorizontal,
           })}
         >
           <Heading

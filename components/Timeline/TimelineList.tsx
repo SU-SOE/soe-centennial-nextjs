@@ -108,6 +108,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                     key={row[0].uuid}
                     animation="slideUp"
                     delay={0.5}
+                    className="w-full"
                   >
                     <TimelineItem
                       {...row[0]} // Only take the first item
@@ -115,7 +116,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                       aria-expanded={expandedUuid === row[0].uuid}
                       aria-controls={row[0].anchor}
                       isExpanded={expandedUuid === row[0].uuid}
-                      size="xlarge"
+                      size="full"
                       trapezoid="left"
                       isHorizontal
                       onClick={() => handleToggle(row[0].uuid, row[0].anchor)}
