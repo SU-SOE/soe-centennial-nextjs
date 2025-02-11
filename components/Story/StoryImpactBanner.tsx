@@ -61,7 +61,7 @@ export const StoryImpactBanner = ({
         )}
         <FlexBox
           alignItems="center"
-          className={cnb("flex flex-col z-50 relative md:grid-gap", {
+          className={cnb("flex flex-col z-10 relative md:grid-gap", {
             "lg:flex-row": !isHorizontal,
             "w-full max-w-[1100px] mx-auto": isHorizontal,
           })}

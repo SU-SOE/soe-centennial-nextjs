@@ -18,7 +18,7 @@ export const ActionLink = ({
     <Link
       {...props}
       className={cnb(
-        "group transition-all ease-in-out duration-1000 underline underline-offset-[5px] cursor-pointer decoration-4",
+        "group/action transition ease-in-out duration-1000 underline underline-offset-[5px] cursor-pointer decoration-4 font-inherit",
         whiteText
           ? "text-white hocus:text-digital-red-xlight decoration-digital-red-xlight"
           : "text-stone-dark hocus:decoration-stone-dark decoration-digital-red-light",
@@ -31,7 +31,7 @@ export const ActionLink = ({
         <ArrowRightIcon
           width={25}
           className={cnb(
-            "transition-all ease-in-out duration-1000 ml-03em group-hocus:translate-x-02em inline",
+            "transition ease-in-out duration-1000 ml-03em group-hover/action:translate-x-02em group-focus/action:translate-x-02em inline",
             whiteText ? "text-digital-red-xlight" : "text-digital-red-light ",
           )}
         />

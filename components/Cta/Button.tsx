@@ -27,7 +27,7 @@ export const Button = ({
   ...props
 }: Props) => {
   const buttonStyle = cnb(
-    "flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
+    "group/button flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
     {
       "text-digital-red-light": isLight && !solid,
       "text-white": !isLight,
@@ -49,7 +49,13 @@ export const Button = ({
   return (
     <Link href={href} className={cnb(buttonStyle, className)} {...props}>
       {children}
-      <ArrowRightIcon width={20} className="ml-2 inline-block" />
+      <span className="whitespace-nowrap">
+        &#65279;
+        <ArrowRightIcon
+          width={20}
+          className="ml-2 inline-block transition ease-in-out duration-1000 ml-03em group-hover/button:translate-x-02em group-focus/button:translate-x-02em"
+        />
+      </span>
     </Link>
   );
 };

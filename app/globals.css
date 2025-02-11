@@ -17,6 +17,7 @@
   .font-inherit {
     font: inherit;
     font-size: inherit;
+    font-weight: inherit;
     line-height: inherit;
   }
 }

@@ -4,6 +4,7 @@ import { FlexBox } from "@/components/FlexBox";
 import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
+import { MainNav } from "@/components/MainNav";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   isLight?: boolean;
@@ -36,7 +37,7 @@ export const Masthead = ({
     >
       <EngLogoLockup color={isLight ? "default" : "white"} isLink />
       <FlexBox alignItems="center" className={styles.flexbox}>
-        {mainNav}
+        <MainNav isLight={isLight} />
       </FlexBox>
     </FlexBox>
   </header>

@@ -24,6 +24,7 @@ const StanfordEngLogo = ({
       viewBox="0 0 261 67"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[12rem] md:w-[19rem] lg:w-full"
       {...props}
     >
       <g clipPath="url(#clip0_1391_18090)">

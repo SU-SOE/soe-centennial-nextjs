@@ -17,18 +17,18 @@ export const LocalFooter = () => (
       <EngLogoLockup color="white-red" isLink className={styles.logo} />
       <FlexBox direction="col" className={styles.wrapper}>
         <FlexBox className={styles.linksWrapper}>
-          <Text className={styles.link} size={2}>
-            <ActionLink whiteText className="font-normal" href="/stories">
+          <Text weight="normal" size="f2" mb="0">
+            <ActionLink whiteText href="/stories">
               Impact stories
             </ActionLink>
           </Text>
-          <Text className={styles.link} size={2}>
-            <ActionLink whiteText className="font-normal" href="/timeline">
+          <Text weight="normal" size="f2" mb="0">
+            <ActionLink whiteText href="/timeline">
               Timeline
             </ActionLink>
           </Text>
-          <Text className={styles.link} size={2}>
-            <ActionLink whiteText className="font-normal" href="/">
+          <Text weight="normal" size="f2" mb="0">
+            <ActionLink whiteText href="/">
               Centennial book online
             </ActionLink>
           </Text>
