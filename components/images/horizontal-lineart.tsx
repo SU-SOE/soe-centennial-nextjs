@@ -195,7 +195,6 @@ export const HorizontalLineart = ({
           viewBox="0 0 1359 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden 2xl:block"
           style={{
             height: "100%",
             width: "100%",
@@ -207,7 +206,7 @@ export const HorizontalLineart = ({
             d="M0 38.4272C147.642 38.4272 1318.94 38.4272 1337.32 38.4272C1364.66 38.4272 1362.47 2 1337.32 2C1299.04 2 1213.73 2 1189.67 2C1147.02 2 1149.21 58 1189.67 58"
             stroke={stroke}
             strokeWidth="3"
-            initial={{ pathLength: 1, pathOffset: 1 }}
+            initial={{ pathLength: 0, pathOffset: 0 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
               duration: 3,
@@ -225,7 +224,6 @@ export const HorizontalLineart = ({
           viewBox="0 0 1538 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden 2xl:block"
           style={{
             height: "100%",
             width: "100%",
@@ -255,7 +253,6 @@ export const HorizontalLineart = ({
           viewBox="0 0 1224 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden 2xl:block"
           style={{
             height: "100%",
             width: "100%",
@@ -267,7 +264,7 @@ export const HorizontalLineart = ({
             d="M1224 58C1184.71 58 334.658 58 277.512 58C220.365 58 216.796 2 277.512 2C309.657 2 354.305 2 377.52 2C415.023 2 411.451 45.3548 377.52 45.3548C350.376 45.3548 115.004 45.3548 0.710938 45.3548"
             stroke={stroke}
             strokeWidth="3"
-            initial={{ pathLength: 1, pathOffset: 1 }}
+            initial={{ pathLength: 0, pathOffset: 0 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
               duration: 3,
@@ -285,7 +282,6 @@ export const HorizontalLineart = ({
           viewBox="0 0 1665 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden 2xl:block"
           style={{
             height: "100%",
             width: "100%",
@@ -316,7 +312,6 @@ export const HorizontalLineart = ({
           viewBox="0 0 1764 84"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden 2xl:block"
           style={{
             height: "100%",
             width: "100%",
