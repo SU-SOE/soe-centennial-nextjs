@@ -83,6 +83,8 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
       <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
         {rows.map((row, rowIndex) => {
           const isFullWidthRow = (rowIndex + 1) % 3 === 0;
+          const fullwidthTrapezoid = rowIndex % 2 === 0 ? "left" : "right";
+
           return (
             <div
               key={`row-${rowIndex}`}
@@ -117,7 +119,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                       aria-controls={row[0].anchor}
                       isExpanded={expandedUuid === row[0].uuid}
                       size="full"
-                      trapezoid="left"
+                      trapezoid={fullwidthTrapezoid}
                       isHorizontal
                       onClick={() => handleToggle(row[0].uuid, row[0].anchor)}
                       ref={(el) => {
