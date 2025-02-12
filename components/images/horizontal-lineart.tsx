@@ -8,189 +8,338 @@ export interface HorizontalLineartProps {
   className?: string;
   stroke?: string;
   isLeft?: boolean;
+  lineartType?: "A" | "B" | "C" | "D" | "timeline" | "events";
 }
 
 export const HorizontalLineart = ({
   className,
   stroke = "#F83535",
-  isLeft = false,
+  lineartType,
   ...props
 }: HorizontalLineartProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  let lineartSvg = (
+    <>
+      {/* 2XL SVG */}
+      <motion.svg
+        width="1638"
+        height="50"
+        viewBox="0 0 1638 50"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="hidden 2xl:block"
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M2.5 2C2.5 30.4723 31 30.4723 58.9691 30.4723C94.6491 30.4723 147.324 30.4723 162.662 30.4723C178 30.4723 178.5 47.5 162.662 47.5C146.824 47.5 124.631 47.5 91.5 47.5C58.9691 47.5 62 11.0278 91.5 11.0278C147.569 11.0278 1589.63 11.0278 1635.5 11.0278"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, pathOffset: 0 }}
+          animate={isInView && { pathLength: 1, pathOffset: 0 }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.svg>
+      {/* XL SVG */}
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1102"
+        height="50"
+        viewBox="0 0 1102 50"
+        fill="none"
+        className="hidden xl:block 2xl:hidden"
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M2 2.25C2 30.7223 30.5 30.7223 58.4691 30.7223C94.1491 30.7223 146.824 30.7223 162.162 30.7223C177.5 30.7223 178 47.75 162.162 47.75C146.324 47.75 124.131 47.75 91 47.75C58.4691 47.75 61.5 11.2778 91 11.2778C147.069 11.2778 1065.13 11.2778 1111 11.2778"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, pathOffset: 0 }}
+          animate={isInView && { pathLength: 1, pathOffset: 0 }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.svg>
+      {/* LG SVG */}
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="914"
+        height="50"
+        viewBox="0 0 914 50"
+        fill="none"
+        className="hidden lg:block xl:hidden"
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M2 2.25C2 30.7223 30.5 30.7223 58.4691 30.7223C94.1491 30.7223 146.824 30.7223 162.162 30.7223C177.5 30.7223 178 47.75 162.162 47.75C146.324 47.75 124.131 47.75 91 47.75C58.4691 47.75 61.5 11.2778 91 11.2778C147.069 11.2778 1065.13 11.2778 1111 11.2778"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, pathOffset: 0 }}
+          animate={isInView && { pathLength: 1, pathOffset: 0 }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.svg>
+      {/* MD SVG */}
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="720"
+        height="51"
+        viewBox="0 0 720 51"
+        fill="none"
+        className="hidden md:block lg:hidden"
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M2 2.75C2 31.2223 30.5 31.2223 58.4691 31.2223C94.1491 31.2223 146.824 31.2223 162.162 31.2223C177.5 31.2223 178 48.25 162.162 48.25C146.324 48.25 124.131 48.25 91 48.25C58.4691 48.25 61.5 11.7778 91 11.7778C147.069 11.7778 1065.13 11.7778 1111 11.7778"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, pathOffset: 0 }}
+          animate={isInView && { pathLength: 1, pathOffset: 0 }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.svg>
+      {/* SM SVG */}
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="540"
+        height="38"
+        viewBox="0 0 540 38"
+        fill="none"
+        className="hidden sm:block md:hidden"
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M2 2C2 23.276 23.3043 23.276 44.2118 23.276C70.8833 23.276 110.259 23.276 121.724 23.276C133.19 23.276 133.564 36 121.724 36C109.885 36 93.2958 36 68.5293 36C44.2118 36 46.4775 8.74604 68.5293 8.74604C110.442 8.74604 796.708 8.74605 831 8.74604"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, pathOffset: 0 }}
+          animate={isInView && { pathLength: 1, pathOffset: 0 }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.svg>
+      {/* XS SVG */}
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="332"
+        height="38"
+        viewBox="0 0 332 38"
+        fill="none"
+        className="block sm:hidden"
+        style={{
+          height: "100%",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M2 2.80469C2 23.4549 22.6619 23.4549 42.9388 23.4549C68.806 23.4549 106.994 23.4549 118.114 23.4549C129.234 23.4549 129.596 35.8047 118.114 35.8047C106.632 35.8047 90.5426 35.8047 66.523 35.8047C42.9388 35.8047 45.1362 9.35232 66.523 9.35232C107.172 9.35232 772.742 9.35232 806 9.35232"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+      </motion.svg>
+    </>
+  );
 
-  return (
-    <div
-      {...props}
-      ref={ref}
-      className={cnb("flex justify-end rs-py-3", className)}
-    >
-      {isLeft ? (
-        <>
-          {/* 2XL SVG */}
-          <motion.svg
-            width="1638"
-            height="50"
-            viewBox="0 0 1638 50"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="hidden 2xl:block"
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
+  switch (lineartType) {
+    case "A":
+      lineartSvg = (
+        <motion.svg
+          width="1359"
+          height="60"
+          viewBox="0 0 1359 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden 2xl:block"
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <motion.path
+            d="M0 38.4272C147.642 38.4272 1318.94 38.4272 1337.32 38.4272C1364.66 38.4272 1362.47 2 1337.32 2C1299.04 2 1213.73 2 1189.67 2C1147.02 2 1149.21 58 1189.67 58"
+            stroke={stroke}
+            strokeWidth="3"
+            initial={{ pathLength: 1, pathOffset: 1 }}
+            animate={isInView && { pathLength: 1, pathOffset: 0 }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
             }}
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M2.5 2C2.5 30.4723 31 30.4723 58.9691 30.4723C94.6491 30.4723 147.324 30.4723 162.662 30.4723C178 30.4723 178.5 47.5 162.662 47.5C146.824 47.5 124.631 47.5 91.5 47.5C58.9691 47.5 62 11.0278 91.5 11.0278C147.569 11.0278 1589.63 11.0278 1635.5 11.0278"
-              stroke={stroke}
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0, pathOffset: 0 }}
-              animate={isInView && { pathLength: 1, pathOffset: 0 }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.svg>
-          {/* XL SVG */}
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1102"
-            height="50"
-            viewBox="0 0 1102 50"
-            fill="none"
-            className="hidden xl:block 2xl:hidden"
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
+          />
+        </motion.svg>
+      );
+      break;
+    case "B":
+      lineartSvg = (
+        <motion.svg
+          width="1538"
+          height="60"
+          viewBox="0 0 1538 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden 2xl:block"
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <motion.path
+            d="M-0.00195312 30C27.998 30 842.2 30 880 30C905.2 30 908 58 880 58C861.8 58 825.4 58 801.6 58C758.2 58 752.6 2 801.6 2C822.88 2 1317.27 2 1538 2"
+            stroke={stroke}
+            strokeWidth="3"
+            initial={{ pathLength: 1, pathOffset: 1 }}
+            animate={isInView && { pathLength: 1, pathOffset: 0 }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
             }}
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M2 2.25C2 30.7223 30.5 30.7223 58.4691 30.7223C94.1491 30.7223 146.824 30.7223 162.162 30.7223C177.5 30.7223 178 47.75 162.162 47.75C146.324 47.75 124.131 47.75 91 47.75C58.4691 47.75 61.5 11.2778 91 11.2778C147.069 11.2778 1065.13 11.2778 1111 11.2778"
-              stroke={stroke}
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0, pathOffset: 0 }}
-              animate={isInView && { pathLength: 1, pathOffset: 0 }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.svg>
-          {/* LG SVG */}
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="914"
-            height="50"
-            viewBox="0 0 914 50"
-            fill="none"
-            className="hidden lg:block xl:hidden"
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
+          />
+        </motion.svg>
+      );
+      break;
+    case "C":
+      lineartSvg = (
+        <motion.svg
+          width="1224"
+          height="60"
+          viewBox="0 0 1224 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden 2xl:block"
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <motion.path
+            d="M1224 58C1184.71 58 334.658 58 277.512 58C220.365 58 216.796 2 277.512 2C309.657 2 354.305 2 377.52 2C415.023 2 411.451 45.3548 377.52 45.3548C350.376 45.3548 115.004 45.3548 0.710938 45.3548"
+            stroke={stroke}
+            strokeWidth="3"
+            initial={{ pathLength: 1, pathOffset: 1 }}
+            animate={isInView && { pathLength: 1, pathOffset: 0 }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
             }}
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M2 2.25C2 30.7223 30.5 30.7223 58.4691 30.7223C94.1491 30.7223 146.824 30.7223 162.162 30.7223C177.5 30.7223 178 47.75 162.162 47.75C146.324 47.75 124.131 47.75 91 47.75C58.4691 47.75 61.5 11.2778 91 11.2778C147.069 11.2778 1065.13 11.2778 1111 11.2778"
-              stroke={stroke}
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0, pathOffset: 0 }}
-              animate={isInView && { pathLength: 1, pathOffset: 0 }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.svg>
-          {/* MD SVG */}
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="720"
-            height="51"
-            viewBox="0 0 720 51"
-            fill="none"
-            className="hidden md:block lg:hidden"
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
+          />
+        </motion.svg>
+      );
+      break;
+    case "D":
+      lineartSvg = (
+        <motion.svg
+          width="1665"
+          height="60"
+          viewBox="0 0 1665 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden 2xl:block"
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <motion.path
+            d="M0 34C23.0972 34 195.59 34 222.241 34C255 34 251 2 222.241 2C183.598 2 190.26 2 162.277 2C116 2 117 58 162.277 58C183.598 58 1520.64 58 1665 58"
+            stroke={stroke}
+            strokeWidth="3"
+            initial={{ pathLength: 1, pathOffset: 1 }}
+            animate={isInView && { pathLength: 1, pathOffset: 0 }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
             }}
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M2 2.75C2 31.2223 30.5 31.2223 58.4691 31.2223C94.1491 31.2223 146.824 31.2223 162.162 31.2223C177.5 31.2223 178 48.25 162.162 48.25C146.324 48.25 124.131 48.25 91 48.25C58.4691 48.25 61.5 11.7778 91 11.7778C147.069 11.7778 1065.13 11.7778 1111 11.7778"
-              stroke={stroke}
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0, pathOffset: 0 }}
-              animate={isInView && { pathLength: 1, pathOffset: 0 }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.svg>
-          {/* SM SVG */}
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="540"
-            height="38"
-            viewBox="0 0 540 38"
-            fill="none"
-            className="hidden sm:block md:hidden"
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
+          />
+        </motion.svg>
+      );
+      break;
+      break;
+    case "timeline":
+      lineartSvg = (
+        <motion.svg
+          width="1764"
+          height="84"
+          viewBox="0 0 1764 84"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden 2xl:block"
+          style={{
+            height: "100%",
+            width: "100%",
+            maxWidth: "100%",
+          }}
+          preserveAspectRatio="none"
+        >
+          <motion.path
+            d="M0 42C40 42 838 42 892 42C928 42 932 82 892 82C866 82 814 82 780 82C718 82 710 2 780 2C810.4 2 1516.67 2 1832 2"
+            stroke={stroke}
+            strokeWidth="3"
+            initial={{ pathLength: 1, pathOffset: 1 }}
+            animate={isInView && { pathLength: 1, pathOffset: 0 }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
             }}
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M2 2C2 23.276 23.3043 23.276 44.2118 23.276C70.8833 23.276 110.259 23.276 121.724 23.276C133.19 23.276 133.564 36 121.724 36C109.885 36 93.2958 36 68.5293 36C44.2118 36 46.4775 8.74604 68.5293 8.74604C110.442 8.74604 796.708 8.74605 831 8.74604"
-              stroke={stroke}
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0, pathOffset: 0 }}
-              animate={isInView && { pathLength: 1, pathOffset: 0 }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.svg>
-          {/* XS SVG */}
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="332"
-            height="38"
-            viewBox="0 0 332 38"
-            fill="none"
-            className="block sm:hidden"
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
-            }}
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M2 2.80469C2 23.4549 22.6619 23.4549 42.9388 23.4549C68.806 23.4549 106.994 23.4549 118.114 23.4549C129.234 23.4549 129.596 35.8047 118.114 35.8047C106.632 35.8047 90.5426 35.8047 66.523 35.8047C42.9388 35.8047 45.1362 9.35232 66.523 9.35232C107.172 9.35232 772.742 9.35232 806 9.35232"
-              stroke={stroke}
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-          </motion.svg>
-        </>
-      ) : (
+          />
+        </motion.svg>
+      );
+      break;
+    case "events":
+      lineartSvg = (
         <>
           {/* 2XL SVG */}
           <motion.svg
@@ -355,7 +504,19 @@ export const HorizontalLineart = ({
             />
           </motion.svg>
         </>
-      )}
+      );
+      break;
+    default:
+      break;
+  }
+
+  return (
+    <div
+      {...props}
+      ref={ref}
+      className={cnb("flex justify-end rs-py-3", className)}
+    >
+      {lineartSvg}
     </div>
   );
 };

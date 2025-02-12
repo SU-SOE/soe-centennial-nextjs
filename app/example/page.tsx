@@ -65,7 +65,7 @@ const ExamplePage = async () => {
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
       />
       <HorizontalLineart className="rs-pl-10" />
-      <HorizontalLineart className="rs-pl-10" isLeft={false} />
+      <HorizontalLineart className="rs-pl-10" lineartType="B" />
       <PageTitle heading="100 years of" bigText="Impact" />
       <Container width="site" py={9} className="font-dm-sans">
         <MediaCaptionImage

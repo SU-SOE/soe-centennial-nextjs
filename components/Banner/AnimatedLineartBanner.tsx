@@ -16,7 +16,7 @@ export const AnimatedLineartBanner = ({
   children,
   className,
   stroke,
-  isLeft = false,
+  lineartType,
   ...props
 }: AnimatedLineartBannerProps) => {
   return (
@@ -24,7 +24,7 @@ export const AnimatedLineartBanner = ({
       <Container width="site">{children}</Container>
       <HorizontalLineart
         stroke={stroke}
-        isLeft={isLeft}
+        lineartType={lineartType}
         className="ml-auto rs-pl-5 md:rs-pl-8 max-w-[160rem] 2xl:max-w-[200rem] 3xl:max-w-[250rem] 3xl:rs-pr-5"
       />
     </Container>
