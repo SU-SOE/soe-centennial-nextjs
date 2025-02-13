@@ -1,10 +1,10 @@
 import { Masthead } from "@/components/Masthead";
-import { PageTitle } from "@/components/PageTitle";
 import { StoryPosterCard } from "@/components/Story";
 import Metadata from "@/components/Layout/Metadata";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
 import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
+import AnimatedHero from "@/components/AnimatedHero/AnimatedHero";
 
 export default function MvpHome() {
   const events = [
@@ -23,8 +23,8 @@ export default function MvpHome() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead isLight bgColor="fog-light" />
-      <PageTitle heading="100 years of" bigText="Impact" />
+      <Masthead isOverlap />
+      <AnimatedHero />
       <StoryPosterCard
         heading="“Preparing Roads over which Culture May Ride in Comfort”"
         dek="The 1st Decade"
