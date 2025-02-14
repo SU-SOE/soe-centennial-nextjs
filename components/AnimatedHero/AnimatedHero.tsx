@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 // import { motion } from "motion/react";
-import { ShapeAnimation } from "./ShapeAnimation";
+import { LineAnimation } from "./LineAnimation";
 import { AnimateInView } from "../Animate/AnimateInView";
 
 const LeftCol = () => {
@@ -48,9 +48,7 @@ const LeftCol = () => {
           className="absolute top-0"
         />
       </motion.div> */}
-      <ShapeAnimation
-        order={[0, 2, 1, 1, 6, 8, 1, 7, 7, 3, 9, 10, 2, 5, 5, 0]}
-      />
+      <LineAnimation order={[0, 2, 1, 1, 1, 7, 3, 9, 10, 2, 5, 0]} />
     </div>
   );
 };
@@ -119,8 +117,8 @@ const MidCol = ({ onComplete }: MidColProps) => {
           className="absolute top-0"
         />
       </motion.div> */}
-      <ShapeAnimation
-        order={[1, 3, 2, 6, 7, 9, 9, 3, 1, 8, 2, 5, 4, 6, "mask", 1]}
+      <LineAnimation
+        order={[1, 3, 2, 6, 7, 9, 3, 8, 2, 5, 4, 6, "mask", 1]}
         onComplete={onComplete}
       />
     </div>
@@ -169,9 +167,7 @@ const RightCol = () => {
           className="absolute top-0"
         />
       </motion.div> */}
-      <ShapeAnimation
-        order={[0, 4, 5, 9, 4, 4, 2, 2, 10, 4, 4, 4, 9, 8, 8, 0]}
-      />
+      <LineAnimation order={[0, 4, 5, 9, 4, 4, 2, 10, 9, 8, 0]} />
     </div>
   );
 };
@@ -198,15 +194,11 @@ const AnimatedHero = () => {
       )}
       {/* <AnimateInView animation="fadeIn" duration={0.8}> */}
       <div className="relative w-screen h-screen flex flex-row items-center justify-center cc">
-        <div className="w-1/3 h-fit">
-          <LeftCol />
-        </div>
+        <div className="w-1/3 h-fit">{/* <LeftCol /> */}</div>
         <div className="relative w-1/3 h-fit">
           <MidCol onComplete={handleAnimationComplete} />
         </div>
-        <div className="w-1/3 h-fit">
-          <RightCol />
-        </div>
+        <div className="w-1/3 h-fit">{/* <RightCol /> */}</div>
       </div>
       {/* </AnimateInView> */}
     </div>
