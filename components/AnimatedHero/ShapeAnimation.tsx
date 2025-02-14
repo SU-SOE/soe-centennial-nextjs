@@ -28,9 +28,10 @@ const paths: { [key: string]: string } = {
 
 interface ShapeAnimationProps {
   order: (number | string)[];
+  onComplete?: () => void;
 }
 
-export const ShapeAnimation = ({ order }: ShapeAnimationProps) => {
+export const ShapeAnimation = ({ order, onComplete }: ShapeAnimationProps) => {
   const [pathIndex, setPathIndex] = useState(0);
   const progress = useMotionValue(0);
   const ref = useRef<SVGSVGElement | null>(null);
@@ -59,10 +60,13 @@ export const ShapeAnimation = ({ order }: ShapeAnimationProps) => {
         ease: "easeInOut",
         onComplete: () => {
           setPathIndex((prev) => prev + 1);
+          if (pathIndex + 1 === order.length - 1) {
+            onComplete?.();
+          }
         },
       });
     }
-  }, [pathIndex, progress, isInView, order.length]);
+  }, [pathIndex, progress, isInView, order.length, onComplete]);
 
   return (
     <motion.svg
