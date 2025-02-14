@@ -48,15 +48,15 @@ export const ShapeAnimation = ({ order, onComplete }: ShapeAnimationProps) => {
     order.map((_, i) => i),
     orderedPaths,
     {
-      mixer: (a, b) => interpolate(a, b),
+      mixer: (a, b) => interpolate(a, b, { maxSegmentLength: 1 }),
     },
   );
 
   useEffect(() => {
     if (isInView && pathIndex < order.length - 1) {
       animate(progress, pathIndex + 1, {
-        duration: 0.3,
-        delay: 0.2,
+        duration: 0.5,
+        delay: 0.4,
         ease: "easeInOut",
         onComplete: () => {
           setPathIndex((prev) => prev + 1);
@@ -96,9 +96,9 @@ export const ShapeAnimation = ({ order, onComplete }: ShapeAnimationProps) => {
       )}
       <motion.path
         d={path}
-        stroke={is100 ? "transparent" : "#F83535"}
+        stroke="#F83535"
         strokeWidth={is100 ? "0" : "16"}
-        fill={is100 ? "#F83535" : "transparent"}
+        fill="transparent"
       />
     </motion.svg>
   );

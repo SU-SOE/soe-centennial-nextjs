@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 // import { motion } from "motion/react";
 import { ShapeAnimation } from "./ShapeAnimation";
@@ -120,7 +120,7 @@ const MidCol = ({ onComplete }: MidColProps) => {
         />
       </motion.div> */}
       <ShapeAnimation
-        order={[1, 3, 2, 6, 7, 9, 9, 3, 1, 8, 2, 5, 4, 6, "mask"]}
+        order={[1, 3, 2, 6, 7, 9, 9, 3, 1, 8, 2, 5, 4, 6, "mask", 1]}
         onComplete={onComplete}
       />
     </div>
@@ -178,14 +178,8 @@ const RightCol = () => {
 
 const AnimatedHero = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
-  const animationsCompleted = useRef(0); // Track number of finished animations
-  const totalAnimations = 3; // Number of ShapeAnimation components
-
   const handleAnimationComplete = () => {
-    animationsCompleted.current += 1;
-    if (animationsCompleted.current === totalAnimations) {
-      setAnimationComplete(true);
-    }
+    setAnimationComplete(true);
   };
   return (
     <div className="relative bg-cardinal-red-dark w-screen h-screen">
