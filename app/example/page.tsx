@@ -1,5 +1,4 @@
 import { Heading, Text } from "@/components/Typography";
-import { ShapeAnimation } from "@/components/ShapeAnimation";
 import { Masthead } from "@/components/Masthead";
 import { FeatureHero } from "@/components/Banner";
 import { PageTitle } from "@/components/PageTitle";
@@ -56,7 +55,6 @@ const ExamplePage = async () => {
           by Jess Alvarenga
         </Text>
       </FeatureHero>
-      <ShapeAnimation />
       <StoryImpactBanner
         heading="Exploring the reengineering of immune cells"
         superhead="Change Makers"

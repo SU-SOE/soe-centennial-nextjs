@@ -204,11 +204,15 @@ const AnimatedHero = () => {
       )}
       {/* <AnimateInView animation="fadeIn" duration={0.8}> */}
       <div className="relative w-screen h-screen flex flex-row items-center justify-center cc">
-        <div className="w-1/3 h-fit">{/* <LeftCol /> */}</div>
+        <div className="w-1/3 h-fit">
+          <LeftCol />
+        </div>
         <div className="relative w-1/3 h-fit">
           <MidCol onComplete={handleAnimationComplete} />
         </div>
-        <div className="w-1/3 h-fit">{/* <RightCol /> */}</div>
+        <div className="w-1/3 h-fit">
+          <RightCol />
+        </div>
       </div>
       {/* </AnimateInView> */}
     </div>
