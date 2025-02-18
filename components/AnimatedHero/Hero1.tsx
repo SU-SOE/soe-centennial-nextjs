@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ShapeAnimation } from "./ShapeAnimation";
 
-const words = ["lead,", "discover,", "inspire,", "educate,"];
+// const words = ["lead,", "discover,", "inspire,", "educate,"];
 
 export const Hero1 = () => {
   const [showSvg, setShowSvg] = useState(false);

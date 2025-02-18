@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { LineAnimation } from "./LineAnimation";
+// import { LineAnimation } from "./LineAnimation";
 import { AnimateInView } from "../Animate/AnimateInView";
 
 const AnimatedHero = () => {
