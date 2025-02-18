@@ -71,8 +71,8 @@ export const LineAnimation = ({ order, onComplete }: LineAnimationProps) => {
   return (
     <motion.svg
       ref={ref}
-      width="100%"
-      height="100%"
+      width="700px"
+      height="600px"
       viewBox="-70 0 600 700"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
