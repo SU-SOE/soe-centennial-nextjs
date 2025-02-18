@@ -1,7 +1,7 @@
-import { Hero1 } from "@/components/AnimatedHero/Hero1";
+import AnimatedHero from "@/components/AnimatedHero/AnimatedHero";
 
 const ExamplePage = async () => {
-  return <Hero1 />;
+  return <AnimatedHero />;
 };
 
 export default ExamplePage;
