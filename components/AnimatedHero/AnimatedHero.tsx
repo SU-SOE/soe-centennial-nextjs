@@ -10,7 +10,7 @@ const AnimatedHero = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
 
   return (
-    <div className="relative bg-cardinal-red-dark w-screen h-screen">
+    <div className="relative bg-cardinal-red-dark w-screen h-screen rs-mb-7">
       {animationComplete && (
         <AnimateInView animation="fadeIn">
           <div className="h-full w-full absolute top-0 left-0 z-0">
@@ -137,7 +137,7 @@ const AnimatedHero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 1, 0] }}
               transition={{
-                delay: 7,
+                delay: 7.5,
                 duration: 3,
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
@@ -256,7 +256,7 @@ const AnimatedHero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 1, 0] }}
               transition={{
-                delay: 6,
+                delay: 5.5,
                 duration: 3,
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
@@ -276,7 +276,7 @@ const AnimatedHero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 1, 0] }}
               transition={{
-                delay: 8,
+                delay: 7.4,
                 duration: 3,
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
