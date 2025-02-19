@@ -21,7 +21,7 @@ const AnimatedHero = () => {
             ease: "easeInOut",
           }}
         >
-          <div className="h-full w-full absolute top-0 z-0 left-0 z-0">
+          <div className="h-full w-full absolute top-0 left-0 z-0">
             <Image
               className="ed11y-ignore object-cover z-0"
               src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481950/Ryan-High-Voltage-Laboratory_rinsml.png"
@@ -33,7 +33,7 @@ const AnimatedHero = () => {
         </motion.div>
       )}
       <AnimateInView animation="fadeIn" duration={0.8}>
-        <div className=" w-screen h-screen flex flex-row items-center justify-center cc">
+        <div className=" w-screen h-screen flex flex-row gap-10 items-center justify-center cc">
           <div className="relative w-1/3 h-600">
             <motion.div
               key="william-hewlett"
@@ -45,7 +45,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
             >
               <Image
                 alt=""
@@ -84,7 +84,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
             >
               <Image
                 alt=""
@@ -129,7 +129,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
             >
               <Image
                 alt=""
@@ -149,7 +149,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
               onAnimationComplete={() => setAnimationComplete(true)}
             >
               <Image
@@ -167,7 +167,7 @@ const AnimatedHero = () => {
                 viewBox="0 0 402 517"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute z-10"
+                className="absolute top-0 z-0"
               >
                 <motion.path
                   d="M8.8424 441.169C8.84239 467.353 3.94519 508.5 57.8143 508.5C111.683 508.5 291.655 508.5 313.693 508.5C373.683 508.5 393.272 492.29 393.272 451.144C393.272 421.219 393.272 178.077 393.272 156.88C393.272 116.98 370.961 92.7327 307.571 116.98C244.181 141.227 229.964 154.796 176.571 184.629C118.727 216.95 83.5247 190.318 83.5247 159.691C83.5247 117.279 83.5247 73.3376 83.5247 59.6219C83.5247 20.9687 119.029 8.50015 137.394 8.50009C188.829 8.49994 302.674 8.50012 319.814 8.50012C362.665 8.50013 360.216 64.6095 319.814 65.8563C279.412 67.1032 125.151 65.8563 72.506 65.8563C19.8612 65.8563 8.84246 65.8563 8.84245 121.966C8.84245 150.644 8.8424 421.34 8.8424 441.169Z"
@@ -200,7 +200,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
             >
               <Image
                 alt=""
@@ -220,7 +220,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
             >
               <Image
                 alt=""
@@ -240,7 +240,7 @@ const AnimatedHero = () => {
                 times: [0, 0.2, 0.8, 1],
                 ease: "easeInOut",
               }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center z-50"
             >
               <Image
                 alt=""
