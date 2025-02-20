@@ -29,6 +29,7 @@ export const bgColors = {
   blue: "cen-blue-xlight",
   "fog-light": "bg-fog-light text-stone-dark",
   "red-gradient": "bg-cen-red-gradient text-white",
+  red: "bg-cardinal-red-x-dark text-white",
   "stone-dark": "bg-stone-dark text-white",
 };
 
