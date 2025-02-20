@@ -5,7 +5,7 @@ import Metadata from "@/components/Layout/Metadata";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
 import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
-import { EmbedMedia } from "@/components/EmbedVideoHero/EmbedMediaHero";
+import { EmbedMediaHero } from "@/components/EmbedVideoHero/EmbedMediaHero";
 
 export default function MvpHome() {
   const events = [
@@ -25,7 +25,7 @@ export default function MvpHome() {
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
       <Masthead isOverlap />
-      <EmbedMedia
+      <EmbedMediaHero
         mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         isPreview
         previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740008904/100-Hero_az6xgc.png"
