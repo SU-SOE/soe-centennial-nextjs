@@ -3,7 +3,6 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { cnb } from "cnbuilder";
 import ReactPlayer from "react-player/lazy";
-import { Container } from "@/components/Container";
 import { FlexBox } from "@/components/FlexBox";
 import Image from "next/image.js";
 import { PlayIcon } from "@heroicons/react/16/solid";
