@@ -4,7 +4,7 @@ import { Source_Sans_3, DM_Sans, DM_Mono } from "next/font/google";
 import { cnb } from "cnbuilder";
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { GlobalFooter } from "@/components/GlobalFooter";
-import { LocalFooter, LocalFooterMvp } from "@/components/LocalFooter";
+import { LocalFooterMvp } from "@/components/LocalFooter";
 
 const dm_sans = DM_Sans({
   subsets: ["latin"],
@@ -99,8 +99,6 @@ export default function RootLayout({
         {children}
         <footer className="relative">
           <LocalFooterMvp />
-          <p className="text-center m-0">temp space here for footer review</p>
-          <LocalFooter />
           <GlobalFooter />
         </footer>
       </body>
