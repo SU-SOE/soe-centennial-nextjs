@@ -83,7 +83,11 @@ export const StoryPosterCard = ({
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
             <AnimateInView animation="slideUp" delay={0.8}>
               <Heading size="f5" weight="normal" className="rs-mb-3 lg:rs-mb-5">
-                <Link href={link} className="stretched-link" linkType="poster">
+                <Link
+                  href={link}
+                  className="stretched-link"
+                  linkType={bgColor === "white" ? "poster" : "poster-invert"}
+                >
                   {heading}
                 </Link>
               </Heading>

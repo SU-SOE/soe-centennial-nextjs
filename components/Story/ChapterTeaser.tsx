@@ -14,7 +14,7 @@ export type ChapterTeaserProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
     heading: string;
     superhead?: string;
-    body?: string;
+    body?: React.ReactNode | string;
     chapter?: string;
     href: string;
     headerTag?: "h2" | "h3";

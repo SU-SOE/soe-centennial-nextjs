@@ -12,6 +12,7 @@ type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> &
       | "story"
       | "story-invert"
       | "poster"
+      | "poster-invert"
       | "heading"
       | "default";
   };
@@ -34,6 +35,10 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
         "transition-all ease-in-out duration-1000 font-normal text-white underline decoration-transparent underline-offset-[5px] hocus:text-white hocus:decoration-white hocus:cursor-pointer group-hocus:decoration-white group-hocus:cursor-pointer decoration-2";
       break;
     case "poster":
+      linkStyles =
+        "transition-all ease-in-out duration-1000 text-black hocus:text-black font-normal underline decoration-transparent underline-offset-[5px] hocus:decoration-black hocus:cursor-pointer group-hocus:decoration-black group-hocus:cursor-pointer decoration-4";
+      break;
+    case "poster-invert":
       linkStyles =
         "transition-all ease-in-out duration-1000 text-white hocus:text-white font-normal underline decoration-transparent underline-offset-[5px] hocus:decoration-white hocus:cursor-pointer group-hocus:decoration-white group-hocus:cursor-pointer decoration-4";
       break;
