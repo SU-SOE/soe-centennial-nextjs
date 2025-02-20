@@ -24,7 +24,7 @@ export default function MvpHome() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead isOverlap />
+      <Masthead bgColor="red" />
       <EmbedMediaHero
         mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         isPreview

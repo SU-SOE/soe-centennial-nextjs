@@ -64,8 +64,8 @@ export const EmbedMediaHero = ({
   }
 
   return (
-    <div {...props} className={cnb("w-screen h-screen rs-mb-7", className)}>
-      <figure className="w-screen h-screen">
+    <div {...props} className={cnb("aspect-[16/9] rs-mb-7", className)}>
+      <figure className="w-full h-full">
         <div className={styles.mediaWrapper}>
           {hasWindow && (
             <ReactPlayer

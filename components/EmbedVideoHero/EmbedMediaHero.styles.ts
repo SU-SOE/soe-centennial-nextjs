@@ -1,4 +1,5 @@
-export const mediaWrapper = "*:!w-screen *:!h-screen overflow-hidden relative";
+export const mediaWrapper =
+  "*:!w-full *:!h-full overflow-hidden relative aspect-[16/9]";
 export const caption =
   "*:*:leading-display first:*:*:mt-0 mt-06em max-w-prose-wide";
 export const iconWrapper =
