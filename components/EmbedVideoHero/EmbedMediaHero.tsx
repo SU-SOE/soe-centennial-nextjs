@@ -7,7 +7,7 @@ import { Container } from "@/components/Container";
 import { FlexBox } from "@/components/FlexBox";
 import Image from "next/image.js";
 import { PlayIcon } from "@heroicons/react/16/solid";
-import * as styles from "./EmbedMediaHeroHero.styles";
+import * as styles from "./EmbedMediaHero.styles";
 
 type EmbedMediaHeroProps = React.HTMLAttributes<HTMLDivElement> & {
   mediaUrl: string;
