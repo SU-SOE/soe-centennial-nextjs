@@ -14,7 +14,12 @@ export const LocalFooter = () => (
     aria-label="Local footer menu"
   >
     <FlexBox className={styles.flexWrapper}>
-      <EngLogoLockup color="white-red" isLink className={styles.logo} />
+      <div className={styles.logo}>
+        <EngLogoLockup color="white-red" isLink />
+        <Text font="dm-mono" size="small" className="rs-mt-0">
+          A century of discovery, innovation, and impact
+        </Text>
+      </div>
       <FlexBox direction="col" className={styles.wrapper}>
         <FlexBox className={styles.linksWrapper}>
           <Text weight="normal" size="f2" mb="0">

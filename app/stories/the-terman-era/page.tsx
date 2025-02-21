@@ -168,7 +168,7 @@ export default function page() {
 
   return (
     <Container as="article" width="full">
-      <Masthead isOverlap />
+      <Masthead logoColor="white-red" isOverlap />
       <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"
@@ -231,7 +231,7 @@ export default function page() {
             source="— Fred Terman"
           />
         </OneCol>
-        <StorySidebar>
+        <StorySidebar hasLineArt>
           <MediaCaptionImage
             rounded
             isPortriat

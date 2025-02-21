@@ -38,7 +38,7 @@ const TimelinePage = async () => {
         </svg>
       </div>
       <div className="relative top-0 z-50">
-        <Masthead isLight bgColor="none" />
+        <Masthead bgColor="none" />
         <main id="main-content">
           <TimelineList timelineData={timelineData} />
           <ContributeStoryBanner bgColor="blue" />

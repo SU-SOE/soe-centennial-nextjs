@@ -36,7 +36,7 @@ export default function MvpHome() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead bgColor="red" />
+      <Masthead logoColor="white-red" bgColor="red" />
       <EmbedMediaHero
         mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         isPreview
@@ -44,11 +44,15 @@ export default function MvpHome() {
         previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
       <Container bgColor="blue" width="full" pt={8} pb={9}>
-        <Container width="wysiwyg" className="text-center" pb={8}>
+        <Container
+          width="full"
+          className="lg:max-w-[725px] text-center mx-auto"
+          pb={8}
+        >
           <Heading font="dm-mono" size={2}>
             Stanford Engineering Centennial
           </Heading>
-          <Text leading="tight">
+          <Text leading="tight" size={1}>
             A century ago, a visionary group of Stanford University faculty
             members recognized the need for an engineering school that would
             cultivate well-rounded engineers prepared for leadership in all
@@ -56,7 +60,7 @@ export default function MvpHome() {
             a testament to their vision, while growing in size, scope, and
             impact far beyond anything those pioneers could have imagined.
           </Text>
-          <Text leading="tight">
+          <Text leading="tight" size={1} mb="none">
             In 2025, we will mark the history that has brought us to where we
             are today and look ahead to the future with optimism and ambition.
           </Text>

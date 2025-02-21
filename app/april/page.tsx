@@ -83,7 +83,7 @@ export default function Home() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead isLight bgColor="fog-light" />
+      <Masthead bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
       <StoryPosterCard
         heading="The foundation of a new era in engineering"
