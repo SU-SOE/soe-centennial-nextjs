@@ -36,11 +36,12 @@ export default function MvpHome() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead logoColor="white-red" bgColor="red" />
+      <Masthead logoColor="white-red" bgColor="homepage" />
       <EmbedMediaHero
+        className="bg-[#971515]"
         mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         isPreview
-        previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740008904/100-Hero_az6xgc.png"
+        previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740173239/Sizzle-Reel-Hero_lks7p4.png"
         previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
       <Container bgColor="blue" width="full" pt={8} pb={9}>

@@ -1,5 +1,5 @@
 export const mediaWrapper =
-  "*:!w-full *:!h-full overflow-hidden relative aspect-[16/9] bg-cardinal-red-x-dark";
+  "*:!w-full *:!h-full overflow-hidden relative aspect-[16/9]";
 export const caption =
   "*:*:leading-display first:*:*:mt-0 mt-06em max-w-prose-wide";
 export const iconWrapper =

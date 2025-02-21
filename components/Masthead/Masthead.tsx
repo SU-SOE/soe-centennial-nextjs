@@ -24,7 +24,7 @@ export const Masthead = ({
   ...props
 }: MastheadProps) => {
   const isLight = !(
-    isOverlap || ["red", "stone-dark", "black"].includes(bgColor)
+    isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
   );
 
   return (
