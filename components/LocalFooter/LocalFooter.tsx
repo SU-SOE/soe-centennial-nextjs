@@ -55,12 +55,14 @@ export const LocalFooter = () => (
           </section>
           <section className={styles.column}>
             <Heading size={2} as="h2" mb="base">
-              Make a gift
+              Support Stanford Engineering
             </Heading>
             <Text mb={2}>
-              Lorem ipsum dolar sit amet vestibulum periment ium dismaret
+              Learn how your generosity can have transformational impact.
             </Text>
-            <Button href="/">Ways to give</Button>
+            <Button href="https://engineering.stanford.edu/get-involved/support-engineering">
+              Support Engineering
+            </Button>
           </section>
         </FlexBox>
       </FlexBox>

@@ -4,7 +4,7 @@ import { FlexBox } from "@/components/FlexBox";
 import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
-import { MainNav } from "@/components/MainNav";
+// import { MainNav } from "@/components/MainNav";
 import { Text } from "@/components/Typography";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
@@ -24,9 +24,10 @@ export const Masthead = ({
   className,
   ...props
 }: MastheadProps) => {
-  const isLight = !(
-    isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
-  );
+  // TODO: Add back in for April launch in combination with <MainNav isLight={isLight} />
+  //  const isLight = !(
+  //   isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
+  // );
 
   return (
     <header
@@ -56,7 +57,7 @@ export const Masthead = ({
           </Text>
         </div>
         <FlexBox alignItems="center" className={styles.flexbox}>
-          <MainNav isLight={isLight} />
+          {mainNav}
         </FlexBox>
       </FlexBox>
     </header>

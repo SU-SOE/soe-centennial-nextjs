@@ -17,6 +17,7 @@ import { StoryGrid } from "@/components/Story/StoryGrid";
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
+import { MainNav } from "@/components/MainNav";
 
 export const metadata: Metadata = {
   title: "The Terman Era - The 3rd Decade",
@@ -168,7 +169,7 @@ export default function page() {
 
   return (
     <Container as="article" width="full">
-      <Masthead logoColor="white-red" isOverlap />
+      <Masthead logoColor="white-red" isOverlap mainNav={<MainNav />} />
       <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"
