@@ -7,6 +7,7 @@ import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
+import { OneCol } from "@/components/Layout";
 
 export default function MvpHome() {
   const events = [
@@ -45,11 +46,7 @@ export default function MvpHome() {
         previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
       <Container bgColor="blue" width="full" pt={8} pb={9}>
-        <Container
-          width="full"
-          className="lg:max-w-[725px] text-center mx-auto"
-          pb={8}
-        >
+        <OneCol className="text-center mx-auto rs-pb-8">
           <Heading font="dm-mono" size={2}>
             Stanford Engineering Centennial
           </Heading>
@@ -65,7 +62,7 @@ export default function MvpHome() {
             In 2025, we will mark the history that has brought us to where we
             are today and look ahead to the future with optimism and ambition.
           </Text>
-        </Container>
+        </OneCol>
         <StoryPosterCard
           heading="Letter from Dean Widom"
           superhead="Celebrating 100"
