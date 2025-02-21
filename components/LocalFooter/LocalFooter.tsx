@@ -16,7 +16,7 @@ export const LocalFooter = () => (
     <FlexBox className={styles.flexWrapper}>
       <div className={styles.logo}>
         <EngLogoLockup color="white-red" isLink />
-        <Text font="dm-mono" size="small" className="rs-mt-0">
+        <Text font="dm-mono" size="small" className="rs-mt-0" leading="tight">
           A century of discovery, innovation, and impact
         </Text>
       </div>

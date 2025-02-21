@@ -5,6 +5,7 @@ import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
 import { MainNav } from "@/components/MainNav";
+import { Text } from "@/components/Typography";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   logoColor?: "default" | "white" | "white-red";
@@ -42,7 +43,18 @@ export const Masthead = ({
         alignItems="center"
         className={styles.wrapper}
       >
-        <EngLogoLockup color={logoColor} isLink />
+        <div className={styles.logo}>
+          <EngLogoLockup color={logoColor} isLink />
+          <Text
+            font="dm-mono"
+            size="small"
+            className="mt-10"
+            mb="0"
+            leading="tight"
+          >
+            A century of discovery, innovation, and impact
+          </Text>
+        </div>
         <FlexBox alignItems="center" className={styles.flexbox}>
           <MainNav isLight={isLight} />
         </FlexBox>
