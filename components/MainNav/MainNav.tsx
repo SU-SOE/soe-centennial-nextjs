@@ -57,14 +57,6 @@ export const MainNav = ({ isLight = false }: Props) => {
                 </div>
                 <FlexBox className={styles.panelOuter}>
                   <FlexBox as="ul" className={styles.col1}>
-                    {/*  April Release */}
-                    <li>
-                      <Text weight="normal" size="f2" mb="0">
-                        <ActionLink whiteText href="/timeline">
-                          Explore the Centennial Timeline
-                        </ActionLink>
-                      </Text>
-                    </li>
                     {/* May Release */}
                     <li>
                       <Text weight="normal" size="f2" mb="0">

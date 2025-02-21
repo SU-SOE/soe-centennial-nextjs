@@ -18,7 +18,7 @@ type Props = {
   isLight?: boolean;
 };
 
-export const MainNav = ({ isLight = false }: Props) => {
+export const MainNavMvp = ({ isLight = false }: Props) => {
   // Reduce motion users will only see opacity change when opening/closing the menu
   const preferReducedMotion = useReducedMotion();
 
@@ -65,28 +65,6 @@ export const MainNav = ({ isLight = false }: Props) => {
                         </ActionLink>
                       </Text>
                     </li>
-                    {/* May Release */}
-                    <li>
-                      <Text weight="normal" size="f2" mb="0">
-                        <ActionLink whiteText href="/stories">
-                          Impact stories
-                        </ActionLink>
-                      </Text>
-                    </li>
-                    <li>
-                      <Text weight="normal" size="f2" mb="0">
-                        <ActionLink whiteText href="/timeline">
-                          Timeline
-                        </ActionLink>
-                      </Text>
-                    </li>
-                    <li>
-                      <Text weight="normal" size="f2" mb="0">
-                        <ActionLink whiteText href="/tbd">
-                          Centennial book online
-                        </ActionLink>
-                      </Text>
-                    </li>{" "}
                   </FlexBox>
                   <FlexBox className={styles.col2}>
                     <section className={styles.featureCol}>
