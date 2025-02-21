@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "scripts/validate-timeline.mjs"
-, "components/Footer"  ],
+, "components/Footer", "utilities/exportCloudinaryToExcel.ts"  ],
   "exclude": ["node_modules"]
 }
