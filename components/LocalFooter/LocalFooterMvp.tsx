@@ -14,8 +14,12 @@ export const LocalFooterMvp = () => (
     aria-label="Local footer menu"
   >
     <FlexBox className={styles.flexWrapper}>
-      <EngLogoLockup color="white-red" isLink className={styles.logo} />
-
+      <div className={styles.logo}>
+        <EngLogoLockup color="white-red" isLink />
+        <Text font="dm-mono" size="small" className="rs-mt-0" leading="tight">
+          A century of discovery, innovation, and impact
+        </Text>
+      </div>
       <div className="w-full max-w-900">
         <FlexBox className={styles.contentWrapper}>
           <section className={styles.column}>
@@ -34,12 +38,14 @@ export const LocalFooterMvp = () => (
           </section>
           <section className={styles.column}>
             <Heading size={2} as="h2" mb="base">
-              Make a gift
+              Support Stanford Engineering
             </Heading>
             <Text mb={2}>
-              Lorem ipsum dolar sit amet vestibulum periment ium dismaret
+              Learn how your generosity can have transformational impact.
             </Text>
-            <Button href="/">Ways to give</Button>
+            <Button href="https://engineering.stanford.edu/get-involved/support-engineering">
+              Support Engineering
+            </Button>
           </section>
         </FlexBox>
       </div>

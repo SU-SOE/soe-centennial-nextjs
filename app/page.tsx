@@ -1,81 +1,35 @@
 import { Masthead } from "@/components/Masthead";
-import {
-  TimelineHorizontalCard,
-  TimelineCardProps,
-} from "@/components/Timeline";
-import { PageTitle } from "@/components/PageTitle";
-import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { TwoCol } from "@/components/Layout";
-import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
-import { Container } from "@/components/Container";
-import { StoryFeature } from "@/components/Story/StoryFeature";
-import { Heading, Text } from "@/components/Typography";
+import { StoryPosterCard } from "@/components/Story";
 import Metadata from "@/components/Layout/Metadata";
-import { AnimatedLineartBanner } from "@/components/Banner";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
-import { AnimateInView } from "@/components/Animate";
-import { Link } from "@/components/Cta/Link";
-import { ExploreMore } from "@/components/Story/ExploreMore";
+import { EventsSection } from "@/components/Event";
+import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
+import { EmbedMediaHero } from "@/components/EmbedVideoHero";
+import { Container } from "@/components/Container";
+import { Heading, Text } from "@/components/Typography";
+import { OneCol } from "@/components/Layout";
 
-export default function Home() {
-  const timelineHorizontalCards: TimelineCardProps[] = [
+export default function MvpHome() {
+  const events = [
     {
-      align: "left",
-      heading:
-        "First remote classes from the Stanford instructional Television Network",
-      year: "1969",
-      image:
-        "https://res.cloudinary.com/dsqi5touf/image/upload/v1737062695/first-remote-class_kpaahw.jpg",
+      heading: "Don’t miss out on upcoming centennial events!",
+      superhead: "Stanford Engineering alumni",
+      body: (
+        <>
+          Update your contact information in MyAccount so that you receive all
+          future centennial communications. Please contact{" "}
+          <a
+            className="text-white hocus:text-digital-red-xlight"
+            href="mailto:engineering-alumni@stanford.edu"
+          >
+            engineering-alumni@stanford.edu
+          </a>{" "}
+          if you have any questions.
+        </>
+      ),
     },
-    {
-      align: "right",
-      heading: "Mae Jemison: the first African-American woman in space",
-      year: "1983",
-      image:
-        "https://res.cloudinary.com/dsqi5touf/image/upload/v1737062695/mae-johnson-nasa_mdcnkj.jpg",
-    },
+  ];
 
-    {
-      align: "left",
-      heading: "The Stanford Dish Radiotelescope completed in 1962",
-      year: "1962",
-      image:
-        "https://res.cloudinary.com/dsqi5touf/image/upload/v1737062695/stanford-dish_cgacpq.jpg",
-    },
-  ];
-  const timelineFeatureCards = [
-    "1937-foundational-technology-in-the-burgeoning-microwave-industry",
-    "1910-1915-the-engineering-corner",
-    "1943-training-for-war",
-    "1939-aviation-and-aeronautical-engineering",
-    "1944-stanford-engineerings-third-dean",
-  ];
-  const storyData: StoryCardProps[] = [
-    {
-      heading: "New Spaces and Expanding Influence",
-      superhead: "The 5th Decade",
-      chapter: "Chapter 5",
-      href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/new-spaces-and-expanding-influence_dcvv7j.jpg",
-    },
-    {
-      heading: "Bridging Worlds: Chips, Code, and Cosmos",
-      superhead: "The 6th Decade",
-      chapter: "Chapter 6",
-      href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861404/bridging-worlds_ma3ixq.jpg",
-    },
-    {
-      heading: "Redevelopment and an Earthquake",
-      superhead: "The 7th Decade",
-      chapter: "Chapter 7",
-      href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/dsqi5touf/image/upload/v1738861405/redevelopment_vprsob.jpg",
-    },
-  ];
   return (
     <div>
       <Metadata
@@ -83,79 +37,64 @@ export default function Home() {
         title="100 years of Impact"
         description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <Masthead isLight bgColor="fog-light" />
-      <PageTitle heading="100 years of" bigText="Impact" />
-      <StoryPosterCard
-        heading="The foundation of a new era in engineering"
-        superhead="100 Years of Impact"
-        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/dsqi5touf/image/upload/v1737060927/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd.jpg"
-        caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-        chapter="Chapter 1"
-        link="/"
-        hasBgImage
+      <Masthead logoColor="white-red" bgColor="homepage" />
+      <EmbedMediaHero
+        className="bg-[#971515]"
+        mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        isPreview
+        previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740173239/Sizzle-Reel-Hero_lks7p4.png"
+        previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
-      <Container mt={10} mb={10} width="full">
-        <AnimatedLineartBanner className="mb-[-4rem]">
-          <div className="flex flex-col items-start md:rs-px-1">
-            <Heading
-              align="left"
-              font="dm-sans"
-              size="f5"
-              weight="normal"
-              leading="tight"
-              className="mt-10"
-            >
-              Experience{" "}
-              <Link
-                linkType="heading"
-                href="/timeline"
-                className="text-digital-red-light font-normal"
-              >
-                100 years
-              </Link>{" "}
-              of milestones
-            </Heading>
-            <Text
-              font="dm-mono"
-              weight="normal"
-              mb="base"
-              size={2}
-              className="order-first"
-              align="left"
-            >
-              Timeline
-            </Text>
-          </div>
-        </AnimatedLineartBanner>
-        {timelineHorizontalCards.map((item, idx) => (
-          <TimelineHorizontalCard key={idx} width="site" {...item} />
-        ))}
-        <TimelineFeature anchors={timelineFeatureCards} />
+      <Container bgColor="blue" width="full" pt={8} pb={9}>
+        <OneCol className="text-center mx-auto rs-pb-8">
+          <Heading font="dm-mono" size={2}>
+            Stanford Engineering Centennial
+          </Heading>
+          <Text leading="tight" size={1}>
+            A century ago, a visionary group of Stanford University faculty
+            members recognized the need for an engineering school that would
+            cultivate well-rounded engineers prepared for leadership in all
+            aspects of life. Today, the Stanford School of Engineering stands as
+            a testament to their vision, while growing in size, scope, and
+            impact far beyond anything those pioneers could have imagined.
+          </Text>
+          <Text leading="tight" size={1} mb="none">
+            In 2025, we will mark the history that has brought us to where we
+            are today and look ahead to the future with optimism and ambition.
+          </Text>
+        </OneCol>
+        <StoryPosterCard
+          heading="Letter from Dean Widom"
+          superhead="Celebrating 100"
+          body="Lorem ipsum dolar sit amet"
+          link="/letter-from-dean-widom"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740013381/dean-widom_e1jksa.png"
+          bgColor="white"
+        />
       </Container>
-      <StoryFeature>
-        <TwoCol className="rs-mb-8 items-center max-w-[140rem]">
-          <AnimateInView animation="slideUp" duration={2}>
-            <Heading size="f5" weight="normal">
-              Fundamental work in science and transformational breakthroughs for
-              one hundred years.
-            </Heading>
-          </AnimateInView>
-          <StoryCard
-            isHeadingLarge
-            animation="slideUp"
-            duration={2}
-            delay={0.5}
-            superhead="Impact"
-            heading="Lorem ipsum dolor sit amet consect hendrerit"
-            imageUrl="https://placecats.com/neo_banana/300/200"
-            href="/"
-            className="max-w-full"
-          />
-        </TwoCol>
-        <ExploreMore stories={storyData} />
-      </StoryFeature>
-      <ContributeStoryBanner bgColor="blue" />
+      <ChapterTeaser
+        isHeadingLarge
+        superhead="Centennial Book"
+        heading="Chapters released monthly, starting in April"
+        body={
+          <>
+            <i>
+              Stanford Engineering: A Century of Discovery, Innovation, and
+              Impact
+            </i>{" "}
+            dedicates a chapter to each decade of the school’s history. We’ll
+            release Chapter 1 in April and a new chapter each month throughout
+            the Centennial year.
+          </>
+        }
+        imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986293/BookCover_optimized_piu8wz_vcsn1k.jpg"
+        href="/"
+      />
+      <EventsSection
+        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
+        events={events}
+      />
+      <ContributeStoryBanner bgColor="white" hasLineArt />
     </div>
   );
 }

@@ -14,7 +14,12 @@ export const LocalFooter = () => (
     aria-label="Local footer menu"
   >
     <FlexBox className={styles.flexWrapper}>
-      <EngLogoLockup color="white-red" isLink className={styles.logo} />
+      <div className={styles.logo}>
+        <EngLogoLockup color="white-red" isLink />
+        <Text font="dm-mono" size="small" className="rs-mt-0" leading="tight">
+          A century of discovery, innovation, and impact
+        </Text>
+      </div>
       <FlexBox direction="col" className={styles.wrapper}>
         <FlexBox className={styles.linksWrapper}>
           <Text weight="normal" size="f2" mb="0">
@@ -50,12 +55,14 @@ export const LocalFooter = () => (
           </section>
           <section className={styles.column}>
             <Heading size={2} as="h2" mb="base">
-              Make a gift
+              Support Stanford Engineering
             </Heading>
             <Text mb={2}>
-              Lorem ipsum dolar sit amet vestibulum periment ium dismaret
+              Learn how your generosity can have transformational impact.
             </Text>
-            <Button href="/">Ways to give</Button>
+            <Button href="https://engineering.stanford.edu/get-involved/support-engineering">
+              Support Engineering
+            </Button>
           </section>
         </FlexBox>
       </FlexBox>

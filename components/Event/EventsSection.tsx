@@ -7,12 +7,14 @@ import Image from "next/image";
 import * as styles from "./Event.styles";
 
 interface EventsSectionProps {
+  heading?: string;
   events: EventCardProps[];
   hasBgImage?: boolean;
   src?: string;
   alt?: string;
 }
 export const EventsSection = ({
+  heading,
   events,
   hasBgImage,
   src,
@@ -36,7 +38,7 @@ export const EventsSection = ({
           </div>
         )}
         <div className="relative z-50">
-          <AnimatedLineartBanner lineartType="events" stroke={src && "#A19E92"}>
+          <AnimatedLineartBanner lineartType="events" stroke={src && "#F83535"}>
             <Heading
               align="left"
               font="dm-sans"
@@ -45,7 +47,7 @@ export const EventsSection = ({
               leading="tight"
               className="mt-10"
             >
-              Events
+              {heading || "Events"}
             </Heading>
           </AnimatedLineartBanner>
           <Container className={styles.eventsWrapper}>

@@ -31,13 +31,13 @@ export const ContributeStoryBanner = ({
 
       <div className={styles.contentWrapper}>
         <FlexBox direction="col" className={styles.textWrapper}>
-          <Heading mb={5} weight="normal">
-            Contribute{" "}
+          <Heading mb={5} size="f4" weight="normal">
+            Share{" "}
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
               className={styles.underline(bgColor)}
             >
-              your stories
+              your Stanford Engineering memories
             </Link>
           </Heading>
           <Text
@@ -46,12 +46,15 @@ export const ContributeStoryBanner = ({
             font="dm-mono"
             className={styles.subText(hasLineArt)}
           >
-            Get involved
+            Be a part of the celebration
           </Text>
           <Text size="base" mb="none">
-            Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam.
-            Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id
-            mi blandit lobortis eget in enim.
+            As we celebrate the school’s Centennial anniversary, we invite you
+            to mark this milestone by sharing one of your favorite memories of
+            Stanford Engineering, or a hope you have for the school&apos;s next
+            century. We’d love to hear from you and will be re-sharing selected
+            memories in a variety of ways both publicly and privately throughout
+            the year. Please note: not all submissions will be shared publicly.
           </Text>
         </FlexBox>
         <div className={styles.buttonWrapper}>
