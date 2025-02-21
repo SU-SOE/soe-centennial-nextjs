@@ -1,15 +1,15 @@
 export const fontFamilies = {
   sans: "font-sans",
   serif: "font-serif",
-  "dm-sans": "font-dm-sans",
-  "dm-mono": "font-dm-mono",
+  "dm-sans": "font-dm-sans tracking-tight",
+  "dm-mono": "font-dm-mono tracking-[0.3rem]",
 };
 
 export const fontWeights = {
   normal: "font-normal",
+  medium: "font-medium",
   semibold: "font-semibold",
   bold: "font-bold",
-  black: "font-black", // 900, needed for Druk font
 };
 
 // Modular typography - already includes responsive font sizes
@@ -24,6 +24,10 @@ export const fontSizes = {
   7: "type-7",
   8: "type-8",
   9: "type-9",
+  f0: "fluid-type-0",
+  f1: "fluid-type-1",
+  f2: "fluid-type-2",
+  f3: "fluid-type-3",
   f4: "fluid-type-4",
   f5: "fluid-type-5",
   f6: "fluid-type-6",
@@ -34,9 +38,10 @@ export const fontSizes = {
   splash: "splash",
   hero: "hero",
   // Centennial typograpy
-  "quote-lg": "soe-quote-lg",
-  "quote-md": "soe-quote-md",
-  "quote-sm": "soe-quote-sm",
+  "quote-lg": "cen-quote-lg",
+  "quote-md": "cen-quote-md",
+  "quote-sm": "cen-quote-sm",
+  small: "text-17 md:text-18",
 };
 
 // Line heights
@@ -74,13 +79,13 @@ export const textVariants = {
   /**
    * Decanter typography styles
    */
-  big: "big-paragraph",
   subheading: "subheading",
   /**
    * Centennial typography styles
-   * (-soe ones are Decanter styles with Centennial modifications)
+   * (cen- ones are Decanter styles with Centennial modifications)
    */
-  caption: "caption",
+  big: "cen-big-paragraph",
+  caption: "cen-caption",
   card: "card",
   changemaker: "text-18 sm:text-15 3xl:text-16 leading-snug 3xl:leading-cozy",
   changemakerHorizontal:

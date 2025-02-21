@@ -1,34 +1,100 @@
 import { Masthead } from "@/components/Masthead";
-import { TimelineBanner } from "@/components/TimelineBanner";
-import { PageTitle } from "@/components/PageTitle";
+import { StoryPosterCard } from "@/components/Story";
+import Metadata from "@/components/Layout/Metadata";
+import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
+import { EventsSection } from "@/components/Event";
+import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
+import { EmbedMediaHero } from "@/components/EmbedVideoHero";
+import { Container } from "@/components/Container";
+import { Heading, Text } from "@/components/Typography";
+import { OneCol } from "@/components/Layout";
 
-export default function Home() {
+export default function MvpHome() {
+  const events = [
+    {
+      heading: "Don’t miss out on upcoming centennial events!",
+      superhead: "Stanford Engineering alumni",
+      body: (
+        <>
+          Update your contact information in MyAccount so that you receive all
+          future centennial communications. Please contact{" "}
+          <a
+            className="text-white hocus:text-digital-red-xlight"
+            href="mailto:engineering-alumni@stanford.edu"
+          >
+            engineering-alumni@stanford.edu
+          </a>{" "}
+          if you have any questions.
+        </>
+      ),
+    },
+  ];
+
   return (
     <div>
-      <Masthead isLight />
-      <PageTitle heading="100 years of" bigText="Impact" />
-      <TimelineBanner
-        heading="The first African-American woman in space"
-        year="1983"
-        body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
-        image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
-        width="narrow"
+      <Metadata
+        isHome
+        title="100 years of Impact"
+        description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
       />
-      <TimelineBanner
-        heading="First remote classs from the Stanford Instructional Television Network"
-        year="1969"
-        body="Cras felis tortor, bibendum quis porttitor at, ullamcorper eu diam. Aenean iaculis efficitur quam, quis dignissim lacus. Cras nec dui id mi blandit lobortis eget in enim."
-        image="https://images.unsplash.com/photo-1491770042090-0810a7e20f46?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        align="right"
-        width="narrow"
+      <Masthead logoColor="white-red" bgColor="homepage" />
+      <EmbedMediaHero
+        className="bg-[#971515]"
+        mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        isPreview
+        previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740173239/Sizzle-Reel-Hero_lks7p4.png"
+        previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
-      <TimelineBanner
-        heading="The Stanford Dish Radiotelescope completed in 1962"
-        year="1983"
-        body="Enabling vastly expanded studies of scattering effects in the earth’s ionosphere and was used to detect Soviet radar and still used today for satellite calibrations, spacecraft command and telemetry, and radio astronomy measurements."
-        image="https://airandspace.si.edu/sites/default/files/styles/slideshow_basic/public/images/NASA%20166851h.jpg?itok=yL6MTpUr"
-        width="narrow"
+      <Container bgColor="blue" width="full" pt={8} pb={9}>
+        <OneCol className="text-center mx-auto rs-pb-8">
+          <Heading font="dm-mono" size={2}>
+            Stanford Engineering Centennial
+          </Heading>
+          <Text leading="tight" size={1}>
+            A century ago, a visionary group of Stanford University faculty
+            members recognized the need for an engineering school that would
+            cultivate well-rounded engineers prepared for leadership in all
+            aspects of life. Today, the Stanford School of Engineering stands as
+            a testament to their vision, while growing in size, scope, and
+            impact far beyond anything those pioneers could have imagined.
+          </Text>
+          <Text leading="tight" size={1} mb="none">
+            In 2025, we will mark the history that has brought us to where we
+            are today and look ahead to the future with optimism and ambition.
+          </Text>
+        </OneCol>
+        <StoryPosterCard
+          heading="Letter from Dean Widom"
+          superhead="Celebrating 100"
+          body="Lorem ipsum dolar sit amet"
+          link="/letter-from-dean-widom"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740013381/dean-widom_e1jksa.png"
+          bgColor="white"
+        />
+      </Container>
+      <ChapterTeaser
+        isHeadingLarge
+        superhead="Centennial Book"
+        heading="Chapters released monthly, starting in April"
+        body={
+          <>
+            <i>
+              Stanford Engineering: A Century of Discovery, Innovation, and
+              Impact
+            </i>{" "}
+            dedicates a chapter to each decade of the school’s history. We’ll
+            release Chapter 1 in April and a new chapter each month throughout
+            the Centennial year.
+          </>
+        }
+        imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986293/BookCover_optimized_piu8wz_vcsn1k.jpg"
+        href="/"
       />
+      <EventsSection
+        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
+        events={events}
+      />
+      <ContributeStoryBanner bgColor="white" hasLineArt />
     </div>
   );
 }

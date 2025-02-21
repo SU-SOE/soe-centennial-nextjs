@@ -143,7 +143,7 @@ export const gradientVias = {
 export type GradientViaType = keyof typeof gradientVias;
 
 export const imageAspectRatios = {
-  "1x1": "aspect-w-1 aspect-h-1",
+  "1x1": "aspect-[1/1]",
   "1x2": "aspect-w-1 aspect-h-2",
   "2x1": "aspect-w-2 aspect-h-1",
   "2x3": "aspect-w-2 aspect-h-3",
@@ -263,6 +263,7 @@ export type PaddingType = keyof typeof paddingTops;
 // Add other margins as needed. Used for spacing between elements.
 export const marginVerticals = {
   none: "my-0",
+  "0": "my-0",
   "01em": "my-01em",
   "02em": "my-02em",
   "03em": "my-03em",
@@ -288,6 +289,7 @@ export const marginVerticals = {
 
 export const marginTops = {
   none: "mt-0",
+  "0": "mt-0",
   "01em": "mt-01em",
   "02em": "mt-02em",
   "03em": "mt-03em",
@@ -312,7 +314,8 @@ export const marginTops = {
 };
 
 export const marginBottoms = {
-  none: "mb-0",
+  none: "",
+  "0": "mb-0",
   "01em": "mb-01em",
   "02em": "mb-02em",
   "03em": "mb-03em",

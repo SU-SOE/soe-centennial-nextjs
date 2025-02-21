@@ -7,6 +7,7 @@ import {
 } from "../images/HeroIcon";
 import * as styles from "./typography.styles";
 import * as types from "./typography.types";
+import { marginBottoms, MarginType } from "@/utilities/datasource";
 
 export type TypographyProps = {
   as?: types.TextType;
@@ -17,6 +18,7 @@ export type TypographyProps = {
   color?: types.TextColorType;
   variant?: types.TextVariantType;
   leading?: types.FontLeadingType;
+  mb?: MarginType;
   /**
    * If true, use default tracking for the font - for DM Sans
    */
@@ -28,6 +30,12 @@ export type TypographyProps = {
   iconProps?: Omit<HeroIconProps, "icon" | "noBaseStyle">;
   className?: string;
   children?: ReactNode;
+
+  /**
+   * An array of footnote references associated with this text.
+   * Each footnote reference contains an ID and a number (e.g., "[1]").
+   */
+  footnoteRefs?: { id: string; number: number }[];
 };
 
 // The TimeHTMLAttributes<HTMLElement> is for the dateTime attribute when using as="time"
@@ -36,7 +44,7 @@ export type TextProps = TypographyProps &
   TimeHTMLAttributes<HTMLElement>;
 
 export const Text = ({
-  as: AsComponent = "div",
+  as: AsComponent = "p",
   font = "dm-sans",
   size,
   weight,
@@ -44,6 +52,7 @@ export const Text = ({
   color = "default",
   variant,
   leading,
+  mb,
   useDefaultTracking = font === "dm-sans",
   italic,
   srOnly,
@@ -52,6 +61,7 @@ export const Text = ({
   iconProps,
   className,
   children,
+  footnoteRefs,
   ...rest
 }: TextProps) => {
   const { className: iconClasses, ...iProps } = iconProps || {};
@@ -60,7 +70,6 @@ export const Text = ({
     <AsComponent
       {...rest}
       className={cnb(
-        "rs-mb-2",
         font ? styles.fontFamilies[font] : "",
         size ? styles.fontSizes[size] : "",
         weight ? styles.fontWeights[weight] : "",
@@ -68,11 +77,11 @@ export const Text = ({
         color ? styles.textColors[color] : "",
         variant ? styles.textVariants[variant] : "",
         leading ? styles.fontLeadings[leading] : "",
+        mb ? marginBottoms[mb] : marginBottoms[2],
         italic ? "italic" : "",
         srOnly ? "sr-only" : "",
         uppercase ? "uppercase" : "",
         useDefaultTracking ? "tracking-normal" : "",
-        font === "dm-sans" ? "tracking-normal sm:tracking-wide" : "",
         className,
       )}
     >
@@ -85,6 +94,21 @@ export const Text = ({
           {...iProps}
         />
       )}
+      {footnoteRefs &&
+        footnoteRefs.map(({ id, number }) => (
+          <sup key={id} className="top-0 ml-03em">
+            <a
+              href={`#${id}`}
+              id={`ref-${id}`}
+              rel="footnote"
+              aria-label={`To footnote ${number}`}
+              title={`To footnote ${number}`}
+              className="font-normal text-stone-dark hocus:text-digital-red-xlight"
+            >
+              ({number})
+            </a>
+          </sup>
+        ))}
     </AsComponent>
   );
 };

@@ -1,14 +1,16 @@
 import Image from "next/image";
 import { cnb } from "cnbuilder";
-import * as styles from "./TimelineItem.styles";
-import * as types from "./TimelineItem.types";
+import { XMarkIcon } from "@heroicons/react/16/solid";
+import * as styles from "./Timeline.styles";
+import * as types from "./Timeline.types";
 
 interface TimelineImageProps {
   src: string;
   alt?: string;
   size?: types.SizeType;
-  trapezoidAngle?: types.TrapezoidType;
+  trapezoidAngle?: "left" | "right";
   className?: string;
+  isExpanded?: boolean;
 }
 
 export const TimelineImage = ({
@@ -17,24 +19,37 @@ export const TimelineImage = ({
   size = "medium",
   trapezoidAngle = "left",
   className,
+  isExpanded = false,
 }: TimelineImageProps) => {
   const imageSize = styles.size[size];
-  const trapezoidType = styles.trapezoid[trapezoidAngle];
+  const trapezoidType = styles.trapezoid(trapezoidAngle, isExpanded);
 
   return (
-    <div className={cnb("group relative", trapezoidType)}>
+    <div className={cnb("flex justify-center z-50 mx-10", className)}>
       <div
         className={cnb(
-          "aspect-[1/1] relative perspective-600 group-hocus:scale-105 transform ease-in-out duration-1000",
+          "aspect-[1/1] relative h-full transform ease-in-out perspective-1000 flex items-center justify-center",
+          trapezoidType,
           imageSize,
-          className,
         )}
       >
+        {isExpanded && (
+          <XMarkIcon
+            width={60}
+            className="absolute bg-stone-dark text-white rounded-full z-50 border-2 border-fog-dark"
+          />
+        )}
         <Image
           alt={alt}
           src={src}
           fill
-          className="object-cover rounded-lg shadow-lg transform ease-in-out duration-1000"
+          className={cnb(
+            "z-0 object-cover rounded-[20px] shadow-lg transform ease-in-out perspective-1000 duration-[1500ms] group-hocus-within:perspective-0 group-hocus-within:rotate-y-0 hocus:perspective-0 hocus:rotate-y-0",
+            {
+              "contrast-50 brightness-100 perspective-0 rotate-y-0 outline-stone":
+                isExpanded,
+            },
+          )}
         />
       </div>
     </div>

@@ -8,8 +8,8 @@ import { cnb } from "cnbuilder";
 
 export type QuoteProps = React.HTMLAttributes<HTMLDivElement> & {
   teaser?: string;
-  body?: string;
-  source?: string;
+  body: string;
+  source: string;
   animation?: AnimationType;
   delay?: number;
   quoteColor?: QuoteMarkColorType;

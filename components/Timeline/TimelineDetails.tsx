@@ -2,19 +2,17 @@ import { HTMLAttributes } from "react";
 import { Container } from "../Container";
 import { Heading, Text } from "../Typography";
 import { FlexBox } from "../FlexBox";
-import * as styles from "./TimelineDetails.styles";
 import { cnb } from "cnbuilder";
-import { XCircleIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/16/solid";
 import { TimelineImage } from "./TimelineImage";
+import { AnimateInView } from "../Animate";
 
 type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   year: string;
   href?: string;
   body: string;
-  cta?: React.ReactNode;
   image: string;
-  bgColor?: "fog-light" | "red-gradient";
   align?: "right" | "left";
   width?: "full" | "narrow";
   isSelected?: boolean;
@@ -26,9 +24,7 @@ export const TimelineDetails = ({
   year,
   href,
   body,
-  cta,
   image,
-  bgColor = "fog-light",
   align = "left",
   isSelected,
   onClose,
@@ -37,59 +33,77 @@ export const TimelineDetails = ({
   <Container
     {...props}
     as="section"
-    bgColor={bgColor}
     width="site"
-    py={9}
-    className={styles.root}
+    py={5}
+    className="overflow-hidden"
   >
     <FlexBox
       alignItems="start"
       justifyContent="between"
       gap
-      className={styles.wrapper}
+      className="relative mr-0 au-ml-auto flex-col lg:flex-row items-center"
     >
-      <Container className={cnb(styles.contentWrapper)}>
+      <Container className="w-1/2 lg:rs-pr-9 ml-0 flex flex-col">
         {heading && (
-          <Heading leading="none" className={styles.heading}>
-            {heading}
-          </Heading>
+          <AnimateInView delay={0.8} animation="slideInFromRight">
+            <Heading
+              align="left"
+              font="dm-sans"
+              size={3}
+              weight="normal"
+              className="2xl:whitespace-pre-line -mt-01em xl:max-w-1200"
+            >
+              {heading}
+            </Heading>
+          </AnimateInView>
         )}
         {year && (
-          <Text
-            font="serif"
-            variant="overview"
-            weight="normal"
-            className={styles.superhead}
+          <AnimateInView
+            delay={0.5}
+            animation="slideDown"
+            className="order-first "
           >
-            {year}
-          </Text>
+            <Text
+              font="dm-mono"
+              weight="normal"
+              mb="none"
+              size={2}
+              className="mt-28 mb-38"
+            >
+              {year}
+            </Text>
+          </AnimateInView>
         )}
         {body && (
-          <Text
-            font="serif"
-            variant="overview"
-            weight="normal"
-            className={styles.body}
-          >
-            {body}
-          </Text>
+          <AnimateInView delay={1} animation="slideUp">
+            <Text
+              font="dm-sans"
+              variant="big"
+              weight="normal"
+              className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
+            >
+              {body}
+            </Text>
+          </AnimateInView>
         )}
-        {cta}
       </Container>
-      {image && (
-        <div
-          className={cnb(styles.imageWrapper, {
+      <div
+        className={cnb(
+          "aspect-[1/1] group relative w-1/2 h-full perspective-600",
+          {
             "order-first": align === "left",
-          })}
-        >
-          <TimelineImage src={image} />
-        </div>
-      )}
-      <button className="group" onClick={onClose}>
+          },
+        )}
+      >
+        <AnimateInView duration={1} delay={0.8} animation="slideInFromLeft">
+          <TimelineImage size="full" src={image} />
+        </AnimateInView>
+      </div>
+      <button className="absolute top-0 right-0 group" onClick={onClose}>
         <span className="sr-only">Close {heading} details</span>
-        <XCircleIcon
+        <XMarkIcon
           width={50}
-          className="text-black group-hocus:text-digital-red"
+          className="transition p-6 rounded-full text-fog-dark border-fog-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
         />
       </button>
     </FlexBox>

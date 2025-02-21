@@ -2,6 +2,9 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Source_Sans_3, DM_Sans, DM_Mono } from "next/font/google";
 import { cnb } from "cnbuilder";
+import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+import { GlobalFooter } from "@/components/GlobalFooter";
+import { LocalFooterMvp } from "@/components/LocalFooter";
 
 const dm_sans = DM_Sans({
   subsets: ["latin"],
@@ -31,6 +34,53 @@ const stanford = localFont({
   variable: "--font-stanford",
 });
 
+const appleIcons: Icon[] = [60, 72, 76, 114, 120, 144, 152, 180].map(
+  (size) => ({
+    url: `https://www-media.stanford.edu/assets/favicon/apple-touch-icon-${size}x${size}.png`,
+    sizes: `${size}x${size}`,
+  }),
+);
+
+const icons: Icon[] = [16, 32, 96, 128, 192, 196].map((size) => ({
+  url:
+    size === 128
+      ? `https://www-media.stanford.edu/assets/favicon/favicon-${size}.png`
+      : `https://www-media.stanford.edu/assets/favicon/favicon-${size}x${size}.png`,
+  sizes: `${size}x${size}`,
+}));
+
+export const metadata = {
+  metadataBase: new URL("https://soe-centennial-nextjs.vercel.app/"),
+  openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "https://soe-centennial-nextjs.vercel.app/",
+    siteName: process.env.NEXT_PUBLIC_SITE_NAME,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }, ...icons],
+    apple: appleIcons,
+  },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export const revalidate = false;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +97,10 @@ export default function RootLayout({
         )}
       >
         {children}
+        <footer className="relative">
+          <LocalFooterMvp />
+          <GlobalFooter />
+        </footer>
       </body>
     </html>
   );

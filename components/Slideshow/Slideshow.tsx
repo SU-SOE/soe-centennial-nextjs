@@ -2,27 +2,29 @@
 
 import { HTMLAttributes, JSX, useEffect, useRef } from "react";
 import Slider, { CustomArrowProps, Settings } from "react-slick";
-import {
-  ArrowLongRightIcon,
-  ArrowLongLeftIcon,
-} from "@heroicons/react/16/solid";
 import { cnb } from "cnbuilder";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 
 const NextArrow = ({ className, onClick }: CustomArrowProps) => {
   const slickDisabled = className?.includes("slick-disabled");
   return (
     <button
       className={cnb(
-        "hocus:outline-3 absolute right-5 top-1/2 z-50 flex h-20 w-20 items-center justify-center rounded-full border-2 border-white bg-digital-red hocus:bg-digital-red hocus:outline hocus:outline-digital-red",
+        "hocus:outline-3 absolute right-0 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
         {
-          "bg-black-40 hocus:bg-black-40 hocus:outline-0": slickDisabled,
+          "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
+            !slickDisabled,
+          "bg-black-10 hocus:bg-black-10 hocus:outline-0": slickDisabled,
         },
       )}
       onClick={onClick}
       aria-label="Next"
       disabled={slickDisabled}
     >
-      <ArrowLongRightIcon width={40} className="text-white" />
+      <ChevronRightIcon
+        width={40}
+        className={slickDisabled ? "text-black-30" : "text-white"}
+      />
     </button>
   );
 };
@@ -32,16 +34,21 @@ const PrevArrow = ({ className, onClick }: CustomArrowProps) => {
   return (
     <button
       className={cnb(
-        "hocus:outline-3 absolute left-5 top-1/2 z-50 flex h-20 w-20 items-center justify-center rounded-full border-2 border-white bg-digital-red hocus:bg-digital-red hocus:outline hocus:outline-digital-red",
+        "hocus:outline-3 absolute right-40 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
         {
-          "bg-black-40 hocus:bg-black-40 hocus:outline-0": slickDisabled,
+          "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
+            !slickDisabled,
+          "bg-black-10 hocus:bg-black-10 hocus:outline-0": slickDisabled,
         },
       )}
       onClick={onClick}
       aria-label="Previous"
       disabled={slickDisabled}
     >
-      <ArrowLongLeftIcon width={40} className="text-white" />
+      <ChevronLeftIcon
+        width={40}
+        className={slickDisabled ? "text-black-30" : "text-white"}
+      />
     </button>
   );
 };
@@ -85,7 +92,7 @@ export const Slideshow = ({
     autoplay: false,
     centerMode: false,
     className:
-      "[&_.slick-track]:flex [&_.slick-track] [&_.slick-slider]:relative [&_.slick-slide>div]:h-full [&_.slick-slide>div>div]:h-full",
+      "[&_.slick-track]:flex [&_.slick-track] [&_.slick-slider]:relative [&_.slick-slide>div]:h-full [&_.slick-slide>div>div]:h-full even:[&_.slick-slide]:rs-pt-6",
     dots: false,
     infinite: false,
     initialSlide: 0,
@@ -93,7 +100,7 @@ export const Slideshow = ({
     prevArrow: <PrevArrow />,
     slidesToScroll: 1,
     slidesToShow: 3,
-    speed: 500,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 1200,
@@ -106,7 +113,7 @@ export const Slideshow = ({
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           centerMode: false,
         },

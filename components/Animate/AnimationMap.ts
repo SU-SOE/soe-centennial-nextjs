@@ -125,5 +125,34 @@ export const AnimationMap = {
       height: "auto",
     },
   },
+  rotateInLeft: {
+    hidden: {
+      opacity: 0,
+      rotateY: 0,
+    },
+    hiddenReduced: {
+      opacity: 0,
+      rotateY: 0,
+    },
+    visible: {
+      opacity: 1,
+      rotateY: 15,
+    },
+  },
+  rotateInRight: {
+    hidden: {
+      opacity: 0,
+      rotateY: 0,
+    },
+    hiddenReduced: {
+      opacity: 0,
+      rotateY: 0,
+    },
+    visible: {
+      opacity: 1,
+      rotateY: -15,
+    },
+  },
 };
+
 export type AnimationType = keyof typeof AnimationMap | "none";

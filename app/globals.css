@@ -2,16 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .timeline-grid {
-    display: grid;
-    grid-template-areas:
-      'item item item'
-      'detail detail detail';
-    grid-template-columns: 1fr 1fr 1fr;
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
   }
+}
 
-  .timeline-detail {
-    grid-area: 'detail';
+@layer utilities {
+  .font-inherit {
+    font: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
   }
+}
+
+#featured-timeline .slick-slide {
+  width: 100% !important;
+}
+
+#featured-timeline .slick-slide > div > div {
+  width: fit-content !important;
 }

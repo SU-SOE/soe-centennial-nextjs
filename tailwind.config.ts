@@ -20,20 +20,30 @@ export default {
   ],
   theme: {
     extend: {
-      colors: require(`${dir}/theme/soe-colors.js`)(),
-      backgroundImage: require(`${dir}/theme/soe-gradients.js`)(),
-      fontFamily: require(`${dir}/theme/soe-fontFamily.js`)(),
+      colors: require(`${dir}/theme/cen-colors.js`)(),
+      backgroundImage: require(`${dir}/theme/cen-gradients.js`)(),
+      fontFamily: require(`${dir}/theme/cen-fontFamily.js`)(),
+      screens: {
+        "3xl": "2400px",
+      },
     },
   },
   plugins: [
     require("@tailwindcss/container-queries"),
     require("@xpd/tailwind-3dtransforms"),
-    require(`${dir}/base/soe-base.js`)(),
-    require(`${dir}/components/soe-typography.js`)(),
+    require(`${dir}/base/cen-base.js`)(),
+    require(`${dir}/components/cen-typography.js`)(),
     plugin(function ({ addVariant }: { addVariant: AddVariantFunction }) {
       const nthVariants = [2, 3, 4];
       nthVariants.forEach((n) => {
         addVariant(`nth-${n}n`, `&:nth-child(${n}n)`);
+      });
+      const customNthVariants = [
+        { name: "nth-4n-2", formula: "4n+2" },
+        { name: "nth-4n-3", formula: "4n+3" },
+      ];
+      customNthVariants.forEach(({ name, formula }) => {
+        addVariant(name, `&:nth-child(${formula})`);
       });
     }),
   ],
