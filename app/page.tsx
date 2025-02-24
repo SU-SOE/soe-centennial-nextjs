@@ -39,10 +39,10 @@ export default function MvpHome() {
       />
       <Masthead logoColor="white-red" bgColor="homepage" />
       <EmbedMediaHero
-        className="bg-[#971515]"
-        mediaUrl="https://player.vimeo.com/video/1032255894?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        className="bg-cardinal-red-dark"
+        mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         isPreview
-        previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740173239/Sizzle-Reel-Hero_lks7p4.png"
+        previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740427598/sizzle-reel-cover_yfv3nj.jpg"
         previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
       <Container bgColor="blue" width="full" pt={8} pb={9}>
