@@ -2,7 +2,7 @@ export const fontFamilies = {
   sans: "font-sans",
   serif: "font-serif",
   "dm-sans": "font-dm-sans tracking-tight",
-  "dm-mono": "font-dm-mono tracking-[0.3rem]",
+  "dm-mono": "font-dm-mono tracking-[0.2rem]",
 };
 
 export const fontWeights = {
@@ -42,6 +42,7 @@ export const fontSizes = {
   "quote-md": "cen-quote-md",
   "quote-sm": "cen-quote-sm",
   small: "text-17 md:text-18",
+  tagline: "text-12 md:text-16",
 };
 
 // Line heights

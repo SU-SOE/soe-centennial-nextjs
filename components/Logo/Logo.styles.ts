@@ -33,7 +33,7 @@ export const barColor = {
   white: "bg-white",
 };
 export const hundredColor = {
-  default: "fill-digital-red-xlight",
+  default: "fill-cardinal-red",
   white: "fill-white",
   "white-red": "fill-digital-red-xlight",
 };

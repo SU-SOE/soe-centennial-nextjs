@@ -51,12 +51,14 @@ export default function MvpHome() {
             Stanford Engineering Centennial
           </Heading>
           <Text leading="tight" size={1}>
-            A century ago, a visionary group of Stanford University faculty
-            members recognized the need for an engineering school that would
-            cultivate well-rounded engineers prepared for leadership in all
-            aspects of life. Today, the Stanford School of Engineering stands as
-            a testament to their vision, while growing in size, scope, and
-            impact far beyond anything those pioneers could have imagined.
+            On May 15, 1925, the Stanford University Board of Trustees
+            officially approved the proposal to create the School of
+            Engineering. Over the past 100 years, the school has grown beyond
+            anything its founders could have imagined. Rooted from its earliest
+            years in interdisciplinary collaboration, entrepreneurial spirit,
+            and a culture of bold thinking, Stanford Engineering continues to
+            prepare responsible engineers for the future, while shaping the
+            future itself.
           </Text>
           <Text leading="tight" size={1} mb="none">
             In 2025, we will mark the history that has brought us to where we
@@ -65,17 +67,16 @@ export default function MvpHome() {
         </OneCol>
         <StoryPosterCard
           heading="Letter from Dean Widom"
-          superhead="Celebrating 100"
           body="Lorem ipsum dolar sit amet"
           link="/letter-from-dean-widom"
-          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740013381/dean-widom_e1jksa.png"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740439753/dean-widom-welcome_aedzt7.jpg"
           bgColor="white"
         />
       </Container>
       <ChapterTeaser
         isHeadingLarge
-        superhead="Centennial Book"
-        heading="Chapters released monthly, starting in April"
+        superhead="Centennial history"
+        heading="Stories of each decade released monthly, starting in April"
         body={
           <>
             <i>

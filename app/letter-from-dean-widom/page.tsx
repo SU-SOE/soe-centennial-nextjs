@@ -87,7 +87,7 @@ export default function LetterFromDeanPage() {
             rounded
             className="mb-0 max-w-500 lg:max-w-full"
             aspectRatio="1x1"
-            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740013381/dean-widom_e1jksa.png"
+            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740439753/dean-widom-welcome_aedzt7.jpg"
             caption="Dean Jennifer Widom"
             isCaptionInset
           />

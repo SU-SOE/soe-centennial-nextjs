@@ -48,10 +48,10 @@ export const Masthead = ({
           <EngLogoLockup color={logoColor} isLink />
           <Text
             font="dm-mono"
-            size="small"
-            className="mt-10"
+            size="tagline"
+            className="mt-10 md:mt-18 max-w-200 md:max-w-full"
             mb="0"
-            leading="tight"
+            leading="snug"
           >
             A century of discovery, innovation, and impact
           </Text>
