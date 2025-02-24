@@ -1,266 +1,27 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { AnimateInView } from "../Animate/AnimateInView";
-import { ShapeAnimation } from "./ShapeAnimation";
 
 const AnimatedHero = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
 
   return (
-    <div className="relative bg-cardinal-red-dark w-screen h-screen rs-mb-7">
-      {animationComplete && (
-        <motion.div
-          initial={{ pathLength: 0, pathOffset: 0 }}
-          animate={{ pathLength: 1, pathOffset: 0 }}
-          transition={{
-            duration: 4,
-            delay: 3,
-            ease: "easeInOut",
-          }}
-        >
-          <div className="h-full w-full absolute top-0 left-0 z-0">
-            <Image
-              className="ed11y-ignore object-cover z-0"
-              src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481950/Ryan-High-Voltage-Laboratory_rinsml.png"
-              alt=""
-              fill
-              sizes="100vw"
-            />
-          </div>
-        </motion.div>
-      )}
+    <div className="relative bg-cardinal-red-x-dark w-screen h-screen rs-mb-7">
       <AnimateInView animation="fadeIn" duration={0.8}>
         <div className=" w-screen h-screen flex flex-row gap-10 items-center justify-center cc">
-          <div className="relative w-1/3 h-600">
-            <motion.div
-              key="william-hewlett"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 2,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481953/williamHewlett_yezmww.png"
-                width="586"
-                height="420"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            <motion.div
-              key="robot"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 5,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481945/robotFlipped_e0kkk6.png"
-                width="645"
-                height="406"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            <motion.div
-              key="ship"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 7.5,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481946/130704-9205_silhouette_j9uj3j.png"
-                width="686"
-                height="210"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            {!animationComplete && (
-              <svg
-                width="432"
-                height="507"
-                viewBox="0 0 432 507"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <motion.path
-                  d="M121 322L300.136 377.409C312.453 380.937 320.941 392.222 320.941 405.069C320.941 420.962 308.092 433.835 292.257 433.835L38.5202 433.835C21.9461 433.835 8.50001 420.363 8.50001 403.741C8.50001 387.119 21.9332 373.634 38.5202 373.634L135.927 373.634C170.308 373.634 198.174 401.581 198.173 436.061C198.173 470.541 226.052 498.5 260.42 498.5L334.101 498.5C383.473 498.5 423.5 458.358 423.5 408.844L423.5 98.1434C423.5 48.6293 383.473 8.5 334.114 8.49999C213.146 8.49998 -30 273 121 322Z"
-                  stroke="#F83535"
-                  strokeWidth="16"
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0, pathOffset: 0 }}
-                  animate={{ pathLength: 1, pathOffset: 0 }}
-                  transition={{
-                    duration: 3,
-                    delay: 3,
-                    ease: "easeInOut",
-                  }}
-                />
-              </svg>
-            )}
-          </div>
-          <div className="relative w-1/3 h-600">
-            <motion.div
-              key="irmgard"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 6,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481951/irmgardFluggeLotz_silhouette_gfjjgm.png"
-                width="538"
-                height="624"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            <motion.div
-              key="mae"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 7.5,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-              onAnimationComplete={() => setAnimationComplete(true)}
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481947/maeJemison_crwmks.png"
-                width="538"
-                height="624"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            {!animationComplete && (
-              <svg
-                width="402"
-                height="517"
-                viewBox="0 0 402 517"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-0 z-0"
-              >
-                <motion.path
-                  d="M8.8424 441.169C8.84239 467.353 3.94519 508.5 57.8143 508.5C111.683 508.5 291.655 508.5 313.693 508.5C373.683 508.5 393.272 492.29 393.272 451.144C393.272 421.219 393.272 178.077 393.272 156.88C393.272 116.98 370.961 92.7327 307.571 116.98C244.181 141.227 229.964 154.796 176.571 184.629C118.727 216.95 83.5247 190.318 83.5247 159.691C83.5247 117.279 83.5247 73.3376 83.5247 59.6219C83.5247 20.9687 119.029 8.50015 137.394 8.50009C188.829 8.49994 302.674 8.50012 319.814 8.50012C362.665 8.50013 360.216 64.6095 319.814 65.8563C279.412 67.1032 125.151 65.8563 72.506 65.8563C19.8612 65.8563 8.84246 65.8563 8.84245 121.966C8.84245 150.644 8.8424 421.34 8.8424 441.169Z"
-                  stroke="#F83535"
-                  strokeWidth="16"
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0, pathOffset: 0 }}
-                  animate={{ pathLength: 1, pathOffset: 0 }}
-                  transition={{
-                    duration: 3,
-                    ease: "easeInOut",
-                  }}
-                />
-              </svg>
-            )}
+          {/* <div className="relative w-1/3 h-600">
             {animationComplete && (
-              <div className="z-50">
-                <ShapeAnimation />
-              </div>
-            )}
-          </div>
-          <div className="relative w-1/3 h-600">
-            <motion.div
-              key="william-hewlett"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 2.5,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481946/packardBell_rgwp2j.png"
-                width="586"
-                height="420"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            <motion.div
-              key="machine"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 5.5,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481947/machineSilhouette_xnmpup.png"
-                width="280"
-                height="760"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            <motion.div
-              key="group"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                delay: 7.4,
-                duration: 3,
-                times: [0, 0.2, 0.8, 1],
-                ease: "easeInOut",
-              }}
-              className="flex justify-center items-center z-50"
-            >
-              <Image
-                alt=""
-                src="https://res.cloudinary.com/dsqi5touf/image/upload/v1739481944/group_silhouette_wmmyl3.png"
-                width="280"
-                height="760"
-                className="absolute top-0 z-50"
-              />
-            </motion.div>
-            {/* <LineAnimation order={[0, 0, 0, 0, 1, 2, 8, 0]} /> */}
-            {!animationComplete && (
               <svg
-                width="402"
+                width="530"
                 height="517"
-                viewBox="0 0 402 517"
+                viewBox="0 0 530 517"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <motion.path
-                  d="M8.8424 441.169C8.84239 467.353 3.94519 508.5 57.8143 508.5C111.683 508.5 291.655 508.5 313.693 508.5C373.683 508.5 393.272 492.29 393.272 451.144C393.272 421.219 393.272 178.077 393.272 156.88C393.272 116.98 370.961 92.7327 307.571 116.98C244.181 141.227 229.964 154.796 176.571 184.629C118.727 216.95 83.5247 190.318 83.5247 159.691C83.5247 117.279 83.5247 73.3376 83.5247 59.6219C83.5247 20.9687 119.029 8.50015 137.394 8.50009C188.829 8.49994 302.674 8.50012 319.814 8.50012C362.665 8.50013 360.216 64.6095 319.814 65.8563C279.412 67.1032 125.151 65.8563 72.506 65.8563C19.8612 65.8563 8.84246 65.8563 8.84245 121.966C8.84245 150.644 8.8424 421.34 8.8424 441.169Z"
+                  d="M415.972 97.3926L63.7948 356.652C-23.845 421.467 3.93408 508.5 63.7961 508.5L453.861 506.514C502.084 506.514 521.991 494.616 521.991 446.467V214.985C521.991 172.71 484.491 153.874 444.248 184.747L349.306 261.271C299.306 299.245 262.526 270.297 262.526 203.784V52.0222C262.526 25.1703 275.913 8.5 304.861 8.5H410.417C421.272 8.5 453.861 8.5 453.861 41.2724C453.861 68.6889 426.325 88.5514 415.972 97.3926Z"
                   stroke="#F83535"
                   strokeWidth="16"
                   strokeLinecap="round"
@@ -268,13 +29,84 @@ const AnimatedHero = () => {
                   animate={{ pathLength: 1, pathOffset: 0 }}
                   transition={{
                     duration: 3,
-                    delay: 7,
+                    delay: 0.5,
                     ease: "easeInOut",
                   }}
                 />
               </svg>
             )}
+          </div> */}
+          <div className="relative w-1/3 h-600">
+            {/* <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 2000 1125"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d="M1146.97 413.462C1146.97 302.827 1038.34 294 1008.23 294C910.22 294 855.902 355.791 855.902 422.877C855.902 500.557 923.209 535.252 1008.23 572.352C1093.24 609.453 1164.21 631.789 1155.23 742.423C1150.17 804.803 1082.61 856 1012.95 856C943.278 856 855.902 827.165 850 727.711"
+                stroke="#F83535"
+                strokeWidth="16"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, pathOffset: 0 }}
+                animate={{ pathLength: 1, pathOffset: 0 }}
+                transition={{
+                  duration: 3,
+                  delay: 0.5,
+                  ease: "easeInOut",
+                }}
+                onAnimationComplete={() => setAnimationComplete(true)}
+              />
+            </svg> */}
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 768 682"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d="M528.585 192.653C528.585 82.0182 419.953 73.1909 389.843 73.1909C291.837 73.1909 237.519 134.982 237.519 202.068C237.519 279.748 304.826 314.443 389.843 351.543C474.859 388.644 545.83 410.98 536.848 521.614C531.784 583.994 464.232 635.191 394.564 635.191C324.895 635.191 237.519 606.356 231.617 506.902"
+                stroke="#F83535"
+                strokeWidth="16"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, pathOffset: 0 }}
+                animate={{ pathLength: 1, pathOffset: 0 }}
+                transition={{
+                  duration: 3,
+                  delay: 0.5,
+                  ease: "easeInOut",
+                }}
+                onAnimationComplete={() => setAnimationComplete(true)}
+              />
+            </svg>
           </div>
+          {/* <div className="relative w-1/3 h-600">
+            {animationComplete && (
+              <svg
+                width="479"
+                height="517"
+                viewBox="0 0 479 517"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <motion.path
+                  d="M8.01521 108.104L8.0152 205.986C8.01519 250.459 37.5044 289.551 80.2557 301.757L332.975 373.955C346.7 377.874 356.158 390.413 356.158 404.688C356.158 422.346 341.84 436.65 324.196 436.65L41.4526 436.65C22.9839 436.65 8.0007 421.681 8.0007 403.212C8.0007 384.744 22.9695 369.761 41.4526 369.761L149.994 369.761C188.306 369.761 219.357 400.812 219.357 439.123C219.357 477.434 250.422 508.5 288.719 508.5L370.823 508.5C425.839 508.5 470.441 463.897 470.441 408.882L470.441 108.104C470.441 53.0881 425.839 8.49998 370.838 8.49998L107.633 8.49996C52.6178 8.49995 8.01521 53.1026 8.01521 108.104Z"
+                  stroke="#F83535"
+                  strokeWidth="16"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0, pathOffset: 0 }}
+                  animate={{ pathLength: 1, pathOffset: 0 }}
+                  transition={{
+                    duration: 3,
+                    delay: 0.5,
+                    ease: "easeInOut",
+                  }}
+                />
+              </svg>
+            )}
+          </div> */}
         </div>
       </AnimateInView>
     </div>
