@@ -16,7 +16,7 @@ export type ChapterTeaserProps = HTMLAttributes<HTMLDivElement> &
     superhead?: string;
     body?: React.ReactNode | string;
     chapter?: string;
-    href: string;
+    href?: string;
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
     imageUrl: string;
@@ -63,9 +63,12 @@ export const ChapterTeaser = ({
               mb="none"
               className="mb-0"
             >
-              <Link href={href} className="stretch-link" linkType="story">
-                {heading}
-              </Link>
+              {href && (
+                <Link href={href} className="stretch-link" linkType="story">
+                  {heading}
+                </Link>
+              )}
+              {!href && heading}
             </Heading>
             {superhead && (
               <Text

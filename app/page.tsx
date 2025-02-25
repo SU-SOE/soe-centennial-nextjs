@@ -69,12 +69,11 @@ export default function MvpHome() {
           heading="Letter from Dean Widom"
           body="Lorem ipsum dolar sit amet"
           link="/letter-from-dean-widom"
-          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740439753/dean-widom-welcome_aedzt7.jpg"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg"
           bgColor="white"
         />
       </Container>
       <ChapterTeaser
-        isHeadingLarge
         superhead="Centennial history"
         heading="Stories of each decade released monthly, starting in April"
         body={
@@ -89,7 +88,6 @@ export default function MvpHome() {
           </>
         }
         imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986293/BookCover_optimized_piu8wz_vcsn1k.jpg"
-        href="/"
       />
       <EventsSection
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"

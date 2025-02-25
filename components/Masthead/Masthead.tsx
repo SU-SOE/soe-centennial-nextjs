@@ -47,9 +47,9 @@ export const Masthead = ({
         <div className={styles.logo}>
           <EngLogoLockup color={logoColor} isLink />
           <Text
-            font="dm-mono"
-            size="tagline"
-            className="mt-10 md:mt-18 max-w-200 md:max-w-full"
+            font="dm-sans"
+            size="small"
+            className="mt-10 md:mt-18 max-w-200"
             mb="0"
             leading="snug"
           >

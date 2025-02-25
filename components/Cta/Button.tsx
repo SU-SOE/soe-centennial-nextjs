@@ -27,7 +27,7 @@ export const Button = ({
   ...props
 }: Props) => {
   const buttonStyle = cnb(
-    "group/button flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
+    "group/button text-18 flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
     {
       "text-digital-red-light": isLight && !solid,
       "text-white": !isLight,
