@@ -3,20 +3,35 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { AnimateInView } from "../Animate/AnimateInView";
+import { LinePathAnimation } from "./LinePathAnimation";
+import {
+  shape1,
+  // shape10,
+  shape100,
+  // shape2,
+  // shape5,
+  // shape9,
+  shapeS,
+} from "./paths";
 
 const AnimatedHero = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
+  // const [morphTime, setMorphTime] = useState(false);
+
+  // const leftCol = [shape5, shape2];
+  const middleCol = [shapeS, shape1, shape100];
+  // const rightCol = [shape10, shape9];
 
   return (
     <div className="relative bg-cardinal-red-x-dark w-screen h-screen rs-mb-7">
       <AnimateInView animation="fadeIn" duration={0.8}>
         <div className=" w-screen h-screen flex flex-row gap-10 items-center justify-center cc">
-          {/* <div className="relative w-1/3 h-600">
-            {animationComplete && (
+          {/* <div className="relative w-full max-w-1/3">
+            {animationComplete && !morphTime && (
               <svg
-                width="530"
-                height="517"
-                viewBox="0 0 530 517"
+                width="100%"
+                height="100%"
+                viewBox="0 0 530 600"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -32,62 +47,65 @@ const AnimatedHero = () => {
                     delay: 0.5,
                     ease: "easeInOut",
                   }}
+                  onAnimationComplete={() => setMorphTime(true)}
                 />
               </svg>
             )}
+            {morphTime && (
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 530 600"
+                preserveAspectRatio="none"
+                className="flex items-center justify-center"
+              >
+                <LinePathAnimation order={leftCol} />
+              </svg>
+            )}
           </div> */}
-          <div className="relative w-1/3 h-600">
-            {/* <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 2000 1125"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <motion.path
-                d="M1146.97 413.462C1146.97 302.827 1038.34 294 1008.23 294C910.22 294 855.902 355.791 855.902 422.877C855.902 500.557 923.209 535.252 1008.23 572.352C1093.24 609.453 1164.21 631.789 1155.23 742.423C1150.17 804.803 1082.61 856 1012.95 856C943.278 856 855.902 827.165 850 727.711"
-                stroke="#F83535"
-                strokeWidth="16"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, pathOffset: 0 }}
-                animate={{ pathLength: 1, pathOffset: 0 }}
-                transition={{
-                  duration: 3,
-                  delay: 0.5,
-                  ease: "easeInOut",
-                }}
-                onAnimationComplete={() => setAnimationComplete(true)}
-              />
-            </svg> */}
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 768 682"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <motion.path
-                d="M528.585 192.653C528.585 82.0182 419.953 73.1909 389.843 73.1909C291.837 73.1909 237.519 134.982 237.519 202.068C237.519 279.748 304.826 314.443 389.843 351.543C474.859 388.644 545.83 410.98 536.848 521.614C531.784 583.994 464.232 635.191 394.564 635.191C324.895 635.191 237.519 606.356 231.617 506.902"
-                stroke="#F83535"
-                strokeWidth="16"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, pathOffset: 0 }}
-                animate={{ pathLength: 1, pathOffset: 0 }}
-                transition={{
-                  duration: 3,
-                  delay: 0.5,
-                  ease: "easeInOut",
-                }}
-                onAnimationComplete={() => setAnimationComplete(true)}
-              />
-            </svg>
-          </div>
-          {/* <div className="relative w-1/3 h-600">
+          <div className="shrink-0 w-full max-w-800">
+            {!animationComplete && (
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 768 682"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <motion.path
+                  d="M528.585 192.653c0-110.635-108.632-119.462-138.742-119.462-98.006 0-152.324 61.791-152.324 128.877 0 77.68 67.307 112.375 152.324 149.475S545.83 410.98 536.848 521.614c-5.064 62.38-72.616 113.577-142.284 113.577s-157.045-28.835-162.947-128.289"
+                  stroke="#F83535"
+                  strokeWidth="16"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0, pathOffset: 0 }}
+                  animate={{ pathLength: 1, pathOffset: 0 }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  onAnimationComplete={() => setAnimationComplete(true)}
+                />
+              </svg>
+            )}
             {animationComplete && (
               <svg
-                width="479"
-                height="517"
-                viewBox="0 0 479 517"
+                width="100%"
+                height="100%"
+                viewBox="0 0 768 682"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <LinePathAnimation order={middleCol} />
+              </svg>
+            )}
+          </div>
+          {/* <div className="relative w-full max-w-1/3">
+            {animationComplete && !morphTime && (
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 530 600"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -103,7 +121,19 @@ const AnimatedHero = () => {
                     delay: 0.5,
                     ease: "easeInOut",
                   }}
+                  onAnimationComplete={() => setMorphTime(true)}
                 />
+              </svg>
+            )}
+            {morphTime && (
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 530 600"
+                preserveAspectRatio="none"
+                className="flex items-center justify-center"
+              >
+                <LinePathAnimation order={rightCol} />
               </svg>
             )}
           </div> */}
