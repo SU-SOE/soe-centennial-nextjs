@@ -91,7 +91,7 @@ const AnimatedHero = () => {
               </svg>
             )} */}
             {/* {animationComplete && !maskTime && ( */}
-            <svg
+            {/* <svg
               width="100%"
               height="100%"
               viewBox="0 0 768 682"
@@ -102,9 +102,11 @@ const AnimatedHero = () => {
                 order={middleCol}
                 onComplete={() => setMaskTime(true)}
               />
-            </svg>
+            </svg> */}
             {/* )} */}
-            {maskTime && <MaskAnimation />}
+            {/* {maskTime && */}
+            <MaskAnimation />
+            {/* }} */}
           </div>
           {/* <div className="relative w-full max-w-1/3">
             {animationComplete && !morphTime && (

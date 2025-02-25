@@ -45,10 +45,11 @@ export const LinePathAnimation = ({
     <motion.path
       ref={ref}
       d={path}
-      stroke="#F83535"
-      strokeWidth="16"
-      fill="transparent"
-      strokeLinecap="round"
+      fill="#F83535"
+      // stroke="#F83535"
+      // strokeWidth="16"
+      // fill="transparent"
+      // strokeLinecap="round"
     />
   );
 };
