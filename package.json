@@ -17,6 +17,7 @@
     "@eslint/js": "^9.19.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@next/third-parties": "^15.1.7",
     "@tailwindcss/container-queries": "^0.1.1",
     "ajv": "^8.17.1",
     "cnbuilder": "^3.1.0",
