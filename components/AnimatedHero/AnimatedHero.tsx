@@ -13,10 +13,12 @@ import {
   // shape9,
   shapeS,
 } from "./paths";
+import { MaskAnimation } from "./MaskAnimation";
 
 const AnimatedHero = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
   // const [morphTime, setMorphTime] = useState(false);
+  const [maskTime, setMaskTime] = useState(false);
 
   // const leftCol = [shape5, shape2];
   const middleCol = [shapeS, shape1, shape100];
@@ -63,8 +65,8 @@ const AnimatedHero = () => {
               </svg>
             )}
           </div> */}
-          <div className="shrink-0 w-full max-w-800">
-            {!animationComplete && (
+          <div className="shrink-0 w-full max-w-800 max-h-600">
+            {/* {!animationComplete && (
               <svg
                 width="100%"
                 height="100%"
@@ -81,24 +83,28 @@ const AnimatedHero = () => {
                   animate={{ pathLength: 1, pathOffset: 0 }}
                   transition={{
                     duration: 1,
-                    delay: 0.5,
+                    delay: 0,
                     ease: "easeInOut",
                   }}
                   onAnimationComplete={() => setAnimationComplete(true)}
                 />
               </svg>
-            )}
-            {animationComplete && (
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 768 682"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <LinePathAnimation order={middleCol} />
-              </svg>
-            )}
+            )} */}
+            {/* {animationComplete && !maskTime && ( */}
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 768 682"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <LinePathAnimation
+                order={middleCol}
+                onComplete={() => setMaskTime(true)}
+              />
+            </svg>
+            {/* )} */}
+            {maskTime && <MaskAnimation />}
           </div>
           {/* <div className="relative w-full max-w-1/3">
             {animationComplete && !morphTime && (

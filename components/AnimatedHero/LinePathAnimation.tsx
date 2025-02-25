@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  motion,
-  animate,
-  useMotionValue,
-  useTransform,
-  useInView,
-} from "motion/react";
+import { motion, animate, useMotionValue, useTransform } from "motion/react";
 import React, { useState, useEffect, useRef } from "react";
 import { interpolate } from "flubber";
 
@@ -20,38 +14,32 @@ export const LinePathAnimation = ({
   onComplete,
 }: LinePathAnimationProps) => {
   const [pathIndex, setPathIndex] = useState(0);
-  const progress = useMotionValue(0);
+  const progress = useMotionValue(pathIndex);
   const ref = useRef<SVGPathElement | null>(null);
-  const isInView = useInView(ref as React.RefObject<Element>, { once: true });
 
-  // Create interpolated path transformation
-  const path = useTransform(
-    progress,
-    order.map((_, i) => i),
-    order,
-    {
-      mixer: (a, b) => interpolate(a, b, { maxSegmentLength: 1 }),
-    },
-  );
+  const arrayOfIndex = order.map((_, i) => i);
+  const path = useTransform(progress, arrayOfIndex, order, {
+    mixer: (a, b) => interpolate(a, b, { maxSegmentLength: 0.5 }),
+  });
 
   useEffect(() => {
-    if (isInView && pathIndex < order.length - 1) {
-      const animation = animate(progress, pathIndex + 1, {
-        duration: 0.5,
-        delay: 0.4,
-        ease: "easeInOut",
-        onComplete: () => {
-          setPathIndex((prev) => prev + 1);
-          if (pathIndex + 1 === order.length - 1) {
-            onComplete?.();
-          }
-        },
-      });
-      return () => {
-        animation.stop();
-      };
-    }
-  }, [pathIndex, progress, isInView, order.length, onComplete]);
+    const animation = animate(progress, pathIndex, {
+      duration: 0.2,
+      ease: "easeInOut",
+      onComplete: () => {
+        if (pathIndex === order.length - 1) {
+          progress.set(0);
+          setPathIndex(1);
+          onComplete?.();
+        } else {
+          setPathIndex(pathIndex + 1);
+        }
+      },
+    });
+    return () => {
+      animation.stop();
+    };
+  }, [pathIndex, order, onComplete, progress]);
 
   return (
     <motion.path
@@ -61,7 +49,6 @@ export const LinePathAnimation = ({
       strokeWidth="16"
       fill="transparent"
       strokeLinecap="round"
-      animate={isInView ? "visible" : "hidden"}
     />
   );
 };
