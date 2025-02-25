@@ -50,7 +50,7 @@ export default function MvpHome() {
           <Heading font="dm-mono" size={2}>
             Stanford Engineering Centennial
           </Heading>
-          <Text leading="tight" size={1}>
+          <Text variant="overview">
             On May 15, 1925, the Stanford University Board of Trustees
             officially approved the proposal to create the School of
             Engineering. Over the past 100 years, the school has grown beyond
@@ -60,7 +60,7 @@ export default function MvpHome() {
             prepare responsible engineers for the future, while shaping the
             future itself.
           </Text>
-          <Text leading="tight" size={1} mb="none">
+          <Text variant="overview" mb="none">
             In 2025, we will mark the history that has brought us to where we
             are today and look ahead to the future with optimism and ambition.
           </Text>

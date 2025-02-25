@@ -18,13 +18,13 @@ export const LocalFooterMvp = () => (
       <div className={styles.logo}>
         <EngLogoLockup color="white-red" isLink />
         <Text
-          font="dm-mono"
-          size="tagline"
+          font="dm-sans"
+          size="small"
           className="mt-10 md:mt-18 max-w-200 md:max-w-full"
           mb="0"
           leading="snug"
         >
-          A century of discovery, innovation, and impact
+          Transformative breakthroughs, boundless horizons
         </Text>
       </div>
       <div className="w-full max-w-900">
