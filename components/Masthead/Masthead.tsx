@@ -1,5 +1,3 @@
-"use client";
-
 import { HTMLAttributes } from "react";
 import { cnb } from "cnbuilder";
 import { FlexBox } from "@/components/FlexBox";
@@ -7,7 +5,7 @@ import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
 // import { MainNav } from "@/components/MainNav";
-import { motion } from "motion/react";
+import { Text } from "@/components/Typography";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   logoColor?: "default" | "white" | "white-red";
@@ -48,29 +46,19 @@ export const Masthead = ({
       >
         <div className={styles.logo}>
           <EngLogoLockup color={logoColor} isLink />
-          <div className="font-dm-sans text-16 leading-snug block lg:hidden max-w-200">
-            A century of discovery, innovation, and impact
-          </div>
-        </div>
-        <div className="hidden lg:flex flex-row justify-center items-center w-full">
-          <motion.div
-            initial={{ fontSize: "4.6rem", width: "500px" }}
-            whileInView={{
-              fontSize: "1.6rem",
-              width: "200px",
-              transition: { duration: 1, delay: 0.8 },
-            }}
-            viewport={{ once: true, amount: "all" }}
-            className="font-dm-sans leading-snug"
+          <Text
+            font="dm-sans"
+            size="small"
+            className="mt-10 md:mt-18 max-w-200"
+            mb="0"
+            leading="snug"
           >
             A century of discovery, innovation, and impact
-          </motion.div>
+          </Text>
         </div>
-        {mainNav && (
-          <FlexBox alignItems="center" className={styles.flexbox}>
-            {mainNav}
-          </FlexBox>
-        )}
+        <FlexBox alignItems="center" className={styles.flexbox}>
+          {mainNav}
+        </FlexBox>
       </FlexBox>
     </header>
   );
