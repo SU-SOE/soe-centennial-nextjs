@@ -21,10 +21,13 @@ const ChapterCarousel: React.FC<ChapterCarouselProps> = ({ images }) => {
   useEffect(() => {
     if (!isAutoplaying) return;
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+      setIndex((prev) => {
+        setPrevIndex(prev);
+        return (prev + 1) % images.length;
+      });
+    }, 5000);
     return () => clearInterval(interval);
-  }, [isAutoplaying, images.length]);
+  }, [isAutoplaying, images.length, index]);
 
   // Keyboard Navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -53,9 +56,9 @@ const ChapterCarousel: React.FC<ChapterCarouselProps> = ({ images }) => {
 
       {/* Animated Image Transition */}
       <div className="mx-auto cursor-pointer aspect-[1/1] relative h-full shadow-xl transform ease-in-out rotate-y-[15deg] flex items-center justify-center w-300 md:w-400 xl:w-600">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync">
           <motion.div
-            key={prevIndex}
+            key={`previous-${prevIndex}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -72,25 +75,25 @@ const ChapterCarousel: React.FC<ChapterCarouselProps> = ({ images }) => {
               className="z-0 object-cover rounded-[20px]"
             />
           </motion.div>
+          <motion.div
+            key={`current-${index}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: prefersReducedMotion ? 0 : 1,
+              ease: "easeInOut",
+            }}
+            onClick={() => setIsAutoplaying(!isAutoplaying)}
+          >
+            <Image
+              src={images[index]}
+              alt={`Slide ${index + 1}`}
+              fill
+              className="z-10 object-cover rounded-[20px]"
+            />
+          </motion.div>
         </AnimatePresence>
-        <motion.div
-          key={images[index]}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{
-            duration: prefersReducedMotion ? 0 : 0.8,
-            ease: "easeInOut",
-          }}
-          onClick={() => setIsAutoplaying(!isAutoplaying)}
-        >
-          <Image
-            src={images[index]}
-            alt={`Slide ${index + 1}`}
-            fill
-            className="z-0 object-cover rounded-[20px]"
-          />
-        </motion.div>
       </div>
 
       {/* Play/Pause Button + Dots Navigation */}
