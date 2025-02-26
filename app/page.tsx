@@ -46,7 +46,7 @@ export default function MvpHome() {
         previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
       />
       <Container bgColor="blue" width="full" pt={8} pb={9}>
-        <OneCol className="text-center mx-auto rs-pb-8">
+        <OneCol className="text-center mx-auto rs-pb-4">
           <Heading font="dm-mono" size={2}>
             Stanford Engineering Centennial
           </Heading>
@@ -87,7 +87,11 @@ export default function MvpHome() {
             the Centennial year.
           </>
         }
-        imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986293/BookCover_optimized_piu8wz_vcsn1k.jpg"
+        images={[
+          "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1943_-_Training_for_war_qld0yb_w91vri.jpg",
+          "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg",
+          "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/1939_-_Inventors_of_the_klystron_aipcnt_afibjh.jpg",
+        ]}
       />
       <EventsSection
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
