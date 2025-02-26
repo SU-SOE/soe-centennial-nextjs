@@ -20,7 +20,7 @@ export default function MvpHome() {
           Update your contact information in MyAccount so that you receive all
           future centennial communications. Please contact{" "}
           <a
-            className="text-white hocus:text-digital-red-xlight"
+            className="text-white hocus:text-digital-red-xlight cursor-pointer"
             href="mailto:engineering-alumni@stanford.edu"
           >
             engineering-alumni@stanford.edu
@@ -44,13 +44,10 @@ export default function MvpHome() {
         <EmbedMediaHero
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
-          isPreview
-          previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740427598/sizzle-reel-cover_yfv3nj.jpg"
-          previewAriaLabel="100 years of Stanford Engineering: 1925 - 2025"
         />
         <Container bgColor="blue" width="full" pt={8} pb={9}>
           <OneCol className="text-center mx-auto rs-pb-4">
-            <Heading font="dm-mono" size={2}>
+            <Heading font="dm-sans" size={2} weight="semibold">
               Stanford Engineering Centennial
             </Heading>
             <Text variant="overview">
@@ -79,7 +76,7 @@ export default function MvpHome() {
         <TeaserCard
           superhead="Centennial history"
           heading="Stories of each decade released monthly, starting in April"
-          body="Throughout the year, we’ll publish a story about each of the school’s ten decades. Come back in April to read more about Decade 1 and 2, and to scroll through a timeline of the school’s history"
+          body="Throughout the year, we’ll publish a story about each of the school’s ten decades. Come back in April to read more about Decade 1 and 2, and to scroll through a timeline of the school’s history."
           images={[
             "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1943_-_Training_for_war_qld0yb_w91vri.jpg",
             "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg",

@@ -45,7 +45,7 @@ export const StoryPosterCard = ({
       {...props}
       width="site"
       mb={7}
-      className="2xl:p-0 2xl:w-full 2xl:max-w-[1500px]"
+      className="2xl:p-0 2xl:w-full 2xl:max-w-[1200px]"
     >
       <Container
         bgColor={bgColor}
@@ -127,7 +127,7 @@ export const StoryPosterCard = ({
           <AnimateInView
             animation="slideUp"
             delay={0.5}
-            className="w-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px]"
+            className="w-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
           >
             <div className="w-full h-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
               <Image src={src} alt={alt || ""} fill className="object-cover" />

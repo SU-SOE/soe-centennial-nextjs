@@ -48,6 +48,12 @@ export const EmbedMediaHero = ({
     }
   }, []);
 
+  const [playing, setPlaying] = useState(true);
+  useEffect(() => {
+    const timeout = setTimeout(() => setPlaying(false), 5000);
+    return () => clearTimeout(timeout);
+  });
+
   let PreviewImage: ReactElement = <></>;
   if (previewImageSrc) {
     PreviewImage = (
@@ -74,9 +80,10 @@ export const EmbedMediaHero = ({
               url={mediaUrl}
               controls
               playsinline
+              muted
               light={previewImageSrc && isPreview ? PreviewImage : isPreview}
-              playing={isPreview ? true : false}
-              playIcon={isPreview ? PlayPreviewIcon : undefined}
+              playing={playing || isPreview ? true : false}
+              playIcon={playing || isPreview ? PlayPreviewIcon : undefined}
               // This previewAriaLabel prop is not documented but it is in the React Player source code
               previewAriaLabel={isPreview ? previewAriaLabel : undefined}
               className="group"

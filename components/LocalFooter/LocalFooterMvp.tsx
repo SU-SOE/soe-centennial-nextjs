@@ -53,7 +53,10 @@ export const LocalFooterMvp = () => (
             <Text mb={2}>
               Learn how your generosity can have transformational impact.
             </Text>
-            <Button href="https://engineering.stanford.edu/get-involved/support-engineering">
+            <Button
+              solid
+              href="https://engineering.stanford.edu/get-involved/support-engineering"
+            >
               Support Engineering
             </Button>
           </section>
