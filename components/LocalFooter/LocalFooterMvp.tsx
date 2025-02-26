@@ -33,10 +33,11 @@ export const LocalFooterMvp = () => (
         <FlexBox className={styles.contentWrapper}>
           <section className={styles.column}>
             <Heading size={2} as="h2" mb="base">
-              Contribute your stories
+              Share your Stanford Engineering memories
             </Heading>
             <Text mb={2}>
-              Lorem ipsum dolar sit amet vestibulum periment ium dismaret
+              Mark this milestone by sharing one of your favorite memories of
+              Stanford Engineering.
             </Text>
             <Button
               solid
