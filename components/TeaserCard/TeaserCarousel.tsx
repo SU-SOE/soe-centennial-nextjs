@@ -9,7 +9,7 @@ interface TeaserCarouselProps {
   images: string[];
 }
 
-const TeaserCarousel: React.FC<TeaserCarouselProps> = ({ images }) => {
+const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
   const [index, setIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(0);
   const [isAutoplaying, setIsAutoplaying] = useState(true);

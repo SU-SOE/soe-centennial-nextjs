@@ -19,7 +19,7 @@ type FootnotesProps = {
  * The `Footnotes` component displays a list of references linked from the text.
  * Each footnote entry includes an ID, text, and an optional source link.
  */
-export const Footnotes: React.FC<FootnotesProps> = ({ footnotes }) => {
+export const Footnotes = ({ footnotes }: FootnotesProps) => {
   return (
     <footer>
       <FootnotesLineart />
