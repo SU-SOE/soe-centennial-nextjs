@@ -3,7 +3,7 @@ import { StoryPosterCard } from "@/components/Story";
 import Metadata from "@/components/Layout/Metadata";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
-import { ChapterTeaser } from "@/components/Story/ChapterTeaser";
+import { TeaserCard } from "@/components/TeaserCard/TeaserCard";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
@@ -73,20 +73,10 @@ export default function MvpHome() {
           bgColor="white"
         />
       </Container>
-      <ChapterTeaser
+      <TeaserCard
         superhead="Centennial history"
         heading="Stories of each decade released monthly, starting in April"
-        body={
-          <>
-            <i>
-              Stanford Engineering: A Century of Discovery, Innovation, and
-              Impact
-            </i>{" "}
-            dedicates a chapter to each decade of the school’s history. We’ll
-            release Chapter 1 in April and a new chapter each month throughout
-            the Centennial year.
-          </>
-        }
+        body="Throughout the year, we’ll publish a story about each of the school’s ten decades. Come back in April to read more about Decade 1 and 2, and to scroll through a timeline of the school’s history"
         images={[
           "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1943_-_Training_for_war_qld0yb_w91vri.jpg",
           "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg",

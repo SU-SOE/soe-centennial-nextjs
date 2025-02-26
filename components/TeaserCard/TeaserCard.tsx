@@ -1,16 +1,16 @@
 import React, { HTMLAttributes } from "react";
 import { cnb } from "cnbuilder";
 import { Heading, Text } from "@/components/Typography";
-import { ChapterLabel } from "./ChapterLabel";
+import { ChapterLabel } from "../Story/ChapterLabel";
 import {
   AnimateInView,
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
 import { Container } from "@/components/Container";
 import { Link } from "@/components/Cta/Link";
-import ChapterCarousel from "./ChapterCarousel";
+import TeaserCarousel from "./TeaserCarousel";
 
-export type ChapterTeaserProps = HTMLAttributes<HTMLDivElement> &
+export type TeaserCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
     heading: string;
     superhead?: string;
@@ -22,7 +22,7 @@ export type ChapterTeaserProps = HTMLAttributes<HTMLDivElement> &
     images: string[];
   };
 
-export const ChapterTeaser = ({
+export const TeaserCard = ({
   heading,
   superhead,
   body,
@@ -33,7 +33,7 @@ export const ChapterTeaser = ({
   className,
   images,
   ...props
-}: ChapterTeaserProps) => {
+}: TeaserCardProps) => {
   return (
     <Container {...props} mt={9} mb={9} className={className}>
       <AnimateInView>
@@ -42,7 +42,7 @@ export const ChapterTeaser = ({
             "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[130rem] xl:max-w-[160rem]",
           )}
         >
-          <ChapterCarousel images={images} />
+          <TeaserCarousel images={images} />
           {/* {imageUrl && (
             <div className="relative shadow-2xl trnaslate-all ease-in-out duration-500 rotate-[10deg] group-hocus:rotate-[8deg] mx-28 aspect-[2/3] w-full max-w-300 overflow-hidden">
               <Image

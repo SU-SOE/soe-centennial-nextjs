@@ -5,11 +5,11 @@ import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-interface ChapterCarouselProps {
+interface TeaserCarouselProps {
   images: string[];
 }
 
-const ChapterCarousel: React.FC<ChapterCarouselProps> = ({ images }) => {
+const TeaserCarousel: React.FC<TeaserCarouselProps> = ({ images }) => {
   const [index, setIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(0);
   const [isAutoplaying, setIsAutoplaying] = useState(true);
@@ -122,4 +122,4 @@ const ChapterCarousel: React.FC<ChapterCarouselProps> = ({ images }) => {
   );
 };
 
-export default ChapterCarousel;
+export default TeaserCarousel;

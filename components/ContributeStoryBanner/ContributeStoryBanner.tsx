@@ -62,7 +62,7 @@ export const ContributeStoryBanner = ({
             isLight={bgColor !== "red"}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
           >
-            Submit your story
+            Share a memory
           </Button>
         </div>
       </div>
