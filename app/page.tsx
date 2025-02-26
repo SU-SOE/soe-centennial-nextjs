@@ -42,6 +42,7 @@ export default function MvpHome() {
       <div id="main-content">
         <H1 className="sr-only">100 years of Stanford Engineering</H1>
         <EmbedMediaHero
+          autoplay
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
