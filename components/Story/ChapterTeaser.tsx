@@ -39,7 +39,7 @@ export const ChapterTeaser = ({
       <AnimateInView>
         <article
           className={cnb(
-            "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[110rem] xl:max-w-[130rem]",
+            "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[130rem] xl:max-w-[160rem]",
           )}
         >
           <ChapterCarousel images={images} />
