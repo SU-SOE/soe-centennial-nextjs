@@ -4,6 +4,7 @@ import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./LocalFooter.styles";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { Button } from "@/components/Cta";
+import { SocialSharing } from "./Socials";
 
 export const LocalFooterMvp = () => (
   <Container
@@ -26,6 +27,7 @@ export const LocalFooterMvp = () => (
         >
           Transformative breakthroughs, boundless horizons
         </Text>
+        <SocialSharing className="hidden xl:flex" />
       </div>
       <div className="w-full max-w-900">
         <FlexBox className={styles.contentWrapper}>
@@ -55,6 +57,7 @@ export const LocalFooterMvp = () => (
             </Button>
           </section>
         </FlexBox>
+        <SocialSharing className="flex xl:hidden" />
       </div>
     </FlexBox>
   </Container>

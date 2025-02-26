@@ -4,6 +4,7 @@ import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./LocalFooter.styles";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { ActionLink, Button } from "@/components/Cta";
+import { SocialSharing } from "./Socials";
 
 export const LocalFooter = () => (
   <Container
@@ -26,6 +27,7 @@ export const LocalFooter = () => (
         >
           Transformative breakthroughs, boundless horizons
         </Text>
+        <SocialSharing className="hidden xl:flex" />
       </div>
       <FlexBox direction="col" className={styles.wrapper}>
         <FlexBox className={styles.linksWrapper}>
@@ -72,6 +74,7 @@ export const LocalFooter = () => (
             </Button>
           </section>
         </FlexBox>
+        <SocialSharing className="flex xl:hidden" />
       </FlexBox>
     </FlexBox>
   </Container>
