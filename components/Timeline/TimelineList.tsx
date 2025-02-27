@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./Timeline.types";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
@@ -23,6 +23,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
   const [itemId, setItemid] = useState<string>("");
+  const prefersReducedMotion = useReducedMotion();
 
   // Reference to the TimelineItems and TimelineDetails for accessibility focus management
   const itemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
@@ -200,7 +201,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: prefersReducedMotion ? 0 : 0.8 }}
                       ref={detailsRef}
                       tabIndex={-1}
                     >

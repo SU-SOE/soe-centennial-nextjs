@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Text } from "../Typography";
 
@@ -17,6 +17,7 @@ type ImageGalleryProps = {
 
 export const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <div className="cc flex flex-col">
@@ -33,7 +34,10 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{
+              duration: prefersReducedMotion ? 0 : 0.8,
+              ease: "easeInOut",
+            }}
             className="absolute inset-0"
           >
             <Image

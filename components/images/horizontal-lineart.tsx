@@ -1,7 +1,7 @@
 "use client";
 
 import { cnb } from "cnbuilder";
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 
 export interface HorizontalLineartProps {
@@ -19,6 +19,7 @@ export const HorizontalLineart = ({
 }: HorizontalLineartProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const prefersReducedMotion = useReducedMotion();
   let lineartSvg = (
     <>
       {/* 2XL SVG */}
@@ -44,7 +45,7 @@ export const HorizontalLineart = ({
           initial={{ pathLength: 0, pathOffset: 0 }}
           animate={isInView && { pathLength: 1, pathOffset: 0 }}
           transition={{
-            duration: 3,
+            duration: prefersReducedMotion ? 0 : 3,
             ease: "easeInOut",
           }}
         />
@@ -72,7 +73,7 @@ export const HorizontalLineart = ({
           initial={{ pathLength: 0, pathOffset: 0 }}
           animate={isInView && { pathLength: 1, pathOffset: 0 }}
           transition={{
-            duration: 3,
+            duration: prefersReducedMotion ? 0 : 3,
             ease: "easeInOut",
           }}
         />
@@ -100,7 +101,7 @@ export const HorizontalLineart = ({
           initial={{ pathLength: 0, pathOffset: 0 }}
           animate={isInView && { pathLength: 1, pathOffset: 0 }}
           transition={{
-            duration: 3,
+            duration: prefersReducedMotion ? 0 : 3,
             ease: "easeInOut",
           }}
         />
@@ -128,7 +129,7 @@ export const HorizontalLineart = ({
           initial={{ pathLength: 0, pathOffset: 0 }}
           animate={isInView && { pathLength: 1, pathOffset: 0 }}
           transition={{
-            duration: 3,
+            duration: prefersReducedMotion ? 0 : 3,
             ease: "easeInOut",
           }}
         />
@@ -156,7 +157,7 @@ export const HorizontalLineart = ({
           initial={{ pathLength: 0, pathOffset: 0 }}
           animate={isInView && { pathLength: 1, pathOffset: 0 }}
           transition={{
-            duration: 3,
+            duration: prefersReducedMotion ? 0 : 3,
             ease: "easeInOut",
           }}
         />
@@ -209,7 +210,7 @@ export const HorizontalLineart = ({
             initial={{ pathLength: 0, pathOffset: 0 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
-              duration: 3,
+              duration: prefersReducedMotion ? 0 : 3,
               ease: "easeInOut",
             }}
           />
@@ -238,7 +239,7 @@ export const HorizontalLineart = ({
             initial={{ pathLength: 1, pathOffset: 1 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
-              duration: 3,
+              duration: prefersReducedMotion ? 0 : 3,
               ease: "easeInOut",
             }}
           />
@@ -267,7 +268,7 @@ export const HorizontalLineart = ({
             initial={{ pathLength: 0, pathOffset: 0 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
-              duration: 3,
+              duration: prefersReducedMotion ? 0 : 3,
               ease: "easeInOut",
             }}
           />
@@ -296,7 +297,7 @@ export const HorizontalLineart = ({
             initial={{ pathLength: 1, pathOffset: 1 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
-              duration: 3,
+              duration: prefersReducedMotion ? 0 : 3,
               ease: "easeInOut",
             }}
           />
@@ -326,7 +327,7 @@ export const HorizontalLineart = ({
             initial={{ pathLength: 1, pathOffset: 1 }}
             animate={isInView && { pathLength: 1, pathOffset: 0 }}
             transition={{
-              duration: 3,
+              duration: prefersReducedMotion ? 0 : 3,
               ease: "easeInOut",
             }}
           />
@@ -358,7 +359,7 @@ export const HorizontalLineart = ({
               initial={{ pathLength: 1, pathOffset: 1 }}
               animate={isInView && { pathLength: 1, pathOffset: 0 }}
               transition={{
-                duration: 3,
+                duration: prefersReducedMotion ? 0 : 3,
                 ease: "easeInOut",
               }}
             />
@@ -385,7 +386,7 @@ export const HorizontalLineart = ({
               initial={{ pathLength: 1, pathOffset: 1 }}
               animate={isInView && { pathLength: 1, pathOffset: 0 }}
               transition={{
-                duration: 3,
+                duration: prefersReducedMotion ? 0 : 3,
                 ease: "easeInOut",
               }}
             />
@@ -412,7 +413,7 @@ export const HorizontalLineart = ({
               initial={{ pathLength: 1, pathOffset: 1 }}
               animate={isInView && { pathLength: 1, pathOffset: 0 }}
               transition={{
-                duration: 3,
+                duration: prefersReducedMotion ? 0 : 3,
                 ease: "easeInOut",
               }}
             />
@@ -439,7 +440,7 @@ export const HorizontalLineart = ({
               initial={{ pathLength: 1, pathOffset: 1 }}
               animate={isInView && { pathLength: 1, pathOffset: 0 }}
               transition={{
-                duration: 3,
+                duration: prefersReducedMotion ? 0 : 3,
                 ease: "easeInOut",
               }}
             />
@@ -466,7 +467,7 @@ export const HorizontalLineart = ({
               initial={{ pathLength: 1, pathOffset: 1 }}
               animate={isInView && { pathLength: 1, pathOffset: 0 }}
               transition={{
-                duration: 3,
+                duration: prefersReducedMotion ? 0 : 3,
                 ease: "easeInOut",
               }}
             />
@@ -493,7 +494,7 @@ export const HorizontalLineart = ({
               initial={{ pathLength: 1, pathOffset: 1 }}
               animate={isInView && { pathLength: 1, pathOffset: 0 }}
               transition={{
-                duration: 3,
+                duration: prefersReducedMotion ? 0 : 3,
                 ease: "easeInOut",
               }}
             />

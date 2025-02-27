@@ -6,7 +6,6 @@ import { cnb } from "cnbuilder";
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { GlobalFooter } from "@/components/GlobalFooter";
 import { LocalFooterMvp } from "@/components/LocalFooter";
-import { ReduceMotionWrapper } from "@/components/Layout/ReduceMotionWrapper.client";
 
 const dm_sans = DM_Sans({
   subsets: ["latin"],
@@ -98,7 +97,7 @@ export default function RootLayout({
           stanford.variable,
         )}
       >
-        <ReduceMotionWrapper>{children}</ReduceMotionWrapper>
+        {children}
         <footer className="relative">
           <LocalFooterMvp />
           <GlobalFooter />
