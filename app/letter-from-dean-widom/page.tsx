@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { Link } from "@/components/Cta";
 import { OneCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
@@ -35,23 +36,37 @@ export default function LetterFromDeanPage() {
             and ambition.
           </Text>
           <Text>
-            Over the past one hundred years, Stanford Engineering has been at
-            the forefront of countless breakthroughs that have reshaped
-            industries, improved lives, and expanded the boundaries of human
-            knowledge. From the development of the klystron in the early days,
-            which revolutionized radar and communications, to advances in
-            aerospace engineering, artificial intelligence, bioengineering, and
-            so much more, our faculty, students, and alumni have consistently
-            stretched the limits of what is possible.{" "}
+            Over the past 100 years, Stanford Engineering has been at the
+            forefront of countless breakthroughs that have reshaped industries,
+            improved lives, and expanded the boundaries of human knowledge. From
+            the development of the klystron in the early days, which
+            revolutionized radar and communications, to advances in aerospace
+            engineering, artificial intelligence, bioengineering, and so much
+            more, our faculty, students, and alumni have consistently stretched
+            the limits of what is possible.
+          </Text>
+          <Text>
+            On this website, we’ll share ten stories by decade starting in
+            April, tracing the high-level history of Stanford Engineering and
+            highlighting some of the most significant moments and contributions
+            that have defined the school’s trajectory. Each story focuses on
+            select milestones and innovations that reflect the spirit of
+            ingenuity and collaboration that has always been at the heart of our
+            school.
           </Text>
           <Text>
             Throughout this milestone year, you will encounter stories of
-            groundbreaking research and transformative technologies. You will
-            read about individuals whose curiosity, creativity, and dedication
-            have driven our progress. From the early days of electricity
+            groundbreaking research and transformative technologies. You’ll read
+            about individuals whose curiosity, creativity, and dedication have
+            driven our progress. From the early days of electricity
             transmission, vacuum tubes, and semiconductors to the era of machine
-            learning and quantum computing, each chapter offers a glimpse into
-            the dynamic and evolving landscape of engineering at Stanford.
+            learning and quantum computing, the stories offer a glimpse into the
+            dynamic and evolving landscape of engineering at Stanford. We also
+            invite you to{" "}
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform">
+              share your own memories
+            </Link>{" "}
+            of Stanford Engineering.
           </Text>
           <Text>
             Today’s Stanford School of Engineering is a vibrant,
@@ -71,8 +86,8 @@ export default function LetterFromDeanPage() {
             remains certain: Stanford Engineering will continue to be a place
             where bold ideas are nurtured, where interdisciplinary collaboration
             thrives, and where the pursuit of knowledge, excellence, and impact
-            is paramount. Thank you for joining us on a journey through one
-            hundred years of engineering excellence.
+            is paramount. Thank you for joining us on a journey and celebration
+            through 100 years of engineering excellence.
           </Text>
           <Text>
             Jennifer Widom
