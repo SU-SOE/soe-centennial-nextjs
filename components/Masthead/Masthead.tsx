@@ -30,6 +30,7 @@ export const Masthead = ({
   //  const isLight = !(
   //   isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
   // );
+  // placeholder
 
   return (
     <header
