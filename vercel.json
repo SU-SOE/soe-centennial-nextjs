@@ -1,0 +1,25 @@
+{
+  "installCommand": "yarn workspaces focus --production",
+  "redirects": [
+    {
+      "source": "/examples/:path*",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/stories/:path*",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/timeline/:path*",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/april/:path*",
+      "destination": "/404",
+      "statusCode": 404
+    }
+  ]
+}
