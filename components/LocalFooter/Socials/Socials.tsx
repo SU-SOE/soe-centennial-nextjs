@@ -20,27 +20,42 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
       )}
     >
       <li>
-        <SocialButton aria-label="Centennial on Facebook" href="">
+        <SocialButton
+          aria-label="Centennial on Facebook"
+          href="https://www.facebook.com/stanford.engineering/"
+        >
           <FacebookF aria-hidden width="20" />
         </SocialButton>
       </li>
       <li>
-        <SocialButton aria-label="Centennial on X (formerly Twitter)" href="">
+        <SocialButton
+          aria-label="Centennial on X (formerly Twitter)"
+          href="https://x.com/StanfordEng"
+        >
           <Twitter aria-hidden width="26" />
         </SocialButton>
       </li>
       <li>
-        <SocialButton aria-label="Centennial on LinkedIn" href="">
+        <SocialButton
+          aria-label="Centennial on LinkedIn"
+          href="https://www.linkedin.com/school/stanford-university-school-of-engineering/"
+        >
           <LinkedinIn aria-hidden width="25" />
         </SocialButton>
       </li>
       <li>
-        <SocialButton aria-label="Centennial on YouTube" href="">
+        <SocialButton
+          aria-label="Centennial on YouTube"
+          href="https://www.youtube.com/@stanfordengineering"
+        >
           <YouTube aria-hidden width="25" />
         </SocialButton>
       </li>
       <li>
-        <SocialButton aria-label="Centennial on Instagram" href="">
+        <SocialButton
+          aria-label="Centennial on Instagram"
+          href="https://www.instagram.com/stanfordeng/"
+        >
           <Instagram aria-hidden width="25" />
         </SocialButton>
       </li>
