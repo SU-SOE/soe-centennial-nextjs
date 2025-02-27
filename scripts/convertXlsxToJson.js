@@ -1,8 +1,8 @@
 const xlsx = require('xlsx');
 const fs = require('fs');
 
-const INPUT_FILE = "./scripts/docs/updated_timeline.xlsx"; // Your updated timeline file
-const OUTPUT_FILE = "./scripts/docs/timeline.json"; // Output file for JSON data
+const INPUT_FILE = "./scripts/files/updated_timeline.xlsx"; // Your updated timeline file
+const OUTPUT_FILE = "./scripts/files/timeline.json"; // Output file for JSON data
 
 function convertExcelToJson() {
   if (!fs.existsSync(INPUT_FILE)) {

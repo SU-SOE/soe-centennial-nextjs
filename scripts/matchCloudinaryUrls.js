@@ -2,9 +2,9 @@ const Fuse = require("fuse.js");
 const fs = require("fs");
 const xlsx = require("xlsx");
 
-const TIMELINE_FILE = "./scripts/docs/timeline_items.xlsx"; // Your original timeline file
-const CLOUDINARY_FILE = "./scripts/docs/cloudinary_images.xlsx"; // Cloudinary export file
-const OUTPUT_FILE = "./scripts/docs/updated_timeline.xlsx"; // Output file
+const TIMELINE_FILE = "./scripts/files/timeline_items.xlsx"; // Your original timeline file
+const CLOUDINARY_FILE = "./scripts/files/cloudinary_images.xlsx"; // Cloudinary export file
+const OUTPUT_FILE = "./scripts/files/updated_timeline.xlsx"; // Output file
 
 // Function to match image names from timeline with Cloudinary URLs using Fuse.js
 function matchCloudinaryUrls() {
