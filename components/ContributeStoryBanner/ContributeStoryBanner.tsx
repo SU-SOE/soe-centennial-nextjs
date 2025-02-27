@@ -51,10 +51,10 @@ export const ContributeStoryBanner = ({
           <Text size="base" mb="none">
             As we celebrate the school’s Centennial anniversary, we invite you
             to mark this milestone by sharing one of your favorite memories of
-            Stanford Engineering, or a hope you have for the school&apos;s next
-            century. We’d love to hear from you and will be re-sharing selected
-            memories in a variety of ways both publicly and privately throughout
-            the year. Please note: not all submissions will be shared publicly.
+            Stanford Engineering. We’d love to hear from you and will be
+            re-sharing selected memories in a variety of ways both publicly and
+            privately throughout the year. Please note: not all submissions will
+            be shared publicly.
           </Text>
         </FlexBox>
         <div className={styles.buttonWrapper}>
