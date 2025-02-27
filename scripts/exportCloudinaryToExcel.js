@@ -48,7 +48,7 @@ async function exportToExcel() {
   xlsx.utils.book_append_sheet(workbook, worksheet, "Cloudinary Images");
 
   // Write to an .xlsx file
-  xlsx.writeFile(workbook, "cloudinary_images.xlsx");
+  xlsx.writeFile(workbook, "./scripts/docs/cloudinary_images.xlsx");
   console.log("✅ Exported cloudinary_images.xlsx successfully!");
 }
 
