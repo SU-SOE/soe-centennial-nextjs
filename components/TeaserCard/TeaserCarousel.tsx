@@ -55,7 +55,7 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
       </div>
 
       {/* Animated Image Transition */}
-      <div className="mx-auto cursor-pointer aspect-[1/1] relative h-full shadow-xl transform ease-in-out rotate-y-[15deg] flex items-center justify-center w-300 md:w-400 xl:w-600">
+      <div className="mx-auto cursor-pointer aspect-[1/1] relative h-full shadow-xl transform ease-in-out rotate-y-[15deg] flex items-center justify-center w-300 md:w-400 lg:w-500 2xl:w-600">
         <AnimatePresence mode="sync">
           <motion.div
             key={`previous-${prevIndex}`}

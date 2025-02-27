@@ -35,7 +35,7 @@ export const TeaserCard = ({
   ...props
 }: TeaserCardProps) => {
   return (
-    <Container {...props} mt={9} mb={9} className={className}>
+    <Container {...props} mt={7} mb={8} className={className}>
       <AnimateInView>
         <article
           className={cnb(
