@@ -3,22 +3,22 @@
     {
       "source": "/example/:path*",
       "destination": "/404",
-      "statusCode": 404
+      "permanent": true
     },
     {
       "source": "/stories/:path*",
       "destination": "/404",
-      "statusCode": 404
+      "permanent": true
     },
     {
       "source": "/timeline/:path*",
       "destination": "/404",
-      "statusCode": 404
+      "permanent": true
     },
     {
       "source": "/april/:path*",
       "destination": "/404",
-      "statusCode": 404
+      "permanent": true
     }
   ]
 }
