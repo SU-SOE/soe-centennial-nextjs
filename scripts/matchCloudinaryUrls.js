@@ -1,32 +1,12 @@
-const dotenv = require("dotenv");
+const Fuse = require("fuse.js");
 const fs = require("fs");
-const path = require("path");
 const xlsx = require("xlsx");
-
-dotenv.config();
 
 const TIMELINE_FILE = "timeline_items.xlsx"; // Your original timeline file
 const CLOUDINARY_FILE = "cloudinary_images.xlsx"; // Cloudinary export file
 const OUTPUT_FILE = "updated_timeline.xlsx"; // Output file
 
-function fuzzyMatch(name, cloudinaryPublicId) {
-  // Remove Cloudinary suffix (e.g., "_abcd1234")
-  const basePublicId = cloudinaryPublicId.replace(/_[a-z0-9]{6,}$/, "");
-
-  // Normalize names: replace spaces, dashes, and underscores
-  const normalize = (str) =>
-    str
-      .toLowerCase()
-      .replace(/['"]/g, "") // Remove special characters like apostrophes
-      .replace(/[\s_-]+/g, "_"); // Convert spaces/dashes to underscores for consistency
-
-  const normalizedName = normalize(name);
-  const normalizedPublicId = normalize(basePublicId);
-
-  // Check if normalized name is contained in the normalized public ID
-  return normalizedPublicId.includes(normalizedName);
-}
-
+// Function to match image names from timeline with Cloudinary URLs using Fuse.js
 function matchCloudinaryUrls() {
   if (!fs.existsSync(TIMELINE_FILE) || !fs.existsSync(CLOUDINARY_FILE)) {
     console.error("❌ Error: One or both input files are missing.");
@@ -43,11 +23,21 @@ function matchCloudinaryUrls() {
   const timelineData = xlsx.utils.sheet_to_json(timelineSheet);
   const cloudinaryData = xlsx.utils.sheet_to_json(cloudinarySheet);
 
-  // Create a map of Cloudinary URLs using fuzzy matching
-  const urlMap = {};
-  cloudinaryData.forEach(img => {
-    urlMap[img.public_id] = img.url;
+  // Create an array of Cloudinary URLs and public IDs
+  const cloudinaryItems = cloudinaryData.map(item => ({
+    public_id: item.public_id,
+    url: item.url,
+  }));
+
+  // Initialize Fuse.js with options
+  const fuse = new Fuse(cloudinaryItems, {
+    keys: ['public_id'], // Match on the public_id of Cloudinary images
+    includeScore: true,  // Include the score to filter on best matches
+    threshold: 0.3,      // Allow some degree of fuzziness (0.0 = exact match, 1.0 = no match)
   });
+
+  // Count of matched items
+  let matchCount = 0;
 
   // Match URLs to timeline items
   const updatedTimeline = timelineData.map(item => {
@@ -55,15 +45,19 @@ function matchCloudinaryUrls() {
 
     if (!imageName) return item; // Skip if no image_name is present
 
-    // Find a matching Cloudinary URL
-    const matchedUrl = Object.keys(urlMap).find(publicId =>
-      fuzzyMatch(imageName, publicId)
-    );
+    // Perform fuzzy match with Fuse.js
+    const result = fuse.search(imageName);
+    if (result.length > 0) {
+      // Found a match, update the timeline item with the matched URL
+      matchCount++;
+      return {
+        ...item,
+        image: result[0].item.url, // Add the matched Cloudinary URL
+      };
+    }
 
-    return {
-      ...item,
-      image: matchedUrl ? urlMap[matchedUrl] : item.image, // Add URL if matched
-    };
+    // No match found, keep original item
+    return item;
   });
 
   // Convert back to worksheet and save
@@ -73,6 +67,8 @@ function matchCloudinaryUrls() {
 
   xlsx.writeFile(newWorkbook, OUTPUT_FILE);
   console.log(`✅ Updated timeline saved as ${OUTPUT_FILE}`);
+  console.log(`🔍 Matched ${matchCount} items`);
 }
 
+// Run the matching function
 matchCloudinaryUrls();
