@@ -1,5 +1,4 @@
 {
-  "installCommand": "yarn workspaces focus --production",
   "redirects": [
     {
       "source": "/examples/:path*",
