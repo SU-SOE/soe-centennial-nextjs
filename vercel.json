@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/examples/:path*",
+      "source": "/example/:path*",
       "destination": "/404",
       "statusCode": 404
     },
