@@ -7,7 +7,6 @@ import { TeaserCard } from "@/components/TeaserCard/TeaserCard";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
-import { OneCol } from "@/components/Layout";
 import { H1 } from "@/components/Typography/Header";
 
 export default function MvpHome() {
@@ -47,7 +46,7 @@ export default function MvpHome() {
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
         <Container bgColor="blue" width="full" pt={8} pb={9}>
-          <OneCol className="text-center mx-auto rs-pb-4">
+          <div className="cc lg:p-0 text-center mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
             <Heading font="dm-sans" size={2} weight="semibold">
               Stanford Engineering Centennial
             </Heading>
@@ -65,7 +64,7 @@ export default function MvpHome() {
               In 2025, we will mark the history that has brought us to where we
               are today and look ahead to the future with optimism and ambition.
             </Text>
-          </OneCol>
+          </div>
           <StoryPosterCard
             heading="Letter from Dean Widom"
             body="Lorem ipsum dolar sit amet"
