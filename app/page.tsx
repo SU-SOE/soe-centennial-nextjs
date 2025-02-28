@@ -45,18 +45,10 @@ export default function MvpHome() {
       body: (
         <>
           Update your contact information in{" "}
-          <a
-            className="text-white no-underline hocus:text-white hocus:underline cursor-pointer"
-            href="https://alumni.stanford.edu/help/myaccount/"
-          >
-            My Account
-          </a>{" "}
+          <a href="https://alumni.stanford.edu/help/myaccount/">My Account</a>{" "}
           so that you receive all future centennial communications. Please
           contact{" "}
-          <a
-            className="text-white no-underline hocus:text-white hocus:underline cursor-pointer"
-            href="mailto:engineering-alumni@stanford.edu"
-          >
+          <a href="mailto:engineering-alumni@stanford.edu">
             engineering-alumni@stanford.edu
           </a>{" "}
           if you have any questions.
