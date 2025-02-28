@@ -80,7 +80,7 @@ export const StoryPosterCard = ({
           className="flex flex-col justify-between md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
-            <AnimateInView animation="slideUp" delay={0.8}>
+            <AnimateInView animation="slideUp" delay={0.5}>
               <Heading
                 size="f4"
                 weight="normal"
@@ -120,7 +120,7 @@ export const StoryPosterCard = ({
               )}
             </AnimateInView>
             {byline && (
-              <AnimateInView animation="slideUp" delay={1}>
+              <AnimateInView animation="slideUp" delay={0.5}>
                 <Text mb="none" size="base" className="rs-mt-4">
                   {byline}
                 </Text>
