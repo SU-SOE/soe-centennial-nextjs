@@ -44,7 +44,14 @@ export default function MvpHome() {
       superhead: "Stanford Engineering alumni",
       body: (
         <>
-          Update your contact information in MyAccount so that you receive all
+          Update your contact information in{" "}
+          <a
+            className="text-white no-underline hocus:text-white hocus:underline cursor-pointer"
+            href="https://alumni.stanford.edu/help/myaccount/"
+          >
+            My Account
+          </a>{" "}
+          so that you receive all
           future centennial communications. Please contact{" "}
           <a
             className="text-white no-underline hocus:text-white hocus:underline cursor-pointer"
