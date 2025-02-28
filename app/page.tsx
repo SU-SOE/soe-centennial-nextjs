@@ -51,7 +51,8 @@ export default function MvpHome() {
           >
             My Account
           </a>{" "}
-          so that you receive all future centennial communications. Please contact{" "}
+          so that you receive all future centennial communications. Please
+          contact{" "}
           <a
             className="text-white no-underline hocus:text-white hocus:underline cursor-pointer"
             href="mailto:engineering-alumni@stanford.edu"
