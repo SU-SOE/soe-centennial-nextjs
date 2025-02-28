@@ -40,8 +40,8 @@ export default function LetterFromDeanPage() {
   return (
     <div>
       <Masthead />
-      <Container width="site">
-        <Heading size="f6" mb={8} className="rs-mt-7 w-fit mx-auto">
+      <Container width="site" id="main-content">
+        <Heading as="h1" size="f6" mb={8} className="rs-mt-7 w-fit mx-auto">
           Letter from Dean Widom
         </Heading>
       </Container>
@@ -132,8 +132,7 @@ export default function LetterFromDeanPage() {
             className="mb-0 max-w-500 lg:max-w-full"
             aspectRatio="1x1"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg"
-            caption="Dean Jennifer Widom"
-            isCaptionInset
+            alt="Dean Jennifer Widom surrounded by a group of students, all wearing matching red Stanford Engineering t-shirts and waving to the camera"
           />
         </StorySidebar>
       </TwoCol>

@@ -20,7 +20,7 @@ export const AnimatedLineartBanner = ({
   ...props
 }: AnimatedLineartBannerProps) => {
   return (
-    <Container {...props} as="section" width="full" className={className}>
+    <Container {...props} width="full" className={className}>
       <Container width="site">{children}</Container>
       <HorizontalLineart
         stroke={stroke}
