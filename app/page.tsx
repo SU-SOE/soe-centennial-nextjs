@@ -77,7 +77,6 @@ export default function MvpHome() {
           heading="Stories of each decade released monthly, starting in April"
           body="Throughout the year, we’ll publish a story about each of the school’s ten decades. Come back in April to read more about Decade 1 and 2, and to scroll through a timeline of the school’s history."
           images={[
-            "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1943_-_Training_for_war_qld0yb_w91vri.jpg",
             "https://res.cloudinary.com/duv7bozlj/image/upload/v1740687162/SC0122_s1_b271_f05_6030-09_jvlm17.jpg",
             "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg",
             "https://res.cloudinary.com/duv7bozlj/image/upload/v1740687162/00007000_0009_onxi5b.jpg",
