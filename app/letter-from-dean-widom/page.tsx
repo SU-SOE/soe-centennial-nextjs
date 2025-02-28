@@ -5,7 +5,36 @@ import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { StorySidebar } from "@/components/Story";
 import { Heading, Text } from "@/components/Typography";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Letter from Dean Widom",
+  description:
+    "Dean Widom reflects on a century of Stanford Engineering, honoring the visionary faculty who laid its foundation and celebrating the school's global impact today.",
+  openGraph: {
+    title: "Letter from Dean Widom",
+    description:
+      "Dean Widom shares insights on the legacy and future of Stanford Engineering, marking 100 years of excellence.",
+    images: [
+      {
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Letter from Dean Widom",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Letter from Dean Widom",
+    description:
+      "Dean Widom reflects on 100 years of Stanford Engineering and its enduring legacy of excellence.",
+    images: [
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg",
+    ],
+  },
+};
 
 export default function LetterFromDeanPage() {
   return (

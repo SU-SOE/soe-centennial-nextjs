@@ -1,6 +1,5 @@
 import { Masthead } from "@/components/Masthead";
 import { StoryPosterCard } from "@/components/Story";
-import Metadata from "@/components/Layout/Metadata";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
 import { TeaserCard } from "@/components/TeaserCard/TeaserCard";
@@ -8,6 +7,35 @@ import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import { H1 } from "@/components/Typography/Header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "100 Years of Stanford Engineering",
+  description:
+    "On May 15, 1925, the Stanford University Board of Trustees approved the creation of the School of Engineering. Over the past 100 years, the school has grown beyond anything its founders could have imagined, fostering interdisciplinary collaboration, entrepreneurial spirit, and bold thinking.",
+  openGraph: {
+    title: "100 Years of Stanford Engineering",
+    description:
+      "Celebrating a century of innovation, leadership, and engineering excellence at Stanford University.",
+    images: [
+      {
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "100 Years of Stanford Engineering",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "100 Years of Stanford Engineering",
+    description:
+      "Stanford Engineering celebrates 100 years of impact, innovation, and leadership in the field of engineering.",
+    images: [
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+    ],
+  },
+};
 
 export default function MvpHome() {
   const events = [
@@ -32,11 +60,6 @@ export default function MvpHome() {
 
   return (
     <div>
-      <Metadata
-        isHome
-        title="100 years of Impact"
-        description="Lorem ipsum curabitur blandit mollis lacus. Curabitur ullamcorper ultricies nisi."
-      />
       <Masthead logoColor="white-red" bgColor="homepage" />
       <div id="main-content">
         <H1 className="sr-only">100 years of Stanford Engineering</H1>
