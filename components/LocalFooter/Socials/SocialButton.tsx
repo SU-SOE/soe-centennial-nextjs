@@ -18,7 +18,7 @@ export const SocialButton = ({
         <a
           href={href}
           className={cnb(
-            "w-40 h-40 md:w-44 md:h-44 text-white hocus-visible:text-digital-red-light transition-colors",
+            "w-40 h-40 md:w-44 md:h-44 text-white hocus-visible:text-digital-red-xlight hocus:text-digital-red-xlight transition-colors",
             className,
           )}
           {...props}
@@ -29,7 +29,7 @@ export const SocialButton = ({
         <button
           type="button"
           className={cnb(
-            "w-40 h-40 md:w-44 md:h-44 text-white hocus-visible:text-digital-red-light transition-colors",
+            "w-40 h-40 md:w-44 md:h-44 text-white hocus-visible:text-digital-red-xlight hocus:text-digital-red-xlight transition-colors",
             className,
           )}
           {...props}

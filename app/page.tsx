@@ -47,7 +47,7 @@ export default function MvpHome() {
           Update your contact information in MyAccount so that you receive all
           future centennial communications. Please contact{" "}
           <a
-            className="text-white hocus:text-digital-red-xlight cursor-pointer"
+            className="text-white no-underline hocus:text-white hocus:underline cursor-pointer"
             href="mailto:engineering-alumni@stanford.edu"
           >
             engineering-alumni@stanford.edu

@@ -15,7 +15,7 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
       as="ul"
       direction="row"
       className={cnb(
-        "gap-10 list-unstyled p-0 rs-mt-5 *:mb-0 *:w-fit",
+        "gap-20 list-unstyled p-0 rs-mt-5 *:mb-0 *:w-fit",
         className,
       )}
     >
@@ -24,7 +24,7 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
           aria-label="Centennial on Facebook"
           href="https://www.facebook.com/stanford.engineering/"
         >
-          <FacebookF aria-hidden width="20" />
+          <FacebookF aria-hidden height="30" />
         </SocialButton>
       </li>
       <li>
@@ -32,7 +32,7 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
           aria-label="Centennial on X (formerly Twitter)"
           href="https://x.com/StanfordEng"
         >
-          <Twitter aria-hidden width="26" />
+          <Twitter aria-hidden height="30" />
         </SocialButton>
       </li>
       <li>
@@ -40,7 +40,7 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
           aria-label="Centennial on LinkedIn"
           href="https://www.linkedin.com/school/stanford-university-school-of-engineering/"
         >
-          <LinkedinIn aria-hidden width="25" />
+          <LinkedinIn aria-hidden height="30" />
         </SocialButton>
       </li>
       <li>
@@ -48,7 +48,7 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
           aria-label="Centennial on YouTube"
           href="https://www.youtube.com/@stanfordengineering"
         >
-          <YouTube aria-hidden width="25" />
+          <YouTube aria-hidden height="30" />
         </SocialButton>
       </li>
       <li>
@@ -56,7 +56,7 @@ export const SocialSharing = ({ className }: SocialSharingProps) => {
           aria-label="Centennial on Instagram"
           href="https://www.instagram.com/stanfordeng/"
         >
-          <Instagram aria-hidden width="25" />
+          <Instagram aria-hidden height="30" />
         </SocialButton>
       </li>
     </FlexBox>
