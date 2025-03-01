@@ -12,5 +12,6 @@ export const legalMenu =
 export const listItem = "font-sans sm:mr-10 md:mr-20 lg:mr-27";
 export const link =
   "font-sans text-white no-underline hocus:underline hocus:text-white";
-export const copyright = "text-13 sm:text-14 text-center lg:text-left";
+export const copyright =
+  "font-sans text-13 sm:text-14 text-center lg:text-left";
 export const copyrightText = "whitespace-no-wrap";
