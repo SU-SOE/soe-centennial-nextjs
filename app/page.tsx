@@ -68,7 +68,7 @@ export default function MvpHome() {
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
         <Container as="section" bgColor="blue" width="full" pt={8} pb={9}>
-          <div className="cc lg:p-0 text-center mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
+          <article className="cc lg:p-0 text-center mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
             <Heading font="dm-sans" size={2} weight="semibold">
               Stanford Engineering Centennial
             </Heading>
@@ -103,7 +103,7 @@ export default function MvpHome() {
               Engineering continues to prepare responsible engineers for the
               future, while shaping the future itself.
             </Text>
-          </div>
+          </article>
           <StoryPosterCard
             heading="Letter from Dean Widom"
             link="/letter-from-dean-widom"
