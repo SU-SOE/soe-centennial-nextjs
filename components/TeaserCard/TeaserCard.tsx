@@ -35,9 +35,9 @@ export const TeaserCard = ({
   ...props
 }: TeaserCardProps) => {
   return (
-    <Container {...props} mt={7} mb={8} className={className}>
+    <Container {...props} as="section" mt={7} mb={8} className={className}>
       <AnimateInView>
-        <article
+        <div
           className={cnb(
             "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[130rem] xl:max-w-[160rem]",
           )}
@@ -86,7 +86,7 @@ export const TeaserCard = ({
               </Text>
             )}
           </div>
-        </article>
+        </div>
       </AnimateInView>
     </Container>
   );
