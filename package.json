@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint \"app/**/*.{ts,tsx,js,jsx}\" --fix",
+    "postbuild": "next-sitemap",
     "typecheck": "tsc --noEmit",
     "tsc": "tsc",
     "validate:timeline": "node scripts/validate-timeline.mjs"
@@ -29,6 +30,7 @@
     "flubber": "^0.4.2",
     "motion": "^12.4.7",
     "next": "15.2.0",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.5.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",

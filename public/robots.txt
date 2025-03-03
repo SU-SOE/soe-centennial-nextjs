@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://engineering100.stanford.edu/
+
+# Sitemaps
+Sitemap: https://engineering100.stanford.edu/sitemap.xml
