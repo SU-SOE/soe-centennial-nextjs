@@ -50,7 +50,7 @@ export default function LetterFromDeanPage() {
           <Text variant="overview">
             A century ago, a visionary group of Stanford University faculty
             members recognized the need for an engineering school that would
-            cultivate well rounded engineers prepared for leadership in all
+            cultivate well-rounded engineers prepared for leadership in all
             aspects of life. Their foresight and determination laid the
             foundation for what would become one of the world’s leading
             institutions in engineering education and research. Today, the
@@ -61,8 +61,8 @@ export default function LetterFromDeanPage() {
           <Text>
             As the Stanford School of Engineering marks its one-hundred-year
             anniversary, we reflect on the remarkable journey that has brought
-            us to where we are today and look ahead to the future with optimism
-            and ambition.
+            us to where we are today, and we look ahead to the future with
+            optimism and ambition.
           </Text>
           <Text>
             Over the past 100 years, Stanford Engineering has been at the
@@ -75,48 +75,41 @@ export default function LetterFromDeanPage() {
             the limits of what is possible.
           </Text>
           <Text>
-            On this website, we’ll share ten stories by decade starting in
-            April, tracing the high-level history of Stanford Engineering and
-            highlighting some of the most significant moments and contributions
-            that have defined the school’s trajectory. Each story focuses on
-            select milestones and innovations that reflect the spirit of
-            ingenuity and collaboration that has always been at the heart of our
-            school.
-          </Text>
-          <Text>
-            Throughout this milestone year, you will encounter stories of
-            groundbreaking research and transformative technologies. You’ll read
-            about individuals whose curiosity, creativity, and dedication have
-            driven our progress. From the early days of electricity
-            transmission, vacuum tubes, and semiconductors to the era of machine
-            learning and quantum computing, the stories offer a glimpse into the
-            dynamic and evolving landscape of engineering at Stanford. We also
-            invite you to{" "}
-            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform">
-              share your own memories
-            </Link>{" "}
-            of Stanford Engineering.
+            On this website, we’ll unveil ten stories—one for each
+            decade—tracing the history of Stanford Engineering and highlighting
+            some of the most significant moments and contributions that have
+            defined the school’s trajectory. You’ll learn about groundbreaking
+            research and transformative technologies, and you’ll discover
+            individuals whose curiosity, creativity, and dedication have driven
+            our progress. From the early days of electricity transmission,
+            vacuum tubes, and semiconductors, to the era of machine learning and
+            quantum computing, these stories offer a glimpse into the dynamic
+            and evolving landscape of engineering at Stanford.
           </Text>
           <Text>
             Today’s Stanford School of Engineering is a vibrant,
             interdisciplinary community that spans a wide range of fields. Our
-            faculty and students work across boundaries—not only in engineering
-            but across the entire Stanford campus and beyond—to tackle some of
-            the most pressing issues of our time, from climate change to global
-            health, from sustainable energy to ethical technology. This spirit
-            of collaboration and innovation is a direct legacy of the pioneering
-            ethos that has guided us for the past century.
+            faculty and students work across boundaries—not only within
+            engineering but across the entire Stanford campus and beyond—to
+            tackle some of the most pressing issues of our time, from climate
+            change to global health, from sustainable energy to ethical
+            technology. This spirit of collaboration and innovation is a direct
+            legacy of the pioneering ethos that has guided us for the past
+            century.
           </Text>
           <Text>
             As we celebrate our centennial, we also look forward to the
-            challenges and opportunities that lie ahead. The next one hundred
-            years will undoubtedly bring new discoveries and innovations that
-            we, the pioneers of our day, cannot yet imagine. But one thing
-            remains certain: Stanford Engineering will continue to be a place
-            where bold ideas are nurtured, where interdisciplinary collaboration
-            thrives, and where the pursuit of knowledge, excellence, and impact
-            is paramount. Thank you for joining us on a journey and celebration
-            through 100 years of engineering excellence.
+            challenges and opportunities that lie ahead. The next 100 years will
+            undoubtedly bring new discoveries and innovations that we, the
+            pioneers of our day, cannot yet imagine. But one thing remains
+            certain: Stanford Engineering will continue to be a place where bold
+            ideas are nurtured, where interdisciplinary collaboration thrives,
+            and where the pursuit of knowledge, excellence, and impact is
+            paramount.
+          </Text>
+          <Text>
+            Thank you for joining us on a journey and celebration through one
+            hundred years of engineering excellence.
           </Text>
           <Text>
             Jennifer Widom

@@ -73,18 +73,35 @@ export default function MvpHome() {
               Stanford Engineering Centennial
             </Heading>
             <Text variant="overview">
-              On May 15, 1925, the Stanford University Board of Trustees
-              officially approved the proposal to create the School of
-              Engineering. Over the past 100 years, the school has grown beyond
-              anything its founders could have imagined. Rooted from its
-              earliest years in interdisciplinary collaboration, entrepreneurial
-              spirit, and a culture of bold thinking, Stanford Engineering
-              continues to prepare responsible engineers for the future, while
-              shaping the future itself.
+              2025 marks the centennial of the Stanford School of Engineering—a
+              moment to reflect on our remarkable past and look ahead toward an
+              even more inspiring future.
+            </Text>
+            <Text variant="overview">
+              Since Stanford University’s opening in 1891, the education of
+              engineers has been a key part of the university’s mission. On May
+              15, 1925, the Board of Trustees approved a proposal to bring
+              together the four engineering departments at the time — civil,
+              mechanical, electrical, and mining & metallurgy — into a single
+              school.
+            </Text>
+            <Text variant="overview">
+              Over the past century, Stanford Engineering has been at the
+              forefront of transformative discovery. From the earliest days of
+              our founding, our faculty, students, staff, and alumni have
+              pioneered paths in fields as varied as aeronautics, semiconductor
+              technology, artificial intelligence, biomedical devices, energy,
+              and beyond. Our community’s bold ideas have changed the way we
+              communicate, travel, and care for our planet. The profound impact
+              of our work, not just in Silicon Valley but around the world, is a
+              testament to the spirit of innovation and collaboration that runs
+              through everything we do.
             </Text>
             <Text variant="overview" mb="none">
-              In 2025, we will mark the history that has brought us to where we
-              are today and look ahead to the future with optimism and ambition.
+              Rooted from its earliest years in interdisciplinary collaboration,
+              entrepreneurial spirit, and a culture of bold thinking, Stanford
+              Engineering continues to prepare responsible engineers for the
+              future, while shaping the future itself.
             </Text>
           </div>
           <StoryPosterCard
