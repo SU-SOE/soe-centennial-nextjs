@@ -49,7 +49,7 @@ export const Masthead = ({
           <Text
             align="center"
             font="dm-sans"
-            leading="snug"
+            leading="tight"
             className="text-16 block lg:hidden max-w-200"
             mb="0"
           >
@@ -60,7 +60,7 @@ export const Masthead = ({
           <Text
             align="center"
             font="dm-sans"
-            leading="snug"
+            leading="tight"
             className="text-23 max-w-220 hidden lg:block"
             mb="0"
           >
