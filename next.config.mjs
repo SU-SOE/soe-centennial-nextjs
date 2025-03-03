@@ -1,3 +1,5 @@
+const isProduction = process.env.VERCEL_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'export',
@@ -24,6 +26,34 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  async redirects() {
+    if (!isProduction) {
+      return []; // No redirects in non-production environments
+    }
+
+    return [
+      {
+        source: "/example/:path*",
+        destination: "/404",
+        permanent: true,
+      },
+      {
+        source: "/stories/:path*",
+        destination: "/404",
+        permanent: true,
+      },
+      {
+        source: "/timeline/:path*",
+        destination: "/404",
+        permanent: true,
+      },
+      {
+        source: "/april/:path*",
+        destination: "/404",
+        permanent: true,
+      },
+    ];
   },
 };
 
