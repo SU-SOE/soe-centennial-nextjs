@@ -1,5 +1,4 @@
 import { Container } from "@/components/Container";
-import { Link } from "@/components/Cta";
 import { OneCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
