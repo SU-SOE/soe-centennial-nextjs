@@ -21,6 +21,7 @@ import { MainNav } from "@/components/MainNav";
 import { ImageGallery } from "@/components/ImageGallery";
 
 export const metadata: Metadata = {
+  robots: "noindex, nofollow",
   title: "The Terman Era - The 3rd Decade",
   description:
     "Duis porttitor, dolor eget iaculis finibus, turpis urna blandit ligula, non consequat velit enim ut risus.",

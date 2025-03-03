@@ -13,6 +13,11 @@ import {
 import { ThreeCol, TwoCol } from "@/components/Layout";
 import { AnimateInView } from "@/components/Animate";
 import { ExploreMore } from "@/components/Story/ExploreMore";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: "noindex, nofollow",
+};
 
 const ExampleStoryPage = async () => {
   const storyData: StoryCardProps[] = [
