@@ -58,16 +58,16 @@ export default function MvpHome() {
   ];
 
   return (
-    <div>
+    <>
       <Masthead logoColor="white-red" bgColor="homepage" />
-      <div id="main-content">
+      <main id="main-content">
         <H1 className="sr-only">100 years of Stanford Engineering</H1>
         <EmbedMediaHero
           autoplay
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
-        <Container bgColor="blue" width="full" pt={8} pb={9}>
+        <Container as="section" bgColor="blue" width="full" pt={8} pb={9}>
           <div className="cc lg:p-0 text-center mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
             <Heading font="dm-sans" size={2} weight="semibold">
               Stanford Engineering Centennial
@@ -127,7 +127,7 @@ export default function MvpHome() {
           events={events}
         />
         <ContributeStoryBanner bgColor="white" hasLineArt />
-      </div>
-    </div>
+      </main>
+    </>
   );
 }
