@@ -18,8 +18,10 @@ import { Heading, Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
 import { MainNav } from "@/components/MainNav";
+import { ImageGallery } from "@/components/ImageGallery";
 
 export const metadata: Metadata = {
+  robots: "noindex, nofollow",
   title: "The Terman Era - The 3rd Decade",
   description:
     "Duis porttitor, dolor eget iaculis finibus, turpis urna blandit ligula, non consequat velit enim ut risus.",
@@ -167,6 +169,45 @@ export default function page() {
     },
   ];
 
+  const galleryImages = [
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg",
+      alt: "Professor Edward Ginzton and Dr. Henry Kaplan in front of klystron gauges, circa 1953",
+      caption:
+        "Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England.",
+    },
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg",
+      alt: "Edward L. Ginzton with the Mark III linear accelerator, 1951",
+      caption:
+        "Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator.",
+    },
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/mark-2_nncexe_lwbmas.jpg",
+      alt: "Mark III linear accelerator, 1952",
+      caption:
+        "Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC).",
+    },
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/mark-2-2_jf2xmm_ywrsnc.jpg",
+      alt: "Mark III linear accelerator, 1952",
+      caption:
+        "Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC).",
+    },
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986287/william-w-hansen_osvbzp_rdnqlf.jpg",
+      alt: "William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947",
+      caption:
+        "William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL).",
+    },
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/felix-bloch_dg6ato_a4ybb7.jpg",
+      alt: "Felix Bloch and William Hansen demonstrating equipment used in their research, 1947",
+      caption:
+        "Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory.",
+    },
+  ];
+
   return (
     <Container as="article" width="full">
       <Masthead logoColor="white-red" isOverlap mainNav={<MainNav />} />
@@ -308,6 +349,7 @@ export default function page() {
           accelerator.
         </Text>
       </OneCol>
+      <ImageGallery images={galleryImages} />
       <StoryGrid
         hasBgImage
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"

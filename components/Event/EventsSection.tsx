@@ -40,6 +40,7 @@ export const EventsSection = ({
         <div className="relative z-50">
           <AnimatedLineartBanner lineartType="events" stroke={src && "#F83535"}>
             <Heading
+              as="h2"
               align="left"
               font="dm-sans"
               size={4}

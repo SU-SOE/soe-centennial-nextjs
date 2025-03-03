@@ -46,7 +46,7 @@ export const EventCard = ({
           </Text>
         )}
         {body && (
-          <Text size="base" mb="none">
+          <Text size="base" mb="none" className={styles.body}>
             {body}
           </Text>
         )}

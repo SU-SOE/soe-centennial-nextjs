@@ -32,7 +32,7 @@ export const bgColors = {
   "fog-light": "bg-fog-light text-stone-dark",
   "red-gradient": "bg-cen-red-gradient text-white",
   red: "bg-cardinal-red-x-dark text-white",
-  homepage: "bg-[#971515] text-white",
+  homepage: "bg-cardinal-red-dark text-white",
   "stone-dark": "bg-stone-dark text-white",
 };
 

@@ -1,4 +1,4 @@
-export const root = "w-full basefont-20 rs-py-1 text-white bg-digital-red";
+export const root = "w-full basefont-20 rs-py-1 text-white";
 export const outerWrapper = "lg:flex-row";
 export const logoWrapper = "text-center mt-5 mb-9";
 export const logo = "type-3";
@@ -10,6 +10,8 @@ export const stanfordMenu =
 export const legalMenu =
   "list-unstyled mb-10 sm:mb-0 ml-19 sm:ml-0 p-0 text-15 sm:text-14 md:text-15 xl:text-16 flex flex-col sm:flex-row sm:link-regular";
 export const listItem = "font-sans sm:mr-10 md:mr-20 lg:mr-27";
-export const link = "text-white no-underline hocus:underline hocus:text-white";
-export const copyright = "text-13 sm:text-14 text-center lg:text-left";
+export const link =
+  "font-sans text-white no-underline hocus:underline hocus:text-white";
+export const copyright =
+  "font-sans text-13 sm:text-14 text-center lg:text-left";
 export const copyrightText = "whitespace-no-wrap";

@@ -26,7 +26,11 @@ export const ContributeStoryBanner = ({
     pt={2}
     pb={6}
   >
-    <Container className={styles.container(bgColor, hasLineArt)} width="full">
+    <Container
+      as="section"
+      className={styles.container(bgColor, hasLineArt)}
+      width="full"
+    >
       {hasLineArt && <BannerLineart className={styles.bannerLineart} />}
 
       <div className={styles.contentWrapper}>
@@ -51,10 +55,10 @@ export const ContributeStoryBanner = ({
           <Text size="base" mb="none">
             As we celebrate the school’s Centennial anniversary, we invite you
             to mark this milestone by sharing one of your favorite memories of
-            Stanford Engineering, or a hope you have for the school&apos;s next
-            century. We’d love to hear from you and will be re-sharing selected
-            memories in a variety of ways both publicly and privately throughout
-            the year. Please note: not all submissions will be shared publicly.
+            Stanford Engineering. We’d love to hear from you and will be
+            re-sharing selected memories in a variety of ways both publicly and
+            privately throughout the year. Please note: not all submissions will
+            be shared publicly.
           </Text>
         </FlexBox>
         <div className={styles.buttonWrapper}>
@@ -62,7 +66,7 @@ export const ContributeStoryBanner = ({
             isLight={bgColor !== "red"}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
           >
-            Submit your story
+            Share a memory
           </Button>
         </div>
       </div>

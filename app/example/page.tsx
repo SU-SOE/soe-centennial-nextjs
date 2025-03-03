@@ -11,18 +11,18 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { Quote } from "@/components/Quote";
 import { StoryImpactBanner } from "@/components/Story";
-import Metadata from "@/components/Layout/Metadata";
 import { Button } from "@/components/Cta/Button";
 import { H2, H3, H4, H5 } from "@/components/Typography/Header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: "noindex, nofollow",
+};
 
 const ExamplePage = async () => {
   const timelineData = await loadTimelineData();
   return (
     <div>
-      <Metadata
-        title="Example Components"
-        description="Example page containing majority of the components available for usage on this site"
-      />
       <Masthead />
       <FeatureHero>
         <Heading

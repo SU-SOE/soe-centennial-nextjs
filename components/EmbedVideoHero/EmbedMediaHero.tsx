@@ -11,6 +11,7 @@ import * as styles from "./EmbedMediaHero.styles";
 type EmbedMediaHeroProps = React.HTMLAttributes<HTMLDivElement> & {
   mediaUrl: string;
   caption?: React.ReactNode;
+  autoplay?: boolean;
   isCaptionInset?: boolean;
   isPreview?: boolean;
   previewImageSrc?: string;
@@ -32,6 +33,7 @@ export const EmbedMediaHero = ({
   caption,
   isCaptionInset,
   isPreview,
+  autoplay,
   previewImageSrc,
   previewAriaLabel,
   className,
@@ -74,9 +76,10 @@ export const EmbedMediaHero = ({
               url={mediaUrl}
               controls
               playsinline
+              muted
               light={previewImageSrc && isPreview ? PreviewImage : isPreview}
-              playing={isPreview ? true : false}
-              playIcon={isPreview ? PlayPreviewIcon : undefined}
+              playing={autoplay || isPreview ? true : false}
+              playIcon={autoplay || isPreview ? PlayPreviewIcon : undefined}
               // This previewAriaLabel prop is not documented but it is in the React Player source code
               previewAriaLabel={isPreview ? previewAriaLabel : undefined}
               className="group"

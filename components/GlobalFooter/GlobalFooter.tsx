@@ -9,7 +9,7 @@ type GlobalFooterProps = {
 };
 
 export const GlobalFooter = ({ className }: GlobalFooterProps) => (
-  <Container className={cnb(styles.root, className)}>
+  <Container className={cnb(styles.root, className)} bgColor="red">
     <FlexBox direction="col" className={styles.outerWrapper}>
       <div className={styles.logoWrapper}>
         <StanfordLogo

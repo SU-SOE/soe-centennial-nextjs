@@ -2,8 +2,10 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import TimelineList from "@/components/Timeline/TimelineList";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  robots: "noindex, nofollow",
   title: "Timeline - 100 Years of Impact",
   description:
     "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
@@ -15,7 +17,7 @@ export const metadata = {
     "science",
     "breakthroughs",
   ],
-  author: "School of Engineering",
+  authors: [{ name: "School of Engineering" }],
 };
 
 const TimelinePage = async () => {

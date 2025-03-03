@@ -43,9 +43,9 @@ export const StoryPosterCard = ({
   return (
     <Container
       {...props}
+      as="article"
       width="site"
-      mb={7}
-      className="2xl:p-0 2xl:w-full 2xl:max-w-[1600px]"
+      className="2xl:p-0 2xl:w-full 2xl:max-w-[1200px]"
     >
       <Container
         bgColor={bgColor}
@@ -81,8 +81,12 @@ export const StoryPosterCard = ({
           className="flex flex-col justify-between md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
-            <AnimateInView animation="slideUp" delay={0.8}>
-              <Heading size="f5" weight="normal" className="rs-mb-3 lg:rs-mb-5">
+            <AnimateInView animation="slideUp" delay={0.5}>
+              <Heading
+                size="f4"
+                weight="normal"
+                className={body || (dek && "rs-mb-3 lg:rs-mb-5")}
+              >
                 <Link
                   href={link}
                   className="stretched-link"
@@ -117,7 +121,7 @@ export const StoryPosterCard = ({
               )}
             </AnimateInView>
             {byline && (
-              <AnimateInView animation="slideUp" delay={1}>
+              <AnimateInView animation="slideUp" delay={0.5}>
                 <Text mb="none" size="base" className="rs-mt-4">
                   {byline}
                 </Text>
@@ -127,7 +131,7 @@ export const StoryPosterCard = ({
           <AnimateInView
             animation="slideUp"
             delay={0.5}
-            className="w-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[485px]"
+            className="w-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
           >
             <div className="w-full h-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
               <Image src={src} alt={alt || ""} fill className="object-cover" />

@@ -1,29 +1,28 @@
-import Image from "next/image";
 import React, { HTMLAttributes } from "react";
 import { cnb } from "cnbuilder";
 import { Heading, Text } from "@/components/Typography";
-import { ChapterLabel } from "./ChapterLabel";
+import { ChapterLabel } from "../Story/ChapterLabel";
 import {
   AnimateInView,
   AnimateInViewProps,
 } from "@/components/Animate/AnimateInView";
 import { Container } from "@/components/Container";
 import { Link } from "@/components/Cta/Link";
+import TeaserCarousel from "./TeaserCarousel";
 
-export type ChapterTeaserProps = HTMLAttributes<HTMLDivElement> &
+export type TeaserCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
     heading: string;
     superhead?: string;
     body?: React.ReactNode | string;
     chapter?: string;
-    href: string;
+    href?: string;
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
-    imageUrl: string;
-    imageAlt?: string;
+    images: string[];
   };
 
-export const ChapterTeaser = ({
+export const TeaserCard = ({
   heading,
   superhead,
   body,
@@ -32,19 +31,19 @@ export const ChapterTeaser = ({
   headerTag = "h2",
   isHeadingLarge = false,
   className,
-  imageUrl,
-  imageAlt,
+  images,
   ...props
-}: ChapterTeaserProps) => {
+}: TeaserCardProps) => {
   return (
-    <Container {...props} mt={9} mb={9} className={className}>
+    <Container {...props} as="section" mt={7} mb={8} className={className}>
       <AnimateInView>
-        <article
+        <div
           className={cnb(
-            "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[110rem] xl:max-w-[130rem]",
+            "group mx-auto relative flex flex-col lg:flex-row justify-center items-center gap-50 xl:gap-95 rs-py-4 w-full h-fit lg:max-w-[130rem] xl:max-w-[160rem]",
           )}
         >
-          {imageUrl && (
+          <TeaserCarousel images={images} />
+          {/* {imageUrl && (
             <div className="relative shadow-2xl trnaslate-all ease-in-out duration-500 rotate-[10deg] group-hocus:rotate-[8deg] mx-28 aspect-[2/3] w-full max-w-300 overflow-hidden">
               <Image
                 className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
@@ -54,7 +53,7 @@ export const ChapterTeaser = ({
                 sizes="(max-width: 768px) 100vw, 1000px"
               />
             </div>
-          )}
+          )} */}
           <div className="flex flex-col rs-pt-3 rs-pb-4 rs-px-2">
             <Heading
               as={headerTag}
@@ -63,9 +62,12 @@ export const ChapterTeaser = ({
               mb="none"
               className="mb-0"
             >
-              <Link href={href} className="stretch-link" linkType="story">
-                {heading}
-              </Link>
+              {href && (
+                <Link href={href} className="stretch-link" linkType="story">
+                  {heading}
+                </Link>
+              )}
+              {!href && heading}
             </Heading>
             {superhead && (
               <Text
@@ -84,7 +86,7 @@ export const ChapterTeaser = ({
               </Text>
             )}
           </div>
-        </article>
+        </div>
       </AnimateInView>
     </Container>
   );

@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { TimelineItem } from "./TimelineItem";
 import { TimelineDetails } from "./TimelineDetails";
 import { SizeType } from "./Timeline.types";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { useMediaQuery } from "usehooks-ts";
 import { TimelineItem as TimelineItemData } from "@/utilities/loadTimelineData";
 import { ClipLoader } from "react-spinners";
@@ -23,6 +23,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [expandedUuid, setExpandedUuid] = useState<string | null>(null);
   const [itemId, setItemid] = useState<string>("");
+  const prefersReducedMotion = useReducedMotion();
 
   // Reference to the TimelineItems and TimelineDetails for accessibility focus management
   const itemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
@@ -76,10 +77,6 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
     setItemid((currentAnchor) => (currentAnchor === anchor ? "" : anchor));
   };
 
-  if (!isMounted) {
-    return <ClipLoader />;
-  }
-
   return (
     <div className="rs-pb-5">
       <Container as="section" width="site" py={8}>
@@ -97,147 +94,162 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
           you can interact with here.
         </Text>
       </Container>
-      <div>
-        <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
-          {rows.map((row, rowIndex) => {
-            const isFullWidthRow = (rowIndex + 1) % 3 === 0;
-            const fullwidthTrapezoid = rowIndex % 2 === 0 ? "left" : "right";
+      {!isMounted ? (
+        <div className="cc flex flex-row gap-10">
+          <ClipLoader />
+          <Text variant="big">Loading Timeline Items...</Text>
+        </div>
+      ) : (
+        <div>
+          <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
+            {rows.map((row, rowIndex) => {
+              const isFullWidthRow = (rowIndex + 1) % 3 === 0;
+              const fullwidthTrapezoid = rowIndex % 2 === 0 ? "left" : "right";
 
-            const showSvg = (rowIndex + 1) % 3 === 1;
-            const svgOptions = ["A", "B", "C", "D"];
-            const lineartType = svgOptions[Math.floor(rowIndex / 3) % 4];
-            const isSvgLeftAligned = Math.floor(rowIndex / 3) % 2 === 0;
+              const showSvg = (rowIndex + 1) % 3 === 1;
+              const svgOptions = ["A", "B", "C", "D"];
+              const lineartType = svgOptions[Math.floor(rowIndex / 3) % 4];
+              const isSvgLeftAligned = Math.floor(rowIndex / 3) % 2 === 0;
 
-            return (
-              <div
-                key={`row-${rowIndex}`}
-                id={`${rowIndex}`}
-                className={cnb(
-                  "odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6",
-                  { "w-full": isFullWidthRow },
-                )}
-              >
+              return (
                 <div
+                  key={`row-${rowIndex}`}
+                  id={`${rowIndex}`}
                   className={cnb(
-                    "cc flex flex-col items-center",
-                    {
-                      "md:items-start md:flex-row md:justify-between":
-                        !isFullWidthRow,
-                    },
-                    { "flex-row justify-center w-full": isFullWidthRow },
+                    "odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6",
+                    { "w-full": isFullWidthRow },
                   )}
                 >
-                  {isFullWidthRow && (
-                    // Render a single item in full-width rows
-                    <AnimateInView
-                      key={row[0].uuid}
-                      animation="slideUp"
-                      delay={0.5}
-                      className="w-full"
-                    >
-                      <TimelineItem
-                        {...row[0]} // Only take the first item
-                        id={row[0].uuid}
-                        aria-expanded={expandedUuid === row[0].uuid}
-                        aria-controls={row[0].anchor}
-                        isExpanded={expandedUuid === row[0].uuid}
-                        size="full"
-                        trapezoid={fullwidthTrapezoid}
-                        isHorizontal
-                        onClick={() => handleToggle(row[0].uuid, row[0].anchor)}
-                        ref={(el) => {
-                          itemRefs.current[row[0].uuid] = el;
-                        }}
-                      />
-                    </AnimateInView>
-                  )}
-                  {!isFullWidthRow &&
-                    row.map((item, itemIndex) => {
-                      const sizePattern: SizeType[] =
-                        rowIndex % 2 === 0
-                          ? ["large", "medium", "small"]
-                          : ["small", "large", "medium"];
-                      const size = sizePattern[itemIndex % sizePattern.length];
-                      const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
-
-                      // Animation
-                      const delayPattern =
-                        rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
-                      const delay =
-                        delayPattern[itemIndex % delayPattern.length];
-
-                      return (
-                        <AnimateInView
-                          key={item.uuid}
-                          animation="slideUp"
-                          delay={delay}
-                        >
-                          <TimelineItem
-                            {...item}
-                            id={item.uuid}
-                            aria-expanded={expandedUuid === item.uuid}
-                            aria-controls={item.anchor}
-                            isExpanded={expandedUuid === item.uuid}
-                            size={size}
-                            trapezoid={trapezoid}
-                            isHorizontal={isFullWidthRow}
-                            onClick={() => handleToggle(item.uuid, item.anchor)}
-                            ref={(el) => {
-                              itemRefs.current[item.uuid] = el;
-                            }}
-                          />
-                        </AnimateInView>
-                      );
-                    })}
-                </div>
-
-                {expandedUuid &&
-                  row.some((item) => item.uuid === expandedUuid) && (
-                    <motion.div
-                      id={itemId}
-                      aria-labelledby={expandedUuid}
-                      className="w-full cc"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.5 }}
-                      ref={detailsRef}
-                      tabIndex={-1}
-                    >
-                      <TimelineDetails
-                        {...timelineData.find(
-                          (item) => item.uuid === expandedUuid,
-                        )!}
-                        onClose={() => {
-                          if (expandedUuid) {
-                            const itemButton = itemRefs.current[expandedUuid];
-                            if (itemButton) {
-                              itemButton.focus();
-                            }
-                          }
-                          setExpandedUuid(null);
-                        }}
-                      />
-                    </motion.div>
-                  )}
-
-                {showSvg && (
                   <div
                     className={cnb(
-                      "flex w-full",
-                      isSvgLeftAligned ? "justify-start" : "justify-end",
+                      "cc flex flex-col items-center",
+                      {
+                        "md:items-start md:flex-row md:justify-between":
+                          !isFullWidthRow,
+                      },
+                      { "flex-row justify-center w-full": isFullWidthRow },
                     )}
                   >
-                    <HorizontalLineart
-                      lineartType={lineartType as "A" | "B" | "C" | "D"}
-                    />
+                    {isFullWidthRow && (
+                      // Render a single item in full-width rows
+                      <AnimateInView
+                        key={row[0].uuid}
+                        animation="slideUp"
+                        delay={0.5}
+                        className="w-full"
+                      >
+                        <TimelineItem
+                          {...row[0]} // Only take the first item
+                          id={row[0].uuid}
+                          aria-expanded={expandedUuid === row[0].uuid}
+                          aria-controls={row[0].anchor}
+                          isExpanded={expandedUuid === row[0].uuid}
+                          size="full"
+                          trapezoid={fullwidthTrapezoid}
+                          isHorizontal
+                          onClick={() =>
+                            handleToggle(row[0].uuid, row[0].anchor)
+                          }
+                          ref={(el) => {
+                            itemRefs.current[row[0].uuid] = el;
+                          }}
+                        />
+                      </AnimateInView>
+                    )}
+                    {!isFullWidthRow &&
+                      row.map((item, itemIndex) => {
+                        const sizePattern: SizeType[] =
+                          rowIndex % 2 === 0
+                            ? ["large", "medium", "small"]
+                            : ["small", "large", "medium"];
+                        const size =
+                          sizePattern[itemIndex % sizePattern.length];
+                        const trapezoid =
+                          itemIndex % 2 === 0 ? "left" : "right";
+
+                        // Animation
+                        const delayPattern =
+                          rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
+                        const delay =
+                          delayPattern[itemIndex % delayPattern.length];
+
+                        return (
+                          <AnimateInView
+                            key={item.uuid}
+                            animation="slideUp"
+                            delay={delay}
+                          >
+                            <TimelineItem
+                              {...item}
+                              id={item.uuid}
+                              aria-expanded={expandedUuid === item.uuid}
+                              aria-controls={item.anchor}
+                              isExpanded={expandedUuid === item.uuid}
+                              size={size}
+                              trapezoid={trapezoid}
+                              isHorizontal={isFullWidthRow}
+                              onClick={() =>
+                                handleToggle(item.uuid, item.anchor)
+                              }
+                              ref={(el) => {
+                                itemRefs.current[item.uuid] = el;
+                              }}
+                            />
+                          </AnimateInView>
+                        );
+                      })}
                   </div>
-                )}
-              </div>
-            );
-          })}
+
+                  {expandedUuid &&
+                    row.some((item) => item.uuid === expandedUuid) && (
+                      <motion.div
+                        id={itemId}
+                        aria-labelledby={expandedUuid}
+                        className="w-full cc"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{
+                          duration: prefersReducedMotion ? 0 : 0.8,
+                        }}
+                        ref={detailsRef}
+                        tabIndex={-1}
+                      >
+                        <TimelineDetails
+                          {...timelineData.find(
+                            (item) => item.uuid === expandedUuid,
+                          )!}
+                          onClose={() => {
+                            if (expandedUuid) {
+                              const itemButton = itemRefs.current[expandedUuid];
+                              if (itemButton) {
+                                itemButton.focus();
+                              }
+                            }
+                            setExpandedUuid(null);
+                          }}
+                        />
+                      </motion.div>
+                    )}
+
+                  {showSvg && (
+                    <div
+                      className={cnb(
+                        "flex w-full",
+                        isSvgLeftAligned ? "justify-start" : "justify-end",
+                      )}
+                    >
+                      <HorizontalLineart
+                        lineartType={lineartType as "A" | "B" | "C" | "D"}
+                      />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

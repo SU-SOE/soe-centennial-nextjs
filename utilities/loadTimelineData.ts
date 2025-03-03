@@ -12,50 +12,37 @@ export type TimelineItem = {
 };
 
 export async function loadTimelineData(): Promise<TimelineItem[]> {
-  const baseDirectory = path.join(process.cwd(), "data/timeline");
-  const decadeDirectories = fs.readdirSync(baseDirectory);
+  const filePath = path.join(process.cwd(), "data/timeline.json");
 
-  const allTimelineData: TimelineItem[] = [];
+  try {
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const parsedData: unknown = JSON.parse(fileContents);
 
-  for (const decadeDir of decadeDirectories) {
-    const decadePath = path.join(baseDirectory, decadeDir);
-
-    // Skip if it's not a directory
-    if (!fs.statSync(decadePath).isDirectory()) {
-      console.warn(`Skipping non-directory: ${decadeDir}`);
-      continue;
+    if (!Array.isArray(parsedData)) {
+      console.warn("Invalid data format: Expected an array of timeline items.");
+      return [];
     }
 
-    const files = fs.readdirSync(decadePath);
+    const allTimelineData = parsedData
+      .filter(isTimelineItem)
+      .map((item) => assignUuidAndAnchor(item));
 
-    for (const file of files) {
-      const filePath = path.join(decadePath, file);
-      const fileContents = fs.readFileSync(filePath, "utf8");
-
-      try {
-        const parsedData: unknown = JSON.parse(fileContents);
-
-        // Handle arrays or single objects
-        if (Array.isArray(parsedData)) {
-          const validatedItems = parsedData
-            .filter(isTimelineItem)
-            .map(assignUuidAndAnchor);
-          allTimelineData.push(...validatedItems);
-        } else if (isTimelineItem(parsedData)) {
-          allTimelineData.push(assignUuidAndAnchor(parsedData));
-        } else {
-          console.warn(`Invalid data format in file: ${filePath}`);
-        }
-      } catch (error) {
-        console.error(`Error parsing JSON in file: ${filePath}`);
-        console.error(error);
-      }
-    }
+    // Sort all timeline items by year
+    allTimelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
+    return allTimelineData;
+  } catch (error) {
+    console.error(`Error reading or parsing JSON file: ${filePath}`);
+    console.error(error);
+    return [];
   }
+}
 
-  // Sort all timeline items by year
-  allTimelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
-  return allTimelineData;
+function sanitizeForUrl(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "") // Remove non-alphanumeric characters
+    .trim()
+    .replace(/\s+/g, "-"); // Replace spaces with hyphens
 }
 
 function assignUuidAndAnchor(
@@ -70,14 +57,6 @@ function assignUuidAndAnchor(
   const uuid = uuidv4(); // Always generate a new UUID
 
   return { ...item, uuid, anchor };
-}
-
-function sanitizeForUrl(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "") // Remove non-alphanumeric characters
-    .trim()
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
 }
 
 function isTimelineItem(

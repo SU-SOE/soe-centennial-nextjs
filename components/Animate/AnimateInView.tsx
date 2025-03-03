@@ -31,21 +31,17 @@ export const AnimateInView = ({
     return <div>{children}</div>;
   }
 
-  const beforeAnimationState = prefersReducedMotion
-    ? "hiddenReduced"
-    : "hidden";
-
   return (
     <motion.div
       ref={ref}
       variants={AnimationMap[animation]}
       transition={{
-        delay,
-        duration,
+        delay: prefersReducedMotion ? 0 : delay,
+        duration: prefersReducedMotion ? 0 : duration,
         ease: "easeOut",
       }}
       initial="hidden"
-      animate={isInView ? "visible" : beforeAnimationState}
+      animate={isInView ? "visible" : "hidden"}
       className={className}
       {...props}
     >

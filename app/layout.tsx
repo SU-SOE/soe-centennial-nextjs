@@ -1,6 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { Source_Sans_3, DM_Sans, DM_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { cnb } from "cnbuilder";
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { GlobalFooter } from "@/components/GlobalFooter";
@@ -65,12 +66,12 @@ export const metadata = {
     apple: appleIcons,
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     nocache: false,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
       noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
@@ -102,6 +103,7 @@ export default function RootLayout({
           <GlobalFooter />
         </footer>
       </body>
+      <GoogleAnalytics gaId="G-Z9E6WWH5DJ" />
     </html>
   );
 }
