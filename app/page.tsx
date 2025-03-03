@@ -68,7 +68,7 @@ export default function MvpHome() {
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
         <Container bgColor="blue" width="full" pt={8} pb={9}>
-          <div className="cc lg:p-0 text-justify mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
+          <div className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
             <Heading font="dm-sans" size={2} weight="semibold" align="center">
               Stanford Engineering Centennial
             </Heading>
