@@ -180,3 +180,10 @@ Use the hotfix workflow for urgent production bug fixes when there are pending c
 #### Post-Merge Considerations:
 
 - Depending on the state of `dev`, you may need to manually merge `main` back into `dev` to resolve conflicts and sync changes.
+
+📚 Additional Documentation
+---------------
+
+- [How to use scripts to convert Google Spreadsheet to JSON for Timeline Data](/scripts/README.md)
+
+- _More coming soon_
