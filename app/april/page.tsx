@@ -16,6 +16,7 @@ import { AnimateInView } from "@/components/Animate";
 import { Link } from "@/components/Cta/Link";
 import { ExploreMore } from "@/components/Story/ExploreMore";
 import { Metadata } from "next";
+import { PosterCard } from "@/components/PosterCard/PosterCard";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -84,6 +85,16 @@ export default function Home() {
     <div>
       <Masthead bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
+      <PosterCard
+        heading="The foundation of a new era in engineering"
+        superhead="100 Years of Impact"
+        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
+        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
+        caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        chapter="Chapter 1"
+        link="/"
+        hasBgImage
+      />
       <StoryPosterCard
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
