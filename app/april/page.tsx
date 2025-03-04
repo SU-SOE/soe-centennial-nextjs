@@ -3,7 +3,6 @@ import {
   TimelineHorizontalCard,
   TimelineCardProps,
 } from "@/components/Timeline";
-import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { TwoCol } from "@/components/Layout";
 import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
@@ -15,6 +14,7 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { AnimateInView } from "@/components/Animate";
 import { Link } from "@/components/Cta/Link";
 import { ExploreMore } from "@/components/Story/ExploreMore";
+import AnimatedHero from "@/components/AnimatedHero/AnimatedHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -82,8 +82,8 @@ export default function Home() {
   ];
   return (
     <div>
-      <Masthead bgColor="fog-light" />
-      <PageTitle heading="100 years of" bigText="Impact" />
+      <Masthead logoColor="white-red" isOverlap />
+      <AnimatedHero />
       <StoryPosterCard
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
