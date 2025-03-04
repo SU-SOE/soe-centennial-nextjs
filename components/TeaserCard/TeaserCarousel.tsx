@@ -29,24 +29,12 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
     return () => clearInterval(interval);
   }, [isAutoplaying, images.length, index]);
 
-  // Keyboard Navigation
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowRight") {
-      setPrevIndex(index);
-      setIndex((prev) => (prev + 1) % images.length);
-    } else if (e.key === "ArrowLeft") {
-      setPrevIndex(index);
-      setIndex((prev) => (prev - 1 + images.length) % images.length);
-    }
-  };
-
   return (
     <div
       className="relative w-full max-w-600 mx-auto perspective-1000 "
       role="region"
       aria-roledescription="carousel"
       aria-label="Image carousel"
-      onKeyDown={handleKeyDown}
       tabIndex={0}
     >
       {/* Screen reader live region */}
@@ -55,9 +43,9 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
       </div>
 
       {/* Animated Image Transition */}
-      <div className="mx-auto cursor-pointer aspect-[1/1] relative h-full shadow-xl transform ease-in-out rotate-y-[15deg] flex items-center justify-center w-300 md:w-400 lg:w-500 2xl:w-600">
+      <ul className="p-0 mx-auto cursor-pointer aspect-[1/1] relative h-full shadow-xl transform ease-in-out rotate-y-[15deg] flex items-center justify-center w-300 md:w-400 lg:w-500 2xl:w-600 list-none">
         <AnimatePresence mode="sync">
-          <motion.div
+          <motion.li
             key={`previous-${prevIndex}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -67,15 +55,17 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
               ease: "easeInOut",
             }}
             onClick={() => setIsAutoplaying(!isAutoplaying)}
+            className="absolute w-full h-full m-0"
           >
             <Image
               src={images[prevIndex]}
               alt={`Previous slide ${prevIndex + 1}`}
               fill
+              sizes="(max-width: 768px) 100vw, 1000px"
               className="z-0 object-cover rounded-[20px]"
             />
-          </motion.div>
-          <motion.div
+          </motion.li>
+          <motion.li
             key={`current-${index}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -85,39 +75,44 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
               ease: "easeInOut",
             }}
             onClick={() => setIsAutoplaying(!isAutoplaying)}
+            className="absolute w-full h-full m-0"
           >
             <Image
               src={images[index]}
               alt={`Slide ${index + 1}`}
               fill
+              sizes="(max-width: 768px) 100vw, 1000px"
               className="z-10 object-cover rounded-[20px]"
             />
-          </motion.div>
+          </motion.li>
         </AnimatePresence>
-      </div>
+      </ul>
 
       {/* Play/Pause Button + Dots Navigation */}
-      <div className="flex justify-center items-center rs-mt-3 space-x-20">
-        <button
-          className="border-2 border-stone-dark p-2 text-dark rounded-full transition hocus:text-digital-red-xlight hocus:border-digital-red-xlight"
-          onClick={() => setIsAutoplaying(!isAutoplaying)}
-          aria-label={isAutoplaying ? "Pause autoplay" : "Play autoplay"}
-        >
-          {isAutoplaying ? <PauseIcon width={20} /> : <PlayIcon width={20} />}
-        </button>
-        {images.map((_, i) => (
+      <ul className="flex justify-center items-center rs-mt-3 space-x-20 list-none">
+        <li className="m-0">
           <button
-            key={i}
-            className={`w-20 h-20 rounded-full ${i === index ? "bg-digital-red-xlight" : "bg-stone-dark"}`}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            tabIndex={0}
-            onKeyDown={(e) =>
-              e.key === "Enter" || e.key === " " ? setIndex(i) : null
-            }
-          />
+            className="border-2 border-stone-dark p-2 text-dark rounded-full transition hocus:text-digital-red hocus:border-digital-red"
+            onClick={() => setIsAutoplaying(!isAutoplaying)}
+            aria-label={isAutoplaying ? "Pause autoplay" : "Play autoplay"}
+          >
+            {isAutoplaying ? <PauseIcon width={20} /> : <PlayIcon width={20} />}
+          </button>
+        </li>
+        {images.map((_, i) => (
+          <li key={i} className="m-0">
+            <button
+              className={`w-20 h-20 rounded-full hocus:bg-digital-red ${i === index ? "bg-digital-red-xlight" : "bg-stone-dark"}`}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              tabIndex={0}
+              onKeyDown={(e) =>
+                e.key === "Enter" || e.key === " " ? setIndex(i) : null
+              }
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
