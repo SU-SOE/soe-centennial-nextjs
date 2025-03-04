@@ -6,4 +6,4 @@ export const eventsWrapper =
 export const cardWrapper =
   "flex flex-col rs-mb-5 w-full h-fit lg:max-w-[500px] xl:max-w-[700px]";
 export const body =
-  "[&_a]:text-white [&_a]:no-underline hocus:[&_a]:text-cen-blue-xlight hocus:[&_a]:underline [&_a]:cursor-pointer";
+  "[&_a]:text-white [&_a]:underline hocus:[&_a]:text-stone-light hocus:[&_a]:underline [&_a]:cursor-pointer";
