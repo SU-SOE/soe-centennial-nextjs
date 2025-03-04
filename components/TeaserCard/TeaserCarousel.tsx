@@ -29,24 +29,12 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
     return () => clearInterval(interval);
   }, [isAutoplaying, images.length, index]);
 
-  // Keyboard Navigation
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowRight") {
-      setPrevIndex(index);
-      setIndex((prev) => (prev + 1) % images.length);
-    } else if (e.key === "ArrowLeft") {
-      setPrevIndex(index);
-      setIndex((prev) => (prev - 1 + images.length) % images.length);
-    }
-  };
-
   return (
     <div
       className="relative w-full max-w-600 mx-auto perspective-1000 "
       role="region"
       aria-roledescription="carousel"
       aria-label="Image carousel"
-      onKeyDown={handleKeyDown}
       tabIndex={0}
     >
       {/* Screen reader live region */}
@@ -104,7 +92,7 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
       <ul className="flex justify-center items-center rs-mt-3 space-x-20 list-none">
         <li className="m-0">
           <button
-            className="border-2 border-stone-dark p-2 text-dark rounded-full transition hocus:text-digital-red-xlight hocus:border-digital-red-xlight"
+            className="border-2 border-stone-dark p-2 text-dark rounded-full transition hocus:text-digital-red hocus:border-digital-red"
             onClick={() => setIsAutoplaying(!isAutoplaying)}
             aria-label={isAutoplaying ? "Pause autoplay" : "Play autoplay"}
           >
@@ -114,7 +102,7 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
         {images.map((_, i) => (
           <li key={i} className="m-0">
             <button
-              className={`w-20 h-20 rounded-full ${i === index ? "bg-digital-red-xlight" : "bg-stone-dark"}`}
+              className={`w-20 h-20 rounded-full hocus:bg-digital-red ${i === index ? "bg-digital-red-xlight" : "bg-stone-dark"}`}
               onClick={() => setIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
               tabIndex={0}
