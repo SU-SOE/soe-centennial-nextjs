@@ -3,7 +3,7 @@ import { StoryPosterCard } from "@/components/Story";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
 import { TeaserCard } from "@/components/TeaserCard/TeaserCard";
-import { EmbedMediaHero } from "@/components/EmbedVideoHero";
+// import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import { H1 } from "@/components/Typography/Header";
