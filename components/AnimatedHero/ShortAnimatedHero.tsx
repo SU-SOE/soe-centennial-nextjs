@@ -38,6 +38,12 @@ const ShortAnimatedHero = () => {
                   1925-2025
                 </Text>
               </AnimateInView>
+              <AnimateInView animation="slideUp" delay={0.8}>
+                <Text size="f2" className="text-white" mb="0">
+                  Transformative breakthroughs,
+                  <br className="block lg:hidden" /> boundless horizons
+                </Text>
+              </AnimateInView>
             </>
           )}
         </div>
