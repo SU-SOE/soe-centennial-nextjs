@@ -47,31 +47,18 @@ export const Masthead = ({
         <div className={styles.logo}>
           <EngLogoLockup color={logoColor} isLink />
           <Text
-            align="center"
             font="dm-sans"
-            leading="tight"
-            className="text-16 block lg:hidden max-w-200"
+            size="small"
+            className="ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220"
             mb="0"
+            leading="snug"
           >
             A century of discovery, innovation, and impact
           </Text>
         </div>
-        <div className="hidden lg:flex flex-row justify-center items-center w-full">
-          <Text
-            align="center"
-            font="dm-sans"
-            leading="tight"
-            className="text-23 max-w-220 hidden lg:block"
-            mb="0"
-          >
-            A century of discovery, innovation, and impact
-          </Text>
-        </div>
-        {mainNav && (
-          <FlexBox alignItems="center" className={styles.flexbox}>
-            {mainNav}
-          </FlexBox>
-        )}
+        <FlexBox alignItems="center" className={styles.flexbox}>
+          {mainNav}
+        </FlexBox>
       </FlexBox>
     </header>
   );

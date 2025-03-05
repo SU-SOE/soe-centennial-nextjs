@@ -9,10 +9,9 @@ export const root = (isOverlap: boolean) => {
 
 // Use a wider centered container (1800px wide at 4XL (2000px) breakpoint)
 export const wrapper =
-  "relative cc 3xl:px-100 4xl:px-[calc((100%-1800px)/2)] rs-pt-2 rs-pb-1 transition relative min-h-[14rem]";
+  "cc 3xl:px-100 4xl:px-[calc((100%-1800px)/2)] rs-pt-2 rs-pb-1 transition";
 
-export const logo =
-  "relative lg:absolute lg:rs-pt-2 md:rs-pb-1 top-0 w-fit max-w-[325px]";
+export const logo = "flex flex-row justify-center items-center";
 
 // Pass in a root style for the lock up to scale everything within proportionally
 // We use the group-has- TW selector to make the lockup white when the main nav is open
