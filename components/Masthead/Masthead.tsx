@@ -51,7 +51,8 @@ export const Masthead = ({
             size="small"
             className="ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220"
             mb="0"
-            leading="snug"
+            leading="tight"
+            weight="medium"
           >
             A century of discovery, innovation, and impact
           </Text>
