@@ -12,7 +12,7 @@ const AnimatedHero = () => {
   const [logoFrame, setLogoFrame] = useState(false);
 
   return (
-    <div className="relative bg-cardinal-red-x-dark w-screen h-[calc(100vh_-_15rem)] rs-mb-7">
+    <div className="relative bg-cardinal-red-x-dark w-screen h-[calc(100vh_-_10rem)] rs-mb-7">
       <div className=" w-full h-full flex flex-row gap-200 items-center justify-center cc">
         <div className="relative w-full max-w-[33.3%]">
           {lineArtSetOne && !lineArtSetTwo && (
@@ -137,9 +137,9 @@ const AnimatedHero = () => {
           {lineArtSetTwo && (
             <>
               <motion.div
-                className="w-fit aspect-[1.12/1] rs-mb-1"
-                initial={{ height: "600px" }}
-                animate={logoFrame ? { height: "300px" } : { height: "600px" }}
+                className="h-fit aspect-[1.12/1] rs-mb-1"
+                initial={{ width: "800px" }}
+                animate={logoFrame ? { width: "300px" } : { width: "800px" }}
                 transition={{ duration: 0.8 }}
               >
                 <MaskAnimation onComplete={() => setLogoFrame(true)} />

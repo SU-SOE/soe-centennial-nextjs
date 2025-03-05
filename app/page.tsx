@@ -8,6 +8,7 @@ import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import { H1 } from "@/components/Typography/Header";
 import { Metadata } from "next";
+import ShortAnimatedHero from "@/components/AnimatedHero/ShortAnimatedHero";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -59,14 +60,15 @@ export default function MvpHome() {
 
   return (
     <>
-      <Masthead logoColor="white-red" bgColor="homepage" />
+      <Masthead logoColor="white-red" isOverlap />
       <main id="main-content">
         <H1 className="sr-only">100 years of Stanford Engineering</H1>
-        <EmbedMediaHero
+        <ShortAnimatedHero />
+        {/* <EmbedMediaHero
           autoplay
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
-        />
+        /> */}
         <Container as="section" bgColor="blue" width="full" pt={8} pb={9}>
           <article className="cc lg:p-0 text-center mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
             <Heading font="dm-sans" size={2} weight="semibold">
