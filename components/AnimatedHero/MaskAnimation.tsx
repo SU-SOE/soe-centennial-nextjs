@@ -13,7 +13,11 @@ const images = [
   "https://res.cloudinary.com/duv7bozlj/image/upload/v1740466877/WEB-20220204_3D_Bioprinting_N6A8345_optimized_h5vvnz.jpg",
 ];
 
-export const MaskAnimation = () => {
+interface MaskAnimationProps {
+  onComplete?: () => void;
+}
+
+export const MaskAnimation = ({ onComplete }: MaskAnimationProps) => {
   const ref = useRef<SVGSVGElement | null>(null);
   const isInView = useInView(ref as React.RefObject<Element>, { once: true });
   const [imageIndex, setImageIndex] = useState(0);
@@ -24,12 +28,17 @@ export const MaskAnimation = () => {
       const interval = setInterval(() => {
         if (imageIndex < images.length - 1) {
           setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        } else {
+          clearInterval(interval);
+          onComplete?.(); // Call onComplete when last image is fully visible
         }
-      }, 1000); // Change image every second
+      }, 500); // Change image every second
 
-      return () => clearInterval(interval);
+      return () => {
+        clearInterval(interval);
+      };
     }
-  }, [imageIndex, mask]);
+  }, [imageIndex, mask, onComplete]);
 
   return (
     <motion.svg
@@ -61,7 +70,7 @@ export const MaskAnimation = () => {
           mask="url(#image-mask)"
           initial={{ opacity: 0 }}
           animate={mask && { opacity: imageIndex === idx ? 1 : 0 }}
-          transition={{ duration: 1, delay: 0, ease: "easeInOut" }}
+          transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
         />
       ))}
       <motion.path
@@ -72,7 +81,7 @@ export const MaskAnimation = () => {
         initial={{ pathLength: 0, pathOffset: 0 }}
         animate={{ pathLength: 1, pathOffset: 0 }}
         transition={{
-          duration: 3,
+          duration: 1,
           delay: 0,
           ease: "easeInOut",
         }}
