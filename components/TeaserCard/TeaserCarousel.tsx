@@ -92,7 +92,7 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
       <ul className="flex justify-center items-center rs-mt-3 space-x-20 list-none">
         <li className="m-0">
           <button
-            className="border-2 border-stone-dark p-2 text-dark rounded-full transition hocus:text-digital-red hocus:border-digital-red"
+            className="border-2 border-stone-dark p-2 text-dark rounded-full transition hocus:text-white hocus:bg-digital-red hocus:border-digital-red"
             onClick={() => setIsAutoplaying(!isAutoplaying)}
             aria-label={isAutoplaying ? "Pause autoplay" : "Play autoplay"}
           >
