@@ -5,9 +5,14 @@ import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-interface TeaserCarouselProps {
-  images: string[];
-}
+type TeaserCarouselImage = {
+  src: string;
+  alt: string;
+};
+
+export type TeaserCarouselProps = {
+  images: TeaserCarouselImage[];
+};
 
 const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
   const [index, setIndex] = useState(0);
@@ -56,10 +61,11 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
             }}
             onClick={() => setIsAutoplaying(!isAutoplaying)}
             className="absolute w-full h-full m-0"
+            aria-label={`Previous slide ${prevIndex + 1}`}
           >
             <Image
-              src={images[prevIndex]}
-              alt={`Previous slide ${prevIndex + 1}`}
+              src={images[prevIndex].src}
+              alt={images[prevIndex].alt}
               fill
               sizes="(max-width: 768px) 100vw, 1000px"
               className="z-0 object-cover rounded-[20px]"
@@ -76,10 +82,11 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
             }}
             onClick={() => setIsAutoplaying(!isAutoplaying)}
             className="absolute w-full h-full m-0"
+            aria-label={`Slide ${index + 1}`}
           >
             <Image
-              src={images[index]}
-              alt={`Slide ${index + 1}`}
+              src={images[index].src}
+              alt={images[index].alt}
               fill
               sizes="(max-width: 768px) 100vw, 1000px"
               className="z-10 object-cover rounded-[20px]"
