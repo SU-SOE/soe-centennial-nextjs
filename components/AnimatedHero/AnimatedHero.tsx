@@ -8,7 +8,6 @@ import { MaskAnimation } from "./MaskAnimation";
 const AnimatedHero = () => {
   const [lineArtSetOne, setLineArtSetOne] = useState(false);
   const [lineArtSetTwo, setlineArtSetTwo] = useState(false);
-  const [lineArtSetThree, setlineArtSetThree] = useState(false);
 
   return (
     <div className="relative bg-cardinal-red-x-dark w-screen h-screen rs-mb-7">
@@ -53,49 +52,11 @@ const AnimatedHero = () => {
               </svg>
               // </motion.div>
             )}
-            {lineArtSetTwo && !lineArtSetThree && (
-              // <motion.div
-              //   initial={{ opacity: 1 }}
-              //   animate={
-              //     lineArtSetThree
-              //       ? { opacity: 0, display: "none" }
-              //       : { opacity: 1 }
-              //   }
-              //   transition={{
-              //     duration: 0.3,
-              //     delay: 0,
-              //     ease: "easeInOut",
-              //   }}
-              // >
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 423 497"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <motion.path
-                  d="M324.41 353.961C346.92 353.961 331.203 353.961 373.41 353.961C397.931 353.961 408.583 342.489 408.583 321.67C408.583 232.802 408.583 71.2599 408.583 65.5968C408.583 29.5762 395.993 8.5 362.111 8.5C346.636 8.5 82.8332 8.5 56.2077 8.5C29.5822 8.5 -43.0031 47.7727 71.2125 141.565C93.4777 157.532 247.61 289.518 324.41 353.961ZM324.41 353.961C268.555 353.961 150.636 353.961 117.574 353.961C99.2463 353.961 92.0285 363.7 92.0284 385.093C92.0283 412.704 92.0284 454.981 92.0284 460.573C92.0284 482.391 109.719 488.5 116.701 488.5C130.77 488.5 372.003 488.5 376.224 488.5C423.585 488.5 423.901 442.747 396.846 417.809C369.792 392.871 346.228 372.269 324.41 353.961Z"
-                  stroke="#F83535"
-                  strokeWidth="16"
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0, pathOffset: 0 }}
-                  animate={{ pathLength: 1, pathOffset: 0 }}
-                  transition={{
-                    duration: 3,
-                    delay: 0,
-                    ease: "easeInOut",
-                  }}
-                  onAnimationComplete={() => setlineArtSetThree(true)}
-                />
-              </svg>
-              // </motion.div>
-            )}
           </div>
           <motion.div
             className="w-full max-h-600"
             initial={{ maxWidth: "33.3%", flexShrink: 1 }}
-            animate={lineArtSetThree && { maxWidth: "800px", flexShrink: 0 }}
+            animate={lineArtSetTwo && { maxWidth: "800px", flexShrink: 0 }}
             transition={{ delay: 0 }}
           >
             {/* <motion.div
@@ -172,45 +133,7 @@ const AnimatedHero = () => {
               </svg>
               // </motion.div>
             )}
-            {lineArtSetTwo && !lineArtSetThree && (
-              // <motion.div
-              //   initial={{ opacity: 1 }}
-              //   animate={
-              //     lineArtSetThree
-              //       ? { opacity: 0, display: "none" }
-              //       : { opacity: 1 }
-              //   }
-              //   transition={{
-              //     duration: 0.3,
-              //     delay: 0,
-              //     ease: "easeInOut",
-              //   }}
-              // >
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 390 537"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <motion.path
-                  d="M381.334 134.835C381.334 82.8456 381.9 66.2088 306.632 66.2088C231.364 66.2088 145.344 66.2088 117.614 66.2088C67.8123 66.2088 67.2464 8.5 117.614 8.5C167.981 8.5 243.815 8.5 268.715 8.5C337.758 8.5 331.533 118.199 268.715 118.199C205.898 118.199 100.07 118.199 75.1693 118.199C-1.23039 118.199 -6.60214 165.054 32.725 217.499C67.8123 264.29 209.859 440.536 235.892 472.25C251.936 491.796 271.63 516.368 292.484 523.72C336.282 539.162 381.334 515.923 381.334 472.25C381.334 356.624 381.334 199.13 381.334 134.835Z"
-                  stroke="#F83535"
-                  strokeWidth="16"
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0, pathOffset: 0 }}
-                  animate={{ pathLength: 1, pathOffset: 0 }}
-                  transition={{
-                    duration: 3,
-                    delay: 0,
-                    ease: "easeInOut",
-                  }}
-                  onAnimationComplete={() => setlineArtSetThree(true)}
-                />
-              </svg>
-              // </motion.div>
-            )}
-            {lineArtSetThree && <MaskAnimation />}
+            {lineArtSetTwo && <MaskAnimation />}
           </motion.div>
           <div className="relative w-full max-w-[33.3%]">
             {lineArtSetOne && !lineArtSetTwo && (
@@ -247,44 +170,6 @@ const AnimatedHero = () => {
                     ease: "easeInOut",
                   }}
                   onAnimationComplete={() => setlineArtSetTwo(true)}
-                />
-              </svg>
-              // </motion.div>
-            )}
-            {lineArtSetTwo && !lineArtSetThree && (
-              // <motion.div
-              //   initial={{ opacity: 1 }}
-              //   animate={
-              //     lineArtSetThree
-              //       ? { opacity: 0, display: "none" }
-              //       : { opacity: 1 }
-              //   }
-              //   transition={{
-              //     duration: 0.3,
-              //     delay: 0,
-              //     ease: "easeInOut",
-              //   }}
-              // >
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 396 689"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <motion.path
-                  d="M156.018 625.785C233.82 604.287 338.49 579.468 358.08 573.171C377.671 566.874 387.691 547.983 387.691 520.429L387.687 39.792C387.687 16.5074 370.394 5.00784 350.543 8.9801L43.5122 65.8676C18.3266 70.5422 8.30511 86.0413 8.3051 113.183L8.30509 570.379C8.30509 601.591 28.3973 605.508 49.5926 601.591L245.09 549.255C267.962 542.819 280.551 558.896 280.551 577.096L280.551 657.421C280.551 670.328 270.087 680.792 257.18 680.792L161.827 680.792C119.076 680.792 113.478 637.54 156.018 625.785Z"
-                  stroke="#F83535"
-                  strokeWidth="16"
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0, pathOffset: 0 }}
-                  animate={{ pathLength: 1, pathOffset: 0 }}
-                  transition={{
-                    duration: 3,
-                    delay: 0,
-                    ease: "easeInOut",
-                  }}
-                  onAnimationComplete={() => setlineArtSetThree(true)}
                 />
               </svg>
               // </motion.div>
