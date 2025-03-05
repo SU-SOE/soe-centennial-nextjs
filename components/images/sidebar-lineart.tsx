@@ -10,6 +10,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
     <>
       <div className="w-full h-full hidden lg:block">
         <svg
+          aria-hidden="true"
           viewBox="0 0 467 1671"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +31,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
         </svg>
         {/* XL & LG */}
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 315 1283"
           className={cnb("hidden lg:block 2xl:hidden", className)}
@@ -52,6 +54,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
       {/* MD */}
       <div className="w-full h-full lg:hidden">
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           className={cnb("hidden @4xl:block lg:hidden", className)}
           style={{
@@ -72,6 +75,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
         </svg>
         {/* SM */}
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           className={cnb("hidden @md:block @4xl:hidden", className)}
           style={{
@@ -92,6 +96,7 @@ const SidebarLineart = ({ className }: SidebarLineartProps) => {
         </svg>
         {/* XS */}
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           className={cnb("block @md:hidden", className)}
           style={{
