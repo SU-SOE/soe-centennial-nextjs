@@ -2,6 +2,7 @@ import React from "react";
 export const YouTube = ({ ...props }: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 576 512"
     className="fill-current"

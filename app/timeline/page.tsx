@@ -26,6 +26,7 @@ const TimelinePage = async () => {
     <div className="bg-fog-light">
       <div className="rs-pt-8 fixed top-0 right-0 w-full md:w-[calc(100%_-_50rem)] z-0">
         <svg
+          aria-hidden="true"
           width="100%"
           height="100%"
           viewBox="0 0 1205 1166"

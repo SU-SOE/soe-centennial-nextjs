@@ -49,9 +49,10 @@ export const Masthead = ({
           <Text
             font="dm-sans"
             size="small"
-            className="mt-10 md:mt-18 max-w-200"
+            className="ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220"
             mb="0"
-            leading="snug"
+            leading="tight"
+            weight="medium"
           >
             A century of discovery, innovation, and impact
           </Text>

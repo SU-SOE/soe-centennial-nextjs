@@ -11,7 +11,7 @@ export const root = (isOverlap: boolean) => {
 export const wrapper =
   "cc 3xl:px-100 4xl:px-[calc((100%-1800px)/2)] rs-pt-2 rs-pb-1 transition";
 
-export const logo = "w-fit max-w-[325px]";
+export const logo = "flex flex-row justify-center items-center";
 
 // Pass in a root style for the lock up to scale everything within proportionally
 // We use the group-has- TW selector to make the lockup white when the main nav is open
@@ -32,7 +32,7 @@ export const bgColors = {
   "fog-light": "bg-fog-light text-stone-dark",
   "red-gradient": "bg-cen-red-gradient text-white",
   red: "bg-cardinal-red-x-dark text-white",
-  homepage: "bg-cardinal-red-dark text-white",
+  homepage: "bg-gradient-to-b from-[#7A0000] to-[#971515] text-white",
   "stone-dark": "bg-stone-dark text-white",
 };
 

@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Letter from Dean Widom",
+  title: "Letter from Dean Widom | 100 Years of Stanford Engineering",
   description:
     "Dean Widom reflects on a century of Stanford Engineering, honoring the visionary faculty who laid its foundation and celebrating the school's global impact today.",
   openGraph: {

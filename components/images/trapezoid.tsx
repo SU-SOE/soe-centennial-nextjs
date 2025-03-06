@@ -15,6 +15,7 @@ export const Trapezoid = ({
 }: TrapezoidProps) => {
   return (
     <svg
+      aria-hidden="true"
       width={width}
       height={height}
       viewBox="0 0 495 909"

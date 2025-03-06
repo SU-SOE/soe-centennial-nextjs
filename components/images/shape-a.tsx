@@ -8,6 +8,7 @@ type Props = HtmlHTMLAttributes<SVGSVGElement> & {
 const ShapeA = ({ height = 900, width = "100%", ...props }: Props) => {
   return (
     <svg
+      aria-hidden="true"
       {...props}
       width={width}
       height={height}

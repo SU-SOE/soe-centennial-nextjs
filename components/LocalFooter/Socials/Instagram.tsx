@@ -2,6 +2,7 @@ import React from "react";
 export const Instagram = ({ ...props }: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"
     className="fill-current"
