@@ -53,7 +53,7 @@ export const Button = ({
         &#65279;
         <ArrowRightIcon
           width={20}
-          className="ml-2 inline-block transition ease-in-out duration-1000 ml-03em group-hover/button:translate-x-02em group-focus/button:translate-x-02em"
+          className="ml-2 inline-block transition ease-in-out duration-500 ml-03em group-hover/button:translate-x-02em group-focus/button:translate-x-02em"
         />
       </span>
     </Link>

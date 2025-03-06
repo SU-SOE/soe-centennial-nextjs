@@ -1,5 +1,6 @@
 export const LinkedinIn = ({ ...props }: React.SVGProps<SVGSVGElement>) => (
   <svg
+    aria-hidden="true"
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"

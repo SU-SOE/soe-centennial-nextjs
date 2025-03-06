@@ -116,10 +116,22 @@ export default function MvpHome() {
           heading="Stories of each decade released monthly, starting in April"
           body="Throughout the year, we’ll publish a story about each of the school’s ten decades. Come back in April to read more about Decade 1 and 2, and to scroll through a timeline of the school’s history."
           images={[
-            "https://res.cloudinary.com/duv7bozlj/image/upload/v1740687162/SC0122_s1_b271_f05_6030-09_jvlm17.jpg",
-            "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg",
-            "https://res.cloudinary.com/duv7bozlj/image/upload/v1740687162/00007000_0009_onxi5b.jpg",
-            "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/1939_-_Inventors_of_the_klystron_aipcnt_afibjh.jpg",
+            {
+              src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740687162/SC0122_s1_b271_f05_6030-09_jvlm17.jpg",
+              alt: "People of various backgrounds sitting on steps, enjoying a moment with a robot, highlighting human-robot interaction.",
+            },
+            {
+              src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg",
+              alt: "A man stands boldly on a stage, flames on the left illuminating his presence in a striking display of energy.",
+            },
+            {
+              src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740687162/00007000_0009_onxi5b.jpg",
+              alt: "A cheerful group of men and women standing together, posing for a photo, capturing a moment of unity and joy.",
+            },
+            {
+              src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/1939_-_Inventors_of_the_klystron_aipcnt_afibjh.jpg",
+              alt: "A vintage photo of men gathered around a machine, their expressions filled with curiosity and intrigue.",
+            },
           ]}
         />
         <EventsSection

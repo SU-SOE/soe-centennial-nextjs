@@ -19,6 +19,7 @@ const StanfordEngLogo = ({
 
   return (
     <svg
+      aria-hidden="true"
       width={width}
       height={height}
       viewBox="0 0 261 67"
@@ -146,7 +147,7 @@ const StanfordEngLogo = ({
         />
       </g>
       <defs>
-        <clipPath id="clip0_1391_18090">
+        <clipPath>
           <rect width="261" height="67" fill="white" />
         </clipPath>
       </defs>

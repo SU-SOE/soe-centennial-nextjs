@@ -7,6 +7,7 @@ interface FootnotesLineartProps {
 const FootnotesLineart = ({ className }: FootnotesLineartProps) => {
   return (
     <svg
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       style={{
