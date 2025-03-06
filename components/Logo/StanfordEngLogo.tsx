@@ -19,6 +19,7 @@ const StanfordEngLogo = ({
 
   return (
     <svg
+      aria-hidden="true"
       width={width}
       height={height}
       viewBox="0 0 261 67"

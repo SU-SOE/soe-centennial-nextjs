@@ -14,6 +14,7 @@ const BannerLineart = ({
     return (
       <>
         <svg
+          aria-hidden="true"
           width="1508"
           height="986"
           viewBox="0 0 1508 986"
@@ -37,6 +38,7 @@ const BannerLineart = ({
         </svg>
         {/* XL SVG */}
         <svg
+          aria-hidden="true"
           width="1001"
           height="986"
           viewBox="0 0 1001 986"
@@ -60,6 +62,7 @@ const BannerLineart = ({
         </svg>
         {/* LG SVG */}
         <svg
+          aria-hidden="true"
           width="814"
           height="986"
           viewBox="0 0 814 986"
@@ -83,6 +86,7 @@ const BannerLineart = ({
         </svg>
         {/* MD SVG */}
         <svg
+          aria-hidden="true"
           width="697"
           height="776"
           viewBox="0 0 697 776"
@@ -106,6 +110,7 @@ const BannerLineart = ({
         </svg>
         {/* SM SVG */}
         <svg
+          aria-hidden="true"
           width="509"
           height="617"
           viewBox="0 0 509 617"
@@ -129,6 +134,7 @@ const BannerLineart = ({
         </svg>
         {/* XS SVG */}
         <svg
+          aria-hidden="true"
           width="322"
           height="778"
           viewBox="0 0 322 778"
@@ -157,6 +163,7 @@ const BannerLineart = ({
     return (
       <>
         <svg
+          aria-hidden="true"
           width="1508"
           height="986"
           viewBox="0 0 1508 986"
@@ -180,6 +187,7 @@ const BannerLineart = ({
         </svg>
         {/* XL SVG */}
         <svg
+          aria-hidden="true"
           width="1003"
           height="986"
           viewBox="0 0 1003 986"
@@ -203,6 +211,7 @@ const BannerLineart = ({
         </svg>
         {/* LG SVG */}
         <svg
+          aria-hidden="true"
           width="817"
           height="986"
           viewBox="0 0 817 986"
@@ -226,6 +235,7 @@ const BannerLineart = ({
         </svg>
         {/* MD SVG */}
         <svg
+          aria-hidden="true"
           width="697"
           height="766"
           viewBox="0 0 697 766"
@@ -249,6 +259,7 @@ const BannerLineart = ({
         </svg>
         {/* SM SVG */}
         <svg
+          aria-hidden="true"
           width="509"
           height="620"
           viewBox="0 0 509 620"
@@ -272,6 +283,7 @@ const BannerLineart = ({
         </svg>
         {/* XS SVG */}
         <svg
+          aria-hidden="true"
           width="323"
           height="779"
           viewBox="0 0 323 779"
@@ -300,6 +312,7 @@ const BannerLineart = ({
   return (
     <>
       <svg
+        aria-hidden="true"
         viewBox="0 0 1730 632"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -320,6 +333,7 @@ const BannerLineart = ({
       </svg>
       {/* XL SVG */}
       <svg
+        aria-hidden="true"
         width="998"
         height="643"
         viewBox="0 0 998 643"
@@ -342,6 +356,7 @@ const BannerLineart = ({
       </svg>
       {/* LG SVG */}
       <svg
+        aria-hidden="true"
         viewBox="0 0 786 729"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -362,6 +377,7 @@ const BannerLineart = ({
       </svg>
       {/* MD SVG */}
       <svg
+        aria-hidden="true"
         viewBox="0 0 628 557"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -382,6 +398,7 @@ const BannerLineart = ({
       </svg>
       {/* SM SVG */}
       <svg
+        aria-hidden="true"
         viewBox="0 0 494 510"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -402,6 +419,7 @@ const BannerLineart = ({
       </svg>
       {/* XS SVG */}
       <svg
+        aria-hidden="true"
         viewBox="0 0 307 604"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

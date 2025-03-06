@@ -8,10 +8,11 @@ import {
 } from "@/components/Animate/AnimateInView";
 import { Container } from "@/components/Container";
 import { Link } from "@/components/Cta/Link";
-import TeaserCarousel from "./TeaserCarousel";
+import TeaserCarousel, { TeaserCarouselProps } from "./TeaserCarousel";
 
 export type TeaserCardProps = HTMLAttributes<HTMLDivElement> &
-  Omit<AnimateInViewProps, "children"> & {
+  Omit<AnimateInViewProps, "children"> &
+  TeaserCarouselProps & {
     heading: string;
     superhead?: string;
     body?: React.ReactNode | string;
@@ -19,7 +20,6 @@ export type TeaserCardProps = HTMLAttributes<HTMLDivElement> &
     href?: string;
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
-    images: string[];
   };
 
 export const TeaserCard = ({
