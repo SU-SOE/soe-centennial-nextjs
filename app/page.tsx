@@ -68,8 +68,8 @@ export default function MvpHome() {
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
         <Container as="section" bgColor="blue" width="full" pt={8} pb={9}>
-          <article className="cc lg:p-0 text-center mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
-            <Heading font="dm-sans" size={2} weight="semibold">
+          <article className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
+            <Heading font="dm-sans" size={2} weight="semibold" align="center">
               Stanford Engineering Centennial
             </Heading>
             <Text variant="overview">
@@ -77,7 +77,7 @@ export default function MvpHome() {
               moment to reflect on our remarkable past and look ahead toward an
               even more inspiring future.
             </Text>
-            <Text variant="overview">
+            <Text>
               Since Stanford University’s opening in 1891, the education of
               engineers has been a key part of the university’s mission. On May
               15, 1925, the Board of Trustees approved a proposal to bring
@@ -85,7 +85,7 @@ export default function MvpHome() {
               mechanical, electrical, and mining & metallurgy — into a single
               school.
             </Text>
-            <Text variant="overview">
+            <Text>
               Over the past century, Stanford Engineering has been at the
               forefront of transformative discovery. From the earliest days of
               our founding, our faculty, students, staff, and alumni have
@@ -97,7 +97,7 @@ export default function MvpHome() {
               testament to the spirit of innovation and collaboration that runs
               through everything we do.
             </Text>
-            <Text variant="overview" mb="none">
+            <Text mb="none">
               Rooted from its earliest years in interdisciplinary collaboration,
               entrepreneurial spirit, and a culture of bold thinking, Stanford
               Engineering continues to prepare responsible engineers for the
