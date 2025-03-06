@@ -6,6 +6,7 @@ import { cnb } from "cnbuilder";
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { GlobalFooter } from "@/components/GlobalFooter";
 import { LocalFooterMvp } from "@/components/LocalFooter";
+import UserAnalytics from "@/components/UserAnalytics";
 
 const dm_sans = DM_Sans({
   subsets: ["latin"],
@@ -89,6 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <UserAnalytics />
       <body
         className={cnb(
           dm_sans.variable,
@@ -103,7 +105,6 @@ export default function RootLayout({
           <GlobalFooter />
         </footer>
       </body>
-      <GoogleAnalytics gaId="G-Z9E6WWH5DJ" />
     </html>
   );
 }
