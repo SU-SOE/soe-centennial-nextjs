@@ -40,6 +40,14 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "Github Action"
 
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+
+      - name: Prepare Yarn Version
+        shell: bash
+        run: corepack prepare yarn@4.5.1 --activate
+
       # Increment version based on label
       - name: Patch Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'patch') }}
