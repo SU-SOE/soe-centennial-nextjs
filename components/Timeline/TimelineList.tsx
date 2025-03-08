@@ -81,10 +81,9 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
     <div className="rs-pb-5">
       <Container as="section" width="site" py={8}>
         <Heading leading="tight" size={6} as="h1" className="flex flex-col">
-          <span className="underline underline-offset-[14px] decoration-4">
-            100 years{" "}
-          </span>
-          <span>of impact</span>
+          100 years
+          <br />
+          of impact
         </Heading>
         <Text className="max-w-800">
           In the ten decades since its founding, the School of Engineering has
