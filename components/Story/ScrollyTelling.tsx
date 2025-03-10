@@ -25,7 +25,7 @@ export const Scrollytelling = ({
   ...props
 }: ScrollytellingProps) => {
   return (
-    <section {...props} className="w-full">
+    <section {...props} className="w-full rs-mb-6">
       <Container
         width="full"
         bgColor="black"

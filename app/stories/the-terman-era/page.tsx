@@ -409,9 +409,6 @@ scores on the entrance exams.”(12)"
         />
         <MediaCaptionImage
           isCaptionInset
-          animation="fadeIn"
-          delay={0.2}
-          duration={1}
           rounded
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
@@ -419,9 +416,6 @@ scores on the entrance exams.”(12)"
         />
         <MediaCaptionImage
           isCaptionInset
-          animation="fadeIn"
-          delay={0.4}
-          duration={1}
           rounded
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
@@ -429,9 +423,6 @@ scores on the entrance exams.”(12)"
         />
         <MediaCaptionImage
           isCaptionInset
-          animation="fadeIn"
-          delay={0.4}
-          duration={1}
           rounded
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/mark-2_nncexe_lwbmas.jpg"
@@ -439,19 +430,13 @@ scores on the entrance exams.”(12)"
         />
         <MediaCaptionImage
           isCaptionInset
-          animation="fadeIn"
-          delay={0.2}
-          duration={1}
           rounded
-          aspectRatio="4x3"
+          aspectRatio="3x4"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/mark-2-2_jf2xmm_ywrsnc.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
         />
         <MediaCaptionImage
           isCaptionInset
-          animation="fadeIn"
-          delay={0.2}
-          duration={1}
           rounded
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986287/william-w-hansen_osvbzp_rdnqlf.jpg"
