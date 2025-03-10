@@ -11,6 +11,11 @@
   h6 {
     font-weight: 500;
   }
+
+  p {
+    font-family:
+      'DM Sans', 'Source Sans 3', Georgia, 'Times New Roman', Times, serif;
+  }
 }
 
 @layer utilities {

@@ -12,7 +12,7 @@ import {
   ImageAspectRatioType,
   PaddingType,
 } from "@/utilities/datasource";
-import { Container, WidthType } from "@/components/Container";
+import { WidthType } from "@/components/Container";
 import * as styles from "./MediaCaptionImage.styles";
 import { Text } from "../Typography";
 
@@ -93,16 +93,15 @@ const MediaCaptionImage = ({
             )}
           </div>
           {caption && (
-            <Container
-              as="figcaption"
-              width={isCaptionInset ? "site" : "full"}
+            <figcaption
               className={cnb(
+                isCaptionInset ? "px-18" : "w-full",
                 styles.captionWrapper,
                 styles.captionBgColors[captionBgColor],
               )}
             >
               <Text className={styles.caption(captionBgColor)}>{caption}</Text>
-            </Container>
+            </figcaption>
           )}
         </figure>
       </AnimateInView>
