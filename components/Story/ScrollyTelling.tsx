@@ -1,7 +1,6 @@
 import { AnimateInView } from "@/components/Animate";
 import { Container } from "@/components/Container";
 import { Heading, Text, type HeadingType } from "@/components/Typography";
-import * as styles from "./ScrollyTelling.styles";
 import Image from "next/image";
 
 type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
