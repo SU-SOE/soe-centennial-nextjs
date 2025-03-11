@@ -8,6 +8,7 @@ type StoryGridProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
   bgColor?: BgColorType;
   hasBgImage?: boolean;
+  isImgOffset?: boolean;
   src?: string;
   alt?: string;
 };
@@ -16,13 +17,14 @@ export const StoryGrid = ({
   children,
   bgColor,
   hasBgImage = false,
+  isImgOffset,
   src,
   alt,
   ...props
 }: StoryGridProps) => {
   return (
     <Container {...props} width="full" mb={6} className="relative">
-      <Container bgColor={bgColor} width="site" pt={9} pb={9}>
+      <Container bgColor={bgColor} width="site" pt={7} pb={7}>
         {hasBgImage && src && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
             <Image
@@ -43,7 +45,10 @@ export const StoryGrid = ({
         )}
         <Container
           width="full"
-          className="relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8 *:mb-0"
+          className={cnb(
+            "relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 *:mb-0",
+            isImgOffset && "lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8",
+          )}
         >
           {children}
         </Container>

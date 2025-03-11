@@ -8,6 +8,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { Quote } from "@/components/Quote";
 import {
   Footnotes,
+  FootnotesList,
   StoryCard,
   StoryImpactBanner,
   StorySidebar,
@@ -594,7 +595,7 @@ export default function page() {
       </OneCol>
       <Container mt={4} mb={7}>
         <OneCol>
-          <Footnotes footnotes={footnotes} />
+          <FootnotesList footnotes={footnotes} />
         </OneCol>
       </Container>
       <ExploreMore

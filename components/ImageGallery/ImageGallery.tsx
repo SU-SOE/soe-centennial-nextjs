@@ -1,3 +1,51 @@
+/**
+ * ImageGallery component displays a gallery of images with a main image display and thumbnail navigation.
+ *
+ * @component
+ *
+ * @param {ImageGalleryProps} props - The props for the ImageGallery component.
+ * @param {ImageItem[]} props.images - An array of image objects to be displayed in the gallery.
+ *
+ * @typedef {Object} ImageItem
+ * @property {string} src - The source URL of the image.
+ * @property {string} alt - The alt text for the image.
+ * @property {string} caption - The caption text for the image.
+ *
+ * @typedef {Object} ImageGalleryProps
+ * @property {ImageItem[]} images - An array of image objects to be displayed in the gallery.
+ *
+ * @returns {JSX.Element} The rendered ImageGallery component.
+ *
+ * @example
+ * const exampleImages:
+ * ImageItem[] = [
+ *  {
+ *    src: "/images/image1.jpg",
+ *    alt: "Image 1",
+ *    caption: "This is the first image caption",
+ *  },
+ *  {
+ *    src: "/images/image2.jpg",
+ *    alt: "Image 2",
+ *    caption: "This is the second image caption",
+ *  },
+ *  {
+ *    src: "/images/image3.jpg",
+ *    alt: "Image 3",
+ *    caption: "This is the third image caption",
+ *  },
+ *  {
+ *    src: "",
+ *    alt: "",
+ *    caption: "",
+ *  },
+ * ];
+ *
+ * const ExampleComponent = () => (
+ *   <ImageGallery images={exampleImages} />
+ * );
+ */
+
 "use client";
 
 import React, { useState } from "react";

@@ -18,7 +18,13 @@ export const H1 = ({ children, className, ...props }: Props) => {
 
 export const H2 = ({ children, className, ...props }: Props) => {
   return (
-    <Heading {...props} as="h2" size={2} className={cnb("rs-mt-2", className)}>
+    <Heading
+      {...props}
+      as="h2"
+      size={3}
+      weight="medium"
+      className={cnb("rs-mt-2", className)}
+    >
       {children}
     </Heading>
   );

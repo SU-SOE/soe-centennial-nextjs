@@ -4,10 +4,12 @@ import { FlexBox } from "../FlexBox";
 import Image from "next/image";
 import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
+import { ChapterLabel } from "./ChapterLabel";
 
 type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
-  superhead: string;
+  superhead?: string;
+  chapter?: string;
   body: string;
   byline?: string;
   bgColor?: BgColorType;
@@ -21,6 +23,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
 export const StoryImpactBanner = ({
   heading,
   superhead,
+  chapter,
   body,
   byline,
   bgColor = "white",
@@ -75,9 +78,14 @@ export const StoryImpactBanner = ({
             <Heading size={6} weight="normal" mb="none">
               {heading}
             </Heading>
-            <Text className="order-first" mb={2} font="dm-mono">
-              {superhead}
-            </Text>
+            {superhead && (
+              <Text className="order-first" mb={2} font="dm-mono">
+                {superhead}
+              </Text>
+            )}
+            {chapter && (
+              <ChapterLabel className="order-first rs-mb-2" text={chapter} />
+            )}
             <Text variant="overview" mb="none" className="rs-mt-5">
               {body}
             </Text>
