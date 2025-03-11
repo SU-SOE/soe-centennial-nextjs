@@ -13,6 +13,34 @@ type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
   bgImageAlt?: string;
 };
 
+/**
+ * Scrollytelling component renders a full-width section with a background image
+ * and optional heading, subheading, caption, and children content. The background
+ * image remains fixed while the content scrolls over it, creating a "scrollytelling" effect.
+ *
+ * @param {Object} props - The properties object.
+ * @param {string} props.heading - The main heading text.
+ * @param {string} [props.headingLevel="h2"] - The HTML heading level for the main heading.
+ * @param {string} props.subheading - The subheading text.
+ * @param {string} props.caption - The caption text displayed below the section.
+ * @param {string} props.bgImageSrc - The source URL of the background image.
+ * @param {string} props.bgImageAlt - The alt text for the background image.
+ * @param {React.ReactNode} props.children - The content to be displayed within the section.
+ * @param {Object} props - Additional props to be passed to the section element.
+ *
+ * @returns {JSX.Element} The rendered Scrollytelling component.
+ *
+ * @example
+ * <Scrollytelling
+ *   heading="Main Heading"
+ *   subheading="This is a subheading"
+ *   caption="This is a caption"
+ *   bgImageSrc="/path/to/image.jpg"
+ *   bgImageAlt="Description of the image"
+ * >
+ *   <p>Your content here</p>
+ * </Scrollytelling>
+ */
 export const Scrollytelling = ({
   heading,
   headingLevel = "h2",
