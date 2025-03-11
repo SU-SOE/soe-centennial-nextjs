@@ -223,10 +223,7 @@ export default function page() {
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
       />
       <OneCol>
-        <Text
-          variant="overview"
-          footnoteRefs={[{ id: "footnote1", number: 1 }]}
-        >
+        <Text variant="overview">
           Samuel Morris recommended Frederick Terman to be his successor as dean
           of the School of Engineering. Terman, on leave from Stanford at the
           time, had been serving since 1942 in a wartime appointment as head of
@@ -234,6 +231,7 @@ export default function page() {
           throughout the war, Terman was anticipating a period after the war he
           believed would be defined by unprecedented technological advancement
           led by engineers.
+          <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} />
         </Text>
       </OneCol>
       <TwoCol isSidebar>
@@ -243,11 +241,12 @@ export default function page() {
             Tresidder named Terman the third dean of the Stanford School of
             Engineering, with a strong endorsement from the engineering faculty.
           </Text>
-          <Text footnoteRefs={[{ id: "footnote2", number: 2 }]}>
+          <Text>
             “Dr. Terman’s scholarly contributions in the field of electrical
             engineering and his administration of one of America’s largest war
             research projects place him among the outstanding engineers in the
             country,” Tresidder said, announcing Terman’s appointment.
+            <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
           </Text>
           <Text>
             Hugh H. Skilling, acting head of electric engineering, served for a

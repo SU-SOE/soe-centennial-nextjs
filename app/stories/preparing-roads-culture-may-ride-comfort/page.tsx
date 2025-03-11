@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
-import { OneCol, ThreeCol, TwoCol } from "@/components/Layout";
+import { OneCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Quote } from "@/components/Quote";
@@ -334,7 +334,7 @@ export default function page() {
         <MediaCaptionImage
           isParallax
           aspectRatio="16x9"
-          imageSrc=""
+          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
           alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
           caption="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
         />
@@ -388,13 +388,238 @@ export default function page() {
           caption="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925. From left o right, the buildings today are the Frederick Emmons Terman Engineering Laboratory (500), the George Havas Engineering Building (520), and Mechanical Engineering (530). Also visible is the roof corner of what is today the Thomas F. Peterson Engineering Laboratory (550), home of the Hasso Plattner Institute of Design (d.school). | Berton W. Crandall photographs, Hoover Institution Library & Archives."
         />
       </StoryGrid>
+      <OneCol>
+        <Text>
+          In their 1925 report, Wilbur’s faculty committee concurred: liberal
+          arts and engineering went hand in hand. In recommending a course of
+          study, they wrote, “As to whether all engineering students should be
+          required to take economics, geography or geology, biology, chemistry,
+          history, and English: it is the unanimous judgment of this Committee
+          that all engineering students should be required to take some minimum
+          not only of the studies named above but also of certain others”—among
+          them courses in physics, government, foreign language, law, and
+          psychology.
+        </Text>
+        <Text>
+          The professional engineering degree—six years in total—would follow a
+          four-year liberal curriculum leading to a bachelor of arts, a quarter
+          of which would be composed of electives designed to “attract rather
+          than repel the born leader” and develop the “innate capacity to lead.”
+          The curriculum would be followed by two years of specialization in a
+          specific engineering discipline resulting in a graduate “degree of
+          Engineer.”(11)
+        </Text>
+        <Text>
+          “If it is to endure,” Charles Marx wrote, “Stanford University should
+          be in a position to offer advanced training in engineering for men
+          qualified to become leaders . . . this brings us to what is
+          commercially the Stanford engineer’s most valuable inherent asset—a
+          certain sense of adequacy which manifests itself in his power of
+          initiative and resourcefulness.”(12)
+        </Text>
+      </OneCol>
+      <TwoCol isSidebar>
+        <OneCol>
+          <Text>
+            These leaders would not graduate and remain in Palo Alto, or in
+            California, or even in the American West, but would—as Stanford
+            engineers already had in previous decades—go out to all corners of
+            the world. “We see them dotted over this continent from the Pacific
+            to the Atlantic, from Alaska to Mexico; we find them in Cuba and the
+            Philippines, in China and Japan, in South America, Australia and
+            South Africa—and wherever they are we see them working hard and
+            faithfully, exhibiting initiative and resourcefulness, many
+            occupying positions of responsibility and power and all engaged, as
+            one of them said, ‘in preparing roads over which Culture may ride in
+            comfort,’ ” wrote Guido Marx, a mechanical engineer, who joined his
+            brother Charles Marx on the Stanford faculty in 1895.(13)
+          </Text>
+          <Text>
+            The first dean of the School of Engineering, Theodore “Ted” Hoover,
+            embodied that global spirit. Dean Hoover was an internationally
+            known professor of mining and metallurgy and brother of the 31st
+            president of the United States, Herbert Hoover. Prior to his
+            professorship, Theodore Hoover had built a reputation as an advisor
+            to gold mining operations in California and Australia; to lead and
+            silver mining in Burma (now Myanmar); and to copper mining in
+            Finland and Russia. At a time when international travel was made by
+            steamship, Hoover maintained offices in London and San Francisco. As
+            the school’s first dean, Ted Hoover shaped what the School of
+            Engineering would become, building a strong, broad-based
+            undergraduate curriculum while emphasizing graduate education.
+            Hoover served as dean from the school’s inception until his
+            retirement in 1936.
+          </Text>
+          <Text>
+            Hoover’s early tenure was notable for the 1926 dedication of the
+            Harris J. Ryan High-Voltage Laboratory, named for Professor Ryan,
+            head of the Department of Electrical Engineering. In 1925, Ryan had
+            been honored with an Institute of Electrical and Electronics
+            Engineers (IEEE) Edison Medal for “contributions to the science and
+            art of high-tension transmission of power,” taking his place beside
+            George Westinghouse, Alexander Graham Bell, and Nikola Tesla as an
+            Edison laureate.
+          </Text>
+        </OneCol>
+        <StorySidebar>
+          <MediaCaptionImage
+            isPortriat
+            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/theodore_hoover_pv6obq.jpg"
+            alt="Portriat of Theodore Jesse Hoover (1871-1955)"
+            caption="Theodore Jesse Hoover (1871-1955) graduated from Stanford in 1901 with a BA degree in geology and mining. After a career in the international mining industry, he returned to Stanford in 1919 as a professor of mining and metallurgy. He played a pivotal role in the formation of the new School of Engineering and served as its first dean from 1925 until his retirement in 1936. Hoover was the elder brother of Herbert Hoover, one of the first graduates of Stanford University in 1895 and the 31st President of the United States from 1929 to 1933. | Special Collections & University Archives."
+          />
+        </StorySidebar>
+      </TwoCol>
+      <Container width="site">
+        <MediaCaptionImage
+          isParallax
+          aspectRatio="4x3"
+          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
+          alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
+          caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
+        />
+      </Container>
+      {/* <ScrollTelling /> */}
       <ImageGallery images={galleryImages} />
+      <HorizontalLineart lineartType="C" isLeft />
+      <OneCol>
+        <Text>
+          In the kind of collaboration that became a hallmark of Stanford
+          Engineer- ing, the Ryan Lab worked closely with industry and
+          government. At a time when electrical engineering was focused on
+          developing power plants to transmit electricity over high-tension
+          wires to growing cities, the lab was the first at Stanford to be
+          financed by external organizations, including the General Electric
+          Company, the Pacific Gas and Electric Company, the California-Oregon
+          Power Company, the San Joaquin Light and Power Company, the Great
+          Western Power Company, and the City of Los Angeles.
+        </Text>
+        <Text>
+          In 1927, the School of Engineering appropriated an entire building to
+          house the Daniel Guggenheim Experimental Laboratory of Aerodynamic and
+          Aeronautic Engineering, where William Durand, professor of Mechanical
+          Engineering, and his associates could explore the expanding discipline
+          of aeronautics. Educated at the U.S. Naval Academy, Durand was an
+          expert in designing propellers for ships, a skill he applied to the
+          design of aircraft propellers. The Guggenheim Lab included an
+          8-foot-wide wind tunnel and fans capable of producing air velocities
+          up to 90 miles per hour; its dynamometer could test propeller designs
+          up to 6 feet in diameter. Dozens of Durand’s hand-carved wooden
+          propellers now adorn the walls of the Terman Engineering Library in
+          the Jen-Hsun Huang Engineering Center.
+        </Text>
+      </OneCol>
+      <Container width="full" bgColor="blue">
+        <TwoCol>
+          <OneCol>
+            <H2>Clipper Ships to Turbojets</H2>
+            <Text variant="overview">The Career of William Durand</Text>
+            <Text>
+              William Frederick Durand (1859–1958), who joined Stanford in 1904
+              as a professor of Mechanical Engineering, had previously served as
+              an engineer and engine designer in the Navy and had taught at
+              Michigan State and Cornell Universities.
+            </Text>
+            <Text>
+              At Stanford, Durand’s work extended beyond the classroom and lab.
+              From 1906 to 1908, he served on Stanford’s Commission of
+              Engineers, which was responsible for rebuilding the university
+              after the 1906 earthquake; he organized the Engineering Congress
+              held in conjunction with San Francisco’s Panama-Pacific
+              International Exposition in 1915; and he played a significant role
+              in the design of the electrical and water systems of Los Angeles,
+              the Hetch Hetchy Reservoir, and the Colorado River project.
+            </Text>
+            <Text>
+              His chief accomplishments at Stanford were in aeronautical
+              engineering. His background in marine engineering prepared him for
+              studies of airplane propellers during the American preparation for
+              World War I. In 1915, President Woodrow Wilson appointed Durand to
+              the National Advisory Committee on Aeronautics (NACA, later NASA),
+              a new organization charged with coordinating national efforts in
+              aeronautics research. In 1918, with Everett Parker Lesley, Durand
+              established the Aeronautical Experimentation Laboratory at
+              Stanford, the forerunner of the Daniel Guggenheim Experimental
+              Laboratory of Aerodynamic and Aeronautic Engineering. The
+              laboratory conducted propeller studies jointly with NACA
+              installations such as the Langley Aeronautical Laboratory in
+              Virginia.
+            </Text>
+            <Text>
+              Long after his retirement from Stanford, in March 1941, Durand
+              rejoined NACA to chair a special committee assigned to the project
+              of developing jet propulsion for aircraft; he also chaired the
+              Engineering Division of the National Research Council during World
+              War II.
+            </Text>
+            <Text>
+              Durand’s active career as an engineer in public service continued
+              through the end of World War II, when he retired at the age of
+              eighty-six. His professional contributions spanned more than sixty
+              years, taking him from clipper ships to the turbojet. The breadth
+              of his projects engaged him in many of the central engineering
+              problems and public engineering projects of his age, with a record
+              of service that was unrivalled among American engineers of the
+              first half of the twentieth century.
+            </Text>
+            <Text>—Henry Lowood</Text>
+            <Text size="small">
+              Harold C. Hohbach Curator for
+              <br />
+              History of Science & Technology Collections
+              <br />
+              and Head, Silicon Valley Archives
+            </Text>
+          </OneCol>
+          <StorySidebar>
+            <MediaCaptionImage
+              isPortriat
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/william_durand_o6qndb.jpg"
+              alt="Portriat of William F. Durand"
+              caption="William F. Durand. | Special Collections & University Archives."
+            />
+          </StorySidebar>
+        </TwoCol>
+      </Container>
+      <Container width="site">
+        <MediaCaptionImage
+          isParallax
+          aspectRatio="16x9"
+          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007002_0011.jpg_engineering_lab_exterior_atv43k.jpg"
+          alt="Showcasing a plane parked in front of a historic building, with a group of men standing by, capturing a moment from aviation history."
+          caption="In 1927, a gift from the Daniel Guggenheim Fund for the Promotion of Aeronautics helped create the new Daniel Guggenheim Experimental Laboratory of Aerodynamic and Aeronautic Engineering, located in the Engineering Lab buildings. The gift included $45,000 for equipment and $15,000 yearly for expenses for ten years. In this lab and others, Professor William F. Durand and his colleagues studied aerodynamics, naval propulsion, and engineering research methods. | Berton W. Crandall/Hoover Institution Library & Archives."
+        />
+      </Container>
+      <OneCol>
+        <Text>
+          Dean Hoover emphasized graduate education as a key to academic and
+          professional leadership. The School of Engineering conferred its first
+          doctorate, in electrical engineering, in 1928. That same year the
+          school added the Department of Military Science and Tactics. Laura
+          Virginia Austin, who in 1923 had been the first woman at Stanford to
+          earn a bachelor’s degree in engineering (civil), went on to be the
+          first woman to earn the degree of Engineer, in 1931.(14) By 1930, when
+          the total number of students registered in the schoolsoared to 293,
+          Dean Hoover remarked that there were “considerably more [students]
+          than the capacity of the School” could handle.(15)
+        </Text>
+        <Text>
+          But this growth trend was soon dealt a serious blow by the Great
+          Depres- sion. Student enrollment dropped significantly for a few years
+          at the School of Engineering and at Stanford as a whole. Not until
+          1934 could Dean Hoover predict that enrollment would soon increase.
+          Meanwhile, the school invested in new facilities to house students and
+          provide classrooms and lab spaces for the expected rise in numbers. As
+          its first decade came to a close, the School of Engineering was
+          positioned for growth and leadership.
+        </Text>
+      </OneCol>
       <Container mt={4} mb={7}>
         <OneCol>
           <FootnotesList footnotes={footnotes} />
         </OneCol>
       </Container>
-      <ContributeStoryBanner />
+      <ContributeStoryBanner bgColor="red" />
     </Container>
   );
 }
