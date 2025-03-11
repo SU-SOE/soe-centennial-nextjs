@@ -103,5 +103,5 @@ export const caption = (captionBgColor: CaptionBgColorType) =>
     "*:*:leading-display max-w-prose-wide first:*:*:mt-0",
     !!captionBgColor && captionBgColor !== "transparent"
       ? "px-1em py-08em text-fog"
-      : "pt-06em text-black",
+      : "pt-06em text-stone-dark",
   );

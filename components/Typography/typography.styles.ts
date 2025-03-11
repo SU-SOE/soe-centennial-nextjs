@@ -73,6 +73,7 @@ export const textColors = {
   "black-60": "text-black-60",
   "black-80": "text-black-80",
   "black-90": "text-black-90",
+  "stone-dark": "text-stone-dark",
 };
 
 export const textVariants = {
