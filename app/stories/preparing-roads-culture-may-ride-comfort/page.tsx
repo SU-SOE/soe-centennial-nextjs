@@ -330,9 +330,12 @@ export default function page() {
           dedicated in 1977.
         </Text>
       </OneCol>
-      <Container width="site">
+      <Container width="site" mb={6}>
         <MediaCaptionImage
           isParallax
+          isLarge
+          rounded
+          animation="fadeIn"
           aspectRatio="16x9"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
           alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
@@ -461,18 +464,23 @@ export default function page() {
             Edison laureate.
           </Text>
         </OneCol>
-        <StorySidebar>
+        <StorySidebar hasLineArt>
           <MediaCaptionImage
             isPortriat
+            rounded
+            aspectRatio="1x1"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/theodore_hoover_pv6obq.jpg"
             alt="Portriat of Theodore Jesse Hoover (1871-1955)"
             caption="Theodore Jesse Hoover (1871-1955) graduated from Stanford in 1901 with a BA degree in geology and mining. After a career in the international mining industry, he returned to Stanford in 1919 as a professor of mining and metallurgy. He played a pivotal role in the formation of the new School of Engineering and served as its first dean from 1925 until his retirement in 1936. Hoover was the elder brother of Herbert Hoover, one of the first graduates of Stanford University in 1895 and the 31st President of the United States from 1929 to 1933. | Special Collections & University Archives."
           />
         </StorySidebar>
       </TwoCol>
-      <Container width="site">
+      <Container width="site" mb={6}>
         <MediaCaptionImage
           isParallax
+          isLarge
+          rounded
+          animation="fadeIn"
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
           alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
@@ -509,9 +517,9 @@ export default function page() {
           the Jen-Hsun Huang Engineering Center.
         </Text>
       </OneCol>
-      <Container width="full" bgColor="blue">
-        <TwoCol>
-          <OneCol>
+      <Container width="full" bgColor="blue" pb={7} pt={7} mb={6}>
+        <TwoCol isSidebar className="mb-0">
+          <OneCol className="mb-0">
             <H2>Clipper Ships to Turbojets</H2>
             <Text variant="overview">The Career of William Durand</Text>
             <Text>
@@ -563,7 +571,7 @@ export default function page() {
               first half of the twentieth century.
             </Text>
             <Text>—Henry Lowood</Text>
-            <Text size="small">
+            <Text size="small" mb="0">
               Harold C. Hohbach Curator for
               <br />
               History of Science & Technology Collections
@@ -571,9 +579,11 @@ export default function page() {
               and Head, Silicon Valley Archives
             </Text>
           </OneCol>
-          <StorySidebar>
+          <StorySidebar hasLineArt>
             <MediaCaptionImage
               isPortriat
+              rounded
+              aspectRatio="1x1"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/william_durand_o6qndb.jpg"
               alt="Portriat of William F. Durand"
               caption="William F. Durand. | Special Collections & University Archives."
@@ -581,9 +591,12 @@ export default function page() {
           </StorySidebar>
         </TwoCol>
       </Container>
-      <Container width="site">
+      <Container width="site" mb={6}>
         <MediaCaptionImage
           isParallax
+          isLarge
+          rounded
+          animation="fadeIn"
           aspectRatio="16x9"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007002_0011.jpg_engineering_lab_exterior_atv43k.jpg"
           alt="Showcasing a plane parked in front of a historic building, with a group of men standing by, capturing a moment from aviation history."
