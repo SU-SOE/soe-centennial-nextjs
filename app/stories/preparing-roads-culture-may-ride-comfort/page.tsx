@@ -176,7 +176,7 @@ export default function page() {
       <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"
-        chapter="Part 1"
+        chapter="Decade 1"
         heading="“Preparing Roads over which Culture May Ride in Comfort”"
         body="The 1st Decade | 1925 – 1934"
         byline="by Andrew Myers"
