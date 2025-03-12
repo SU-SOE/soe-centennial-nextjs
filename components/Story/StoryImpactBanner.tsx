@@ -1,3 +1,44 @@
+/**
+ * StoryImpactBanner component props.
+ *
+ * @typedef {Object} StoryImpactBannerProps
+ * @property {string} heading - The main heading text.
+ * @property {string} [superhead] - The optional superhead text.
+ * @property {string} [chapter] - The optional chapter label text.
+ * @property {string} body - The main body text.
+ * @property {string} [byline] - The optional byline text.
+ * @property {BgColorType} [bgColor="white"] - The background color type.
+ * @property {string} [caption] - The optional caption text.
+ * @property {boolean} [hasBgImage=false] - Flag to indicate if there is a background image.
+ * @property {boolean} [isHorizontal=false] - Flag to indicate if the layout is horizontal.
+ * @property {string} src - The source URL for the image.
+ * @property {string} [alt] - The alternative text for the image.
+ */
+
+/**
+ * StoryImpactBanner component.
+ *
+ * This component displays a banner with a heading, optional superhead, chapter label, body text, byline,
+ * background image, and caption. The layout can be either horizontal or vertical.
+ *
+ * @param {StoryImpactBannerProps} props - The props for the component.
+ * @returns {JSX.Element} The rendered StoryImpactBanner component.
+ *
+ * @example
+ * <StoryImpactBanner
+ *   heading="Impactful Story"
+ *   superhead="Superhead Text"
+ *   chapter="Chapter 1"
+ *   body="This is the body text of the story."
+ *   byline="By Author"
+ *   bgColor="red"
+ *   caption="This is a caption."
+ *   hasBgImage={true}
+ *   isHorizontal={false}
+ *   src="/path/to/image.jpg"
+ *   alt="Image description"
+ * />
+ */
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
 import { FlexBox } from "../FlexBox";

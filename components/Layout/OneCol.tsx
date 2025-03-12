@@ -1,3 +1,14 @@
+/**
+ * A component that renders a single column layout with optional background color.
+ * It uses the `Container` component to wrap its children and applies flexbox styles
+ * to center the content.
+ *
+ * @param {React.ReactNode} children - The content to be rendered inside the column.
+ * @param {string} [className] - Additional class names to apply to the container.
+ * @param {BgColorType} [bgColor] - Optional background color type for the container.
+ * @param {HTMLAttributes<HTMLDivElement>} props - Additional HTML attributes to apply to the container.
+ * @returns {JSX.Element} The rendered single column layout component.
+ */
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
 import { cnb } from "cnbuilder";

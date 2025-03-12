@@ -1,3 +1,24 @@
+/**
+ * TimelineList component renders a list of timeline items grouped into rows.
+ * It supports accessibility features and animations for smooth user experience.
+ *
+ * @component
+ * @param {TimelineItemData[]} timelineData - Array of timeline items data.
+ * @param {boolean} [hasBorder] - Optional flag to indicate if the timeline has a border.
+ *
+ * @returns {JSX.Element} The rendered TimelineList component.
+ *
+ * @example
+ * ```tsx
+ * <TimelineList timelineData={data} hasBorder />
+ * ```
+ *
+ * @remarks
+ * - The component uses media queries to determine the number of items per row.
+ * - It handles URL hash to expand specific timeline item on initial render.
+ * - It uses `motion` for animations and `usehooks-ts` for media queries.
+ * - Accessibility focus management is implemented for expanded timeline details.
+ */
 "use client";
 
 import { useState, useEffect, useRef } from "react";

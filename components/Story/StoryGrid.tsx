@@ -1,3 +1,28 @@
+/**
+ * StoryGrid component that displays a grid of stories with optional background image and color.
+ *
+ * @param {React.ReactNode} children - The content to be displayed inside the grid.
+ * @param {BgColorType} [bgColor] - The background color type for the container.
+ * @param {boolean} [hasBgImage=false] - Flag to determine if a background image should be displayed.
+ * @param {boolean} [isImgOffset] - Flag to determine if the image should have an offset.
+ * @param {string} [src] - The source URL of the background image.
+ * @param {string} [alt] - The alt text for the background image.
+ * @param {HTMLAttributes<HTMLDivElement>} props - Additional HTML attributes for the container.
+ *
+ * @example
+ * ```tsx
+ * <StoryGrid
+ *   bgColor="primary"
+ *   hasBgImage={true}
+ *   isImgOffset={true}
+ *   src="/path/to/image.jpg"
+ *   alt="Background Image"
+ * >
+ *   <div>Story 1</div>
+ *   <div>Story 2</div>
+ * </StoryGrid>
+ * ```
+ */
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
 import Image from "next/image";
