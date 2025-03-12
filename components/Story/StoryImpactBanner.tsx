@@ -111,17 +111,19 @@ export const StoryImpactBanner = ({
               <Image src={src} alt={alt || ""} fill className="object-cover" />
             </div>
             {bgColor === "white" && (
-              <Text variant="caption" className="mt-13">
-                {caption}
-              </Text>
+              <figcaption className="mt-13">
+                <Text variant="caption">{caption}</Text>
+              </figcaption>
             )}
           </FlexBox>
         </FlexBox>
       </Container>
       {bgColor !== "white" && (
-        <Text variant="caption" className="mt-13 cc">
-          {caption}
-        </Text>
+        <figcaption className="mt-13 cc">
+          <Text variant="caption" className="max-w-prose-wide">
+            {caption}
+          </Text>
+        </figcaption>
       )}
     </Container>
   );
