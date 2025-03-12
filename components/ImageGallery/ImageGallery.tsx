@@ -69,7 +69,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
 
   return (
     <div className="cc">
-      <div className="flex flex-col w-1300 mx-auto">
+      <div className="flex flex-col w-full max-w-1300 mx-auto">
         {/* Main Image Display */}
         <div
           className="relative aspect-[13/8] h-full w-full max-w-1300 mb-4"
