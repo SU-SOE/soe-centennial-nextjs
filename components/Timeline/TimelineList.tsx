@@ -232,10 +232,16 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                     )}
 
                   {showSvg && (
-                    <HorizontalLineart
-                      lineartType={lineartType as "A" | "B" | "C" | "D"}
-                      isLeft={isSvgLeftAligned}
-                    />
+                    <div
+                      className={cnb(
+                        "flex w-full",
+                        isSvgLeftAligned ? "justify-start" : "justify-end",
+                      )}
+                    >
+                      <HorizontalLineart
+                        lineartType={lineartType as "A" | "B" | "C" | "D"}
+                      />
+                    </div>
                   )}
                 </div>
               );

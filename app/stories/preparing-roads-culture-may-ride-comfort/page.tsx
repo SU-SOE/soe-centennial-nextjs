@@ -184,12 +184,12 @@ export default function page() {
         alt="Interior of the Guggenheim Aeronautics Laboratory, depicting a man alongside a large machine"
         caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives"
       />
-      <Container width="site">
-        <Quote
-          body="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
-          source="— Charles David Marx, 1923"
-        />
-      </Container>
+
+      <Quote
+        body="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
+        source="— Charles David Marx, 1923"
+      />
+
       <HorizontalLineart lineartType="A" />
       <OneCol>
         <H2>1925 – 1934</H2>
@@ -254,7 +254,7 @@ export default function page() {
           single school.
         </Text>
       </OneCol>
-      <HorizontalLineart lineartType="B" isLeft />
+      <HorizontalLineart lineartType="B" />
       <OneCol>
         <Text>
           “In organic union there is strength,” wrote the members of a select
@@ -333,7 +333,6 @@ export default function page() {
       <Container width="site" mb={6}>
         <MediaCaptionImage
           isParallax
-          isLarge
           rounded
           animation="fadeIn"
           aspectRatio="16x9"
@@ -478,7 +477,6 @@ export default function page() {
       <Container width="site" mb={6}>
         <MediaCaptionImage
           isParallax
-          isLarge
           rounded
           animation="fadeIn"
           aspectRatio="4x3"
@@ -489,7 +487,7 @@ export default function page() {
       </Container>
       {/* <ScrollTelling /> */}
       <ImageGallery images={galleryImages} />
-      <HorizontalLineart lineartType="C" isLeft />
+      <HorizontalLineart lineartType="C" />
       <OneCol>
         <Text>
           In the kind of collaboration that became a hallmark of Stanford
@@ -594,7 +592,6 @@ export default function page() {
       <Container width="site" mb={6}>
         <MediaCaptionImage
           isParallax
-          isLarge
           rounded
           animation="fadeIn"
           aspectRatio="16x9"

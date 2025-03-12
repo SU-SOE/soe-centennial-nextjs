@@ -65,9 +65,8 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     isCaptionInset?: boolean;
     captionBgColor?: styles.CaptionBgColorType;
     rounded?: boolean;
-    aspectRatio?: ImageAspectRatioType;
+    aspectRatio: ImageAspectRatioType;
     isFullHeight?: boolean;
-    isLarge?: boolean;
     isPortriat?: boolean;
     boundingWidth?: "site" | "full";
     width?: WidthType;
@@ -84,7 +83,6 @@ const MediaCaptionImage = ({
   caption,
   aspectRatio = "16x9",
   isFullHeight = false,
-  isLarge = false,
   boundingWidth = "full",
   spacingTop,
   spacingBottom,
@@ -110,21 +108,18 @@ const MediaCaptionImage = ({
           <div
             className={cnb(
               imageAspectRatios[aspectRatio],
-              styles.imageWrapper(isPortriat),
+              styles.imageWrapper(isPortriat, rounded),
             )}
           >
             {!!imageSrc && (
               <Parallax offset={isParallax ? 60 : 0}>
-                <picture className={styles.innerImageWrapper(isParallax)}>
+                <picture>
                   <Image
                     src={imageSrc}
                     alt={alt || ""}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 1000px"
-                    className={cnb(
-                      rounded && "rounded-2xl",
-                      styles.image(isLarge),
-                    )}
+                    height="2000"
+                    width="2000"
+                    className={styles.image(isParallax)}
                   />
                 </picture>
               </Parallax>

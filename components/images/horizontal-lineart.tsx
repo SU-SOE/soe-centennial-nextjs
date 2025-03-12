@@ -14,7 +14,6 @@ export interface HorizontalLineartProps {
 export const HorizontalLineart = ({
   className,
   stroke = "#F83535",
-  isLeft,
   lineartType,
   ...props
 }: HorizontalLineartProps) => {
@@ -511,11 +510,7 @@ export const HorizontalLineart = ({
     <div
       {...props}
       ref={ref}
-      className={cnb(
-        "flex w-full rs-py-3",
-        isLeft ? "justify-start" : "justify-end",
-        className,
-      )}
+      className={cnb("flex justify-end rs-py-3", className)}
     >
       {lineartSvg}
     </div>
