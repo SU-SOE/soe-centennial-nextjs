@@ -18,6 +18,8 @@ import { MainNav } from "@/components/MainNav";
 import { ImageGallery } from "@/components/ImageGallery";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { H2 } from "@/components/Typography/Header";
+import { Scrollytelling } from "@/components/Story/ScrollyTelling";
+import { ScrollyBubble } from "@/components/Story/ScrollyBubble";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -151,17 +153,17 @@ const footnotes = [
     id: "footnote12",
     text: "C.D. Marx, “Stanford’s Schools of Engineering.”",
   },
-  {
-    number: 13,
-    id: "footnote13",
-    text: "Guido H. Marx, “The Making of the Stanford Engineer,” Stanford Alumnus 9, no. 4 (December 1907).",
-  },
-  {
-    number: 14,
-    id: "footnote14",
-    text: "Alfred D. Kirkland, “Engineering at Stanford: A Short Historical Perspective,” IEEE Transactions on Education 18, no. 1 (February 1975): 50,",
-    sourceLink: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4320947",
-  },
+  // {
+  //   number: 13,
+  //   id: "footnote13",
+  //   text: "Guido H. Marx, “The Making of the Stanford Engineer,” Stanford Alumnus 9, no. 4 (December 1907).",
+  // },
+  // {
+  //   number: 14,
+  //   id: "footnote14",
+  //   text: "Alfred D. Kirkland, “Engineering at Stanford: A Short Historical Perspective,” IEEE Transactions on Education 18, no. 1 (February 1975): 50,",
+  //   sourceLink: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4320947",
+  // },
   {
     number: 15,
     id: "footnote15",
@@ -179,19 +181,20 @@ export default function page() {
         chapter="Decade 1"
         heading="“Preparing Roads over which Culture May Ride in Comfort”"
         body="The 1st Decade | 1925 – 1934"
-        byline="by Andrew Myers"
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007204_0003.jpg_Guggehneim_Lab_h3dwcp.jpg"
         alt="Interior of the Guggenheim Aeronautics Laboratory, depicting a man alongside a large machine"
         caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives"
       />
-
-      <Quote
-        body="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
-        source="— Charles David Marx, 1923"
-      />
-
-      <HorizontalLineart lineartType="A" />
-      <OneCol>
+      <div className="max-w-1500 w-full cc">
+        <Quote
+          body="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
+          source="— Charles David Marx, 1923"
+        />
+      </div>
+      <div className="flex w-full justify-end">
+        <HorizontalLineart lineartType="B" />
+      </div>
+      <OneCol className="rs-mt-3">
         <H2>1925 – 1934</H2>
         <Text variant="overview">
           On May 15, 1925, when the Stanford University Board of Trustees
@@ -241,7 +244,7 @@ export default function page() {
           husband died in 1893, Jane continued to shepherd this vision.
         </Text>
         <H2>A look back, and forward</H2>
-        <Text>
+        <Text mb="0">
           In the ten decades since its founding, the School of Engineering has
           produced fundamental work in science and transformational
           breakthroughs that have changed lives and shaped human society. From
@@ -254,8 +257,10 @@ export default function page() {
           single school.
         </Text>
       </OneCol>
-      <HorizontalLineart lineartType="B" />
-      <OneCol>
+      <div className="flex w-full justify-start">
+        <HorizontalLineart lineartType="A" />
+      </div>
+      <OneCol className="rs-mb-5">
         <Text>
           “In organic union there is strength,” wrote the members of a select
           committee charged by then Stanford President Ray Lyman Wilbur to
@@ -305,7 +310,7 @@ export default function page() {
           caption="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement. Marx is seated in the center of the bottom row. | Courtesy Barbara Wallace."
         />
       </StoryGrid>
-      <OneCol>
+      <OneCol className="rs-mt-6 rs-mb-6">
         <Text>
           The committee’s focus on people applied not only to students but also
           to faculty. Back in 1891, Stanford’s first president, David Starr
@@ -314,7 +319,8 @@ export default function page() {
           noted civil engineer then at Cornell University. Marx became known as
           “The Father of the Stanford Engineer,” a man whom his students
           affectionately referred to as “Daddy Marx,” for the paternal figure he
-          cut on campus.(7)
+          cut on campus.
+          <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} />
         </Text>
         <Text>
           The headquarters of engineering education was “Engineering Corner,” a
@@ -330,7 +336,7 @@ export default function page() {
           dedicated in 1977.
         </Text>
       </OneCol>
-      <Container width="site" mb={6}>
+      <Container width="site" mb={5}>
         <MediaCaptionImage
           isParallax
           rounded
@@ -349,17 +355,20 @@ export default function page() {
           infrastructure: “And this again is characteristic of Stanford, where
           the bringing and holding of properly qualified teachers has always
           been deemed of more importance than the addition to buildings and
-          equipment.”(8) As for curriculum, Stanford had held engineering
-          courses on par with other courses, allowing the university to “wipe
-          out the line of division [between] students in technical and so-called
-          cultural courses.”(9) The goal was a well-rounded, liberal education
-          meant to break free of stereotypes about engineers. Speaking to the
-          American Society of Civil Engineers when he was president of the
-          organization in 1915, Marx renounced the idea of engineering as a
-          purely technical endeavor that was “destructive of idealism” and
-          natural beauty. Engineering embodied idealism and art, he insisted,
-          and the same principles of construction applied to “a symphony, a
-          poem, or a bridge.”(10)
+          equipment.”
+          <Footnotes footnoteRefs={[{ id: "footnote8", number: 8 }]} /> As for
+          curriculum, Stanford had held engineering courses on par with other
+          courses, allowing the university to “wipe out the line of division
+          [between] students in technical and so-called cultural courses.”
+          <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} />
+          The goal was a well-rounded, liberal education meant to break free of
+          stereotypes about engineers. Speaking to the American Society of Civil
+          Engineers when he was president of the organization in 1915, Marx
+          renounced the idea of engineering as a purely technical endeavor that
+          was “destructive of idealism” and natural beauty. Engineering embodied
+          idealism and art, he insisted, and the same principles of construction
+          applied to “a symphony, a poem, or a bridge.”
+          <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
         </Text>
       </OneCol>
       <StoryGrid bgColor="fog-light">
@@ -409,7 +418,8 @@ export default function page() {
           than repel the born leader” and develop the “innate capacity to lead.”
           The curriculum would be followed by two years of specialization in a
           specific engineering discipline resulting in a graduate “degree of
-          Engineer.”(11)
+          Engineer.”
+          <Footnotes footnoteRefs={[{ id: "footnote11", number: 11 }]} />
         </Text>
         <Text>
           “If it is to endure,” Charles Marx wrote, “Stanford University should
@@ -417,10 +427,11 @@ export default function page() {
           qualified to become leaders . . . this brings us to what is
           commercially the Stanford engineer’s most valuable inherent asset—a
           certain sense of adequacy which manifests itself in his power of
-          initiative and resourcefulness.”(12)
+          initiative and resourcefulness.”
+          <Footnotes footnoteRefs={[{ id: "footnote12", number: 12 }]} />
         </Text>
       </OneCol>
-      <TwoCol isSidebar>
+      <TwoCol className="rs-mt-5" isSidebar>
         <OneCol>
           <Text>
             These leaders would not graduate and remain in Palo Alto, or in
@@ -434,7 +445,8 @@ export default function page() {
             occupying positions of responsibility and power and all engaged, as
             one of them said, ‘in preparing roads over which Culture may ride in
             comfort,’ ” wrote Guido Marx, a mechanical engineer, who joined his
-            brother Charles Marx on the Stanford faculty in 1895.(13)
+            brother Charles Marx on the Stanford faculty in 1895.
+            <Footnotes footnoteRefs={[{ id: "footnote13", number: 13 }]} />
           </Text>
           <Text>
             The first dean of the School of Engineering, Theodore “Ted” Hoover,
@@ -474,7 +486,7 @@ export default function page() {
           />
         </StorySidebar>
       </TwoCol>
-      <Container width="site" mb={6}>
+      <Container width="site" mt={5} mb={5}>
         <MediaCaptionImage
           isParallax
           rounded
@@ -485,10 +497,71 @@ export default function page() {
           caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
         />
       </Container>
-      {/* <ScrollTelling /> */}
+      <Scrollytelling
+        bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
+        bgImageAlt="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925"
+      >
+        <H2>Construction and plans</H2>
+        <ScrollyBubble>
+          <Text variant="overview">
+            From The Stanford Quad, vol. 34, 1927, pp. 38-39
+          </Text>
+          <Text mb="0">
+            Relatively little construction has been done by the University
+            during the year, owing to a lack of sufficient funds. Such building
+            as has been done resulted from special gifts.
+          </Text>
+        </ScrollyBubble>
+        <ScrollyBubble>
+          <Text mb="0">
+            The Harris J. Ryan High Voltage Laboratory is practically the only
+            recent addition to the University plant, and is without question the
+            most valuable and outstanding improvement which Stanford has
+            acquired in several years. The building, located near “Frenchman’s
+            dam,” has been under construction since August, 1925, and was
+            formally opened on September 17, 1926, when Professor Ryan gave the
+            initial demonstration of the equipment capable of producing
+            2,100,000 volts.
+          </Text>
+        </ScrollyBubble>
+        <MediaCaptionImage
+          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727938/00012017_005_fhw5yg.jpg"
+          className="max-w-400 w-full mx-auto"
+          aspectRatio="3x4"
+          alt="The Stanford Quad"
+          caption="The Stanford Quad — @TODO Replace placeholder image"
+        />
+        <ScrollyBubble>
+          <Text mb="0">
+            The main portion of the laboratory building is a steel frame,
+            asbestos covered structure, 173 feet long, 60 feet wide, and 65 feet
+            in height. It can be made absolutely light proof by closing the
+            three huge steel doors, which are the largest ever built, but which
+            can be operated readily by one man through the use of combinations
+            of gears. The large size of the building was partly necessitated
+            because safety in handling high voltages requires much space.
+            Adjacent to the main room is an accessory wing containing offices
+            and generator rooms.
+          </Text>
+        </ScrollyBubble>
+        <ScrollyBubble>
+          <Text mb="0">
+            The equipment of the laboratory consists of six 350,000 volt
+            transformer units, two motor generator sets, and a switchboard. The
+            transformer units, which were presented by the General Electric
+            Company, weigh twenty-two tons apiece and are mounted on cylinders
+            of compressed paper. They are capable of producing the highest
+            voltage ever obtained at commercial frequency. The University has
+            set aside nearly 200 acres for the use of the laboratory, making
+            possible the construction of a seven mile transmission line.
+          </Text>
+        </ScrollyBubble>
+      </Scrollytelling>
       <ImageGallery images={galleryImages} />
-      <HorizontalLineart lineartType="C" />
-      <OneCol>
+      <div className="flex w-full justify-start">
+        <HorizontalLineart lineartType="C" />
+      </div>
+      <OneCol className="rs-mb-6">
         <Text>
           In the kind of collaboration that became a hallmark of Stanford
           Engineer- ing, the Ryan Lab worked closely with industry and
@@ -515,9 +588,9 @@ export default function page() {
           the Jen-Hsun Huang Engineering Center.
         </Text>
       </OneCol>
-      <Container width="full" bgColor="blue" pb={7} pt={7} mb={6}>
-        <TwoCol isSidebar className="mb-0">
-          <OneCol className="mb-0">
+      <Container width="full" bgColor="blue" pb={7} pt={7} mb={7}>
+        <TwoCol isSidebar>
+          <OneCol>
             <H2>Clipper Ships to Turbojets</H2>
             <Text variant="overview">The Career of William Durand</Text>
             <Text>
@@ -600,19 +673,7 @@ export default function page() {
           caption="In 1927, a gift from the Daniel Guggenheim Fund for the Promotion of Aeronautics helped create the new Daniel Guggenheim Experimental Laboratory of Aerodynamic and Aeronautic Engineering, located in the Engineering Lab buildings. The gift included $45,000 for equipment and $15,000 yearly for expenses for ten years. In this lab and others, Professor William F. Durand and his colleagues studied aerodynamics, naval propulsion, and engineering research methods. | Berton W. Crandall/Hoover Institution Library & Archives."
         />
       </Container>
-      <OneCol>
-        <Text>
-          Dean Hoover emphasized graduate education as a key to academic and
-          professional leadership. The School of Engineering conferred its first
-          doctorate, in electrical engineering, in 1928. That same year the
-          school added the Department of Military Science and Tactics. Laura
-          Virginia Austin, who in 1923 had been the first woman at Stanford to
-          earn a bachelor’s degree in engineering (civil), went on to be the
-          first woman to earn the degree of Engineer, in 1931.(14) By 1930, when
-          the total number of students registered in the schoolsoared to 293,
-          Dean Hoover remarked that there were “considerably more [students]
-          than the capacity of the School” could handle.(15)
-        </Text>
+      <OneCol className="rs-mt-5">
         <Text>
           But this growth trend was soon dealt a serious blow by the Great
           Depres- sion. Student enrollment dropped significantly for a few years
@@ -629,7 +690,7 @@ export default function page() {
           <FootnotesList footnotes={footnotes} />
         </OneCol>
       </Container>
-      <ContributeStoryBanner bgColor="red" />
+      <ContributeStoryBanner bgColor="red" hasLineArt />
     </Container>
   );
 }

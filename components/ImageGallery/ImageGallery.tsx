@@ -93,14 +93,14 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                 src={images[selectedIndex].src}
                 alt={images[selectedIndex].alt}
                 fill
-                className="object-cover shadow-lg"
+                className="object-contain shadow-lg bg-stone-dark"
               />
             </motion.div>
           </AnimatePresence>
         </div>
 
         <div className="max-w-800 w-full order-last mt-18">
-          <Text font="sans" className="text-black-70 text-21">
+          <Text font="sans" className="text-black-70 text-21" mb="0">
             {images[selectedIndex].caption}
           </Text>
         </div>

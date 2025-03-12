@@ -28,11 +28,10 @@ export const Quote = ({
   ...props
 }: QuoteProps) => {
   return (
-    <AnimateInView animation={animation} delay={delay}>
+    <AnimateInView animation={animation} delay={delay} className="w-fit">
       <Container
         {...props}
         width="full"
-        py={5}
         className={cnb("text-stone-dark", styles.widths[width], className)}
       >
         <blockquote>

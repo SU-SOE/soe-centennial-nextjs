@@ -1,6 +1,7 @@
 import { AnimateInView } from "@/components/Animate";
 import { Container } from "@/components/Container";
 import { Heading, Text, type HeadingType } from "@/components/Typography";
+import { cnb } from "cnbuilder";
 import Image from "next/image";
 
 type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -9,6 +10,7 @@ type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
   subheading?: string;
   content?: React.ReactNode;
   caption?: React.ReactNode;
+  isBlur?: boolean;
   bgImageSrc: string;
   bgImageAlt?: string;
 };
@@ -45,10 +47,11 @@ export const Scrollytelling = ({
   heading,
   headingLevel = "h2",
   subheading,
+  children,
   caption,
+  isBlur,
   bgImageSrc,
   bgImageAlt,
-  children,
   ...props
 }: ScrollytellingProps) => {
   return (
@@ -66,7 +69,12 @@ export const Scrollytelling = ({
             height={1200}
             className="absolute size-full object-cover top-0 left-0 z-0"
           />
-          <div className="absolute size-full top-0 left-0 z-0 bg-fog-light/80" />
+          <div
+            className={cnb(
+              "absolute size-full top-0 left-0 z-0 bg-fog-light/80",
+              isBlur && " backdrop-blur-sm",
+            )}
+          />
         </div>
         <div className="relative z-10 cc text-stone-dark rs-py-10">
           <div className="w-full mx-auto md:w-2/3 xl:w-1/2">

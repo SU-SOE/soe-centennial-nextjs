@@ -23,7 +23,7 @@ export const StoryGrid = ({
   ...props
 }: StoryGridProps) => {
   return (
-    <Container {...props} width="full" mb={6} className="relative">
+    <Container {...props} width="full" mb={5} className="relative">
       <Container bgColor={bgColor} width="site" pt={7} pb={7}>
         {hasBgImage && src && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
@@ -37,7 +37,7 @@ export const StoryGrid = ({
             />
             <div
               className={cnb(
-                "absolute h-full w-full bg-opacity-80 z-10",
+                "absolute h-full w-full bg-opacity-80 z-10 backdrop-blur-sm",
                 bgColor ? styles.bgColors[bgColor] : "",
               )}
             />

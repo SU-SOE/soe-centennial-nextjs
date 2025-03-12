@@ -55,10 +55,13 @@ export const StoryImpactBanner = ({
               sizes="100vw"
             />
             <div
-              className={cnb("absolute h-full w-full bg-opacity-80 z-10", {
-                "bg-stone-dark": bgColor === "stone-dark",
-                "bg-cardinal-red-dark": bgColor === "red",
-              })}
+              className={cnb(
+                "absolute h-full w-full bg-opacity-80 z-10 backdrop-blur-sm",
+                {
+                  "bg-stone-dark": bgColor === "stone-dark",
+                  "bg-cardinal-red-dark": bgColor === "red",
+                },
+              )}
             />
           </div>
         )}
@@ -84,7 +87,7 @@ export const StoryImpactBanner = ({
               </Text>
             )}
             {chapter && (
-              <ChapterLabel className="order-first rs-mb-2" text={chapter} />
+              <ChapterLabel className="order-first rs-mb-0" text={chapter} />
             )}
             <Text variant="overview" mb="none" className="rs-mt-5">
               {body}

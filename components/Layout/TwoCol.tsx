@@ -1,18 +1,10 @@
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
-import { MarginType, PaddingType } from "@/utilities/datasource";
 import { cnb } from "cnbuilder";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
   isSidebar?: boolean;
   isNarrow?: boolean;
-  pt?: PaddingType;
-  pb?: PaddingType;
-  py?: PaddingType;
-  mt?: MarginType;
-  mb?: MarginType;
-  my?: MarginType;
   bgColor?: BgColorType;
 };
 
@@ -35,7 +27,6 @@ export const TwoCol = ({
         },
         className,
       )}
-      mb={6}
     >
       {children}
     </Container>
