@@ -174,7 +174,12 @@ const footnotes = [
 export default function page() {
   return (
     <Container as="article" width="full">
-      <Masthead logoColor="white-red" isOverlap mainNav={<MainNav />} />
+      <Masthead
+        logoColor="white-red"
+        isOverlap
+        isBgDark
+        mainNav={<MainNav />}
+      />
       <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"

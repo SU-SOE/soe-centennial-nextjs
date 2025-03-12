@@ -11,6 +11,7 @@ export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   logoColor?: "default" | "white" | "white-red";
   isOverlap?: boolean;
   navLight?: boolean;
+  isBgDark?: boolean;
   bgColor?: styles.BgColorType;
   mainNav?: React.ReactNode;
 };
@@ -18,6 +19,7 @@ export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
 export const Masthead = ({
   logoColor,
   isOverlap = false,
+  isBgDark = false,
   bgColor = "none",
   mainNav,
   navLight,
@@ -49,7 +51,10 @@ export const Masthead = ({
           <Text
             font="dm-sans"
             size="small"
-            className="ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220"
+            className={cnb(
+              "ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220",
+              { "text-white": isOverlap && isBgDark },
+            )}
             mb="0"
             leading="tight"
             weight="medium"
