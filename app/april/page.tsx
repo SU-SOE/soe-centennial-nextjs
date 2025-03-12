@@ -14,7 +14,7 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { AnimateInView } from "@/components/Animate";
 import { Link } from "@/components/Cta/Link";
 import { ExploreMore } from "@/components/Story/ExploreMore";
-import AnimatedHero from "@/components/AnimatedHero/AnimatedHero";
+import { AnimatedHero } from "@/components/AnimatedHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
