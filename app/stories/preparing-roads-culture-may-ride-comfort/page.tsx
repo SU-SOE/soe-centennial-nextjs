@@ -349,7 +349,7 @@ export default function page() {
           aspectRatio="16x9"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
           alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
-          caption="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
+          caption=" @TODO Replace placeholder image — The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
         />
       </Container>
       <OneCol>
