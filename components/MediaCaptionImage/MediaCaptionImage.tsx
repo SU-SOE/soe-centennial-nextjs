@@ -65,7 +65,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     isCaptionInset?: boolean;
     captionBgColor?: styles.CaptionBgColorType;
     rounded?: boolean;
-    aspectRatio: ImageAspectRatioType;
+    aspectRatio?: ImageAspectRatioType;
     isFullHeight?: boolean;
     isPortriat?: boolean;
     boundingWidth?: "site" | "full";

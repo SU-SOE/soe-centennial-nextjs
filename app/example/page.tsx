@@ -75,10 +75,6 @@ const ExamplePage = async () => {
           caption="Caption/credit lorem ipsum aspect ratio square"
           aspectRatio="1x1"
         />
-        <MediaCaptionImage
-          imageSrc="https://placecats.com/neo/1500/1000"
-          caption="Caption/credit lorem ipsum aspect ratio 16/9"
-        />
         <Text className="type-3 intro-text">
           Overview style lorem ipsum dolar sit amet vestibulum parimentium elit
           rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod

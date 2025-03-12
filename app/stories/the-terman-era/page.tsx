@@ -539,7 +539,6 @@ scores on the entrance exams.”(12)"
       <Container>
         <MediaCaptionImage
           isParallax
-          isLarge
           rounded
           animation="fadeIn"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
