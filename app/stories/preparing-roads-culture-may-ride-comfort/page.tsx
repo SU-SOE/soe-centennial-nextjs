@@ -376,7 +376,12 @@ export default function page() {
           <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
         </Text>
       </OneCol>
-      <StoryGrid bgColor="fog-light">
+      <StoryGrid
+        bgColor="fog-light"
+        hasBgImage
+        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/campus_aerial_view_crandall_m0r1jy.jpg"
+        alt=""
+      >
         <div>
           <MediaCaptionImage
             rounded
@@ -529,13 +534,6 @@ export default function page() {
             2,100,000 volts.
           </Text>
         </ScrollyBubble>
-        <MediaCaptionImage
-          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727938/00012017_005_fhw5yg.jpg"
-          className="max-w-400 w-full mx-auto"
-          aspectRatio="3x4"
-          alt="The Stanford Quad"
-          caption="The Stanford Quad — @TODO Replace placeholder image"
-        />
         <ScrollyBubble>
           <Text mb="0">
             The main portion of the laboratory building is a steel frame,
