@@ -45,13 +45,13 @@
  *   <ImageGallery images={exampleImages} />
  * );
  */
-
 "use client";
 
 import React, { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Text } from "../Typography";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/16/solid";
 
 type ImageItem = {
   src: string;
@@ -66,6 +66,18 @@ type ImageGalleryProps = {
 export const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const prefersReducedMotion = useReducedMotion();
+
+  const prevImage = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
+    );
+  };
+
+  const nextImage = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
 
   return (
     <div className="cc">
@@ -94,43 +106,69 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                 alt={images[selectedIndex].alt}
                 fill
                 className="object-contain shadow-lg bg-stone-dark"
+                aria-labelledby={`image-caption-${selectedIndex}`}
               />
             </motion.div>
           </AnimatePresence>
+
+          <ul className="list-none *:p-0 *:m-0">
+            <li>
+              <button
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 transition p-6 rounded-full bg-stone-dark text-white border-white border-2 hocus:border-digital-red-xlight hocus:text-digital-red-xlight"
+                onClick={prevImage}
+                aria-label="Previous image"
+              >
+                <ArrowLeftIcon width={24} />
+              </button>
+            </li>
+            <li>
+              <button
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 transition p-6 rounded-full bg-stone-dark text-white border-white border-2 hocus:border-digital-red-xlight hocus:text-digital-red-xlight"
+                onClick={nextImage}
+                aria-label="Next image"
+              >
+                <ArrowRightIcon width={24} />
+              </button>
+            </li>
+          </ul>
         </div>
 
-        <div className="max-w-800 w-full order-last mt-18">
+        <div
+          id={`image-caption-${selectedIndex}`}
+          className="max-w-800 w-full order-last mt-18"
+        >
           <Text font="sans" className="text-black-70 text-21" mb="0">
             {images[selectedIndex].caption}
           </Text>
         </div>
 
         {/* Thumbnail Navigation */}
-        <div
-          className="flex flex-wrap gap-10 overflow-x-auto mt-18"
+        <ul
+          className="flex flex-wrap gap-10 overflow-x-auto mt-18 list-none"
           role="group"
           aria-label="Thumbnail navigation"
         >
           {images.map((image, index) => (
-            <button
-              key={index}
-              aria-label={`View image ${index + 1}`}
-              className={`relative aspect-[9/6] h-full w-100 overflow-hidden border-4 transition-all ${
-                index === selectedIndex
-                  ? "border-digital-red"
-                  : "border-transparent"
-              }`}
-              onClick={() => setSelectedIndex(index)}
-            >
-              <Image
-                src={image.src}
-                alt={`Preview of ${image.alt}`}
-                fill
-                className="object-cover"
-              />
-            </button>
+            <li key={index} className="m-0 p-0">
+              <button
+                aria-label={`View image ${index + 1}`}
+                className={`relative aspect-[9/6] h-full w-100 overflow-hidden border-4 transition-all ${
+                  index === selectedIndex
+                    ? "border-digital-red"
+                    : "border-transparent"
+                }`}
+                onClick={() => setSelectedIndex(index)}
+              >
+                <Image
+                  src={image.src}
+                  alt={`Preview of ${image.alt}`}
+                  fill
+                  className="object-cover"
+                />
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );
