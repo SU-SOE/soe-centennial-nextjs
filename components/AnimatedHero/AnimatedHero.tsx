@@ -12,10 +12,10 @@ export const AnimatedHero = () => {
 
   if (prefersReducedMotion) {
     return (
-      <div className="relative bg-cardinal-red-x-dark w-screen h-[calc(100vh_-_10rem)] rs-mb-7">
+      <div className="relative bg-cardinal-red-x-dark w-screen h-fit rs-py-10 rs-mb-7">
         <div className=" w-full h-full flex flex-row gap-200 items-center justify-center cc">
           <div className="w-full max-w-800">
-            <div className="aspect-[1.12/1] rs-mb-1 w-300">
+            <div className="aspect-[1.12/1] rs-mb-1 w-full max-w-300">
               <svg
                 width="100%"
                 height="100%"
@@ -71,13 +71,13 @@ export const AnimatedHero = () => {
   }
 
   return (
-    <div className="relative bg-cardinal-red-x-dark w-screen h-[calc(100vh_-_10rem)] rs-mb-7">
+    <div className="relative bg-cardinal-red-x-dark w-screen h-fit rs-py-10 rs-mb-7">
       <div className=" w-full h-full flex flex-row gap-200 items-center justify-center cc">
         <div className="w-full max-w-800">
           <motion.div
-            className="h-fit aspect-[1.12/1] rs-mb-1"
-            initial={{ width: "800px" }}
-            animate={logoFrame ? { width: "300px" } : { width: "800px" }}
+            className="h-fit w-full aspect-[1.12/1] rs-mb-1"
+            initial={{ maxWidth: "800px" }}
+            animate={logoFrame ? { maxWidth: "300px" } : { maxWidth: "800px" }}
             transition={{ duration: 0.5 }}
           >
             <MaskAnimation onComplete={() => setLogoFrame(true)} />

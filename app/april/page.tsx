@@ -82,7 +82,7 @@ export default function Home() {
   ];
   return (
     <div>
-      <Masthead logoColor="white-red" isOverlap />
+      <Masthead bgColor="red" logoColor="white-red" />
       <AnimatedHero />
       <StoryPosterCard
         heading="The foundation of a new era in engineering"
