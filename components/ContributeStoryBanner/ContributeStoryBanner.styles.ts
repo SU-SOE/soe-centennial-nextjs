@@ -1,7 +1,7 @@
 import { cnb } from "cnbuilder";
 
 export const section =
-  "cc lg:w-full lg:rs-px-7 flex items-center justify-center border-b-4 border-white";
+  "cc lg:w-full lg:rs-px-7 flex items-center justify-center border-b border-digital-red";
 
 export const container = (bgColor: string, hasLineArt: boolean): string =>
   cnb("relative 2xl:max-w-[1700px] flex items-center justify-center w-full", {

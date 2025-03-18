@@ -23,7 +23,7 @@ export const H2 = ({ children, className, ...props }: Props) => {
       as="h2"
       size={3}
       weight="medium"
-      className={cnb("rs-mt-2", className)}
+      className={cnb("rs-mt-5", className)}
     >
       {children}
     </Heading>

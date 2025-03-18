@@ -29,6 +29,7 @@
  *   heading="Impactful Story"
  *   superhead="Superhead Text"
  *   chapter="Chapter 1"
+ *   dek="This is the dek text of the story."
  *   body="This is the body text of the story."
  *   byline="By Author"
  *   bgColor="red"
@@ -51,7 +52,8 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead?: string;
   chapter?: string;
-  body: string;
+  dek?: string;
+  body?: string;
   byline?: string;
   bgColor?: BgColorType;
   caption?: string;
@@ -65,6 +67,7 @@ export const StoryImpactBanner = ({
   heading,
   superhead,
   chapter,
+  dek,
   body,
   byline,
   bgColor = "white",
@@ -130,9 +133,11 @@ export const StoryImpactBanner = ({
             {chapter && (
               <ChapterLabel className="order-first rs-mb-0" text={chapter} />
             )}
-            <Text variant="overview" mb="none" className="rs-mt-5">
-              {body}
-            </Text>
+            {dek && (
+              <Text mb="none" size="f3" className="rs-mt-1">
+                {dek}
+              </Text>
+            )}
             {byline && (
               <Text mb="none" size="base" className="rs-mt-0">
                 {byline}

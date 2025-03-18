@@ -1,56 +1,92 @@
+/**
+ * SidebarLineart component renders different SVG line art based on the screen size and the `isShort` prop.
+ *
+ * @param {SidebarLineartProps} props - The properties for the SidebarLineart component.
+ * @param {string} [props.className] - Optional additional class names to apply to the SVG elements.
+ * @param {boolean} [props.isShort] - Determines whether to render the short version of the SVG line art.
+ *
+ * @returns {JSX.Element} The rendered SidebarLineart component.
+ */
 import { cnb } from "cnbuilder";
 import React from "react";
 
 interface SidebarLineartProps {
   className?: string;
+  isShort?: boolean;
 }
 
-const SidebarLineart = ({ className }: SidebarLineartProps) => {
+const SidebarLineart = ({ className, isShort }: SidebarLineartProps) => {
   return (
     <>
-      <div className="w-full h-full hidden lg:block">
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 467 1671"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={cnb("hidden 2xl:block", className)}
-          style={{
-            height: "100%",
-            width: "100%",
-            maxWidth: "100%",
-          }}
-          preserveAspectRatio="none"
-        >
-          <path
-            vectorEffect="non-scaling-stroke"
-            d="M2.1275 1595C2.1275 1623.86 -3.25941 1669.2 55.9966 1669.2C115.253 1669.2 353.222 1669.2 377.463 1669.2C443.452 1669.2 465 1651.34 465 1605.99C465 1573.02 465.001 148.874 465.001 125.515C465.001 81.545 434.193 62.0899 377.464 81.5449C320.735 101 241.535 135.515 143.535 161C106.001 170.761 84.2794 141 84.2794 121.545C84.2794 74.8065 84.2794 73.451 84.2794 58.3363C84.2794 15.7405 123.334 2.00014 143.535 2.00008C200.114 1.9999 325.344 2.00008 344.198 2.00008C391.333 2.00008 388.64 63.8326 344.198 65.2066C299.756 66.5807 130.068 65.2066 72.1588 65.2066C14.2495 65.2066 2.12891 65.2066 2.12891 127.039C2.12891 158.642 2.1275 1573.15 2.1275 1595Z"
-            stroke="#F83535"
-            strokeWidth="3"
-          />
-        </svg>
-        {/* XL & LG */}
-        <svg
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 315 1283"
-          className={cnb("hidden lg:block 2xl:hidden", className)}
-          style={{
-            height: "100%",
-            width: "100%",
-            maxWidth: "100%",
-          }}
-          fill="none"
-          preserveAspectRatio="none"
-        >
-          <path
-            vectorEffect="non-scaling-stroke"
-            d="M2.08564 1231.03C2.08564 1250.47 -1.53278 1281 38.2699 1281C78.0725 1281 237.918 1281 254.201 1281C298.526 1281 313 1268.97 313 1238.44C313 1216.23 313 100.907 313 85.1763C313 55.5665 292.306 42.4652 254.201 55.5665C216.095 68.6677 162.896 91.9105 97.0693 109.072C71.8575 115.645 57.2666 95.6042 57.2666 82.5029C57.2666 51.0287 57.2666 50.1159 57.2666 39.9375C57.2666 11.253 83.5002 2.00009 97.0693 2.00005C135.073 1.99993 219.191 2.00005 231.855 2.00005C263.517 2.00005 261.707 43.6388 231.855 44.5641C202.003 45.4894 88.0232 44.5641 49.1252 44.5641C10.2272 44.5641 2.08567 44.5641 2.08566 86.2029C2.08566 107.485 2.08564 1216.32 2.08564 1231.03Z"
-            stroke="#F83535"
-            strokeWidth="3"
-          />
-        </svg>
-      </div>
+      {!isShort && (
+        <div className="w-full h-full hidden lg:block">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 467 1671"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={cnb("hidden 2xl:block", className)}
+            style={{
+              height: "100%",
+              width: "100%",
+              maxWidth: "100%",
+            }}
+            preserveAspectRatio="none"
+          >
+            <path
+              vectorEffect="non-scaling-stroke"
+              d="M2.1275 1595C2.1275 1623.86 -3.25941 1669.2 55.9966 1669.2C115.253 1669.2 353.222 1669.2 377.463 1669.2C443.452 1669.2 465 1651.34 465 1605.99C465 1573.02 465.001 148.874 465.001 125.515C465.001 81.545 434.193 62.0899 377.464 81.5449C320.735 101 241.535 135.515 143.535 161C106.001 170.761 84.2794 141 84.2794 121.545C84.2794 74.8065 84.2794 73.451 84.2794 58.3363C84.2794 15.7405 123.334 2.00014 143.535 2.00008C200.114 1.9999 325.344 2.00008 344.198 2.00008C391.333 2.00008 388.64 63.8326 344.198 65.2066C299.756 66.5807 130.068 65.2066 72.1588 65.2066C14.2495 65.2066 2.12891 65.2066 2.12891 127.039C2.12891 158.642 2.1275 1573.15 2.1275 1595Z"
+              stroke="#F83535"
+              strokeWidth="3"
+            />
+          </svg>
+          {/* XL & LG */}
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 315 1283"
+            className={cnb("hidden lg:block 2xl:hidden", className)}
+            style={{
+              height: "100%",
+              width: "100%",
+              maxWidth: "100%",
+            }}
+            fill="none"
+            preserveAspectRatio="none"
+          >
+            <path
+              vectorEffect="non-scaling-stroke"
+              d="M2.08564 1231.03C2.08564 1250.47 -1.53278 1281 38.2699 1281C78.0725 1281 237.918 1281 254.201 1281C298.526 1281 313 1268.97 313 1238.44C313 1216.23 313 100.907 313 85.1763C313 55.5665 292.306 42.4652 254.201 55.5665C216.095 68.6677 162.896 91.9105 97.0693 109.072C71.8575 115.645 57.2666 95.6042 57.2666 82.5029C57.2666 51.0287 57.2666 50.1159 57.2666 39.9375C57.2666 11.253 83.5002 2.00009 97.0693 2.00005C135.073 1.99993 219.191 2.00005 231.855 2.00005C263.517 2.00005 261.707 43.6388 231.855 44.5641C202.003 45.4894 88.0232 44.5641 49.1252 44.5641C10.2272 44.5641 2.08567 44.5641 2.08566 86.2029C2.08566 107.485 2.08564 1216.32 2.08564 1231.03Z"
+              stroke="#F83535"
+              strokeWidth="3"
+            />
+          </svg>
+        </div>
+      )}
+      {isShort && (
+        <div className="w-full h-full hidden lg:block">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 315 547"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={cnb("block", className)}
+            style={{
+              height: "100%",
+              width: "100%",
+              maxWidth: "100%",
+            }}
+            preserveAspectRatio="none"
+          >
+            <path
+              vectorEffect="non-scaling-stroke"
+              d="M2.08564 495.272C2.08564 514.704 -1.53278 545.239 38.2699 545.239C78.0725 545.239 237.918 545.239 254.201 545.239C298.526 545.239 313 533.21 313 502.675C313 480.467 313 100.581 313 84.8512C313 55.2413 292.306 42.14 254.201 55.2413C216.095 68.3425 162.896 91.5853 97.0692 108.747C71.8574 115.32 57.2666 95.279 57.2666 82.1777C57.2666 50.7035 57.2666 49.7907 57.2666 39.6123C57.2666 10.9278 83.5001 1.6749 97.0692 1.67486C135.073 1.67474 219.191 1.67486 231.855 1.67486C263.517 1.67486 261.707 43.3136 231.855 44.2389C202.003 45.1642 88.0231 44.2389 49.1251 44.2389C10.2271 44.2389 2.0856 44.2389 2.0856 85.8777C2.0856 107.159 2.08564 480.558 2.08564 495.272Z"
+              stroke="#F83535"
+              strokeWidth="3"
+            />
+          </svg>
+        </div>
+      )}
       {/* MD */}
       <div className="w-full h-full lg:hidden">
         <svg

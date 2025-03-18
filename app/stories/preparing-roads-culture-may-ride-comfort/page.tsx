@@ -57,7 +57,7 @@ const galleryImages = [
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/harris_j_ryan_gw6by8.jpg",
     alt: "Professor Harris J. Ryan working in his High-Voltage Laboratory, around 1926",
     caption:
-      "Professor Harris J. Ryan at his High-Voltage Laboratory, where he studied the long-distance transmission of electricity, circa 1926. Ryan was head of the Department of Electrical Engineering from 1905 until 1931. | Berton W. Crandall/Hoover Institution Library & Archives.",
+      "Professor Harris J. Ryan at his High-Voltage Laborator y, where he studied the long-distance transmission of electricity, circa 1926. Ryan was head of the Department of Electrical Engineering from 1905 until 1931. | Berton W. Crandall/Hoover Institution Librar y & Archives.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741726621/00007001_0001.jpg_electrical_engineers_paz9cd.jpg",
@@ -69,7 +69,7 @@ const galleryImages = [
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/experimental_power_lines_eqroyv.jpg",
     alt: "Experimental power lines viewed from the Ryan Lab",
     caption:
-      "View southward of experimental power lines from the Ryan Lab. Ryan’s research helped overcome many vexing challenges of transporting electricity, including how to carry electricity from the Hoover Dam to Los Angeles. Berton W. Crandall/Hoover Institution Library & Archives.",
+      "View southward of experimental power lines from the Ryan Lab. Ryan’s research helped overcome many vexing challenges of transporting electricity, including how to carry electricity from the Hoover Dam to Los Angeles. | Berton W. Crandall/Hoover Institution Library & Archives.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/wd899qz9103_00_0001_bk0gxi.jpg",
@@ -185,14 +185,15 @@ export default function page() {
         bgColor="stone-dark"
         chapter="Decade 1"
         heading="“Preparing Roads over which Culture May Ride in Comfort”"
-        body="The 1st Decade | 1925 – 1934"
-        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007204_0003.jpg_Guggehneim_Lab_h3dwcp.jpg"
-        alt="Interior of the Guggenheim Aeronautics Laboratory, depicting a man alongside a large machine"
-        caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives"
+        dek="1925 – 1934"
+        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
+        alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
+        caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
       />
       <div className="max-w-1500 w-full cc">
         <Quote
-          body="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
+          width="wide"
+          teaser="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
           source="— Charles David Marx, 1923"
         />
       </div>
@@ -502,9 +503,9 @@ export default function page() {
           rounded
           animation="fadeIn"
           aspectRatio="4x3"
-          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
-          alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
-          caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
+          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007204_0003.jpg_Guggehneim_Lab_h3dwcp.jpg"
+          alt="Interior of the Guggenheim Aeronautics Laboratory, depicting a man alongside a large machine"
+          caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives"
         />
       </Container>
       <Scrollytelling
@@ -653,7 +654,7 @@ export default function page() {
               and Head, Silicon Valley Archives
             </Text>
           </OneCol>
-          <StorySidebar hasLineArt>
+          <StorySidebar hasLineArt isShort>
             <MediaCaptionImage
               isPortriat
               rounded

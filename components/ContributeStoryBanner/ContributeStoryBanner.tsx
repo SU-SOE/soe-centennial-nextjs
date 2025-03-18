@@ -1,3 +1,15 @@
+/**
+ * `ContributeStoryBanner` is a React functional component that renders a banner
+ * inviting users to share their Stanford Engineering memories. The banner includes
+ * a heading, descriptive text, and a button that links to a Google Form for submissions.
+ *
+ * @param {ContributeStoryBannerProps} props - The properties for the component.
+ * @param {"fog-light" | "red" | "blue" | "white"} [props.bgColor="red"] - The background color of the banner.
+ * @param {boolean} [props.hasLineArt=false] - Whether to display line art in the banner.
+ * @param {HTMLAttributes<HTMLDivElement>} props.rest - Additional HTML attributes to apply to the container.
+ *
+ * @returns {JSX.Element} The rendered `ContributeStoryBanner` component.
+ */
 import { HTMLAttributes } from "react";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
