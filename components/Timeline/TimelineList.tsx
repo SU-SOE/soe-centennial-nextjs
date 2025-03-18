@@ -13,6 +13,7 @@ import { AnimateInView } from "../Animate";
 import { cnb } from "cnbuilder";
 import { Heading, Text } from "@/components/Typography";
 import { HorizontalLineart } from "../images/horizontal-lineart";
+import { TimelineItemFull } from "./TimelineItemFull";
 
 type TimelineProps = {
   timelineData: TimelineItemData[];
@@ -137,15 +138,13 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                         delay={0.5}
                         className="w-full"
                       >
-                        <TimelineItem
+                        <TimelineItemFull
                           {...row[0]} // Only take the first item
                           id={row[0].uuid}
                           aria-expanded={expandedUuid === row[0].uuid}
                           aria-controls={row[0].anchor}
                           isExpanded={expandedUuid === row[0].uuid}
-                          size="full"
                           trapezoid={fullwidthTrapezoid}
-                          isHorizontal
                           onClick={() =>
                             handleToggle(row[0].uuid, row[0].anchor)
                           }
@@ -200,6 +199,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                   </div>
 
                   {expandedUuid &&
+                    !isFullWidthRow &&
                     row.some((item) => item.uuid === expandedUuid) && (
                       <motion.div
                         id={itemId}
