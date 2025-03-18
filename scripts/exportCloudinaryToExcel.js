@@ -14,7 +14,7 @@ async function fetchImages(nextCursor = null, allImages = []) {
     const auth = { username: API_KEY, password: API_SECRET };
     const params = nextCursor ? { next_cursor: nextCursor, max_results: 10, } : {};
     const response = await axios.get(API_URL, { auth, params });
-console.log("data:", response.data)
+console.count("timeline item:")
     allImages.push(...response.data.resources);
 
     if (response.data.next_cursor) {

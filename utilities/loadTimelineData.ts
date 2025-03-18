@@ -8,6 +8,7 @@ export type TimelineItem = {
   body: string;
   anchor: string;
   image: string;
+  alt: string;
   uuid: string;
 };
 
@@ -69,6 +70,7 @@ function isTimelineItem(
     typeof item.year === "string" &&
     typeof item.heading === "string" &&
     typeof item.body === "string" &&
-    typeof item.image === "string"
+    typeof item.image === "string" &&
+    typeof item.alt === "string"
   );
 }
