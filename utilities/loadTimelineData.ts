@@ -30,7 +30,6 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
 
     // Sort all timeline items by year
     allTimelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    console.log("Loaded timeline data:", allTimelineData.length);
     return allTimelineData;
   } catch (error) {
     console.error(`Error reading or parsing JSON file: ${filePath}`);
