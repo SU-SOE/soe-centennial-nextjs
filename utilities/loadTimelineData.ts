@@ -30,6 +30,7 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
 
     // Sort all timeline items by year
     allTimelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
+    console.log("Loaded timeline data:", allTimelineData.length);
     return allTimelineData;
   } catch (error) {
     console.error(`Error reading or parsing JSON file: ${filePath}`);
@@ -64,13 +65,17 @@ function isTimelineItem(
   data: unknown,
 ): data is Omit<TimelineItem, "uuid" | "anchor"> {
   if (typeof data !== "object" || data === null) return false;
-
   const item = data as Partial<TimelineItem>;
-  return (
+  const isValid =
     typeof item.year === "string" &&
     typeof item.heading === "string" &&
     typeof item.body === "string" &&
     typeof item.image === "string" &&
-    typeof item.alt === "string"
-  );
+    typeof item.alt === "string";
+
+  if (!isValid) {
+    console.warn("Invalid timeline item found:", item);
+  }
+
+  return isValid;
 }
