@@ -95,7 +95,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
         </Text>
       </Container>
       {!isMounted ? (
-        <div className="cc flex flex-row gap-10">
+        <div className="cc flex flex-row gap-10" aria-live="polite">
           <ClipLoader />
           <Text variant="big">Loading Timeline Items...</Text>
         </div>
@@ -120,9 +120,9 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                     { "w-full": isFullWidthRow },
                   )}
                 >
-                  <div
+                  <ul
                     className={cnb(
-                      "cc flex flex-col items-center",
+                      "cc flex flex-col items-center list-none",
                       {
                         "md:items-start md:flex-row md:justify-between":
                           !isFullWidthRow,
@@ -132,27 +132,28 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                   >
                     {isFullWidthRow && (
                       // Render a single item in full-width rows
-                      <AnimateInView
-                        key={row[0].uuid}
-                        animation="slideUp"
-                        delay={0.5}
-                        className="w-full"
-                      >
-                        <TimelineItemFull
-                          {...row[0]} // Only take the first item
-                          id={row[0].uuid}
-                          aria-expanded={expandedUuid === row[0].uuid}
-                          aria-controls={row[0].anchor}
-                          isExpanded={expandedUuid === row[0].uuid}
-                          trapezoid={fullwidthTrapezoid}
-                          onClick={() =>
-                            handleToggle(row[0].uuid, row[0].anchor)
-                          }
-                          ref={(el) => {
-                            itemRefs.current[row[0].uuid] = el;
-                          }}
-                        />
-                      </AnimateInView>
+                      <li key={row[0].uuid} className="w-full m-0 p-0">
+                        <AnimateInView
+                          animation="slideUp"
+                          delay={0.5}
+                          className="w-full"
+                        >
+                          <TimelineItemFull
+                            {...row[0]} // Only take the first item
+                            id={row[0].uuid}
+                            aria-expanded={expandedUuid === row[0].uuid}
+                            aria-controls={row[0].anchor}
+                            isExpanded={expandedUuid === row[0].uuid}
+                            trapezoid={fullwidthTrapezoid}
+                            onClick={() =>
+                              handleToggle(row[0].uuid, row[0].anchor)
+                            }
+                            ref={(el) => {
+                              itemRefs.current[row[0].uuid] = el;
+                            }}
+                          />
+                        </AnimateInView>
+                      </li>
                     )}
                     {!isFullWidthRow &&
                       row.map((item, itemIndex) => {
@@ -172,31 +173,29 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                           delayPattern[itemIndex % delayPattern.length];
 
                         return (
-                          <AnimateInView
-                            key={item.uuid}
-                            animation="slideUp"
-                            delay={delay}
-                          >
-                            <TimelineItem
-                              {...item}
-                              id={item.uuid}
-                              aria-expanded={expandedUuid === item.uuid}
-                              aria-controls={item.anchor}
-                              isExpanded={expandedUuid === item.uuid}
-                              size={size}
-                              trapezoid={trapezoid}
-                              isHorizontal={isFullWidthRow}
-                              onClick={() =>
-                                handleToggle(item.uuid, item.anchor)
-                              }
-                              ref={(el) => {
-                                itemRefs.current[item.uuid] = el;
-                              }}
-                            />
-                          </AnimateInView>
+                          <li key={item.uuid} className="m-0 p-0">
+                            <AnimateInView animation="slideUp" delay={delay}>
+                              <TimelineItem
+                                {...item}
+                                id={item.uuid}
+                                aria-expanded={expandedUuid === item.uuid}
+                                aria-controls={item.anchor}
+                                isExpanded={expandedUuid === item.uuid}
+                                size={size}
+                                trapezoid={trapezoid}
+                                isHorizontal={isFullWidthRow}
+                                onClick={() =>
+                                  handleToggle(item.uuid, item.anchor)
+                                }
+                                ref={(el) => {
+                                  itemRefs.current[item.uuid] = el;
+                                }}
+                              />
+                            </AnimateInView>
+                          </li>
                         );
                       })}
-                  </div>
+                  </ul>
 
                   {expandedUuid &&
                     !isFullWidthRow &&

@@ -3,6 +3,7 @@ import { Heading, Text } from "../Typography";
 import { TimelineImage } from "./TimelineImage";
 import { HTMLAttributes, forwardRef } from "react";
 import { AnimateInView } from "../Animate";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 type TimelineItemFullProps = HTMLAttributes<HTMLButtonElement> & {
   heading: string;
@@ -62,7 +63,7 @@ export const TimelineItemFull = forwardRef<
             size={3}
             weight="normal"
             leading="normal"
-            className="stretched-link transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
+            className="transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
           >
             {heading}
           </Heading>
@@ -91,6 +92,15 @@ export const TimelineItemFull = forwardRef<
             </AnimateInView>
           )}
         </div>
+        {isExpanded && (
+          <div className="absolute top-0 left-0 group">
+            <span className="sr-only">Close {heading} details</span>
+            <XMarkIcon
+              width={50}
+              className="transition p-6 rounded-full text-fog-dark border-fog-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
+            />
+          </div>
+        )}
       </button>
     );
   },
