@@ -7,7 +7,7 @@ import { AnimateInView } from "../Animate";
 type TimelineItemFullProps = HTMLAttributes<HTMLButtonElement> & {
   heading: string;
   year: string;
-  body?: string;
+  body: string;
   image: string;
   alt: string;
   trapezoid?: "left" | "right";
@@ -77,8 +77,8 @@ export const TimelineItemFull = forwardRef<
           >
             {year}
           </Text>
-          {body && isExpanded && (
-            <AnimateInView animation="slideUp">
+          {isExpanded && (
+            <AnimateInView animation={"slideUp"}>
               <Text
                 font="dm-sans"
                 variant="big"
