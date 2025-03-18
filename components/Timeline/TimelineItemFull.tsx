@@ -78,7 +78,7 @@ export const TimelineItemFull = forwardRef<
             {year}
           </Text>
           {body && isExpanded && (
-            <AnimateInView delay={1} animation="slideUp">
+            <AnimateInView animation="slideUp">
               <Text
                 font="dm-sans"
                 variant="big"
