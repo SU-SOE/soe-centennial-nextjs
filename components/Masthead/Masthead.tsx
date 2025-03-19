@@ -23,7 +23,7 @@ import { FlexBox } from "@/components/FlexBox";
 import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
-// import { MainNav } from "@/components/MainNav";
+import { MainNav } from "@/components/MainNav";
 import { Text } from "@/components/Typography";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
@@ -45,10 +45,9 @@ export const Masthead = ({
   className,
   ...props
 }: MastheadProps) => {
-  // TODO: Add back in for April launch in combination with <MainNav isLight={isLight} />
-  //  const isLight = !(
-  //   isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
-  // );
+  const isLight = !(
+    isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
+  );
 
   return (
     <header
@@ -71,7 +70,7 @@ export const Masthead = ({
             font="dm-sans"
             size="small"
             className={cnb(
-              "ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220",
+              "md:ml-20 md:pl-20 md:py-10 md:border-l-2 md:border-digital-red-xlight max-w-220",
               { "text-white": isOverlap && isBgDark },
             )}
             mb="0"
@@ -82,7 +81,7 @@ export const Masthead = ({
           </Text>
         </div>
         <FlexBox alignItems="center" className={styles.flexbox}>
-          {mainNav}
+          <MainNav isLight={isLight} />
         </FlexBox>
       </FlexBox>
     </header>

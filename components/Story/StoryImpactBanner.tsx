@@ -88,7 +88,7 @@ export const StoryImpactBanner = ({
         width="site"
         pt={9}
         pb={pb}
-        className="relative"
+        className="relative pt-150 md:rs-pt-9"
       >
         {hasBgImage && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
@@ -121,7 +121,8 @@ export const StoryImpactBanner = ({
           <div
             className={cnb("flex flex-col text-center rs-mb-8 rs-mt-7", {
               "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isHorizontal,
-              "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0": !isHorizontal,
+              "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
+                !isHorizontal,
             })}
           >
             <Heading as="h1" size={6} weight="normal" mb="none">
