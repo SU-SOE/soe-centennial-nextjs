@@ -124,7 +124,7 @@ export const StoryImpactBanner = ({
               "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0": !isHorizontal,
             })}
           >
-            <Heading size={6} weight="normal" mb="none">
+            <Heading as="h1" size={6} weight="normal" mb="none">
               {heading}
             </Heading>
             {superhead && (
