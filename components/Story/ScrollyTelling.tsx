@@ -1,18 +1,3 @@
-import { AnimateInView } from "@/components/Animate";
-import { Container } from "@/components/Container";
-import { Heading, Text, type HeadingType } from "@/components/Typography";
-import Image from "next/image";
-
-type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
-  heading?: string;
-  headingLevel?: HeadingType;
-  subheading?: string;
-  content?: React.ReactNode;
-  caption?: React.ReactNode;
-  bgImageSrc: string;
-  bgImageAlt?: string;
-};
-
 /**
  * Scrollytelling component renders a full-width section with a background image
  * and optional heading, subheading, caption, and children content. The background
@@ -26,6 +11,7 @@ type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
  * @param {string} props.bgImageSrc - The source URL of the background image.
  * @param {string} props.bgImageAlt - The alt text for the background image.
  * @param {React.ReactNode} props.children - The content to be displayed within the section.
+ * @param {boolean} props.isBlur - Whether to apply a blur effect to the background image.
  * @param {Object} props - Additional props to be passed to the section element.
  *
  * @returns {JSX.Element} The rendered Scrollytelling component.
@@ -37,18 +23,37 @@ type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
  *   caption="This is a caption"
  *   bgImageSrc="/path/to/image.jpg"
  *   bgImageAlt="Description of the image"
+ *   isBlur={true}
  * >
  *   <p>Your content here</p>
  * </Scrollytelling>
  */
+import { AnimateInView } from "@/components/Animate";
+import { Container } from "@/components/Container";
+import { Heading, Text, type HeadingType } from "@/components/Typography";
+import { cnb } from "cnbuilder";
+import Image from "next/image";
+
+type ScrollytellingProps = React.HTMLAttributes<HTMLDivElement> & {
+  heading?: string;
+  headingLevel?: HeadingType;
+  subheading?: string;
+  content?: React.ReactNode;
+  caption?: React.ReactNode;
+  isBlur?: boolean;
+  bgImageSrc: string;
+  bgImageAlt?: string;
+};
+
 export const Scrollytelling = ({
   heading,
   headingLevel = "h2",
   subheading,
+  children,
   caption,
+  isBlur,
   bgImageSrc,
   bgImageAlt,
-  children,
   ...props
 }: ScrollytellingProps) => {
   return (
@@ -66,9 +71,14 @@ export const Scrollytelling = ({
             height={1200}
             className="absolute size-full object-cover top-0 left-0 z-0"
           />
-          <div className="absolute size-full top-0 left-0 z-0 bg-fog-light/80" />
+          <div
+            className={cnb(
+              "absolute size-full top-0 left-0 z-0 bg-fog-light/80",
+              isBlur && " backdrop-blur-sm",
+            )}
+          />
         </div>
-        <div className="relative z-10 cc text-stone-dark rs-py-10">
+        <div className="relative z-10 cc text-stone-dark rs-py-10 -mt-[90vh]">
           <div className="w-full mx-auto md:w-2/3 xl:w-1/2">
             {(heading || subheading) && (
               <AnimateInView

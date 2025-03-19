@@ -8,6 +8,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { Quote } from "@/components/Quote";
 import {
   Footnotes,
+  FootnotesList,
   StoryCard,
   StoryImpactBanner,
   StorySidebar,
@@ -212,7 +213,12 @@ export default function page() {
 
   return (
     <Container as="article" width="full">
-      <Masthead logoColor="white-red" isOverlap mainNav={<MainNav />} />
+      <Masthead
+        logoColor="white-red"
+        isOverlap
+        isBgDark
+        mainNav={<MainNav />}
+      />
       <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"
@@ -222,12 +228,10 @@ export default function page() {
         byline="by Jess Alvarenga"
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/terman_uv6swj_jir40s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        alt=""
       />
       <OneCol>
-        <Text
-          variant="overview"
-          footnoteRefs={[{ id: "footnote1", number: 1 }]}
-        >
+        <Text variant="overview">
           Samuel Morris recommended Frederick Terman to be his successor as dean
           of the School of Engineering. Terman, on leave from Stanford at the
           time, had been serving since 1942 in a wartime appointment as head of
@@ -235,6 +239,7 @@ export default function page() {
           throughout the war, Terman was anticipating a period after the war he
           believed would be defined by unprecedented technological advancement
           led by engineers.
+          <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} />
         </Text>
       </OneCol>
       <TwoCol isSidebar>
@@ -244,11 +249,12 @@ export default function page() {
             Tresidder named Terman the third dean of the Stanford School of
             Engineering, with a strong endorsement from the engineering faculty.
           </Text>
-          <Text footnoteRefs={[{ id: "footnote2", number: 2 }]}>
+          <Text>
             “Dr. Terman’s scholarly contributions in the field of electrical
             engineering and his administration of one of America’s largest war
             research projects place him among the outstanding engineers in the
             country,” Tresidder said, announcing Terman’s appointment.
+            <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
           </Text>
           <Text>
             Hugh H. Skilling, acting head of electric engineering, served for a
@@ -539,7 +545,6 @@ scores on the entrance exams.”(12)"
       <Container>
         <MediaCaptionImage
           isParallax
-          isLarge
           rounded
           animation="fadeIn"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
@@ -688,7 +693,7 @@ scores on the entrance exams.”(12)"
       </OneCol>
       <Container mt={4} mb={7}>
         <OneCol>
-          <Footnotes footnotes={footnotes} />
+          <FootnotesList footnotes={footnotes} />
         </OneCol>
       </Container>
       <ExploreMore

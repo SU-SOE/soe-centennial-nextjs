@@ -1,16 +1,36 @@
+/**
+ * Props for the Masthead component.
+ *
+ * @typedef {Object} MastheadProps
+ * @property {"default" | "white" | "white-red"} [logoColor] - The color of the logo.
+ * @property {boolean} [isOverlap=false] - Whether the masthead overlaps content.
+ * @property {boolean} [navLight] - Whether the navigation is light.
+ * @property {boolean} [isBgDark=false] - Whether the background is dark.
+ * @property {styles.BgColorType} [bgColor="none"] - The background color type.
+ * @property {React.ReactNode} [mainNav] - The main navigation component.
+ * @property {string} [className] - Additional class names for the masthead.
+ */
+
+/**
+ * Masthead component for displaying the header section of the page.
+ *
+ * @param {MastheadProps} props - The props for the Masthead component.
+ * @returns {JSX.Element} The rendered Masthead component.
+ */
 import { HTMLAttributes } from "react";
 import { cnb } from "cnbuilder";
 import { FlexBox } from "@/components/FlexBox";
 import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
-// import { MainNav } from "@/components/MainNav";
+import { MainNav } from "@/components/MainNav";
 import { Text } from "@/components/Typography";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
   logoColor?: "default" | "white" | "white-red";
   isOverlap?: boolean;
   navLight?: boolean;
+  isBgDark?: boolean;
   bgColor?: styles.BgColorType;
   mainNav?: React.ReactNode;
 };
@@ -18,16 +38,16 @@ export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
 export const Masthead = ({
   logoColor,
   isOverlap = false,
+  isBgDark = false,
   bgColor = "none",
   mainNav,
   navLight,
   className,
   ...props
 }: MastheadProps) => {
-  // TODO: Add back in for April launch in combination with <MainNav isLight={isLight} />
-  //  const isLight = !(
-  //   isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
-  // );
+  const isLight = !(
+    isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
+  );
 
   return (
     <header
@@ -49,7 +69,10 @@ export const Masthead = ({
           <Text
             font="dm-sans"
             size="small"
-            className="ml-20 pl-20 py-10 border-l-2 border-digital-red-xlight max-w-220"
+            className={cnb(
+              "md:ml-20 md:pl-20 md:py-10 md:border-l-2 md:border-digital-red-xlight max-w-220",
+              { "text-white": isOverlap && isBgDark },
+            )}
             mb="0"
             leading="tight"
             weight="medium"
@@ -58,7 +81,7 @@ export const Masthead = ({
           </Text>
         </div>
         <FlexBox alignItems="center" className={styles.flexbox}>
-          {mainNav}
+          <MainNav isLight={isLight} />
         </FlexBox>
       </FlexBox>
     </header>
