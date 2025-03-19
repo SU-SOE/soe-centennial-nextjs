@@ -13,7 +13,14 @@ export type TimelineItem = {
 };
 
 export async function loadTimelineData(): Promise<TimelineItem[]> {
-  const filePath = path.join(process.cwd(), "data/timeline.json");
+  const isPreviewOrDev =
+    process.env.VERCEL_ENV === "preview" ||
+    process.env.NODE_ENV === "development";
+
+  const filePath = path.join(
+    process.cwd(),
+    isPreviewOrDev ? "data/timeline-backup.json" : "data/timeline.json",
+  );
 
   try {
     const fileContents = fs.readFileSync(filePath, "utf8");
