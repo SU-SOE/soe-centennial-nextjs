@@ -145,7 +145,6 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
         {/* Thumbnail Navigation */}
         <ul
           className="flex flex-wrap gap-10 overflow-x-auto mt-18 list-none"
-          role="group"
           aria-label="Thumbnail navigation"
         >
           {images.map((image, index) => (
