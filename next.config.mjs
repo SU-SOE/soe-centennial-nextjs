@@ -27,12 +27,6 @@ const nextConfig = {
       },
     ],
   },
-  webpack(config) {
-    if (!isProduction) {
-      config.resolve.alias["app/timeline/page"] = false; // Prevents Next.js from including it
-    }
-    return config;
-  },
   async redirects() {
     if (!isProduction) {
       return []; // No redirects in non-production environments

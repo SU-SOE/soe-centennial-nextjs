@@ -21,6 +21,10 @@ export const metadata: Metadata = {
 };
 
 const TimelinePage = async () => {
+  // if (process.env.VERCEL_ENV !== "production") {
+  //   return null; // Render nothing in development
+  // }
+
   const timelineData = await loadTimelineData();
   return (
     <div>
