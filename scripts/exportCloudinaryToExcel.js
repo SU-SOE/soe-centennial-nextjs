@@ -12,7 +12,7 @@ const API_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image/t
 async function fetchImages(nextCursor = null, allImages = []) {
   try {
     const auth = { username: API_KEY, password: API_SECRET };
-    const params = nextCursor ? { next_cursor: nextCursor, max_results: 10, } : {};
+    const params = nextCursor ? { next_cursor: nextCursor, } : {};
     const response = await axios.get(API_URL, { auth, params });
 console.count("timeline item:")
     allImages.push(...response.data.resources);
