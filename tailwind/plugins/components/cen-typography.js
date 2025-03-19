@@ -6,7 +6,7 @@ module.exports = function () {
     const components = {
       '.overview': {
         ...theme('decanter.typography.type1'),
-        lineHeight: theme('lineHeight.DEFAULT'),
+        lineHeight: '1.9em',
         fontWeight: theme('fontWeight.normal'),
       },
       '.cen-big-paragraph': {

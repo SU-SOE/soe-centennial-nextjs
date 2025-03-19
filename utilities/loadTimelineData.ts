@@ -8,6 +8,7 @@ export type TimelineItem = {
   body: string;
   anchor: string;
   image: string;
+  alt: string;
   uuid: string;
 };
 
@@ -63,12 +64,17 @@ function isTimelineItem(
   data: unknown,
 ): data is Omit<TimelineItem, "uuid" | "anchor"> {
   if (typeof data !== "object" || data === null) return false;
-
   const item = data as Partial<TimelineItem>;
-  return (
+  const isValid =
     typeof item.year === "string" &&
     typeof item.heading === "string" &&
     typeof item.body === "string" &&
-    typeof item.image === "string"
-  );
+    typeof item.image === "string" &&
+    typeof item.alt === "string";
+
+  if (!isValid) {
+    console.warn("Invalid timeline item found:", item);
+  }
+
+  return isValid;
 }

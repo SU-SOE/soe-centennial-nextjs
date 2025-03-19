@@ -1,3 +1,28 @@
+/**
+ * StoryGrid component that displays a grid of stories with optional background image and color.
+ *
+ * @param {React.ReactNode} children - The content to be displayed inside the grid.
+ * @param {BgColorType} [bgColor] - The background color type for the container.
+ * @param {boolean} [hasBgImage=false] - Flag to determine if a background image should be displayed.
+ * @param {boolean} [isImgOffset] - Flag to determine if the image should have an offset.
+ * @param {string} [src] - The source URL of the background image.
+ * @param {string} [alt] - The alt text for the background image.
+ * @param {HTMLAttributes<HTMLDivElement>} props - Additional HTML attributes for the container.
+ *
+ * @example
+ * ```tsx
+ * <StoryGrid
+ *   bgColor="primary"
+ *   hasBgImage={true}
+ *   isImgOffset={true}
+ *   src="/path/to/image.jpg"
+ *   alt="Background Image"
+ * >
+ *   <div>Story 1</div>
+ *   <div>Story 2</div>
+ * </StoryGrid>
+ * ```
+ */
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
 import Image from "next/image";
@@ -8,6 +33,7 @@ type StoryGridProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
   bgColor?: BgColorType;
   hasBgImage?: boolean;
+  isImgOffset?: boolean;
   src?: string;
   alt?: string;
 };
@@ -16,13 +42,14 @@ export const StoryGrid = ({
   children,
   bgColor,
   hasBgImage = false,
+  isImgOffset,
   src,
   alt,
   ...props
 }: StoryGridProps) => {
   return (
-    <Container {...props} width="full" mb={6} className="relative">
-      <Container bgColor={bgColor} width="site" pt={9} pb={9}>
+    <Container {...props} width="full" mb={5} className="relative">
+      <Container bgColor={bgColor} width="site" pt={7} pb={7}>
         {hasBgImage && src && (
           <div className="h-full w-full absolute top-0 left-0 z-0">
             <Image
@@ -35,7 +62,7 @@ export const StoryGrid = ({
             />
             <div
               className={cnb(
-                "absolute h-full w-full bg-opacity-80 z-10",
+                "absolute h-full w-full bg-opacity-80 z-10 backdrop-blur-sm",
                 bgColor ? styles.bgColors[bgColor] : "",
               )}
             />
@@ -43,7 +70,10 @@ export const StoryGrid = ({
         )}
         <Container
           width="full"
-          className="relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8 *:mb-0"
+          className={cnb(
+            "relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 *:mb-0",
+            isImgOffset && "lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8",
+          )}
         >
           {children}
         </Container>

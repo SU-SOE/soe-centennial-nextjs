@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * ScrollyBubble component
  *
@@ -15,6 +13,8 @@ import React from "react";
  *   <Text>Your content here</Text>
  * </ScrollyBubble>
  */
+import React from "react";
+
 export const ScrollyBubble = ({
   children,
 }: React.HTMLAttributes<HTMLDivElement>) => {

@@ -13,6 +13,7 @@ type TimelineDetailsProps = HTMLAttributes<HTMLDivElement> & {
   href?: string;
   body: string;
   image: string;
+  alt: string;
   align?: "right" | "left";
   width?: "full" | "narrow";
   isSelected?: boolean;
@@ -25,6 +26,7 @@ export const TimelineDetails = ({
   href,
   body,
   image,
+  alt,
   align = "left",
   isSelected,
   onClose,
@@ -96,7 +98,7 @@ export const TimelineDetails = ({
         )}
       >
         <AnimateInView duration={1} delay={0.8} animation="slideInFromLeft">
-          <TimelineImage size="full" src={image} />
+          <TimelineImage size="full" src={image} alt={alt} />
         </AnimateInView>
       </div>
       <button className="absolute top-0 right-0 group" onClick={onClose}>

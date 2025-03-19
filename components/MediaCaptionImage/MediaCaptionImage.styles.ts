@@ -81,19 +81,17 @@ export const figure = (isPortriat: boolean) =>
     "gap-20 sm:flex-row lg:flex-col": isPortriat,
   });
 
-export const imageWrapper = (isPortriat: boolean) =>
-  cnb("relative overflow-hidden shrink-0 ", {
+export const imageWrapper = (isPortriat: boolean, rounded: boolean) =>
+  cnb("relative overflow-hidden", {
     "w-100 md:w-180 lg:w-full h-100 md:h-180 lg:h-full": isPortriat,
     "w-full h-full": !isPortriat,
+    "rounded-2xl": rounded,
   });
 
-export const innerImageWrapper = (isParallax: boolean) =>
-  cnb("w-full", isParallax ? "h-[calc(100%_+_12rem)] -mt-30" : "h-full");
-
-export const image = (isLarge: boolean) =>
+export const image = (isParallax: boolean) =>
   cnb(
-    "relative w-full object-cover h-full",
-    isLarge ? "max-w-1500" : "max-w-800",
+    "relative w-full object-cover object-center",
+    isParallax ? "h-[calc(100%_+_12rem)] -mt-30" : "h-full",
   );
 
 export const captionWrapper = "mt-0";

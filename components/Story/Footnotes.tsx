@@ -1,59 +1,52 @@
-import { Link } from "@/components/Cta";
-import FootnotesLineart from "@/components/images/footnotes-lineart";
-import { Heading, Text } from "@/components/Typography";
-import { ArrowUturnLeftIcon } from "@heroicons/react/24/outline";
+/**
+ * Represents a reference to a footnote with an ID and a number.
+ */
+type FootnoteRef = { id: string; number: number };
 
 /**
- * Props for the Footnotes component, which displays a list of footnotes.
+ * Props for the Footnotes component.
+ *
+ * @property {FootnoteRef[]} [footnoteRefs] - An optional array of footnote references.
  */
-type FootnotesProps = {
-  footnotes: {
-    id: string; // Unique identifier for the footnote (must match the reference ID in the text)
-    text: string; // The content of the footnote
-    number: number; // The footnote number (e.g., 1, 2, 3)
-    sourceLink?: string; // Optional external source link
-  }[];
+export type FootnotesProps = {
+  footnoteRefs?: FootnoteRef[];
 };
 
 /**
- * The `Footnotes` component displays a list of references linked from the text.
- * Each footnote entry includes an ID, text, and an optional source link.
+ * A React component that renders a list of footnotes as superscript links.
+ *
+ * @param {FootnotesProps} props - The props for the component.
+ * @returns {JSX.Element | null} The rendered footnotes or null if no footnotes are provided.
+ *
+ * @example
+ * ```tsx
+ * const footnotes = [
+ *   { id: 'footnote-1', number: 1 },
+ *   { id: 'footnote-2', number: 2 },
+ * ];
+ *
+ * <Footnotes footnoteRefs={footnotes} />
+ * ```
  */
-export const Footnotes = ({ footnotes }: FootnotesProps) => {
+export const Footnotes = ({ footnoteRefs }: FootnotesProps) => {
+  if (!footnoteRefs) return null;
+
   return (
-    <footer>
-      <FootnotesLineart />
-      <div className="rs-mx-1">
-        <Heading size={1} weight="normal" className="mt-10" mb={1}>
-          Footnotes
-        </Heading>
-        <Text as="ol" className=" m-0 p-0">
-          {footnotes.map(({ id, text, number, sourceLink }) => (
-            <li key={id} id={id}>
-              <p className="mb-0">
-                {sourceLink && (
-                  <Link
-                    href={sourceLink}
-                    className="font-normal decoration-auto text-stone-dark decoration-stone-dark hocus:text-digital-red"
-                  >
-                    {text}
-                  </Link>
-                )}
-                {!sourceLink && text}
-                <a
-                  href={`#ref-${id}`}
-                  role="doc-backlink"
-                  className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red-xlight border-b-2 border-transparent hocus:border-digital-red-xlight"
-                  aria-label={`Back to ${number} in text`}
-                  title={`Back to ${number} in text`}
-                >
-                  <ArrowUturnLeftIcon width={20} />
-                </a>
-              </p>
-            </li>
-          ))}
-        </Text>
-      </div>
-    </footer>
+    <>
+      {footnoteRefs.map(({ id, number }) => (
+        <sup key={id} className="top-0 ml-03em text-inherit font-inherit">
+          <a
+            href={`#${id}`}
+            id={`ref-${id}`}
+            rel="footnote"
+            aria-label={`To footnote ${number}`}
+            title={`To footnote ${number}`}
+            className="font-normal text-stone-dark no-underline hocus:underline hocus:text-digital-red-xlight"
+          >
+            ({number})
+          </a>
+        </sup>
+      ))}
+    </>
   );
 };

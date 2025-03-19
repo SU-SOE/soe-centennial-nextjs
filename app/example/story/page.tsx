@@ -57,6 +57,7 @@ const ExampleStoryPage = async () => {
         byline="by Jess Alvarenga"
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        alt={""}
       />
       <TwoCol isSidebar>
         <Container width="wysiwyg">
@@ -168,6 +169,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           hasBgImage
@@ -178,6 +180,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           bgColor="red"
@@ -187,6 +190,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           hasBgImage
@@ -197,6 +201,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           heading="Exploring the reengineering of immune cells"
@@ -205,6 +210,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           isHorizontal
@@ -215,6 +221,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           isHorizontal
@@ -226,6 +233,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           isHorizontal
@@ -236,6 +244,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           isHorizontal
@@ -247,6 +256,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           isHorizontal
@@ -256,6 +266,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
       </div>
       <div id="example-storycard">
