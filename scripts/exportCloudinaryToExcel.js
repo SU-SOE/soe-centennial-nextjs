@@ -7,14 +7,14 @@ dotenv.config();
 const CLOUD_NAME = process.env.CLOUD_NAME;
 const API_KEY = process.env.API_KEY;
 const API_SECRET = process.env.API_SECRET;
-const API_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image?max_results=50`;
+const API_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image/tags/timeline`;
 
 async function fetchImages(nextCursor = null, allImages = []) {
   try {
     const auth = { username: API_KEY, password: API_SECRET };
-    const params = nextCursor ? { next_cursor: nextCursor } : {};
+    const params = nextCursor ? { next_cursor: nextCursor, max_results: 10, } : {};
     const response = await axios.get(API_URL, { auth, params });
-
+console.count("timeline item:")
     allImages.push(...response.data.resources);
 
     if (response.data.next_cursor) {

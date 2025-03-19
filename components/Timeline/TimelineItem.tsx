@@ -53,7 +53,8 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
         className={cnb(
           "group flex flex-col relative",
           {
-            "md:flex-row gap w-full justify-center items-center": isHorizontal,
+            "md:flex-row gap w-full justify-center items-center rs-mb-6":
+              isHorizontal,
           },
           !isHorizontal && imageSize,
           className,

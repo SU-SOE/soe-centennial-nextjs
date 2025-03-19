@@ -3,8 +3,6 @@ import { ShapeAnimation } from "@/components/ShapeAnimation";
 import { Masthead } from "@/components/Masthead";
 import { FeatureHero } from "@/components/Banner";
 import { PageTitle } from "@/components/PageTitle";
-import TimelineList from "@/components/Timeline/TimelineList";
-import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/Story/GradientBanner";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
@@ -21,7 +19,6 @@ export const metadata: Metadata = {
 };
 
 const ExamplePage = async () => {
-  const timelineData = await loadTimelineData();
   return (
     <div>
       <Masthead />
@@ -226,7 +223,6 @@ const ExamplePage = async () => {
           </Text>
         </div>
       </GradientBanner>
-      <TimelineList timelineData={timelineData} />
       <div id="example-quote">
         <Quote
           teaser="We each get a chance to choose our own path..."
