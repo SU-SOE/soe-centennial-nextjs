@@ -59,8 +59,9 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   caption?: string;
   hasBgImage?: boolean;
   isHorizontal?: boolean;
+  bgImageSrc?: string;
   src: string;
-  alt?: string;
+  alt: string;
 };
 
 export const StoryImpactBanner = ({
@@ -73,6 +74,7 @@ export const StoryImpactBanner = ({
   bgColor = "white",
   caption,
   hasBgImage = false,
+  bgImageSrc,
   isHorizontal = false,
   src,
   alt,
@@ -92,8 +94,8 @@ export const StoryImpactBanner = ({
           <div className="h-full w-full absolute top-0 left-0 z-0">
             <Image
               className="ed11y-ignore object-cover z-0"
-              src={src}
-              alt={alt || ""}
+              src={bgImageSrc || src}
+              alt=""
               loading={"lazy"}
               fill
               sizes="100vw"
@@ -157,7 +159,7 @@ export const StoryImpactBanner = ({
                 { "aspect-[1/1] md:aspect-[2/3]": !isHorizontal },
               )}
             >
-              <Image src={src} alt={alt || ""} fill className="object-cover" />
+              <Image src={src} alt={alt} fill className="object-cover" />
             </div>
             {bgColor === "white" && (
               <figcaption className="mt-13">

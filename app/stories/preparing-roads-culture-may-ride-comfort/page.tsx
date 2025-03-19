@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
     images: [
       {
-        url: "[link]",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742342467/Ryan-High-Voltage-Laboratory_927_tighter_Chapter-feature-image_mccqgm.jpg",
         alt: "Historic Stanford engineering class in session, circa 1925",
       },
     ],
@@ -48,7 +48,9 @@ export const metadata: Metadata = {
     title: "Preparing Roads over which Culture May Ride in Comfort",
     description:
       "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
-    images: ["[link]"],
+    images: [
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742342467/Ryan-High-Voltage-Laboratory_927_tighter_Chapter-feature-image_mccqgm.jpg",
+    ],
   },
 };
 
@@ -186,7 +188,8 @@ export default function page() {
         chapter="Decade 1"
         heading="“Preparing Roads over which Culture May Ride in Comfort”"
         dek="1925 – 1934"
-        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
+        bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
+        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742342467/Ryan-High-Voltage-Laboratory_927_tighter_Chapter-feature-image_mccqgm.jpg"
         alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
         caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
       />
@@ -300,6 +303,9 @@ export default function page() {
       </OneCol>
       <StoryGrid bgColor="blue">
         <MediaCaptionImage
+          animation="fadeIn"
+          delay={0.5}
+          duration={1}
           rounded
           isCaptionInset
           aspectRatio="3x4"
@@ -308,6 +314,9 @@ export default function page() {
           caption="This undated photograph shows a miniature ore-treating plant in the mining lab. Stanford’s Department of Mining and Metallurgy was created in 1919 from the Geology and Mining Department, one of Stanford’s oldest departments, although the physics of metals had been studied since 1903. Study of metals would be the department’s main subject for nearly half a century. | Berton W. Crandall/Hoover Institution Library & Archives."
         />
         <MediaCaptionImage
+          animation="fadeIn"
+          delay={0.2}
+          duration={1}
           rounded
           isCaptionInset
           aspectRatio="4x3"
@@ -348,9 +357,9 @@ export default function page() {
           rounded
           animation="fadeIn"
           aspectRatio="16x9"
-          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
+          imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742343299/engineering-corner-1910_1915_aoicg9.jpg"
           alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
-          caption=" @TODO Replace placeholder image — The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
+          caption="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
         />
       </Container>
       <OneCol>
@@ -385,6 +394,9 @@ export default function page() {
       >
         <div>
           <MediaCaptionImage
+            animation="fadeIn"
+            delay={0.2}
+            duration={1}
             rounded
             isCaptionInset
             aspectRatio="4x3"
@@ -393,6 +405,9 @@ export default function page() {
             caption="Aerial view of the Stanford campus, facing south, circa 1925. | Berton W. Crandall photographs, Hoover Institution Library & Archives."
           />
           <MediaCaptionImage
+            animation="fadeIn"
+            delay={0.5}
+            duration={1}
             rounded
             isCaptionInset
             aspectRatio="4x3"
@@ -402,6 +417,9 @@ export default function page() {
           />
         </div>
         <MediaCaptionImage
+          animation="fadeIn"
+          delay={0.3}
+          duration={1}
           rounded
           isCaptionInset
           aspectRatio="4x3"

@@ -228,6 +228,7 @@ export default function page() {
         byline="by Jess Alvarenga"
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/terman_uv6swj_jir40s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        alt=""
       />
       <OneCol>
         <Text variant="overview">
