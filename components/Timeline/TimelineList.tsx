@@ -100,7 +100,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
   };
 
   return (
-    <div className="rs-pb-5">
+    <article className="rs-pb-5">
       <Container as="section" width="site" py={8}>
         <Heading leading="tight" size={6} as="h1" className="flex flex-col">
           100 years
@@ -121,7 +121,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
           <Text variant="big">Loading Timeline Items...</Text>
         </div>
       ) : (
-        <div>
+        <section>
           <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
             {rows.map((row, rowIndex) => {
               const isFullWidthRow = (rowIndex + 1) % 3 === 0;
@@ -267,9 +267,9 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
               );
             })}
           </div>
-        </div>
+        </section>
       )}
-    </div>
+    </article>
   );
 };
 

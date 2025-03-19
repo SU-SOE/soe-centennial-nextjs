@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
-  title: "Timeline - 100 Years of Impact",
+  title: "Timeline - 100 Years of Impact | 100 Years of Stanford Engineering",
   description:
     "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
   keywords: [

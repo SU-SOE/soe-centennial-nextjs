@@ -22,7 +22,8 @@ import { ScrollyBubble } from "@/components/Story/ScrollyBubble";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
-  title: "Preparing Roads over which Culture May Ride in Comfort",
+  title:
+    "Preparing Roads over which Culture May Ride in Comfort | 100 Years of Stanford Engineering",
   description:
     "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
   keywords: [
