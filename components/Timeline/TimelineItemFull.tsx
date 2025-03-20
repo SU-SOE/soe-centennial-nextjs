@@ -42,7 +42,7 @@ export const TimelineItemFull = forwardRef<
         ref={ref}
         type="button"
         className={cnb(
-          "group flex flex-col relative md:flex-row gap w-full justify-center items-center rs-mb-6",
+          "group flex flex-col relative md:flex-row gap w-full items-start justify-center lg:items-center rs-mb-6",
           className,
         )}
         onClick={onClick}
@@ -56,7 +56,7 @@ export const TimelineItemFull = forwardRef<
           isExpanded={isExpanded}
           className="w-1/2 h-full order-first md:order-last"
         />
-        <div className="flex flex-col items-start md:rs-px-1 w-1/2">
+        <div className="flex flex-col items-start rs-pt-2 lg:rs-px-1 w-1/2">
           <Heading
             align="left"
             font="dm-sans"
