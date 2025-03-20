@@ -290,17 +290,16 @@ export default function page() {
           <BgImageWrapper
             hasBgImage
             bgColor="fog-light"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00018325_004_qe8vkf.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
           >
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00018325_004_qe8vkf.jpg"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
               alt=""
               caption="Type A klystron, 1937. The klystron was the first significantly powerful source of radio waves in the microwave range. As the foundational technology in the burgeoning microwave industry, it would be used in military radar detection, commercial air navigation, satellite communications,  high-energy particle accelerators, and other technologies. | Special Collections  & University Archives."
             />
           </BgImageWrapper>
-          {/* Fullwidth bg image here */}
           <TwoCol className="rs-mb-5">
             <div>
               <MediaCaptionImage
@@ -457,7 +456,7 @@ export default function page() {
             <MediaCaptionImage
               rounded
               aspectRatio="3x4"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906511/nz029jf0057_ar0nh3.jpg"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509511/nz029jf0057_optimized_eoovla.jpg"
               alt=""
               caption="William Hewlett and David Packard working together in their shop, circa 1942. | Special Collections & University Archives."
             />
