@@ -13,8 +13,7 @@ import {
   StoryImpactBanner,
   StorySidebar,
 } from "@/components/Story";
-import { ExploreMore } from "@/components/Story/ExploreMore";
-import { StoryGrid } from "@/components/Story/StoryGrid";
+import { ExploreMore, BgImageWrapper } from "@/components/Story/";
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
@@ -450,7 +449,8 @@ scores on the entrance exams.”(12)"
         />
       </Scrollytelling>
       <ImageGallery images={galleryImages} />
-      <StoryGrid
+      <BgImageWrapper
+        isTwoCol
         hasBgImage
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
         bgColor="stone-dark"
@@ -515,7 +515,7 @@ scores on the entrance exams.”(12)"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/felix-bloch_dg6ato_a4ybb7.jpg"
           caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
         />
-      </StoryGrid>
+      </BgImageWrapper>
       <OneCol>
         <Text>
           The Microwave Lab would exceed even Terman’s high expectations,
@@ -628,7 +628,7 @@ scores on the entrance exams.”(12)"
           />
         </div>
       </TwoCol>
-      <StoryGrid bgColor="blue">
+      <BgImageWrapper bgColor="blue" isTwoCol>
         <MediaCaptionImage
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
@@ -639,7 +639,7 @@ scores on the entrance exams.”(12)"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
-      </StoryGrid>
+      </BgImageWrapper>
       <OneCol>
         <Heading>Unleashing the Power of Computation</Heading>
         <Text>

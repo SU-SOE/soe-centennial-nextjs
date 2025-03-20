@@ -1,9 +1,10 @@
 /**
- * StoryGrid component that displays a grid of stories with optional background image and color.
+ * BgImageWrapper component that displays a grid of stories with optional background image and color.
  *
  * @param {React.ReactNode} children - The content to be displayed inside the grid.
  * @param {BgColorType} [bgColor] - The background color type for the container.
  * @param {boolean} [hasBgImage=false] - Flag to determine if a background image should be displayed.
+ * @param {boolean} [isTwoCol] - Flag to determine if the content should be displayed in two columns.
  * @param {boolean} [isImgOffset] - Flag to determine if the image should have an offset.
  * @param {string} [src] - The source URL of the background image.
  * @param {string} [alt] - The alt text for the background image.
@@ -11,16 +12,17 @@
  *
  * @example
  * ```tsx
- * <StoryGrid
+ * <BgImageWrapper
  *   bgColor="primary"
  *   hasBgImage={true}
  *   isImgOffset={true}
+ *   isTwoCol={true}
  *   src="/path/to/image.jpg"
  *   alt="Background Image"
  * >
  *   <div>Story 1</div>
  *   <div>Story 2</div>
- * </StoryGrid>
+ * </BgImageWrapper>
  * ```
  */
 import React, { HTMLAttributes } from "react";
@@ -29,24 +31,26 @@ import Image from "next/image";
 import { cnb } from "cnbuilder";
 import * as styles from "@/components/Container/Container.styles";
 
-type StoryGridProps = HTMLAttributes<HTMLDivElement> & {
+type BgImageWrapperProps = HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
   bgColor?: BgColorType;
   hasBgImage?: boolean;
   isImgOffset?: boolean;
+  isTwoCol?: boolean;
   src?: string;
   alt?: string;
 };
 
-export const StoryGrid = ({
+export const BgImageWrapper = ({
   children,
   bgColor,
   hasBgImage = false,
   isImgOffset,
+  isTwoCol,
   src,
   alt,
   ...props
-}: StoryGridProps) => {
+}: BgImageWrapperProps) => {
   return (
     <Container {...props} width="full" mb={5} className="relative">
       <Container bgColor={bgColor} width="site" pt={7} pb={7}>
@@ -71,7 +75,8 @@ export const StoryGrid = ({
         <Container
           width="full"
           className={cnb(
-            "relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-76 *:mb-0",
+            "relative z-50",
+            isTwoCol && "grid grid-cols-1 lg:grid-cols-2 gap-76 *:mb-0",
             isImgOffset && "lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8",
           )}
         >

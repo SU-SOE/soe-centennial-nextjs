@@ -10,15 +10,17 @@ import {
   StoryImpactBanner,
   StorySidebar,
 } from "@/components/Story";
-import { StoryGrid } from "@/components/Story/StoryGrid";
+import {
+  BgImageWrapper,
+  Scrollytelling,
+  ScrollyBubble,
+} from "@/components/Story";
 import { Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
 import { ImageGallery } from "@/components/ImageGallery";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { H2 } from "@/components/Typography/Header";
-import { Scrollytelling } from "@/components/Story/ScrollyTelling";
-import { ScrollyBubble } from "@/components/Story/ScrollyBubble";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -299,7 +301,7 @@ export default function page() {
               this day.
             </Text>
           </OneCol>
-          <StoryGrid bgColor="blue">
+          <BgImageWrapper bgColor="blue" isTwoCol>
             <MediaCaptionImage
               animation="fadeIn"
               delay={0.5}
@@ -322,7 +324,7 @@ export default function page() {
               alt="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement"
               caption="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement. Marx is seated in the center of the bottom row. | Courtesy Barbara Wallace."
             />
-          </StoryGrid>
+          </BgImageWrapper>
           <OneCol className="rs-mt-6 rs-mb-6">
             <Text>
               The committee’s focus on people applied not only to students but
@@ -386,7 +388,8 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
             </Text>
           </OneCol>
-          <StoryGrid
+          <BgImageWrapper
+            isTwoCol
             bgColor="fog-light"
             hasBgImage
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/campus_aerial_view_crandall_m0r1jy.jpg"
@@ -427,7 +430,7 @@ export default function page() {
               alt="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925"
               caption="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925. From left o right, the buildings today are the Frederick Emmons Terman Engineering Laboratory (500), the George Havas Engineering Building (520), and Mechanical Engineering (530). Also visible is the roof corner of what is today the Thomas F. Peterson Engineering Laboratory (550), home of the Hasso Plattner Institute of Design (d.school). | Berton W. Crandall photographs, Hoover Institution Library & Archives."
             />
-          </StoryGrid>
+          </BgImageWrapper>
           <OneCol>
             <Text>
               In their 1925 report, Wilbur’s faculty committee concurred:

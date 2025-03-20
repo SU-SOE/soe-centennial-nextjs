@@ -11,11 +11,15 @@ import {
 import { H2 } from "@/components/Typography/Header";
 import { Text } from "@/components/Typography";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
-import { StoryGrid } from "@/components/Story/StoryGrid";
-import { Scrollytelling } from "@/components/Story/ScrollyTelling";
-import { ScrollyBubble } from "@/components/Story/ScrollyBubble";
+import {
+  BgImageWrapper,
+  Scrollytelling,
+  ScrollyBubble,
+} from "@/components/Story/";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Metadata } from "next";
+import { HorizontalLineart } from "@/components/images/horizontal-lineart";
+import { ImageGallery } from "@/components/ImageGallery";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -52,6 +56,33 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+const galleryImages = [
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906512/00002098_0011_md0igf.jpg",
+    alt: "A group of men in suits gathered around a large electrical panel, discussing its features and functionality.",
+    caption:
+      "Professor William G. Hoover demonstrates equipment to engineering students in the Army Specialized Training Program at Stanford, 1943. While keeping up with their regular course loads and research responsibilities, many faculty worked demanding hours to train these students for war. | Special Collections & University Archives.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906499/00002390_0001_rnenz3.jpg",
+    alt: "Three men in a room, one seated fscing a board while two others run tests",
+    caption:
+      "A student soldier in Stanford’s Army Specialized Training Program manipulates a mock plane rudder control handle to keep scales “on the beam” in front of him as his chair is moved to simulate a plane in flight. | Special Collections & University Archives.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906503/00002098_0012_werh61.jpg",
+    alt: "Several men standing together, observing and interacting with a large machine in a workshop setting.",
+    caption:
+      "By 1944, more than half of the Army Specialized Training Program students at Stanford were in basic or advanced engineering. Thirteen hundred were taking basic engineering courses that included mathematics, chemistry, drawing, English, history, and geography. Four hundred fifty were advanced engineering students who, after completing the basics, went on to coursework in civil, mechanical, chemical, or electrical engineering. By comparison, at that time the school had only about one hundred graduate and upper-division civilian students specializing in engineering. | Special Collections & University Archives.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00002098_0003_z3b8uv.jpg",
+    alt: "Several men engaged in conversation around two tables, each table holds a large speakers.",
+    caption:
+      "Members of Stanford’s Army Specialized Training Program conduct  an electronics display outside the engineering buildings, January 1944. | Special Collections  & University Archives.",
+  },
+];
 
 const footnotes = [
   {
@@ -154,14 +185,14 @@ export default function page() {
             alt="A vintage black and white photograph depicting a diverse group of men and women gathered together posing for a photo."
             caption="Members of the Stanford Student Chapter of the American Society of Civil Engineers gather for a photo for the Stanford Quad yearbook, 1936. Charles Marx is seated sixth from right. Women were still a significant minority in engineering: the two women pictured are students Mary DeF. Atkins (sixth from left) and Margaret Woolverton (seventh from left), both seniors. | Special Collections & University Archives."
           />
-          <div className="max-w-1500 w-full cc">
+          <div className="max-w-1500 w-full cc rs-mb-5">
             <Quote
               width="wide"
               teaser="Relations with industry are beneficial to the university and to industry and most helpful to its program of engineering education and research.”"
               source="— Samuel B. Morris, 1939"
             />
           </div>
-          <TwoCol className="rs-mt-3">
+          <TwoCol className="rs-my-5">
             <OneCol>
               <H2>1935 – 1944</H2>
               <Text variant="overview">
@@ -209,7 +240,7 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               During Morris’s tenure, which bridged the period between the Great
               Depression and World War II, course schedules and the curriculum
@@ -220,7 +251,7 @@ export default function page() {
               Army Specialized Training Program.
             </Text>
             <H2>Ideas and Innovations</H2>
-            <Text>
+            <Text mb="0">
               In 1937, Frederick E. Terman became head of the Department of
               Electrical Engineering. Like Morris, Terman was a Stanford alum,
               earning his BA in chemistry in 1920 and his master’s in electrical
@@ -237,9 +268,9 @@ export default function page() {
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/kn908nr7305_ffxjaj.jpg"
             alt="Portriat of Frederick Terman"
             caption="Frederick Terman, 1938. Terman became head of the Department of Electrical Engineering in 1937. He served as dean of the School of Engineering from 1944 to 1958 and as provost of the university from 1955 to 1965. | Special Collections & University Archives."
-            className="max-w-800 mx-auto"
+            className="max-w-800 mx-auto rs-mb-5"
           />
-          <OneCol>
+          <OneCol className="rs-mb-6">
             <Text>
               Terman began a collaboration with William Hansen, a colleague in
               the Stanford Physics Department. Hansen’s work on radiation fields
@@ -256,8 +287,21 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote4", number: 4 }]} />
             </Text>
           </OneCol>
+          <BgImageWrapper
+            hasBgImage
+            bgColor="fog-light"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00018325_004_qe8vkf.jpg"
+          >
+            <MediaCaptionImage
+              rounded
+              aspectRatio="4x3"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00018325_004_qe8vkf.jpg"
+              alt=""
+              caption="Type A klystron, 1937. The klystron was the first significantly powerful source of radio waves in the microwave range. As the foundational technology in the burgeoning microwave industry, it would be used in military radar detection, commercial air navigation, satellite communications,  high-energy particle accelerators, and other technologies. | Special Collections  & University Archives."
+            />
+          </BgImageWrapper>
           {/* Fullwidth bg image here */}
-          <StoryGrid>
+          <TwoCol className="rs-mb-5">
             <div>
               <MediaCaptionImage
                 rounded
@@ -281,8 +325,8 @@ export default function page() {
               alt=""
               caption="Associate Professor William Hansen tests a unit of the  klystron in 1939. The klystron was based on his earlier invention,  the “rhumbatron.” | Special Collections & University Archives."
             />
-          </StoryGrid>
-          <OneCol>
+          </TwoCol>
+          <OneCol className="rs-mb-2">
             <Text>
               Terman worked to attract funding, build up research facilities,
               and initiate research in ionospheric physics and electron-tube
@@ -315,7 +359,9 @@ export default function page() {
               the globe.
             </Text>
           </OneCol>
-          {/* Horizontal Line Art */}
+          <div className="flex w-full justify-start">
+            <HorizontalLineart lineartType="A" />
+          </div>
           <OneCol>
             <Text>
               In 1939, the Varian brothers’ success was followed by the
@@ -339,7 +385,7 @@ export default function page() {
               make the company a household name.
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
@@ -355,7 +401,7 @@ export default function page() {
               caption="William Hewlett and David Packard working together in their shop, circa 1942. | Special Collections & University Archives."
             />
           </TwoCol>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               Still in the early years of a legendary tenure, Terman would later
               become dean of the School of Engineering (1944–1958) and provost
@@ -381,7 +427,10 @@ export default function page() {
               innovation and business acumen—that still stands today.
             </Text>
           </OneCol>
-          <Scrollytelling bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906512/PC0141_b12_Engineering_Corner_0172_jawygm.jpg">
+          <Scrollytelling
+            bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906512/PC0141_b12_Engineering_Corner_0172_jawygm.jpg"
+            className="mb-0"
+          >
             <H2>Born in a Stanford Engineering Classroom: HP</H2>
             <ScrollyBubble>
               <Text mb="0">
@@ -471,8 +520,10 @@ export default function page() {
               several centers nationwide to train civilians in aviation.(13)
             </Text>
           </OneCol>
-          {/* Horizontal Line Art */}
-          <OneCol>
+          <div className="flex w-full justify-end">
+            <HorizontalLineart lineartType="B" />
+          </div>
+          <OneCol className="rs-mb-4">
             <Text>
               Meanwhile, in electrical engineering, an extensive reimagining of
               the junior- and senior-level curriculum began. Traditional
@@ -488,7 +539,7 @@ export default function page() {
               the level of instruction for graduate students.
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <MediaCaptionImage
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00008355_001_ocomle.jpg"
@@ -536,7 +587,9 @@ export default function page() {
               Civil Aeronautics Administration.
             </Text>
           </OneCol>
-          {/* Horizontal Line Art */}
+          <div className="flex w-full justify-start">
+            <HorizontalLineart lineartType="C" />
+          </div>
           <OneCol>
             <Text>
               In March that year, months ahead of the country’s entry into the
@@ -550,8 +603,8 @@ export default function page() {
               attainments.”(17)
             </Text>
           </OneCol>
-          {/* Image Gallery */}
-          <OneCol>
+          <ImageGallery images={galleryImages} />
+          <OneCol className="rs-mb-3">
             <Text>
               For the first time, the School of Engineering offered summer
               courses to enable students to complete a typical twelve-quarter
