@@ -22,8 +22,8 @@ import { QuoteMark, QuoteMarkColorType } from "../images/quote-mark";
 import { cnb } from "cnbuilder";
 
 export type QuoteProps = React.HTMLAttributes<HTMLDivElement> & {
-  teaser?: string;
-  body?: string;
+  teaser?: string | React.ReactNode;
+  body?: string | React.ReactNode;
   source: string;
   animation?: AnimationType;
   delay?: number;

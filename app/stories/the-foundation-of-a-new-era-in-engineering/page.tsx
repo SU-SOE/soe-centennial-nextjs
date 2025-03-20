@@ -330,18 +330,22 @@ export default function page() {
             <Text>
               Terman worked to attract funding, build up research facilities,
               and initiate research in ionospheric physics and electron-tube
-              optics.(5) The success of the klystron project at Stanford led to
-              important applications both in military radar defense and in
-              postwar developments. These included the founding of the private
-              company Varian Associates and the establishment of Stanford’s
-              Microwave Laboratory (renamed the E.L. Ginzton Laboratory in 1976
-              for Edward Ginzton, a graduate student of Terman who led key
-              aspects of klystron measurement and circuit development and was
-              subsequently appointed professor of both applied physics and
-              electrical engineering at Stanford).(6) Terman’s vision and
-              strategic leadership not only advanced Stanford Engineering but
-              also contributed to the progress of technology on a national
-              scale.(7)
+              optics.
+              <Footnotes footnoteRefs={[{ id: "footnote5", number: 5 }]} /> The
+              success of the klystron project at Stanford led to important
+              applications both in military radar defense and in postwar
+              developments. These included the founding of the private company
+              Varian Associates and the establishment of Stanford’s Microwave
+              Laboratory (renamed the E.L. Ginzton Laboratory in 1976 for Edward
+              Ginzton, a graduate student of Terman who led key aspects of
+              klystron measurement and circuit development and was subsequently
+              appointed professor of both applied physics and electrical
+              engineering at Stanford).
+              <Footnotes footnoteRefs={[{ id: "footnote6", number: 6 }]} />{" "}
+              Terman’s vision and strategic leadership not only advanced
+              Stanford Engineering but also contributed to the progress of
+              technology on a national scale.
+              <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} />
             </Text>
             <Text>
               With the klystron, Terman began the school’s decades-long
@@ -372,7 +376,8 @@ export default function page() {
               to create the Model 200A during a lecture by Terman, who read from
               a 1934 paper by Bell Laboratories’ H.S. Black on distortion
               reduction techniques. Hewlett was so inspired that he committed
-              his master’s thesis to the concept.(8)
+              his master’s thesis to the concept.
+              <Footnotes footnoteRefs={[{ id: "footnote8", number: 8 }]} />
             </Text>
             <Text>
               That same year, at Terman’s urging, the young engineers pitched
@@ -409,9 +414,11 @@ export default function page() {
               “Father of Sili- con Valley” for urging innovative Stanford
               students like Hewlett and Packard not only to develop new
               technologies but also to commercialize them by founding start-up
-              companies.(9) In the decades to come, his initiatives and
-              influence would define him as a leading force in the birth of
-              Silicon Valley.(10)
+              companies.
+              <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} /> In
+              the decades to come, his initiatives and influence would define
+              him as a leading force in the birth of Silicon Valley.
+              <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
             </Text>
             <Text>
               The success of the klystron and the Model 200A, and the companies
@@ -419,7 +426,10 @@ export default function page() {
               into an unanticipated reckoning with its own creativity and
               business acumen. In 1938, Stanford published the university’s
               first policy governing the patenting of discoveries and inventions
-              produced on campus using university facilities and resources.(11)
+              produced on campus using university facilities and resources.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote11", number: 11 }]}
+              />{" "}
               This practice—technology license transfer from university lab to
               corporate boardroom—would not become standard elsewhere for
               several more decades. The Stanford School of Engineering laid the
@@ -453,7 +463,18 @@ export default function page() {
             />
             <Quote
               source="— David Packard"
-              teaser="“I was amazed to find that he knew a great deal about me,” Packard later recalled. “He knew my interests and abilities in athletics; he knew what courses I had taken and my grades. He had even looked up my high school record and my scores on the entrance exams.”(12)"
+              teaser={
+                <>
+                  I was amazed to find that he knew a great deal about me,”
+                  Packard later recalled. “He knew my interests and abilities in
+                  athletics; he knew what courses I had taken and my grades. He
+                  had even looked up my high school record and my scores on the
+                  entrance exams.”
+                  <Footnotes
+                    footnoteRefs={[{ id: "footnote12", number: 12 }]}
+                  />
+                </>
+              }
             />
             <ScrollyBubble>
               <Text mb="0">
@@ -461,12 +482,16 @@ export default function page() {
                 Packard later recalled. “He knew my interests and abilities in
                 athletics; he knew what courses I had taken and my grades. He
                 had even looked up my high school record and my scores on the
-                entrance exams.”(12) Packard was exactly the kind of young
-                leader the school most wanted to cultivate. Terman asked the
-                rising senior if he was up for the challenge of becoming the
-                first undergraduate to take Terman’s graduate course in radio
-                engineering, then the forefront of electronics. In that moment,
-                Packard believed, Hewlett-Packard was born.
+                entrance exams.”
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote12", number: 12 }]}
+                />{" "}
+                Packard was exactly the kind of young leader the school most
+                wanted to cultivate. Terman asked the rising senior if he was up
+                for the challenge of becoming the first undergraduate to take
+                Terman’s graduate course in radio engineering, then the
+                forefront of electronics. In that moment, Packard believed,
+                Hewlett-Packard was born.
               </Text>
             </ScrollyBubble>
             <ScrollyBubble>
@@ -517,7 +542,8 @@ export default function page() {
               Lab. Research relationships with the federal government were
               burgeoning; the Civil Aeronautics Authority, precursor to the
               Federal Aviation Administration, selected Stanford as one of
-              several centers nationwide to train civilians in aviation.(13)
+              several centers nationwide to train civilians in aviation.
+              <Footnotes footnoteRefs={[{ id: "footnote13", number: 13 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-end">
@@ -533,10 +559,12 @@ export default function page() {
               reflected the growing influence of radio broadcasting nationwide.
               The rearrangement made for a “more uniform division of this work
               between the junior and senior years,” Terman wrote in the
-              university’s 1939 annual report.(14) By enabling this training
-              earlier, the newly developed elective senior-level courses “in
-              this important field” of communication made it possible to raise
-              the level of instruction for graduate students.
+              university’s 1939 annual report.
+              <Footnotes footnoteRefs={[{ id: "footnote14", number: 14 }]} /> By
+              enabling this training earlier, the newly developed elective
+              senior-level courses “in this important field” of communication
+              made it possible to raise the level of instruction for graduate
+              students.
             </Text>
           </OneCol>
           <TwoCol className="rs-mb-5">
@@ -559,8 +587,12 @@ export default function page() {
               engineering and scientific aims. “For that reason, it would be
               undesirable to combine them too closely,” the committee wrote; but
               it suggested considerable upgrades to the physical facilities of
-              both departments.(15) Changes for these departments lay ahead, but
-              only after the war’s end.
+              both departments.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote15", number: 15 }]}
+              />{" "}
+              Changes for these departments lay ahead, but only after the war’s
+              end.
             </Text>
           </TwoCol>
           <OneCol>
@@ -572,7 +604,8 @@ export default function page() {
               effort. Dean Morris was appointed chairman of a university-wide
               committee charged with facilitating the expansion of relationships
               with the federal government to “give the fullest possible service
-              if called upon.”(16)
+              if called upon.”
+              <Footnotes footnoteRefs={[{ id: "footnote16", number: 16 }]} />
             </Text>
             <Text>
               In 1941, preceding the attack on Pearl Harbor, Washington
@@ -600,7 +633,8 @@ export default function page() {
               much of their education as soon as possible in order to be of
               greater value in national service. . . . Each individual is of
               value to the country in proportion to his or her educational
-              attainments.”(17)
+              attainments.”
+              <Footnotes footnoteRefs={[{ id: "footnote17", number: 17 }]} />
             </Text>
           </OneCol>
           <ImageGallery images={galleryImages} />
@@ -616,25 +650,30 @@ export default function page() {
               compromising national security secrets. He could only assert that
               such research “is going on in ever increasing volume. . . . This
               will become a more important factor in the year 1941–42, and
-              increasingly until the European war is over.”(18)
+              increasingly until the European war is over.”
+              <Footnotes footnoteRefs={[{ id: "footnote18", number: 18 }]} />
             </Text>
             <Text>
               The School of Engineering continued to gear itself to the flow of
               world events “in which the engineer is playing an ever-increasing
               part.” Engineers were necessary “to carry on . . . highly
-              mechanized warfare.”(19) Despite the fact that many students were
-              permitted to defer military service to complete their engineering
-              degrees, the call to serve affected both undergraduate and
-              graduate enrollments. Students were not the only ones enlisting:
-              as of August 1942, eight school faculty were on leave to the
-              military; five were commissioned officers in the Army and Navy,
-              and three were involved in research or technical engagements
-              specifically related to the war. Terman was among them, departing
-              in 1942 to lead a new, top-secret Radio Research Laboratory at
-              Harvard. Two other faculty left for roles in industry, while
-              another two in the Naval Reserve were retained only because of the
-              “importance to the war effort of instruction and research being
-              carried on by them.”(20){" "}
+              mechanized warfare.”
+              <Footnotes
+                footnoteRefs={[{ id: "footnote19", number: 19 }]}
+              />{" "}
+              Despite the fact that many students were permitted to defer
+              military service to complete their engineering degrees, the call
+              to serve affected both undergraduate and graduate enrollments.
+              Students were not the only ones enlisting: as of August 1942,
+              eight school faculty were on leave to the military; five were
+              commissioned officers in the Army and Navy, and three were
+              involved in research or technical engagements specifically related
+              to the war. Terman was among them, departing in 1942 to lead a
+              new, top-secret Radio Research Laboratory at Harvard. Two other
+              faculty left for roles in industry, while another two in the Naval
+              Reserve were retained only because of the “importance to the war
+              effort of instruction and research being carried on by them.”
+              <Footnotes footnoteRefs={[{ id: "footnote20", number: 20 }]} />
             </Text>
             <Text>
               In 1942, the School of Engineering conferred 157 degrees, a slight
@@ -643,15 +682,20 @@ export default function page() {
               protection by selective service or even subsidy to engineering
               students,” wrote Dean Morris to President Wilbur, “we can expect
               the number of Bachelors’ degrees to diminish and the graduate
-              degrees to fall off almost completely.”(21) By academic year
-              1944–1945, the number of degrees granted fell below 100 for the
-              first time in years, with only 96 conferred, and prospects dimming
-              for an influx of new students. “With deferment no longer granted
-              to undergraduate or graduate engineering students by Selective
-              Service, the numbers graduating from now until the end of the war
-              will be greatly reduced,” wrote Morris in August 1944.(22) The war
-              continued to rage on two fronts as the second decade of the
-              Stanford School of Engineering drew to a close.
+              degrees to fall off almost completely.”
+              <Footnotes footnoteRefs={[{ id: "footnote21", number: 21 }]} /> By
+              academic year 1944–1945, the number of degrees granted fell below
+              100 for the first time in years, with only 96 conferred, and
+              prospects dimming for an influx of new students. “With deferment
+              no longer granted to undergraduate or graduate engineering
+              students by Selective Service, the numbers graduating from now
+              until the end of the war will be greatly reduced,” wrote Morris in
+              August 1944.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote22", number: 22 }]}
+              />{" "}
+              The war continued to rage on two fronts as the second decade of
+              the Stanford School of Engineering drew to a close.
             </Text>
             <Text>
               The following month, Morris stepped down from his role as dean to
