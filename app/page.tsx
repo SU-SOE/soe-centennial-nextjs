@@ -60,9 +60,8 @@ export default function MvpHome() {
 
   return (
     <>
-      <Masthead logoColor="white-red" isOverlap />
+      <Masthead bgColor="red" logoColor="white-red" />
       <main id="main-content">
-        <H1 className="sr-only">100 years of Stanford Engineering</H1>
         <AnimatedHero />
         {/* <EmbedMediaHero
           autoplay

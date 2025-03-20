@@ -16,6 +16,7 @@ import { Link } from "@/components/Cta/Link";
 import { ExploreMore } from "@/components/Story/ExploreMore";
 import { AnimatedHero } from "@/components/AnimatedHero";
 import { Metadata } from "next";
+import { H1 } from "@/components/Typography/Header";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -81,80 +82,83 @@ export default function Home() {
     },
   ];
   return (
-    <div>
+    <>
       <Masthead bgColor="red" logoColor="white-red" />
-      <AnimatedHero />
-      <StoryPosterCard
-        heading="The foundation of a new era in engineering"
-        superhead="100 Years of Impact"
-        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
-        caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-        chapter="Chapter 1"
-        link="/"
-        hasBgImage
-      />
-      <Container mt={10} mb={10} width="full">
-        <AnimatedLineartBanner className="mb-[-4rem]">
-          <div className="flex flex-col items-start md:rs-px-1">
-            <Heading
-              align="left"
-              font="dm-sans"
-              size="f5"
-              weight="normal"
-              leading="tight"
-              className="mt-10"
-            >
-              Experience{" "}
-              <Link
-                linkType="heading"
-                href="/timeline"
-                className="text-digital-red-light font-normal"
+      <main id="main-content">
+        <H1 className="sr-only">100 years of Stanford Engineering</H1>
+        <AnimatedHero />
+        <StoryPosterCard
+          heading="The foundation of a new era in engineering"
+          superhead="100 Years of Impact"
+          body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
+          caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          chapter="Chapter 1"
+          link="/"
+          hasBgImage
+        />
+        <Container mt={10} mb={10} width="full">
+          <AnimatedLineartBanner className="mb-[-4rem]">
+            <div className="flex flex-col items-start md:rs-px-1">
+              <Heading
+                align="left"
+                font="dm-sans"
+                size="f5"
+                weight="normal"
+                leading="tight"
+                className="mt-10"
               >
-                100 years
-              </Link>{" "}
-              of milestones
-            </Heading>
-            <Text
-              font="dm-mono"
-              weight="normal"
-              mb="base"
-              size={2}
-              className="order-first"
-              align="left"
-            >
-              Timeline
-            </Text>
-          </div>
-        </AnimatedLineartBanner>
-        {timelineHorizontalCards.map((item, idx) => (
-          <TimelineHorizontalCard key={idx} width="site" {...item} />
-        ))}
-        <TimelineFeature anchors={timelineFeatureCards} />
-      </Container>
-      <StoryFeature>
-        <TwoCol className="rs-mb-8 items-center max-w-[140rem]">
-          <AnimateInView animation="slideUp" duration={2}>
-            <Heading size="f5" weight="normal">
-              Fundamental work in science and transformational breakthroughs for
-              one hundred years.
-            </Heading>
-          </AnimateInView>
-          <StoryCard
-            isHeadingLarge
-            animation="slideUp"
-            duration={2}
-            delay={0.5}
-            superhead="Impact"
-            heading="Lorem ipsum dolor sit amet consect hendrerit"
-            imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
-            href="/"
-            className="max-w-full"
-          />
-        </TwoCol>
-        <ExploreMore stories={storyData} />
-      </StoryFeature>
-      <ContributeStoryBanner bgColor="blue" />
-    </div>
+                Experience{" "}
+                <Link
+                  linkType="heading"
+                  href="/timeline"
+                  className="text-digital-red-light font-normal"
+                >
+                  100 years
+                </Link>{" "}
+                of milestones
+              </Heading>
+              <Text
+                font="dm-mono"
+                weight="normal"
+                mb="base"
+                size={2}
+                className="order-first"
+                align="left"
+              >
+                Timeline
+              </Text>
+            </div>
+          </AnimatedLineartBanner>
+          {timelineHorizontalCards.map((item, idx) => (
+            <TimelineHorizontalCard key={idx} width="site" {...item} />
+          ))}
+          <TimelineFeature anchors={timelineFeatureCards} />
+        </Container>
+        <StoryFeature>
+          <TwoCol className="rs-mb-8 items-center max-w-[140rem]">
+            <AnimateInView animation="slideUp" duration={2}>
+              <Heading size="f5" weight="normal">
+                Fundamental work in science and transformational breakthroughs
+                for one hundred years.
+              </Heading>
+            </AnimateInView>
+            <StoryCard
+              isHeadingLarge
+              animation="slideUp"
+              duration={2}
+              delay={0.5}
+              superhead="Impact"
+              heading="Lorem ipsum dolor sit amet consect hendrerit"
+              imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+              href="/"
+              className="max-w-full"
+            />
+          </TwoCol>
+          <ExploreMore stories={storyData} />
+        </StoryFeature>
+        <ContributeStoryBanner bgColor="blue" />
+      </main>
+    </>
   );
 }
