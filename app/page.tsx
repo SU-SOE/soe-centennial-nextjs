@@ -3,11 +3,12 @@ import { StoryPosterCard } from "@/components/Story";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { EventsSection } from "@/components/Event";
 import { TeaserCard } from "@/components/TeaserCard/TeaserCard";
-import { EmbedMediaHero } from "@/components/EmbedVideoHero";
+// import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import { H1 } from "@/components/Typography/Header";
 import { Metadata } from "next";
+import { AnimatedHero } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -59,14 +60,15 @@ export default function MvpHome() {
 
   return (
     <>
-      <Masthead logoColor="white-red" bgColor="homepage" />
+      <Masthead bgColor="red" logoColor="white-red" />
       <main id="main-content">
         <H1 className="sr-only">100 years of Stanford Engineering</H1>
-        <EmbedMediaHero
+        <AnimatedHero />
+        {/* <EmbedMediaHero
           autoplay
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
-        />
+        /> */}
         <Container as="section" bgColor="blue" width="full" pt={8} pb={9}>
           <article className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800 rs-mb-6">
             <Heading font="dm-sans" size={2} weight="semibold" align="center">
