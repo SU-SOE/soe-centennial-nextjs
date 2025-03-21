@@ -213,7 +213,7 @@ const ExampleStoryPage = async () => {
           alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           bgColor="stone-dark"
           heading="Exploring the reengineering of immune cells"
           superhead="Change Makers"
@@ -224,7 +224,7 @@ const ExampleStoryPage = async () => {
           alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           hasBgImage
           bgColor="stone-dark"
           heading="Exploring the reengineering of immune cells"
@@ -236,7 +236,7 @@ const ExampleStoryPage = async () => {
           alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           bgColor="red"
           heading="Exploring the reengineering of immune cells"
           superhead="Change Makers"
@@ -247,7 +247,7 @@ const ExampleStoryPage = async () => {
           alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           hasBgImage
           bgColor="red"
           heading="Exploring the reengineering of immune cells"
@@ -259,7 +259,7 @@ const ExampleStoryPage = async () => {
           alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           heading="Exploring the reengineering of immune cells"
           superhead="Change Makers"
           body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
@@ -272,7 +272,6 @@ const ExampleStoryPage = async () => {
       <div id="example-storycard">
         <Container width="site" py={6}>
           <StoryCard
-            isHorizontal
             bgColor="blue"
             superhead="Change makers"
             heading="Untangling the web of racial inequality"
@@ -283,7 +282,6 @@ const ExampleStoryPage = async () => {
         </Container>
         <Container width="site" pb={6}>
           <StoryCard
-            isHorizontal
             bgColor="blue"
             superhead="Change makers"
             heading="Untangling the web of racial inequality"

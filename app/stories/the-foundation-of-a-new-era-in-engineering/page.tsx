@@ -174,18 +174,18 @@ export default function page() {
       <main id="main-content">
         <article>
           <StoryImpactBanner
-            isHorizontal
+            isVertical
             hasBgImage
             bgColor="red"
             chapter="Decade 2"
             heading="The Foundation of a New Era in Engineering"
             dek="1935 – 1944"
-            byline="by Andrew Myers"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg"
             alt="A vintage black and white photograph depicting a diverse group of men and women gathered together posing for a photo."
             caption="Members of the Stanford Student Chapter of the American Society of Civil Engineers gather for a photo for the Stanford Quad yearbook, 1936. Charles Marx is seated sixth from right. Women were still a significant minority in engineering: the two women pictured are students Mary DeF. Atkins (sixth from left) and Margaret Woolverton (seventh from left), both seniors. | Special Collections & University Archives."
           />
           <div className="max-w-1500 w-full cc rs-mb-5">
+            <Text mb={6}>by Andrew Myers</Text>
             <Quote
               width="wide"
               teaser="Relations with industry are beneficial to the university and to industry and most helpful to its program of engineering education and research.”"
@@ -229,7 +229,7 @@ export default function page() {
                 <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
               </Text>
             </OneCol>
-            <StorySidebar hasLineArt>
+            <StorySidebar hasLineArt lineArtType="medium">
               <MediaCaptionImage
                 isPortriat
                 rounded
@@ -263,6 +263,7 @@ export default function page() {
             </Text>
           </OneCol>
           <MediaCaptionImage
+            animation="sharpen"
             rounded
             aspectRatio="3x2"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/kn908nr7305_ffxjaj.jpg"
@@ -293,6 +294,7 @@ export default function page() {
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
           >
             <MediaCaptionImage
+              isParallax
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
@@ -303,6 +305,7 @@ export default function page() {
           <TwoCol className="rs-mb-5">
             <div>
               <MediaCaptionImage
+                animation="slideUp"
                 rounded
                 aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00021082_004_nhnrna.jpg"
@@ -310,6 +313,8 @@ export default function page() {
                 caption="Physics researchers Russell Varian (‘25, MA ‘27) and Sigurd Varian and Stanford physics professor William Hansen collaborated with colleagues in electrical engineering to invent the klystron. Posing with the klystron in 1939 are (clockwise from lower left) Russell H. Varian, Sigurd F. Varian, David L. Webster, William W. Hansen, and John R. Woodyard. | Special Collections & University Archives."
               />
               <MediaCaptionImage
+                animation="slideUp"
+                delay={0.5}
                 rounded
                 aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zm384pb3271_pw5s9z.jpg"
@@ -318,6 +323,8 @@ export default function page() {
               />
             </div>
             <MediaCaptionImage
+              animation="slideUp"
+              delay={0.3}
               rounded
               aspectRatio="3x4"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906505/00018323_004_haa3ul.jpg"
@@ -389,8 +396,9 @@ export default function page() {
               make the company a household name.
             </Text>
           </OneCol>
-          <TwoCol className="rs-mb-5">
+          <TwoCol className="rs-mb-5 rs-mt-5">
             <MediaCaptionImage
+              animation="slideUp"
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/hewlett_packard_yijywt.jpg"
@@ -398,6 +406,8 @@ export default function page() {
               caption="William Hewlett and David Packard (seated), 1939. As graduate students in the School of Engineering, they developed the first precision audio oscillator, a low-cost method of measuring audio frequencies. The device became the foundation for their company, known around the world today as HP. | Courtesy Hewlett-Packard Corporate Archives."
             />
             <MediaCaptionImage
+              animation="slideUp"
+              delay={0.5}
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zx844pk9013_viuv37.jpg"
@@ -568,6 +578,7 @@ export default function page() {
           </OneCol>
           <TwoCol className="rs-mb-5">
             <MediaCaptionImage
+              animation="sharpen"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00008355_001_ocomle.jpg"
               alt=""
@@ -637,7 +648,7 @@ export default function page() {
             </Text>
           </OneCol>
           <ImageGallery images={galleryImages} />
-          <OneCol className="rs-mb-3">
+          <OneCol className="rs-mb-3 rs-mt-5">
             <Text>
               For the first time, the School of Engineering offered summer
               courses to enable students to complete a typical twelve-quarter

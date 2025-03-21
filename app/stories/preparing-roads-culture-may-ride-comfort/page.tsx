@@ -681,7 +681,7 @@ export default function page() {
                   and Head, Silicon Valley Archives
                 </Text>
               </OneCol>
-              <StorySidebar hasLineArt isShort>
+              <StorySidebar hasLineArt lineArtType="short">
                 <MediaCaptionImage
                   isPortriat
                   rounded
