@@ -298,7 +298,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
-              alt=""
+              alt="Display of the Type A klystron tool"
               caption="Type A klystron, 1937. The klystron was the first significantly powerful source of radio waves in the microwave range. As the foundational technology in the burgeoning microwave industry, it would be used in military radar detection, commercial air navigation, satellite communications,  high-energy particle accelerators, and other technologies. | Special Collections  & University Archives."
             />
           </BgImageWrapper>
@@ -309,7 +309,7 @@ export default function page() {
                 rounded
                 aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00021082_004_nhnrna.jpg"
-                alt=""
+                alt="A group of five men huddled around the klystron tool"
                 caption="Physics researchers Russell Varian (‘25, MA ‘27) and Sigurd Varian and Stanford physics professor William Hansen collaborated with colleagues in electrical engineering to invent the klystron. Posing with the klystron in 1939 are (clockwise from lower left) Russell H. Varian, Sigurd F. Varian, David L. Webster, William W. Hansen, and John R. Woodyard. | Special Collections & University Archives."
               />
               <MediaCaptionImage
@@ -318,7 +318,7 @@ export default function page() {
                 rounded
                 aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zm384pb3271_pw5s9z.jpg"
-                alt=""
+                alt="A pair of brother, Russel H. Varian on the left and Sugurd Varian on the right, standing in front of a large machine."
                 caption="Brothers Russell H. Varian (left) and Sigurd Varian (right) went on to found Varian Associates, one of the earliest high-tech companies in Silicon Valley and the first to lease land from the university in what became the Stanford Industrial Park (renamed Stanford Research Park in 1974). | Special Collections & University Archives."
               />
             </div>
@@ -328,7 +328,7 @@ export default function page() {
               rounded
               aspectRatio="3x4"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906505/00018323_004_haa3ul.jpg"
-              alt=""
+              alt="Professor William Hansen standing by a unit of klystron"
               caption="Associate Professor William Hansen tests a unit of the  klystron in 1939. The klystron was based on his earlier invention,  the “rhumbatron.” | Special Collections & University Archives."
             />
           </TwoCol>
@@ -402,7 +402,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/hewlett_packard_yijywt.jpg"
-              alt=""
+              alt="A pair of men, William Hewlett and David Packerd, standing in front of the first precision audio oscillator."
               caption="William Hewlett and David Packard (seated), 1939. As graduate students in the School of Engineering, they developed the first precision audio oscillator, a low-cost method of measuring audio frequencies. The device became the foundation for their company, known around the world today as HP. | Courtesy Hewlett-Packard Corporate Archives."
             />
             <MediaCaptionImage
@@ -411,7 +411,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zx844pk9013_viuv37.jpg"
-              alt=""
+              alt="A pair of men, Wiilliam Hewlett and David Parkard, smiling at one another as they work in their shop"
               caption="William Hewlett and David Packard working together in their shop, circa 1942. | Special Collections & University Archives."
             />
           </TwoCol>
@@ -467,8 +467,7 @@ export default function page() {
               rounded
               aspectRatio="3x4"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509511/nz029jf0057_optimized_eoovla.jpg"
-              alt=""
-              caption="William Hewlett and David Packard working together in their shop, circa 1942. | Special Collections & University Archives."
+              alt="David Packard crouch on grass outdoors"
             />
             <Quote
               source="— David Packard"
@@ -581,8 +580,8 @@ export default function page() {
               animation="sharpen"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00008355_001_ocomle.jpg"
-              alt=""
-              caption="Professor Arthur B. Domonoske, at right, 1939. Domonoske,  who joined Stanford in 1927 to become head of the Department  of Mechanical Engineering, published about the principles of aircraft engine design. | Special Collections & University Archives."
+              alt="A pair of men reviewing a large piece of machinery"
+              caption="Professor Arthur B. Domonoske, at right, 1939. Domonoske, who joined Stanford in 1927 to become head of the Department  of Mechanical Engineering, published about the principles of aircraft engine design. | Special Collections & University Archives."
             />
             <Text>
               The academic year of 1939–1940 began with an exploratory committee
