@@ -187,7 +187,7 @@ export default function page() {
             dek="1925 – 1934"
             bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
-            alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
+            alt="A public demonstration of a 2.1 million volt test station lead by Harris J. Ryan standing to the right of a giant flame"
             caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
           />
           <div className="max-w-1500 w-full cc">
@@ -319,7 +319,7 @@ export default function page() {
               isCaptionInset
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/Engineering_faculty_c1920_sjiqvd.jpg"
-              alt="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement"
+              alt="Black and white photo of two rows of men in three-pieced suits. Three sitting in front and six men sitting in back."
               caption="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement. Marx is seated in the center of the bottom row. | Courtesy Barbara Wallace."
             />
           </StoryGrid>
@@ -356,7 +356,7 @@ export default function page() {
               animation="fadeIn"
               aspectRatio="16x9"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742343299/engineering-corner-1910_1915_aoicg9.jpg"
-              alt="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915"
+              alt="The southeast corner of Stanford’s main quad, known as Engineering Corner"
               caption="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
             />
           </Container>
