@@ -534,6 +534,8 @@ export default function page() {
           >
             <H2 className="text-center">Construction and plans</H2>
             <MediaCaptionImage
+              className="max-w-500 mx-auto"
+              aspectRatio="5x8"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742839253/FPO-Stanford-Quad-logo-silo_vqitsd.png"
               alt=""
             />
