@@ -39,12 +39,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/stories/:path*",
-        destination: "/404",
-        permanent: true,
-      },
-      {
-        source: "/timeline/:path*",
+        source: "/stories/the-terman-era",
         destination: "/404",
         permanent: true,
       },

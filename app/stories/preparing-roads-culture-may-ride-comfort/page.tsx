@@ -531,7 +531,11 @@ export default function page() {
             bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
             bgImageAlt="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925"
           >
-            <H2>Construction and plans</H2>
+            <H2 className="text-center">Construction and plans</H2>
+            <MediaCaptionImage
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742839253/FPO-Stanford-Quad-logo-silo_vqitsd.png"
+              alt=""
+            />
             <ScrollyBubble>
               <Text variant="overview">
                 From The Stanford Quad, vol. 34, 1927, pp. 38-39
