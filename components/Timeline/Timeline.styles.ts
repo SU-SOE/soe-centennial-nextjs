@@ -39,10 +39,10 @@ export const bgColors = {
 
 // Timeline Image
 export const size = {
-  small: "w-200 md:w-250",
-  medium: "w-250 md:w-300 xl:w-[340px]",
-  large: "w-250 md:w-300 lg:w-[340px] xl:w-[420px]",
-  xlarge: "w-250 md:w-240 lg:w-[340px] xl:w-[420px] 2xl:w-600",
+  small: "w-250 md:w-300",
+  medium: "w-250 md:w-300 lg:w-[32rem] xl:w-[35rem]",
+  large: "w-250 md:w-300 lg:w-[35rem] xl:w-[42rem]",
+  xlarge: "w-250 md:w-240 lg:w-[34rem] xl:w-[42rem] 2xl:w-600",
   full: "w-full",
 };
 
@@ -64,7 +64,7 @@ export const trapezoidWrapper = (align: string) =>
 
 export const trapezoidSvg = (align: string) =>
   cnb(
-    "flex items-center overflow-hidden w-350 md:w-[430px] lg:w-[536px] xl:w-[637px] 2xl:w-900 h-350 md:h-[430px] lg:h-[536px] xl:h-[637px] 2xl:h-900",
+    "flex items-center overflow-hidden w-350 md:w-[43rem] lg:w-[536px] xl:w-[63.7rem] 2xl:w-900 h-350 md:h-[43rem] lg:h-[536px] xl:h-[637px] 2xl:h-900",
     {
       "rotate-180": align === "left",
     },
