@@ -607,12 +607,12 @@ export default function page() {
               <Text variant="overview">
                 From The Stanford Quad, vol. 34, 1927, pp. 38-39
               </Text>
-              <Text mb="0">
+              <Text>
                 Relatively little construction has been done by the University
                 during the year, owing to a lack of sufficient funds. Such
                 building as has been done resulted from special gifts.
               </Text>
-              <Text mb="0">
+              <Text>
                 The Harris J. Ryan High Voltage Laboratory is practically the
                 only recent addition to the University plant, and is without
                 question the most valuable and outstanding improvement which
@@ -622,7 +622,7 @@ export default function page() {
                 when Professor Ryan gave the initial demonstration of the
                 equipment capable of producing 2,100,000 volts.
               </Text>
-              <Text mb="0">
+              <Text>
                 The main portion of the laboratory building is a steel frame,
                 asbestos covered structure, 173 feet long, 60 feet wide, and 65
                 feet in height. It can be made absolutely light proof by closing
