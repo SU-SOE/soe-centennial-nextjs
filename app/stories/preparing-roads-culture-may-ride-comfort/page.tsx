@@ -182,7 +182,7 @@ export default function page() {
       <main id="main-content">
         <article>
           <StoryImpactBanner
-            isHorizontal
+            isVertical
             hasBgImage
             bgColor="stone-dark"
             chapter="Decade 1"
