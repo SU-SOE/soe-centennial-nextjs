@@ -1,8 +1,8 @@
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import TimelineList from "@/components/Timeline/TimelineList";
-import { Text } from "@/components/Typography";
-import { H1 } from "@/components/Typography/Header";
+// import { Text } from "@/components/Typography";
+// import { H1 } from "@/components/Typography/Header";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { Metadata } from "next";
 
