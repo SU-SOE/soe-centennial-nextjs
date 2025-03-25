@@ -88,9 +88,19 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
 
   // Group timeline data into rows based on itemsPerRow
   const rows = timelineData.reduce<TimelineItemData[][]>((acc, item, index) => {
-    const rowIndex = Math.floor(index / itemsPerRow);
+    const pattern =
+      itemsPerRow === 3 ? [3, 3, 1] : itemsPerRow === 2 ? [2, 2, 1] : [1];
+    let rowIndex = 0;
+    let currentIndex = 0;
+
+    while (currentIndex + pattern[rowIndex % pattern.length] <= index) {
+      currentIndex += pattern[rowIndex % pattern.length];
+      rowIndex++;
+    }
+
     if (!acc[rowIndex]) acc[rowIndex] = [];
     acc[rowIndex].push(item);
+
     return acc;
   }, []);
 
