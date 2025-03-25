@@ -24,33 +24,33 @@ export const metadata: Metadata = {
 
 const TimelinePage = async () => {
   // Render this message in preview environments and local development
-  if (
-    process.env.VERCEL_ENV === "preview" ||
-    process.env.NODE_ENV === "development"
-  ) {
-    return (
-      <>
-        <Masthead />
-        <main id="main-content" className="cc rs-mb-6">
-          <div className="max-w-900 mx-auto">
-            <H1>Timeline page</H1>
-            <Text>
-              🚧 This page is not available in preview environments.
-              <br />
-              To view the timeline, please visit the{" "}
-              <a href="https://soe-centennial-nextjs-git-dev-stanford-centennial.vercel.app/timeline">
-                development site
-              </a>
-              .
-              <br />
-              If you believe this is an error, please contact SWS for
-              assistance.
-            </Text>
-          </div>
-        </main>
-      </>
-    );
-  }
+  // if (
+  //   process.env.VERCEL_ENV === "preview" ||
+  //   process.env.NODE_ENV === "development"
+  // ) {
+  //   return (
+  //     <>
+  //       <Masthead />
+  //       <main id="main-content" className="cc rs-mb-6">
+  //         <div className="max-w-900 mx-auto">
+  //           <H1>Timeline page</H1>
+  //           <Text>
+  //             🚧 This page is not available in preview environments.
+  //             <br />
+  //             To view the timeline, please visit the{" "}
+  //             <a href="https://soe-centennial-nextjs-git-dev-stanford-centennial.vercel.app/timeline">
+  //               development site
+  //             </a>
+  //             .
+  //             <br />
+  //             If you believe this is an error, please contact SWS for
+  //             assistance.
+  //           </Text>
+  //         </div>
+  //       </main>
+  //     </>
+  //   );
+  // }
 
   const timelineData = await loadTimelineData();
 
