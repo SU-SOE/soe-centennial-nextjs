@@ -572,7 +572,7 @@ export default function page() {
               }
             />
             <ScrollyBubble>
-              <Text mb="0">
+              <Text>
                 “I was amazed to find that he knew a great deal about me,”
                 Packard later recalled. “He knew my interests and abilities in
                 athletics; he knew what courses I had taken and my grades. He
@@ -588,7 +588,7 @@ export default function page() {
                 forefront of electronics. In that moment, Packard believed,
                 Hewlett-Packard was born.
               </Text>
-              <Text mb="0">
+              <Text>
                 Most electronics companies at the time, Terman advised Packard,
                 had been “built by people without much education.” In the fall
                 of 1933, while Packard helped lead the Cardinal to the Rose
