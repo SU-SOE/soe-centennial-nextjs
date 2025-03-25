@@ -24,6 +24,7 @@ export const HorizontalLineart = ({
     <>
       {/* 2XL SVG */}
       <svg
+        aria-hidden="true"
         width="1638"
         height="50"
         viewBox="0 0 1638 50"
@@ -52,6 +53,7 @@ export const HorizontalLineart = ({
       </svg>
       {/* XL SVG */}
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="1102"
         height="50"
@@ -80,6 +82,7 @@ export const HorizontalLineart = ({
       </svg>
       {/* LG SVG */}
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="914"
         height="50"
@@ -108,6 +111,7 @@ export const HorizontalLineart = ({
       </svg>
       {/* MD SVG */}
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="720"
         height="51"
@@ -136,6 +140,7 @@ export const HorizontalLineart = ({
       </svg>
       {/* SM SVG */}
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="540"
         height="38"
@@ -164,6 +169,7 @@ export const HorizontalLineart = ({
       </svg>
       {/* XS SVG */}
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="332"
         height="38"
@@ -192,6 +198,7 @@ export const HorizontalLineart = ({
       lineartSvg = (
         <>
           <svg
+            aria-hidden="true"
             width="1359"
             height="60"
             viewBox="0 0 1359 60"
@@ -218,6 +225,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="745"
             height="35"
             viewBox="0 0 745 35"
@@ -245,6 +253,7 @@ export const HorizontalLineart = ({
           </svg>
 
           <svg
+            aria-hidden="true"
             width="478"
             height="32"
             viewBox="0 0 478 32"
@@ -271,6 +280,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="327"
             height="26"
             viewBox="0 0 327 26"
@@ -303,6 +313,7 @@ export const HorizontalLineart = ({
       lineartSvg = (
         <>
           <svg
+            aria-hidden="true"
             width="1538"
             height="60"
             viewBox="0 0 1538 60"
@@ -329,6 +340,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="724"
             height="45"
             viewBox="0 0 724 45"
@@ -355,6 +367,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="547"
             height="35"
             viewBox="0 0 547 35"
@@ -381,6 +394,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="334"
             height="28"
             viewBox="0 0 334 28"
@@ -413,6 +427,7 @@ export const HorizontalLineart = ({
       lineartSvg = (
         <>
           <svg
+            aria-hidden="true"
             width="1224"
             height="60"
             viewBox="0 0 1224 60"
@@ -439,6 +454,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="718"
             height="41"
             viewBox="0 0 718 41"
@@ -465,6 +481,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="518"
             height="33"
             viewBox="0 0 518 33"
@@ -492,6 +509,7 @@ export const HorizontalLineart = ({
           </svg>
 
           <svg
+            aria-hidden="true"
             width="320"
             height="22"
             viewBox="0 0 320 22"
@@ -524,6 +542,7 @@ export const HorizontalLineart = ({
       lineartSvg = (
         <>
           <svg
+            aria-hidden="true"
             width="1665"
             height="60"
             viewBox="0 0 1665 60"
@@ -550,6 +569,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="707"
             height="38"
             viewBox="0 0 707 38"
@@ -577,6 +597,7 @@ export const HorizontalLineart = ({
           </svg>
 
           <svg
+            aria-hidden="true"
             width="520"
             height="38"
             viewBox="0 0 520 38"
@@ -603,6 +624,7 @@ export const HorizontalLineart = ({
             />
           </svg>
           <svg
+            aria-hidden="true"
             width="330"
             height="34"
             viewBox="0 0 330 34"
@@ -634,6 +656,7 @@ export const HorizontalLineart = ({
     case "timeline":
       lineartSvg = (
         <svg
+          aria-hidden="true"
           width="1764"
           height="84"
           viewBox="0 0 1764 84"
@@ -665,6 +688,7 @@ export const HorizontalLineart = ({
         <>
           {/* 2XL SVG */}
           <svg
+            aria-hidden="true"
             width="1538"
             height="82"
             viewBox="0 0 1538 82"
@@ -692,6 +716,7 @@ export const HorizontalLineart = ({
           </svg>
           {/* XL SVG */}
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="1029"
             height="82"
@@ -719,6 +744,7 @@ export const HorizontalLineart = ({
           </svg>
           {/* LG SVG */}
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="912"
             height="82"
@@ -746,6 +772,7 @@ export const HorizontalLineart = ({
           </svg>
           {/* MD SVG */}
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="718"
             height="59"
@@ -773,6 +800,7 @@ export const HorizontalLineart = ({
           </svg>
           {/* SM SVG */}
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="538"
             height="42"
@@ -800,6 +828,7 @@ export const HorizontalLineart = ({
           </svg>
           {/* XS SVG */}
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="340"
             height="32"

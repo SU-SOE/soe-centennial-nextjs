@@ -92,6 +92,7 @@ const MediaCaptionImage = ({
   animation = "none",
   isPortriat = false,
   delay,
+  duration,
   className,
   ...props
 }: MediaCaptionImageProps) => {
@@ -103,7 +104,7 @@ const MediaCaptionImage = ({
       pb={spacingBottom}
       className={cnb(className, styles.root(isFullHeight))}
     >
-      <AnimateInView animation={animation} delay={delay}>
+      <AnimateInView animation={animation} delay={delay} duration={duration}>
         <figure className={styles.figure(isPortriat)}>
           <div
             className={cnb(

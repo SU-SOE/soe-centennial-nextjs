@@ -42,7 +42,7 @@ export const TimelineItemFull = forwardRef<
         ref={ref}
         type="button"
         className={cnb(
-          "group flex flex-col relative md:flex-row gap w-full items-start justify-center lg:items-center rs-mb-6",
+          "group flex flex-col relative md:flex-row gap w-full justify-center items-center lg:rs-mb-6",
           className,
         )}
         onClick={onClick}
@@ -56,14 +56,14 @@ export const TimelineItemFull = forwardRef<
           isExpanded={isExpanded}
           className="w-1/2 h-full order-first md:order-last"
         />
-        <div className="flex flex-col items-start rs-pt-2 lg:rs-px-1 w-1/2">
+        <div className="flex flex-col items-start lg:rs-pt-2 lg:rs-px-1 w-1/2">
           <Heading
             align="left"
             font="dm-sans"
-            size={3}
+            size="base"
             weight="normal"
             leading="normal"
-            className="transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
+            className="lg:type-3 transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
           >
             {heading}
           </Heading>
@@ -93,7 +93,7 @@ export const TimelineItemFull = forwardRef<
           )}
         </div>
         {isExpanded && (
-          <div className="absolute top-0 left-0 group">
+          <div className="absolute top-0 right-0 md:left-0 group">
             <span className="sr-only">Close {heading} details</span>
             <XMarkIcon
               width={50}

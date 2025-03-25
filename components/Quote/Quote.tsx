@@ -49,8 +49,8 @@ export const Quote = ({
         width="full"
         className={cnb("text-stone-dark", styles.widths[width], className)}
       >
+        <QuoteMark className="rs-mb-0" fill={quoteColor} />
         <blockquote>
-          <QuoteMark className="rs-mb-0" fill={quoteColor} />
           {teaser && (
             <Text size="quote-lg" font="dm-sans" className={styles.teaser}>
               {teaser}
@@ -61,12 +61,12 @@ export const Quote = ({
               {body}&quot;
             </Text>
           )}
-          {source && (
-            <Text size="base" font="dm-mono" className={styles.source}>
-              {source}
-            </Text>
-          )}
         </blockquote>
+        {source && (
+          <Text size="base" font="dm-mono" className={styles.source}>
+            {source}
+          </Text>
+        )}
       </Container>
     </AnimateInView>
   );

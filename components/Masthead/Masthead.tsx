@@ -23,7 +23,7 @@ import { FlexBox } from "@/components/FlexBox";
 import { Skiplink } from "@/components/SkipLink";
 import * as styles from "./Masthead.styles";
 import { EngLogoLockup } from "../Logo/EngLogoLockup";
-import { MainNav } from "@/components/MainNav";
+// import { MainNav } from "@/components/MainNav";
 import { Text } from "@/components/Typography";
 
 export type MastheadProps = HTMLAttributes<HTMLDivElement> & {
@@ -45,9 +45,9 @@ export const Masthead = ({
   className,
   ...props
 }: MastheadProps) => {
-  const isLight = !(
-    isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
-  );
+  // const isLight = !(
+  //   isOverlap || ["red", "stone-dark", "black", "homepage"].includes(bgColor)
+  // );
 
   return (
     <header
@@ -81,7 +81,7 @@ export const Masthead = ({
           </Text>
         </div>
         <FlexBox alignItems="center" className={styles.flexbox}>
-          <MainNav isLight={isLight} />
+          {/* <MainNav isLight={isLight} /> */}
         </FlexBox>
       </FlexBox>
     </header>
