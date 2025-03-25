@@ -50,6 +50,7 @@ export const Scrollytelling = ({
   headingLevel = "h2",
   subheading,
   children,
+  className,
   caption,
   isBlur,
   bgImageSrc,
@@ -57,7 +58,7 @@ export const Scrollytelling = ({
   ...props
 }: ScrollytellingProps) => {
   return (
-    <section {...props} className="w-full rs-mb-6">
+    <section {...props} className={cnb("w-full rs-mb-6", className)}>
       <Container
         width="full"
         bgColor="black"

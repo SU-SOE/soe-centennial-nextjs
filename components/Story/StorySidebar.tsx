@@ -32,14 +32,14 @@ interface StorySidebarProps {
   children: ReactNode;
   className?: string;
   hasLineArt?: boolean;
-  isShort?: boolean;
+  lineArtType?: "default" | "medium" | "short";
 }
 
 export const StorySidebar = ({
   children,
   className,
   hasLineArt,
-  isShort,
+  lineArtType = "default",
   ...props
 }: StorySidebarProps) => {
   return (
@@ -57,7 +57,7 @@ export const StorySidebar = ({
       {hasLineArt && (
         <SidebarLineart
           className="absolute top-0 left-0 rs-p-0 z-10"
-          isShort={isShort}
+          lineArtType={lineArtType}
         />
       )}
       <div className="w-full relative z-50 flex flex-col gap-20 justify-center items-center ">

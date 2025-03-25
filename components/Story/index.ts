@@ -1,3 +1,4 @@
+export * from "./BgImageWrapper";
 export * from "./StoryCard";
 export * from "./StoryFeature";
 export * from "./StoryPosterCard";
@@ -7,3 +8,6 @@ export * from "./StorySidebar";
 export * from "./Footnotes";
 export * from "./FootnotesList";
 export * from "./GradientBanner";
+export * from "./ScrollyTelling";
+export * from "./ScrollyBubble";
+export * from "./ExploreMore";

@@ -10,7 +10,7 @@
  * @property {BgColorType} [bgColor="white"] - The background color type.
  * @property {string} [caption] - The optional caption text.
  * @property {boolean} [hasBgImage=false] - Flag to indicate if there is a background image.
- * @property {boolean} [isHorizontal=false] - Flag to indicate if the layout is horizontal.
+ * @property {boolean} [isVertical=false] - Flag to indicate if the layout is horizontal.
  * @property {string} src - The source URL for the image.
  * @property {string} [alt] - The alternative text for the image.
  */
@@ -35,7 +35,7 @@
  *   bgColor="red"
  *   caption="This is a caption."
  *   hasBgImage={true}
- *   isHorizontal={false}
+ *   isVertical={false}
  *   src="/path/to/image.jpg"
  *   alt="Image description"
  * />
@@ -58,7 +58,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: BgColorType;
   caption?: string;
   hasBgImage?: boolean;
-  isHorizontal?: boolean;
+  isVertical?: boolean;
   bgImageSrc?: string;
   src: string;
   alt: string;
@@ -75,14 +75,14 @@ export const StoryImpactBanner = ({
   caption,
   hasBgImage = false,
   bgImageSrc,
-  isHorizontal = false,
+  isVertical = false,
   src,
   alt,
   ...props
 }: StoryImpactBannerProps) => {
   const pb = bgColor === "white" ? 10 : 8;
   return (
-    <Container {...props} width="full" mb={7} className="relative">
+    <Container {...props} width="full" mb={5} className="relative">
       <Container
         bgColor={bgColor}
         width="site"
@@ -114,15 +114,15 @@ export const StoryImpactBanner = ({
         <FlexBox
           alignItems="center"
           className={cnb("flex flex-col z-10 relative md:grid-gap", {
-            "lg:flex-row": !isHorizontal,
-            "w-full max-w-[1100px] mx-auto": isHorizontal,
+            "lg:flex-row": !isVertical,
+            "w-full max-w-[1100px] mx-auto": isVertical,
           })}
         >
           <div
-            className={cnb("flex flex-col text-center rs-mb-8 rs-mt-7", {
-              "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isHorizontal,
+            className={cnb("flex flex-col text-center rs-mb-5 rs-mt-7", {
+              "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isVertical,
               "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
-                !isHorizontal,
+                !isVertical,
             })}
           >
             <Heading as="h1" size={6} weight="normal" mb="none">
@@ -150,14 +150,14 @@ export const StoryImpactBanner = ({
           <FlexBox
             direction="col"
             className={cnb("w-full h-full", {
-              "md:1/3 lg:w-1/2": !isHorizontal,
+              "md:1/3 lg:w-1/2": !isVertical,
             })}
           >
             <div
               className={cnb(
                 "w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10",
-                { "aspect-[3/2]": isHorizontal },
-                { "aspect-[1/1] md:aspect-[2/3]": !isHorizontal },
+                { "aspect-[3/2]": isVertical },
+                { "aspect-[1/1] md:aspect-[2/3]": !isVertical },
               )}
             >
               <Image src={src} alt={alt} fill className="object-cover" />
