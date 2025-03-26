@@ -585,61 +585,6 @@ export default function page() {
               </Text>
             </ScrollyBubble>
           </Scrollytelling>
-
-          <Scrollytelling
-            bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
-            bgImageAlt="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925"
-          >
-            <H2 className="text-center">Construction and plans</H2>
-            <MediaCaptionImage
-              className="max-w-500 mx-auto"
-              aspectRatio="5x8"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742839253/FPO-Stanford-Quad-logo-silo_vqitsd.png"
-              alt=""
-            />
-            <ScrollyBubble>
-              <Text variant="overview">
-                From The Stanford Quad, vol. 34, 1927, pp. 38-39
-              </Text>
-              <Text>
-                Relatively little construction has been done by the University
-                during the year, owing to a lack of sufficient funds. Such
-                building as has been done resulted from special gifts.
-              </Text>
-              <Text>
-                The Harris J. Ryan High Voltage Laboratory is practically the
-                only recent addition to the University plant, and is without
-                question the most valuable and outstanding improvement which
-                Stanford has acquired in several years. The building, located
-                near “Frenchman’s dam,” has been under construction since
-                August, 1925, and was formally opened on September 17, 1926,
-                when Professor Ryan gave the initial demonstration of the
-                equipment capable of producing 2,100,000 volts.
-              </Text>
-              <Text>
-                The main portion of the laboratory building is a steel frame,
-                asbestos covered structure, 173 feet long, 60 feet wide, and 65
-                feet in height. It can be made absolutely light proof by closing
-                the three huge steel doors, which are the largest ever built,
-                but which can be operated readily by one man through the use of
-                combinations of gears. The large size of the building was partly
-                necessitated because safety in handling high voltages requires
-                much space. Adjacent to the main room is an accessory wing
-                containing offices and generator rooms.
-              </Text>
-              <Text mb="0">
-                The equipment of the laboratory consists of six 350,000 volt
-                transformer units, two motor generator sets, and a switchboard.
-                The transformer units, which were presented by the General
-                Electric Company, weigh twenty-two tons apiece and are mounted
-                on cylinders of compressed paper. They are capable of producing
-                the highest voltage ever obtained at commercial frequency. The
-                University has set aside nearly 200 acres for the use of the
-                laboratory, making possible the construction of a seven mile
-                transmission line.
-              </Text>
-            </ScrollyBubble>
-          </Scrollytelling>
           <ImageGallery images={galleryImages} />
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
