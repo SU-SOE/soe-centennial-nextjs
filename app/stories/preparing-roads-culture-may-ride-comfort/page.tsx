@@ -186,7 +186,7 @@ export default function page() {
             hasBgImage
             bgColor="stone-dark"
             chapter="Decade 1"
-            heading="“Preparing Roads over which Culture May Ride in Comfort”"
+            heading="“Preparing roads over which culture may ride in comfort”"
             dek="1925 – 1934"
             bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
