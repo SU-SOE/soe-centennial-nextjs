@@ -111,20 +111,33 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
 
   return (
     <article className="rs-pb-5">
-      <Container as="section" width="site" py={8}>
-        <Heading leading="tight" size={6} as="h1" className="flex flex-col">
-          100 years
-          <br />
-          of impact
-        </Heading>
-        <Text className="max-w-800">
-          In the ten decades since its founding, the School of Engineering has
-          produced fundamental work in science and transformational
-          breakthroughs that have changed lives and shaped human society.
-          Experience the impact we’ve made through time in each of the events
-          you can interact with here.
-        </Text>
-      </Container>
+      <section>
+        <Container width="site" pt={8}>
+          <Heading
+            leading="tight"
+            size={6}
+            as="h1"
+            className="flex flex-col"
+            mb="0"
+          >
+            100 years
+            <br />
+            of impact
+          </Heading>
+        </Container>
+        <div className="flex w-full justify-start ml-10 md:ml-50 -mt-10 md:-mt-50">
+          <HorizontalLineart lineartType="timeline" />
+        </div>
+        <Container width="site" pb={8}>
+          <Text className="max-w-800">
+            In the ten decades since its founding, the School of Engineering has
+            produced fundamental work in science and transformational
+            breakthroughs that have changed lives and shaped human society.
+            Experience the impact we’ve made through time in each of the events
+            you can interact with here.
+          </Text>
+        </Container>
+      </section>
       {!isMounted ? (
         <div className="cc flex flex-row gap-10" aria-live="polite">
           <ClipLoader />

@@ -48,7 +48,7 @@ export const TimelineImage = ({
           className={cnb(
             "z-0 object-cover rounded-[20px] shadow-lg transform ease-in-out perspective-1000 duration-[1500ms] group-hocus-within:perspective-0 group-hocus-within:rotate-y-0 hocus:perspective-0 hocus:rotate-y-0",
             {
-              "contrast-50 brightness-100 perspective-0 rotate-y-0 outline-stone":
+              "contrast-[0.25] brightness-100 perspective-0 rotate-y-0 outline-stone":
                 isExpanded,
             },
           )}

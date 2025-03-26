@@ -3,7 +3,7 @@ import { Heading, Text } from "../Typography";
 import { TimelineImage } from "./TimelineImage";
 import { HTMLAttributes, forwardRef } from "react";
 import { AnimateInView } from "../Animate";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 type TimelineItemFullProps = HTMLAttributes<HTMLButtonElement> & {
   heading: string;
@@ -68,6 +68,13 @@ export const TimelineItemFull = forwardRef<
             className="lg:type-3 transition-all ease-in-out duration-1000 text-stone-dark underline underline-offset-[5px] decoration-digital-red-light group-hocus:decoration-stone-dark cursor-pointer decoration-[2.5px]"
           >
             {heading}
+            <span className="whitespace-nowrap">
+              &#65279;
+              <ArrowRightIcon
+                width={21}
+                className="transition-all ease-in-out duration-1000 ml-03em group-hocus:translate-x-02em text-digital-red-light inline-block"
+              />
+            </span>
           </Heading>
           <Text
             font="dm-mono"
