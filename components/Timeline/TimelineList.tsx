@@ -68,15 +68,18 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
 
   // Focus on the TimelineDetails when it is expanded
   useEffect(() => {
-    if (expandedUuid && detailsRef.current) {
-      setTimeout(() => {
-        detailsRef.current?.scrollIntoView({
+    if (!expandedUuid) return; // Exit if nothing is expanded
+
+    setTimeout(() => {
+      const targetElement = document.getElementById(expandedUuid);
+      if (targetElement) {
+        targetElement.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
-        detailsRef.current?.focus();
-      }, 0);
-    }
+        targetElement.focus();
+      }
+    }, 0);
   }, [expandedUuid]);
 
   // Define breakpoints using useMediaQuery hook
