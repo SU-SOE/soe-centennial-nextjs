@@ -134,10 +134,10 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
         <Container width="site" pb={8}>
           <Text className="max-w-800">
             In the ten decades since its founding, the School of Engineering has
-            produced fundamental work in science and transformational
-            breakthroughs that have changed lives and shaped human society.
-            Experience the impact we’ve made through time in each of the events
-            you can interact with here.
+            produced fundamental advances in science and transformational
+            breakthroughs that have changed lives and shaped society. Experience
+            the impact we’ve made through time in each of the events you can
+            interact with here.
           </Text>
         </Container>
       </section>
