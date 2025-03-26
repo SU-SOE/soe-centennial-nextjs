@@ -54,7 +54,9 @@ export const TimelineItemFull = forwardRef<
           size="full"
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}
-          className="w-1/2 h-full order-first md:order-last"
+          className={cnb("w-1/2 h-full order-first", {
+            "md:order-last": trapezoid === "right",
+          })}
         />
         <div className="flex flex-col items-start lg:rs-pt-2 lg:rs-px-1 w-1/2">
           <Heading
@@ -93,7 +95,11 @@ export const TimelineItemFull = forwardRef<
           )}
         </div>
         {isExpanded && (
-          <div className="absolute top-0 right-0 md:left-0 group">
+          <div
+            className={cnb("absolute top-0 right-0 group", {
+              " md:left-0": trapezoid === "right",
+            })}
+          >
             <span className="sr-only">Close {heading} details</span>
             <XMarkIcon
               width={50}

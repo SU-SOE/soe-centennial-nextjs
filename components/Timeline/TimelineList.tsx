@@ -134,8 +134,12 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
         <section>
           <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
             {rows.map((row, rowIndex) => {
-              const isFullWidthRow = (rowIndex + 1) % 3 === 0;
-              const fullwidthTrapezoid = rowIndex % 2 === 0 ? "left" : "right";
+              const isFullWidthRow = (rowIndex + 1) % 3 === 0; // Every third row is full-width
+              const isFullWidthLeftAligned =
+                Math.floor((rowIndex + 1) / 3) % 2 === 0; // Ensures proper alternation
+              const fullwidthTrapezoid = isFullWidthLeftAligned
+                ? "left"
+                : "right";
 
               const showSvg = (rowIndex + 1) % 3 === 1;
               const svgOptions = ["A", "B", "C", "D"];
