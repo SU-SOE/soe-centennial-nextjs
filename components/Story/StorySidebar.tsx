@@ -43,7 +43,7 @@ export const StorySidebar = ({
   ...props
 }: StorySidebarProps) => {
   return (
-    <div
+    <aside
       {...props}
       className={cnb(
         "@container w-full lg:max-w-[32rem] xl:max-w-400",
@@ -63,6 +63,6 @@ export const StorySidebar = ({
       <div className="w-full relative z-50 flex flex-col gap-20 justify-center items-center ">
         {children}
       </div>
-    </div>
+    </aside>
   );
 };
