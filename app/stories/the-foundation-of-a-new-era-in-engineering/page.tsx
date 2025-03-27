@@ -178,7 +178,7 @@ export default function page() {
             hasBgImage
             bgColor="red"
             chapter="Decade 2"
-            heading="The Foundation of a New Era in Engineering"
+            heading="The foundation of a new era in engineering"
             dek="1935 – 1944"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg"
             alt="A vintage black and white photograph depicting a diverse group of men and women gathered together posing for a photo."

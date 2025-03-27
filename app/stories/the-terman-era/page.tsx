@@ -461,7 +461,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
@@ -471,7 +471,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
@@ -481,7 +481,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/mark-2_nncexe_lwbmas.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC). "
         />
@@ -491,7 +491,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/mark-2-2_jf2xmm_ywrsnc.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
         />
@@ -501,7 +501,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986287/william-w-hansen_osvbzp_rdnqlf.jpg"
           caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL)."
         />
@@ -511,7 +511,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/felix-bloch_dg6ato_a4ybb7.jpg"
           caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
         />

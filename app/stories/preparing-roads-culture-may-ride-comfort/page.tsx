@@ -188,8 +188,7 @@ export default function page() {
             chapter="Decade 1"
             heading="“Preparing roads over which culture may ride in comfort”"
             dek="1925 – 1934"
-            bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726629/high_voltage_laboratory_oyh87g.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
             alt="A public demonstration of a 2.1 million volt test station lead by Harris J. Ryan standing to the right of a giant flame"
             caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
           />
@@ -302,7 +301,12 @@ export default function page() {
               this day.
             </Text>
           </OneCol>
-          <BgImageWrapper bgColor="blue" isTwoCol>
+          <BgImageWrapper
+            hasBgImage
+            bgColor="fog-light"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
+            isTwoCol
+          >
             <MediaCaptionImage
               animation="fadeIn"
               delay={0.5}

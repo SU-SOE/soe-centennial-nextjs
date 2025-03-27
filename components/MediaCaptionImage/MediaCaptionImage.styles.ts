@@ -65,13 +65,14 @@ export const imageCropsMobile = {
   free: "600x0",
 };
 
-export const captionBgColors = {
-  black: "bg-gc-black",
-  "black-60": "bg-black-true/60",
-  white: "bg-white",
-  transparent: "",
+export const captionTextColors = {
+  black: "text-black",
+  "black-60": "text-black-true/60",
+  "stone-dark": "text-stone-dark",
+  "fog-light": "text-fog-light",
+  white: "text-white",
 };
-export type CaptionBgColorType = keyof typeof captionBgColors;
+export type CaptionTextColorType = keyof typeof captionTextColors;
 
 export const root = (isFullHeight?: boolean) =>
   cnb(isFullHeight ? "h-full" : "");
@@ -96,10 +97,5 @@ export const image = (isParallax: boolean) =>
 
 export const captionWrapper = "mt-0";
 
-export const caption = (captionBgColor: CaptionBgColorType) =>
-  cnb(
-    "*:*:leading-display max-w-prose-wide first:*:*:mt-0",
-    !!captionBgColor && captionBgColor !== "transparent"
-      ? "px-1em py-08em text-fog"
-      : "pt-06em text-stone-dark",
-  );
+export const caption =
+  "*:*:leading-display max-w-prose-wide first:*:*:mt-0 pt-06em";

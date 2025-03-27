@@ -9,7 +9,7 @@
  * @property {string} [alt] - The alt text for the image.
  * @property {React.ReactNode} [caption] - The caption for the image.
  * @property {boolean} [isCaptionInset] - If true, the caption will be inset.
- * @property {styles.CaptionBgColorType} [captionBgColor="transparent"] - The background color of the caption.
+ * @property {styles.captionTextColorType} [captionTextColor="transparent"] - The background color of the caption.
  * @property {boolean} [rounded=false] - If true, the image will have rounded corners.
  * @property {ImageAspectRatioType} [aspectRatio="16x9"] - The aspect ratio of the image.
  * @property {boolean} [isFullHeight=false] - If true, the image will take the full height of its container.
@@ -32,7 +32,7 @@
  *   aspectRatio="4x3"
  *   isFullHeight={true}
  *   rounded={true}
- *   captionBgColor="white"
+ *   captionTextColor="white"
  * />
  */
 
@@ -63,7 +63,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     alt?: string;
     caption?: React.ReactNode;
     isCaptionInset?: boolean;
-    captionBgColor?: styles.CaptionBgColorType;
+    captionTextColor?: styles.CaptionTextColorType;
     rounded?: boolean;
     aspectRatio?: ImageAspectRatioType;
     isFullHeight?: boolean;
@@ -87,7 +87,7 @@ const MediaCaptionImage = ({
   spacingTop,
   spacingBottom,
   isCaptionInset,
-  captionBgColor = "transparent",
+  captionTextColor = "stone-dark",
   rounded = false,
   animation = "none",
   isPortriat = false,
@@ -131,10 +131,16 @@ const MediaCaptionImage = ({
               className={cnb(
                 isCaptionInset ? "px-18" : "w-full",
                 styles.captionWrapper,
-                styles.captionBgColors[captionBgColor],
               )}
             >
-              <Text className={styles.caption(captionBgColor)}>{caption}</Text>
+              <Text
+                className={cnb(
+                  styles.caption,
+                  styles.captionTextColors[captionTextColor],
+                )}
+              >
+                {caption}
+              </Text>
             </figcaption>
           )}
         </figure>
