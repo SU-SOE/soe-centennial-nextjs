@@ -17,7 +17,7 @@
  * <ExploreMore stories={storyData} />
  */
 import React from "react";
-import { TwoCol,ThreeCol } from "../Layout";
+import { TwoCol, ThreeCol } from "../Layout";
 import { StoryCard, StoryCardProps } from "./StoryCard";
 import { Container, WidthType } from "../Container";
 import { Button } from "../Cta";
