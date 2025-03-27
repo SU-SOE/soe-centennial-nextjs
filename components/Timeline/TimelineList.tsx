@@ -68,18 +68,21 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
 
   // Focus on the TimelineDetails when it is expanded
   useEffect(() => {
-    if (!expandedUuid) return; // Exit if nothing is expanded
+    if (!expandedUuid) return;
 
     setTimeout(() => {
-      const targetElement = document.getElementById(expandedUuid);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        targetElement.focus();
+      const detailsElement = document.getElementById(`details-${expandedUuid}`);
+
+      if (detailsElement) {
+        const yOffset = -20; // Adjust this if needed
+        const yPosition =
+          detailsElement.getBoundingClientRect().top + window.scrollY + yOffset;
+
+        window.scrollTo({ top: yPosition, behavior: "smooth" });
+
+        detailsElement.focus({ preventScroll: true });
       }
-    }, 0);
+    }, 100); // Delay to ensure rendering is complete
   }, [expandedUuid]);
 
   // Define breakpoints using useMediaQuery hook
@@ -265,6 +268,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                         tabIndex={-1}
                       >
                         <TimelineDetails
+                          id={`details-${expandedUuid}`}
                           {...timelineData.find(
                             (item) => item.uuid === expandedUuid,
                           )!}

@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { v4 as uuidv4 } from "uuid";
 
 export type TimelineItem = {
   year: string;
@@ -12,7 +11,7 @@ export type TimelineItem = {
   uuid: string;
 };
 
-export async function loadTimelineData(): Promise<TimelineItem[]> {
+export async function loadTimelineData() {
   const isPreviewOrDev =
     process.env.VERCEL_ENV === "preview" ||
     process.env.NODE_ENV === "development";
@@ -31,13 +30,7 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
       return [];
     }
 
-    const allTimelineData = parsedData
-      .filter(isTimelineItem)
-      .map((item) => assignUuidAndAnchor(item));
-
-    // Sort all timeline items by year
-    allTimelineData.sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    return allTimelineData;
+    return parsedData.filter(isTimelineItem);
   } catch (error) {
     console.error(`Error reading or parsing JSON file: ${filePath}`);
     console.error(error);
@@ -45,31 +38,7 @@ export async function loadTimelineData(): Promise<TimelineItem[]> {
   }
 }
 
-function sanitizeForUrl(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "") // Remove non-alphanumeric characters
-    .trim()
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-}
-
-function assignUuidAndAnchor(
-  item: Omit<TimelineItem, "uuid" | "anchor">,
-): TimelineItem {
-  if (!item.heading) {
-    throw new Error(`Missing heading for timeline item with year ${item.year}`);
-  }
-
-  const sanitizedHeading = sanitizeForUrl(item.heading);
-  const anchor = `${item.year}-${sanitizedHeading}`;
-  const uuid = uuidv4(); // Always generate a new UUID
-
-  return { ...item, uuid, anchor };
-}
-
-function isTimelineItem(
-  data: unknown,
-): data is Omit<TimelineItem, "uuid" | "anchor"> {
+function isTimelineItem(data: unknown): data is TimelineItem {
   if (typeof data !== "object" || data === null) return false;
   const item = data as Partial<TimelineItem>;
   const isValid =

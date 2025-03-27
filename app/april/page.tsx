@@ -1,8 +1,5 @@
 import { Masthead } from "@/components/Masthead";
-import {
-  TimelineHorizontalCard,
-  TimelineCardProps,
-} from "@/components/Timeline";
+import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { StoryCardProps, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
@@ -40,28 +37,18 @@ const events = [
   },
 ];
 
-const timelineHorizontalCards: TimelineCardProps[] = [
+const timelineHorizontalCards: { align: "right" | "left"; anchor: string }[] = [
   {
     align: "left",
-    heading: "Stanford Instructional Television Network (SITN)",
-    year: "1969",
-    image:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265159/SC0122_s1_b278_f04_C388-13_pyqfce.jpg",
+    anchor: "1969-stanford-instructional-television-network-sitn",
   },
   {
     align: "right",
-    heading: "America's first female African American astronaut",
-    year: "1992",
-    image:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265210/STS047-37-003_large_rk5g83.jpg",
+    anchor: "1992-americas-first-female-african-american-astronaut",
   },
-
   {
     align: "left",
-    heading: "The Stanford Dish",
-    year: "1961",
-    image:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265140/SC0122_s1_b267_f02_0115-01_uc3pdv.jpg",
+    anchor: "1961-the-stanford-dish",
   },
 ];
 

@@ -1,23 +1,24 @@
 import React from "react";
 import { Container } from "@/components/Container";
-import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { TimelineCard } from "./TimelineCard";
 import { Slideshow } from "../Slideshow/Slideshow";
 import { Button } from "../Cta";
 import { AnimateInView } from "../Animate";
+import fetchTimelineData from "@/utilities/fetchTimelineData";
+import { TimelineCardProps } from "./Timeline.types";
 
 type TimelineFeatureProps = {
   anchors: string[];
 };
 
 export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
-  // Fetch the timeline data
-  const timelineData = await loadTimelineData();
-
-  // Filter timeline items based on the provided uuids
-  const featureTimelineData = timelineData.filter((item) =>
-    anchors.includes(item.anchor),
-  );
+  // Fetch the timeline data and filter timeline items based on the provided uuids
+  const rawTimelineData = await fetchTimelineData(anchors);
+  const featureTimelineData: TimelineCardProps[] = Array.isArray(
+    rawTimelineData,
+  )
+    ? rawTimelineData
+    : [rawTimelineData];
 
   return (
     <Container width="site" id="featured-timeline">

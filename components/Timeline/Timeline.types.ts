@@ -25,7 +25,8 @@ export type TimelineCardProps = HTMLAttributes<HTMLDivElement> &
     heading: string;
     year: string;
     body?: string;
-    anchor?: string;
+    anchor: string;
+    uuid?: string;
     image: string;
     bgColor?: BgColorType;
     align?: "right" | "left";

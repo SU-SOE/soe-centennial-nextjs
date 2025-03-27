@@ -16,8 +16,14 @@ import {
 import { Trapezoid } from "../images/trapezoid";
 import { TimelineAnimateImage } from "./TimelineAnimateImage";
 import { Link } from "@/components/Cta/Link";
+import fetchTimelineData from "@/utilities/fetchTimelineData";
 
-export const TimelineHorizontalCard = ({
+type TimelineHorziontalCard = Omit<
+  types.TimelineCardProps,
+  "heading" | "year" | "image"
+>;
+
+export const TimelineHorizontalCard = async ({
   as: AsComponent = "div",
   py,
   pt = 9,
@@ -25,11 +31,7 @@ export const TimelineHorizontalCard = ({
   mt = 3,
   mb,
   my,
-  heading,
-  year,
-  body,
-  anchor = "/",
-  image,
+  anchor,
   animation,
   delay,
   bgColor,
@@ -37,7 +39,16 @@ export const TimelineHorizontalCard = ({
   align = "left",
   className,
   ...props
-}: types.TimelineCardProps) => {
+}: TimelineHorziontalCard) => {
+  // Fetch the timeline data and filter timeline items based on the provided uuids
+  const timelineItem = await fetchTimelineData(anchor);
+  const {
+    heading,
+    year,
+    anchor: link,
+    image,
+  } = Array.isArray(timelineItem) ? timelineItem[0] : timelineItem;
+
   const animationType =
     animation || align === "left" ? "slideInFromLeft" : "slideInFromRight";
   return (
@@ -69,7 +80,7 @@ export const TimelineHorizontalCard = ({
               <Link
                 linkType="timeline"
                 className="font-inherit stretched-link group-hover/cardroot:decoration-stone-dark group-focus-within:decoration-stone-dark"
-                href={`/timeline#${anchor}`}
+                href={`/timeline#${link}`}
               >
                 {heading}
                 <span className="whitespace-nowrap">
