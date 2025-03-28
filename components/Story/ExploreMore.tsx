@@ -22,6 +22,7 @@ import { StoryCard, StoryCardProps } from "./StoryCard";
 import { Container, WidthType } from "../Container";
 import { Button } from "../Cta";
 import { Heading } from "../Typography";
+import { cnb } from "cnbuilder";
 
 type ExploreMoreProps = {
   stories: StoryCardProps[];
@@ -45,7 +46,12 @@ export const ExploreMore = ({
   const AsComponent = isThreeCol ? ThreeCol : TwoCol;
 
   return (
-    <Container width={width || "full"} mb={10} className="py-20" {...props}>
+    <Container
+      {...props}
+      as="article"
+      width={width || "full"}
+      className={cnb("py-20")}
+    >
       <Heading>{sectionHeading}</Heading>
       <AsComponent className="max-w-[140rem]">
         {stories.map((story, index) => (

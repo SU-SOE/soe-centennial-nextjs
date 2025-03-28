@@ -118,7 +118,7 @@ export default function Home() {
           width="full"
           pt={8}
           pb={8}
-          mb={5}
+          mb={6}
         >
           <article className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800">
             <Heading font="dm-sans" size={2} weight="semibold" align="center">
@@ -132,7 +132,7 @@ export default function Home() {
           </article>
         </Container>
         <StoryFeature>
-          <div className="rs-mb-8 w-full max-w-1400 mx-auto">
+          <div className="rs-mb-2 w-full max-w-1400 mx-auto">
             <AnimateInView animation="slideUp" duration={2}>
               <div className="w-full max-w-1000">
                 <Text font="dm-mono" size="f1" mb={1}>

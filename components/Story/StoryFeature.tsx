@@ -7,7 +7,7 @@ type StoryFeatureProps = HTMLAttributes<HTMLDivElement> & {
 
 export const StoryFeature = ({ children, ...props }: StoryFeatureProps) => {
   return (
-    <Container {...props} width="full" className="rs-px-1" mb={9}>
+    <Container {...props} width="full" className="rs-px-6" mb={9}>
       <Container
         width="site"
         py={8}
