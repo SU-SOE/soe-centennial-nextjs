@@ -78,7 +78,7 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00002098_0003_z3b8uv.jpg",
-    alt: "Several men engaged in conversation around two tables, each table holds a large speakers.",
+    alt: "An audience watches attentively as two men engage in conversation around two tables, each table holding a prototype of a speaker built of a large shiny silver disk.",
     caption:
       "Members of Stanford’s Army Specialized Training Program conduct  an electronics display outside the engineering buildings, January 1944. | Special Collections  & University Archives.",
   },
@@ -231,11 +231,11 @@ export default function page() {
             </OneCol>
             <StorySidebar hasLineArt lineArtType="medium">
               <MediaCaptionImage
-                isPortriat
+                isPortrait
                 rounded
                 aspectRatio="1x1"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/ck707sy2214_yejfci.jpg"
-                alt="Portriat of Samuel B. Morris"
+                alt="Vintage portrait of Samuel B. Morris"
                 caption="Samuel B. Morris, professor of civil engineering and the second dean of the School of Engineering from 1936 to 1944, adjusted course schedules and curriculum during the Great Depression and World War II to help students who needed to work or study during the summer. Hundreds of soldiers enrolled in 1943 as part of the Army Specialized Training Program. | Special Collections & University Archives."
               />
             </StorySidebar>
@@ -267,7 +267,7 @@ export default function page() {
             rounded
             aspectRatio="3x2"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/kn908nr7305_ffxjaj.jpg"
-            alt="Portriat of Frederick Terman"
+            alt="Vintage portrait of Frederick Terman"
             caption="Frederick Terman, 1938. Terman became head of the Department of Electrical Engineering in 1937. He served as dean of the School of Engineering from 1944 to 1958 and as provost of the university from 1955 to 1965. | Special Collections & University Archives."
             className="max-w-800 mx-auto rs-mb-5"
           />
@@ -402,7 +402,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/hewlett_packard_yijywt.jpg"
-              alt="A pair of men, William Hewlett and David Packerd, standing in front of the first precision audio oscillator."
+              alt="William Hewlett and David Packerd, standing in front of the first precision audio oscillator."
               caption="William Hewlett and David Packard (seated), 1939. As graduate students in the School of Engineering, they developed the first precision audio oscillator, a low-cost method of measuring audio frequencies. The device became the foundation for their company, known around the world today as HP. | Courtesy Hewlett-Packard Corporate Archives."
             />
             <MediaCaptionImage
@@ -411,7 +411,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zx844pk9013_viuv37.jpg"
-              alt="A pair of men, Wiilliam Hewlett and David Parkard, smiling at one another as they work in their shop"
+              alt="Wiilliam Hewlett and David Parkard, smiling at one another as they work in their shop"
               caption="William Hewlett and David Packard working together in their shop, circa 1942. | Special Collections & University Archives."
             />
           </TwoCol>
@@ -467,7 +467,7 @@ export default function page() {
               rounded
               aspectRatio="3x4"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509511/nz029jf0057_optimized_eoovla.jpg"
-              alt="David Packard crouch on grass outdoors"
+              alt="David Packard, wearing athletic attire, crouches on grass outdoors, poised to sprint forward."
             />
             <Quote
               source="— David Packard"

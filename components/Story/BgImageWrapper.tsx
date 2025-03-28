@@ -32,7 +32,6 @@ import { cnb } from "cnbuilder";
 import * as styles from "@/components/Container/Container.styles";
 
 type BgImageWrapperProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
   bgColor?: BgColorType;
   hasBgImage?: boolean;
   isImgOffset?: boolean;
@@ -42,6 +41,7 @@ type BgImageWrapperProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 export const BgImageWrapper = ({
+  className,
   children,
   bgColor,
   hasBgImage = false,
@@ -52,7 +52,12 @@ export const BgImageWrapper = ({
   ...props
 }: BgImageWrapperProps) => {
   return (
-    <Container {...props} width="full" mb={5} className="relative">
+    <Container
+      {...props}
+      width="full"
+      mb={5}
+      className={cnb("relative", className)}
+    >
       <Container bgColor={bgColor} width="site" pt={7} pb={7}>
         {hasBgImage && src && (
           <div className="h-full w-full absolute top-0 left-0 z-0">

@@ -77,15 +77,15 @@ export type CaptionTextColorType = keyof typeof captionTextColors;
 export const root = (isFullHeight?: boolean) =>
   cnb(isFullHeight ? "h-full" : "");
 
-export const figure = (isPortriat: boolean) =>
+export const figure = (isPortrait: boolean) =>
   cnb("flex flex-col", {
-    "gap-20 sm:flex-row lg:flex-col": isPortriat,
+    "gap-20 sm:flex-row lg:flex-col": isPortrait,
   });
 
-export const imageWrapper = (isPortriat: boolean, rounded: boolean) =>
+export const imageWrapper = (isPortrait: boolean, rounded: boolean) =>
   cnb("relative overflow-hidden", {
-    "w-100 md:w-180 lg:w-full h-100 md:h-180 lg:h-full": isPortriat,
-    "w-full h-full": !isPortriat,
+    "w-100 md:w-180 lg:w-full h-100 md:h-180 lg:h-full": isPortrait,
+    "w-full h-full": !isPortrait,
     "rounded-2xl": rounded,
   });
 

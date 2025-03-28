@@ -80,7 +80,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
   };
 
   return (
-    <article className="cc" aria-label="Image Gallery">
+    <aside className="cc" aria-label="Image Gallery">
       <div className="flex flex-col w-full max-w-1300 mx-auto">
         {/* Main Image Display */}
         <div
@@ -169,7 +169,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
           ))}
         </ul>
       </div>
-    </article>
+    </aside>
   );
 };
 

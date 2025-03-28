@@ -283,7 +283,7 @@ export default function page() {
         <StorySidebar hasLineArt>
           <MediaCaptionImage
             rounded
-            isPortriat
+            isPortrait
             className="mb-0"
             aspectRatio="1x1"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
@@ -291,7 +291,7 @@ export default function page() {
           />
           <MediaCaptionImage
             rounded
-            isPortriat
+            isPortrait
             className="mb-0"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986291/skilling_umi5ca_pnvr55.jpg"
             aspectRatio="1x1"

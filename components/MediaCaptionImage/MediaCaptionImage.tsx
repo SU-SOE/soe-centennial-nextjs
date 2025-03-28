@@ -14,7 +14,7 @@
  * @property {ImageAspectRatioType} [aspectRatio="16x9"] - The aspect ratio of the image.
  * @property {boolean} [isFullHeight=false] - If true, the image will take the full height of its container.
  * @property {boolean} [isLarge=false] - If true, the image will be displayed larger.
- * @property {boolean} [isPortriat=false] - If true, the image will be displayed in portrait mode.
+ * @property {boolean} [isPortrait=false] - If true, the image will be displayed in portrait mode.
  * @property {"site" | "full"} [boundingWidth="full"] - The bounding width of the image.
  * @property {WidthType} [width] - The width of the image.
  * @property {PaddingType} [spacingTop] - The top spacing of the image.
@@ -67,7 +67,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     rounded?: boolean;
     aspectRatio?: ImageAspectRatioType;
     isFullHeight?: boolean;
-    isPortriat?: boolean;
+    isPortrait?: boolean;
     boundingWidth?: "site" | "full";
     width?: WidthType;
     spacingTop?: PaddingType;
@@ -90,7 +90,7 @@ const MediaCaptionImage = ({
   captionTextColor = "stone-dark",
   rounded = false,
   animation = "none",
-  isPortriat = false,
+  isPortrait = false,
   delay,
   duration,
   className,
@@ -105,11 +105,11 @@ const MediaCaptionImage = ({
       className={cnb(className, styles.root(isFullHeight))}
     >
       <AnimateInView animation={animation} delay={delay} duration={duration}>
-        <figure className={styles.figure(isPortriat)}>
+        <figure className={styles.figure(isPortrait)}>
           <div
             className={cnb(
               imageAspectRatios[aspectRatio],
-              styles.imageWrapper(isPortriat, rounded),
+              styles.imageWrapper(isPortrait, rounded),
             )}
           >
             {!!imageSrc && (

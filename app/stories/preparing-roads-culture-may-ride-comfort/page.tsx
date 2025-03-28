@@ -318,17 +318,19 @@ export default function page() {
               alt="A factory worker engages with a miniature ore-treating plant in a mining lab"
               caption="This undated photograph shows a miniature ore-treating plant in the mining lab. Stanford’s Department of Mining and Metallurgy was created in 1919 from the Geology and Mining Department, one of Stanford’s oldest departments, although the physics of metals had been studied since 1903. Study of metals would be the department’s main subject for nearly half a century. | Berton W. Crandall/Hoover Institution Library & Archives."
             />
-            <MediaCaptionImage
-              animation="fadeIn"
-              delay={0.2}
-              duration={1}
-              rounded
-              isCaptionInset
-              aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/Engineering_faculty_c1920_sjiqvd.jpg"
-              alt="Black and white photo of two rows of men in three-pieced suits. Three sitting in front and six men sitting in back."
-              caption="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement. Marx is seated in the center of the bottom row. | Courtesy Barbara Wallace."
-            />
+            <div className="flex h-fit lg:h-full items-center justify-center">
+              <MediaCaptionImage
+                animation="fadeIn"
+                delay={0.2}
+                duration={1}
+                rounded
+                isCaptionInset
+                aspectRatio="4x3"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/Engineering_faculty_c1920_sjiqvd.jpg"
+                alt="Black and white photo of two rows of men in three-pieced suits. Three sitting in front and six men sitting in back."
+                caption="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement. Marx is seated in the center of the bottom row. | Courtesy Barbara Wallace."
+              />
+            </div>
           </BgImageWrapper>
           <OneCol className="rs-mt-6 rs-mb-6">
             <Text>
@@ -515,11 +517,11 @@ export default function page() {
             </OneCol>
             <StorySidebar hasLineArt>
               <MediaCaptionImage
-                isPortriat
+                isPortrait
                 rounded
                 aspectRatio="1x1"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/theodore_hoover_pv6obq.jpg"
-                alt="Portriat of Theodore Jesse Hoover (1871-1955)"
+                alt="Portrait of Theodore Jesse Hoover (1871-1955)"
                 caption="Theodore Jesse Hoover (1871-1955) graduated from Stanford in 1901 with a BA degree in geology and mining. After a career in the international mining industry, he returned to Stanford in 1919 as a professor of mining and metallurgy. He played a pivotal role in the formation of the new School of Engineering and served as its first dean from 1925 until his retirement in 1936. Hoover was the elder brother of Herbert Hoover, one of the first graduates of Stanford University in 1895 and the 31st President of the United States from 1929 to 1933. | Special Collections & University Archives."
               />
             </StorySidebar>
@@ -688,11 +690,11 @@ export default function page() {
               </OneCol>
               <StorySidebar hasLineArt lineArtType="short">
                 <MediaCaptionImage
-                  isPortriat
+                  isPortrait
                   rounded
                   aspectRatio="1x1"
                   imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/william_durand_o6qndb.jpg"
-                  alt="Portriat of William F. Durand"
+                  alt="Portrait of William F. Durand"
                   caption="William F. Durand. | Special Collections & University Archives."
                 />
               </StorySidebar>
