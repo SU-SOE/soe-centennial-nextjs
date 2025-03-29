@@ -7,8 +7,14 @@ import { Heading, Text } from "@/components/Typography";
 import { cnb } from "cnbuilder";
 import { Link } from "@/components/Cta/Link";
 import { ChapterLabel } from "../Story/ChapterLabel";
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import * as styles from "@/components/Container/Container.styles";
+import { StoryPosterCard } from "../Story";
 
 const CardContent = ({
   bgColor,
@@ -25,13 +31,17 @@ const CardContent = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start end", "center start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [300, -300]);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.9, 1],
+    [100, 80, 50, -100],
+  );
   const opacity = useTransform(
     scrollYProgress,
-    [0.25, 0.5, 0.6, 1],
+    [0.25, 0.6, 0.68, 1],
     [0, 0, 1, 1],
   );
 
@@ -116,6 +126,7 @@ export const PosterCard = ({
   link,
   ...props
 }: PosterCardProps) => {
+  const prefersReducedMotion = useReducedMotion();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -124,7 +135,24 @@ export const PosterCard = ({
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const borderRadius = useTransform(scrollYProgress, [0, 0.7], [0, 30]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.3, 0.8], [0, 1, 1]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.32, 0.38, 0.5],
+    [0, 0, 1, 1],
+  );
+
+  if (prefersReducedMotion) {
+    return (
+      <StoryPosterCard
+        {...props}
+        bgColor={bgColor}
+        src={src}
+        alt={alt}
+        link={link}
+        hasBgImage
+      />
+    );
+  }
 
   return (
     <article className="w-full rs-mb-3 h-[150vh] relative group transition duration-1000">

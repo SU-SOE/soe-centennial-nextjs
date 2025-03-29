@@ -6,7 +6,7 @@ import {
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { TwoCol } from "@/components/Layout";
-import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
+import { StoryCard, StoryCardProps } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -86,16 +86,6 @@ export default function Home() {
       <Masthead bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
       <PosterCard
-        heading="The foundation of a new era in engineering"
-        superhead="100 Years of Impact"
-        body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
-        src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
-        caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-        chapter="Chapter 1"
-        link="/"
-        hasBgImage
-      />
-      <StoryPosterCard
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
