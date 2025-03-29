@@ -28,13 +28,17 @@ const CardContent = ({
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 0.8, 1], [100, 100, -300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.75, 0.8], [1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [300, -300]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0.25, 0.5, 0.6, 1],
+    [0, 0, 1, 1],
+  );
 
   return (
     <motion.div
       ref={ref}
-      className="absolute left-0 top-0 cc flex justify-center items-center w-full pt-[15rem] lg:pt-[20rem] z-[-10]"
+      className="cc flex justify-center items-center w-full pt-[15rem] lg:pt-[20rem] z-[-10]"
       style={{ y, opacity }}
     >
       <div className="relative flex flex-col items-center justify-between md:flex-row relative md:grid-gap w-full max-w-300 lg:max-w-900 mx-auto 2xl:max-w-1200">
@@ -120,7 +124,7 @@ export const PosterCard = ({
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const borderRadius = useTransform(scrollYProgress, [0, 0.7], [0, 30]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.8], [1, 0, 0]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.3, 0.8], [0, 1, 1]);
 
   return (
     <article className="w-full rs-mb-3 h-[150vh] relative group transition duration-1000">
