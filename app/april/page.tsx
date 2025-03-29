@@ -6,7 +6,7 @@ import {
 import { PageTitle } from "@/components/PageTitle";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
 import { TwoCol } from "@/components/Layout";
-import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
+import { StoryCard, StoryCardProps } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -16,6 +16,7 @@ import { AnimateInView } from "@/components/Animate";
 import { Link } from "@/components/Cta/Link";
 import { ExploreMore } from "@/components/Story/ExploreMore";
 import { Metadata } from "next";
+import { PosterCard } from "@/components/PosterCard/PosterCard";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -84,7 +85,7 @@ export default function Home() {
     <div>
       <Masthead bgColor="fog-light" />
       <PageTitle heading="100 years of" bigText="Impact" />
-      <StoryPosterCard
+      <PosterCard
         heading="The foundation of a new era in engineering"
         superhead="100 Years of Impact"
         body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
