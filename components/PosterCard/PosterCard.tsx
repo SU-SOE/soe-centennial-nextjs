@@ -28,13 +28,14 @@ const CardContent = ({
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+  const y = useTransform(scrollYProgress, [0, 0.8, 1], [100, 100, -300]);
+  const opacity = useTransform(scrollYProgress, [0, 0.75, 0.8], [1, 1, 0]);
 
   return (
     <motion.div
       ref={ref}
-      className="cc flex justify-center items-center w-full pt-[15rem] lg:pt-[20rem] z-[-10]"
-      style={{ y }}
+      className="absolute left-0 top-0 cc flex justify-center items-center w-full pt-[15rem] lg:pt-[20rem] z-[-10]"
+      style={{ y, opacity }}
     >
       <div className="relative flex flex-col items-center justify-between md:flex-row relative md:grid-gap w-full max-w-300 lg:max-w-900 mx-auto 2xl:max-w-1200">
         <div
@@ -119,6 +120,7 @@ export const PosterCard = ({
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const borderRadius = useTransform(scrollYProgress, [0, 0.7], [0, 30]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.8], [1, 0, 0]);
 
   return (
     <article className="w-full rs-mb-3 h-[150vh] relative group transition duration-1000">
@@ -140,11 +142,12 @@ export const PosterCard = ({
               fill
               sizes="100vw"
             />
-            <div
+            <motion.div
               className={cnb("absolute h-full w-full bg-opacity-80 z-10", {
                 "bg-stone-dark": bgColor === "stone-dark",
                 "bg-cardinal-red-dark": bgColor === "red",
               })}
+              style={{ opacity }}
             />
           </div>
         )}
