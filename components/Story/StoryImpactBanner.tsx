@@ -47,6 +47,7 @@ import Image from "next/image";
 import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
 import { ChapterLabel } from "./ChapterLabel";
+import { AnimateInView } from "../Animate";
 
 type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -118,7 +119,8 @@ export const StoryImpactBanner = ({
             "w-full max-w-[1100px] mx-auto": isVertical,
           })}
         >
-          <div
+          <AnimateInView
+            animation="sharpen"
             className={cnb("flex flex-col text-center rs-mb-5 rs-mt-7", {
               "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isVertical,
               "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
@@ -146,14 +148,16 @@ export const StoryImpactBanner = ({
                 {byline}
               </Text>
             )}
-          </div>
+          </AnimateInView>
           <FlexBox
             direction="col"
             className={cnb("w-full h-full", {
               "md:1/3 lg:w-1/2": !isVertical,
             })}
           >
-            <div
+            <AnimateInView
+              animation="slideUp"
+              delay={0.3}
               className={cnb(
                 "w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10",
                 { "aspect-[3/2]": isVertical },
@@ -161,7 +165,7 @@ export const StoryImpactBanner = ({
               )}
             >
               <Image src={src} alt={alt} fill className="object-cover" />
-            </div>
+            </AnimateInView>
             {bgColor === "white" && (
               <figcaption className="mt-13">
                 <Text variant="caption">{caption}</Text>

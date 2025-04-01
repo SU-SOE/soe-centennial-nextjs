@@ -43,7 +43,7 @@ export const ExploreMore = ({
   isThreeCol,
   ...props
 }: ExploreMoreProps) => {
-  const delays = [0.8, 1.5, 0.5];
+  const delays = [0.25, 0.5, 0.75];
   const AsComponent = isThreeCol ? ThreeCol : TwoCol;
 
   return (
@@ -58,8 +58,7 @@ export const ExploreMore = ({
           <StoryCard
             key={index}
             animation="slideUp"
-            duration={2}
-            delay={delays[index] || 0.5}
+            delay={delays[index] || 0.3}
             {...story}
           />
         ))}

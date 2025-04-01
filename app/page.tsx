@@ -133,7 +133,7 @@ export default function Home() {
         </Container>
         <StoryFeature>
           <div className="rs-mb-2 w-full max-w-1400 mx-auto">
-            <AnimateInView animation="slideUp" duration={2}>
+            <AnimateInView animation="slideUp">
               <div className="w-full max-w-1000">
                 <Text font="dm-mono" size="f1" mb={1}>
                   Explore decade stories

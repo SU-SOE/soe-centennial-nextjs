@@ -19,7 +19,7 @@ export const ScrollyBubble = ({
   children,
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className="p-36 bg-white text-stone-dark rounded-[20px]">
+    <div className="p-36 bg-white text-stone-dark rounded-[20px] lg:min-w-650">
       {children}
     </div>
   );

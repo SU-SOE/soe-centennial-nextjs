@@ -51,8 +51,11 @@ export const TimelineHorizontalCard = async ({
     uuid,
   } = Array.isArray(timelineItem) ? timelineItem[0] : timelineItem;
 
-  const animationType =
+  const imageAnimation =
     animation || align === "left" ? "slideInFromLeft" : "slideInFromRight";
+  const textAnimation =
+    animation || align === "left" ? "slideInFromRight" : "slideInFromLeft";
+
   return (
     <AsComponent
       {...props}
@@ -71,7 +74,11 @@ export const TimelineHorizontalCard = async ({
       )}
     >
       <FlexBox alignItems="center" className={styles.wrapper(align, true)}>
-        <div className={cnb(styles.contentWrapper(true))}>
+        <AnimateInView
+          animation={textAnimation}
+          duration={0.8}
+          className={cnb(styles.contentWrapper(true))}
+        >
           {heading && (
             <Heading
               leading="normal"
@@ -101,18 +108,17 @@ export const TimelineHorizontalCard = async ({
               {year}
             </Text>
           )}
-        </div>
+        </AnimateInView>
         {image && (
           <div className={styles.imageWrapper(align, true)}>
             <AnimateInView
-              duration={0.8}
-              delay={0.6}
-              animation={animationType}
+              delay={0.3}
+              animation={imageAnimation}
               className={styles.trapezoidWrapper(align)}
             >
               <Trapezoid className={styles.trapezoidSvg(align)} />
             </AnimateInView>
-            <AnimateInView duration={1} delay={1.5} animation={animationType}>
+            <AnimateInView animation={imageAnimation}>
               <TimelineAnimateImage
                 src={image}
                 alt={alt}

@@ -112,10 +112,10 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
             </motion.div>
           </AnimatePresence>
 
-          <ul className="list-none *:p-0 *:m-0">
+          <ul className="list-none*:m-0">
             <li>
               <button
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 transition p-6 rounded-full bg-stone-dark text-white border-white border-2 hocus:border-digital-red-xlight hocus:text-digital-red-xlight"
+                className="rs-ml-0 absolute left-2 top-1/2 transform -translate-y-1/2 transition p-6 rounded-full bg-stone-dark text-white border-white border-2 hocus:border-digital-red-xlight hocus:text-digital-red-xlight"
                 onClick={prevImage}
                 aria-label="Previous image"
               >
@@ -124,7 +124,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
             </li>
             <li>
               <button
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 transition p-6 rounded-full bg-stone-dark text-white border-white border-2 hocus:border-digital-red-xlight hocus:text-digital-red-xlight"
+                className="rs-mr-0 absolute right-2 top-1/2 transform -translate-y-1/2 transition p-6 rounded-full bg-stone-dark text-white border-white border-2 hocus:border-digital-red-xlight hocus:text-digital-red-xlight"
                 onClick={nextImage}
                 aria-label="Next image"
               >
