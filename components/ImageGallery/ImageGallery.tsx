@@ -108,6 +108,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                 className="object-contain shadow-lg bg-stone-dark"
                 aria-labelledby={`image-caption-${selectedIndex}`}
               />
+              <p>{images[selectedIndex].alt}</p>
             </motion.div>
           </AnimatePresence>
 
