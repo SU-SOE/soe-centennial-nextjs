@@ -67,22 +67,50 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
   }, [timelineData]);
 
   // Focus on the TimelineDetails when it is expanded
+  const lastFocusedElementRef = useRef<HTMLElement | null>(null);
+
+  const handleToggle = (uuid: string, anchor: string) => {
+    // Store the currently focused element before expanding
+    lastFocusedElementRef.current = document.activeElement as HTMLElement;
+    setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
+    setItemid((currentAnchor) => (currentAnchor === anchor ? "" : anchor));
+  };
+
   useEffect(() => {
-    if (!expandedUuid) return;
+    if (expandedUuid) {
+      setTimeout(() => {
+        const detailsElement = document.getElementById(
+          `details-${expandedUuid}`,
+        );
 
-    setTimeout(() => {
-      const detailsElement = document.getElementById(`details-${expandedUuid}`);
+        if (detailsElement) {
+          const yOffset = -20;
+          const yPosition =
+            detailsElement.getBoundingClientRect().top +
+            window.scrollY +
+            yOffset;
 
-      if (detailsElement) {
-        const yOffset = -20; // Adjust this if needed
-        const yPosition =
-          detailsElement.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: yPosition, behavior: "smooth" });
 
-        window.scrollTo({ top: yPosition, behavior: "smooth" });
+          // Find the first focusable element inside `TimelineDetails`
+          const focusableElements =
+            detailsElement.querySelectorAll<HTMLElement>(
+              "a, button, [tabindex]:not([tabindex='-1'])",
+            );
 
-        detailsElement.focus({ preventScroll: true });
-      }
-    }, 100); // Delay to ensure rendering is complete
+          if (focusableElements.length > 0) {
+            focusableElements[0].focus();
+          } else {
+            detailsElement.focus({ preventScroll: true });
+          }
+        }
+      }, 100);
+    } else {
+      // Restore focus to the last focused timeline item when closing
+      setTimeout(() => {
+        lastFocusedElementRef.current?.focus();
+      }, 100);
+    }
   }, [expandedUuid]);
 
   // Define breakpoints using useMediaQuery hook
@@ -109,11 +137,6 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
 
     return acc;
   }, []);
-
-  const handleToggle = (uuid: string, anchor: string) => {
-    setExpandedUuid((currentUuid) => (currentUuid === uuid ? null : uuid));
-    setItemid((currentAnchor) => (currentAnchor === anchor ? "" : anchor));
-  };
 
   return (
     <article className="rs-pb-5">
@@ -150,157 +173,164 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
           <Text variant="big">Loading Timeline Items...</Text>
         </div>
       ) : (
-        <section>
-          <div className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]">
-            {rows.map((row, rowIndex) => {
-              const isFullWidthRow = (rowIndex + 1) % 3 === 0; // Every third row is full-width
-              const isFullWidthLeftAligned =
-                Math.floor((rowIndex + 1) / 3) % 2 === 0; // Ensures proper alternation
-              const fullwidthTrapezoid = isFullWidthLeftAligned
-                ? "left"
-                : "right";
+        <section
+          className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]"
+          role="list"
+        >
+          {rows.map((row, rowIndex) => {
+            const isFullWidthRow = (rowIndex + 1) % 3 === 0; // Every third row is full-width
+            const isFullWidthLeftAligned =
+              Math.floor((rowIndex + 1) / 3) % 2 === 0; // Ensures proper alternation
+            const fullwidthTrapezoid = isFullWidthLeftAligned
+              ? "left"
+              : "right";
 
-              const showSvg = (rowIndex + 1) % 3 === 1;
-              const svgOptions = ["A", "B", "C", "D"];
-              const lineartType = svgOptions[Math.floor(rowIndex / 3) % 4];
-              const isSvgLeftAligned = Math.floor(rowIndex / 3) % 2 === 0;
+            const showSvg = (rowIndex + 1) % 3 === 1;
+            const svgOptions = ["A", "B", "C", "D"];
+            const lineartType = svgOptions[Math.floor(rowIndex / 3) % 4];
+            const isSvgLeftAligned = Math.floor(rowIndex / 3) % 2 === 0;
 
-              return (
+            return (
+              <div
+                key={`row-${rowIndex}`}
+                id={`${rowIndex}`}
+                className={cnb(
+                  "odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6",
+                  { "w-full": isFullWidthRow },
+                )}
+              >
                 <div
-                  key={`row-${rowIndex}`}
-                  id={`${rowIndex}`}
                   className={cnb(
-                    "odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6",
-                    { "w-full": isFullWidthRow },
+                    "cc flex flex-col items-center list-none",
+                    {
+                      "md:items-start md:flex-row md:justify-between":
+                        !isFullWidthRow,
+                    },
+                    { "flex-row justify-center w-full": isFullWidthRow },
                   )}
                 >
-                  <ul
-                    className={cnb(
-                      "cc flex flex-col items-center list-none",
-                      {
-                        "md:items-start md:flex-row md:justify-between":
-                          !isFullWidthRow,
-                      },
-                      { "flex-row justify-center w-full": isFullWidthRow },
-                    )}
-                  >
-                    {isFullWidthRow && (
-                      // Render a single item in full-width rows
-                      <li key={row[0].uuid} className="w-full m-0 p-0">
-                        <AnimateInView
-                          animation="slideUp"
-                          delay={0.5}
-                          className="w-full"
-                        >
-                          <TimelineItemFull
-                            {...row[0]} // Only take the first item
-                            id={row[0].uuid}
-                            aria-expanded={expandedUuid === row[0].uuid}
-                            aria-controls={row[0].anchor}
-                            isExpanded={expandedUuid === row[0].uuid}
-                            trapezoid={fullwidthTrapezoid}
-                            onClick={() =>
-                              handleToggle(row[0].uuid, row[0].anchor)
-                            }
-                            ref={(el) => {
-                              itemRefs.current[row[0].uuid] = el;
-                            }}
-                          />
-                        </AnimateInView>
-                      </li>
-                    )}
-                    {!isFullWidthRow &&
-                      row.map((item, itemIndex) => {
-                        const sizePattern: SizeType[] =
-                          rowIndex % 2 === 0
-                            ? ["large", "medium", "small"]
-                            : ["small", "large", "medium"];
-                        const size =
-                          sizePattern[itemIndex % sizePattern.length];
-                        const trapezoid =
-                          itemIndex % 2 === 0 ? "left" : "right";
-
-                        // Animation
-                        const delayPattern =
-                          rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
-                        const delay =
-                          delayPattern[itemIndex % delayPattern.length];
-
-                        return (
-                          <li key={item.uuid} className="m-0 p-0">
-                            <AnimateInView animation="slideUp" delay={delay}>
-                              <TimelineItem
-                                {...item}
-                                id={item.uuid}
-                                aria-expanded={expandedUuid === item.uuid}
-                                aria-controls={item.anchor}
-                                isExpanded={expandedUuid === item.uuid}
-                                size={size}
-                                trapezoid={trapezoid}
-                                isHorizontal={isFullWidthRow}
-                                onClick={() =>
-                                  handleToggle(item.uuid, item.anchor)
-                                }
-                                ref={(el) => {
-                                  itemRefs.current[item.uuid] = el;
-                                }}
-                              />
-                            </AnimateInView>
-                          </li>
-                        );
-                      })}
-                  </ul>
-
-                  {expandedUuid &&
-                    !isFullWidthRow &&
-                    row.some((item) => item.uuid === expandedUuid) && (
-                      <motion.div
-                        id={itemId}
-                        aria-labelledby={expandedUuid}
-                        className="w-full cc"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{
-                          duration: prefersReducedMotion ? 0 : 0.8,
-                        }}
-                        ref={detailsRef}
-                        tabIndex={-1}
+                  {isFullWidthRow && (
+                    // Render a single item in full-width rows
+                    <div
+                      key={row[0].uuid}
+                      className="w-full m-0 p-0"
+                      role="listitem"
+                    >
+                      <AnimateInView
+                        animation="slideUp"
+                        delay={0.5}
+                        className="w-full"
                       >
-                        <TimelineDetails
-                          id={`details-${expandedUuid}`}
-                          {...timelineData.find(
-                            (item) => item.uuid === expandedUuid,
-                          )!}
-                          onClose={() => {
-                            if (expandedUuid) {
-                              const itemButton = itemRefs.current[expandedUuid];
-                              if (itemButton) {
-                                itemButton.focus();
-                              }
-                            }
-                            setExpandedUuid(null);
+                        <TimelineItemFull
+                          {...row[0]} // Only take the first item
+                          id={row[0].uuid}
+                          aria-expanded={expandedUuid === row[0].uuid}
+                          aria-controls={row[0].anchor}
+                          isExpanded={expandedUuid === row[0].uuid}
+                          trapezoid={fullwidthTrapezoid}
+                          onClick={() =>
+                            handleToggle(row[0].uuid, row[0].anchor)
+                          }
+                          ref={(el) => {
+                            itemRefs.current[row[0].uuid] = el;
                           }}
                         />
-                      </motion.div>
-                    )}
-
-                  {showSvg && (
-                    <div
-                      className={cnb(
-                        "flex w-full",
-                        isSvgLeftAligned ? "justify-start" : "justify-end",
-                      )}
-                    >
-                      <HorizontalLineart
-                        lineartType={lineartType as "A" | "B" | "C" | "D"}
-                      />
+                      </AnimateInView>
                     </div>
                   )}
+                  {!isFullWidthRow &&
+                    row.map((item, itemIndex) => {
+                      const sizePattern: SizeType[] =
+                        rowIndex % 2 === 0
+                          ? ["large", "medium", "small"]
+                          : ["small", "large", "medium"];
+                      const size = sizePattern[itemIndex % sizePattern.length];
+                      const trapezoid = itemIndex % 2 === 0 ? "left" : "right";
+
+                      // Animation
+                      const delayPattern =
+                        rowIndex % 2 === 0 ? [0.5, 1, 0.8] : [1, 0.3, 0.8];
+                      const delay =
+                        delayPattern[itemIndex % delayPattern.length];
+
+                      return (
+                        <div
+                          key={item.uuid}
+                          className="m-0 p-0"
+                          role="listitem"
+                        >
+                          <AnimateInView animation="slideUp" delay={delay}>
+                            <TimelineItem
+                              {...item}
+                              id={item.uuid}
+                              aria-expanded={expandedUuid === item.uuid}
+                              aria-controls={item.anchor}
+                              isExpanded={expandedUuid === item.uuid}
+                              size={size}
+                              trapezoid={trapezoid}
+                              isHorizontal={isFullWidthRow}
+                              onClick={() =>
+                                handleToggle(item.uuid, item.anchor)
+                              }
+                              ref={(el) => {
+                                itemRefs.current[item.uuid] = el;
+                              }}
+                            />
+                          </AnimateInView>
+                        </div>
+                      );
+                    })}
                 </div>
-              );
-            })}
-          </div>
+
+                {expandedUuid &&
+                  !isFullWidthRow &&
+                  row.some((item) => item.uuid === expandedUuid) && (
+                    <motion.div
+                      id={itemId}
+                      aria-labelledby={expandedUuid}
+                      className="w-full cc"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{
+                        duration: prefersReducedMotion ? 0 : 0.8,
+                      }}
+                      ref={detailsRef}
+                      tabIndex={-1}
+                    >
+                      <TimelineDetails
+                        id={`details-${expandedUuid}`}
+                        {...timelineData.find(
+                          (item) => item.uuid === expandedUuid,
+                        )!}
+                        onClose={() => {
+                          if (expandedUuid) {
+                            const itemButton = itemRefs.current[expandedUuid];
+                            if (itemButton) {
+                              itemButton.focus();
+                            }
+                          }
+                          setExpandedUuid(null);
+                        }}
+                      />
+                    </motion.div>
+                  )}
+
+                {showSvg && (
+                  <div
+                    className={cnb(
+                      "flex w-full",
+                      isSvgLeftAligned ? "justify-start" : "justify-end",
+                    )}
+                  >
+                    <HorizontalLineart
+                      lineartType={lineartType as "A" | "B" | "C" | "D"}
+                    />
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </section>
       )}
     </article>

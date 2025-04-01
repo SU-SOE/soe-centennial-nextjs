@@ -147,7 +147,7 @@ export default function Home() {
           </div>
           <ExploreMore stories={storyData} />
         </StoryFeature>
-        <Container mt={10} mb={10} width="full">
+        <Container as="section" mt={10} mb={10} width="full">
           <AnimatedLineartBanner className="mb-[-4rem]">
             <div className="flex flex-col items-start md:rs-px-1">
               <Heading

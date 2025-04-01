@@ -94,12 +94,7 @@ export const TimelineHorizontalCard = async ({
             </Heading>
           )}
           {year && (
-            <Text
-              font="dm-mono"
-              size={2}
-              weight="normal"
-              className={styles.superhead}
-            >
+            <Text font="dm-mono" size={2} weight="normal">
               {year}
             </Text>
           )}

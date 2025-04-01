@@ -59,6 +59,17 @@ export const TimelineItemFull = forwardRef<
           })}
         />
         <div className="flex flex-col items-start lg:rs-pt-2 lg:rs-px-1 w-1/2">
+          <Text
+            font="dm-mono"
+            weight="normal"
+            leading="display"
+            mb="none"
+            size={2}
+            className="rs-mt-2 mb-10"
+            align="left"
+          >
+            {year}
+          </Text>
           <Heading
             align="left"
             font="dm-sans"
@@ -76,17 +87,6 @@ export const TimelineItemFull = forwardRef<
               />
             </span>
           </Heading>
-          <Text
-            font="dm-mono"
-            weight="normal"
-            leading="display"
-            mb="none"
-            size={2}
-            className="order-first rs-mt-2 mb-10"
-            align="left"
-          >
-            {year}
-          </Text>
           {isExpanded && (
             <AnimateInView animation={"slideUp"}>
               <Text
@@ -110,7 +110,7 @@ export const TimelineItemFull = forwardRef<
             <span className="sr-only">Close {heading} details</span>
             <XMarkIcon
               width={50}
-              className="transition p-6 rounded-full text-fog-dark border-fog-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
+              className="transition p-6 rounded-full text-stone-dark border-stone-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
             />
           </div>
         )}

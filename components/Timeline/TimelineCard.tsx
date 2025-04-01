@@ -56,6 +56,11 @@ export const TimelineCard = ({
       >
         <FlexBox alignItems="center" className={styles.wrapper(align, false)}>
           <div className={cnb(styles.contentWrapper(false))}>
+            {year && (
+              <Text font="dm-mono" size={2} weight="normal" mb="base">
+                {year}
+              </Text>
+            )}
             {heading && (
               <Heading
                 leading="normal"
@@ -79,17 +84,6 @@ export const TimelineCard = ({
                   </span>
                 </Link>
               </Heading>
-            )}
-            {year && (
-              <Text
-                font="dm-mono"
-                size={2}
-                weight="normal"
-                className={styles.superhead}
-                mb="base"
-              >
-                {year}
-              </Text>
             )}
           </div>
           {image && (

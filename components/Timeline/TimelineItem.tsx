@@ -77,6 +77,17 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
             "w-1/2": isHorizontal,
           })}
         >
+          <Text
+            font="dm-mono"
+            weight="normal"
+            leading="display"
+            mb="none"
+            size={2}
+            className="rs-mt-2 mb-10"
+            align="left"
+          >
+            {year}
+          </Text>
           <Heading
             align="left"
             font="dm-sans"
@@ -96,17 +107,6 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
               </span>
             )}
           </Heading>
-          <Text
-            font="dm-mono"
-            weight="normal"
-            leading="display"
-            mb="none"
-            size={2}
-            className="order-first rs-mt-2 mb-10"
-            align="left"
-          >
-            {year}
-          </Text>
         </div>
       </button>
     );

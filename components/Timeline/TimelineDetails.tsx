@@ -105,7 +105,7 @@ export const TimelineDetails = ({
         <span className="sr-only">Close {heading} details</span>
         <XMarkIcon
           width={50}
-          className="transition p-6 rounded-full text-fog-dark border-fog-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
+          className="transition p-6 rounded-full text-stone-dark border-stone-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
         />
       </button>
     </FlexBox>
