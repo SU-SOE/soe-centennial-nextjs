@@ -140,7 +140,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
 
   return (
     <article className="rs-pb-5">
-      <section>
+      <>
         <Container width="site" pt={8}>
           <Heading
             leading="tight"
@@ -166,14 +166,14 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
             interact with here.
           </Text>
         </Container>
-      </section>
+      </>
       {!isMounted ? (
         <div className="cc flex flex-row gap-10" aria-live="polite">
           <ClipLoader />
           <Text variant="big">Loading Timeline Items...</Text>
         </div>
       ) : (
-        <section
+        <div
           className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]"
           role="list"
         >
@@ -331,7 +331,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
               </div>
             );
           })}
-        </section>
+        </div>
       )}
     </article>
   );
