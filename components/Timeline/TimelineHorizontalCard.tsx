@@ -20,7 +20,7 @@ import fetchTimelineData from "@/utilities/fetchTimelineData";
 
 type TimelineHorziontalCard = Omit<
   types.TimelineCardProps,
-  "heading" | "year" | "image"
+  "heading" | "year" | "image" | "alt" | "uuid"
 >;
 
 export const TimelineHorizontalCard = async ({
@@ -47,6 +47,8 @@ export const TimelineHorizontalCard = async ({
     year,
     anchor: link,
     image,
+    alt,
+    uuid,
   } = Array.isArray(timelineItem) ? timelineItem[0] : timelineItem;
 
   const animationType =
@@ -54,6 +56,7 @@ export const TimelineHorizontalCard = async ({
   return (
     <AsComponent
       {...props}
+      id={uuid}
       className={cnb(
         "h-fit relative group/cardroot",
         bgColor ? styles.bgColors[bgColor] : "",
@@ -112,6 +115,7 @@ export const TimelineHorizontalCard = async ({
             <AnimateInView duration={1} delay={1.5} animation={animationType}>
               <TimelineAnimateImage
                 src={image}
+                alt={alt}
                 trapezoidAngle={align}
                 size={"xlarge"}
                 className="relative z-10"

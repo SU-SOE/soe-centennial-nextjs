@@ -43,7 +43,6 @@ export const StoryPosterCard = ({
   return (
     <Container
       {...props}
-      as="article"
       width="site"
       className="2xl:p-0 2xl:w-full 2xl:max-w-[1200px]"
     >

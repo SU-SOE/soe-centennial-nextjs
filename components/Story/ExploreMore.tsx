@@ -16,7 +16,7 @@
  * Example:
  * <ExploreMore stories={storyData} />
  */
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { TwoCol, ThreeCol } from "../Layout";
 import { StoryCard, StoryCardProps } from "./StoryCard";
 import { Container, WidthType } from "../Container";
@@ -24,7 +24,7 @@ import { Button } from "../Cta";
 import { Heading } from "../Typography";
 import { cnb } from "cnbuilder";
 
-type ExploreMoreProps = {
+type ExploreMoreProps = HTMLAttributes<HTMLDivElement> & {
   stories: StoryCardProps[];
   sectionHeading?: string;
   buttonText?: string;
@@ -34,6 +34,7 @@ type ExploreMoreProps = {
 };
 
 export const ExploreMore = ({
+  className,
   stories,
   sectionHeading,
   buttonText,
@@ -48,11 +49,10 @@ export const ExploreMore = ({
   return (
     <Container
       {...props}
-      as="article"
       width={width || "full"}
-      className={cnb("py-20")}
+      className={cnb("py-20", className)}
     >
-      <Heading>{sectionHeading}</Heading>
+      {sectionHeading && <Heading>{sectionHeading}</Heading>}
       <AsComponent className="max-w-[140rem]">
         {stories.map((story, index) => (
           <StoryCard

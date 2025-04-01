@@ -120,7 +120,7 @@ export default function Home() {
           pb={8}
           mb={6}
         >
-          <article className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800">
+          <div className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800">
             <Heading font="dm-sans" size={2} weight="semibold" align="center">
               Stanford Engineering Centennial
             </Heading>
@@ -129,7 +129,7 @@ export default function Home() {
               moment to reflect on our remarkable past and look ahead toward an
               even more inspiring future.
             </Text>
-          </article>
+          </div>
         </Container>
         <StoryFeature>
           <div className="rs-mb-2 w-full max-w-1400 mx-auto">
@@ -145,7 +145,7 @@ export default function Home() {
               </div>
             </AnimateInView>
           </div>
-          <ExploreMore stories={storyData} />
+          <ExploreMore stories={storyData} className="py-0" />
         </StoryFeature>
         <Container as="section" mt={10} mb={10} width="full">
           <AnimatedLineartBanner className="mb-[-4rem]">

@@ -3,7 +3,6 @@ import { Container } from "@/components/Container";
 import { TimelineCard } from "./TimelineCard";
 import { Slideshow } from "../Slideshow/Slideshow";
 import { Button } from "../Cta";
-import { AnimateInView } from "../Animate";
 import fetchTimelineData from "@/utilities/fetchTimelineData";
 import { TimelineCardProps } from "./Timeline.types";
 
@@ -27,14 +26,14 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
           featureTimelineData.map((item, idx) => {
             const delay = idx < 4 ? 1 + idx * 0.5 : 0;
             return (
-              <AnimateInView
+              <TimelineCard
                 key={item.uuid || idx}
                 animation="slideInFromLeft"
                 duration={1}
                 delay={delay}
-              >
-                <TimelineCard {...item} py="none" />
-              </AnimateInView>
+                {...item}
+                py="none"
+              />
             );
           })
         ) : (

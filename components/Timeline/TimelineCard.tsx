@@ -17,7 +17,6 @@ import {
 } from "@/utilities/datasource";
 
 export const TimelineCard = ({
-  as: AsComponent = "div",
   py,
   pt = 9,
   pb = 3,
@@ -29,18 +28,21 @@ export const TimelineCard = ({
   body,
   anchor = "/",
   image,
+  alt,
   animation,
   duration,
   delay,
   bgColor,
   width = "fit",
   align = "left",
+  uuid,
   className,
   ...props
 }: types.TimelineCardProps) => {
   return (
     <AnimateInView {...props}>
-      <AsComponent
+      <div
+        id={uuid}
         className={cnb(
           "h-fit relative group",
           bgColor ? styles.bgColors[bgColor] : "",
@@ -90,6 +92,7 @@ export const TimelineCard = ({
             <div className={styles.imageWrapper(align, false)}>
               <TimelineImage
                 src={image}
+                alt={alt}
                 trapezoidAngle={align}
                 size={"large"}
                 className="relative z-10"
@@ -97,7 +100,7 @@ export const TimelineCard = ({
             </div>
           )}
         </FlexBox>
-      </AsComponent>
+      </div>
     </AnimateInView>
   );
 };
