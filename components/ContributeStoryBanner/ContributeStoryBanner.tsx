@@ -38,11 +38,7 @@ export const ContributeStoryBanner = ({
     pt={2}
     pb={6}
   >
-    <Container
-      as="section"
-      className={styles.container(bgColor, hasLineArt)}
-      width="full"
-    >
+    <Container className={styles.container(bgColor, hasLineArt)} width="full">
       {hasLineArt && <BannerLineart className={styles.bannerLineart} />}
 
       <div className={styles.contentWrapper}>
