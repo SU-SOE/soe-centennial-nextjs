@@ -111,7 +111,6 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                 fill
                 className="object-contain shadow-lg bg-stone-dark"
               />
-              <p>{images[selectedIndex].alt}</p>
             </motion.div>
           </AnimatePresence>
 

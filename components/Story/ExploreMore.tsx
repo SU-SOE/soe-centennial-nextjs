@@ -57,6 +57,7 @@ export const ExploreMore = ({
         {stories.map((story, index) => (
           <StoryCard
             key={index}
+            headerTag="h3"
             animation="slideUp"
             delay={delays[index] || 0.3}
             {...story}

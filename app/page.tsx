@@ -135,13 +135,13 @@ export default function Home() {
           <div className="rs-mb-2 w-full max-w-1400 mx-auto">
             <AnimateInView animation="slideUp">
               <div className="w-full max-w-1000">
-                <Text font="dm-mono" size="f1" mb={1}>
+                <Heading font="dm-mono" size="f1" mb={1}>
                   Explore decade stories
-                </Text>
-                <Heading size="f5" weight="normal">
+                </Heading>
+                <Text size="f5" weight="normal">
                   Fundamental work in science and transformational breakthroughs
                   for one hundred years.
-                </Heading>
+                </Text>
               </div>
             </AnimateInView>
           </div>
