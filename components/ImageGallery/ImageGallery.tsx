@@ -86,7 +86,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
         <div
           className="relative aspect-[13/8] h-full w-full max-w-1300 mb-4"
           role="region"
-          aria-live="polite"
+          aria-live="assertive"
           aria-label="Image gallery"
         >
           <AnimatePresence mode="sync">
@@ -100,6 +100,10 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                 ease: "easeInOut",
               }}
               className="absolute inset-0"
+              aria-hidden={
+                selectedIndex !==
+                images.findIndex((img) => img.src === images[selectedIndex].src)
+              }
             >
               <Image
                 src={images[selectedIndex].src}
