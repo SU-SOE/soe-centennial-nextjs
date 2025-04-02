@@ -66,6 +66,7 @@ const SidebarLineart = ({ className, lineArtType }: SidebarLineartProps) => {
       {lineArtType === "medium" && (
         <div className="w-full h-full hidden lg:block">
           <svg
+            aria-hidden="true"
             width="355"
             height="849"
             viewBox="0 0 355 849"
