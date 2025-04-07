@@ -118,6 +118,14 @@ export const Slideshow = ({
           centerMode: false,
         },
       },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
     ],
     ...slideshowProps,
   };
