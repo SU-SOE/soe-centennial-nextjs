@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742342467/Ryan-High-Voltage-Laboratory_927_tighter_Chapter-feature-image_mccqgm.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
         alt: "Historic Stanford engineering class in session, circa 1925",
       },
     ],
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description:
       "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742342467/Ryan-High-Voltage-Laboratory_927_tighter_Chapter-feature-image_mccqgm.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
     ],
   },
 };
