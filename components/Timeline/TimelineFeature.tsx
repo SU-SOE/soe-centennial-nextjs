@@ -32,7 +32,6 @@ export const TimelineFeature = async ({ anchors }: TimelineFeatureProps) => {
                 duration={1}
                 delay={delay}
                 {...item}
-                py="none"
               />
             );
           })

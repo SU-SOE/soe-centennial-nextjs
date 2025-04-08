@@ -25,7 +25,8 @@ export type NonHeadingTypographyType =
   | "ul"
   | "ol"
   | "li"
-  | "time";
+  | "time"
+  | "datetime";
 
 export type TextType = HeadingType | NonHeadingTypographyType;
 
