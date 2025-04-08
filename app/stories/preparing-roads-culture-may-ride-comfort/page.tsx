@@ -23,7 +23,6 @@ import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { H2 } from "@/components/Typography/Header";
 
 export const metadata: Metadata = {
-  robots: "noindex, nofollow",
   title:
     "Preparing Roads over which Culture May Ride in Comfort | 100 Years of Stanford Engineering",
   description:

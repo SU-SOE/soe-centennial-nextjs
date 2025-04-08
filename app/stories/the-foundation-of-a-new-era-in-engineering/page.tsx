@@ -22,7 +22,6 @@ import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
 
 export const metadata: Metadata = {
-  robots: "noindex, nofollow",
   title:
     "The Foundation of a New Era in Engineering | 100 Years of Stanford Engineering",
   description:
