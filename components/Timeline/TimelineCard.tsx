@@ -7,22 +7,8 @@ import { TimelineImage } from "./TimelineImage";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "@/components/Cta/Link";
 import { AnimateInView } from "@/components/Animate";
-import {
-  paddingTops,
-  paddingBottoms,
-  paddingVerticals,
-  marginTops,
-  marginBottoms,
-  marginVerticals,
-} from "@/utilities/datasource";
 
 export const TimelineCard = ({
-  py,
-  pt = 9,
-  pb = 3,
-  mt = 3,
-  mb,
-  my,
   heading,
   year,
   body,
@@ -32,8 +18,6 @@ export const TimelineCard = ({
   animation,
   duration,
   delay,
-  bgColor,
-  width = "fit",
   align = "left",
   uuid,
   className,
@@ -44,15 +28,7 @@ export const TimelineCard = ({
       <div
         id={uuid}
         className={cnb(
-          "h-fit relative group",
-          bgColor ? styles.bgColors[bgColor] : "",
-          py ? paddingVerticals[py] : "",
-          pt ? paddingTops[pt] : "",
-          pb ? paddingBottoms[pb] : "",
-          my ? marginVerticals[my] : "",
-          mt ? marginTops[mt] : "",
-          mb ? marginBottoms[mb] : "",
-          width ? styles.widths[width] : "",
+          "h-fit relative group rs-pt-9 rs-pb-3 rs-mt-3 w-250 md:w-300 lg:w-[35rem] xl:w-[42rem]",
           className,
         )}
       >
