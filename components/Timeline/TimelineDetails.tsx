@@ -78,14 +78,12 @@ export const TimelineDetails = ({
         )}
         {body && (
           <AnimateInView delay={1} animation="slideUp">
-            <Text
-              font="dm-sans"
-              variant="big"
-              weight="normal"
-              className="max-w-[50ch] rs-mb-3 *:*:leading-snug"
-            >
-              {body}
-            </Text>
+            <p
+              className="font-dm-sans cen-big-paragraph font-normal max-w-[50ch] rs-mb-3 leading-snug"
+              dangerouslySetInnerHTML={{
+                __html: typeof body === "string" ? body : "",
+              }}
+            ></p>
           </AnimateInView>
         )}
       </Container>
