@@ -156,17 +156,17 @@ const footnotes = [
     id: "footnote12",
     text: "C.D. Marx, “Stanford’s Schools of Engineering.”",
   },
-  // {
-  //   number: 13,
-  //   id: "footnote13",
-  //   text: "Guido H. Marx, “The Making of the Stanford Engineer,” Stanford Alumnus 9, no. 4 (December 1907).",
-  // },
-  // {
-  //   number: 14,
-  //   id: "footnote14",
-  //   text: "Alfred D. Kirkland, “Engineering at Stanford: A Short Historical Perspective,” IEEE Transactions on Education 18, no. 1 (February 1975): 50,",
-  //   sourceLink: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4320947",
-  // },
+  {
+    number: 13,
+    id: "footnote13",
+    text: "Guido H. Marx, “The Making of the Stanford Engineer,” Stanford Alumnus 9, no. 4 (December 1907).",
+  },
+  {
+    number: 14,
+    id: "footnote14",
+    text: "Alfred D. Kirkland, “Engineering at Stanford: A Short Historical Perspective,” IEEE Transactions on Education 18, no. 1 (February 1975): 50,",
+    sourceLink: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4320947",
+  },
   {
     number: 15,
     id: "footnote15",
@@ -534,7 +534,7 @@ export default function page() {
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007204_0003.jpg_Guggehneim_Lab_h3dwcp.jpg"
               alt="Interior of the Guggenheim Aeronautics Laboratory, depicting a man alongside a large machine"
-              caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives"
+              caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives."
             />
           </Container>
           <Scrollytelling
