@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <>
       <Masthead logoColor="white-red" bgColor="homepage" />
-      <main id="main-content">
+      <main id="main-content" className="overflow-hidden">
         <H1 className="sr-only">100 years of Stanford Engineering</H1>
         <EmbedMediaHero
           autoplay

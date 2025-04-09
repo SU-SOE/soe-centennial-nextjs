@@ -7,7 +7,7 @@ export const container = (bgColor: string, hasLineArt: boolean): string =>
   cnb("relative 2xl:max-w-[1700px] flex items-center justify-center w-full", {
     "*:text-white": bgColor === "red",
     "*:text-stone-dark": bgColor !== "red",
-    "p-30 sm:p-50 md:p-68 lg:p-100 lg:pt-150 xl:rs-py-10 xl:rs-px-8":
+    "px-30 px-30 sm:px-50 sm:pb-50 pt-100 md:px-68 md:pb-68 md:pt-130 lg:p-100 lg:pt-150 xl:rs-py-10 xl:rs-px-8":
       hasLineArt,
     "rs-py-5 rs-px-2": !hasLineArt,
   });
