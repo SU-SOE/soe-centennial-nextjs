@@ -56,7 +56,7 @@ export const FootnotesList = ({ footnotes }: FootnotesListProps) => {
                 {!sourceLink && text}
                 <a
                   href={`#ref-${id}`}
-                  className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red-xlight border-b-2 border-transparent hocus:border-digital-red-xlight"
+                  className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red-xlight border-b-2 border-transparent hocus:border-digital-red-xlight min-w-44 min-h-44"
                   aria-label={`Back to ${number} in text`}
                   title={`Back to ${number} in text`}
                 >

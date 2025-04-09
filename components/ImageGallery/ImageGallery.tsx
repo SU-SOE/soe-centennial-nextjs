@@ -87,6 +87,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
           className="relative aspect-[13/8] h-full w-full max-w-1300 mb-4"
           role="region"
           aria-live="assertive"
+          aria-atomic="true"
           aria-label="Image gallery"
         >
           <AnimatePresence mode="sync">

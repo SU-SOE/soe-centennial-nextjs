@@ -83,7 +83,14 @@ export const StoryImpactBanner = ({
 }: StoryImpactBannerProps) => {
   const pb = bgColor === "white" ? 10 : 8;
   return (
-    <Container {...props} width="full" mb={5} className="relative">
+    <Container
+      {...props}
+      width="full"
+      mb={5}
+      className="relative"
+      role="figure"
+      aria-labelledby="hero-caption"
+    >
       <Container
         bgColor={bgColor}
         width="site"
@@ -175,11 +182,15 @@ export const StoryImpactBanner = ({
         </FlexBox>
       </Container>
       {bgColor !== "white" && (
-        <figcaption className="mt-13 cc">
-          <Text variant="caption" className="max-w-prose-wide">
+        <div className="mt-13 cc">
+          <Text
+            id="hero-caption"
+            variant="caption"
+            className="max-w-prose-wide"
+          >
             {caption}
           </Text>
-        </figcaption>
+        </div>
       )}
     </Container>
   );

@@ -477,9 +477,6 @@ export default function page() {
                   athletics; he knew what courses I had taken and my grades. He
                   had even looked up my high school record and my scores on the
                   entrance exams.”
-                  <Footnotes
-                    footnoteRefs={[{ id: "footnote12", number: 12 }]}
-                  />
                 </>
               }
             />

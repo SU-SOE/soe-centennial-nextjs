@@ -191,14 +191,14 @@ export default function page() {
             alt="A public demonstration of a 2.1 million volt test station lead by Harris J. Ryan standing to the right of a giant flame"
             caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
           />
-          <article className="max-w-1500 w-full cc">
+          <div className="max-w-1500 w-full cc">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               width="wide"
               teaser="Stanford University should be in a position to offer advanced training in engineering for men qualified to be leaders."
               source="— Charles David Marx, 1923"
             />
-          </article>
+          </div>
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" />
           </div>
