@@ -1,13 +1,10 @@
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import TimelineList from "@/components/Timeline/TimelineList";
-// import { Text } from "@/components/Typography";
-// import { H1 } from "@/components/Typography/Header";
 import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  robots: "noindex, nofollow",
   title: "Timeline - 100 Years of Impact | 100 Years of Stanford Engineering",
   description:
     "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
@@ -20,6 +17,30 @@ export const metadata: Metadata = {
     "breakthroughs",
   ],
   authors: [{ name: "School of Engineering" }],
+  openGraph: {
+    title: "Timeline - 100 Years of Impact",
+    description:
+      "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
+    url: "https://engineering100.stanford.edu/timeline",
+    type: "website",
+    images: [
+      {
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265190/Copy_of_00012017_005_e0a3bb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Black and white photograph of a building with prominent arches.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timeline - 100 Years of Impact",
+    description:
+      "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
+    images: [
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265190/Copy_of_00012017_005_e0a3bb.jpg",
+    ],
+  },
 };
 
 const TimelinePage = async () => {
