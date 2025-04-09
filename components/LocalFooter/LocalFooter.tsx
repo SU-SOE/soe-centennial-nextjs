@@ -58,6 +58,7 @@ export const LocalFooter = () => (
             </Text>
             <Button
               solid
+              big
               href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
             >
               Share a memory
@@ -72,6 +73,7 @@ export const LocalFooter = () => (
             </Text>
             <Button
               solid
+              big
               href="https://engineering.stanford.edu/get-involved/support-engineering"
             >
               Support Engineering

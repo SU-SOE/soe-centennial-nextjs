@@ -730,7 +730,7 @@ scores on the entrance exams.”(12)"
             imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           />
         </ThreeCol>
-        <Button isLight href="/stories" className="mx-auto">
+        <Button big isLight href="/stories" className="mx-auto">
           Explore all book chapters
         </Button>
       </Container>
