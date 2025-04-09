@@ -11,6 +11,11 @@ export type TimelineItem = {
   uuid: string;
 };
 
+function getSortableYear(yearStr: string): number {
+  const match = yearStr.match(/\d{4}/); // find the first 4-digit number
+  return match ? parseInt(match[0], 10) : Number.MAX_SAFE_INTEGER;
+}
+
 export async function loadTimelineData() {
   const isPreviewOrDev =
     process.env.VERCEL_ENV === "preview" ||
@@ -30,7 +35,9 @@ export async function loadTimelineData() {
       return [];
     }
 
-    return parsedData.filter(isTimelineItem);
+    return parsedData
+      .filter(isTimelineItem)
+      .sort((a, b) => getSortableYear(a.year) - getSortableYear(b.year));
   } catch (error) {
     console.error(`Error reading or parsing JSON file: ${filePath}`);
     console.error(error);
