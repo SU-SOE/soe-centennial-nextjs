@@ -42,7 +42,7 @@ export const TimelineItemFull = forwardRef<
         ref={ref}
         type="button"
         className={cnb(
-          "group flex flex-col relative md:flex-row gap w-full justify-center items-center lg:rs-mb-6",
+          "group flex flex-col md:flex-row gap w-full justify-center items-center lg:rs-mb-6",
           className,
         )}
         onClick={onClick}
@@ -54,18 +54,18 @@ export const TimelineItemFull = forwardRef<
           size="full"
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}
-          className={cnb("w-1/2 h-full order-first", {
+          className={cnb("w-full md:w-1/2 h-full order-first", {
             "md:order-last": trapezoid === "right",
           })}
         />
-        <div className="flex flex-col items-start lg:rs-pt-2 lg:rs-px-1 w-1/2">
+        <div className="rs-mt-2 relative flex flex-col items-start lg:rs-pt-2 lg:rs-px-1 w-full md:w-1/2">
           <Text
             font="dm-mono"
             weight="normal"
             leading="display"
             mb="none"
             size={2}
-            className="rs-mt-2 mb-10"
+            className="mb-10"
             align="left"
           >
             {year}
@@ -100,20 +100,20 @@ export const TimelineItemFull = forwardRef<
               </Text>
             </AnimateInView>
           )}
+          {isExpanded && (
+            <div
+              className={cnb("absolute top-0 right-0 group", {
+                " md:left-0": trapezoid === "right",
+              })}
+            >
+              <span className="sr-only">Close {heading} details</span>
+              <XMarkIcon
+                width={50}
+                className="transition p-6 rounded-full text-stone-dark border-stone-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
+              />
+            </div>
+          )}
         </div>
-        {isExpanded && (
-          <div
-            className={cnb("absolute top-0 right-0 group", {
-              " md:left-0": trapezoid === "right",
-            })}
-          >
-            <span className="sr-only">Close {heading} details</span>
-            <XMarkIcon
-              width={50}
-              className="transition p-6 rounded-full text-stone-dark border-stone-dark border-2 group-hocus:border-digital-red group-hocus:text-digital-red"
-            />
-          </div>
-        )}
       </button>
     );
   },

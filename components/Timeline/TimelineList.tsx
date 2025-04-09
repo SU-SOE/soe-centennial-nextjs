@@ -174,7 +174,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
         </div>
       ) : (
         <div
-          className="grid rs-mb-10 sm:mb-0 sm:gap-[32px] md:gap-[76px]"
+          className="grid rs-mb-10 sm:mb-0 gap-[3.2rem] md:gap-[7.6rem]"
           role="list"
         >
           {rows.map((row, rowIndex) => {
@@ -195,7 +195,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                 key={`row-${rowIndex}`}
                 id={`${rowIndex}`}
                 className={cnb(
-                  "odd:children:children:even:rs-pt-6 even:children:children:odd:rs-pt-6",
+                  "sm:odd:children:children:even:rs-pt-6 sm:even:children:children:odd:rs-pt-6",
                   { "w-full": isFullWidthRow },
                 )}
               >
@@ -288,7 +288,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                     <motion.div
                       id={itemId}
                       aria-labelledby={expandedUuid}
-                      className="w-full cc"
+                      className="w-full"
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
