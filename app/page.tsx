@@ -81,7 +81,7 @@ const timelineFeatureCards = [
   "1996-the-original-google-server",
   "1937-foundational-technology-in-the-burgeoning-microwave-industry",
   "1972-first-black-faculty-member-to-hold-a-tenure-track-appointment",
-  "2011-leading-the-online-education-revolution-professor-jennifer-widom-launches-one-of-stanfords-first-moocs",
+  "2017-trailblazing-leadership-jennifer-widom-is-appointed-dean-of-stanford-engineering-celebrating-27-years-of-academic-excellence",
 ];
 
 const storyData: StoryCardProps[] = [

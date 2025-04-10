@@ -6,9 +6,7 @@ module.exports = {
     '/april',
     '/example', 
     '/example/*', 
-    '/stories', 
-    '/stories/*', 
-    '/timeline', 
+    '/stories/the-terman-era'
   ], 
   transform: async (config, path) => {
     return {

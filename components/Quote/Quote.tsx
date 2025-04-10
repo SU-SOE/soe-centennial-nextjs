@@ -43,7 +43,7 @@ export const Quote = ({
   ...props
 }: QuoteProps) => {
   return (
-    <AnimateInView animation={animation} delay={delay} className="w-fit">
+    <AnimateInView animation={animation} delay={delay}>
       <Container
         {...props}
         width="full"
