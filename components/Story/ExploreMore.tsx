@@ -65,7 +65,7 @@ export const ExploreMore = ({
         ))}
       </AsComponent>
       {buttonText && buttonLink && (
-        <Button big isLight href={buttonLink} className="mx-auto">
+        <Button isLight href={buttonLink} className="mx-auto">
           {buttonText}
         </Button>
       )}

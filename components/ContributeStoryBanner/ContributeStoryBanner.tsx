@@ -77,7 +77,6 @@ export const ContributeStoryBanner = ({
           className={styles.buttonWrapper}
         >
           <Button
-            big
             isLight={bgColor !== "red"}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
           >

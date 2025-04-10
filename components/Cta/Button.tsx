@@ -33,7 +33,7 @@ export const Button = ({
       "text-white": !isLight,
       "text-white bg-digital-red hocus:bg-digital-red-light": solid,
       "px-48 py-22 type-0": big,
-      "rs-px-1 rs-py-0 text-16": !big,
+      "rs-px-1 rs-py-0 text-16 md:text-18": !big,
     },
   );
 
