@@ -57,10 +57,16 @@ export const metadata: Metadata = {
 
 const galleryImages = [
   {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741726632/railroad_car_fu9cdz.jpg",
+    alt: "A group of men stand to the right of two railroad cars",
+    caption:
+      "A railroad car filled with equipment for the Ryan High-Voltage Laboratory. With support from the city of Los Angeles and five electrical power companies, the Ryan Laboratory was the first research lab at Stanford to be supported by external funding. | Berton W. Crandall/Hoover Institution Library & Archives.",
+  },
+  {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/harris_j_ryan_gw6by8.jpg",
     alt: "Professor Harris J. Ryan working in his High-Voltage Laboratory, around 1926",
     caption:
-      "Professor Harris J. Ryan at his High-Voltage Laborator y, where he studied the long-distance transmission of electricity, circa 1926. Ryan was head of the Department of Electrical Engineering from 1905 until 1931. | Berton W. Crandall/Hoover Institution Librar y & Archives.",
+      "Professor Harris J. Ryan at his High-Voltage Laboratory, where he studied the long-distance transmission of electricity, circa 1926. Ryan was head of the Department of Electrical Engineering from 1905 until 1931. | Berton W. Crandall/Hoover Institution Library & Archives.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741726621/00007001_0001.jpg_electrical_engineers_paz9cd.jpg",
@@ -191,7 +197,7 @@ export default function page() {
             alt="A public demonstration of a 2.1 million volt test station lead by Harris J. Ryan standing to the right of a giant flame"
             caption="The Harris J. Ryan High-Voltage Laboratory debuted on September 17, 1926, with a public demonstration of its 2,100,000-volt test station containing six 350,000-volt transformer units, capable of producing the highest voltage ever obtained at commercial frequency. Erected at a cost of nearly $500,000, it was the largest university electrical lab in existence at the time. | Berton W. Crandall photographs, Box 24, Hoover Institution Library & Archives."
           />
-          <div className="max-w-1500 w-full cc">
+          <div className="max-w-1500 w-full cc 2xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               width="wide"

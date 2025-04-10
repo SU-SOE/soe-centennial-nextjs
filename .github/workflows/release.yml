@@ -48,36 +48,39 @@ jobs:
         shell: bash
         run: corepack prepare yarn@4.5.1 --activate
 
-      # Increment version based on label
       - name: Patch Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'patch') }}
-        run: yarn version --patch
+        run: yarn version patch
 
       - name: Minor Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'minor') }}
-        run: yarn version --minor
+        run: yarn version minor
 
       - name: Major Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'major') }}
-        run: yarn version --major
+        run: yarn version major
 
       - name: Alpha Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'alpha') }}
         run: |
-          yarn version --prerelease --preid alpha
+          yarn version prerelease --declarationStrategy manual --preid alpha
           echo "PRERELEASE=true" >> $GITHUB_ENV
 
       - name: Beta Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'beta') }}
         run: |
-          yarn version --prerelease --preid beta
+          yarn version prerelease --declarationStrategy manual --preid beta
           echo "PRERELEASE=true" >> $GITHUB_ENV
 
       - name: RC Release tag
         if: ${{ contains( github.event.pull_request.labels.*.name, 'rc') }}
         run: |
-          yarn version --prerelease --preid rc
+          yarn version prerelease --declarationStrategy manual --preid rc
           echo "PRERELEASE=true" >> $GITHUB_ENV
+
+      # ✅ Recommended step to apply the version to package.json
+      - name: Apply version changes
+        run: yarn version apply --all
 
       - name: Push Changes
         uses: ad-m/github-push-action@master
