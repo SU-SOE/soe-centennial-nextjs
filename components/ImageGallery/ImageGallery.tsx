@@ -86,6 +86,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
         <div
           className="relative aspect-[13/8] h-full w-full max-w-1300 mb-4"
           aria-live="assertive"
+          aria-atomic="false"
           role="figure"
           aria-labelledby={`image-caption-${selectedIndex}`}
         >
