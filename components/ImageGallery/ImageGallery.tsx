@@ -85,10 +85,9 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
         {/* Main Image Display */}
         <div
           className="relative aspect-[13/8] h-full w-full max-w-1300 mb-4"
-          role="region"
           aria-live="assertive"
-          aria-atomic="true"
-          aria-label="Image gallery"
+          role="figure"
+          aria-labelledby={`image-caption-${selectedIndex}`}
         >
           <AnimatePresence mode="sync">
             <motion.div
