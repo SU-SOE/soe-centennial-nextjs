@@ -57,6 +57,12 @@ export const metadata: Metadata = {
 
 const galleryImages = [
   {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741726632/railroad_car_fu9cdz.jpg",
+    alt: "A group of men stand to the right of two railroad cars",
+    caption:
+      "A railroad car filled with equipment for the Ryan High-Voltage Laboratory. With support from the city of Los Angeles and five electrical power companies, the Ryan Laboratory was the first research lab at Stanford to be supported by external funding. | Berton W. Crandall/Hoover Institution Library & Archives.",
+  },
+  {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/harris_j_ryan_gw6by8.jpg",
     alt: "Professor Harris J. Ryan working in his High-Voltage Laboratory, around 1926",
     caption:
