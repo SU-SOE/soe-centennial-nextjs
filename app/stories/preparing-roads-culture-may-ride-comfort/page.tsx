@@ -60,7 +60,7 @@ const galleryImages = [
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/harris_j_ryan_gw6by8.jpg",
     alt: "Professor Harris J. Ryan working in his High-Voltage Laboratory, around 1926",
     caption:
-      "Professor Harris J. Ryan at his High-Voltage Laborator y, where he studied the long-distance transmission of electricity, circa 1926. Ryan was head of the Department of Electrical Engineering from 1905 until 1931. | Berton W. Crandall/Hoover Institution Librar y & Archives.",
+      "Professor Harris J. Ryan at his High-Voltage Laboratory, where he studied the long-distance transmission of electricity, circa 1926. Ryan was head of the Department of Electrical Engineering from 1905 until 1931. | Berton W. Crandall/Hoover Institution Librar y & Archives.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741726621/00007001_0001.jpg_electrical_engineers_paz9cd.jpg",
