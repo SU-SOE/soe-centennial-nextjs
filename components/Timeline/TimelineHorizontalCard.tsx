@@ -16,8 +16,14 @@ import {
 import { Trapezoid } from "../images/trapezoid";
 import { TimelineAnimateImage } from "./TimelineAnimateImage";
 import { Link } from "@/components/Cta/Link";
+import fetchTimelineData from "@/utilities/fetchTimelineData";
 
-export const TimelineHorizontalCard = ({
+type TimelineHorziontalCard = Omit<
+  types.TimelineCardProps,
+  "heading" | "year" | "image" | "alt" | "uuid"
+>;
+
+export const TimelineHorizontalCard = async ({
   as: AsComponent = "div",
   py,
   pt = 9,
@@ -25,11 +31,7 @@ export const TimelineHorizontalCard = ({
   mt = 3,
   mb,
   my,
-  heading,
-  year,
-  body,
-  anchor = "/",
-  image,
+  anchor,
   animation,
   delay,
   bgColor,
@@ -37,12 +39,27 @@ export const TimelineHorizontalCard = ({
   align = "left",
   className,
   ...props
-}: types.TimelineCardProps) => {
-  const animationType =
+}: TimelineHorziontalCard) => {
+  // Fetch the timeline data and filter timeline items based on the provided uuids
+  const timelineItem = await fetchTimelineData(anchor);
+  const {
+    heading,
+    year,
+    anchor: link,
+    image,
+    alt,
+    uuid,
+  } = Array.isArray(timelineItem) ? timelineItem[0] : timelineItem;
+
+  const imageAnimation =
     animation || align === "left" ? "slideInFromLeft" : "slideInFromRight";
+  const textAnimation =
+    animation || align === "left" ? "slideInFromRight" : "slideInFromLeft";
+
   return (
     <AsComponent
       {...props}
+      id={uuid}
       className={cnb(
         "h-fit relative group/cardroot",
         bgColor ? styles.bgColors[bgColor] : "",
@@ -57,7 +74,11 @@ export const TimelineHorizontalCard = ({
       )}
     >
       <FlexBox alignItems="center" className={styles.wrapper(align, true)}>
-        <div className={cnb(styles.contentWrapper(true))}>
+        <AnimateInView
+          animation={textAnimation}
+          duration={0.8}
+          className={cnb(styles.contentWrapper(true))}
+        >
           {heading && (
             <Heading
               leading="normal"
@@ -69,7 +90,7 @@ export const TimelineHorizontalCard = ({
               <Link
                 linkType="timeline"
                 className="font-inherit stretched-link group-hover/cardroot:decoration-stone-dark group-focus-within:decoration-stone-dark"
-                href={`/timeline#${anchor}`}
+                href={`/timeline#${link}`}
               >
                 {heading}
                 <span className="whitespace-nowrap">
@@ -83,29 +104,24 @@ export const TimelineHorizontalCard = ({
             </Heading>
           )}
           {year && (
-            <Text
-              font="dm-mono"
-              size={2}
-              weight="normal"
-              className={styles.superhead}
-            >
+            <Text font="dm-mono" size={2} weight="normal">
               {year}
             </Text>
           )}
-        </div>
+        </AnimateInView>
         {image && (
           <div className={styles.imageWrapper(align, true)}>
             <AnimateInView
-              duration={0.8}
-              delay={0.6}
-              animation={animationType}
+              delay={0.3}
+              animation={imageAnimation}
               className={styles.trapezoidWrapper(align)}
             >
               <Trapezoid className={styles.trapezoidSvg(align)} />
             </AnimateInView>
-            <AnimateInView duration={1} delay={1.5} animation={animationType}>
+            <AnimateInView animation={imageAnimation}>
               <TimelineAnimateImage
                 src={image}
+                alt={alt}
                 trapezoidAngle={align}
                 size={"xlarge"}
                 className="relative z-10"

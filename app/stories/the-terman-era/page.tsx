@@ -8,12 +8,12 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { Quote } from "@/components/Quote";
 import {
   Footnotes,
+  FootnotesList,
   StoryCard,
   StoryImpactBanner,
   StorySidebar,
 } from "@/components/Story";
-import { ExploreMore } from "@/components/Story/ExploreMore";
-import { StoryGrid } from "@/components/Story/StoryGrid";
+import { ExploreMore, BgImageWrapper } from "@/components/Story/";
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
@@ -212,7 +212,12 @@ export default function page() {
 
   return (
     <Container as="article" width="full">
-      <Masthead logoColor="white-red" isOverlap mainNav={<MainNav />} />
+      <Masthead
+        logoColor="white-red"
+        isOverlap
+        isBgDark
+        mainNav={<MainNav />}
+      />
       <StoryImpactBanner
         hasBgImage
         bgColor="stone-dark"
@@ -222,12 +227,10 @@ export default function page() {
         byline="by Jess Alvarenga"
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/terman_uv6swj_jir40s.jpg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        alt=""
       />
       <OneCol>
-        <Text
-          variant="overview"
-          footnoteRefs={[{ id: "footnote1", number: 1 }]}
-        >
+        <Text variant="overview">
           Samuel Morris recommended Frederick Terman to be his successor as dean
           of the School of Engineering. Terman, on leave from Stanford at the
           time, had been serving since 1942 in a wartime appointment as head of
@@ -235,6 +238,7 @@ export default function page() {
           throughout the war, Terman was anticipating a period after the war he
           believed would be defined by unprecedented technological advancement
           led by engineers.
+          <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} />
         </Text>
       </OneCol>
       <TwoCol isSidebar>
@@ -244,11 +248,12 @@ export default function page() {
             Tresidder named Terman the third dean of the Stanford School of
             Engineering, with a strong endorsement from the engineering faculty.
           </Text>
-          <Text footnoteRefs={[{ id: "footnote2", number: 2 }]}>
+          <Text>
             “Dr. Terman’s scholarly contributions in the field of electrical
             engineering and his administration of one of America’s largest war
             research projects place him among the outstanding engineers in the
             country,” Tresidder said, announcing Terman’s appointment.
+            <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
           </Text>
           <Text>
             Hugh H. Skilling, acting head of electric engineering, served for a
@@ -278,7 +283,7 @@ export default function page() {
         <StorySidebar hasLineArt>
           <MediaCaptionImage
             rounded
-            isPortriat
+            isPortrait
             className="mb-0"
             aspectRatio="1x1"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
@@ -286,7 +291,7 @@ export default function page() {
           />
           <MediaCaptionImage
             rounded
-            isPortriat
+            isPortrait
             className="mb-0"
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986291/skilling_umi5ca_pnvr55.jpg"
             aspectRatio="1x1"
@@ -444,7 +449,8 @@ scores on the entrance exams.”(12)"
         />
       </Scrollytelling>
       <ImageGallery images={galleryImages} />
-      <StoryGrid
+      <BgImageWrapper
+        isTwoCol
         hasBgImage
         src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
         bgColor="stone-dark"
@@ -455,7 +461,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
           caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
         />
@@ -465,7 +471,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
@@ -475,7 +481,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/mark-2_nncexe_lwbmas.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC). "
         />
@@ -485,7 +491,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/mark-2-2_jf2xmm_ywrsnc.jpg"
           caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
         />
@@ -495,7 +501,7 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986287/william-w-hansen_osvbzp_rdnqlf.jpg"
           caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL)."
         />
@@ -505,11 +511,11 @@ scores on the entrance exams.”(12)"
           duration={1}
           rounded
           aspectRatio="4x3"
-          captionBgColor="black"
+          captionTextColor="black"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/felix-bloch_dg6ato_a4ybb7.jpg"
           caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
         />
-      </StoryGrid>
+      </BgImageWrapper>
       <OneCol>
         <Text>
           The Microwave Lab would exceed even Terman’s high expectations,
@@ -539,7 +545,6 @@ scores on the entrance exams.”(12)"
       <Container>
         <MediaCaptionImage
           isParallax
-          isLarge
           rounded
           animation="fadeIn"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
@@ -623,7 +628,7 @@ scores on the entrance exams.”(12)"
           />
         </div>
       </TwoCol>
-      <StoryGrid bgColor="blue">
+      <BgImageWrapper bgColor="blue" isTwoCol>
         <MediaCaptionImage
           aspectRatio="4x3"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
@@ -634,7 +639,7 @@ scores on the entrance exams.”(12)"
           imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
           caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
         />
-      </StoryGrid>
+      </BgImageWrapper>
       <OneCol>
         <Heading>Unleashing the Power of Computation</Heading>
         <Text>
@@ -688,7 +693,7 @@ scores on the entrance exams.”(12)"
       </OneCol>
       <Container mt={4} mb={7}>
         <OneCol>
-          <Footnotes footnotes={footnotes} />
+          <FootnotesList footnotes={footnotes} />
         </OneCol>
       </Container>
       <ExploreMore
@@ -725,7 +730,7 @@ scores on the entrance exams.”(12)"
             imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           />
         </ThreeCol>
-        <Button isLight href="/stories" className="mx-auto">
+        <Button big isLight href="/stories" className="mx-auto">
           Explore all book chapters
         </Button>
       </Container>

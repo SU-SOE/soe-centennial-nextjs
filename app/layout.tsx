@@ -54,7 +54,7 @@ export const metadata = {
   metadataBase: new URL("https://soe-centennial-nextjs.vercel.app/"),
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "en_US",
     url: "https://soe-centennial-nextjs.vercel.app/",
     siteName: process.env.NEXT_PUBLIC_SITE_NAME,
   },

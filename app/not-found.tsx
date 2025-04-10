@@ -33,7 +33,9 @@ export default function NotFound() {
             404 page not found error. Check that you typed the address
             correctly, go back to your previous page, or...
           </Text>
-          <Button href="/">Go back to the future!</Button>
+          <Button big href="/">
+            Go back to the future!
+          </Button>
         </div>
       </Container>
     </div>

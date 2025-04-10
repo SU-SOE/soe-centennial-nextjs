@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/BackToTop/";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import TimelineList from "@/components/Timeline/TimelineList";
@@ -5,8 +6,7 @@ import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  robots: "noindex, nofollow",
-  title: "Timeline - 100 Years of Impact",
+  title: "Timeline - 100 Years of Impact | 100 Years of Stanford Engineering",
   description:
     "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
   keywords: [
@@ -18,12 +18,65 @@ export const metadata: Metadata = {
     "breakthroughs",
   ],
   authors: [{ name: "School of Engineering" }],
+  openGraph: {
+    title: "Timeline - 100 Years of Impact",
+    description:
+      "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
+    url: "https://engineering100.stanford.edu/timeline",
+    type: "website",
+    images: [
+      {
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265190/Copy_of_00012017_005_e0a3bb.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Black and white photograph of a building with prominent arches.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timeline - 100 Years of Impact",
+    description:
+      "Explore the timeline of the School of Engineering's 100 years of impact, featuring fundamental work in science and transformational breakthroughs.",
+    images: [
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265190/Copy_of_00012017_005_e0a3bb.jpg",
+    ],
+  },
 };
 
 const TimelinePage = async () => {
+  // Render this message in preview environments and local development
+  // if (
+  //   process.env.VERCEL_ENV === "preview" ||
+  //   process.env.NODE_ENV === "development"
+  // ) {
+  //   return (
+  //     <>
+  //       <Masthead />
+  //       <main id="main-content" className="cc rs-mb-6">
+  //         <div className="max-w-900 mx-auto">
+  //           <H1>Timeline page</H1>
+  //           <Text>
+  //             🚧 This page is not available in preview environments.
+  //             <br />
+  //             To view the timeline, please visit the{" "}
+  //             <a href="https://soe-centennial-nextjs-git-dev-stanford-centennial.vercel.app/timeline">
+  //               development site
+  //             </a>
+  //             .
+  //             <br />
+  //             If you believe this is an error, please contact SWS for
+  //             assistance.
+  //           </Text>
+  //         </div>
+  //       </main>
+  //     </>
+  //   );
+  // }
+
   const timelineData = await loadTimelineData();
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <div className="rs-pt-8 fixed top-0 right-0 w-full md:w-[calc(100%_-_50rem)] z-0">
         <svg
           aria-hidden="true"
@@ -45,6 +98,8 @@ const TimelinePage = async () => {
         <main id="main-content">
           <TimelineList timelineData={timelineData} />
           <ContributeStoryBanner bgColor="blue" />
+
+          <BackToTop />
         </main>
       </div>
     </div>
