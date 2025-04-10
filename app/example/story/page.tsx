@@ -57,6 +57,7 @@ const ExampleStoryPage = async () => {
         byline="by Jess Alvarenga"
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
         caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+        alt={""}
       />
       <TwoCol isSidebar>
         <Container width="wysiwyg">
@@ -168,6 +169,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           hasBgImage
@@ -178,6 +180,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           bgColor="red"
@@ -187,6 +190,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           hasBgImage
@@ -197,6 +201,7 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
           heading="Exploring the reengineering of immune cells"
@@ -205,9 +210,10 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           bgColor="stone-dark"
           heading="Exploring the reengineering of immune cells"
           superhead="Change Makers"
@@ -215,9 +221,10 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           hasBgImage
           bgColor="stone-dark"
           heading="Exploring the reengineering of immune cells"
@@ -226,9 +233,10 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           bgColor="red"
           heading="Exploring the reengineering of immune cells"
           superhead="Change Makers"
@@ -236,9 +244,10 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           hasBgImage
           bgColor="red"
           heading="Exploring the reengineering of immune cells"
@@ -247,21 +256,22 @@ const ExampleStoryPage = async () => {
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
         <StoryImpactBanner
-          isHorizontal
+          isVertical
           heading="Exploring the reengineering of immune cells"
           superhead="Change Makers"
           body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
           byline="by Jess Alvarenga"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
+          alt={""}
         />
       </div>
       <div id="example-storycard">
         <Container width="site" py={6}>
           <StoryCard
-            isHorizontal
             bgColor="blue"
             superhead="Change makers"
             heading="Untangling the web of racial inequality"
@@ -272,7 +282,6 @@ const ExampleStoryPage = async () => {
         </Container>
         <Container width="site" pb={6}>
           <StoryCard
-            isHorizontal
             bgColor="blue"
             superhead="Change makers"
             heading="Untangling the web of racial inequality"

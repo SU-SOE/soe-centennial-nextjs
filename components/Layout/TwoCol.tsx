@@ -1,18 +1,28 @@
+/**
+ * A flexible two-column layout component.
+ *
+ * @param {React.ReactNode} children - The content to be rendered inside the layout.
+ * @param {string} [className] - Additional CSS classes to apply to the container.
+ * @param {boolean} [isSidebar=false] - If true, applies styles for a sidebar layout.
+ * @param {boolean} [isNarrow=false] - If true, applies styles for a narrower layout.
+ * @param {BgColorType} [bgColor] - Background color type for the container.
+ * @param {HTMLAttributes<HTMLDivElement>} props - Additional HTML attributes to apply to the container.
+ *
+ * @example
+ * ```tsx
+ * <TwoCol isSidebar={true} isNarrow={true} className="custom-class">
+ *   <div>Column 1</div>
+ *   <div>Column 2</div>
+ * </TwoCol>
+ * ```
+ */
 import React, { HTMLAttributes } from "react";
 import { BgColorType, Container } from "@/components/Container";
-import { MarginType, PaddingType } from "@/utilities/datasource";
 import { cnb } from "cnbuilder";
 
 type ColProps = HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode;
   isSidebar?: boolean;
   isNarrow?: boolean;
-  pt?: PaddingType;
-  pb?: PaddingType;
-  py?: PaddingType;
-  mt?: MarginType;
-  mb?: MarginType;
-  my?: MarginType;
   bgColor?: BgColorType;
 };
 
@@ -35,7 +45,6 @@ export const TwoCol = ({
         },
         className,
       )}
-      mb={6}
     >
       {children}
     </Container>

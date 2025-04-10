@@ -27,14 +27,13 @@ export const Button = ({
   ...props
 }: Props) => {
   const buttonStyle = cnb(
-    "group/button text-18 flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
+    "group/button flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg hocus:text-white hocus:bg-digital-red border-4 border-digital-red-light no-underline hocus:underline font-normal",
     {
       "text-digital-red-light": isLight && !solid,
       "text-white": !isLight,
-      "text-white bg-digital-red-light hocus:bg-digital-red": solid && big,
-      "text-white bg-digital-red": solid,
-      "px-48 py-22": big,
-      "rs-px-1 rs-py-0": !big,
+      "text-white bg-digital-red hocus:bg-digital-red-light": solid,
+      "px-48 py-22 type-0": big,
+      "rs-px-1 rs-py-0 text-16 md:text-18": !big,
     },
   );
 

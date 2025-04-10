@@ -5,8 +5,10 @@ import { Container } from "@/components/Container";
 import { EventCard, EventCardProps } from "./EventCard";
 import Image from "next/image";
 import * as styles from "./Event.styles";
+import { cnb } from "cnbuilder";
 
 interface EventsSectionProps {
+  className?: string;
   heading?: string;
   events: EventCardProps[];
   hasBgImage?: boolean;
@@ -14,6 +16,7 @@ interface EventsSectionProps {
   alt?: string;
 }
 export const EventsSection = ({
+  className,
   heading,
   events,
   hasBgImage,
@@ -22,7 +25,12 @@ export const EventsSection = ({
   ...props
 }: EventsSectionProps & {}) => {
   return (
-    <Container {...props} as="section" width="full" mb={6} className="relative">
+    <Container
+      {...props}
+      as="section"
+      width="full"
+      className={cnb("relative", className)}
+    >
       <Container bgColor={src ? "stone-dark" : ""} width="full" pt={7} pb={10}>
         {src && (
           <div className="h-full w-full absolute top-0 left-0 z-0">

@@ -1,57 +1,55 @@
 "use client";
 
-import { HTMLAttributes, JSX, useEffect, useRef } from "react";
+import { HTMLAttributes, JSX, useEffect, useRef, useState } from "react";
 import Slider, { CustomArrowProps, Settings } from "react-slick";
 import { cnb } from "cnbuilder";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 
-const NextArrow = ({ className, onClick }: CustomArrowProps) => {
-  const slickDisabled = className?.includes("slick-disabled");
-  return (
-    <button
-      className={cnb(
-        "hocus:outline-3 absolute right-0 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
-        {
-          "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
-            !slickDisabled,
-          "bg-black-10 hocus:bg-black-10 hocus:outline-0": slickDisabled,
-        },
-      )}
-      onClick={onClick}
-      aria-label="Next"
-      disabled={slickDisabled}
-    >
-      <ChevronRightIcon
-        width={40}
-        className={slickDisabled ? "text-black-30" : "text-white"}
-      />
-    </button>
-  );
+type ArrowProps = CustomArrowProps & {
+  disabled?: boolean;
 };
 
-const PrevArrow = ({ className, onClick }: CustomArrowProps) => {
-  const slickDisabled = className?.includes("slick-disabled");
-  return (
-    <button
-      className={cnb(
-        "hocus:outline-3 absolute right-40 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
-        {
-          "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
-            !slickDisabled,
-          "bg-black-10 hocus:bg-black-10 hocus:outline-0": slickDisabled,
-        },
-      )}
-      onClick={onClick}
-      aria-label="Previous"
-      disabled={slickDisabled}
-    >
-      <ChevronLeftIcon
-        width={40}
-        className={slickDisabled ? "text-black-30" : "text-white"}
-      />
-    </button>
-  );
-};
+const NextArrow = ({ onClick, disabled }: ArrowProps) => (
+  <button
+    className={cnb(
+      "hocus:outline-3 absolute right-0 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
+      {
+        "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
+          !disabled,
+        "bg-black-10 hocus:bg-black-10 hocus:outline-0": disabled,
+      },
+    )}
+    onClick={onClick}
+    aria-label="Next"
+    disabled={disabled}
+  >
+    <ChevronRightIcon
+      width={40}
+      className={disabled ? "text-black-30" : "text-white"}
+    />
+  </button>
+);
+
+const PrevArrow = ({ onClick, disabled }: ArrowProps) => (
+  <button
+    className={cnb(
+      "hocus:outline-3 absolute right-40 bottom-0 z-50 flex h-36 w-36 items-center justify-center rounded-full border-2 border-white",
+      {
+        "bg-stone-dark hocus:bg-stone-dark hocus:outline hocus:outline-stone-dark":
+          !disabled,
+        "bg-black-10 hocus:bg-black-10 hocus:outline-0": disabled,
+      },
+    )}
+    onClick={onClick}
+    aria-label="Previous"
+    disabled={disabled}
+  >
+    <ChevronLeftIcon
+      width={40}
+      className={disabled ? "text-black-30" : "text-white"}
+    />
+  </button>
+);
 
 type SlideshowProps = HTMLAttributes<HTMLDivElement> & {
   children: JSX.Element | JSX.Element[];
@@ -65,6 +63,25 @@ export const Slideshow = ({
   ...props
 }: SlideshowProps) => {
   const slideShowRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<Slider | null>(null);
+  const slideCount = Array.isArray(children) ? children.length : 1;
+
+  const [isFirstSlide, setIsFirstSlide] = useState(true);
+  const [isLastSlide, setIsLastSlide] = useState(false);
+
+  const checkEdgeSlides = () => {
+    const activeSlides = slideShowRef.current?.querySelectorAll(
+      ".slick-slide.slick-active",
+    );
+    if (!activeSlides || activeSlides.length === 0) return;
+
+    const indexes = [...activeSlides]
+      .map((slide) => parseInt(slide.getAttribute("data-index") || "", 10))
+      .filter((n) => !isNaN(n));
+
+    setIsFirstSlide(indexes.includes(0));
+    setIsLastSlide(indexes.includes(slideCount - 1));
+  };
 
   const adjustSlideLinks = () => {
     // Set tabindex attributes based on if the slides are visible or not.
@@ -85,10 +102,31 @@ export const Slideshow = ({
 
   useEffect(() => {
     adjustSlideLinks();
+    checkEdgeSlides();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      checkEdgeSlides();
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const next = () => {
+    sliderRef.current?.slickNext();
+  };
+  const previous = () => {
+    sliderRef.current?.slickPrev();
+  };
+
   const settings: Settings = {
-    afterChange: () => adjustSlideLinks(),
+    afterChange: () => {
+      adjustSlideLinks();
+      checkEdgeSlides();
+    },
+
+    arrows: false,
     autoplay: false,
     centerMode: false,
     className:
@@ -96,8 +134,6 @@ export const Slideshow = ({
     dots: false,
     infinite: false,
     initialSlide: 0,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
     slidesToScroll: 1,
     slidesToShow: 3,
     speed: 1000,
@@ -118,6 +154,14 @@ export const Slideshow = ({
           centerMode: false,
         },
       },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
     ],
     ...slideshowProps,
   };
@@ -128,7 +172,17 @@ export const Slideshow = ({
       aria-roledescription="carousel"
       className={cnb("relative", props.className)}
     >
-      <Slider {...settings}>{children}</Slider>
+      <Slider ref={sliderRef} {...settings}>
+        {children}
+      </Slider>
+      <ul className="list-none">
+        <li>
+          <PrevArrow disabled={isFirstSlide} onClick={previous} />
+        </li>
+        <li>
+          <NextArrow disabled={isLastSlide} onClick={next} />
+        </li>
+      </ul>
     </section>
   );
 };
