@@ -167,17 +167,6 @@ const footnotes = [
     id: "footnote13",
     text: "Guido H. Marx, “The Making of the Stanford Engineer,” Stanford Alumnus 9, no. 4 (December 1907).",
   },
-  {
-    number: 14,
-    id: "footnote14",
-    text: "Alfred D. Kirkland, “Engineering at Stanford: A Short Historical Perspective,” IEEE Transactions on Education 18, no. 1 (February 1975): 50,",
-    sourceLink: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4320947",
-  },
-  {
-    number: 15,
-    id: "footnote15",
-    text: "Annual Report of the President of Stanford University for the Thirty-Ninth Academic Year Ending August 31, 1930, 165.",
-  },
 ];
 
 export default function page() {
@@ -720,7 +709,7 @@ export default function page() {
           <OneCol className="rs-mt-5">
             <Text>
               But this growth trend was soon dealt a serious blow by the Great
-              Depres- sion. Student enrollment dropped significantly for a few
+              Depression. Student enrollment dropped significantly for a few
               years at the School of Engineering and at Stanford as a whole. Not
               until 1934 could Dean Hoover predict that enrollment would soon
               increase. Meanwhile, the school invested in new facilities to

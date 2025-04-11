@@ -88,7 +88,6 @@ const footnotes = [
     id: "footnote-1",
     text: "Annual Report of the President of Stanford University for the Forty-Fourth Academic Year Ending August 31, 1935, 208.",
     number: 1,
-    sourceLink: "https://example.com",
   },
   {
     id: "footnote-2",
@@ -99,7 +98,6 @@ const footnotes = [
     id: "footnote-3",
     text: "Biographical Memoirs, Volume 4 (Washington, DC: National Academies Press, 1998), 309–311.",
     number: 3,
-    sourceLink: "https://example.com",
   },
   {
     id: "footnote-4",
