@@ -1,4 +1,3 @@
-/* eslint-disable no-irregular-whitespace */
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Button } from "@/components/Cta";
@@ -23,7 +22,7 @@ import { Heading, Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
 import { ImageGallery } from "@/components/ImageGallery";
-import { H2 } from "@/components/Typography/Header";
+import { H2, H3 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 
 export const metadata: Metadata = {
@@ -559,11 +558,15 @@ export default function page() {
               only doing more and higher quality research in engineering than
               would otherwise be possible, but it is also training more graduate
               students, and is training them better than ever before,” Terman
-              wrote in 1948.(16) The university’s status, Terman said, demanded
-              “an understanding of what it is that being at the top represents.
-              The most important measure of success is in terms of student
-              output, which must be large in number and outstanding in
-              quality.”(17)
+              wrote in 1948.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote16", number: 16 }]}
+              />{" "}
+              The university’s status, Terman said, demanded “an understanding
+              of what it is that being at the top represents. The most important
+              measure of success is in terms of student output, which must be
+              large in number and outstanding in quality.”
+              <Footnotes footnoteRefs={[{ id: "footnote17", number: 17 }]} />
             </Text>
           </OneCol>
           <TwoCol>
@@ -572,18 +575,22 @@ export default function page() {
                 Terman set about a new strategy of carefully selecting fields of
                 study for which he would deliberately—and aggressively—select
                 and recruit faculty, an approach he called “steeples of
-                excellence.”(18) He chose fields of highest priority to
-                Stanford’s western region—such as oil, geology, heat transfer,
-                and chemical engineering—and also fields with the most rapid
-                growth—such as radio, electronics, and mechanical structures.
-                For faculty, he wanted not the greatest numbers, but the
-                greatest achievers, whom he found in recruits like Stephen
-                Timoshenko, whose work defined an entire era in mechanical and
-                civil engineering. Terman also fought for higher salaries for
-                faculty, whose pay trailed both that offered by other leading
-                universities and, especially, that offered by industry, where a
-                highly trained engineer could make several times the pay of a
-                university professor—a challenge that persists today.
+                excellence.”
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote18", number: 18 }]}
+                />{" "}
+                He chose fields of highest priority to Stanford’s western
+                region—such as oil, geology, heat transfer, and chemical
+                engineering—and also fields with the most rapid growth—such as
+                radio, electronics, and mechanical structures. For faculty, he
+                wanted not the greatest numbers, but the greatest achievers,
+                whom he found in recruits like Stephen Timoshenko, whose work
+                defined an entire era in mechanical and civil engineering.
+                Terman also fought for higher salaries for faculty, whose pay
+                trailed both that offered by other leading universities and,
+                especially, that offered by industry, where a highly trained
+                engineer could make several times the pay of a university
+                professor—a challenge that persists today.
               </Text>
               <Text>
                 Terman also fought for promotions for various non-faculty
@@ -599,69 +606,83 @@ export default function page() {
             </div>
             <div>
               <MediaCaptionImage
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/stephen-p-timoshenko_rr0uke_v4ph49.jpg"
-                caption="Stephen P. Timoshenko teaching a class, 1948. A renowned expert, teacher, and writer widely regarded as the “father” of applied mechanics in the United States, he was born in the Russian Empire in 1878. Timoshenko taught at Stanford from 1936 to 1963 and was instrumental in the formation of the Division of Engineering Mechanics in 1949."
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766103/PC0141_b07_Timoshenko_0120_vzth15.jpg"
+                caption="Stephen P. Timoshenko teaching a class, 1948. A renowned expert, teacher, and writer widely regarded as the “father” of applied mechanics in the United States, he was born in the Russian Empire in 1878. Timoshenko taught at Stanford from 1936 to 1963 and was instrumental in the formation of the Division of Engineering Mechanics in 1949. | Special Collections & University Archives."
               />
             </div>
           </TwoCol>
           <OneCol>
             <Text>
               As the 1950s opened, the Korean conflict accelerated the rise in
-              government-sponsored radio and electronics research at
-              Stanford.(19) Terman had been planning for an Electronics Research
-              Laboratory (ERL), which opened in 1951, to coordinate research
-              operations in electrical engineering.(20) The Office of Naval
-              Research said in 1950 that it saw Stanford as “about first in
-              usefulness,” among engineering partners, promising to invest a
-              million dollars in “fast-paced electronics research” at the
-              school.(21)
+              government-sponsored radio and electronics research at Stanford.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote19", number: 19 }]}
+              />{" "}
+              Terman had been planning for an Electronics Research Laboratory
+              (ERL), which opened in 1951, to coordinate research operations in
+              electrical engineering.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote20", number: 20 }]}
+              />{" "}
+              The Office of Naval Research said in 1950 that it saw Stanford as
+              “about first in usefulness,” among engineering partners, promising
+              to invest a million dollars in “fast-paced electronics research”
+              at the school.
+              <Footnotes footnoteRefs={[{ id: "footnote21", number: 21 }]} />
             </Text>
             <Text>
               The ERL was soon pulling in so much research funding, $700,000 per
               year, that an expansion was approved in November 1951, just months
               after the laboratory opened; the Applied Electronics Laboratory
-              (AEL) was added in 1958.(22) True to Terman’s no-nonsense style,
-              the ERL and AEL buildings were practical concrete-and-wood
-              structures designed not for comfort or aesthetics but for serious
-              science. They would serve Stanford engineering students for
-              another forty years.(23)
+              (AEL) was added in 1958.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote22", number: 22 }]}
+              />{" "}
+              True to Terman’s no-nonsense style, the ERL and AEL buildings were
+              practical concrete-and-wood structures designed not for comfort or
+              aesthetics but for serious science. They would serve Stanford
+              engineering students for another forty years.
+              <Footnotes footnoteRefs={[{ id: "footnote23", number: 23 }]} />
             </Text>
           </OneCol>
           <BgImageWrapper bgColor="blue" isTwoCol>
             <MediaCaptionImage
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/00006962_0001_a0zehi.jpg"
               caption="Images left and right. Housed in utilitarian buildings, the Electronics Research Laboratory (ERL) opened in 1951 and provided space for coordinating research operations in electrical engineering. The ERL was soon drawing $700,000 per year in research funding, resulting in expansion plans for an Applied Electronics Laboratory (AEL), approved just months later. | Stanford University Planning Office."
             />
             <MediaCaptionImage
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
-              caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006962_0005_jhmwwj.jpg"
             />
           </BgImageWrapper>
           <OneCol>
-            <Heading>Unleashing the Power of Computation</Heading>
+            <H2>Unleashing the Power of Computation</H2>
             <Text>
               In 1953, Stanford established its first Computation Center, where
               a single high-speed IBM Card-Programmed Calculator churned through
               mountains of computations. The center was in such high demand that
               use of the Computation Center was reserved for faculty and
               graduate research only. Stanford’s first true computer, an IBM
-              650, would not arrive until 1956.(24) The Computer Science
-              Department was originally in the Depart- ment of Mathematics in
-              the School of Humanities and Sciences, where it remained until
-              1985, when it was moved to the School of Engineering.
+              650, would not arrive until 1956.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote24", number: 24 }]}
+              />{" "}
+              The Computer Science Department was originally in the Depart- ment
+              of Mathematics in the School of Humanities and Sciences, where it
+              remained until 1985, when it was moved to the School of
+              Engineering.
             </Text>
           </OneCol>
           <TwoCol>
             <div>
               <MediaCaptionImage
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/stephen-p-timoshenko_rr0uke_v4ph49.jpg"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766095/CC183_avv3z0.jpg"
                 caption="John G. Herriot, professor of mathematics, when he became the first director of the newly founded Computation Center in 1953. In spring 1955, he taught the first programming course, “Theory and Operation of Computing Machines,” to twenty-five students using an IBM Card- Programmed Calculator, Model II. Computer Science was in the Department of Mathematics until 1985, when it was moved to the School of Engineering. | Stanford News Service."
               />
             </div>
             <div>
-              <Heading>The Honors Cooperative Program</Heading>
+              <H2>The Honors Cooperative Program</H2>
               <Text>
                 In addition to seeking federal funding, Terman was a proponent
                 of close associations between academia and industry to advance
@@ -688,99 +709,92 @@ export default function page() {
           </TwoCol>
 
           <Scrollytelling
-            bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
+            bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/pb977cg5869_00_0001_knwaxb.jpg"
             bgImageAlt="Aerial view of the Stanford University campus, 1948."
-            heading="Harnessing Federal Funding"
+            heading="Irmgard Flügge-Lotz"
           >
+            <MediaCaptionImage
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766099/flugge-lotz_n5vuhj.jpg"
+              caption="Irmgard Flügge-Lotz. | Stanford News Service."
+            />
             <ScrollyBubble>
-              <Text mb="0">
-                Before and even during the war, the School of Engineering’s
-                share of federal research dollars had been limited, and the
-                School of Engineering budget for the 1946–1947 school year had
-                reached its lowest level since 1926. Terman refused to accept
-                the status quo and in the postwar period looked for
-                opportunities to expand funding. Reporting on federal contracts
-                from the Navy’s Office of Research and Inventions of the Navy
-                (later the Office of Naval Research), Army Air Force, Signal
-                Corps, and the National Bureau of Standards, he wrote to
-                President Tresidder in 1946 that “A substantial proportion of
-                the Dean’s time has been devoted to the establishment of a
-                research program having long range values, sponsored by
-                government agencies. . . . [A]nd the program is still
-                expanding.”
+              <H3>“A Life Which Would Never Be Boring”</H3>
+              <Text>
+                As a child in Germany, Irmgard Flügge-Lotz lived near the home
+                of Count Ferdinand von Zeppelin. She later recalled that
+                witnessing his tests of huge airships was a thrill that stayed
+                with her and fueled her desire to understand the science of
+                flight.(25)
               </Text>
-            </ScrollyBubble>
-            <ScrollyBubble>
-              <Text mb="0">
-                Research dollars flowed westward from Washington. Within months
-                of returning to campus, Terman had secured government-funded
-                projects totaling $380,000 per year, including $210,000 for
-                electrical engineering, $81,000 for mechanical engineering,
-                $59,000 for physics, and $30,000 for chemistry. By 1948,
-                government-sponsored research in civil, electrical, and
-                mechanical engineering neared a half million dollars—roughly
-                $6.5 million in inflation-adjusted dollars today.
+              <Text>
+                Early in her career, Flügge-Lotz became known for the Lotz
+                Method, her process for calculating the spanwise lift
+                distribution of airplane wings, which became an international
+                industry standard.(26)
               </Text>
-            </ScrollyBubble>
-            <ScrollyBubble>
-              <Text mb="0">
-                Notable among the many new initiatives at Stanford was the 1945
-                establishment of the Microwave Laboratory, which Terman had
-                orchestrated even while stationed across the country. Centering
-                the Microwave Lab in the School of Physical Science but sharing
-                close ties to the School of Engineering was typical of the
-                School of Engineering’s emphasis on interdisciplinary
-                collaboration. Director William Hansen, a physicist, had
-                selected Edward Ginzton, an engineer, as his second in charge
-                and appointed him associate professor of “applied physics”—a
-                neologism highlighting the “interdisciplinary contours of
-                physics and electrical engineering at Stanford.” In 1947, Hansen
-                and Ginzton employed klystrons to create the first linear
-                accelerator.
+              <Text>
+                In 1948, she and her husband, Wilhelm Flügge, accepted offers
+                from Stanford Engineering. Flügge-Lotz left her position as
+                chief of a research group in theoretical aerodynamics at the
+                French National Office for Aeronautical Research (ONERA) to
+                bring her expertise in automatic control theory to Stanford,
+                where she served as a lecturer. In September 1960, she became
+                the first female professor in the School of Engineering,
+                appointed in both aeronautical engineering and engineering
+                mechanics.
               </Text>
+              <Text>
+                Flügge-Lotz was recognized for her enthusiasm and expertise in
+                fluid mechanics—particularly in boundary-layer theory and
+                numerical models. She taught courses on boundary-layer theory;
+                introduced a novel, year-long sequence of courses in
+                mathematical hydro- and aerodynamics; developed new courses in
+                the theory of automatic controls; advised doctoral students for
+                dissertations in aerodynamic theory; and established the weekly
+                Fluid Mechanics Seminar, which continues at Stanford today.(27)
+              </Text>
+              <Text>
+                A supportive advisor, Flügge-Lotz would publish reports on
+                automatic control devices with her students. Because these
+                devices were often electrical, the studies often led to
+                increased contact and collaboration with faculty and students
+                from the Department of Electrical Engineering.(28)
+              </Text>
+              <Text>
+                Reflecting on her life, Flügge-Lotz said, “I wanted a life which
+                would never be boring. That meant a life in which always new
+                things would occur.” (29) She felt most satisfied when she had
+                “an interesting problem that has resisted being solved, and then
+                solving it.” (30)
+              </Text>
+              <Quote
+                teaser="Her contributions have spanned a lifetime during which she demonstrated, in a field dominated by men, the value and quality of a woman’s intuitive approach in searching for and discovering solutions to complex engineering problems.”(31)"
+                source="— Fred Terman"
+              />
             </ScrollyBubble>
             <Quote
               animation="none"
-              body="“I was amazed to find that he knew a great
-deal about me,” Packard later recalled. “He knew my interests and abilities in athletics; he knew what courses I had taken and my grades. He had even looked up my high school record and my
-scores on the entrance exams.”(12)"
-              source="— David Packard"
+              body="“I was amazed to find that he knew a great deal about me,” Packard later recalled. “He knew my interests and abilities in athletics; he knew what courses I had taken and my grades. He had even looked up my high school record and my scores on the entrance exams.”(12)"
+              source="Leaders at the University of Maryland"
             />
-            <MediaCaptionImage
-              isCaptionInset
-              rounded
-              aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg"
-              caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
-            />
-            <MediaCaptionImage
-              isCaptionInset
-              rounded
-              aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg"
-              caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator."
-            />
-            <MediaCaptionImage
-              isCaptionInset
-              rounded
-              aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/mark-2_nncexe_lwbmas.jpg"
-              caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC). "
-            />
-            <MediaCaptionImage
-              isCaptionInset
-              rounded
-              aspectRatio="3x4"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/mark-2-2_jf2xmm_ywrsnc.jpg"
-              caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC)."
-            />
-            <MediaCaptionImage
-              isCaptionInset
-              rounded
-              aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986287/william-w-hansen_osvbzp_rdnqlf.jpg"
-              caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL)."
-            />
+            <Text>
+              Flügge-Lotz made numerous mathematical contributions to the fields
+              of aerodynamics and automatic control theory. She published more
+              than fifty technical papers, authored two books, and paved the way
+              for more women in engineering in the years to come. In the
+              citation of her 1973 honorary doctorate, leaders at the University
+              of Maryland wrote, “Her contributions have spanned a lifetime
+              during which she demonstrated, in a field dominated by men, the
+              value and quality of a woman’s intuitive approach in searching for
+              and discovering solutions to complex engineering problems.”(31)
+            </Text>
+            <Text mb="0">
+              —Hanna Ahn
+              <br />
+              Assistant University Archivist for
+              <br />
+              Special Collections & University Archives
+            </Text>
           </Scrollytelling>
           <OneCol>
             <Heading>First Steps to Semiconductors</Heading>
@@ -791,13 +805,13 @@ scores on the entrance exams.”(12)"
               handwritten notes from 1948 show his emerging interest in the
               promising field. With characteristic understatement he wrote, “The
               transistor is a great new force that will revolutionize many
-              aspects of electronics in the next five to ten years.”34
+              aspects of electronics in the next five to ten years.”(34)
               Achievements in the decade to come would prove him correct.
             </Text>
             <Text>
               Unimagined horizons lay ahead for engineering, for the school, and
-              for Ter- man himself. As the school’s third decade came to a
-              close, the Fred Terman era was etched into history.
+              for Terman himself. As the school’s third decade came to a close,
+              the Fred Terman era was etched into history.
             </Text>
           </OneCol>
           <Container mt={4} mb={7}>
