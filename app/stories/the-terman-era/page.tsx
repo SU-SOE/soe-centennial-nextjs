@@ -1,14 +1,12 @@
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
-import { Button } from "@/components/Cta";
-import { OneCol, ThreeCol, TwoCol } from "@/components/Layout";
+import { OneCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Quote } from "@/components/Quote";
 import {
   Footnotes,
   FootnotesList,
-  StoryCard,
   StoryImpactBanner,
   StorySidebar,
 } from "@/components/Story";
@@ -21,7 +19,6 @@ import {
 import { Heading, Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
-import { ImageGallery } from "@/components/ImageGallery";
 import { H2, H3 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 
@@ -58,169 +55,127 @@ export const metadata: Metadata = {
   },
 };
 
+const exploreStoriesData = [
+  {
+    heading: "“Preparing roads over which culture may ride in comfort",
+    chapter: "Decade 1",
+    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+  },
+  {
+    heading: "The foundation of a new era in engineering",
+    chapter: "Decade 2",
+    href: "/stories/the-foundation-of-a-new-era-in-engineering",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+  },
+  {
+    heading: "A period of transformation",
+    chapter: "Decade 4",
+    href: "/",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg",
+  },
+];
+
+const footnotes = [
+  {
+    number: 1,
+    id: "footnote1",
+    text: "C. Stewart Gillmor, *Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley* (Stanford University Press, 2004), 263–265.",
+  },
+  { number: 2, id: "footnote2", text: "Ibid., 263." },
+  { number: 3, id: "footnote3", text: "Ibid., 265." },
+  {
+    number: 4,
+    id: "footnote4",
+    text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
+  },
+  { number: 5, id: "footnote5", text: "Ibid." },
+  { number: 6, id: "footnote6", text: "Gillmor, *Fred Terman at Stanford*." },
+  {
+    number: 7,
+    id: "footnote7",
+    text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
+  },
+  {
+    number: 8,
+    id: "footnote8",
+    text: "Gillmor, *Fred Terman at Stanford*, 267.",
+  },
+  {
+    number: 9,
+    id: "footnote9",
+    text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 24–25.",
+  },
+  {
+    number: 10,
+    id: "footnote10",
+    text: "US Inflation Calculator, ",
+    sourceLink: "https://www.usinflationcalculator.com",
+  },
+  {
+    number: 11,
+    id: "footnote11",
+    text: "Stuart W. Leslie, “Playing the Education Game to Win: The Military and Interdisciplinary Research at Stanford,” *Historical Studies in the Physical and Biological Sciences* 18, no. 1 (1987): 55–88.",
+  },
+  {
+    number: 12,
+    id: "footnote12",
+    text: "Stanford Electrical Engineering, “Electrical Engineering Timeline,” ",
+    sourceLink:
+      "https://archive.ph/20120731042240/http:/ee.stanford.edu/timeline.php",
+  },
+  {
+    number: 13,
+    id: "footnote13",
+    text: "Leslie, “Playing the Education Game to Win,” 67.",
+  },
+  {
+    number: 14,
+    id: "footnote14",
+    text: "*Annual Report of the President of Stanford University for the Fifty-Sixth Academic Year Ending August 31, 1947*, 121.",
+  },
+  { number: 15, id: "footnote15", text: "Ibid." },
+  {
+    number: 16,
+    id: "footnote16",
+    text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 152.",
+  },
+  {
+    number: 17,
+    id: "footnote17",
+    text: "Gillmor, *Fred Terman at Stanford*.",
+  },
+  { number: 18, id: "footnote18", text: "Ibid." },
+  { number: 19, id: "footnote19", text: "Ibid., 307–308." },
+  { number: 20, id: "footnote20", text: "Ibid., 302." },
+  { number: 21, id: "footnote21", text: "Ibid., 307–308." },
+  { number: 22, id: "footnote22", text: "Ibid." },
+  { number: 23, id: "footnote23", text: "Ibid." },
+  {
+    number: 24,
+    id: "footnote24",
+    text: "*A Chronology of Stanford University and Its Founders*, edited by Karen Bartholomew, Claude Stout Brinegar, and Roxanne Nilan (Stanford Historical Society, 2001), 77.",
+  },
+  {
+    number: 25,
+    id: "footnote25",
+    text: "Gillmor, *Fred Terman at Stanford*.",
+  },
+  {
+    number: 26,
+    id: "footnote26",
+    text: "Stanford Center for Professional Development, “Our History,” ",
+    sourceLink: "https://scpd.stanford.edu/our-history",
+  },
+];
+
 export default function page() {
-  const storyData = [
-    {
-      heading: "New Spaces and Expanding Influence",
-      superhead: "The 5th Decade",
-      chapter: "Chapter 5",
-      href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/new-spaces-and-expanding-influence_dcvv7j_odpshs.jpg",
-    },
-    {
-      heading: "Bridging Worlds: Chips, Code, and Cosmos",
-      superhead: "The 6th Decade",
-      chapter: "Chapter 6",
-      href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/bridging-worlds_ma3ixq_gwcmqb.jpg",
-    },
-    {
-      heading: "Redevelopment and an Earthquake",
-      superhead: "The 7th Decade",
-      chapter: "Chapter 7",
-      href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg",
-    },
-  ];
-
-  const footnotes = [
-    {
-      number: 1,
-      id: "footnote1",
-      text: "C. Stewart Gillmor, *Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley* (Stanford University Press, 2004), 263–265.",
-    },
-    { number: 2, id: "footnote2", text: "Ibid., 263." },
-    { number: 3, id: "footnote3", text: "Ibid., 265." },
-    {
-      number: 4,
-      id: "footnote4",
-      text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
-    },
-    { number: 5, id: "footnote5", text: "Ibid." },
-    { number: 6, id: "footnote6", text: "Gillmor, *Fred Terman at Stanford*." },
-    {
-      number: 7,
-      id: "footnote7",
-      text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
-    },
-    {
-      number: 8,
-      id: "footnote8",
-      text: "Gillmor, *Fred Terman at Stanford*, 267.",
-    },
-    {
-      number: 9,
-      id: "footnote9",
-      text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 24–25.",
-    },
-    {
-      number: 10,
-      id: "footnote10",
-      text: "US Inflation Calculator, ",
-      sourceLink: "https://www.usinflationcalculator.com",
-    },
-    {
-      number: 11,
-      id: "footnote11",
-      text: "Stuart W. Leslie, “Playing the Education Game to Win: The Military and Interdisciplinary Research at Stanford,” *Historical Studies in the Physical and Biological Sciences* 18, no. 1 (1987): 55–88.",
-    },
-    {
-      number: 12,
-      id: "footnote12",
-      text: "Stanford Electrical Engineering, “Electrical Engineering Timeline,” ",
-      sourceLink:
-        "https://archive.ph/20120731042240/http:/ee.stanford.edu/timeline.php",
-    },
-    {
-      number: 13,
-      id: "footnote13",
-      text: "Leslie, “Playing the Education Game to Win,” 67.",
-    },
-    {
-      number: 14,
-      id: "footnote14",
-      text: "*Annual Report of the President of Stanford University for the Fifty-Sixth Academic Year Ending August 31, 1947*, 121.",
-    },
-    { number: 15, id: "footnote15", text: "Ibid." },
-    {
-      number: 16,
-      id: "footnote16",
-      text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 152.",
-    },
-    {
-      number: 17,
-      id: "footnote17",
-      text: "Gillmor, *Fred Terman at Stanford*.",
-    },
-    { number: 18, id: "footnote18", text: "Ibid." },
-    { number: 19, id: "footnote19", text: "Ibid., 307–308." },
-    { number: 20, id: "footnote20", text: "Ibid., 302." },
-    { number: 21, id: "footnote21", text: "Ibid., 307–308." },
-    { number: 22, id: "footnote22", text: "Ibid." },
-    { number: 23, id: "footnote23", text: "Ibid." },
-    {
-      number: 24,
-      id: "footnote24",
-      text: "*A Chronology of Stanford University and Its Founders*, edited by Karen Bartholomew, Claude Stout Brinegar, and Roxanne Nilan (Stanford Historical Society, 2001), 77.",
-    },
-    {
-      number: 25,
-      id: "footnote25",
-      text: "Gillmor, *Fred Terman at Stanford*.",
-    },
-    {
-      number: 26,
-      id: "footnote26",
-      text: "Stanford Center for Professional Development, “Our History,” ",
-      sourceLink: "https://scpd.stanford.edu/our-history",
-    },
-  ];
-
-  const galleryImages = [
-    {
-      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-1_cfwklw_xiasre.jpg",
-      alt: "Professor Edward Ginzton and Dr. Henry Kaplan in front of klystron gauges, circa 1953",
-      caption:
-        "Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England.",
-    },
-    {
-      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986285/prof-edward-2_xecpct_ubzi0i.jpg",
-      alt: "Edward L. Ginzton with the Mark III linear accelerator, 1951",
-      caption:
-        "Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator.",
-    },
-    {
-      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986288/mark-2_nncexe_lwbmas.jpg",
-      alt: "Mark III linear accelerator, 1952",
-      caption:
-        "Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC).",
-    },
-    {
-      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/mark-2-2_jf2xmm_ywrsnc.jpg",
-      alt: "Mark III linear accelerator, 1952",
-      caption:
-        "Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the W. W. Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator (SLAC).",
-    },
-    {
-      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986287/william-w-hansen_osvbzp_rdnqlf.jpg",
-      alt: "William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947",
-      caption:
-        "William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL).",
-    },
-    {
-      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/felix-bloch_dg6ato_a4ybb7.jpg",
-      alt: "Felix Bloch and William Hansen demonstrating equipment used in their research, 1947",
-      caption:
-        "Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory.",
-    },
-  ];
-
   return (
     <>
-      <Masthead logoColor="white-red" isOverlap />
+      <Masthead logoColor="default" isOverlap />
       <main id="main-content">
         <article>
           <StoryImpactBanner
@@ -231,18 +186,25 @@ export default function page() {
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg"
             caption="Left to right: David Packard, William Hewlett, and Dean of Engineering Fred Terman attend the dedication of the Hewlett-Packard wing in Stanford’s Electronics Research Laboratory, 1952. | Stanford News Service."
             alt="David Packard and Fred Terman shake hands at the entrance of a building while a third unnamed man stands in the background."
+            className="mb-0"
           />
-          <BgImageWrapper src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/mark_iii_linear_accelerator_hh3pcm.jpg">
+          <BgImageWrapper
+            hasBgImage
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/mark_iii_linear_accelerator_hh3pcm.jpg"
+            bgColor="fog-light"
+            className="rs-py-5 mb-0"
+          >
             <div className="max-w-1500 w-full cc 2xl:p-0">
               <Quote
+                className="m-0 mr-auto"
                 width="wide"
-                teaser="Stanford is not only doing more and higher quality research in engineering than would otherwise be possible, it is also training more graduate students, and is training them better than ever before."
+                body="Stanford is not only doing more and higher quality research in engineering than would otherwise be possible, it is also training more graduate students, and is training them better than ever before."
                 source="— Frederick Terman, 1948"
               />
             </div>
           </BgImageWrapper>
           <OneCol>
-            <H2>1945 – 1954</H2>
+            <H2 className="rs-mt-6">1945 – 1954</H2>
             <Text variant="overview">
               Samuel Morris recommended Frederick Terman to be his successor as
               dean of the School of Engineering. Terman, on leave from Stanford
@@ -254,7 +216,7 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} />
             </Text>
           </OneCol>
-          <TwoCol isSidebar>
+          <TwoCol isSidebar className="rs-mt-6">
             <OneCol>
               <Text>
                 Despite Terman’s absence, in December 1944 Stanford President
@@ -325,7 +287,7 @@ export default function page() {
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="A" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-2">
             <Text>
               The school quickly rebounded from record-low wartime enrollments.
               Between the fall and spring quarters of 1945–1946, the “civilian
@@ -346,7 +308,7 @@ export default function page() {
               of the curriculum.
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <OneCol>
               <Heading>Harnessing Federal Funding</Heading>
               <Text>
@@ -413,12 +375,12 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-          <ImageGallery images={galleryImages} />
           <BgImageWrapper
+            isImgOffset
             isTwoCol
             hasBgImage
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/00007003_0005_qriugd.jpg"
-            bgColor="stone-dark"
+            bgColor="fog-light"
           >
             <MediaCaptionImage
               animation="fadeIn"
@@ -498,7 +460,7 @@ export default function page() {
               caption="Electrical engineering faculty Oswald Garrison Villard Jr. (MEng ’43, PhD ’49), right, and Allen M. Peterson (BS ’48, MS ’49, PhD ’52) with equipment used to record meteors in the ionosphere, August 1950. Their pioneering work on reflecting radar signals off the ionosphere led to Villard’s 1959 debut of “over-the- horizon” radar, which transcended line-of-sight limitations and laid the foundation for advanced long-range surveillance and missile detection systems. | Special Collections & University Archives."
             />
           </BgImageWrapper>
-          <OneCol>
+          <OneCol className="rs-mt-6">
             <Text>
               The Microwave Lab would exceed even Terman’s high expectations,
               even- tually producing fundamental research in nuclear physics,
@@ -531,7 +493,7 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
             </Text>
           </OneCol>
-          <Container>
+          <Container className="rs-mt-6">
             <MediaCaptionImage
               isParallax
               rounded
@@ -542,7 +504,7 @@ export default function page() {
               caption="Aerial view of the Stanford University campus, 1948."
             />
           </Container>
-          <OneCol>
+          <OneCol className="rs-my-6">
             <Quote
               quoteColor="red"
               body="... great new era of industrialization"
@@ -569,7 +531,7 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote17", number: 17 }]} />
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mt-6 rs-mb-5">
             <div>
               <Text>
                 Terman set about a new strategy of carefully selecting fields of
@@ -611,7 +573,7 @@ export default function page() {
               />
             </div>
           </TwoCol>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               As the 1950s opened, the Korean conflict accelerated the rise in
               government-sponsored radio and electronics research at Stanford.
@@ -647,13 +609,17 @@ export default function page() {
           </OneCol>
           <BgImageWrapper bgColor="blue" isTwoCol>
             <MediaCaptionImage
+              rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/00006962_0001_a0zehi.jpg"
+              alt="Black and white photo of the Electronics Research Laboratory"
               caption="Images left and right. Housed in utilitarian buildings, the Electronics Research Laboratory (ERL) opened in 1951 and provided space for coordinating research operations in electrical engineering. The ERL was soon drawing $700,000 per year in research funding, resulting in expansion plans for an Applied Electronics Laboratory (AEL), approved just months later. | Stanford University Planning Office."
             />
             <MediaCaptionImage
+              rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006962_0005_jhmwwj.jpg"
+              alt="Black and white close up photo of the Electronics Research Laboratory with a large tree in the foreground"
             />
           </BgImageWrapper>
           <OneCol>
@@ -674,15 +640,20 @@ export default function page() {
               Engineering.
             </Text>
           </OneCol>
-          <TwoCol>
+          <div className="flex w-full justify-end">
+            <HorizontalLineart lineartType="B" />
+          </div>
+          <TwoCol className="rs-mt-6 rs-mb-8">
             <div>
               <MediaCaptionImage
+                rounded
+                aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766095/CC183_avv3z0.jpg"
                 caption="John G. Herriot, professor of mathematics, when he became the first director of the newly founded Computation Center in 1953. In spring 1955, he taught the first programming course, “Theory and Operation of Computing Machines,” to twenty-five students using an IBM Card- Programmed Calculator, Model II. Computer Science was in the Department of Mathematics until 1985, when it was moved to the School of Engineering. | Stanford News Service."
               />
             </div>
             <div>
-              <H2>The Honors Cooperative Program</H2>
+              <H2 className="mt-0">The Honors Cooperative Program</H2>
               <Text>
                 In addition to seeking federal funding, Terman was a proponent
                 of close associations between academia and industry to advance
@@ -714,11 +685,13 @@ export default function page() {
             heading="Irmgard Flügge-Lotz"
           >
             <MediaCaptionImage
+              rounded
+              aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766099/flugge-lotz_n5vuhj.jpg"
               caption="Irmgard Flügge-Lotz. | Stanford News Service."
             />
             <ScrollyBubble>
-              <H3>“A Life Which Would Never Be Boring”</H3>
+              <H3 className="mt-0">“A Life Which Would Never Be Boring”</H3>
               <Text>
                 As a child in Germany, Irmgard Flügge-Lotz lived near the home
                 of Count Ferdinand von Zeppelin. She later recalled that
@@ -768,33 +741,30 @@ export default function page() {
                 solving it.” (30)
               </Text>
               <Quote
-                teaser="Her contributions have spanned a lifetime during which she demonstrated, in a field dominated by men, the value and quality of a woman’s intuitive approach in searching for and discovering solutions to complex engineering problems.”(31)"
-                source="— Fred Terman"
+                body="Her contributions have spanned a lifetime during which she demonstrated, in a field dominated by men, the value and quality of a woman’s intuitive approach in searching for and discovering solutions to complex engineering problems."
+                source="Leaders at the University of Maryland"
+                className="rs-mb-4"
               />
+              <Text>
+                Flügge-Lotz made numerous mathematical contributions to the
+                fields of aerodynamics and automatic control theory. She
+                published more than fifty technical papers, authored two books,
+                and paved the way for more women in engineering in the years to
+                come. In the citation of her 1973 honorary doctorate, leaders at
+                the University of Maryland wrote, “Her contributions have
+                spanned a lifetime during which she demonstrated, in a field
+                dominated by men, the value and quality of a woman’s intuitive
+                approach in searching for and discovering solutions to complex
+                engineering problems.”(31)
+              </Text>
+              <Text mb="0">
+                —Hanna Ahn
+                <br />
+                Assistant University Archivist for
+                <br />
+                Special Collections & University Archives
+              </Text>
             </ScrollyBubble>
-            <Quote
-              animation="none"
-              body="“I was amazed to find that he knew a great deal about me,” Packard later recalled. “He knew my interests and abilities in athletics; he knew what courses I had taken and my grades. He had even looked up my high school record and my scores on the entrance exams.”(12)"
-              source="Leaders at the University of Maryland"
-            />
-            <Text>
-              Flügge-Lotz made numerous mathematical contributions to the fields
-              of aerodynamics and automatic control theory. She published more
-              than fifty technical papers, authored two books, and paved the way
-              for more women in engineering in the years to come. In the
-              citation of her 1973 honorary doctorate, leaders at the University
-              of Maryland wrote, “Her contributions have spanned a lifetime
-              during which she demonstrated, in a field dominated by men, the
-              value and quality of a woman’s intuitive approach in searching for
-              and discovering solutions to complex engineering problems.”(31)
-            </Text>
-            <Text mb="0">
-              —Hanna Ahn
-              <br />
-              Assistant University Archivist for
-              <br />
-              Special Collections & University Archives
-            </Text>
           </Scrollytelling>
           <OneCol>
             <Heading>First Steps to Semiconductors</Heading>
@@ -821,7 +791,7 @@ export default function page() {
           </Container>
           <ExploreMore
             width="site"
-            stories={storyData}
+            stories={exploreStoriesData}
             sectionHeading="Explore more book chapters"
             buttonLink="/stories"
             buttonText="Explore all book chapters"

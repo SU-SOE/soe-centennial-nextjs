@@ -68,6 +68,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
 export const StoryImpactBanner = ({
   heading,
   superhead,
+  className,
   chapter,
   dek,
   body,
@@ -81,13 +82,13 @@ export const StoryImpactBanner = ({
   alt,
   ...props
 }: StoryImpactBannerProps) => {
-  const pb = bgColor === "white" ? 10 : 8;
+  const pb = bgColor === "white" ? 6 : 8;
   return (
     <Container
       {...props}
       width="full"
       mb={5}
-      className="relative"
+      className={cnb("relative", className)}
       role="figure"
       aria-labelledby="hero-caption"
     >
