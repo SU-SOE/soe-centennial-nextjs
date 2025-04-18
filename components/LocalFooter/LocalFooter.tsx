@@ -41,11 +41,6 @@ export const LocalFooter = () => (
               Timeline
             </ActionLink>
           </Text>
-          <Text weight="normal" size="f2" mb="0">
-            <ActionLink whiteText href="/">
-              Centennial book online
-            </ActionLink>
-          </Text>
         </FlexBox>
         <FlexBox className={styles.contentWrapper}>
           <section className={styles.column}>
