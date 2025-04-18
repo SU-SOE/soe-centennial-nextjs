@@ -14,8 +14,6 @@ export const GlobalFooter = ({ className }: GlobalFooterProps) => (
       <div className={styles.logoWrapper}>
         <StanfordLogo
           isLink
-          tabIndex={-1}
-          aria-hidden
           className={styles.logo}
           type="stacked"
           color="white"

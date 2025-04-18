@@ -611,14 +611,14 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/00006962_0001_a0zehi.jpg"
-              alt="Black and white photo of the Electronics Research Laboratory"
+              alt="A grassy field with several mid-century buildings and parked cars in the background, partially framed by tree branches."
               caption="Images left and right. Housed in utilitarian buildings, the Electronics Research Laboratory (ERL) opened in 1951 and provided space for coordinating research operations in electrical engineering. The ERL was soon drawing $700,000 per year in research funding, resulting in expansion plans for an Applied Electronics Laboratory (AEL), approved just months later. | Stanford University Planning Office."
             />
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006962_0005_jhmwwj.jpg"
-              alt="Black and white close up photo of the Electronics Research Laboratory with a large tree in the foreground"
+              alt="A modern, single-story building with large windows and flat roofs, partially shaded by large trees, and surrounded by bare ground."
             />
           </BgImageWrapper>
           <OneCol>
