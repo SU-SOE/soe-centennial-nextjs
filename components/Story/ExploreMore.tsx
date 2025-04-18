@@ -50,13 +50,14 @@ export const ExploreMore = ({
     <Container
       {...props}
       width={width || "full"}
-      className={cnb("py-20", className)}
+      className={cnb("rs-mt-7 rs-mb-10", className)}
     >
       {sectionHeading && <Heading>{sectionHeading}</Heading>}
       <AsComponent className="max-w-[140rem]">
         {stories.map((story, index) => (
           <StoryCard
             key={index}
+            bgColor="blue"
             headerTag="h3"
             animation="slideUp"
             delay={delays[index] || 0.3}
@@ -65,7 +66,7 @@ export const ExploreMore = ({
         ))}
       </AsComponent>
       {buttonText && buttonLink && (
-        <Button isLight href={buttonLink} className="mx-auto">
+        <Button isLight href={buttonLink} className="mx-auto rs-mt-5">
           {buttonText}
         </Button>
       )}

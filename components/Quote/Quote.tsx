@@ -57,7 +57,7 @@ export const Quote = ({
             </Text>
           )}
           {body && (
-            <Text variant="overview" font="dm-sans" className={styles.body}>
+            <Text size="quote-md" font="dm-sans" className={styles.body}>
               {body}&quot;
             </Text>
           )}

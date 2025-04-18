@@ -68,6 +68,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
 export const StoryImpactBanner = ({
   heading,
   superhead,
+  className,
   chapter,
   dek,
   body,
@@ -81,13 +82,12 @@ export const StoryImpactBanner = ({
   alt,
   ...props
 }: StoryImpactBannerProps) => {
-  const pb = bgColor === "white" ? 10 : 8;
   return (
     <Container
       {...props}
       width="full"
       mb={5}
-      className="relative"
+      className={cnb("relative", className)}
       role="figure"
       aria-labelledby="hero-caption"
     >
@@ -95,7 +95,7 @@ export const StoryImpactBanner = ({
         bgColor={bgColor}
         width="site"
         pt={9}
-        pb={pb}
+        pb={8}
         className="relative pt-150 md:rs-pt-9"
       >
         {hasBgImage && (
@@ -174,9 +174,11 @@ export const StoryImpactBanner = ({
               <Image src={src} alt={alt} fill className="object-cover" />
             </AnimateInView>
             {bgColor === "white" && (
-              <figcaption className="mt-13">
-                <Text variant="caption">{caption}</Text>
-              </figcaption>
+              <div className="mt-13">
+                <Text id="hero-caption" variant="caption" mb="none">
+                  {caption}
+                </Text>
+              </div>
             )}
           </FlexBox>
         </FlexBox>
