@@ -216,7 +216,7 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} />
             </Text>
           </OneCol>
-          <TwoCol isSidebar className="rs-mt-6">
+          <TwoCol isSidebar className="rs-mt-6 rs-mb-3">
             <OneCol>
               <Text>
                 Despite Terman’s absence, in December 1944 Stanford President
@@ -250,11 +250,8 @@ export default function page() {
               <Text>
                 The school quickly rebounded from record-low wartime
                 enrollments. Between the fall and spring quarters of 1945–1946,
-                the “civilian engineering” program tripled in size.
-                <Footnotes
-                  footnoteRefs={[{ id: "footnote4", number: 4 }]}
-                />{" "}
-                The expansion was so great that Terman broadened summer quarter
+                the “civilian engineering” program tripled in size. The
+                expansion was so great that Terman broadened summer quarter
                 offerings to meet the demand. The influx of students was felt
                 across Stanford: in winter 1946, university enrollment was
                 7,000, with housing for only 4,000; a year later, enrollment was
@@ -272,7 +269,7 @@ export default function page() {
                 className="mb-0"
                 aspectRatio="1x1"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/terman_qm422bp1949_5.57.39_PM_iqbfsd.jpg"
-                caption="Fred Terman, dean of the School of Engineering, circa 1950."
+                caption="Fred Terman, dean of the Schoolof Engineering, circa 1950. |  Special Collections & University Archives."
               />
               <MediaCaptionImage
                 rounded
@@ -280,12 +277,12 @@ export default function page() {
                 className="mb-0"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/hugh_skilling_dipkk1.jpg"
                 aspectRatio="1x1"
-                caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945."
+                caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty- three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945. | Stanford News Service."
               />
             </StorySidebar>
           </TwoCol>
-          <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="A" />
+          <div className="flex w-full justify-end">
+            <HorizontalLineart lineartType="B" />
           </div>
           <OneCol className="rs-mb-2">
             <Text>
@@ -512,7 +509,7 @@ export default function page() {
             />
           </OneCol>
           <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="A" />
+            <HorizontalLineart lineartType="C" />
           </div>
           <OneCol>
             <Text>
@@ -532,7 +529,7 @@ export default function page() {
             </Text>
           </OneCol>
           <TwoCol className="rs-mt-6 rs-mb-5">
-            <div>
+            <OneCol>
               <Text>
                 Terman set about a new strategy of carefully selecting fields of
                 study for which he would deliberately—and aggressively—select
@@ -565,9 +562,11 @@ export default function page() {
                 known for the Lotz Method for predicting aerodynamic lift on
                 airplane wings, which was adopted as standard in the field.
               </Text>
-            </div>
+            </OneCol>
             <div>
               <MediaCaptionImage
+                rounded
+                aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766103/PC0141_b07_Timoshenko_0120_vzth15.jpg"
                 caption="Stephen P. Timoshenko teaching a class, 1948. A renowned expert, teacher, and writer widely regarded as the “father” of applied mechanics in the United States, he was born in the Russian Empire in 1878. Timoshenko taught at Stanford from 1936 to 1963 and was instrumental in the formation of the Division of Engineering Mechanics in 1949. | Special Collections & University Archives."
               />
@@ -607,7 +606,7 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote23", number: 23 }]} />
             </Text>
           </OneCol>
-          <BgImageWrapper bgColor="blue" isTwoCol>
+          <BgImageWrapper isTwoCol isImgOffset bgColor="blue" className="mb-0">
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
@@ -623,7 +622,7 @@ export default function page() {
             />
           </BgImageWrapper>
           <OneCol>
-            <H2>Unleashing the Power of Computation</H2>
+            <H2 className="rs-mt-7">Unleashing the Power of Computation</H2>
             <Text>
               In 1953, Stanford established its first Computation Center, where
               a single high-speed IBM Card-Programmed Calculator churned through
@@ -667,14 +666,18 @@ export default function page() {
                 selected qualified employees to enroll. At six credits per
                 quarter, a candidate could earn a master’s degree in two
                 calendar years, a service for which the companies gladly paid
-                double Stanford’s standard tuition.(32) Over the years, the
-                Honors Cooperative Program has provided thousands of engineers
-                with career-changing graduate degrees, with a marked effect on
-                the “innovation ethos” that has set Silicon Valley apart. The
-                Honors Cooperative Program remains a key feature of the Stanford
-                Engineering Center for Global and Online Education and, seven
-                decades later, continues to play an important role in Silicon
-                Valley.(33)
+                double Stanford’s standard tuition.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote32", number: 32 }]}
+                />{" "}
+                Over the years, the Honors Cooperative Program has provided
+                thousands of engineers with career-changing graduate degrees,
+                with a marked effect on the “innovation ethos” that has set
+                Silicon Valley apart. The Honors Cooperative Program remains a
+                key feature of the Stanford Engineering Center for Global and
+                Online Education and, seven decades later, continues to play an
+                important role in Silicon Valley.
+                <Footnotes footnoteRefs={[{ id: "footnote33", number: 33 }]} />
               </Text>
             </div>
           </TwoCol>
@@ -697,13 +700,15 @@ export default function page() {
                 of Count Ferdinand von Zeppelin. She later recalled that
                 witnessing his tests of huge airships was a thrill that stayed
                 with her and fueled her desire to understand the science of
-                flight.(25)
+                flight.
+                <Footnotes footnoteRefs={[{ id: "footnote25", number: 25 }]} />
               </Text>
               <Text>
                 Early in her career, Flügge-Lotz became known for the Lotz
                 Method, her process for calculating the spanwise lift
                 distribution of airplane wings, which became an international
-                industry standard.(26)
+                industry standard.
+                <Footnotes footnoteRefs={[{ id: "footnote26", number: 26 }]} />
               </Text>
               <Text>
                 In 1948, she and her husband, Wilhelm Flügge, accepted offers
@@ -724,21 +729,27 @@ export default function page() {
                 mathematical hydro- and aerodynamics; developed new courses in
                 the theory of automatic controls; advised doctoral students for
                 dissertations in aerodynamic theory; and established the weekly
-                Fluid Mechanics Seminar, which continues at Stanford today.(27)
+                Fluid Mechanics Seminar, which continues at Stanford today.
+                <Footnotes footnoteRefs={[{ id: "footnote27", number: 27 }]} />
               </Text>
               <Text>
                 A supportive advisor, Flügge-Lotz would publish reports on
                 automatic control devices with her students. Because these
                 devices were often electrical, the studies often led to
                 increased contact and collaboration with faculty and students
-                from the Department of Electrical Engineering.(28)
+                from the Department of Electrical Engineering.
+                <Footnotes footnoteRefs={[{ id: "footnote28", number: 28 }]} />
               </Text>
               <Text>
                 Reflecting on her life, Flügge-Lotz said, “I wanted a life which
                 would never be boring. That meant a life in which always new
-                things would occur.” (29) She felt most satisfied when she had
-                “an interesting problem that has resisted being solved, and then
-                solving it.” (30)
+                things would occur.”
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote29", number: 29 }]}
+                />{" "}
+                She felt most satisfied when she had “an interesting problem
+                that has resisted being solved, and then solving it.”
+                <Footnotes footnoteRefs={[{ id: "footnote30", number: 30 }]} />
               </Text>
               <Quote
                 body="Her contributions have spanned a lifetime during which she demonstrated, in a field dominated by men, the value and quality of a woman’s intuitive approach in searching for and discovering solutions to complex engineering problems."
@@ -755,7 +766,8 @@ export default function page() {
                 spanned a lifetime during which she demonstrated, in a field
                 dominated by men, the value and quality of a woman’s intuitive
                 approach in searching for and discovering solutions to complex
-                engineering problems.”(31)
+                engineering problems.”
+                <Footnotes footnoteRefs={[{ id: "footnote31", number: 31 }]} />
               </Text>
               <Text mb="0">
                 —Hanna Ahn
@@ -775,7 +787,8 @@ export default function page() {
               handwritten notes from 1948 show his emerging interest in the
               promising field. With characteristic understatement he wrote, “The
               transistor is a great new force that will revolutionize many
-              aspects of electronics in the next five to ten years.”(34)
+              aspects of electronics in the next five to ten years.”
+              <Footnotes footnoteRefs={[{ id: "footnote34", number: 34 }]} />
               Achievements in the decade to come would prove him correct.
             </Text>
             <Text>
