@@ -33,7 +33,7 @@ export const LocalFooter = () => (
         <FlexBox className={styles.linksWrapper}>
           <Text weight="normal" size="f2" mb="0">
             <ActionLink whiteText href="/stories">
-              Impact stories
+              Centennial stories
             </ActionLink>
           </Text>
           <Text weight="normal" size="f2" mb="0">
