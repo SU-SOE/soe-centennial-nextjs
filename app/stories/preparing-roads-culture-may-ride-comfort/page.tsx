@@ -5,6 +5,7 @@ import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Quote } from "@/components/Quote";
 import {
+  ExploreMore,
   Footnotes,
   FootnotesList,
   StoryImpactBanner,
@@ -54,6 +55,30 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+const exploreStoriesData = [
+  {
+    heading: "The foundation of a new era in engineering",
+    chapter: "Decade 2",
+    href: "/stories/the-foundation-of-a-new-era-in-engineering",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+  },
+  {
+    heading: "The Terman Era",
+    chapter: "Decade 3",
+    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+  },
+  {
+    heading: "A period of transformation",
+    chapter: "Decade 4",
+    href: "/",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg",
+  },
+];
 
 const galleryImages = [
   {
@@ -723,6 +748,13 @@ export default function page() {
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
+          <ExploreMore
+            width="site"
+            stories={exploreStoriesData}
+            sectionHeading="Explore more book chapters"
+            buttonLink="/stories"
+            buttonText="Explore all book chapters"
+          />
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
