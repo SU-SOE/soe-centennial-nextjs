@@ -30,7 +30,7 @@ export const BackToTop = () => {
     <Button
       solid
       className={cnb(
-        "fixed bottom-10 right-10 z-[500] transition-all duration-300",
+        "fixed bottom-10 right-10 z-[500] transition-all duration-300 !rs-px-0 !py-[1.2em] !text-16",
         {
           "visible opacity-100": value,
           "invisible opacity-0": !value,

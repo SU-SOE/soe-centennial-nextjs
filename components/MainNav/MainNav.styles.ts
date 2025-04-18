@@ -13,8 +13,9 @@ export const menuIcon = (open: boolean, isLight: boolean) =>
     "group-hover/popoverbutton:rotate-90": open,
     "group-hover/popoverbutton:scale-y-125": !open,
     "text-stone-dark group-hover/popoverbutton:text-white group-focus-visible/popoverbutton:text-white":
-      isLight,
-    "text-white": (isLight && open) || !isLight,
+      isLight && !open,
+    "text-white group-focus-visible/popoverbutton:text-digital-red-xlight group-hover/popoverbutton:digital-red-xlight":
+      (isLight && open) || !isLight,
   });
 
 // Inside the popover panel
@@ -23,15 +24,15 @@ export const panel = "absolute inset-0 z-[140]";
 export const panelWrapper =
   "bg-cardinal-red-dark text-white pt-61 sm:pt-68 md:pt-[7.4rem] lg:pt-[8.8rem] rs-pb-7";
 export const panelOuter =
-  "flex-col sm:flex-row items-start justify-between gap-48 sm:gap-95 rs-pt-6 px-20 sm:px-30 md:px-50 lg:px-80 xl:px-100 3xl:px-100 4xl:px-[calc((100%-1800px)/2)]";
+  "flex-col 2xl:flex-row items-start justify-between gap-48 sm:gap-95 rs-pt-6 !cc";
 
 // Internal links
 export const col1 =
-  "flex-col sm:w-1/2 xl:w-fit shrink-0 xl:shrink-1 2xl:shrink-0 gap-36 justify-between list-unstyled *:mb-0";
+  "flex-col sm:flex-row sm:w-full xl:w-fit shrink-0 xl:shrink-1 2xl:shrink-0 gap-36 sm:gap-48 xl:gap-36 list-unstyled *:mb-0";
 
 // Featured links
 export const col2 =
-  "flex-col xl:flex-row w-full gap-95 justify-between sm:w-1/2 xl:w-fit";
+  "flex-col sm:flex-row w-full gap-95 justify-between sm:w-full xl:w-fit";
 export const featureCol = "w-full xl:max-w-500";
 
 // Hamburger Icon

@@ -57,7 +57,6 @@ export const MainNav = ({ isLight = false }: Props) => {
                 </div>
                 <FlexBox className={styles.panelOuter}>
                   <FlexBox as="ul" className={styles.col1}>
-                    {/* May Release */}
                     <li>
                       <Text weight="normal" size="f2" mb="0">
                         <ActionLink whiteText href="/stories">
@@ -72,13 +71,6 @@ export const MainNav = ({ isLight = false }: Props) => {
                         </ActionLink>
                       </Text>
                     </li>
-                    <li>
-                      <Text weight="normal" size="f2" mb="0">
-                        <ActionLink whiteText href="/tbd">
-                          Centennial book online
-                        </ActionLink>
-                      </Text>
-                    </li>{" "}
                   </FlexBox>
                   <FlexBox className={styles.col2}>
                     <section className={styles.featureCol}>
@@ -94,6 +86,21 @@ export const MainNav = ({ isLight = false }: Props) => {
                         href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
                       >
                         Submit your story
+                      </Button>
+                    </section>
+                    <section className={styles.featureCol}>
+                      <Heading size="f2" as="h2" mb="base">
+                        Support Stanford Engineering
+                      </Heading>
+                      <Text weight="normal" mb={2}>
+                        Learn how your generosity can have transformational
+                        impact.
+                      </Text>
+                      <Button
+                        solid
+                        href="https://engineering.stanford.edu/get-involved/support-engineering"
+                      >
+                        Support Engineering
                       </Button>
                     </section>
                   </FlexBox>
