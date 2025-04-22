@@ -77,7 +77,7 @@ export const StoryPosterCard = ({
         )}
         <FlexBox
           alignItems="center"
-          className="flex flex-col justify-between md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
+          className="flex flex-col justify-between lg:flex-row z-50 relative grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
             <AnimateInView animation="slideUp" delay={0.5}>
@@ -126,7 +126,7 @@ export const StoryPosterCard = ({
           <AnimateInView
             animation="slideUp"
             delay={0.5}
-            className="w-full md:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
+            className="order-first lg:order-last w-full lg:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
           >
             <div className="w-full h-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
               <Image src={src} alt={alt || ""} fill className="object-cover" />

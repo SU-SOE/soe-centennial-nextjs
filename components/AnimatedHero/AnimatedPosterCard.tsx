@@ -43,16 +43,16 @@ export const AnimatedPosterCard = ({
       >
         <FlexBox
           alignItems="center"
-          className="flex flex-col justify-between md:flex-row z-50 relative md:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
+          className="flex flex-col justify-between lg:flex-row z-50 relative lg:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
           <AnimateInView
             animation="slideUp"
             delay={0.5}
-            className="w-full md:w-1/2"
+            className="w-full lg:w-1/2"
           >
             <MaskAnimation />
           </AnimateInView>
-          <div className="flex flex-col text-left rs-pt-3 [&_p]:max-w-800 [&_h*]:max-w-1100 w-full md:w-1/2">
+          <div className="flex flex-col text-left rs-pt-3 [&_p]:max-w-800 [&_h*]:max-w-1100 w-full lg:w-1/2">
             <AnimateInView animation="slideUp" delay={0.5}>
               <Heading size="f4" weight="normal" mb="0">
                 {heading}

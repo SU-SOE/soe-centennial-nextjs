@@ -50,14 +50,14 @@ export const StoryCard = ({
       <CardWrapper
         className={cnb(
           "relative overflow-hidden w-full h-fit rounded-[25px] shadow-lg group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
-          { "flex flex-col md:flex-row items-center": isHorizontal },
+          { "flex flex-col lg:flex-row items-center": isHorizontal },
           bgColor && styles.bgColors[bgColor],
         )}
       >
         {imageUrl && (
           <div
             className={cnb("relative aspect-[1/1] w-full overflow-hidden", {
-              "md:w-1/2": isHorizontal,
+              "lg:w-1/2": isHorizontal,
             })}
           >
             <Image
@@ -71,12 +71,12 @@ export const StoryCard = ({
         )}
         <div
           className={cnb("flex flex-col rs-pt-3 rs-pb-4 rs-px-2", {
-            "md:w-1/2": isHorizontal,
+            "w-full lg:w-1/2": isHorizontal,
           })}
         >
           <Heading
             as={headerTag}
-            size={isHeadingLarge ? "f5" : 2}
+            className={cnb("type-2", { "lg:fluid-type-5": isHeadingLarge })}
             weight="normal"
             mb="0"
           >
