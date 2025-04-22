@@ -44,7 +44,7 @@ export const StoryPosterCard = ({
     <Container
       {...props}
       width="site"
-      className="2xl:p-0 2xl:w-full 2xl:max-w-1300"
+      className="2xl:p-0 2xl:w-full 2xl:max-w-1400"
     >
       <Container
         bgColor={bgColor}
