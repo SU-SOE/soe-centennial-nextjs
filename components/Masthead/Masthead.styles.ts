@@ -1,7 +1,7 @@
 import { cnb } from "cnbuilder";
 
 export const root = (isOverlap: boolean) => {
-  return cnb("group w-full transition-colors", {
+  return cnb("group w-full transition-colors cc", {
     "absolute top-0 right-0 z-50": isOverlap,
     relative: !isOverlap,
   });
