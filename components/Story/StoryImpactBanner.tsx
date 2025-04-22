@@ -85,6 +85,7 @@ export const StoryImpactBanner = ({
   return (
     <Container
       {...props}
+      as="header"
       width="full"
       mb={5}
       className={cnb("relative", className)}
