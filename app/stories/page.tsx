@@ -6,6 +6,7 @@ import { H1 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
+import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   title: "Stories worth telling | 100 Years of Stanford Engineering",
@@ -128,6 +129,12 @@ export default function page() {
           <div className="flex w-full justify-end rs-mb-8">
             <HorizontalLineart lineartType="C" />
           </div>
+          <AnimatedPosterCard
+            superhead="1925 – 2025"
+            heading="Explore the Centennial timeline"
+            link="/timeline"
+            buttonText="Explore the timeline"
+          />
           <ContributeStoryBanner hasLineArt bgColor="white" />
         </article>
       </main>
