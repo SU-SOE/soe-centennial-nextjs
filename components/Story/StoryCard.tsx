@@ -49,13 +49,17 @@ export const StoryCard = ({
     <AnimateInView {...props} className={className}>
       <CardWrapper
         className={cnb(
-          "relative overflow-hidden w-full h-fit rounded-[25px] shadow-lg lg:max-w-[920px] xl:max-w-[980px] group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
+          "relative overflow-hidden w-full h-fit rounded-[25px] shadow-lg group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
           { "flex flex-col md:flex-row items-center": isHorizontal },
           bgColor && styles.bgColors[bgColor],
         )}
       >
         {imageUrl && (
-          <div className="relative aspect-[1/1] w-full overflow-hidden">
+          <div
+            className={cnb("relative aspect-[1/1] w-full overflow-hidden", {
+              "md:w-1/2": isHorizontal,
+            })}
+          >
             <Image
               className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
               src={imageUrl}
@@ -65,12 +69,16 @@ export const StoryCard = ({
             />
           </div>
         )}
-        <div className="flex flex-col rs-pt-3 rs-pb-4 rs-px-2">
+        <div
+          className={cnb("flex flex-col rs-pt-3 rs-pb-4 rs-px-2", {
+            "md:w-1/2": isHorizontal,
+          })}
+        >
           <Heading
             as={headerTag}
-            size={isHeadingLarge ? "f3" : 2}
+            size={isHeadingLarge ? "f5" : 2}
             weight="normal"
-            mb="none"
+            mb="0"
           >
             <Link href={href} className="stretched-link" linkType="story">
               {heading}
@@ -83,7 +91,7 @@ export const StoryCard = ({
           )}
           {chapter && <ChapterLabel text={chapter} className="order-first" />}
           {body && (
-            <Text size="base" mb="none" className="rs-mt-neg1">
+            <Text size="base" mb="0" className="rs-mt-neg1">
               {body}
             </Text>
           )}

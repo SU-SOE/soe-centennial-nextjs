@@ -10,7 +10,7 @@ type Props = Omit<TypographyProps, "as"> &
 
 export const H1 = ({ children, className, ...props }: Props) => {
   return (
-    <Heading {...props} as="h1" className={cnb("rs-mt-2", className)}>
+    <Heading {...props} as="h1" size="f6" className={cnb("rs-mt-2", className)}>
       {children}
     </Heading>
   );

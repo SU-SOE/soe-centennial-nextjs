@@ -44,7 +44,7 @@ export const StoryPosterCard = ({
     <Container
       {...props}
       width="site"
-      className="2xl:p-0 2xl:w-full 2xl:max-w-[1200px]"
+      className="2xl:p-0 2xl:w-full 2xl:max-w-1300"
     >
       <Container
         bgColor={bgColor}
@@ -81,11 +81,7 @@ export const StoryPosterCard = ({
         >
           <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
             <AnimateInView animation="slideUp" delay={0.5}>
-              <Heading
-                size="f4"
-                weight="normal"
-                className={body || (dek && "rs-mb-3 lg:rs-mb-5")}
-              >
+              <Heading size="f4" weight="normal" mb="0">
                 <Link
                   href={link}
                   className="stretched-link"
@@ -109,19 +105,19 @@ export const StoryPosterCard = ({
             </AnimateInView>
             <AnimateInView animation="slideUp" delay={1}>
               {dek && (
-                <Text size={2} mb="none" className="rs-mt-4">
+                <Text size={2} mb="0" className="rs-mt-4">
                   {dek}
                 </Text>
               )}
               {body && (
-                <Text variant="overview" mb="none">
+                <Text variant="overview" mb="0">
                   {body}
                 </Text>
               )}
             </AnimateInView>
             {byline && (
               <AnimateInView animation="slideUp" delay={0.5}>
-                <Text mb="none" size="base" className="rs-mt-4">
+                <Text mb="0" size="base" className="rs-mt-4">
                   {byline}
                 </Text>
               </AnimateInView>

@@ -19,13 +19,14 @@
 import React, { HTMLAttributes } from "react";
 import { TwoCol, ThreeCol } from "../Layout";
 import { StoryCard, StoryCardProps } from "./StoryCard";
-import { Container, WidthType } from "../Container";
+import { BgColorType, Container, WidthType } from "../Container";
 import { Button } from "../Cta";
 import { Heading } from "../Typography";
 import { cnb } from "cnbuilder";
 
 type ExploreMoreProps = HTMLAttributes<HTMLDivElement> & {
   stories: StoryCardProps[];
+  cardBgColor?: BgColorType;
   sectionHeading?: string;
   buttonText?: string;
   buttonLink?: string;
@@ -35,6 +36,7 @@ type ExploreMoreProps = HTMLAttributes<HTMLDivElement> & {
 
 export const ExploreMore = ({
   className,
+  cardBgColor = "blue",
   stories,
   sectionHeading,
   buttonText,
@@ -50,14 +52,14 @@ export const ExploreMore = ({
     <Container
       {...props}
       width={width || "full"}
-      className={cnb("rs-mt-7 rs-mb-10", className)}
+      className={cnb("rs-my-7", className)}
     >
       {sectionHeading && <Heading>{sectionHeading}</Heading>}
       <AsComponent className="max-w-[140rem]">
         {stories.map((story, index) => (
           <StoryCard
             key={index}
-            bgColor="blue"
+            bgColor={cardBgColor}
             headerTag="h3"
             animation="slideUp"
             delay={delays[index] || 0.3}
