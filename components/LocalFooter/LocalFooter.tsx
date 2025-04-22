@@ -31,12 +31,12 @@ export const LocalFooter = () => (
       </div>
       <FlexBox direction="col" className={styles.wrapper}>
         <FlexBox className={styles.linksWrapper}>
-          <Text weight="normal" size="f2" mb="0">
+          <Text weight="normal" size="f1" mb="0">
             <ActionLink whiteText href="/stories">
               Centennial stories
             </ActionLink>
           </Text>
-          <Text weight="normal" size="f2" mb="0">
+          <Text weight="normal" size="f1" mb="0">
             <ActionLink whiteText href="/timeline">
               Timeline
             </ActionLink>
@@ -44,10 +44,10 @@ export const LocalFooter = () => (
         </FlexBox>
         <FlexBox className={styles.contentWrapper}>
           <section className={styles.column}>
-            <Heading size={2} as="h2" mb="base">
+            <Heading size={1} as="h2" mb="base">
               Share your Stanford Engineering memories
             </Heading>
-            <Text mb={2}>
+            <Text size="small" mb={2}>
               Mark this milestone by sharing one of your favorite memories of
               Stanford Engineering.
             </Text>
@@ -59,10 +59,10 @@ export const LocalFooter = () => (
             </Button>
           </section>
           <section className={styles.column}>
-            <Heading size={2} as="h2" mb="base">
+            <Heading size={1} as="h2" mb="base">
               Support Stanford Engineering
             </Heading>
-            <Text mb={2}>
+            <Text size="small" mb={2}>
               Learn how your generosity can have transformational impact.
             </Text>
             <Button

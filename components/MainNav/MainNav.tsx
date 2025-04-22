@@ -58,14 +58,14 @@ export const MainNav = ({ isLight = false }: Props) => {
                 <FlexBox className={styles.panelOuter}>
                   <FlexBox as="ul" className={styles.col1}>
                     <li>
-                      <Text weight="normal" size="f2" mb="0">
+                      <Text weight="normal" size="f1" mb="0">
                         <ActionLink whiteText href="/stories">
                           Impact stories
                         </ActionLink>
                       </Text>
                     </li>
                     <li>
-                      <Text weight="normal" size="f2" mb="0">
+                      <Text weight="normal" size="f1" mb="0">
                         <ActionLink whiteText href="/timeline">
                           Timeline
                         </ActionLink>
@@ -74,10 +74,10 @@ export const MainNav = ({ isLight = false }: Props) => {
                   </FlexBox>
                   <FlexBox className={styles.col2}>
                     <section className={styles.featureCol}>
-                      <Heading size="f2" as="h2" mb="base">
+                      <Heading size="f1" as="h2" mb="base">
                         Share your Stanford Engineering memories
                       </Heading>
-                      <Text weight="normal" mb={2}>
+                      <Text weight="normal" mb={2} size="small">
                         Mark this milestone by sharing one of your favorite
                         memories of Stanford Engineering.
                       </Text>
@@ -89,10 +89,10 @@ export const MainNav = ({ isLight = false }: Props) => {
                       </Button>
                     </section>
                     <section className={styles.featureCol}>
-                      <Heading size="f2" as="h2" mb="base">
+                      <Heading size="f1" as="h2" mb="base">
                         Support Stanford Engineering
                       </Heading>
-                      <Text weight="normal" mb={2}>
+                      <Text weight="normal" mb={2} size="small">
                         Learn how your generosity can have transformational
                         impact.
                       </Text>
