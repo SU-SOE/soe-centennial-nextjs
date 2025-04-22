@@ -21,6 +21,7 @@ export const QuoteMark = ({
 }: Props) => {
   return (
     <svg
+      aria-hidden="true"
       {...props}
       width={width}
       height={height}

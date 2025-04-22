@@ -53,7 +53,8 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
         className={cnb(
           "group flex flex-col relative",
           {
-            "md:flex-row gap w-full justify-center items-center": isHorizontal,
+            "md:flex-row gap w-full justify-center items-center rs-mb-6":
+              isHorizontal,
           },
           !isHorizontal && imageSize,
           className,
@@ -67,13 +68,26 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
           size={size}
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}
-          className={isHorizontal ? "w-1/2 h-full order-last" : ""}
+          className={
+            isHorizontal ? "w-1/2 h-full order-first md:order-last" : ""
+          }
         />
         <div
           className={cnb("flex flex-col items-start md:rs-px-1", {
             "w-1/2": isHorizontal,
           })}
         >
+          <Text
+            font="dm-mono"
+            weight="normal"
+            leading="display"
+            mb="none"
+            size={2}
+            className="rs-mt-2 mb-10"
+            align="left"
+          >
+            {year}
+          </Text>
           <Heading
             align="left"
             font="dm-sans"
@@ -93,17 +107,6 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
               </span>
             )}
           </Heading>
-          <Text
-            font="dm-mono"
-            weight="normal"
-            leading="display"
-            mb="none"
-            size={2}
-            className="order-first rs-mt-2 mb-10"
-            align="left"
-          >
-            {year}
-          </Text>
         </div>
       </button>
     );

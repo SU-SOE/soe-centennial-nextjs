@@ -1,11 +1,11 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { Source_Sans_3, DM_Sans, DM_Mono } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { cnb } from "cnbuilder";
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { GlobalFooter } from "@/components/GlobalFooter";
-import { LocalFooterMvp } from "@/components/LocalFooter";
+import { LocalFooter } from "@/components/LocalFooter";
+import UserAnalytics from "@/components/UserAnalytics";
 
 const dm_sans = DM_Sans({
   subsets: ["latin"],
@@ -54,7 +54,7 @@ export const metadata = {
   metadataBase: new URL("https://soe-centennial-nextjs.vercel.app/"),
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "en_US",
     url: "https://soe-centennial-nextjs.vercel.app/",
     siteName: process.env.NEXT_PUBLIC_SITE_NAME,
   },
@@ -89,6 +89,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <UserAnalytics />
       <body
         className={cnb(
           dm_sans.variable,
@@ -99,11 +100,10 @@ export default function RootLayout({
       >
         {children}
         <footer className="relative">
-          <LocalFooterMvp />
+          <LocalFooter />
           <GlobalFooter />
         </footer>
       </body>
-      <GoogleAnalytics gaId="G-Z9E6WWH5DJ" />
     </html>
   );
 }

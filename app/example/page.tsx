@@ -2,8 +2,6 @@ import { Heading, Text } from "@/components/Typography";
 import { Masthead } from "@/components/Masthead";
 import { FeatureHero } from "@/components/Banner";
 import { PageTitle } from "@/components/PageTitle";
-import TimelineList from "@/components/Timeline/TimelineList";
-import { loadTimelineData } from "@/utilities/loadTimelineData";
 import { GradientBanner } from "@/components/Story/GradientBanner";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
@@ -20,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 const ExamplePage = async () => {
-  const timelineData = await loadTimelineData();
   return (
     <div>
       <Masthead />
@@ -63,6 +60,7 @@ const ExamplePage = async () => {
         body="The Sarafan ChEM-H Institute scholar is building a multidisciplinary lab to explore the reengineering of immune cells. Before coming to Stanford, she says, “I was thinking in terms of understanding. Now I feel that I can start thinking in terms of creating."
         byline="by Jess Alvarenga"
         src="/soe-centennial-nextjs/assets/images/lt-flynn-1994.jpeg"
+        alt={""}
       />
       <HorizontalLineart className="rs-pl-10" />
       <HorizontalLineart className="rs-pl-10" lineartType="B" />
@@ -72,10 +70,6 @@ const ExamplePage = async () => {
           imageSrc="https://placecats.com/neo/1500/1000"
           caption="Caption/credit lorem ipsum aspect ratio square"
           aspectRatio="1x1"
-        />
-        <MediaCaptionImage
-          imageSrc="https://placecats.com/neo/1500/1000"
-          caption="Caption/credit lorem ipsum aspect ratio 16/9"
         />
         <Text className="type-3 intro-text">
           Overview style lorem ipsum dolar sit amet vestibulum parimentium elit
@@ -227,7 +221,6 @@ const ExamplePage = async () => {
           </Text>
         </div>
       </GradientBanner>
-      <TimelineList timelineData={timelineData} />
       <div id="example-quote">
         <Quote
           teaser="We each get a chance to choose our own path..."

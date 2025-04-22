@@ -57,7 +57,6 @@ export const MainNav = ({ isLight = false }: Props) => {
                 </div>
                 <FlexBox className={styles.panelOuter}>
                   <FlexBox as="ul" className={styles.col1}>
-                    {/* May Release */}
                     <li>
                       <Text weight="normal" size="f2" mb="0">
                         <ActionLink whiteText href="/stories">
@@ -72,39 +71,37 @@ export const MainNav = ({ isLight = false }: Props) => {
                         </ActionLink>
                       </Text>
                     </li>
-                    <li>
-                      <Text weight="normal" size="f2" mb="0">
-                        <ActionLink whiteText href="/tbd">
-                          Centennial book online
-                        </ActionLink>
-                      </Text>
-                    </li>{" "}
                   </FlexBox>
                   <FlexBox className={styles.col2}>
                     <section className={styles.featureCol}>
                       <Heading size="f2" as="h2" mb="base">
-                        Contribute your stories
+                        Share your Stanford Engineering memories
                       </Heading>
                       <Text weight="normal" mb={2}>
-                        Lorem ipsum dolar sit amet vestibulum periment ium
-                        dismaret
+                        Mark this milestone by sharing one of your favorite
+                        memories of Stanford Engineering.
                       </Text>
                       <Button
                         solid
                         href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
                       >
-                        Share a memory
+                        Submit your story
                       </Button>
                     </section>
                     <section className={styles.featureCol}>
                       <Heading size="f2" as="h2" mb="base">
-                        Make a gift
+                        Support Stanford Engineering
                       </Heading>
                       <Text weight="normal" mb={2}>
-                        Lorem ipsum dolar sit amet vestibulum periment ium
-                        dismaret
+                        Learn how your generosity can have transformational
+                        impact.
                       </Text>
-                      <Button href="/">Ways to give</Button>
+                      <Button
+                        solid
+                        href="https://engineering.stanford.edu/get-involved/support-engineering"
+                      >
+                        Support Engineering
+                      </Button>
                     </section>
                   </FlexBox>
                 </FlexBox>

@@ -25,6 +25,7 @@ module.exports = function () {
 
         '&:hover, &:focus': {
           color: config('theme.colors.archway.light'),
+          cursor: 'pointer',
         },
       },
       figcaption: {
