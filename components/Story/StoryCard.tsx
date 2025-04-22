@@ -50,7 +50,10 @@ export const StoryCard = ({
       <CardWrapper
         className={cnb(
           "relative overflow-hidden w-full h-fit rounded-[25px] shadow-lg group transition-all duration-1000 ease-in-out hocus:shadow-2xl outline outline-transparent hocus:outline-4 hocus:outline-digital-red-xlight",
-          { "flex flex-col lg:flex-row items-center": isHorizontal },
+          {
+            "flex flex-col lg:flex-row items-center max-w-1300 mx-auto":
+              isHorizontal,
+          },
           bgColor && styles.bgColors[bgColor],
         )}
       >
