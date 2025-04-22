@@ -1,13 +1,8 @@
 import { cnb } from "cnbuilder";
 
 export const root = (isOverlap: boolean) => {
-<<<<<<< HEAD
   return cnb("group w-full transition-colors", {
-    "absolute top-0 right-0 z-50 text-white": isOverlap,
-=======
-  return cnb("group w-full transition-colors cc", {
     "absolute top-0 right-0 z-50": isOverlap,
->>>>>>> may
     relative: !isOverlap,
   });
 };
@@ -16,11 +11,7 @@ export const root = (isOverlap: boolean) => {
 export const wrapper =
   "cc 3xl:px-100 4xl:px-[calc((100%-1800px)/2)] rs-pt-2 rs-pb-1 transition";
 
-<<<<<<< HEAD
-export const logo = "flex flex-row justify-center items-center";
-=======
 export const logo = "flex flex-col md:flex-row justify-center items-center";
->>>>>>> may
 
 // Pass in a root style for the lock up to scale everything within proportionally
 // We use the group-has- TW selector to make the lockup white when the main nav is open
