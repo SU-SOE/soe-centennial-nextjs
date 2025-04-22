@@ -83,31 +83,35 @@ const footnotes = [
   {
     number: 1,
     id: "footnote1",
-    text: "C. Stewart Gillmor, *Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley* (Stanford University Press, 2004), 263–265.",
+    text: "C. Stewart Gillmor, <em>Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley</em> (Stanford University Press, 2004), 263–265.",
   },
   { number: 2, id: "footnote2", text: "Ibid., 263." },
   { number: 3, id: "footnote3", text: "Ibid., 265." },
   {
     number: 4,
     id: "footnote4",
-    text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
+    text: "<em>Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946</em>, 146.",
   },
   { number: 5, id: "footnote5", text: "Ibid." },
-  { number: 6, id: "footnote6", text: "Gillmor, *Fred Terman at Stanford*." },
+  {
+    number: 6,
+    id: "footnote6",
+    text: "Gillmor, <em>Fred Terman at Stanford</em>.",
+  },
   {
     number: 7,
     id: "footnote7",
-    text: "*Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946*, 146.",
+    text: "<em>Annual Report of the President of Stanford University for the Fifty-Fifth Academic Year Ending August 31, 1946</em>, 146.",
   },
   {
     number: 8,
     id: "footnote8",
-    text: "Gillmor, *Fred Terman at Stanford*, 267.",
+    text: "Gillmor, <em>Fred Terman at Stanford</em>, 267.",
   },
   {
     number: 9,
     id: "footnote9",
-    text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 24–25.",
+    text: "<em>Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948</em>, 24–25.",
   },
   {
     number: 10,
@@ -118,7 +122,7 @@ const footnotes = [
   {
     number: 11,
     id: "footnote11",
-    text: "Stuart W. Leslie, “Playing the Education Game to Win: The Military and Interdisciplinary Research at Stanford,” *Historical Studies in the Physical and Biological Sciences* 18, no. 1 (1987): 55–88.",
+    text: "Stuart W. Leslie, “Playing the Education Game to Win: The Military and Interdisciplinary Research at Stanford,” <em>Historical Studies in the Physical and Biological Sciences</em> 18, no. 1 (1987): 55–88.",
   },
   {
     number: 12,
@@ -135,18 +139,18 @@ const footnotes = [
   {
     number: 14,
     id: "footnote14",
-    text: "*Annual Report of the President of Stanford University for the Fifty-Sixth Academic Year Ending August 31, 1947*, 121.",
+    text: "<em>Annual Report of the President of Stanford University for the Fifty-Sixth Academic Year Ending August 31, 1947</em>, 121.",
   },
   { number: 15, id: "footnote15", text: "Ibid." },
   {
     number: 16,
     id: "footnote16",
-    text: "*Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948*, 152.",
+    text: "<em>Annual Report of the President of Stanford University for the Fifty-Seventh Academic Year Ending August 31, 1948</em>, 152.",
   },
   {
     number: 17,
     id: "footnote17",
-    text: "Gillmor, *Fred Terman at Stanford*.",
+    text: "Gillmor, <em>Fred Terman at Stanford</em>.",
   },
   { number: 18, id: "footnote18", text: "Ibid." },
   { number: 19, id: "footnote19", text: "Ibid., 307–308." },
@@ -157,18 +161,58 @@ const footnotes = [
   {
     number: 24,
     id: "footnote24",
-    text: "*A Chronology of Stanford University and Its Founders*, edited by Karen Bartholomew, Claude Stout Brinegar, and Roxanne Nilan (Stanford Historical Society, 2001), 77.",
+    text: "<em>A Chronology of Stanford University and Its Founders</em>, edited by Karen Bartholomew, Claude Stout Brinegar, and Roxanne Nilan (Stanford Historical Society, 2001), 77.",
   },
   {
     number: 25,
     id: "footnote25",
-    text: "Gillmor, *Fred Terman at Stanford*.",
+    text: "Gillmor, <em>Fred Terman at Stanford</em>.",
   },
   {
     number: 26,
     id: "footnote26",
     text: "Stanford Center for Professional Development, “Our History,” ",
     sourceLink: "https://scpd.stanford.edu/our-history",
+  },
+  {
+    number: 27,
+    id: "footnote27",
+    text: "Gillmor, <em>Fred Terman at Stanford</em>, 275.",
+  },
+  {
+    number: 28,
+    id: "footnote28",
+    text: "Ibid.",
+  },
+  {
+    number: 29,
+    id: "footnote29",
+    text: "Ibid.",
+  },
+  {
+    number: 30,
+    id: "footnote30",
+    text: "<em>Annual Report of the President of Stanford University for the Fifty-Ninth Academic Year Ending August 31, 1950</em>, 34–35.",
+  },
+  {
+    number: 31,
+    id: "footnote31",
+    text: "Ibid.",
+  },
+  {
+    number: 32,
+    id: "footnote32",
+    text: "Gillmor, <em>Fred Terman at Stanford</em>, 306–307.",
+  },
+  {
+    number: 33,
+    id: "footnote33",
+    text: "Ibid.",
+  },
+  {
+    number: 34,
+    id: "footnote34",
+    text: "Ibid., 306–307.",
   },
 ];
 
@@ -501,13 +545,18 @@ export default function page() {
               caption="Aerial view of the Stanford University campus, 1948."
             />
           </Container>
-          <OneCol className="rs-my-6">
-            <Quote
-              quoteColor="red"
-              body="... great new era of industrialization"
-              source="— Fred Terman"
-            />
-          </OneCol>
+          <Quote
+            className="rs-my-6"
+            width="wide"
+            quoteColor="red"
+            teaser="[Western universities] can serve as catalysts that speed the reaction by which the discoveries of pure science are turned to practical uses that advance industrial technology and create new industries.”"
+            source={
+              <>
+                — Fred Terman
+                <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
+              </>
+            }
+          />
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>

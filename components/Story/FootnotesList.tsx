@@ -23,11 +23,12 @@ import { Link } from "@/components/Cta";
 import FootnotesLineart from "@/components/images/footnotes-lineart";
 import { Heading, Text } from "@/components/Typography";
 import { ArrowUturnLeftIcon } from "@heroicons/react/24/outline";
+import React from "react";
 
 type FootnotesListProps = {
   footnotes: {
     id: string; // Unique identifier for the footnote (must match the reference ID in the text)
-    text: string; // The content of the footnote
+    text: string | React.ReactNode; // The content of the footnote
     number: number; // The footnote number (e.g., 1, 2, 3)
     sourceLink?: string; // Optional external source link
   }[];
@@ -45,15 +46,24 @@ export const FootnotesList = ({ footnotes }: FootnotesListProps) => {
           {footnotes.map(({ id, text, number, sourceLink }) => (
             <li key={id} id={id}>
               <p className="mb-0">
-                {sourceLink && (
+                {sourceLink ? (
                   <Link
                     href={sourceLink}
                     className="font-normal decoration-auto text-stone-dark decoration-stone-dark hocus:text-digital-red"
                   >
-                    {text}
+                    {/* Render text as HTML inside link */}
+                    {typeof text === "string" ? (
+                      <span dangerouslySetInnerHTML={{ __html: text }} />
+                    ) : (
+                      text
+                    )}
                   </Link>
+                ) : // Render text as HTML outside of link
+                typeof text === "string" ? (
+                  <span dangerouslySetInnerHTML={{ __html: text }} />
+                ) : (
+                  text
                 )}
-                {!sourceLink && text}
                 <a
                   href={`#ref-${id}`}
                   className="ml-03em mt-03em inline-block group relative translate-all duration-1000 text-digital-red-xlight border-b-2 border-transparent hocus:border-digital-red-xlight"
