@@ -14,7 +14,8 @@ import { AnimatedHamburger } from "./AnimatedHamburger";
 import * as styles from "./MainNav.styles";
 import { FlexBox } from "@/components/FlexBox";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useOnClickOutside } from "usehooks-ts";
 
 type Props = {
   isLight?: boolean;
@@ -22,31 +23,14 @@ type Props = {
 
 export const MainNav = ({ isLight = false }: Props) => {
   const preferReducedMotion = useReducedMotion();
-  const panelRef = useRef<HTMLDivElement | null>(null);
+  const panelRef = useRef<HTMLElement | null>(null);
 
   return (
     <Popover as="nav" aria-label="main menu">
       {({ open, close }) => {
-        useEffect(() => {
-          function handleClickOutside(event: MouseEvent | FocusEvent) {
-            if (
-              panelRef.current &&
-              !panelRef.current.contains(event.target as Node)
-            ) {
-              close();
-            }
-          }
-
-          if (open) {
-            document.addEventListener("mousedown", handleClickOutside);
-            document.addEventListener("focusin", handleClickOutside);
-          }
-
-          return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-            document.removeEventListener("focusin", handleClickOutside);
-          };
-        }, [open, close]);
+        useOnClickOutside(panelRef as React.RefObject<HTMLElement>, () => {
+          if (open) close();
+        });
 
         return (
           <>
