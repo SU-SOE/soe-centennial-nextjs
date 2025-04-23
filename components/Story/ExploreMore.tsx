@@ -55,9 +55,10 @@ export const ExploreMore = ({
       className={cnb("rs-my-7", className)}
     >
       {sectionHeading && <Heading>{sectionHeading}</Heading>}
-      <AsComponent className="max-w-[140rem]">
+      <AsComponent as="ul" className="max-w-[140rem] list-none">
         {stories.map((story, index) => (
           <StoryCard
+            as="li"
             key={index}
             bgColor={cardBgColor}
             headerTag="h3"

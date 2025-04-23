@@ -19,11 +19,11 @@
  * </ThreeCol>
  * ```
  */
-import React, { HTMLAttributes } from "react";
-import { BgColorType, Container } from "@/components/Container";
+import React from "react";
+import { BgColorType, Container, ContainerProps } from "@/components/Container";
 import { cnb } from "cnbuilder";
 
-type ColProps = HTMLAttributes<HTMLDivElement> & {
+type ColProps = ContainerProps & {
   bgColor?: BgColorType;
 };
 

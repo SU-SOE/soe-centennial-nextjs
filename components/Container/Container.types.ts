@@ -11,7 +11,8 @@ export type ContainerElementType =
   | "nav"
   | "form"
   | "fieldset"
-  | "figcaption";
+  | "figcaption"
+  | "ul";
 
 export type WidthType = keyof typeof styles.widths;
 

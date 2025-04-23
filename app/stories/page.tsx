@@ -6,7 +6,6 @@ import { H1 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
-import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Stories worth telling | 100 Years of Stanford Engineering",
@@ -89,45 +88,50 @@ export default function page() {
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />
           </div>
-          <Container>
-            <StoryPosterCard
-              hasBgImage
-              chapter="Decade 1"
-              heading="“Preparing roads over which culture may ride in comfort”"
-              dek="1925 – 1934"
-              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
-              link="/stories/preparing-roads-culture-may-ride-comfort"
-            />
-            <div className="mx-auto w-full max-w-1200">
+          <ul className="list-none">
+            <li className="cc">
+              <StoryPosterCard
+                hasBgImage
+                chapter="Decade 1"
+                heading="“Preparing roads over which culture may ride in comfort”"
+                dek="1925 – 1934"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
+                link="/stories/preparing-roads-culture-may-ride-comfort"
+              />
+            </li>
+            <li className="mx-auto w-full max-w-1200">
               <ExploreMore
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
               />
+            </li>
+            <div
+              aria-hidden="true"
+              className="flex w-full justify-start rs-mb-8"
+            >
+              <HorizontalLineart lineartType="D" />
             </div>
-          </Container>
-          <div className="flex w-full justify-start rs-mb-8">
-            <HorizontalLineart lineartType="D" />
-          </div>
-          <Container>
-            <StoryCard
-              isHeadingLarge
-              isHorizontal
-              chapter="Decade 3"
-              heading="The Terman era"
-              href="/stories/the-terman-era"
-              imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg"
-              bgColor="white"
-            />
-            <div className="mx-auto w-full max-w-1200">
+            <li className="cc">
+              <StoryCard
+                isHeadingLarge
+                isHorizontal
+                chapter="Decade 3"
+                heading="The Terman era"
+                href="/stories/the-terman-era"
+                imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg"
+                bgColor="white"
+              />
+            </li>
+            <li className="mx-auto w-full max-w-1200">
               <ExploreMore
                 stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
               />
-            </div>
-          </Container>
-          <div className="flex w-full justify-end rs-mb-8">
+            </li>
+          </ul>
+          <div aria-hidden="true" className="flex w-full justify-end rs-mb-8">
             <HorizontalLineart lineartType="C" />
           </div>
           <AnimatedPosterCard
