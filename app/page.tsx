@@ -145,7 +145,11 @@ export default function Home() {
               </div>
             </AnimateInView>
           </div>
-          <ExploreMore stories={storyData} className="py-0" />
+          <ExploreMore
+            stories={storyData}
+            className="py-0"
+            cardBgColor="white"
+          />
         </StoryFeature>
         <Container as="section" mt={10} mb={10} width="full">
           <AnimatedLineartBanner className="mb-[-4rem]">

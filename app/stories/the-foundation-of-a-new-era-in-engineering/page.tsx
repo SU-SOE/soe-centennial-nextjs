@@ -36,7 +36,8 @@ export const metadata: Metadata = {
     "Engineering History",
   ],
   openGraph: {
-    title: "The Foundation of a New Era in Engineering",
+    title:
+      "The Foundation of a New Era in Engineering | 100 Years of Stanford Engineering",
     description:
       "As the second decade of the Stanford School of Engineering began, Theodore Hoover was in his final year as dean, and the school was just beginning to recover from the decline in enrollment caused by the Great Depression. In 1936, the school appointed its second dean, Samuel B. Morris. A native Californian and a Stanford alumnus (’11), Morris had served as chief engineer, superintendent, and general manager of the Water Department of Pasadena, California, from 1912 to 1931, when he joined the Stanford faculty as a professor of civil engineering.",
     images: [
@@ -48,7 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Foundation of a New Era in Engineering",
+    title:
+      "The Foundation of a New Era in Engineering | 100 Years of Stanford Engineering",
     description:
       "As the second decade of the Stanford School of Engineering began, Theodore Hoover was in his final year as dean, and the school was just beginning to recover from the decline in enrollment caused by the Great Depression. In 1936, the school appointed its second dean, Samuel B. Morris. A native Californian and a Stanford alumnus (’11), Morris had served as chief engineer, superintendent, and general manager of the Water Department of Pasadena, California, from 1912 to 1931, when he joined the Stanford faculty as a professor of civil engineering.",
     images: [

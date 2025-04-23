@@ -23,7 +23,7 @@ import { H2, H3 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 
 export const metadata: Metadata = {
-  title: "The Terman Era",
+  title: "The Terman Era | 100 Years of Stanford Engineering",
   description:
     "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "technological advancement",
   ],
   openGraph: {
-    title: "The Terman Era",
+    title: "The Terman Era | 100 Years of Stanford Engineering",
     description:
       "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Terman Era",
+    title: "The Terman Era | 100 Years of Stanford Engineering",
     description:
       "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
     images: [
