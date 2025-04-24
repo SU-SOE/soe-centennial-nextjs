@@ -104,6 +104,7 @@ export default function page() {
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
+                headerTag="h2"
               />
             </li>
             <div
@@ -128,6 +129,7 @@ export default function page() {
                 stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
+                headerTag="h2"
               />
             </li>
           </ul>

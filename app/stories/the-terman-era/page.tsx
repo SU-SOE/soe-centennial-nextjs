@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
         alt: "Frederick Terman at the Radio Research Laboratory, Harvard University, 1940s",
       },
     ],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description:
       "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
     ],
   },
 };
@@ -219,14 +219,15 @@ const footnotes = [
 export default function page() {
   return (
     <>
-      <Masthead logoColor="default" />
+      <Masthead logoColor="white-red" isBgDark isOverlap />
       <MainContentWrapper>
         <StoryImpactBanner
-          bgColor="white"
+          bgColor="red"
+          isCaptionInHero
           chapter="Decade 3"
           heading="The Terman Era"
           dek="1945 – 1954"
-          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg"
           caption="Left to right: David Packard, William Hewlett, and Dean of Engineering Fred Terman attend the dedication of the Hewlett-Packard wing in Stanford’s Electronics Research Laboratory, 1952. | Stanford News Service."
           alt="David Packard and Fred Terman shake hands at the entrance of a building while a third unnamed man stands in the background."
           className="mb-0"
