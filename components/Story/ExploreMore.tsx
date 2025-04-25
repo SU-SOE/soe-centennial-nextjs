@@ -47,9 +47,11 @@ export const ExploreMore = ({
 }: ExploreMoreProps) => {
   const delays = [0.25, 0.5, 0.75];
   const AsComponent = isThreeCol ? ThreeCol : TwoCol;
+  const wrapper = sectionHeading ? "article" : "div";
 
   return (
     <Container
+      as={wrapper}
       {...props}
       width={width || "full"}
       className={cnb("rs-my-7", className)}

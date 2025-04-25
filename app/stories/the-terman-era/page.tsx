@@ -431,7 +431,7 @@ export default function page() {
               aspectRatio="4x3"
               captionTextColor="black"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766097/ginzton_kaplan_kdqwx8.jpg"
-              alt="Professor Edward Ginzton and Dr. Henry Kaplan in front of klystron gauges"
+              alt=""
               caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. "
             />
             <MediaCaptionImage
@@ -486,7 +486,7 @@ export default function page() {
               aspectRatio="4x3"
               captionTextColor="black"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766102/ZZ470101_di0q15.jpg"
-              alt="Felix Bloch and William Hansen demonstrating equipment used in their research"
+              alt=""
               caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. "
             />
             <MediaCaptionImage
@@ -497,7 +497,7 @@ export default function page() {
               aspectRatio="4x3"
               captionTextColor="black"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006955_0005_mzu03z.jpg"
-              alt="Electrical engineering faculty Oswald Garrison Villard Jr. and Allen M. Peterson with equipment used to record meteors in the ionosphere"
+              alt="Two men in a lab with large machinery"
               caption="Electrical engineering faculty Oswald Garrison Villard Jr. (MEng ’43, PhD ’49), right, and Allen M. Peterson (BS ’48, MS ’49, PhD ’52) with equipment used to record meteors in the ionosphere, August 1950. Their pioneering work on reflecting radar signals off the ionosphere led to Villard’s 1959 debut of “over-the- horizon” radar, which transcended line-of-sight limitations and laid the foundation for advanced long-range surveillance and missile detection systems. | Special Collections & University Archives."
             />
           </BgImageWrapper>
@@ -527,10 +527,7 @@ export default function page() {
               Western universities, he believed, “can train the type of men
               required to exercise leadership in an expanding industry. They can
               be a source of ideas, and of inspiration that stimulates people to
-              new accomplishments. They can serve as catalysts that speed the
-              reaction by which the discoveries of pure science are turned to
-              practical uses that advance industrial technology and create new
-              industries.”
+              new accomplishments.
               <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
             </Text>
           </OneCol>
@@ -541,7 +538,7 @@ export default function page() {
               animation="fadeIn"
               aspectRatio="3x2"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/pb977cg5869_00_0001_knwaxb.jpg"
-              alt="Aerial view of the Stanford University campus"
+              alt=""
               caption="Aerial view of the Stanford University campus, 1948."
             />
           </Container>
@@ -550,12 +547,7 @@ export default function page() {
             width="wide"
             quoteColor="red"
             teaser="[Western universities] can serve as catalysts that speed the reaction by which the discoveries of pure science are turned to practical uses that advance industrial technology and create new industries.”"
-            source={
-              <>
-                — Fred Terman
-                <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
-              </>
-            }
+            source="— Fred Terman"
           />
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
@@ -733,7 +725,6 @@ export default function page() {
 
           <Scrollytelling
             bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/pb977cg5869_00_0001_knwaxb.jpg"
-            bgImageAlt="Aerial view of the Stanford University campus, 1948."
             heading="Irmgard Flügge-Lotz"
           >
             <MediaCaptionImage
