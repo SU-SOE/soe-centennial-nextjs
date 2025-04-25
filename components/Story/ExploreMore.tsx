@@ -29,8 +29,7 @@ type ExploreMoreProps = HTMLAttributes<HTMLDivElement> & {
   cardBgColor?: BgColorType;
   sectionHeading?: string;
   headerTag?: "h2" | "h3";
-  buttonText?: string;
-  buttonLink?: string;
+  hasButton?: boolean;
   width?: WidthType;
   isThreeCol?: boolean;
 };
@@ -41,8 +40,7 @@ export const ExploreMore = ({
   stories,
   sectionHeading,
   headerTag,
-  buttonText,
-  buttonLink,
+  hasButton,
   width,
   isThreeCol,
   ...props
@@ -70,9 +68,9 @@ export const ExploreMore = ({
           />
         ))}
       </AsComponent>
-      {buttonText && buttonLink && (
-        <Button isLight href={buttonLink} className="mx-auto rs-mt-5">
-          {buttonText}
+      {hasButton && (
+        <Button isLight href="/stories" className="mx-auto rs-mt-5">
+          Explore all decade stories
         </Button>
       )}
     </Container>

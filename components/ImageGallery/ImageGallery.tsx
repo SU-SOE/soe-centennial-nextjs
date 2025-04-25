@@ -47,7 +47,7 @@
  */
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Text } from "../Typography";
@@ -65,6 +65,7 @@ type ImageGalleryProps = {
 
 export const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const imageFocusRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
 
   const prevImage = () => {
@@ -92,7 +93,9 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
         >
           <AnimatePresence mode="sync">
             <motion.div
+              ref={imageFocusRef}
               key={images[selectedIndex].src}
+              tabIndex={-1}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -160,7 +163,12 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                     ? "border-digital-red"
                     : "border-transparent"
                 }`}
-                onClick={() => setSelectedIndex(index)}
+                onClick={() => {
+                  setSelectedIndex(index);
+                  setTimeout(() => {
+                    imageFocusRef.current?.focus();
+                  }, 0);
+                }}
               >
                 <Image
                   src={image.src}
