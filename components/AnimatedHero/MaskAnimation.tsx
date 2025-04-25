@@ -78,14 +78,16 @@ export const MaskAnimation = ({ onComplete }: MaskAnimationProps) => {
         stroke="#F83535"
         strokeWidth="16"
         strokeLinecap="round"
-        initial={{ pathLength: 0, pathOffset: 0 }}
-        animate={{ pathLength: 1, pathOffset: 0 }}
+        initial={{ pathLength: 0 }}
+        animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
         transition={{
           duration: 1,
           delay: 0,
           ease: "easeInOut",
         }}
-        onAnimationComplete={() => setMask(true)}
+        onAnimationComplete={() => {
+          if (isInView) setMask(true); // just in case
+        }}
       />
     </motion.svg>
   );
