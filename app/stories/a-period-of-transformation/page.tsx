@@ -72,13 +72,25 @@ const galleryImages = [
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745460024/SC0122_b1_Multivators_004_g0ammu.jpg",
     alt: "",
     caption:
-      "Joshua Lederberg, Nobel laureate and chair of genetics, and Elliott Levinthal, professor of mechanical engineering, developed this device to test for life on distant planets. Although it was not included in the first Mars lander mission planned for 1966, in 1975 a modified version flew in the Viking Lander. | Special Collections & University Archives.",
+      "The multivator, 1963. Joshua Lederberg, Nobel laureate and chair of genetics, and Elliott Levinthal, professor of mechanical engineering, developed this device to test for life on distant planets. Although it was not included in the first Mars lander mission planned for 1966, in 1975 a modified version flew in the Viking Lander. | Special Collections & University Archives.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745460039/gr855kr1144_08_04_p7yovx.jpg",
     alt: "Diagram of the multivator",
     caption:
       "A prototype of the multivator that would fly on the Mars Viking Lander, developed by Elliott Levinthal and NASA, 1962. |  Special Collections & University Archives.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/00007005_0006_f2fmkj.jpg",
+    alt: "Joseph Frangini with students in the Sanitary Engineering Laboratory",
+    caption:
+      "Joseph Frangini (standing) with students in the Sanitary Engineering Laboratory, completed in the summer of 1955, which was equipped for chemical tests on water and sewage. A world-renowned expert on fluid mechanics and water resources, Frangini joined the Stanford faculty as a professor of civil engineering in 1950. | Special Collections & University Archives.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371522/john_mcarthy_chess_noji2t.jpg",
+    alt: "John McCarthy seated at a desk, playing computer chess",
+    caption:
+      "John McCarthy, professor of computer science, playing computer chess, 1966. McCarthy coined the term artificial intelligence and founded the influential Stanford Artificial Intelligence Laboratory. The laboratory produced 18 recipients of the ACM A. M. Turing Award, considered the Nobel Prize of computer science. | Chuck Painter/Stanford News Service.",
   },
 ];
 
@@ -376,10 +388,10 @@ export default function page() {
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
           />
 
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-5">
+          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
             <Text mb={6}>by Andrew Myers</Text>
           </div>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <Quote
               quoteColor="red"
               teaser="There was something special about the IBM 650, something that has provided the inspiration for much of my life’s work."
@@ -401,7 +413,7 @@ export default function page() {
               </Text>
             </OneCol>
           </TwoCol>
-          <TwoCol isSidebar>
+          <TwoCol isSidebar className="rs-mb-5">
             <OneCol>
               <Text>
                 The fourth decade was a period of transformation as much for the
@@ -464,7 +476,7 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-          <Container>
+          <Container className="rs-mb-5">
             <MediaCaptionImage
               isParallax
               aspectRatio="16x9"
@@ -475,9 +487,9 @@ export default function page() {
             />
           </Container>
           <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="C" />
+            <HorizontalLineart lineartType="A" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>New tools on campus</H2>
             <Text>
               In January 1956, Stanford welcomed an IBM 650 mainframe computer
@@ -538,6 +550,7 @@ export default function page() {
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371508/nuclear_reactor_c14sww.jpg"
             isTwoCol
             isImgOffset
+            className="rs-mb-6"
           >
             <MediaCaptionImage
               animation="fadeIn"
@@ -625,11 +638,11 @@ export default function page() {
               it.
             </Text>
           </OneCol>
-          <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="C" />
+          <div className="flex w-full justify-end">
+            <HorizontalLineart lineartType="B" />
           </div>
-          <OneCol>
-            <H2>The space age</H2>
+          <OneCol className="rs-mb-5">
+            <H2 className="mt-0">The space age</H2>
             <Text>
               The field of flight, fueled by the advent of jet and rocket
               engines in World War II, was also changing rapidly in this period.
@@ -663,17 +676,19 @@ export default function page() {
           <Container>
             <MediaCaptionImage
               isParallax
+              isCaptionFullWidth
+              isCaptionInset
               aspectRatio="16x9"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371522/SC0122_s1_b267_f05_0594-04_qn7zq6.jpg"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745544985/SC0122_s1_b267_f05_0594-04_dxnlq1.jpg"
               alt="Large radio telescope dish under construction on a grassy hill, surrounded by scaffolding and construction equipment, with a clear sky in the background."
               caption="The Stanford “Dish” radio telescope under construction in the Stanford foothills, 1961. A 70-ton, 150-foot steel and aluminum parabolic antenna with a surface spanning nearly half an acre, it was designed and built by the Stanford Research Institute for the U.S. government with support from the U.S. Air Force Office of Aerospace Research and the Defense Support Agency. In the 1940s, a group of Stanford’s electrical engineers––including Robert A. Helliwell, Laurence A. Manning, and O. G. Villard, Jr.—had tested the idea that radio signals bounced off meteor trails. As faculty, they formed the core of Stanford’s Radio Science Laboratory, later joined by professors Ronald Bracewell, Allen M. Peterson, and others. More than a decade later, the Dish enabled vastly expanded studies of scattering effects in Earth’s ionosphere and was used to detect Soviet radar by capturing radio signals that bounced off the moon. The Dish is still used today for satellite calibrations, spacecraft command and telemetry, and radio astronomy measurements. | Stanford News Service."
             />
           </Container>
           <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="C" />
+            <HorizontalLineart lineartType="D" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>The spirit of invention</H2>
             <Text>
               In the 1960s, with the Space Race in full stride and America eager
@@ -704,7 +719,10 @@ export default function page() {
             </Text>
           </OneCol>
           <ImageGallery images={galleryImages} />
-          <Scrollytelling bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg">
+          <Scrollytelling
+            bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg"
+            className="rs-my-5"
+          >
             <H2 align="center">The Stanford Industrial Park</H2>
             <MediaCaptionImage
               isParallax
@@ -840,10 +858,10 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote34", number: 34 }]} />
             </Text>
           </OneCol>
-          <div className="flex w-full justify-start">
+          <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="C" />
           </div>
-          <Container>
+          <Container className="rs-mt-5">
             <MediaCaptionImage
               isParallax
               aspectRatio="8x5"
@@ -853,7 +871,7 @@ export default function page() {
               caption="The Engineering Laboratories with old clock tower (left) and Engineering Corner, 1960. | Special Collections & University Archives."
             />
           </Container>
-          <BgImageWrapper isImgOffset isTwoCol>
+          <BgImageWrapper isImgOffset isTwoCol className="rs-mb-5 *:py-0">
             <MediaCaptionImage
               aspectRatio="3x4"
               rounded
@@ -869,11 +887,11 @@ export default function page() {
               caption="Engineering professor George Leppert (right) and graduate student Gary Vliet take measurements in Stanford’s subcritical nuclear assembly, 1958. The apparatus, which operated like a reactor but could not sustain a chain reaction, was located in Stanford’s Nuclear Technology Laboratory. The nuclear engineering program, led by Professor Leppert, was developed in the Mechanical Engineering Department in 1955. | Stanford News Service."
             />
           </BgImageWrapper>
-          <div className="flex w-full justify-start">
+          <div className="flex w-full justify-start rs-mb-4">
             <HorizontalLineart lineartType="C" />
           </div>
-          <OneCol>
-            <H2>Facilities upgrades</H2>
+          <OneCol className="rs-mb-5">
+            <H2 className="mt-0">Facilities upgrades</H2>
             <Text>
               With ever more contracts, faculty, and students flowing in, it was
               clear the School of Engineering was rapidly outgrowing its

@@ -63,6 +63,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     alt?: string;
     caption?: React.ReactNode;
     isCaptionInset?: boolean;
+    isCaptionFullWidth?: boolean;
     captionTextColor?: styles.CaptionTextColorType;
     rounded?: boolean;
     aspectRatio?: ImageAspectRatioType;
@@ -87,6 +88,7 @@ const MediaCaptionImage = ({
   spacingTop,
   spacingBottom,
   isCaptionInset,
+  isCaptionFullWidth,
   captionTextColor = "stone-dark",
   rounded = false,
   animation = "none",
@@ -135,6 +137,7 @@ const MediaCaptionImage = ({
             >
               <Text
                 className={cnb(
+                  isCaptionFullWidth ? "w-full" : "max-w-prose-wide",
                   styles.caption,
                   styles.captionTextColors[captionTextColor],
                 )}

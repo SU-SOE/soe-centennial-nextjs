@@ -97,5 +97,4 @@ export const image = (isParallax: boolean) =>
 
 export const captionWrapper = "mt-0";
 
-export const caption =
-  "*:*:leading-display max-w-prose-wide first:*:*:mt-0 pt-06em";
+export const caption = "*:*:leading-display first:*:*:mt-0 pt-06em";
