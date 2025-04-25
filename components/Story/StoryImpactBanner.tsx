@@ -60,6 +60,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   caption?: string;
   hasBgImage?: boolean;
   isVertical?: boolean;
+  isCaptionInHero?: boolean;
   bgImageSrc?: string;
   src: string;
   alt: string;
@@ -78,6 +79,7 @@ export const StoryImpactBanner = ({
   hasBgImage = false,
   bgImageSrc,
   isVertical = false,
+  isCaptionInHero = false,
   src,
   alt,
   ...props
@@ -174,7 +176,7 @@ export const StoryImpactBanner = ({
             >
               <Image src={src} alt={alt} fill className="object-cover" />
             </AnimateInView>
-            {bgColor === "white" && (
+            {(isCaptionInHero || bgColor === "white") && (
               <div className="mt-13">
                 <Text id="hero-caption" variant="caption" mb="none">
                   {caption}
@@ -184,7 +186,7 @@ export const StoryImpactBanner = ({
           </FlexBox>
         </FlexBox>
       </Container>
-      {bgColor !== "white" && (
+      {!isCaptionInHero && bgColor !== "white" && (
         <div className="mt-13 cc">
           <Text
             id="hero-caption"

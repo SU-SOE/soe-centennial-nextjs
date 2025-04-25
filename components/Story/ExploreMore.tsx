@@ -28,6 +28,7 @@ type ExploreMoreProps = HTMLAttributes<HTMLDivElement> & {
   stories: StoryCardProps[];
   cardBgColor?: BgColorType;
   sectionHeading?: string;
+  headerTag?: "h2" | "h3";
   hasButton?: boolean;
   width?: WidthType;
   isThreeCol?: boolean;
@@ -38,6 +39,7 @@ export const ExploreMore = ({
   cardBgColor = "blue",
   stories,
   sectionHeading,
+  headerTag,
   hasButton,
   width,
   isThreeCol,
@@ -59,7 +61,7 @@ export const ExploreMore = ({
             as="li"
             key={index}
             bgColor={cardBgColor}
-            headerTag="h3"
+            headerTag={headerTag || "h3"}
             animation="slideUp"
             delay={delays[index] || 0.3}
             {...story}
