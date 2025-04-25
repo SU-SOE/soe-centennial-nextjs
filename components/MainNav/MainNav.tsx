@@ -16,6 +16,7 @@ import { FlexBox } from "@/components/FlexBox";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { useRef } from "react";
 import { useOnClickOutside } from "usehooks-ts";
+import { useFocusOutside } from "@/utilities/hook/useFocusOutside";
 
 type Props = {
   isLight?: boolean;
@@ -29,6 +30,10 @@ export const MainNav = ({ isLight = false }: Props) => {
     <Popover as="nav" aria-label="main menu">
       {({ open, close }) => {
         useOnClickOutside(panelRef as React.RefObject<HTMLElement>, () => {
+          if (open) close();
+        });
+
+        useFocusOutside(panelRef as React.RefObject<HTMLElement>, () => {
           if (open) close();
         });
 
