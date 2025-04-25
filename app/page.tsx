@@ -14,6 +14,7 @@ import { Metadata } from "next";
 import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
+import { Button } from "@/components/Cta";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -45,10 +46,32 @@ export const metadata: Metadata = {
 
 const events = [
   {
+    heading: "Stanford Engineering Centennial Celebration and Showcase",
+    superhead: (
+      <>
+        May 15, 2025 <br /> 3:30-7:30pm
+      </>
+    ),
+    body: (
+      <>
+        <p>
+          Celebrate 100 years of innovation with an interactive showcase
+          featuring cutting-edge research, hands-on demos, and breakthrough
+          technologies.
+        </p>
+        <Button solid href="/">
+          Register here
+        </Button>
+      </>
+    ),
+    isCard: true,
+  },
+
+  {
     heading: "Don’t miss out on upcoming centennial events!",
     superhead: "Stanford Engineering alumni",
     body: (
-      <>
+      <p>
         Update your contact information in{" "}
         <a href="https://alumni.stanford.edu/help/myaccount/">My Account</a> so
         that you receive all future centennial communications. Please contact{" "}
@@ -56,7 +79,7 @@ const events = [
           engineering-alumni@stanford.edu
         </a>{" "}
         if you have any questions.
-      </>
+      </p>
     ),
   },
 ];
@@ -146,6 +169,7 @@ export default function Home() {
             </AnimateInView>
           </div>
           <ExploreMore
+            hasButton
             stories={storyData}
             className="py-0"
             cardBgColor="white"
