@@ -78,7 +78,7 @@ export const AnimatedPosterCard = ({
               )}
             </AnimateInView>
             <AnimateInView animation="slideUp" delay={1} className="rs-mt-4">
-              <Button href="link">{buttonText}</Button>
+              <Button href={link}>{buttonText}</Button>
             </AnimateInView>
           </div>
         </FlexBox>

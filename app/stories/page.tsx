@@ -83,7 +83,7 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1>Stories worth telling</H1>
+            <H1>Ten decades of world-changing stories</H1>
           </div>
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />
