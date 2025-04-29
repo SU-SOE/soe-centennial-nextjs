@@ -92,7 +92,7 @@ export default function page() {
             <Text mb={6}>by Andrew Myers</Text>
           </div>
           <OneCol>
-            <Text variant="overview">
+            <Text variant="overview" className="cen-drop-cap">
               Look back at any given year in the Stanford School of
               Engineering’s history, and you’ll find a remarkable story of
               innovation – a new idea taking shape, a technology breaking
