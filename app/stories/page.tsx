@@ -82,8 +82,11 @@ export default function page() {
       <Masthead logoColor="default" />
       <main id="main-content">
         <article>
-          <div className="cc rs-mt-8">
-            <H1>Ten decades of world-changing stories</H1>
+          <div className="cc rs-mt-8 max-w-[86rem]">
+            <H1>
+              Ten decades of <br />
+              world-changing stories
+            </H1>
           </div>
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />
