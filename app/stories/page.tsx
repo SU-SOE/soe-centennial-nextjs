@@ -52,11 +52,11 @@ const storyData1 = [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
   },
   {
-    superhead: "Lorem ipsum",
-    heading: "Centennial impact story",
-    href: "/stories/tbd",
+    superhead: "100 Years of Stanford Engineering",
+    heading: "A Century of Innovation",
+    href: "/stories/a-century-of-innovation",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265421/ocean_one_fwy7nd.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745893700/launch-story_u6bkes.jpg",
   },
 ];
 
