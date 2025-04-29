@@ -66,7 +66,7 @@ const storyData2 = [
     chapter: "Decade 4",
     href: "/stories/a-period-of-transformation",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743098633/Spr25_SoE-Voltage_Black2_square_kgslwr.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
   },
   {
     heading: "Letter from Dean Widom",
@@ -83,7 +83,7 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-[86rem] w-full">
+            <H1 className="max-w-1000 w-full">
               Ten decades of <br />
               world-changing stories
             </H1>
