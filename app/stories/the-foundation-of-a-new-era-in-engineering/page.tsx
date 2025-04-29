@@ -79,7 +79,7 @@ const exploreStoriesData = [
     chapter: "Decade 4",
     href: "/stories/a-period-of-transformation",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
   },
 ];
 
