@@ -82,8 +82,8 @@ export default function page() {
       <Masthead logoColor="default" />
       <main id="main-content">
         <article>
-          <div className="cc rs-mt-8 max-w-[86rem]">
-            <H1>
+          <div className="cc rs-mt-8">
+            <H1 className="max-w-[86rem] w-full">
               Ten decades of <br />
               world-changing stories
             </H1>

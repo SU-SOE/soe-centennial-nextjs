@@ -259,7 +259,7 @@ const footnotes = [
 export default function page() {
   return (
     <>
-      <Masthead logoColor="default" />
+      <Masthead logoColor="white" isBgDark isOverlap />
       <main id="main-content">
         <article>
           <StoryImpactBanner
