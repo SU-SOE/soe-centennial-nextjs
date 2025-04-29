@@ -23,9 +23,9 @@ import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
 
 export const metadata: Metadata = {
-  title: "The Terman Era | 100 Years of Stanford Engineering",
+  title: "A period of transformation | 100 Years of Stanford Engineering",
   description:
-    "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
+    "As the School of Engineering’s fourth decade opened, Fred Terman was in his tenth year as dean. In 1955, he was named provost of Stanford, the university’s second highest position. Terman held both jobs for three years before shifting solely to his role as provost. In 1958, Joseph Pettit, a professor of electrical engineering, was named dean. During Pettit’s fourteen years in that position, the school experienced meteoric growth in scope, scale, and reputation. By the late 1960s, Stanford would be among the top producers of engineering PhDs in the nation.",
   keywords: [
     "Frederick Terman",
     "Stanford history",
@@ -34,21 +34,21 @@ export const metadata: Metadata = {
     "technological advancement",
   ],
   openGraph: {
-    title: "The Terman Era | 100 Years of Stanford Engineering",
+    title: "A period of transformation | 100 Years of Stanford Engineering",
     description:
-      "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
+      "As the School of Engineering’s fourth decade opened, Fred Terman was in his tenth year as dean. In 1955, he was named provost of Stanford, the university’s second highest position. Terman held both jobs for three years before shifting solely to his role as provost. In 1958, Joseph Pettit, a professor of electrical engineering, was named dean. During Pettit’s fourteen years in that position, the school experienced meteoric growth in scope, scale, and reputation. By the late 1960s, Stanford would be among the top producers of engineering PhDs in the nation.",
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
-        alt: "Frederick Terman at the Radio Research Laboratory, Harvard University, 1940s",
+        alt: "The Stanford “Dish” radio telescope under construction in the Stanford foothills",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Terman Era | 100 Years of Stanford Engineering",
+    title: "A period of transformation | 100 Years of Stanford Engineering",
     description:
-      "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
+      "As the School of Engineering’s fourth decade opened, Fred Terman was in his tenth year as dean. In 1955, he was named provost of Stanford, the university’s second highest position. Terman held both jobs for three years before shifting solely to his role as provost. In 1958, Joseph Pettit, a professor of electrical engineering, was named dean. During Pettit’s fourteen years in that position, the school experienced meteoric growth in scope, scale, and reputation. By the late 1960s, Stanford would be among the top producers of engineering PhDs in the nation.",
     images: [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
     ],
@@ -122,251 +122,224 @@ const footnotes = [
   {
     number: 1,
     id: "footnote1",
-    text: "Mary Ritter, a scientist, professor, and administrator at Stanford, was instrumental in the formation of the School of Medicine and Nursing.",
-    sourceLink:
-      "https://exhibits.stanford.edu/150-stanford-women/feature/mary-bennett-ritter",
+    text: "William Kays, Oswald Villard Jr., and William Rambo, “Joseph Mayo Pettit,” National Academy of Engineering, https://www.nae.edu/189306/JOSEPH-MAYO-PETTIT-19161986.",
+    sourceLink: "https://www.nae.edu/189306/JOSEPH-MAYO-PETTIT-19161986",
   },
   {
     number: 2,
     id: "footnote2",
-    text: "This is the second entry in the Stanford Engineering Centennial timeline. It highlights the school's early history and foundational figures.",
-    sourceLink: "https://engineering.stanford.edu/about/history",
+    text: "Stuart W. Leslie, “Playing the Education Game to Win: The Military and Interdisciplinary Research at Stanford,” Historical Studies in the Physical and Biological Sciences 18, no. 1 (1987): 55–88, 56, https://www.jstor.org/stable/27757596. The figures come from Ralph Lapp, The Weapons Culture (New York, 1968), 191–197.",
+    sourceLink: "https://www.jstor.org/stable/27757596",
   },
   {
     number: 3,
     id: "footnote3",
-    text: "David Starr Jordan was the founding president of Stanford University and a ichthyologist by training.",
-    sourceLink: "https://www.stanford.edu/about/history/",
+    text: "Perry L. McCarty, Stanford’s Environmental Engineering and Science Program: The First Fifty Years (Stanford Environmental Engineering Special Publication, 2013), 3–5, https://web.stanford.edu/group/ews/50th/docs/eesfirst50years.pdf.",
+    sourceLink:
+      "https://web.stanford.edu/group/ews/50th/docs/eesfirst50years.pdf",
   },
   {
     number: 4,
     id: "footnote4",
-    text: "John Casper Branner was the first professor of geology and later became the second president of Stanford University.",
+    text: "“Mason History and Legacy,” Stanford Chemical Engineering, https://cheme.stanford.edu/our-culture/mason-lecture-series/mason-history-and-legacy; “Stanford University and Foundation Funding: Developing an Organizational Capability, 1920–1960,” The Business History Conference, https://thebhc.org/abstract-viewer/popup/988; “Department History,” Stanford Chemical Engineering, https://cheme.stanford.edu/our-culture/department-history; The Ford Foundation Annual Report, 1961, https://www.fordfoundation.org/wp-content/uploads/2015/05/1961-annual-report.pdf.",
     sourceLink:
-      "https://exhibits.stanford.edu/stanford-pubs/catalog/gp670cm0844",
+      "https://cheme.stanford.edu/our-culture/mason-lecture-series/mason-history-and-legacy",
   },
   {
     number: 5,
     id: "footnote5",
-    text: "Durand’s appointment is widely credited as a pivotal moment in solidifying engineering education at Stanford.",
-    sourceLink: "https://profiles.stanford.edu/william-durand",
+    text: "“Ford Grants Engineering $3,400,000,” Stanford Engineering News no. 30 (December 1960): 1.",
   },
   {
     number: 6,
     id: "footnote6",
-    text: "Ames Aeronautical Laboratory was founded as part of the National Advisory Committee for Aeronautics (NACA), which later became NASA.",
-    sourceLink: "https://history.nasa.gov/SP-4302/ch3.2.htm",
+    text: "McCarty, Stanford’s Environmental Engineering and Science Program, 3–5.",
   },
   {
     number: 7,
     id: "footnote7",
-    text: "Margaret Ingels was one of the first women to receive a professional degree in engineering in the United States.",
-    sourceLink:
-      "https://www.asce.org/about-civil-engineering/history-and-heritage/engineering-hall-of-fame/margaret-ingels",
+    text: "C. Stewart Gillmor, “Stanford, the IBM 650, and the First Trials of Computer Date Matching,” IEEE Annals of the History of Computing 29, no. 1 (January–March 2007), https://ieeexplore.ieee.org/document/4211741.",
+    sourceLink: "https://ieeexplore.ieee.org/document/4211741",
   },
   {
     number: 8,
     id: "footnote8",
-    text: "Frederick Terman, known as the ‘Father of Silicon Valley,’ was a professor and later dean of the School of Engineering.",
-    sourceLink:
-      "https://engineering.stanford.edu/magazine/article/frederick-terman-and-origins-silicon-valley",
+    text: "Kara Platoni, “Love at First Byte,” Stanford magazine, May/June 2006, https://stanfordmag.org/contents/love-at-first-byte. See also “Donald E. Knuth,” https://www-cs-faculty.stanford.edu/~knuth/",
+    sourceLink: "https://stanfordmag.org/contents/love-at-first-byte",
   },
   {
     number: 9,
     id: "footnote9",
-    text: "Hewlett and Packard began working on their audio oscillator project as graduate students under Terman.",
-    sourceLink:
-      "https://www.hp.com/us-en/hp-information/about-hp/history/hp-origin-story.html",
+    text: "Gillmor, “Stanford, the IBM 650, and the First Trials of Computer Date Matching.”",
   },
   {
     number: 10,
     id: "footnote10",
-    text: "The Hewlett-Packard garage is recognized as the birthplace of Silicon Valley.",
+    text: "“Memorial Resolution: Ronald N. Bracewell,” Stanford Report, November 14, 2007, https://news.stanford.edu/2007/11/14/memorial-resolution-ronald-n-bracewell/.",
     sourceLink:
-      "https://www.hp.com/us-en/hp-information/about-hp/history/hp-garage.html",
+      "https://news.stanford.edu/2007/11/14/memorial-resolution-ronald-n-bracewell/",
   },
   {
     number: 11,
     id: "footnote11",
-    text: "Terman helped develop the electronics research program at Harvard during WWII, including work on radar systems.",
+    text: "Andrew Myers, “Stanford Engineering Professor and Inventor John G. Linvill Dies at 91,” Stanford News, March 10, 2011, https://news.stanford.edu/2011/03/10/stanford-engineering-professor-inventor-john-g-linvill-dies-91/.",
     sourceLink:
-      "https://history.nih.gov/display/history/Radar+Research+and+Development+during+World+War+II",
+      "https://news.stanford.edu/2011/03/10/stanford-engineering-professor-inventor-john-g-linvill-dies-91/",
   },
   {
     number: 12,
     id: "footnote12",
-    text: "Stanford’s post-war growth was fueled by increased funding for scientific and technical research.",
-    sourceLink: "https://news.stanford.edu/news/2005/june15/terman-061505.html",
+    text: "C. Stewart Gillmor, Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley (Stanford University Press, 2004), 311; Christophe Lécuyer, “What Do Universities Really Owe Industry? The Case of Solid State Electronics at Stanford,” Minerva 43, no. 1 (March 2005): 55, https://www.jstor.org/stable/41821302.",
+    sourceLink: "https://www.jstor.org/stable/41821302",
   },
   {
     number: 13,
     id: "footnote13",
-    text: "The Stanford Industrial Park (now Stanford Research Park) was a visionary development that attracted tech companies to Palo Alto.",
-    sourceLink: "https://www.researchpark.com/about/history/",
+    text: "“The Nobel Prize in Physics 1956,” https://www.nobelprize.org/prizes/physics/1956/summary/.",
+    sourceLink: "https://www.nobelprize.org/prizes/physics/1956/summary/",
   },
   {
     number: 14,
     id: "footnote14",
-    text: "William Shockley, co-inventor of the transistor, established Shockley Semiconductor Laboratory in Mountain View, igniting Silicon Valley.",
-    sourceLink:
-      "https://www.computerhistory.org/siliconengine/william-shockley/",
+    text: "Myers, “Stanford Engineering Professor and Inventor John G. Linvill Dies at 91.”",
   },
   {
     number: 15,
     id: "footnote15",
-    text: "The 'Traitorous Eight' left Shockley to form Fairchild Semiconductor, which became a breeding ground for Silicon Valley’s entrepreneurial culture.",
-    sourceLink: "https://www.invent.org/inductees/traitorous-eight",
+    text: "Lécuyer, “What Do Universities Really Owe Industry?”",
   },
   {
     number: 16,
     id: "footnote16",
-    text: "Fairchild Semiconductor introduced the planar process, which revolutionized chip manufacturing.",
-    sourceLink:
-      "https://computerhistory.org/blog/fairchild-and-the-planar-process/",
+    text: "Joel N. Shurkin, Broken Genius: The Rise and Fall of William Shockley, Creator of the Electronic Age (2006; New York: Macmillan, 2008), vii–ix.",
   },
   {
     number: 17,
     id: "footnote17",
-    text: "Xerox PARC, founded in 1970, became an influential center for computing innovation, attracting Stanford graduates.",
-    sourceLink: "https://www.parc.com/about/history/",
+    text: "“Controversial Nobel Laureate Shockley Dies,” Los Angeles Times, August 14, 1989.",
   },
   {
     number: 18,
     id: "footnote18",
-    text: "The Stanford Artificial Intelligence Laboratory (SAIL) led pioneering work in AI and robotics during the 1960s and 1970s.",
-    sourceLink: "https://cs.stanford.edu/groups/SAIL/",
+    text: "“Stanford-SRI ‘Radar Telescope’ Started,” Stanford Engineering News no. 27 (December 1959): 5, https://drive.google.com/file/d/1MacRV5Eaq2s-bZQDIyxi0khkzMhbrdQG/view.",
+    sourceLink:
+      "https://drive.google.com/file/d/1MacRV5Eaq2s-bZQDIyxi0khkzMhbrdQG/view",
   },
   {
     number: 19,
     id: "footnote19",
-    text: "Douglas Engelbart's demo of the oN-Line System (NLS) in 1968 featured the first computer mouse, hypertext, and video conferencing.",
-    sourceLink: "https://www.dougengelbart.org/",
+    text: "M. Chodorow, E.L. Ginzton, W.W. Hansen, et al., “Stanford High-Energy Linear Electron Accelerator (Mark III),” Review of Scientific Instruments 26, no. 2 (February 1955): 134–204, https://doi.org/10.1063/1.1771254.",
+    sourceLink: "https://doi.org/10.1063/1.1771254",
   },
   {
     number: 20,
     id: "footnote20",
-    text: "The Center for Integrated Systems, founded in the early 1980s, brought industry and academia together to advance chip design.",
-    sourceLink: "https://cis.stanford.edu/",
+    text: "Brian Cantwell, “From Durand to Hoff: The History of Aeronautics at Stanford University; The Founding and Early Years of the Department of Aeronautics and Astronautics,” Stanford Aeronautics and Astronautics, April 26, 2008, https://stacks.stanford.edu/file/druid:tw248mt9298/aahistory.pdf.",
+    sourceLink:
+      "https://stacks.stanford.edu/file/druid:tw248mt9298/aahistory.pdf",
   },
   {
     number: 21,
     id: "footnote21",
-    text: "Andrea Goldsmith, a wireless communications pioneer, became the first woman to win the Marconi Prize in 2020.",
-    sourceLink: "https://marconisociety.org/andrea-goldsmith/",
+    text: "Ibid., 6.",
   },
   {
     number: 22,
     id: "footnote22",
-    text: "The Stanford Solar Car Project, founded in 1989, has competed in the World Solar Challenge and promotes sustainable engineering.",
-    sourceLink: "https://solarcar.stanford.edu/",
+    text: "Ibid.",
   },
   {
     number: 23,
     id: "footnote23",
-    text: "Leland Stanford Jr., for whom the university is named, died of typhoid fever at age 15 in 1884.",
-    sourceLink: "https://www.stanford.edu/about/history/",
+    text: "“Space Exploration: The Life Detector,” Time magazine, August 30, 1963, https://content.time.com/time/subscriber/article/0,33009,940738,00.html.",
+    sourceLink:
+      "https://content.time.com/time/subscriber/article/0,33009,940738,00.html",
   },
   {
     number: 24,
     id: "footnote24",
-    text: "Leonard Bosack and Sandy Lerner, Stanford staff members, co-founded Cisco Systems in 1984.",
-    sourceLink:
-      "https://www.cisco.com/c/en/us/about/corporate-strategy-office/history.html",
+    text: "Karen E. Bartholomew, Claude S. Brinegar, and Roxanne Nilan, eds., A Chronology of Stanford University and Its Founders, 1824–2000 (Stanford Historical Society, 2001), 86; “Space Exploration: The Life Detector,” Time magazine, August 30, 1963; Myers, “Stanford Engineering Professor and Inventor John G. Linvill Dies at 91.”",
   },
   {
     number: 25,
     id: "footnote25",
-    text: "Stanford’s Computer Science department began in 1965 and quickly became a hub for software innovation.",
-    sourceLink: "https://cs.stanford.edu/about/history",
+    text: "Bartholomew et al., A Chronology of Stanford University and Its Founders, 88; “The Optacon Illustrates Research Objectives at Stanford,” Stanford Engineering News no. 71 (January 1970).",
   },
   {
     number: 26,
     id: "footnote26",
-    text: "The Stanford Linear Accelerator Center (SLAC) was completed in 1966 and remains a world-leading research facility.",
-    sourceLink: "https://www6.slac.stanford.edu/about",
+    text: "“Crothers Memorial Formally Dedicated,” Stanford Engineering News no. 16 (January 31, 1956): 1.",
   },
   {
     number: 27,
     id: "footnote27",
-    text: "SLAC experiments led to Nobel-winning discoveries, including the quark model of matter.",
-    sourceLink: "https://www6.slac.stanford.edu/research/nobel-prizes",
+    text: "“Land-poor Stanford Opens Its Acres on 99-Yr. Leases,” Business Week (December 20, 1952): 134–138, 138.",
   },
   {
     number: 28,
     id: "footnote28",
-    text: "Jennifer Widom, a database pioneer, became the first female dean of Stanford Engineering in 2017.",
-    sourceLink: "https://engineering.stanford.edu/news/meet-jennifer-widom",
+    text: "“Report on Master Plan,” 8. Frederick Emmons Terman Papers, Stanford University Archives, SC0160, box 35 (“Land and Building Development—Master Plan”), folder 7.",
   },
   {
     number: 29,
     id: "footnote29",
-    text: "Lawrence Lessig’s work at Stanford Law influenced the field of internet governance and digital copyright.",
-    sourceLink: "https://cyber.harvard.edu/people/lessig",
+    text: "“New Plants of Hewlett-Packard Mark Firm’s Spectacular Growth,” Western Electronic News (March 1958): 6–8, 6.",
   },
   {
     number: 30,
     id: "footnote30",
-    text: "The d.school (Hasso Plattner Institute of Design) at Stanford fosters innovation through interdisciplinary design thinking.",
-    sourceLink: "https://dschool.stanford.edu/about",
+    text: "William Nix, Memorial Resolution: Shepard, O. Cutler, 1902–1997 (Materials Science and Engineering); Stanford University, Faculty Senate, Records (SC0193), 2–3, https://purl.stanford.edu/vn613qz9450.",
+    sourceLink: "https://purl.stanford.edu/vn613qz9450",
   },
   {
     number: 31,
     id: "footnote31",
-    text: "David Kelley, founder of IDEO, was a key figure in establishing the Stanford d.school.",
-    sourceLink: "https://www.ideo.com/people/david-kelley",
+    text: "Bartholomew et al., A Chronology of Stanford University and Its Founders, 85.",
   },
   {
     number: 32,
     id: "footnote32",
-    text: "The Stanford Engineering Hero program honors alumni and faculty who have made significant contributions to society.",
-    sourceLink:
-      "https://engineering.stanford.edu/alumni-friends/stanford-engineering-heroes",
+    text: "John Markoff, “John McCarthy, 84, Dies; Computer Design Pioneer,” New York Times, October 25, 2011, https://www.nytimes.com/2011/10/26/science/26mccarthy.html.",
+    sourceLink: "https://www.nytimes.com/2011/10/26/science/26mccarthy.html",
   },
   {
     number: 33,
     id: "footnote33",
-    text: "John Hennessy, a computer architecture pioneer, served as Stanford’s president from 2000 to 2016.",
-    sourceLink:
-      "https://www.stanford.edu/about/leadership/presidents/hennessy/",
+    text: "McCarty, Stanford’s Environmental Engineering and Science Program, 1.",
   },
   {
     number: 34,
     id: "footnote34",
-    text: "The Stanford Nanofabrication Facility supports research in nanoscale science and engineering.",
-    sourceLink: "https://snf.stanford.edu/",
+    text: "“Fast-Growing Nuclear Technology Program to Have 10kw Teaching Reactor in Ryan Lab,” Stanford Engineering News no. 24 (December 1958): 1.",
   },
   {
     number: 35,
     id: "footnote35",
-    text: "The Bio-X program supports interdisciplinary biosciences research bridging engineering, medicine, and biology.",
-    sourceLink: "https://biox.stanford.edu/",
+    text: "Alfred D. Kirkland, “Engineering at Stanford—A Short Historical Perspective,” IEEE Transactions on Education 18, no. 1 (February 1975): 50, https://ieeexplore.ieee.org/abstract/document/4320947.",
+    sourceLink: "https://ieeexplore.ieee.org/abstract/document/4320947",
   },
   {
     number: 36,
     id: "footnote36",
-    text: "The TomKat Center funds research in sustainable energy and supports student-led energy innovation projects.",
-    sourceLink: "https://tomkat.stanford.edu/",
+    text: "Bartholomew et al., A Chronology of Stanford University and Its Founders, 80.",
   },
   {
     number: 37,
     id: "footnote37",
-    text: "Lynn Orr served as founding director of the Precourt Institute for Energy and U.S. Under Secretary for Science and Energy.",
-    sourceLink: "https://energy.stanford.edu/people/lynn-orr",
+    text: "Edward L. Ginzton, “The $100 Idea: How Russell and Sigurd Varian, with the Help of William Hansen and a $100 Appropriation, Invented the Klystron,” IEEE Spectrum 12, no. 2 (February 1975): 30–39, https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1478489; Blas Cabrera, “History of HEPL: Hansen Experimental Physics Laboratory,” November 5, 2007, https://web.stanford.edu/group/hepl//documents/HEPL_History_opt.pdf.",
+    sourceLink: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1478489",
   },
   {
     number: 38,
     id: "footnote38",
-    text: "The Stanford Center for Professional Development has offered distance learning since 1969, now reaching learners worldwide.",
-    sourceLink: "https://scpd.stanford.edu/",
+    text: "“Stanford Engineering Third in U.S. in Number of Advanced Degrees Awarded,” Stanford Engineering News no. 41 (May 1963): 3.",
   },
   {
     number: 39,
     id: "footnote39",
-    text: "The Wu Tsai Neurosciences Institute at Stanford advances brain research through interdisciplinary collaboration.",
-    sourceLink: "https://neuroscience.stanford.edu/",
+    text: "“Graduate Degrees” and “Top Salaries Tempt Stanford’s 1964 Engineering Grads,” Stanford Engineering News no. 46 (May 1964): 2.",
   },
 ];
-
 export default function page() {
   return (
     <>
@@ -387,7 +360,6 @@ export default function page() {
             }
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
           />
-
           <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
             <Text mb={6}>by Andrew Myers</Text>
           </div>
@@ -730,7 +702,7 @@ export default function page() {
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg"
               alt="Aerial view of the Stanford Industrial Park area before major development, showcasing diverse terrain and vegetation across a large expanse of land."
-              caption="Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. Hatfield Aerial Surveys | Special Collections & University Archives."
+              caption=" Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. | Hatfield Aerial Surveys / Special Collections & University Archives"
             />
             <ScrollyBubble>
               <Text>
