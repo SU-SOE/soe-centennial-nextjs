@@ -7,14 +7,15 @@ import Image from "next/image";
 import * as styles from "./Event.styles";
 import { cnb } from "cnbuilder";
 
-interface EventsSectionProps {
+type EventsSectionProps = {
   className?: string;
   heading?: string;
   events: EventCardProps[];
   hasBgImage?: boolean;
   src?: string;
   alt?: string;
-}
+};
+
 export const EventsSection = ({
   className,
   heading,

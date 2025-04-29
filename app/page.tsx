@@ -75,12 +75,14 @@ const events = [
         Update your contact information in{" "}
         <a href="https://alumni.stanford.edu/help/myaccount/">My Account</a> so
         that you receive all future centennial communications. Please contact{" "}
+        <br />
         <a href="mailto:engineering-alumni@stanford.edu">
           engineering-alumni@stanford.edu
         </a>{" "}
         if you have any questions.
       </p>
     ),
+    headingSize: 3 as const,
   },
 ];
 
@@ -222,7 +224,7 @@ export default function Home() {
           />
         </Container>
         <EventsSection
-          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745937965/stanford-events_nfplt7.png"
           events={events}
         />
         <ContributeStoryBanner bgColor="red" hasLineArt />
