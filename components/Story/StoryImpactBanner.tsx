@@ -53,6 +53,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead?: string;
   chapter?: string;
+  chapterColor?: "stone-dark" | "archway-dark" | "digital-red";
   dek?: string;
   body?: string;
   byline?: string;
@@ -72,6 +73,7 @@ export const StoryImpactBanner = ({
   superhead,
   className,
   chapter,
+  chapterColor,
   dek,
   body,
   byline,
@@ -150,7 +152,11 @@ export const StoryImpactBanner = ({
               </Text>
             )}
             {chapter && (
-              <ChapterLabel className="order-first rs-mb-0" text={chapter} />
+              <ChapterLabel
+                chipColor={chapterColor}
+                className="order-first rs-mb-0"
+                text={chapter}
+              />
             )}
             {dek && (
               <Text mb="none" size="f3" className="rs-mt-1">
