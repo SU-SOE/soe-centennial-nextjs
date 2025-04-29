@@ -161,7 +161,7 @@ export default function Home() {
             <AnimateInView animation="slideUp">
               <div className="w-full max-w-1000">
                 <Heading font="dm-mono" size="f1" mb={1}>
-                  Explore decade stories
+                  Explore stories
                 </Heading>
                 <Text size="f5" weight="normal">
                   Fundamental work in science and transformational breakthroughs
@@ -173,7 +173,7 @@ export default function Home() {
           <ExploreMore
             hasButton
             stories={storyData}
-            className="py-0"
+            className="py-0 my-50"
             cardBgColor="white"
           />
         </StoryFeature>

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "Look back at any given year in the Stanford School of Engineering’s history, and you’ll find a remarkable story of innovation – a new idea taking shape, a technology breaking through, a problem being reimagined. Look back over 100 of those years, and you see something bigger: a sweeping story of continuous progress, relentless curiosity, and global impact.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745893700/launch-story_u6bkes.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
         alt: "A collage of Stanford engineering students and faculty",
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Look back at any given year in the Stanford School of Engineering’s history, and you’ll find a remarkable story of innovation – a new idea taking shape, a technology breaking through, a problem being reimagined. Look back over 100 of those years, and you see something bigger: a sweeping story of continuous progress, relentless curiosity, and global impact.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745893700/launch-story_u6bkes.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
     ],
   },
 };
@@ -84,12 +84,12 @@ export default function page() {
             bgColor="stone-dark"
             heading="A Century of Innovation: 100 Years of Stanford Engineering"
             body="The Stanford School of Engineering marks its 100th anniversary on May 15, kicking off a season of celebrations that will recount a world-changing century of innovation and inspire a promising look forward."
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745893700/launch-story_u6bkes.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg"
             alt="A collage of Stanford engineering students and faculty"
             caption="Images courtesy of James Gibbons, Andrew Brodhead, Special Collections & University Archives, Federic Osada, Stanford News Service."
           />
           <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
-            <Text mb={6}>by Andrew Myers</Text>
+            <Text mb={6}>By Andrew Myers and Julie Greicius</Text>
           </div>
           <OneCol>
             <Text variant="overview" className="cen-drop-cap">

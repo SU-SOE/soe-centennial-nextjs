@@ -72,7 +72,7 @@ export const ExploreMore = ({
       </AsComponent>
       {hasButton && (
         <Button isLight href="/stories" className="mx-auto rs-mt-5">
-          Explore all decade stories
+          Explore all stories
         </Button>
       )}
     </Container>

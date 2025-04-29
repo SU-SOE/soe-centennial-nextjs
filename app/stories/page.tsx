@@ -56,7 +56,7 @@ const storyData1 = [
     heading: "A Century of Innovation",
     href: "/stories/a-century-of-innovation",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745893700/launch-story_u6bkes.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
   },
 ];
 
