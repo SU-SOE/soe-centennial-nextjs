@@ -579,7 +579,7 @@ export default function page() {
               aspectRatio="3x2"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/pb977cg5869_00_0001_knwaxb.jpg"
               alt=""
-              caption="Aerial view of the Stanford University campus, 1948."
+              caption="Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. | Hatfield Aerial Surveys / Special Collections & University Archives"
             />
           </Container>
           <Quote

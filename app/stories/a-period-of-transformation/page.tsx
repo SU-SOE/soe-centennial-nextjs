@@ -701,8 +701,8 @@ export default function page() {
               aspectRatio="8x5"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg"
-              alt="Aerial view of the Stanford Industrial Park area before major development, showcasing diverse terrain and vegetation across a large expanse of land."
-              caption=" Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. | Hatfield Aerial Surveys / Special Collections & University Archives"
+              alt="Aerial map view of the Stanford Industrial Park area before major development, showcasing diverse terrain and vegetation across a large expanse of land."
+              caption="Map of the park, showing the growth of Varian Associates, Hewlett-Packard, Fairchild, Xerox, and other businesses, August 17, 1962. | Special Collections & University Archives."
             />
             <ScrollyBubble>
               <Text>
