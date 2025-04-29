@@ -60,6 +60,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   caption?: string;
   hasBgImage?: boolean;
   isVertical?: boolean;
+  isImageWide?: boolean;
   isCaptionInHero?: boolean;
   bgImageSrc?: string;
   src: string;
@@ -79,6 +80,7 @@ export const StoryImpactBanner = ({
   hasBgImage = false,
   bgImageSrc,
   isVertical = false,
+  isImageWide = false,
   isCaptionInHero = false,
   src,
   alt,
@@ -126,7 +128,9 @@ export const StoryImpactBanner = ({
           alignItems="center"
           className={cnb("flex flex-col z-10 relative md:grid-gap", {
             "lg:flex-row": !isVertical,
-            "w-full max-w-[1100px] mx-auto": isVertical,
+            "w-full mx-auto": isVertical,
+            "max-w-[1100px]": isVertical && !isImageWide,
+            "max-w-[1500px]": isImageWide,
           })}
         >
           <AnimateInView
@@ -153,6 +157,11 @@ export const StoryImpactBanner = ({
                 {dek}
               </Text>
             )}
+            {body && (
+              <Text mb="none" size={1} className="rs-mt-1">
+                {body}
+              </Text>
+            )}
             {byline && (
               <Text mb="none" size="base" className="rs-mt-0">
                 {byline}
@@ -169,9 +178,12 @@ export const StoryImpactBanner = ({
               animation="slideUp"
               delay={0.3}
               className={cnb(
-                "w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10",
-                { "aspect-[3/2]": isVertical },
-                { "aspect-[1/1] md:aspect-[2/3]": !isVertical },
+                "w-full overflow-hidden relative rounded-[30px] mb-10",
+                { "aspect-[3/2] xl:max-h-[860px]": isVertical && !isImageWide },
+                { "aspect-[15/7] xl:max-w-1500": isVertical && isImageWide },
+                {
+                  "aspect-[1/1] md:aspect-[2/3] xl:max-h-[860px]": !isVertical,
+                },
               )}
             >
               <Image src={src} alt={alt} fill className="object-cover" />
