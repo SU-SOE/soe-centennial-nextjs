@@ -121,10 +121,11 @@ export default function page() {
                 isHeadingLarge
                 isHorizontal
                 chapter="Decade 3"
+                chapterColor="digital-red"
                 heading="The Terman era"
                 href="/stories/the-terman-era"
                 imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg"
-                bgColor="white"
+                bgColor="red"
               />
             </li>
             <li className="mx-auto w-full max-w-1200">

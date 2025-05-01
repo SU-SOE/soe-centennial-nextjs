@@ -43,7 +43,7 @@ export const EventsSection = ({
               fill
               sizes="100vw"
             />
-            <div className="absolute h-full w-full bg-opacity-90 z-10 bg-stone-dark" />
+            <div className="absolute h-full w-full bg-opacity-75 z-10 bg-stone-dark" />
           </div>
         )}
         <div className="relative z-50">

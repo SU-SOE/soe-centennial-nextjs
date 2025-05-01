@@ -355,7 +355,7 @@ export default function page() {
               <>
                 The Stanford “Dish” radio telescope under construction in the
                 Stanford foothills, 1961. | Stanford News Service.{" "}
-                <Link href="#jumpto">See complete caption below</Link>
+                <Link href="#stanford-dish">See complete caption below</Link>
               </>
             }
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
@@ -443,7 +443,7 @@ export default function page() {
                 aspectRatio="1x1"
                 rounded
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/pettit_jn566pd7749_bm0d7v.jpg"
-                alt="A portrait of Joseph Pettit"
+                alt="A black and white portrait of a man wearing a suit and tie."
                 caption="Joseph Pettit, 1958. A professor of electrical engineering, Pettit served as dean of the School of Engineering from 1958 to 1972. He oversaw a time of growth for the school, during which the school became third in the nation in the number of advanced degrees conferred and the Department of Aeronautics and Astronautics, embracing the Space Age, was founded. | Special Collections & University Archives."
               />
             </StorySidebar>
@@ -454,7 +454,7 @@ export default function page() {
               aspectRatio="16x9"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/computation_corner_dedication_o4xkzy.jpg"
-              alt="A group of people at the Computation Center dedication"
+              alt="A room filled with several men gathered around a couple of computers, engaged in discussion and collaboration."
               caption="Dedication of the Computation Center at Polya Hall, 1963, when computer science was still part of the Department of Mathematics. The IBM 7090 or the Burroughs B5000 may be the machines pictured here. | Special Collections & University Archives."
             />
           </Container>
@@ -645,7 +645,7 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote22", number: 22 }]} />
             </Text>
           </OneCol>
-          <Container>
+          <Container id="stanford-dish">
             <MediaCaptionImage
               isParallax
               isCaptionFullWidth
@@ -701,7 +701,7 @@ export default function page() {
               aspectRatio="8x5"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg"
-              alt="Aerial map view of the Stanford Industrial Park area before major development, showcasing diverse terrain and vegetation across a large expanse of land."
+              alt="A detailed map of the Stanford Industrial Park highlighting buildings and pathways."
               caption="Map of the park, showing the growth of Varian Associates, Hewlett-Packard, Fairchild, Xerox, and other businesses, August 17, 1962. | Special Collections & University Archives."
             />
             <ScrollyBubble>
@@ -744,7 +744,7 @@ export default function page() {
               aspectRatio="9x16"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/SC0122_1981-087_b01_f005_ldesrt.jpg"
-              alt="Map of the Stanford Industrial Park, showing the growth of Varian Associates, Hewlett-Packard, Fairchild, Xerox, and other businesses."
+              alt="A detailed map of the Stanford Industrial Park highlighting buildings and pathways."
               caption="Map of the park, showing the growth  of Varian Associates, Hewlett-Packard, Fairchild, Xerox, and other businesses, August 17, 1962. | Special Collections & University Archives."
             />
             <ScrollyBubble>
@@ -848,14 +848,14 @@ export default function page() {
               aspectRatio="3x4"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371508/nuclear_reactor_c14sww.jpg"
-              alt="Black and white photo of several people gathered around a large industrial machine, engaged in discussion and observation"
+              alt="A black and white image depicting several individuals standing around a large machine."
               caption="Nuclear reactor in Stanford’s Nuclear Technology Laboratory, in the former Harris J. Ryan High-Voltage Laboratory, 1961. The 10-kilowatt teaching reactor was on loan from the Atomic Energy Commission. | Stanford News Service."
             />
             <MediaCaptionImage
               aspectRatio="3x4"
               rounded
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/U7477_neflff.jpg"
-              alt="Two men collaborating on a large metal object in a workshop setting, surrounded by various tools and equipment."
+              alt="Two men engaged in hands-on work with a large metal object."
               caption="Engineering professor George Leppert (right) and graduate student Gary Vliet take measurements in Stanford’s subcritical nuclear assembly, 1958. The apparatus, which operated like a reactor but could not sustain a chain reaction, was located in Stanford’s Nuclear Technology Laboratory. The nuclear engineering program, led by Professor Leppert, was developed in the Mechanical Engineering Department in 1955. | Stanford News Service."
             />
           </BgImageWrapper>
@@ -888,7 +888,7 @@ export default function page() {
               rounded
               isCaptionInset
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/SC0122_s1_b268_f06_1546-11_anr8um.jpg"
-              alt="Black and white photo of a group of people gathered around a large industrial machine, engaged in discussion and observation"
+              alt="Three individuals, two men and a woman, stand in front of the Thomas F. Peterson Engineering Laboratory building."
               caption="Provost Frederick E. Terman (left), former dean of the School of Engineering, and Dean Joseph M. Pettit with Mrs. Thomas F. Peterson, 1963. The Thomas F. Peterson Engineering Laboratory—named in memory of her late husband, whose support made the facility possible—was dedicated in May 1963. | Stanford News Service."
             />
             <Text>

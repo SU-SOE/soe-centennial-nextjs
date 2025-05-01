@@ -8,6 +8,8 @@ import { ChapterLabel } from "@/components/Story/ChapterLabel";
 import { AnimateInView } from "@/components/Animate";
 import { MaskAnimation } from "./MaskAnimation";
 import { Button } from "../Cta";
+import { useReducedMotion } from "motion/react";
+import { NoMotionSvg } from "./NoMotionSvg";
 
 type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -29,6 +31,7 @@ export const AnimatedPosterCard = ({
   link,
   ...props
 }: AnimatedPosterCardProps) => {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <Container
       {...props}
@@ -45,7 +48,16 @@ export const AnimatedPosterCard = ({
           className="flex flex-col justify-between lg:flex-row z-50 relative lg:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
           <div className="w-full lg:w-1/2 max-w-480">
-            <MaskAnimation />
+            {prefersReducedMotion ? (
+              <NoMotionSvg />
+            ) : (
+              <>
+                <div className="hidden sm:block">
+                  <MaskAnimation />
+                </div>
+                <NoMotionSvg className="sm:hidden" />
+              </>
+            )}
           </div>
           <div className="flex flex-col text-left rs-pt-3 [&_p]:max-w-800 [&_h*]:max-w-1100 w-full lg:min-w-1/2">
             <AnimateInView animation="slideUp" delay={0.5}>

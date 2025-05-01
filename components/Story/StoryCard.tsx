@@ -18,6 +18,7 @@ export type StoryCardProps = HTMLAttributes<HTMLElement> &
     superhead?: string;
     body?: string;
     chapter?: string;
+    chapterColor?: "stone-dark" | "archway-dark" | "digital-red";
     href: string;
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
@@ -33,6 +34,7 @@ export const StoryCard = ({
   superhead,
   body,
   chapter,
+  chapterColor,
   href,
   headerTag = "h2",
   isHeadingLarge = false,
@@ -46,6 +48,17 @@ export const StoryCard = ({
   duration,
   ...props
 }: StoryCardProps) => {
+  const isDarkBg = (() => {
+    switch (bgColor) {
+      case "red":
+      case "stone-dark":
+      case "black":
+        return true;
+      default:
+        return false;
+    }
+  })();
+
   return (
     <AsComponent {...props} className={className}>
       <AnimateInView animation={animation} delay={delay} duration={duration}>
@@ -55,6 +68,8 @@ export const StoryCard = ({
             {
               "flex flex-col lg:flex-row items-center max-w-1400 mx-auto":
                 isHorizontal,
+              "text-white": isDarkBg,
+              "text-stone-dark": !isDarkBg,
             },
             bgColor && styles.bgColors[bgColor],
           )}
@@ -85,7 +100,11 @@ export const StoryCard = ({
               weight="normal"
               mb="0"
             >
-              <Link href={href} className="stretched-link" linkType="story">
+              <Link
+                href={href}
+                className="stretched-link"
+                linkType={isDarkBg ? "story-invert" : "story"}
+              >
                 {heading}
               </Link>
             </Heading>
@@ -99,7 +118,13 @@ export const StoryCard = ({
                 {superhead}
               </Text>
             )}
-            {chapter && <ChapterLabel text={chapter} className="order-first" />}
+            {chapter && (
+              <ChapterLabel
+                text={chapter}
+                className="order-first"
+                chipColor={chapterColor}
+              />
+            )}
             {body && (
               <Text size="base" mb="0" className="rs-mt-neg1">
                 {body}

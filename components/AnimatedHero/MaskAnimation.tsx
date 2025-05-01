@@ -51,6 +51,7 @@ export const MaskAnimation = ({ onComplete }: MaskAnimationProps) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       preserveAspectRatio="none"
+      aria-hidden="true"
       className="flex items-center justify-center"
     >
       <mask id="image-mask">
