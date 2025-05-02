@@ -110,12 +110,12 @@ export default function page() {
                 headerTag="h2"
               />
             </li>
-            <div
+            <li
               aria-hidden="true"
               className="flex w-full justify-start rs-mb-8"
             >
               <HorizontalLineart lineartType="D" />
-            </div>
+            </li>
             <li className="cc">
               <StoryCard
                 isHeadingLarge
