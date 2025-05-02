@@ -72,7 +72,7 @@ const storyData2 = [
     heading: "Letter from Dean Widom",
     href: "/letter-from-dean-widom",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
   },
 ];
 

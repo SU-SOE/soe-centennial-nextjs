@@ -72,7 +72,7 @@ export const AnimatedPosterCard = ({
             >
               {chapter && <ChapterLabel text={chapter} />}
               {superhead && (
-                <Text mb={2} font="dm-mono">
+                <Text mb="base" font="dm-mono">
                   {superhead}
                 </Text>
               )}
@@ -89,7 +89,7 @@ export const AnimatedPosterCard = ({
                 </Text>
               )}
             </AnimateInView>
-            <AnimateInView animation="slideUp" delay={1} className="rs-mt-4">
+            <AnimateInView animation="slideUp" delay={1} className="rs-mt-2">
               <Button href={link}>{buttonText}</Button>
             </AnimateInView>
           </div>
