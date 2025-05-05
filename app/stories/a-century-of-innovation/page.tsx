@@ -88,7 +88,7 @@ export default function page() {
             alt="A collage of Stanford engineering students and faculty"
             caption="Images courtesy of James Gibbons, Andrew Brodhead, Special Collections & University Archives, Federic Osada, Stanford News Service."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-6">
             <Text mb={6}>By Andrew Myers and Julie Greicius</Text>
           </div>
           <OneCol>
@@ -116,7 +116,7 @@ export default function page() {
               president of Stanford University.
             </Text>
           </OneCol>
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-5">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-5">
             <Quote
               quoteColor="red"
               width="wide"

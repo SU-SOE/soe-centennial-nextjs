@@ -208,7 +208,7 @@ export default function page() {
             alt="A vintage black and white photograph depicting a diverse group of men and women gathered together posing for a photo."
             caption="Members of the Stanford Student Chapter of the American Society of Civil Engineers gather for a photo for the Stanford Quad yearbook, 1936. Charles Marx is seated sixth from right. Women were still a significant minority in engineering: the two women pictured are students Mary DeF. Atkins (sixth from left) and Margaret Woolverton (seventh from left), both seniors. | Special Collections & University Archives."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-5">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-5">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               width="wide"

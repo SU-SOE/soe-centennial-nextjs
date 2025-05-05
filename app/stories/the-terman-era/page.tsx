@@ -280,7 +280,7 @@ export default function page() {
             bgColor="fog-light"
             className="rs-py-5 mb-0"
           >
-            <div className="max-w-1500 w-full cc 2xl:p-0">
+            <div className="max-w-1500 w-full cc 3xl:p-0">
               <Quote
                 className="m-0 mr-auto"
                 width="wide"

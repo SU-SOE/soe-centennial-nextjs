@@ -12,11 +12,7 @@ export const cardWrapper = (isCard: boolean) =>
     "text-white lg:max-w-450": !isCard,
   });
 export const body = (isCard: boolean) =>
-  cnb(
-    "[&_a]:transition [&_a]:duration-500 [&_a]:font-normal [&_a]:underline hocus:[&_a]:underline [&_a]:cursor-pointer",
-    {
-      "text-black": isCard,
-      "[&_a]:text-white hocus:[&_a]:text-black hocus:[&_a]:bg-fog-light":
-        !isCard,
-    },
-  );
+  cnb({
+    "text-black": isCard,
+    "text-white": !isCard,
+  });
