@@ -84,7 +84,7 @@ export const figure = (isPortrait: boolean) =>
 
 export const imageWrapper = (isPortrait: boolean, rounded: boolean) =>
   cnb("relative overflow-hidden", {
-    "w-100 md:w-180 lg:w-full h-100 md:h-180 lg:h-full": isPortrait,
+    "w-100 md:w-180 lg:w-full h-100 md:h-180 lg:h-full shrink-0": isPortrait,
     "w-full h-full": !isPortrait,
     "rounded-2xl": rounded,
   });
@@ -97,5 +97,4 @@ export const image = (isParallax: boolean) =>
 
 export const captionWrapper = "mt-0";
 
-export const caption =
-  "*:*:leading-display max-w-prose-wide first:*:*:mt-0 pt-06em";
+export const caption = "*:*:leading-display first:*:*:mt-0 pt-06em";

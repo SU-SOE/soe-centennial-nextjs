@@ -80,12 +80,12 @@ export const Scrollytelling = ({
           />
         </div>
         <div className="relative z-10 cc text-stone-dark rs-py-10 -mt-[90vh]">
-          <div className="w-full mx-auto md:w-2/3 xl:w-1/2">
+          <div className="w-full">
             {(heading || subheading) && (
               <AnimateInView
                 animation="slideUp"
                 delay={0.1}
-                className="rs-mb-6"
+                className="rs-mb-6 mx-auto md:w-2/3 xl:w-1/2"
               >
                 {heading && (
                   <Heading

@@ -5,6 +5,7 @@ import { Masthead } from "@/components/Masthead";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Quote } from "@/components/Quote";
 import {
+  ExploreMore,
   Footnotes,
   FootnotesList,
   StoryImpactBanner,
@@ -34,7 +35,8 @@ export const metadata: Metadata = {
     "Engineering Education",
   ],
   openGraph: {
-    title: "Preparing Roads over which Culture May Ride in Comfort",
+    title:
+      "Preparing Roads over which Culture May Ride in Comfort | 100 Years of Stanford Engineering",
     description:
       "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
     images: [
@@ -46,7 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Preparing Roads over which Culture May Ride in Comfort",
+    title:
+      "Preparing Roads over which Culture May Ride in Comfort | 100 Years of Stanford Engineering",
     description:
       "On May 15, 1925, when the Stanford University Board of Trustees approved the School of Engineering proposal, it was not the start of engineering at Stanford — an engineering curriculum had been in place since the university's inception.",
     images: [
@@ -54,6 +57,30 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+const exploreStoriesData = [
+  {
+    heading: "The foundation of a new era in engineering",
+    chapter: "Decade 2",
+    href: "/stories/the-foundation-of-a-new-era-in-engineering",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+  },
+  {
+    heading: "The Terman Era",
+    chapter: "Decade 3",
+    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+  },
+  {
+    heading: "A period of transformation",
+    chapter: "Decade 4",
+    href: "/stories/a-period-of-transformation",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
+  },
+];
 
 const galleryImages = [
   {
@@ -723,6 +750,12 @@ export default function page() {
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
+          <ExploreMore
+            width="site"
+            stories={exploreStoriesData}
+            sectionHeading="Explore more decades"
+            hasButton
+          />
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>

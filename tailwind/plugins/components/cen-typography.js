@@ -35,6 +35,13 @@ module.exports = function () {
         ...theme('decanter.typography.type2'),
         lineHeight: theme('lineHeight.cozy'),
       },
+      '.cen-drop-cap:first-letter': {
+        fontSize: '3.81em',
+        float: 'left',
+        lineHeight: '0.85',
+        paddingTop: '1rem',
+        paddingRight: '1rem',
+      },
       // Custom fluid type for homepage hero
       // Slightly smaller than fluid-type-9 so we can fit each line on a 360px viewport
       '.cen-splash': {

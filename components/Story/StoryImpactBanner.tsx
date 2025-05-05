@@ -53,6 +53,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead?: string;
   chapter?: string;
+  chapterColor?: "stone-dark" | "archway-dark" | "digital-red";
   dek?: string;
   body?: string;
   byline?: string;
@@ -60,6 +61,8 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   caption?: string;
   hasBgImage?: boolean;
   isVertical?: boolean;
+  isImageWide?: boolean;
+  isCaptionInHero?: boolean;
   bgImageSrc?: string;
   src: string;
   alt: string;
@@ -68,7 +71,9 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
 export const StoryImpactBanner = ({
   heading,
   superhead,
+  className,
   chapter,
+  chapterColor,
   dek,
   body,
   byline,
@@ -77,17 +82,19 @@ export const StoryImpactBanner = ({
   hasBgImage = false,
   bgImageSrc,
   isVertical = false,
+  isImageWide = false,
+  isCaptionInHero = false,
   src,
   alt,
   ...props
 }: StoryImpactBannerProps) => {
-  const pb = bgColor === "white" ? 10 : 8;
   return (
     <Container
       {...props}
+      as="header"
       width="full"
       mb={5}
-      className="relative"
+      className={cnb("relative", className)}
       role="figure"
       aria-labelledby="hero-caption"
     >
@@ -95,7 +102,7 @@ export const StoryImpactBanner = ({
         bgColor={bgColor}
         width="site"
         pt={9}
-        pb={pb}
+        pb={8}
         className="relative pt-150 md:rs-pt-9"
       >
         {hasBgImage && (
@@ -123,7 +130,9 @@ export const StoryImpactBanner = ({
           alignItems="center"
           className={cnb("flex flex-col z-10 relative md:grid-gap", {
             "lg:flex-row": !isVertical,
-            "w-full max-w-[1100px] mx-auto": isVertical,
+            "w-full mx-auto": isVertical,
+            "max-w-[1100px]": isVertical && !isImageWide,
+            "max-w-[1500px]": isImageWide,
           })}
         >
           <AnimateInView
@@ -143,11 +152,20 @@ export const StoryImpactBanner = ({
               </Text>
             )}
             {chapter && (
-              <ChapterLabel className="order-first rs-mb-0" text={chapter} />
+              <ChapterLabel
+                chipColor={chapterColor}
+                className="order-first rs-mb-0"
+                text={chapter}
+              />
             )}
             {dek && (
               <Text mb="none" size="f3" className="rs-mt-1">
                 {dek}
+              </Text>
+            )}
+            {body && (
+              <Text mb="none" size={1} className="rs-mt-1">
+                {body}
               </Text>
             )}
             {byline && (
@@ -166,22 +184,27 @@ export const StoryImpactBanner = ({
               animation="slideUp"
               delay={0.3}
               className={cnb(
-                "w-full xl:max-h-[860px] overflow-hidden relative rounded-[30px] mb-10",
-                { "aspect-[3/2]": isVertical },
-                { "aspect-[1/1] md:aspect-[2/3]": !isVertical },
+                "w-full overflow-hidden relative rounded-[30px] mb-10",
+                { "aspect-[3/2] xl:max-h-[860px]": isVertical && !isImageWide },
+                { "aspect-[15/7] xl:max-w-1500": isVertical && isImageWide },
+                {
+                  "aspect-[1/1] md:aspect-[2/3] xl:max-h-[860px]": !isVertical,
+                },
               )}
             >
               <Image src={src} alt={alt} fill className="object-cover" />
             </AnimateInView>
-            {bgColor === "white" && (
-              <figcaption className="mt-13">
-                <Text variant="caption">{caption}</Text>
-              </figcaption>
+            {(isCaptionInHero || bgColor === "white") && (
+              <div className="mt-13">
+                <Text id="hero-caption" variant="caption" mb="none">
+                  {caption}
+                </Text>
+              </div>
             )}
           </FlexBox>
         </FlexBox>
       </Container>
-      {bgColor !== "white" && (
+      {!isCaptionInHero && bgColor !== "white" && (
         <div className="mt-13 cc">
           <Text
             id="hero-caption"
