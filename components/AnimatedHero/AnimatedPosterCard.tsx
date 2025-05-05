@@ -10,6 +10,7 @@ import { MaskAnimation } from "./MaskAnimation";
 import { Button } from "../Cta";
 import { useReducedMotion } from "motion/react";
 import { NoMotionSvg } from "./NoMotionSvg";
+import { cnb } from "cnbuilder";
 
 type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -22,6 +23,7 @@ type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 export const AnimatedPosterCard = ({
+  className,
   heading,
   superhead,
   chapter,
@@ -36,7 +38,7 @@ export const AnimatedPosterCard = ({
     <Container
       {...props}
       width="site"
-      className="2xl:p-0 2xl:w-full 2xl:max-w-1300 rs-mb-7"
+      className={cnb("2xl:p-0 2xl:w-full 2xl:max-w-1300 rs-mb-7", className)}
     >
       <Container
         bgColor="red"
