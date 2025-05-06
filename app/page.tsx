@@ -251,7 +251,7 @@ export default function Home() {
                   Explore
                 </Heading>
                 <Text size="f5" weight="normal" mb="0">
-                  More about Centennial
+                  More about the Centennial
                 </Text>
               </div>
             </AnimateInView>
