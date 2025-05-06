@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./LocalFooter.styles";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
-import { ActionLink, Button } from "@/components/Cta";
+import { ActionLink, Button, Link } from "@/components/Cta";
 import { SocialSharing } from "./Socials";
 
 export const LocalFooter = () => (
@@ -28,6 +28,12 @@ export const LocalFooter = () => (
           Transformative breakthroughs, boundless horizons
         </Text>
         <SocialSharing className="hidden xl:flex" />
+        <Text size="small" mb="0" className="mt-auto h-fit">
+          This site created in partnership with <br />
+          <Link href="https://uit.stanford.edu/sws" linkType="dark-bg">
+            Stanford Web Services
+          </Link>
+        </Text>
       </div>
       <FlexBox direction="col" className={styles.wrapper}>
         <FlexBox className={styles.linksWrapper}>
