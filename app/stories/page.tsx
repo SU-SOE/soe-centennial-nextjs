@@ -138,7 +138,7 @@ export default function page() {
             </li>
           </ul>
           <div aria-hidden="true" className="flex w-full justify-end rs-mb-8">
-            <HorizontalLineart lineartType="C" />
+            <HorizontalLineart lineartType="C" className="rs-pt-6 !rs-pb-0" />
           </div>
           <AnimatedPosterCard
             superhead="1925 – 2025"
