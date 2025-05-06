@@ -360,7 +360,7 @@ export default function page() {
             }
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-6">
             <Text mb={6}>by Andrew Myers</Text>
           </div>
           <TwoCol className="rs-mb-5">

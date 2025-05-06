@@ -82,13 +82,14 @@ export default function page() {
             isImageWide
             hasBgImage
             bgColor="stone-dark"
-            heading="A Century of Innovation: 100 Years of Stanford Engineering"
+            superhead="A Century of Innovation"
+            heading="100 Years of Stanford Engineering"
             body="The Stanford School of Engineering marks its 100th anniversary on May 15, kicking off a season of celebrations that will recount a world-changing century of innovation and inspire a promising look forward."
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg"
             alt="A collage of Stanford engineering students and faculty"
             caption="Images courtesy of James Gibbons, Andrew Brodhead, Special Collections & University Archives, Federic Osada, Stanford News Service."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-6">
             <Text mb={6}>By Andrew Myers and Julie Greicius</Text>
           </div>
           <OneCol>
@@ -116,7 +117,7 @@ export default function page() {
               president of Stanford University.
             </Text>
           </OneCol>
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-5">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-5">
             <Quote
               quoteColor="red"
               width="wide"

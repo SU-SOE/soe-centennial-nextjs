@@ -18,7 +18,7 @@ export type StoryCardProps = HTMLAttributes<HTMLElement> &
     superhead?: string;
     body?: string;
     chapter?: string;
-    chapterColor?: "stone-dark" | "archway-dark" | "digital-red";
+    chapterColor?: "stone" | "stone-dark" | "archway-dark" | "digital-red";
     href: string;
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
