@@ -75,7 +75,7 @@ const events = [
           featuring cutting-edge research, hands-on demos, and breakthrough
           technologies.
         </p>
-        <Button solid href="/">
+        <Button solid href="https://cvent.me/KgDZBV">
           Register here
         </Button>
       </>
