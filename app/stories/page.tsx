@@ -45,8 +45,8 @@ export const metadata: Metadata = {
 
 const storyData1 = [
   {
-    superhead: "100 Years of Stanford Engineering",
-    heading: "A Century of Innovation",
+    superhead: "A Century of Innovation",
+    heading: "100 Years of Stanford Engineering",
     href: "/stories/a-century-of-innovation",
     imageUrl:
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",

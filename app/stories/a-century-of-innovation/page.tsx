@@ -82,7 +82,8 @@ export default function page() {
             isImageWide
             hasBgImage
             bgColor="stone-dark"
-            heading="A Century of Innovation: 100 Years of Stanford Engineering"
+            superhead="A Century of Innovation"
+            heading="100 Years of Stanford Engineering"
             body="The Stanford School of Engineering marks its 100th anniversary on May 15, kicking off a season of celebrations that will recount a world-changing century of innovation and inspire a promising look forward."
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg"
             alt="A collage of Stanford engineering students and faculty"
