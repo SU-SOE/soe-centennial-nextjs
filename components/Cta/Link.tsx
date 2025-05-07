@@ -49,7 +49,7 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
       break;
     case "dark-bg":
       linkStyles =
-        "transition-all ease-in-out duration-500 underline text-white decoration-digital-red-light hocus:text-black hocus:bg-white/80 hocus:decoration-black";
+        "transition-all ease-in-out duration-500 underline underline-offset-2 decoration-2 text-white decoration-digital-red-light hocus:text-black hocus:bg-white/80 hocus:decoration-black";
       break;
     default:
       break;

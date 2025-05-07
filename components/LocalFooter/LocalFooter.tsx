@@ -28,8 +28,13 @@ export const LocalFooter = () => (
           Transformative breakthroughs, boundless horizons
         </Text>
         <SocialSharing className="hidden xl:flex" />
-        <Text size="small" mb="0" className="mt-auto h-fit">
-          This site created in partnership with <br />
+        <Text
+          size="small"
+          leading="snug"
+          mb="0"
+          className="rs-mt-5 hidden xl:block"
+        >
+          This site created in partnership with{" "}
           <Link href="https://uit.stanford.edu/sws" linkType="dark-bg">
             Stanford Web Services
           </Link>
@@ -53,7 +58,7 @@ export const LocalFooter = () => (
             <Heading size={1} as="h2" mb="base">
               Share your Stanford Engineering memories
             </Heading>
-            <Text size="small" mb={2}>
+            <Text size="small" mb="base">
               Mark this milestone by sharing one of your favorite memories of
               Stanford Engineering.
             </Text>
@@ -68,7 +73,7 @@ export const LocalFooter = () => (
             <Heading size={1} as="h2" mb="base">
               Support Stanford Engineering
             </Heading>
-            <Text size="small" mb={2}>
+            <Text size="small" mb="base">
               Learn how your generosity can have transformational impact.
             </Text>
             <Button
@@ -79,7 +84,20 @@ export const LocalFooter = () => (
             </Button>
           </section>
         </FlexBox>
-        <SocialSharing className="flex xl:hidden" />
+        <div>
+          <SocialSharing className="mt-0 flex xl:hidden" />
+          <Text
+            size="small"
+            leading="snug"
+            mb="0"
+            className="rs-mt-2 block xl:hidden"
+          >
+            This site created in partnership with{" "}
+            <Link href="https://uit.stanford.edu/sws" linkType="dark-bg">
+              Stanford Web Services
+            </Link>
+          </Text>
+        </div>
       </FlexBox>
     </FlexBox>
   </Container>
