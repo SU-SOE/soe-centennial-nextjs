@@ -18,6 +18,7 @@ import { ImageGallery } from "@/components/ImageGallery";
 import { Container } from "@/components/Container";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
+import { Accordion } from "@/components/Accordion";
 
 export const metadata: Metadata = {
   title:
@@ -98,6 +99,109 @@ const exploreStoriesData = [
     href: "/stories/a-century-of-innovation",
     imageUrl:
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+  },
+];
+
+const accordionData = [
+  {
+    heading: "Crothers Memorial Hall",
+    content:
+      "The residence was made possible by a gift from Judge George E. Crothers in memory of his mother. It opened in the fall of 1955 and was for single graduate engineering students. It housed over one hundred engineers; in the words of Dr. Terman, 'When they live together they learn to work together, and they teach each other.'",
+  },
+  {
+    heading: "Engineering Library",
+    content:
+      "In 1966, it held more than 40,000 up-to-date engineering volumes and subscribed to over 700 engineering periodicals. The Engineering Library, on the first floor of the Main Library since 1942, is the oldest and largest of the university’s science libraries. Today it is housed in the Huang Engineering Building.",
+  },
+  {
+    heading: "Engineering Corner",
+    content:
+      "One of the buildings of the Outer Quad, it was continuously occupied by Engineering from its construction in 1900 until 1977. The Office of the Dean was on the second floor, and was originally Professor Charles David Marx’s. Until Engineering’s center of operations moved to the new Terman Engineering Center in 1977, Engineering Corner housed offices and classrooms of the Department of Civil Engineering, the Department of Engineering-Economic Systems, and the Design Division of the Department of Mechanical Engineering.",
+  },
+  {
+    heading: "Industrial Engineering",
+    content:
+      "One of the original Outer Quad classroom buildings, it was finished in 1888 and was first occupied by the Civil Engineering Department. In 1961, the newly organized Department of Industrial Engineering located its offices and classrooms there.",
+  },
+  {
+    heading: "Terman Engineering Laboratory",
+    content:
+      "Gifts from Provost Emeritus Frederick E. Terman and from the PACE program made possible the interior reconstruction in 1962 of this laboratory built in 1902. The largest of the two buildings originally housed the Electrical Machinery and Mechanical Engineering Laboratories. The two-building complex in 1966 housed the offices of the executive head of Mechanical Engineering and the offices and laboratories of the Thermosciences Division of Mechanical Engineering. An adjacent building, constructed in 1891 for use as the university boiler-house, was converted in 1919 for additional mechanical engineering laboratories.",
+  },
+  {
+    heading: "Hydraulics Laboratory",
+    content:
+      "A stucco building built in 1913, the Hydraulics Laboratory was, in 1966, the site of Civil Engineering’s hydraulics research, utilizing—in part—the wind-wave channel. Laboratory instruction in fluid mechanics was also based there.",
+  },
+  {
+    heading: "Havas Engineering Building",
+    content:
+      "Built in 1891 and originally the university power house, this building was reconstructed in 1962, with the primary funds provided by Mr. and Mrs. George P. Havas. In November 1966, it housed the Timoshenko Center of Engineering Mechanics, offices for the Division of Engineering Mechanics, the Experimental Stress Analysis Laboratory, and the Water Quality Control Laboratory.",
+  },
+  {
+    heading: "Aeronautics and Astronautics",
+    content:
+      "The Daniel Guggenheim Aeronautic Laboratory and the William Frederick Durand Laboratory, originally built in 1891, housed the Department of Aeronautics and Astronautics in 1966. The Guggenheim Laboratory, a stucco building, was originally the university woodshop and was converted in the 1920s—thanks to a Guggenheim grant—to house classrooms, offices, and a subsonic wind tunnel. The Durand Laboratory, a sandstone building, held offices, structural test facilities, and the 'hot-shot' wind tunnel.",
+  },
+  {
+    heading: "Mechanical Engineering",
+    content:
+      "Constructed in 1908, this stucco building in 1966 housed many of the shops and laboratories of the Department of Mechanical Engineering, including shops for the Design Division and magnetohydrodynamic research. It originally housed shops for course work in machine shop, foundry practice, and forging and welding.",
+  },
+  {
+    heading: "Old Corporation Yard",
+    content:
+      "In 1966, a partial interior renovation of these buildings, originally constructed in 1916, provided much-needed laboratory and graduate student office space. The Departments of Civil Engineering, Industrial Engineering, and Mechanical Engineering had offices here. Already the site was earmarked for a new building to be erected there by 1977.",
+  },
+  {
+    heading: "Peterson Engineering Laboratory",
+    content:
+      "Constructed in 1900 and with its interior completely remodeled in 1963, this building, which housed offices and laboratories of the Department of Materials Science and portions of the Department of Mineral Engineering, was made possible by a gift from the late Thomas F. Peterson, class of 1924.",
+  },
+  {
+    heading: "Space Engineering Building",
+    content:
+      "A four-story building for the Department of Aeronautics and Astronautics and the Radioscience Laboratory of the Department of Electrical Engineering was being constructed on this site in 1966. Funds were made available by aerospace companies, the National Aeronautics and Space Administration, and the U.S. Air Force. When it opened in 1969, it was named for the late professor William F. Durand.",
+  },
+  {
+    heading: "McCullough Building",
+    content:
+      "Housed here were the Center for Materials Research, solid-state electronics research, and administrative offices of the Department of Electrical Engineering. This building was financed by gifts from Jack McCullough and the Advanced Research Projects Agency. It was dedicated in October 1965.",
+  },
+  {
+    heading: "Applied Electronics Laboratory",
+    content:
+      "This building, completed in October 1957, was the result of gifts from William Hewlett, ’34, and David Packard, ’34. It held the offices and laboratories of the Stanford Electronic Laboratories.",
+  },
+  {
+    heading: "Electronic Research Laboratories",
+    content:
+      "The first portion of this building was built in 1951 as a result of gifts received from Mr. Hewlett and Mr. Packard and was expanded in 1956 as a result of gifts from the Hewlett-Packard company and Sennet W. Gilfillan, ’12. It housed additional Department of Electrical Engineering groups: Radioscience Laboratory, Systems Theory, and Systems Technique.",
+  },
+  {
+    heading: "Microwave Laboratory",
+    content:
+      "The Microwave Laboratory was built in 1949 in memory of W. W. Hansen, who did pioneering work in physics at Stanford University. The microwave group of Electrical Engineering had this portion of the three-building Hansen complex, which was later renamed for Edward L. Ginzton, who led microwave research for scientific purposes. The two adjoining buildings were occupied by Biophysics and the High-Energy Physics Laboratory (HEPL), including the 300-foot Mark III Stanford Linear Accelerator. HEPL was later renamed the Hansen Experimental Physics Laboratory, and focused on the studies of the application of the new linear accelerators for basic physics research.",
+  },
+  {
+    heading: "Stauffer Laboratory",
+    content:
+      "This building housed Chemical Engineering and was dedicated in December 1966. This newest of the engineering buildings in 1966, financed in large part by gifts from John Stauffer and other members of the Stauffer family, comprised one part of the Chemistry-Chemical Engineering Complex.",
+  },
+  {
+    heading: "Ryan Laboratory",
+    content:
+      "This structure, built in 1926 to house the high-voltage experiments of Professor Ryan, was remodeled in 1958 to house a pool-type nuclear reactor. By 1966, it contained the laboratories, classrooms, and offices of the Nuclear Division of the Department of Mechanical Engineering.",
+  },
+  {
+    heading: "Donald C. Power Laboratory",
+    content:
+      "This building on Arastradero Road housed laboratories of the Department of Aeronautics and Astronautics and the Stanford Electronics Laboratories. The structure was a gift from the General Telephone and Electronics Laboratories to Stanford University in 1965 and was named after an official of GT&E.",
+  },
+  {
+    heading: "Radio Field Site Facilities",
+    content:
+      "In the hills behind the campus and elsewhere in California, Antarctica, at sea, and in space, the Radioscience Laboratory, the Radio Astronomy Institute, and the Systems Technique Laboratories of the Stanford Electronics Laboratories conducted research in many fields of radio and radar astronomy, space electronics, and ionospheric propagation. The 150-foot-diameter radar telescope and seventeen other receiving or transmitting sites were located on the campus. Many satellites also carried Stanford research projects.",
   },
 ];
 
@@ -503,10 +607,9 @@ export default function page() {
             imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062203/SC3003_StanfordEngineeringNews-EngineeringBuildingsMap001_smtrdk.jpg"
             alt="Visual representation of the campus layout, featuring essential buildings highlighted in red."
           />
-          <TwoCol bgColor="blue" className="rs-pt-7 rs-pb-5">
-            <OneCol>{/* @TODO: ACCORDION COL 1 */}</OneCol>
-            <OneCol>{/* @TODO: ACCORDION COL 2 */}</OneCol>
-          </TwoCol>
+          <Container bgColor="blue" pt={7} pb={5}>
+            <Accordion items={accordionData} />
+          </Container>
           <OneCol className="rs-mb-4">
             <H2 className="">The computer age</H2>
             <Text>
