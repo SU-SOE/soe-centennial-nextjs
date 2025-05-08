@@ -91,7 +91,7 @@ export default function page() {
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />
           </div>
-          <ul className="list-none">
+          <ul className="list-none p-0">
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
                 stories={storyData1}
