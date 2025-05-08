@@ -3,10 +3,8 @@ module.exports = {
   siteUrl: 'https://engineering100.stanford.edu/',
   generateRobotsTxt: true,
   exclude: [
-    '/april',
     '/example', 
     '/example/*', 
-    '/stories/the-terman-era'
   ], 
   transform: async (config, path) => {
     return {

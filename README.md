@@ -137,19 +137,25 @@ To release code to production, create a release branch from `dev` and make a pul
 
 #### Steps:
 
-1\. **Create a Release Branch**
+1. **Generate Sitemap on `dev`**
 
-   - Start from `dev` (or a specific commit ref from `dev`).
+   - On the `dev` branch, run `yarn run build` to generate the latest site pages, followed by `yarn run postbuild` to generate the updated sitemap.
+   - The sitemap configuration is located in `next-sitemap.config.js` and automatically excludes the `/example` folder.
+   - If any pages should not be indexed or included in production, ensure they are excluded in both `next-sitemap.config.js` and `next.config.js`.
 
-   - We suggest naming your branch with the `release/` prefix, optionally followed by a semver tag (e.g., `release/refactor-everything[major]`). Note: Commit messages are more important than branch names.
+2. **Create a Release Branch**
 
-2\. **Create a Pull Request**
+   - Start from `dev` (or a specific commit ref from `dev`).
+   - We suggest naming your branch with the `release/` prefix, optionally followed by a semver tag (e.g., `release/refactor-everything[major]`).
+   - Note: Commit messages are more important than branch names.
 
-   - Open a PR from your `release/` branch into `main`.
+3. **Create a Pull Request**
 
-3\. **PR Approval and Merge**
+   - Open a PR from your `release/` branch into `main`.
 
-   - On approval, perform a standard merge commit into `main`.
+4. **PR Approval and Merge**
+
+   - On approval, perform a standard merge commit into `main`.
 
 ---
 
