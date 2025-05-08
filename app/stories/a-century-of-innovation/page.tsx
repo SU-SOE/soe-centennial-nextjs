@@ -183,13 +183,13 @@ export default function page() {
               electrical, and mining & metallurgy – into a single school. On May
               15 this year, the Stanford School of Engineering will celebrate
               its 100th anniversary and commence a season of celebratory events.
-              The first will be an afternoon party on the newly named Robert
-              Rosenkranz Science and Engineering Quad, complete with a showcase
-              of more than 50 projects highlighting the school’s extraordinary
-              breadth of research and education. Later, two distinguished
-              speaker events will feature discussions with faculty and alumni,
-              including Nvidia CEO Jensen Huang in late May, and another to be
-              announced for the fall.
+              The first will be an afternoon party on the Science and
+              Engineering Quad, complete with a showcase of more than 50
+              projects highlighting the school’s extraordinary breadth of
+              research and education. Later, two distinguished speaker events
+              will feature discussions with faculty and alumni, including Nvidia
+              CEO Jensen Huang in late May, and another to be announced for the
+              fall.
             </Text>
             <Text>
               A new, centennial-dedicated website –{" "}
