@@ -84,7 +84,7 @@ export default function page() {
             bgColor="stone-dark"
             superhead="A Century of Innovation"
             heading="100 Years of Stanford Engineering"
-            body="The Stanford School of Engineering marks its 100th anniversary on May 15, kicking off a season of celebrations that will recount a world-changing century of innovation and inspire a promising look forward."
+            body="The Stanford School of Engineering marks its 100th anniversary on May 15, with celebrations that will recount a world-changing century of innovation and inspire a promising look forward."
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg"
             alt="A collage of Stanford engineering students and faculty"
             caption="Images courtesy of James Gibbons, Andrew Brodhead, Special Collections & University Archives, Federic Osada, Stanford News Service."
@@ -181,7 +181,7 @@ export default function page() {
               1925, the Board of Trustees approved a plan to bring together the
               four engineering departments of the time – civil, mechanical,
               electrical, and mining & metallurgy – into a single school. On May
-              15 this year, the Stanford School of Engineering will host the{""}
+              15 this year, the Stanford School of Engineering will host the{" "}
               <Link href="https://web.cvent.com/event/967c4a52-1358-4dbd-afdd-28816d7d1634/regProcessStep1:8d294b76-68c5-46ba-bcd8-65870a1a9f04?RefId=staffandfaculty&rp=22806104-f310-451a-b20f-54d8736a76bc">
                 Centennial Celebration and Showcase
               </Link>
