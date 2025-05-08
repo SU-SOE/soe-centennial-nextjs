@@ -38,7 +38,7 @@ export const AnimatedPosterCard = ({
     <Container
       {...props}
       width="site"
-      className={cnb("2xl:p-0 2xl:w-full 2xl:max-w-1300 rs-mb-7", className)}
+      className={cnb("2xl:p-0 2xl:w-full 2xl:max-w-1300", className)}
     >
       <Container
         bgColor="red"

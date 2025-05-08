@@ -141,6 +141,7 @@ export default function page() {
             <HorizontalLineart lineartType="C" />
           </div>
           <AnimatedPosterCard
+            className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"

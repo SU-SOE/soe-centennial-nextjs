@@ -4,6 +4,7 @@ import { Quote } from "@/components/Quote";
 import {
   BgImageWrapper,
   ExploreMore,
+  Footnotes,
   FootnotesList,
   StoryImpactBanner,
   StorySidebar,
@@ -474,9 +475,14 @@ export default function page() {
                 named in his honor. Stanford President Wallace Sterling and two
                 of Terman’s former students—Engineering Dean Joseph Pettit and
                 David Packard, now a Stanford trustee and Hewlett-Packard board
-                chairman—were among the speakers.(1) “If I could relive my life
-                I could not do any better than to play the same record over
-                again,” Terman told the Stanford Daily.(2)
+                chairman—were among the speakers.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote1", number: 1 }]}
+                />{" "}
+                “If I could relive my life I could not do any better than to
+                play the same record over again,” Terman told the Stanford
+                Daily.
+                <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
               </Text>
             </OneCol>
           </TwoCol>
@@ -490,7 +496,8 @@ export default function page() {
               grant from vacuum tube pioneer Jack McCullough and his wife and
               from the Defense Advanced Research Projects Agency (DARPA). The
               building still serves as a center of interdisciplinary materials
-              research today.(3)
+              research today.
+              <Footnotes footnoteRefs={[{ id: "footnote3", number: 3 }]} />
             </Text>
             <Text>
               The Department of Chemical Engineering, just five years old, had
@@ -499,12 +506,13 @@ export default function page() {
               1965, the department moved into a new “laboratory and gazebo”
               building through a grant from the National Science Foundation,
               with matching gifts from Mr. John Stauffer and other private
-              donors.(4)
+              donors.
+              <Footnotes footnoteRefs={[{ id: "footnote4", number: 4 }]} />
             </Text>
           </OneCol>
           <ImageGallery images={galleryImages} />
           <div className="flex w-full justify-end">
-            <HorizontalLineart lineartType="B" />
+            <HorizontalLineart lineartType="D" />
           </div>
           <OneCol className="rs-mb-5">
             <Text>
@@ -516,14 +524,15 @@ export default function page() {
               180 graduate students from a dozen departments in the schools of
               Engineering and Humanities and Sciences. Funding from NASA and the
               U.S. Air Force, along with several private and corporate gifts,
-              made possible a new era in space-oriented research and
-              education.(5) When the building opened in 1969, it was named for
-              the late Stanford professor William F. Durand, who, Dean Pettit
-              noted, had been one of the first at Stanford to receive a
-              government award of $5,000 for propeller research during World War
-              I. “It resulted in his development of the first variable pitch
-              propeller, and marked the beginning of aircraft studies at
-              Stanford,” Pettit said.(6)
+              made possible a new era in space-oriented research and education.
+              <Footnotes footnoteRefs={[{ id: "footnote5", number: 5 }]} /> When
+              the building opened in 1969, it was named for the late Stanford
+              professor William F. Durand, who, Dean Pettit noted, had been one
+              of the first at Stanford to receive a government award of $5,000
+              for propeller research during World War I. “It resulted in his
+              development of the first variable pitch propeller, and marked the
+              beginning of aircraft studies at Stanford,” Pettit said.
+              <Footnotes footnoteRefs={[{ id: "footnote6", number: 6 }]} />
             </Text>
           </OneCol>
           <Container mb={5}>
@@ -541,23 +550,27 @@ export default function page() {
               With more than $1 million in research grants flowing in yearly,
               and more than two hundred newly minted graduate students flowing
               out, Stanford became the nation’s leading source of PhDs in
-              aeronautics and astronautics.(7) That upsurge owed much to the
-              efforts and academic contributions of department chair Nicholas
-              Hoff.
+              aeronautics and astronautics.
+              <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} /> That
+              upsurge owed much to the efforts and academic contributions of
+              department chair Nicholas Hoff.
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mb-6">
             <OneCol>
               <H2 className="mt-0">First faculty in space</H2>
               <Text>
                 During the heated space race of the 1960s, NASA selected
                 Stanford electrical engineer Owen Garriott for its inaugural
-                class of six scientist-astronauts.(8) Garriott would venture
-                into space in 1973 with the Skylab 3 mission, during which he
-                worked the first amateur (ham) radio station in space,
-                connecting with some 250 ham operators, including his mother,
-                Mary Catherine Garriott, Senator Barry Goldwater, and King
-                Hussein of Jordan.
+                class of six scientist-astronauts.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote8", number: 8 }]}
+                />{" "}
+                Garriott would venture into space in 1973 with the Skylab 3
+                mission, during which he worked the first amateur (ham) radio
+                station in space, connecting with some 250 ham operators,
+                including his mother, Mary Catherine Garriott, Senator Barry
+                Goldwater, and King Hussein of Jordan.
               </Text>
               <Text>
                 In 1973, Krishnamurty Karamcheti, a professor of aeronautics and
@@ -566,7 +579,8 @@ export default function page() {
                 Aeronautics and Acoustics (JIAA) to study the emerging field of
                 flow-generated noise that had grown in importance in the age of
                 commercial jets. Over the next quarter century, JIAA would
-                graduate forty-five PhD students.(10)
+                graduate forty-five PhD students.
+                <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
               </Text>
             </OneCol>
             <OneCol>
@@ -580,7 +594,7 @@ export default function page() {
               />
             </OneCol>
           </TwoCol>
-          <TwoCol bgColor="blue" className="rs-pt-7 rs-pb-5">
+          <TwoCol bgColor="blue" className="rs-mt-7 rs-pt-7 rs-pb-5">
             <OneCol>
               <H2 className="mt-0">
                 Stanford Engineering <br />
@@ -634,7 +648,7 @@ export default function page() {
           </OneCol>
           {/* @TODO: Adjust to full length */}
           <AnimatedPosterCard
-            className="max-w-full p-0"
+            className="max-w-full p-0 rs-mb-6"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"
@@ -650,25 +664,28 @@ export default function page() {
               The Stanford Cart was first imagined as a robotic lunar rover when
               it was introduced in 1961 by mechanical engineering graduate
               student James L. Adams, who later joined the faculty. It became
-              one of the world’s first self-driving vehicles.(11)
+              one of the world’s first self-driving vehicles.
+              <Footnotes footnoteRefs={[{ id: "footnote11", number: 11 }]} />
             </Text>
             <Text>
               SAIL colleague John Chowning, a PhD student in music, formed a
               compu- tational music group that would evolve into the Center for
-              Computer Research in Music and Acoustics (CCRMA).(12) In 1967,
-              Chowning presented his frequency modulation (FM) synthesis
+              Computer Research in Music and Acoustics (CCRMA).
+              <Footnotes footnoteRefs={[{ id: "footnote12", number: 12 }]} /> In
+              1967, Chowning presented his frequency modulation (FM) synthesis
               algorithm to the world. It was a “simple yet elegant” breakthrough
               in the synthetic production of musical timbres. In 1973, Chowning
               licensed the technology to Yamaha, where it became “the most
               successful synthesis engine in the history of electronic musical
-              instruments.”(13)
+              instruments.”
+              <Footnotes footnoteRefs={[{ id: "footnote13", number: 13 }]} />
             </Text>
           </OneCol>
           <Container>
             <MediaCaptionImage
               isCaptionInset
               rounded
-              className="max-w-850 mx-auto"
+              className="max-w-850 mx-auto rs-mb-3"
               aspectRatio="3x2"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062197/E507-4_re5l3v.jpg"
               alt="Several people focused on a computer screen, engaged in discussion and collaboration."
@@ -682,7 +699,8 @@ export default function page() {
               Samuel, and William Miller. The Forum endures today, bringing more
               than one hundred corporate members together with academic and
               industrial leaders in computer science and electrical engineering
-              to shape the future.(14)
+              to shape the future.
+              <Footnotes footnoteRefs={[{ id: "footnote14", number: 14 }]} />
             </Text>
             <Text>
               In the 1920s, the challenge of the day had been long-distance
@@ -695,15 +713,16 @@ export default function page() {
               destination, was the technical foundation for what would become
               the Internet. On October 29, 1969, the Stanford Research Institute
               (SRI) received the first message—“LO”—ever sent over the ARPANET
-              from its first node at UCLA, making Stanford the second node.(15)
-              In 1971, SAIL successfully joined the growing ARPANET, too,
+              from its first node at UCLA, making Stanford the second node.
+              <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
+              sss In 1971, SAIL successfully joined the growing ARPANET, too,
               helping pave the way for further breakthroughs from Stanford.
             </Text>
           </OneCol>
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-1">
             <Text>
               In 1974, electrical engineering and computer science Professor
               Vinton Cerf, Robert Kahn of DARPA, and some of Cerf’s students
@@ -723,15 +742,19 @@ export default function page() {
                 University Medical EXperimental Computer for Artificial
                 Intelligence in Medicine), a national network of computing
                 resources for artificial intelligence in the biomedical fields,
-                sponsored by the National Institutes of Health.(16)
+                sponsored by the National Institutes of Health.
+                <Footnotes footnoteRefs={[{ id: "footnote16", number: 16 }]} />
               </Text>
               <Text>
                 SAIL was also busy making strides in robotics. In 1969,
                 mechanical engineering student Victor Scheinman developed a
                 prototype six-jointed robotic arm that was a forerunner of the
-                assembly-line robotic arm.(17) Two such arms were mounted on a
-                tabletop at SAIL and used in research and teaching for more than
-                two decades.
+                assembly-line robotic arm.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote17", number: 17 }]}
+                />{" "}
+                Two such arms were mounted on a tabletop at SAIL and used in
+                research and teaching for more than two decades.
               </Text>
               <Text>
                 Even with those successes, computers were not above criticism.
@@ -739,15 +762,21 @@ export default function page() {
                 seventy students led a twelve-hour seizure of the Computation
                 Center to protest the U.S. bombing of Laos. They chose the
                 Computation Center as “the most obvious machinery of the war.”
-                The protest resulted in numerous arrests.(18)
+                The protest resulted in numerous arrests.
+                <Footnotes footnoteRefs={[{ id: "footnote18", number: 18 }]} />
               </Text>
               <Text>
                 In 1974, the Association for Computing Machinery (ACM) named
                 Stanford’s Donald Knuth as the ninth winner of its A.M. Turing
-                Award.(19) Knuth’s 1968 textbook, The Art of Computer
-                Programming, would be printed in more than a million copies and
-                be cited in the American Scientist’s list of books that shaped
-                the last century of science.(20)
+                Award.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote19", number: 19 }]}
+                />{" "}
+                Knuth’s 1968 textbook, The Art of Computer Programming, would be
+                printed in more than a million copies and be cited in the
+                American Scientist’s list of books that shaped the last century
+                of science.
+                <Footnotes footnoteRefs={[{ id: "footnote20", number: 20 }]} />
               </Text>
             </OneCol>
             <StorySidebar>
@@ -766,13 +795,18 @@ export default function page() {
             <Text>
               With the help of economics professor Kenneth Arrow, the discipline
               of Operations Research became a full engineering department in
-              1967.(21) George Dantzig had joined the faculty just one year
-              before; he would later be known as the “Father of Linear
-              Programming” for developing the simplex method of mathematical
-              process optimization. The simplex algorithm would be named as one
-              of the top ten algorithms of the twentieth century and would
-              transform “virtually every industry, from petroleum refining to
-              the scheduling of airline flights.”(22)
+              1967.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote21", number: 21 }]}
+              />{" "}
+              George Dantzig had joined the faculty just one year before; he
+              would later be known as the “Father of Linear Programming” for
+              developing the simplex method of mathematical process
+              optimization. The simplex algorithm would be named as one of the
+              top ten algorithms of the twentieth century and would transform
+              “virtually every industry, from petroleum refining to the
+              scheduling of airline flights.”
+              <Footnotes footnoteRefs={[{ id: "footnote22", number: 22 }]} />
             </Text>
             <Text>
               A training grant from the U.S. Public Health Service and the U.S.
@@ -782,17 +816,20 @@ export default function page() {
               feasibility of using tactical nuclear explosions in construction
               and industry. The class was keenly focused on water quality and
               pollution control. Guest lecturers included Manhattan Project
-              physicist Edward Teller and Nobel laureate Willard Libby.(23)
+              physicist Edward Teller and Nobel laureate Willard Libby.
+              <Footnotes footnoteRefs={[{ id: "footnote23", number: 23 }]} />
             </Text>
-            <Text>
+            <Text className="rs-mb-5">
               Also in 1965, associate professor En Yun Hsu oversaw the
               construction of a 115-foot-long artificial wave machine in the
               Department of Civil Engineering. “We are merely scratching the
               surface of the ancient problem of how waves are formed and
-              behave,” Hsu said.(24)
+              behave,” Hsu said.
+              <Footnotes footnoteRefs={[{ id: "footnote24", number: 24 }]} />
             </Text>
           </OneCol>
           <BgImageWrapper
+            className="mb-0"
             hasBgImage
             bgColor="fog-light"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/SC0122_s1_b270_f10_5037-006_kle1ak.jpg"
@@ -816,6 +853,7 @@ export default function page() {
             <MediaCaptionImage
               className="rs-mb-5 max-w-1200 mx-auto"
               isCaptionFullWidth
+              isCaptionInset
               rounded
               aspectRatio="8x5"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/SC0122_s1_b270_f10_5037-006_kle1ak.jpg"
@@ -862,14 +900,15 @@ export default function page() {
               Bay Area engineers. The Honors Cooperative would eventually be
               folded into the Stanford Center for Professional Development
               (SCPD) in 1995 and, by the late 1990s, offer courses at three
-              hundred companies.(25)
+              hundred companies.
+              <Footnotes footnoteRefs={[{ id: "footnote25", number: 25 }]} />
             </Text>
           </OneCol>
           <Container>
             <MediaCaptionImage
               isCaptionInset
               rounded
-              className="max-w-850 mx-auto"
+              className="max-w-850 mx-auto rs-mb-2"
               aspectRatio="3x2"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062199/SC0122_s1_b278_f04_C388-13_ao2ojx.jpg"
               alt="A black and white image of a man surrounded by multiple monitors in a dimly lit room with onlookers in front of him."
@@ -877,16 +916,18 @@ export default function page() {
             />
           </Container>
           <OneCol>
-            <H2>Growing diversity</H2>
+            <H2 className="mt-0">Growing diversity</H2>
             <Text>
               In 1968, Stanford student Barbara Liskov became the first woman at
               Stanford University to earn a PhD in computer science. Forty years
               later, Liskov would become the second woman ever to receive the
-              A.M. Turing Award.(26) In 1969, Stanford’s chapter of the
-              undergraduate engineering honor society, Tau Beta Pi, inducted its
-              first female members.(27)
+              A.M. Turing Award.
+              <Footnotes footnoteRefs={[{ id: "footnote26", number: 26 }]} /> In
+              1969, Stanford’s chapter of the undergraduate engineering honor
+              society, Tau Beta Pi, inducted its first female members.
+              <Footnotes footnoteRefs={[{ id: "footnote27", number: 27 }]} />
             </Text>
-            <Text>
+            <Text className="rs-mb-5">
               When Joseph Pettit stepped down as dean of the School of
               Engineering in 1972, William M. Kays, professor of mechanical
               engineering, served as his successor for the next dozen years.
@@ -894,11 +935,11 @@ export default function page() {
               consistently ranked in the top five in its field nationally, and
               the school increased its external research funding. Kays also led
               the diversification of the School of Engineering faculty and
-              student body, recruiting women and underrepresented
-              minorities.(28)
+              student body, recruiting women and underrepresented minorities.
+              <Footnotes footnoteRefs={[{ id: "footnote28", number: 28 }]} />
             </Text>
           </OneCol>
-          <ThreeCol>
+          <ThreeCol className="rs-mb-4">
             <MediaCaptionImage
               rounded
               isCaptionInset
@@ -935,22 +976,27 @@ export default function page() {
               Pushing the frontiers of science was “what keeps us going. . . .
               Some people call research a rat race, but I don’t know of anything
               else in the world I would rather be doing,” Bates told Stanford
-              News in 1983.(29)
+              News in 1983.
+              <Footnotes footnoteRefs={[{ id: "footnote29", number: 29 }]} />
             </Text>
             <Text>
               In 1972, Stanford Engineering also began a concerted effort to
-              recruit women into engineering.(30) Kays penned a booklet, “Women
-              in Engineering: Consider the Possibility,” that was mailed to
-              12,000 high schools nationwide. In it, he noted, “As the father of
-              four college-aged girls, I am well aware of the career ambitions
-              of today’s women. . . . Now is the perfect time for women to break
-              some new ground. Like it or not, you live in a highly
-              technological society; technology is not going to go away, and you
-              should be a part of it.”(31)
+              recruit women into engineering.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote30", number: 30 }]}
+              />{" "}
+              Kays penned a booklet, “Women in Engineering: Consider the
+              Possibility,” that was mailed to 12,000 high schools nationwide.
+              In it, he noted, “As the father of four college-aged girls, I am
+              well aware of the career ambitions of today’s women. . . . Now is
+              the perfect time for women to break some new ground. Like it or
+              not, you live in a highly technological society; technology is not
+              going to go away, and you should be a part of it.”
+              <Footnotes footnoteRefs={[{ id: "footnote31", number: 31 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="B" />
+            <HorizontalLineart lineartType="C" />
           </div>
           <OneCol>
             <Text>
@@ -959,8 +1005,10 @@ export default function page() {
               women—Ayse Emel Geckinli and Diane Margel Robertson. A year later,
               Kays supported the creation of the Stanford Center for Research on
               Women, now known as the Michelle R. Clayman Institute for Gender
-              Research.(32) He later encouraged the formation of the campus
-              group Women in Science and Engineering (WISE).
+              Research.
+              <Footnotes footnoteRefs={[{ id: "footnote32", number: 32 }]} /> He
+              later encouraged the formation of the campus group Women in
+              Science and Engineering (WISE).
             </Text>
             <H2>A nobel prize</H2>
           </OneCol>
@@ -975,7 +1023,7 @@ export default function page() {
               caption="Kenneth Arrow, professor of operations research, at his press conference after winning the Nobel Prize in Economic Sciences 1972. Arrow was on the faculty at Harvard University when he won the Nobel Prize for work he did while at Stanford for “pioneering contributions to general economic equilibrium theory and welfare theory.” Arrow returned to Stanford in 1979 and stayed until his retirement in 1991. | Chuck Painter/Stanford News Service."
             />
           </Container>
-          <OneCol>
+          <OneCol className="rs-mb-2">
             <Text>
               In 1972, Kenneth Arrow, deemed one of the most influential
               economists of the twentieth century, was awarded the Nobel Prize
@@ -988,10 +1036,11 @@ export default function page() {
               of Engineering’s Department of Operations Research in 1967. Though
               he left Stanford in 1969 for Harvard University, where he was on
               faculty when he won the Nobel Prize, Arrow would return to
-              Stanford in 1979, completing his distinguished career in 1991.(33)
+              Stanford in 1979, completing his distinguished career in 1991.
+              <Footnotes footnoteRefs={[{ id: "footnote33", number: 33 }]} />
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <OneCol>
               <H2 className="mt-0">New focus on the environment</H2>
               <Text>
@@ -1004,7 +1053,8 @@ export default function page() {
                 followed with a widely adopted textbook detailing
                 environmentally beneficial projects that individuals could
                 undertake at home. The Sierra Club published the book in 1975 as
-                Other Homes and Garbage: Designs for Self-Sufficient Living.(34)
+                Other Homes and Garbage: Designs for Self-Sufficient Living.
+                <Footnotes footnoteRefs={[{ id: "footnote34", number: 34 }]} />
               </Text>
               <Text>
                 In 1974, the Environmental Engineering and Science program, part
@@ -1013,7 +1063,8 @@ export default function page() {
                 through highly treated Palo Alto domestic wastewater and into an
                 aquifer adjacent to San Francisco Bay. Water Factory 21 became
                 the first treatment plant to use reverse osmosis to remove
-                harmful organic chemicals from treated wastewater.(35)
+                harmful organic chemicals from treated wastewater.
+                <Footnotes footnoteRefs={[{ id: "footnote35", number: 35 }]} />
               </Text>
               <Text>
                 “We expect that more and more graduates will enter the
@@ -1021,7 +1072,8 @@ export default function page() {
                 to ecology, and more engineers will be needed in planning and
                 building sewage treatment and power plants, transportation, and
                 with other expertise related to the environment,” wrote
-                Assistant Dean Alfred Kirkland in 1972.(36)
+                Assistant Dean Alfred Kirkland in 1972.
+                <Footnotes footnoteRefs={[{ id: "footnote36", number: 36 }]} />
               </Text>
               <H2>Rising demand</H2>
               <Text>
@@ -1029,21 +1081,24 @@ export default function page() {
                 engineers by decade’s end. As the demand for engineers grew
                 throughout this transformative decade, enrollment in the School
                 of Engineering increased dramatically, feeding a need for 42,000
-                new engineers a year nationwide.(37) The school’s growth
-                mirrored the nation’s increasing reliance on engineers to
-                address complex global challenges. As its fifth decade closed,
-                the School of Engineering had firmly established itself as a
-                leader in shaping the future of technology and innovation. And
-                it was poised to continue setting the pace for engineering
-                education and research, extending influence far beyond the
-                classroom and laboratory.
+                new engineers a year nationwide.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote37", number: 37 }]}
+                />{" "}
+                The school’s growth mirrored the nation’s increasing reliance on
+                engineers to address complex global challenges. As its fifth
+                decade closed, the School of Engineering had firmly established
+                itself as a leader in shaping the future of technology and
+                innovation. And it was poised to continue setting the pace for
+                engineering education and research, extending influence far
+                beyond the classroom and laboratory.
               </Text>
             </OneCol>
             <OneCol>
               <MediaCaptionImage
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062194/kenneth_arrow_ip1m0x.jpg"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746542722/00012017_015_cropped_ceonyc.jpg"
                 alt=""
                 caption="Engineering Corner, 1974. The new shield design for the School of Engineering, introduced in 1967, was added to the building in the early 1970s, before the school moved into its new home in the Terman Engineering Center in 1977. The mascle (diamond with the center removed) framework is orange, engineering’s academic color, on a blue background, denoting Stanford Engineering’s commitment to graduate education. The triple redwood fronds, found on all Stanford University heraldry, symbolize, first, “the organization, transmission, and generation of knowledge which takes place in the School and on which the scholarly growth of engineering depends,” and, second, “the tripartite character of Stanford’s School of Engineering—students, faculty, and alumni.” | Special Collections & University Archives."
               />
