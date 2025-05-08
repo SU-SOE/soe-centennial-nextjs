@@ -84,7 +84,7 @@ export const StoryLineBanner = ({
     >
       <div className="h-full w-full absolute top-0 left-0 z-0">
         <Image
-          className="ed11y-ignore object-cover z-0"
+          className="ed11y-ignore object-cover z-[-20]"
           src={src}
           alt={alt || ""}
           loading={"lazy"}
@@ -93,7 +93,7 @@ export const StoryLineBanner = ({
         />
         <div
           className={cnb(
-            "absolute h-full w-full bg-opacity-80 z-10 bg-gradient-to-r from-10%",
+            "absolute h-full w-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
             {
               "from-stone-dark to-transparent": bgColor === "stone-dark",
               "from-cardinal-red-dark to-transparent": bgColor === "red",
@@ -103,7 +103,7 @@ export const StoryLineBanner = ({
       </div>
       <Container
         className={cnb(
-          "relative flex items-center justify-start w-full z-50 *:text-white",
+          "relative flex items-center justify-start w-full z-0 *:text-white",
           {
             "p-30 sm:p-50 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8": hasLineArt,
             "rs-py-10 rs-px-2 2xl:px-0": !hasLineArt,
@@ -114,7 +114,7 @@ export const StoryLineBanner = ({
         {hasLineArt && (
           <BannerLineart
             variant={lineVariant}
-            className="absolute top-0 left-0 flex justify-center items-center z-10"
+            className="absolute top-0 left-0 flex justify-center items-center z-[-10]"
           />
         )}
         <FlexBox
