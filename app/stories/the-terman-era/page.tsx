@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746731525/CC146_metadata_mwmzw7.png",
         alt: "Frederick Terman at the Radio Research Laboratory, Harvard University, 1940s",
       },
     ],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description:
       "Samuel Morris recommended Frederick Terman to be his successor as dean of the School of Engineering. Terman, on leave from Stanford at the time, had been serving since 1942 in a wartime appointment as head of the top-secret Radio Research Laboratory at Harvard University. Yet throughout the war, Terman was anticipating a period after the war he believed would be defined by unprecedented technological advancement led by engineers.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746731525/CC146_metadata_mwmzw7.png",
     ],
   },
 };
