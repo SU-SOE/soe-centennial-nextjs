@@ -1,14 +1,14 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "motion/react";
 import { Container } from "@/components/Container";
 import { FlexBox } from "@/components/FlexBox";
 import { Heading, Text } from "@/components/Typography";
 import { type MarginType } from "@/utilities/datasource";
 import { type HeadingType } from "@/components/Typography";
 import * as styles from "./Accordion.styles";
-import { Button } from "../Cta";
-import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
+import { cnb } from "cnbuilder";
+import { AccordionItem } from "./AccordionItem";
+import { MinusIcon, PlusIcon } from "@heroicons/react/16/solid";
 
 type AccordionItem = {
   heading: string;
@@ -21,6 +21,7 @@ type AccordionProps = React.HTMLAttributes<HTMLDivElement> & {
   headingLevel?: HeadingType;
   items: AccordionItem[];
   itemHeadingLevel?: HeadingType;
+  itemsPerColumn?: number;
   intro?: React.ReactNode;
   id?: string;
   isDarkTheme?: boolean;
@@ -33,6 +34,7 @@ export const Accordion = ({
   heading,
   headingLevel = "h2",
   itemHeadingLevel = "h3",
+  itemsPerColumn,
   intro,
   items,
   id,
@@ -43,7 +45,13 @@ export const Accordion = ({
   ...props
 }: AccordionProps) => {
   const [openItems, setOpenItems] = useState<boolean[]>([]);
-  const firstItemRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
+  const firstItemRef = useRef<HTMLButtonElement>(null);
+
+  const chunkedItems = itemsPerColumn
+    ? Array.from({ length: Math.ceil(items.length / itemsPerColumn) }, (_, i) =>
+        items.slice(i * itemsPerColumn, i * itemsPerColumn + itemsPerColumn),
+      )
+    : [items];
 
   useEffect(() => {
     if (!items?.length) return;
@@ -58,18 +66,12 @@ export const Accordion = ({
   };
 
   const allExpanded = openItems.every((item) => item);
-  const allCollapsed = openItems.every((item) => !item);
 
   /**
    * Focus on first accordion item after expanding/collapsing all
    */
-  const expandAll = () => {
-    setOpenItems(items.map(() => true));
-    firstItemRef.current?.focus();
-  };
-
-  const collapseAll = () => {
-    setOpenItems(items.map(() => false));
+  const toggleAll = (shouldExpand: boolean) => {
+    setOpenItems(items.map(() => shouldExpand));
     firstItemRef.current?.focus();
   };
 
@@ -91,68 +93,57 @@ export const Accordion = ({
       {intro && <div className={styles.intro}>{intro}</div>}
       {showControls && (
         <FlexBox justifyContent="end" className={styles.controls}>
-          <Button
-            disabled={allExpanded}
-            onClick={expandAll}
-            className={styles.controlButton}
-          >
-            Expand All
-          </Button>
-          <Button
-            disabled={allCollapsed}
-            onClick={collapseAll}
-            className={styles.controlButton}
-          >
-            Collapse All
-          </Button>
+          <Text size="small" mb="0">
+            <button
+              onClick={() => toggleAll(!allExpanded)}
+              className={styles.controlButton}
+            >
+              {allExpanded ? "Collapse all" : "Expand all"}
+              {allExpanded ? (
+                <PlusIcon width={25} className={styles.circleIcon(true)} />
+              ) : (
+                <MinusIcon width={25} className={styles.circleIcon(true)} />
+              )}
+            </button>
+          </Text>
         </FlexBox>
       )}
-      <ul className={styles.list}>
-        {items?.map((item, index) => (
-          <li key={index} className={styles.listItem}>
-            <Heading
-              as={itemHeadingLevel}
-              color={isDarkTheme ? "white" : "black"}
-              leading="tight"
-              className={styles.itemHeading}
-            >
-              <Button
-                id={`button-${index}`}
-                ref={index === 0 ? firstItemRef : undefined}
-                onClick={() => toggleItem(index)}
-                aria-expanded={openItems[index] || false}
-                aria-controls={`content-${index}`}
-                className={styles.button}
-              >
-                <span aria-hidden="true" className={styles.bar} />
-                {item.heading}
-                {openItems[index] ? (
-                  <MinusIcon width={25} />
-                ) : (
-                  <PlusIcon width={25} />
-                )}
-              </Button>
-            </Heading>
-            <motion.div
-              role="region"
-              aria-labelledby={`button-${index}`}
-              id={`content-${index}`}
-              aria-hidden={!openItems[index]}
-              animate={{
-                height: openItems[index] ? "auto" : 0,
-                visibility: openItems[index] ? "visible" : "hidden",
-              }}
-              initial={false}
-              transition={{ duration: 0.3, ease: "easeIn" }}
-              className={styles.contentWrapper}
-            >
-              <div className={styles.richtextWrapper}>
-                <Text className={styles.richtext}>{item.content}</Text>
-              </div>
-            </motion.div>
-          </li>
-        ))}
-      </ul>
+      {itemsPerColumn ? (
+        <div className="flex flex-col md:flex-row md:gap-50">
+          {chunkedItems.map((chunk, colIdx) => (
+            <ul key={colIdx} className={cnb("flex flex-col", styles.list)}>
+              {chunk.map((item, indexInChunk) => {
+                const index = colIdx * itemsPerColumn + indexInChunk;
+                return (
+                  <AccordionItem
+                    key={index}
+                    item={item}
+                    index={index}
+                    isOpen={openItems[index]}
+                    onToggle={toggleItem}
+                    firstItemRef={firstItemRef}
+                    headingLevel={itemHeadingLevel}
+                  />
+                );
+              })}
+            </ul>
+          ))}
+        </div>
+      ) : (
+        <ul className={styles.list}>
+          {items?.map((item, index) => (
+            <AccordionItem
+              key={index}
+              item={item}
+              index={index}
+              isOpen={openItems[index]}
+              onToggle={toggleItem}
+              firstItemRef={firstItemRef}
+              headingLevel={itemHeadingLevel}
+            />
+          ))}
+        </ul>
+      )}
     </Container>
   );
 };
