@@ -38,16 +38,6 @@ const nextConfig = {
         destination: "/404",
         permanent: true,
       },
-      {
-        source: "/stories/the-terman-era",
-        destination: "/404",
-        permanent: true,
-      },
-      {
-        source: "/april/:path*",
-        destination: "/404",
-        permanent: true,
-      },
     ];
   },
 };
