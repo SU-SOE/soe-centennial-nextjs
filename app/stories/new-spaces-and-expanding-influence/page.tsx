@@ -455,7 +455,7 @@ export default function page() {
           <div className="max-w-1500 w-full cc 3xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
           </div>
-          <TwoCol>
+          <TwoCol className="rs-mb-3">
             <OneCol>
               <Quote
                 quoteColor="red"
