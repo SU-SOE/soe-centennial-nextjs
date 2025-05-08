@@ -24,7 +24,7 @@ import { cnb } from "cnbuilder";
 export type QuoteProps = React.HTMLAttributes<HTMLDivElement> & {
   teaser?: string | React.ReactNode;
   body?: string | React.ReactNode;
-  source: string;
+  source: string | React.ReactNode;
   animation?: AnimationType;
   delay?: number;
   quoteColor?: QuoteMarkColorType;
@@ -57,7 +57,7 @@ export const Quote = ({
             </Text>
           )}
           {body && (
-            <Text variant="overview" font="dm-sans" className={styles.body}>
+            <Text size="quote-md" font="dm-sans" className={styles.body}>
               {body}&quot;
             </Text>
           )}

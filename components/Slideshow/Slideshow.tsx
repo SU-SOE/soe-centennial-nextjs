@@ -103,6 +103,7 @@ export const Slideshow = ({
   useEffect(() => {
     adjustSlideLinks();
     checkEdgeSlides();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

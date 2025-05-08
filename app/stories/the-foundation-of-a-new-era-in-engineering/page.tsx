@@ -3,6 +3,7 @@ import { OneCol, TwoCol } from "@/components/Layout";
 import { Masthead } from "@/components/Masthead";
 import { Quote } from "@/components/Quote";
 import {
+  ExploreMore,
   Footnotes,
   FootnotesList,
   StoryImpactBanner,
@@ -35,7 +36,8 @@ export const metadata: Metadata = {
     "Engineering History",
   ],
   openGraph: {
-    title: "The Foundation of a New Era in Engineering",
+    title:
+      "The Foundation of a New Era in Engineering | 100 Years of Stanford Engineering",
     description:
       "As the second decade of the Stanford School of Engineering began, Theodore Hoover was in his final year as dean, and the school was just beginning to recover from the decline in enrollment caused by the Great Depression. In 1936, the school appointed its second dean, Samuel B. Morris. A native Californian and a Stanford alumnus (’11), Morris had served as chief engineer, superintendent, and general manager of the Water Department of Pasadena, California, from 1912 to 1931, when he joined the Stanford faculty as a professor of civil engineering.",
     images: [
@@ -47,7 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Foundation of a New Era in Engineering",
+    title:
+      "The Foundation of a New Era in Engineering | 100 Years of Stanford Engineering",
     description:
       "As the second decade of the Stanford School of Engineering began, Theodore Hoover was in his final year as dean, and the school was just beginning to recover from the decline in enrollment caused by the Great Depression. In 1936, the school appointed its second dean, Samuel B. Morris. A native Californian and a Stanford alumnus (’11), Morris had served as chief engineer, superintendent, and general manager of the Water Department of Pasadena, California, from 1912 to 1931, when he joined the Stanford faculty as a professor of civil engineering.",
     images: [
@@ -55,6 +58,30 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+const exploreStoriesData = [
+  {
+    heading: "“Preparing roads over which culture may ride in comfort",
+    chapter: "Decade 1",
+    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+  },
+  {
+    heading: "The Terman Era",
+    chapter: "Decade 3",
+    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+  },
+  {
+    heading: "A period of transformation",
+    chapter: "Decade 4",
+    href: "/stories/a-period-of-transformation",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
+  },
+];
 
 const galleryImages = [
   {
@@ -181,7 +208,7 @@ export default function page() {
             alt="A vintage black and white photograph depicting a diverse group of men and women gathered together posing for a photo."
             caption="Members of the Stanford Student Chapter of the American Society of Civil Engineers gather for a photo for the Stanford Quad yearbook, 1936. Charles Marx is seated sixth from right. Women were still a significant minority in engineering: the two women pictured are students Mary DeF. Atkins (sixth from left) and Margaret Woolverton (seventh from left), both seniors. | Special Collections & University Archives."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-5">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-5">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               width="wide"
@@ -704,6 +731,12 @@ export default function page() {
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
+          <ExploreMore
+            width="site"
+            stories={exploreStoriesData}
+            sectionHeading="Explore more decades"
+            hasButton
+          />
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>

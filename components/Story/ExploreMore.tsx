@@ -19,54 +19,60 @@
 import React, { HTMLAttributes } from "react";
 import { TwoCol, ThreeCol } from "../Layout";
 import { StoryCard, StoryCardProps } from "./StoryCard";
-import { Container, WidthType } from "../Container";
+import { BgColorType, Container, WidthType } from "../Container";
 import { Button } from "../Cta";
 import { Heading } from "../Typography";
 import { cnb } from "cnbuilder";
 
 type ExploreMoreProps = HTMLAttributes<HTMLDivElement> & {
   stories: StoryCardProps[];
+  cardBgColor?: BgColorType;
   sectionHeading?: string;
-  buttonText?: string;
-  buttonLink?: string;
+  headerTag?: "h2" | "h3";
+  hasButton?: boolean;
   width?: WidthType;
   isThreeCol?: boolean;
 };
 
 export const ExploreMore = ({
   className,
+  cardBgColor = "blue",
   stories,
   sectionHeading,
-  buttonText,
-  buttonLink,
+  headerTag,
+  hasButton,
   width,
   isThreeCol,
   ...props
 }: ExploreMoreProps) => {
   const delays = [0.25, 0.5, 0.75];
   const AsComponent = isThreeCol ? ThreeCol : TwoCol;
+  const wrapper = sectionHeading ? "article" : "div";
 
   return (
     <Container
+      as={wrapper}
       {...props}
       width={width || "full"}
-      className={cnb("py-20", className)}
+      className={cnb("rs-my-7", className)}
     >
       {sectionHeading && <Heading>{sectionHeading}</Heading>}
-      <AsComponent className="max-w-[140rem]">
+      <AsComponent as="ul" className="max-w-[140rem] list-none">
         {stories.map((story, index) => (
           <StoryCard
+            as="li"
             key={index}
-            headerTag="h3"
+            bgColor={cardBgColor}
+            headerTag={headerTag || "h3"}
             animation="slideUp"
             delay={delays[index] || 0.3}
             {...story}
           />
         ))}
       </AsComponent>
-      {buttonText && buttonLink && (
-        <Button isLight href={buttonLink} className="mx-auto">
-          {buttonText}
+      {hasButton && (
+        <Button isLight href="/stories" className="mx-auto rs-mt-5">
+          Explore all stories
         </Button>
       )}
     </Container>

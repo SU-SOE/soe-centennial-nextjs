@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { StoryCardProps, StoryPosterCard } from "@/components/Story";
+import { StoryCardProps } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -14,6 +14,7 @@ import { Metadata } from "next";
 import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
+import { Button } from "@/components/Cta";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -43,21 +44,73 @@ export const metadata: Metadata = {
   },
 };
 
+const exploreMoreData = [
+  {
+    superhead: "A Century of Innovation",
+    heading: "100 Years of Stanford Engineering",
+    href: "/stories/a-century-of-innovation",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+  },
+  {
+    heading: "Letter from Dean Widom",
+    href: "/letter-from-dean-widom",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
+  },
+];
+
 const events = [
+  {
+    heading: "Stanford Engineering Centennial Celebration and Showcase",
+    superhead: (
+      <>
+        May 15, 2025 <br /> 3:30-7:30pm
+      </>
+    ),
+    body: (
+      <>
+        <p>
+          Celebrate 100 years of innovation with an interactive showcase
+          featuring cutting-edge research, hands-on demos, and breakthrough
+          technologies.
+        </p>
+        <Button solid href="https://cvent.me/KgDZBV">
+          Register here
+        </Button>
+      </>
+    ),
+    isCard: true,
+  },
+
   {
     heading: "Don’t miss out on upcoming centennial events!",
     superhead: "Stanford Engineering alumni",
     body: (
       <>
-        Update your contact information in{" "}
-        <a href="https://alumni.stanford.edu/help/myaccount/">My Account</a> so
-        that you receive all future centennial communications. Please contact{" "}
-        <a href="mailto:engineering-alumni@stanford.edu">
-          engineering-alumni@stanford.edu
-        </a>{" "}
-        if you have any questions.
+        <p>
+          Update your contact information in{" "}
+          <Link
+            linkType="dark-bg"
+            href="https://alumni.stanford.edu/help/myaccount/"
+          >
+            My Account
+          </Link>{" "}
+          so that you receive all future centennial communications.
+        </p>
+        <p>
+          Please contact <br />
+          <Link
+            linkType="dark-bg"
+            href="mailto:engineering-alumni@stanford.edu"
+          >
+            engineering-alumni@stanford.edu
+          </Link>
+          <br /> if you have any questions.
+        </p>
       </>
     ),
+    headingSize: 3 as const,
   },
 ];
 
@@ -136,7 +189,7 @@ export default function Home() {
             <AnimateInView animation="slideUp">
               <div className="w-full max-w-1000">
                 <Heading font="dm-mono" size="f1" mb={1}>
-                  Explore decade stories
+                  Explore stories
                 </Heading>
                 <Text size="f5" weight="normal">
                   Fundamental work in science and transformational breakthroughs
@@ -145,7 +198,12 @@ export default function Home() {
               </div>
             </AnimateInView>
           </div>
-          <ExploreMore stories={storyData} className="py-0" />
+          <ExploreMore
+            hasButton
+            stories={storyData}
+            className="py-0 my-50"
+            cardBgColor="white"
+          />
         </StoryFeature>
         <Container as="section" mt={10} mb={10} width="full">
           <AnimatedLineartBanner className="mb-[-4rem]">
@@ -185,16 +243,27 @@ export default function Home() {
           ))}
           <TimelineFeature anchors={timelineFeatureCards} />
         </Container>
-        <Container as="section" bgColor="blue" width="full" pt={8} pb={9}>
-          <StoryPosterCard
-            heading="Letter from Dean Widom"
-            link="/letter-from-dean-widom"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg"
-            bgColor="white"
-          />
+        <Container as="section" bgColor="blue" pt={8} pb={8}>
+          <div className="mx-auto w-full max-w-1200">
+            <AnimateInView animation="slideUp">
+              <div className="w-full max-w-1000 rs-mb-5">
+                <Heading font="dm-mono" size="f1" mb={1}>
+                  Explore
+                </Heading>
+                <Text size="f5" weight="normal" mb="0">
+                  More about the Centennial
+                </Text>
+              </div>
+            </AnimateInView>
+            <ExploreMore
+              stories={exploreMoreData}
+              className="py-0 m-0"
+              cardBgColor="white"
+            />
+          </div>
         </Container>
         <EventsSection
-          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
+          src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745937965/stanford-events_nfplt7.png"
           events={events}
         />
         <ContributeStoryBanner bgColor="red" hasLineArt />
