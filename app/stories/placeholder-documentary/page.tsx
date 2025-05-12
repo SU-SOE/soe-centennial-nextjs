@@ -89,23 +89,27 @@ export default function page() {
               provides a window into the perspectives of our most influential
               leaders, the stories behind our most impactful moments of
               discovery, and the pioneering spirit that makes Stanford
-              Engineering the beacon for innovation that it is today. You’ll
-              hear from Dean Jennifer Widom, as well as her predecessors Persis
-              Drell, Jim Plummer, John Hennessey, and Jim Gibbons. Stanford’s
-              13th President, Jon Levin, and several alumni who have gone on to
-              become titans of industry, including Jensen Huang and Jerry Yang,
-              share insights into the breakthroughs that have come out of the
-              Stanford School of Engineering and gone on to change lives and
-              shape society.
-            </Text>
-            <Text variant="overview">
-              Join us as we walk through the milestones of the past and look
-              ahead to the challenges and opportunities of the next 100 years.
+              Engineering the beacon for innovation that it is today.
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="A" />
           </div>
+          <OneCol>
+            <Text>
+              You’ll hear from Dean Jennifer Widom, as well as her predecessors
+              Persis Drell, Jim Plummer, John Hennessey, and Jim Gibbons.
+              Stanford’s 13th President, Jon Levin, and several alumni who have
+              gone on to become titans of industry, including Jensen Huang and
+              Jerry Yang, share insights into the breakthroughs that have come
+              out of the Stanford School of Engineering and gone on to change
+              lives and shape society.
+            </Text>
+            <Text>
+              Join us as we walk through the milestones of the past and look
+              ahead to the challenges and opportunities of the next 100 years.
+            </Text>
+          </OneCol>
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
