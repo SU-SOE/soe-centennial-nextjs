@@ -18,6 +18,7 @@ import { Button } from "@/components/Cta";
 import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./ContributeStoryBanner.styles";
 import { AnimateInView } from "@/components/Animate";
+import * as links from "@/utilities/externalLinks";
 
 type ContributeStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: "fog-light" | "red" | "blue" | "white";
@@ -47,7 +48,7 @@ export const ContributeStoryBanner = ({
             <Heading mb={5} size="f4" weight="normal">
               Share{" "}
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
+                href={links.googleDocShare}
                 className={styles.underline(bgColor)}
               >
                 your Stanford Engineering memories
@@ -77,7 +78,7 @@ export const ContributeStoryBanner = ({
         >
           <Button
             isLight={bgColor !== "red"}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
+            href={links.googleDocShare}
           >
             Share a memory
           </Button>
