@@ -11,35 +11,39 @@ import { H1 } from "@/components/Typography/Header";
 
 export const metadata: Metadata = {
   title:
-    "Placeholder Heading: The future of children’s health | 100 Years of Stanford Engineering",
+    "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons | 100 Years of Stanford Engineering",
   description:
-    "This is a placeholder description for a Centennial story. Update this text to reflect the unique content of the story page.",
+    "Celebrating 100 years of discovery, innovation, and global impact, this story spotlights Stanford Engineering's most influential leaders, groundbreaking moments, and enduring legacy of excellence.",
   keywords: [
     "Stanford Engineering",
     "Centennial Story",
-    "Placeholder Metadata",
+    "Engineering Innovation",
+    "Stanford Alumni",
     "Engineering Legacy",
+    "Jennifer Widom",
+    "Jensen Huang",
+    "Jerry Yang",
   ],
   openGraph: {
     title:
-      "Placeholder Heading: The future of children’s health | 100 Years of Stanford Engineering",
+      "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Open Graph description for a Centennial story. Update this to summarize the story’s content for social sharing.",
+      "This short film celebrates a century of innovation at Stanford Engineering, featuring leaders like Jennifer Widom, Persis Drell, and industry pioneers such as Jensen Huang and Jerry Yang.",
     images: [
       {
-        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
-        alt: "Descriptive alt text for the Open Graph image",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093197/SOE100_DOC_Logo_sj4min.png",
+        alt: "Stanford Engineering 100th Anniversary Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Placeholder Heading: The future of children’s health | 100 Years of Stanford Engineering",
+      "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Twitter description for a Centennial story. Update this for improved visibility and clarity on social platforms.",
+      "A century of engineering excellence: watch Stanford’s leaders and alumni reflect on innovation, discovery, and impact around the world.",
     images: [
-      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093197/SOE100_DOC_Logo_sj4min.png",
     ],
   },
 };
@@ -70,14 +74,18 @@ const exploreStoriesData = [
 export default function page() {
   return (
     <>
-      <Masthead logoColor="white-red" bgColor="red" />
+      <Masthead logoColor="white-red" bgColor="cardinal-red" />
       <main id="main-content">
         <article>
           <H1 className="sr-only">
-            Placeholder Heading: The future of children’s health
+            Stanford Engineering at 100: Transformative Breakthroughs, Boundless
+            Horizons
           </H1>
           <EmbedMediaHero
             autoplay
+            isPreview
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png"
+            title="Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons"
             className="bg-cardinal-red-dark"
             mediaUrl="https://www.youtube.com/embed/Da0hnrQkY1o?si=qJfnAyVohcut-JwZ"
           />
