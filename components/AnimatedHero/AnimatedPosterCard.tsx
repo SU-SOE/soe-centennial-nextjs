@@ -7,7 +7,7 @@ import { Heading, Text } from "@/components/Typography";
 import { ChapterLabel } from "@/components/Story/ChapterLabel";
 import { AnimateInView } from "@/components/Animate";
 import { MaskAnimation } from "./MaskAnimation";
-import { Button } from "../Cta";
+import { Button } from "@/components/Cta";
 import { useReducedMotion } from "motion/react";
 import { NoMotionSvg } from "./NoMotionSvg";
 

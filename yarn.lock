@@ -800,13 +800,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/flubber@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@types/flubber@npm:0.4.0"
-  checksum: 10c0/65d625398bba484c005458cf3f7384aad0a71e9fc4106cc5c53499cd2668c5adc412ce39d8bffc8349fcbe497ebc520c01206fee4bc658e2719802fd3e3527e9
-  languageName: node
-  linkType: hard
-
 "@types/json-schema@npm:^7.0.15":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
@@ -4757,7 +4750,6 @@ __metadata:
     "@heroicons/react": "npm:^2.2.0"
     "@next/third-parties": "npm:^15.3.1"
     "@tailwindcss/container-queries": "npm:^0.1.1"
-    "@types/flubber": "npm:^0.4.0"
     "@types/node": "npm:^22.14.1"
     "@types/react": "npm:^19.1.2"
     "@types/react-dom": "npm:19.1.2"

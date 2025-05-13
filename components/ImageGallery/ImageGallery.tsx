@@ -85,7 +85,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
       <div className="flex flex-col w-full max-w-1300 mx-auto">
         {/* Main Image Display */}
         <div
-          className="relative aspect-[13/8] h-full w-full max-w-1300 mb-4"
+          className="relative aspect-[13/8] size-full max-w-1300 mb-4"
           aria-live="assertive"
           aria-atomic="true"
           role="figure"

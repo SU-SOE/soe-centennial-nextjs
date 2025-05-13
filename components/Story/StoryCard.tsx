@@ -81,7 +81,7 @@ export const StoryCard = ({
               })}
             >
               <Image
-                className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
+                className="size-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
                 src={imageUrl}
                 alt={imageAlt || ""}
                 fill
