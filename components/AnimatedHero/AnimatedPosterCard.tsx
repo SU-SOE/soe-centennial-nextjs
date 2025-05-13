@@ -20,6 +20,7 @@ type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   body?: string;
   buttonText: string;
   link: string;
+  isFullWidth?: boolean;
 };
 
 export const AnimatedPosterCard = ({
@@ -31,6 +32,7 @@ export const AnimatedPosterCard = ({
   body,
   buttonText,
   link,
+  isFullWidth,
   ...props
 }: AnimatedPosterCardProps) => {
   const prefersReducedMotion = useReducedMotion();
@@ -38,7 +40,13 @@ export const AnimatedPosterCard = ({
     <Container
       {...props}
       width="site"
-      className={cnb("2xl:p-0 2xl:w-full 2xl:max-w-1300", className)}
+      className={cnb(
+        {
+          "2xl:p-0 2xl:w-full 2xl:max-w-1300": !isFullWidth,
+          "w-full max-w-full lg:px-10": isFullWidth,
+        },
+        className,
+      )}
     >
       <Container
         bgColor="red"

@@ -4,6 +4,7 @@ import { Quote } from "@/components/Quote";
 import {
   BgImageWrapper,
   ExploreMore,
+  Footnotes,
   FootnotesList,
   ScrollyBubble,
   Scrollytelling,
@@ -21,37 +22,43 @@ import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
-  title: "Story Template Title | 100 Years of Stanford Engineering",
+  title:
+    "Bridging worlds: chips, code, and cosmos | 100 Years of Stanford Engineering",
   description:
-    "This is a placeholder description for a Centennial story. Update this text to reflect the unique content of the story page.",
+    "The world saw the rise of the microprocessor, the advent of the personal computer, and the spread of computer networking linking the globe during the sixth decade of the School of Engineering. Stanford engineers explored the vastness of outer space, the confines of the nanoscale, and the fragile, finite resources of planet Earth.",
   keywords: [
     "Stanford Engineering",
     "Centennial Story",
-    "Placeholder Metadata",
-    "Engineering Legacy",
+    "Microprocessor",
+    "Personal Computer",
+    "Computer Networking",
+    "Outer Space",
+    "Nanoscale",
+    "Planet Earth Resources",
   ],
   openGraph: {
-    title: "Placeholder Story Title | 100 Years of Stanford Engineering",
+    title:
+      "Bridging worlds: chips, code, and cosmos | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Open Graph description for a Centennial story. Update this to summarize the story’s content for social sharing.",
+      "The world saw the rise of the microprocessor, the advent of the personal computer, and the spread of computer networking linking the globe during the sixth decade of the School of Engineering. Stanford engineers explored the vastness of outer space, the confines of the nanoscale, and the fragile, finite resources of planet Earth.",
     images: [
       {
-        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
-        alt: "Descriptive alt text for the Open Graph image",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
+        alt: "Stanford engineers explored the vastness of outer space and the nanoscale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Placeholder Story Title | 100 Years of Stanford Engineering",
+    title:
+      "Bridging worlds: chips, code, and cosmos | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Twitter description for a Centennial story. Update this for improved visibility and clarity on social platforms.",
+      "The world saw the rise of the microprocessor, the advent of the personal computer, and the spread of computer networking linking the globe during the sixth decade of the School of Engineering. Stanford engineers explored the vastness of outer space, the confines of the nanoscale, and the fragile, finite resources of planet Earth.",
     images: [
-      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
     ],
   },
 };
-
 const exploreStoriesData = [
   {
     heading: "“Preparing roads over which culture may ride in comfort",
@@ -256,13 +263,14 @@ export default function page() {
           <div className="max-w-1500 w-full cc 2xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
+              className="rs-mb-5"
               quoteColor="red"
-              width="wide"
+              width="full"
               teaser="The last five years have shown a dramatic increase, percentage-wise, in the number of women in Stanford Engineering. . . . The most important factor is that if a woman wants to become an engineer, she can."
               source="— Assistant Dean Alfred Kirkland, 1975"
             />
           </div>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <OneCol>
               <H2 className="mt-0">1975 – 1984</H2>
               <Text>
@@ -284,7 +292,8 @@ export default function page() {
                 explanation, based directly on experiment, of the greater
                 destructiveness of earthquakes in regions where the foundations
                 of structures are supported by more or less soft ground than
-                where these foundations are based on solid rock.”(1)
+                where these foundations are based on solid rock.”
+                <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} />
               </Text>
               <Text>
                 By the 1930s, earthquake studies focused on modern analyses and
@@ -294,7 +303,8 @@ export default function page() {
                 Engineering.” The John A. Blume Earthquake Engineering Center,
                 which was dedicated by the Department of Civil Engineering in
                 1975, endures as a leading center of earthquake and structural
-                research.(2)
+                research.
+                <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
               </Text>
             </OneCol>
             <OneCol>
@@ -309,7 +319,7 @@ export default function page() {
             </OneCol>
           </TwoCol>
           <BgImageWrapper
-            className="mb-0"
+            className="rs-mb-5"
             hasBgImage
             bgColor="fog-light"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098489/00012017_015_vwrprz.jpg"
@@ -350,16 +360,21 @@ export default function page() {
                 “The last five years have shown a dramatic increase,
                 percentage-wise, in the number of women in Stanford
                 Engineering,” wrote Assistant Dean Alfred Kirkland in 1975,
-                noting that Stanford was part of a national trend.(3) Roughly
-                only 500 women nationwide were earning BS degrees in engineering
-                each year. At Stanford, the master’s program saw a dramatic
-                increase. In 1967, a class of 497 had contained just one female
-                master’s graduate. By 1975, that number had leapt to 24.
-                Undergraduates followed suit. By 1979, a quarter of all
+                noting that Stanford was part of a national trend.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote3", number: 3 }]}
+                />{" "}
+                Roughly only 500 women nationwide were earning BS degrees in
+                engineering each year. At Stanford, the master’s program saw a
+                dramatic increase. In 1967, a class of 497 had contained just
+                one female master’s graduate. By 1975, that number had leapt to
+                24. Undergraduates followed suit. By 1979, a quarter of all
                 engineering undergraduates were women, and engineering had
-                become the number-one field of choice for women at Stanford.(4)
+                become the number-one field of choice for women at Stanford.
+                <Footnotes footnoteRefs={[{ id: "footnote4", number: 4 }]} />
                 “The most important factor is that if a woman wants to become an
-                engineer, she can,” Kirkland wrote.(5)
+                engineer, she can,” Kirkland wrote.
+                <Footnotes footnoteRefs={[{ id: "footnote5", number: 5 }]} />
               </Text>
             </OneCol>
             <OneCol>
@@ -374,9 +389,9 @@ export default function page() {
             </OneCol>
           </TwoCol>
           <div className="flex w-full justify-end">
-            <HorizontalLineart lineartType="B" />
+            <HorizontalLineart lineartType="C" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>Facing budget woes</H2>
             <Text>
               The effort to recruit women came even as the School of Engineering
@@ -387,17 +402,19 @@ export default function page() {
               question that further reductions are going to hurt,” he wrote.
               Addressing the grim possibility of faculty layoffs, Kays was
               forthright: “It is quite possible to do very severe violence to
-              the quality and reputation of the School of Engineering.”(6)
+              the quality and reputation of the School of Engineering.”
+              <Footnotes footnoteRefs={[{ id: "footnote6", number: 6 }]} />
             </Text>
           </OneCol>
           <AnimatedPosterCard
-            className="max-w-full p-0 rs-mb-6"
+            isFullWidth
+            className="rs-mb-6"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"
             buttonText="Explore the timeline"
           />
-          <TwoCol>
+          <TwoCol className="rs-mb-6">
             <OneCol>
               <MediaCaptionImage
                 isCaptionInset
@@ -416,7 +433,8 @@ export default function page() {
                 number of undergraduates in engineering more than doubled, from
                 249 to 563. Notable again was a rise in the number of women in
                 engineering, rocketing almost five-fold from 22 to 101 in the
-                same period.(7)
+                same period.
+                <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} />
               </Text>
               <H2>Public-key cryptography</H2>
               <Text>
@@ -436,7 +454,8 @@ export default function page() {
                 Initiative, said, “Billions of people all over the planet use
                 the Diffie-Hellman protocol on a daily basis to establish secure
                 connections to their banks, e-commerce sites, e-mail servers,
-                and the cloud.”(13)
+                and the cloud.”
+                <Footnotes footnoteRefs={[{ id: "footnote13", number: 13 }]} />
               </Text>
             </OneCol>
           </TwoCol>
@@ -478,12 +497,14 @@ export default function page() {
                 enemies, duking it out in “shadowboxing” matches held in the
                 arenas of Congress and the press—a confrontation between
                 academia and government that became known as the first “crypto
-                war.”(8)
+                war.”
+                <Footnotes footnoteRefs={[{ id: "footnote8", number: 8 }]} />
               </Text>
               <Text>
                 In one corner: Hellman and Whitfield Diffie, a research
                 assistant in his lab, who had in 1976 coauthored a revolutionary
-                paper, “New Directions in Cryptography.”(9)
+                paper, “New Directions in Cryptography.”
+                <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} />
               </Text>
               <Text>
                 The paper had introduced public-key cryptography, providing a
@@ -499,17 +520,21 @@ export default function page() {
                 cryptography belonged solely in the realm of government
                 agencies, and that public dissemination of these techniques
                 would compromise national security by making high-grade
-                encryption accessible to adversaries.(10)
+                encryption accessible to adversaries.
+                <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
               </Text>
               <Text>
                 So strong was the NSA’s opposition to the paper that, after its
                 publication, the agency attempted to limit its distribution, and
                 warned the publishers that the authors had violated U.S. laws
                 restricting export of military weapons, for which the authors
-                could be subject to prison time.(11) Despite these threats,
-                Hellman and his team persisted, arguing for the necessity of
-                public cryptographic research to protect private-sector
-                information and prevent government overreach.
+                could be subject to prison time.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote11", number: 11 }]}
+                />{" "}
+                Despite these threats, Hellman and his team persisted, arguing
+                for the necessity of public cryptographic research to protect
+                private-sector information and prevent government overreach.
               </Text>
               <Quote
                 quoteColor="red"
@@ -517,7 +542,10 @@ export default function page() {
                   <>
                     “The lesson is: it’s better to have friends than enemies,”
                     Hellman said, “which everybody agrees to, but how many
-                    people take the risk that Inman did?”(12)
+                    people take the risk that Inman did?”
+                    <Footnotes
+                      footnoteRefs={[{ id: "footnote12", number: 12 }]}
+                    />
                   </>
                 }
                 source="— Martin Hellman"
@@ -565,7 +593,7 @@ export default function page() {
             </ScrollyBubble>
           </Scrollytelling>
           <OneCol>
-            <H2>A new home for engineering</H2>
+            <H2 className="mt-0">A new home for engineering</H2>
             <Text>
               The School of Engineering took occupancy of the $9.2 million
               Frederick E. Terman Engineering Center in 1977. The second
@@ -581,11 +609,16 @@ export default function page() {
               terminals. Made possible by donations from Terman’s former
               students William Hewlett and David Packard, the building was
               expected to serve the engineering community “for 100 years or
-              more.”(14) But only thirty years later, the Terman Engineering
-              Center was in dire need of replacement due to termite damage and
-              wood rot. In 2012, it would be not so much demolished as
-              dismantled, with 99.6 percent of its materials repurposed in
-              building projects elsewhere on campus.(15)
+              more.”
+              <Footnotes
+                footnoteRefs={[{ id: "footnote14", number: 14 }]}
+              />{" "}
+              But only thirty years later, the Terman Engineering Center was in
+              dire need of replacement due to termite damage and wood rot. In
+              2012, it would be not so much demolished as dismantled, with 99.6
+              percent of its materials repurposed in building projects elsewhere
+              on campus.
+              <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
             </Text>
             <Text>
               In the same year that the Terman Engineering Center opened, the
@@ -598,7 +631,7 @@ export default function page() {
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="B" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>Center for integrated systems</H2>
             <Text>
               As chipmaking became an enterprise of paramount importance, the
@@ -610,18 +643,23 @@ export default function page() {
               and James Meindl—founded the multidisciplinary Center for
               Integrated Systems (CIS) to pioneer new chips, new methods of
               manufacture, and new relationships between the School of
-              Engineering and Silicon Valley.(16)
+              Engineering and Silicon Valley.
+              <Footnotes footnoteRefs={[{ id: "footnote16", number: 16 }]} />
             </Text>
             <Text>
               “We began to ask if the worlds of software and hardware were going
               to merge, so a particular problem might be best solved with
               hardware only, software only, or a combination, and we didn’t want
               to say in advance what that combination might be,” Gibbons said.
-              “We had a group of ten stars who all wanted to be part of
-              this.”(17) Remarking on the unique collaborations fostered in the
-              Center, he added that by creating a “triangle between a faculty
-              member, a student, and now, a co-advisor in industry, you get
-              something you could never get any other way.”(18)
+              “We had a group of ten stars who all wanted to be part of this.”
+              <Footnotes
+                footnoteRefs={[{ id: "footnote17", number: 17 }]}
+              />{" "}
+              Remarking on the unique collaborations fostered in the Center, he
+              added that by creating a “triangle between a faculty member, a
+              student, and now, a co-advisor in industry, you get something you
+              could never get any other way.”
+              <Footnotes footnoteRefs={[{ id: "footnote18", number: 18 }]} />
             </Text>
             <H2>Airplanes and autonomy</H2>
             <Text>
@@ -642,10 +680,10 @@ export default function page() {
               swivel and multi-ocular vision that allowed it to navigate, albeit
               slowly, past obstacles. Pausing for fifteen minutes at a stretch,
               the Stanford Cart would plot a course and then surge forward in
-              one-meter steps.(19)
+              one-meter steps.
+              <Footnotes footnoteRefs={[{ id: "footnote19", number: 19 }]} />
             </Text>
           </OneCol>
-
           <TwoCol>
             <OneCol>
               <H2 className="mt-0">Improving computing efficiency</H2>
@@ -659,7 +697,8 @@ export default function page() {
                 than commercially available microprocessors but ran five times
                 faster. The inventors shared the 2017 Turing Award. Today,
                 virtually all tablets, phones, and smart devices run on RISC
-                architectures.(20)
+                architectures.
+                <Footnotes footnoteRefs={[{ id: "footnote20", number: 20 }]} />
               </Text>
               <Text>
                 Also in 1981, electrical engineer James Clark, in the Computer
@@ -681,7 +720,7 @@ export default function page() {
               <MediaCaptionImage
                 isCaptionInset
                 rounded
-                aspectRatio="8x5"
+                aspectRatio="3x4"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098485/jh189cy1846_b5hymt.jpg"
                 alt="Three men collaborating around a large document, engaged in discussion."
                 caption="Left to right: Stanford computer scientists John Shott, John Hennessy, and James D. Meindl. Hennessy established the microprocessor without interlocked pipeline stages (MIPS) project to develop computers with simpler instruction sets that could be completed in less time. This group developed the reduced instruction set computer (RISC) architecture, for which Hennessy and U.C. Berkeley collaborator David Patterson won the 2017 A. M. Turing Award. Today, virtually all tablets, phones, and smart devices run on RISC architectures. | Chuck Painter/Stanford News Service."
@@ -691,7 +730,7 @@ export default function page() {
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>End of an era</H2>
             <Text>
               Late in 1982, after a transformational career that began in 1927,
@@ -703,13 +742,16 @@ export default function page() {
               recalled that Terman’s “capacity to think about the future was the
               most remarkable thing about him.” Dean Kays noted, “He took a
               reasonably good school and turned it into one of the best in the
-              country.”(21) In an interview only a year before his death, Terman
-              had assessed his tenure with characteristic modesty: “There really
-              wasn’t much to it. I had a technique—you get the best people, the
-              best people do the research, and it falls into place.”(22)
+              country.”
+              <Footnotes footnoteRefs={[{ id: "footnote21", number: 21 }]} /> In
+              an interview only a year before his death, Terman had assessed his
+              tenure with characteristic modesty: “There really wasn’t much to
+              it. I had a technique—you get the best people, the best people do
+              the research, and it falls into place.”
+              <Footnotes footnoteRefs={[{ id: "footnote22", number: 22 }]} />
             </Text>
           </OneCol>
-          <Container mb={5}>
+          <Container>
             <MediaCaptionImage
               isParallax
               rounded
@@ -719,36 +761,34 @@ export default function page() {
               caption="French President François Mitterrand visits the Center for Integrated Systems (CIS) to learn about the emerging economic powerhouse called Silicon Valley, 1984. As a collaboration between Stanford and industry, CIS allowed faculty and graduate students from engineering, computer science, and applied physics to work on projects of interest to the microelectronics and computer science industries. From left to right: mainframe pioneer Gene Amdahl, Professor John Linvill, Intel cofounder Robert Noyce, Mitterrand, Vice Provost Gerald Lieberman, Professor James Meindl, Apple founder Steve Jobs, Nobel laureate and Professor Paul Berg, Genentech Chairman Thomas Perkins, Hewlett-Packard President John Young, venture capitalist (and future Stanford trustee) Burton McMurtry, and Professor Edward Feigenbaum. | Special Collections & University Archives."
             />
           </Container>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>New space for chip making</H2>
             <Text>
               For much of its early history, the Center for Integrated Systems
               had been relegated to the basement of the McCullough Building, but
               in 1983 the group broke ground for a new home. In 1985, CIS moved
-              into a facility dedicated to bridging multiple disciplines.(23) It
-              included a 10,500-square-foot integrated circuit fabrication
-              lab.(24) Such a “fab” at a university was revolutionary. As a
-              collaboration between Stanford and industry, it allowed faculty
-              and graduate students from engineering, computer science, and
-              applied physics to work on projects of interest to the
-              microelectronics and computer science industries.
+              into a facility dedicated to bridging multiple disciplines.
+              <Footnotes footnoteRefs={[{ id: "footnote23", number: 23 }]} /> It
+              included a 10,500-square-foot integrated circuit fabrication lab.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote24", number: 24 }]}
+              />{" "}
+              Such a “fab” at a university was revolutionary. As a collaboration
+              between Stanford and industry, it allowed faculty and graduate
+              students from engineering, computer science, and applied physics
+              to work on projects of interest to the microelectronics and
+              computer science industries.
             </Text>
             <Text>
               Future dean James Plummer recalled that the CIS space was an
-              experi- ment, part social and part technical. The concept of
-              housing various disciplines in one building ran “completely
-              counter” to traditional university models, he said, and continues
-              to do so at many institutions.(25)
-            </Text>
-            <Text>
-              Future dean James Plummer recalled that the CIS space was an
-              experi- ment, part social and part technical. The concept of
-              housing various disciplines in one building ran “completely
-              counter” to traditional university models, he said, and continues
-              to do so at many institutions.(25)
+              experiment, part social and part technical. The concept of housing
+              various disciplines in one building ran “completely counter” to
+              traditional university models, he said, and continues to do so at
+              many institutions.
+              <Footnotes footnoteRefs={[{ id: "footnote25", number: 25 }]} />
             </Text>
           </OneCol>
-          <TwoCol isSidebar>
+          <TwoCol isSidebar className="rs-mb-5">
             <OneCol>
               <H2 className="mt-0">A new dean</H2>
               <Text>
@@ -766,8 +806,8 @@ export default function page() {
                 surprised. . . . I thought, ‘Well, OK, at least they want me for
                 what I might regard as the right reason, so maybe I’ve got a
                 chance to do this,’” Gibbons later recalled, noting that one of
-                his objectives had been to make contributions to Silicon
-                Valley.(26)
+                his objectives had been to make contributions to Silicon Valley.
+                <Footnotes footnoteRefs={[{ id: "footnote26", number: 26 }]} />
               </Text>
               <Text>
                 In the years ahead, Gibbons would realize those contributions
@@ -806,7 +846,7 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-          <Container mb={5}>
+          <Container mb={6}>
             <MediaCaptionImage
               isParallax
               rounded
@@ -822,7 +862,7 @@ export default function page() {
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
-            sectionHeading="Explore more decades"
+            sectionHeading="Explore more stories"
             hasButton
           />
           <ContributeStoryBanner bgColor="red" hasLineArt />

@@ -646,9 +646,9 @@ export default function page() {
               decision-making and problem-solving in organic chemistry.
             </Text>
           </OneCol>
-          {/* @TODO: Adjust to full length */}
           <AnimatedPosterCard
-            className="max-w-full p-0 rs-mb-6"
+            isFullWidth
+            className="rs-mb-6"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"
@@ -669,7 +669,7 @@ export default function page() {
             </Text>
             <Text>
               SAIL colleague John Chowning, a PhD student in music, formed a
-              compu- tational music group that would evolve into the Center for
+              computational music group that would evolve into the Center for
               Computer Research in Music and Acoustics (CCRMA).
               <Footnotes footnoteRefs={[{ id: "footnote12", number: 12 }]} /> In
               1967, Chowning presented his frequency modulation (FM) synthesis
@@ -1112,7 +1112,7 @@ export default function page() {
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
-            sectionHeading="Explore more decades"
+            sectionHeading="Explore more stories"
             hasButton
           />
           <ContributeStoryBanner bgColor="red" hasLineArt />
