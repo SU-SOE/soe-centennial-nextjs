@@ -15,7 +15,6 @@ import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import BannerLineart from "@/components/images/banner-lineart";
 import { Button } from "@/components/Cta";
-import Link from "next/link";
 import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./ContributeStoryBanner.styles";
 import { AnimateInView } from "@/components/Animate";
@@ -47,12 +46,12 @@ export const ContributeStoryBanner = ({
           <AnimateInView animation="slideInFromLeft">
             <Heading mb={5} size="f4" weight="normal">
               Share{" "}
-              <Link
+              <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
                 className={styles.underline(bgColor)}
               >
                 your Stanford Engineering memories
-              </Link>
+              </a>
             </Heading>
             <Text
               size={1}
