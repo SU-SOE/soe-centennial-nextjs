@@ -77,10 +77,16 @@ export default function page() {
       <Masthead logoColor="white-red" bgColor="cardinal-red" />
       <main id="main-content">
         <article>
-          <H1 className="sr-only">
-            Stanford Engineering at 100: Transformative Breakthroughs, Boundless
-            Horizons
-          </H1>
+          <div className="cc bg-cardinal-red text-white">
+            <H1 className="m-0 rs-pt-8 rs-pb-1 flex flex-col text-center">
+              <span className="fluid-type-5">
+                Stanford Engineering at 100:{" "}
+              </span>
+              <span className="fluid-type-2">
+                Transformative Breakthroughs, Boundless Horizons
+              </span>
+            </H1>
+          </div>
           <EmbedMediaHero
             autoplay
             isPreview
