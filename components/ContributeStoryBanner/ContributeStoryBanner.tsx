@@ -14,11 +14,11 @@ import { HTMLAttributes } from "react";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import BannerLineart from "@/components/images/banner-lineart";
-import { Button } from "../Cta";
+import { Button } from "@/components/Cta";
 import Link from "next/link";
 import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./ContributeStoryBanner.styles";
-import { AnimateInView } from "../Animate";
+import { AnimateInView } from "@/components/Animate";
 
 type ContributeStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: "fog-light" | "red" | "blue" | "white";

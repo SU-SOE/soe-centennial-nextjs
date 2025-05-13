@@ -176,7 +176,7 @@ export const StoryImpactBanner = ({
           </AnimateInView>
           <FlexBox
             direction="col"
-            className={cnb("w-full h-full", {
+            className={cnb("size-full", {
               "md:1/3 lg:w-1/2": !isVertical,
             })}
           >

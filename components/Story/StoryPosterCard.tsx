@@ -128,7 +128,7 @@ export const StoryPosterCard = ({
             delay={0.5}
             className="order-first lg:order-last w-full lg:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
           >
-            <div className="w-full h-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
+            <div className="size-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
               <Image src={src} alt={alt || ""} fill className="object-cover" />
             </div>
           </AnimateInView>
