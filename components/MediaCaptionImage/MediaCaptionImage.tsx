@@ -44,13 +44,12 @@ import {
   Parallax,
   AnimateInViewProps,
 } from "@/components/Animate";
-import { WidthBox } from "@/components/WidthBox";
+import { Container } from "@/components/Container";
 import {
   imageAspectRatios,
   ImageAspectRatioType,
   PaddingType,
 } from "@/utilities/datasource";
-import { WidthType } from "@/components/Container";
 import * as styles from "./MediaCaptionImage.styles";
 import { Text } from "../Typography";
 
@@ -70,7 +69,6 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     isFullHeight?: boolean;
     isPortrait?: boolean;
     boundingWidth?: "site" | "full";
-    width?: WidthType;
     spacingTop?: PaddingType;
     spacingBottom?: PaddingType;
   };
@@ -84,7 +82,6 @@ const MediaCaptionImage = ({
   caption,
   aspectRatio = "16x9",
   isFullHeight = false,
-  boundingWidth = "full",
   spacingTop,
   spacingBottom,
   isCaptionInset,
@@ -99,9 +96,9 @@ const MediaCaptionImage = ({
   ...props
 }: MediaCaptionImageProps) => {
   return (
-    <WidthBox
+    <Container
       {...props}
-      boundingWidth={boundingWidth}
+      width="full"
       pt={spacingTop}
       pb={spacingBottom}
       className={cnb(className, styles.root(isFullHeight))}
@@ -148,7 +145,7 @@ const MediaCaptionImage = ({
           )}
         </figure>
       </AnimateInView>
-    </WidthBox>
+    </Container>
   );
 };
 

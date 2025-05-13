@@ -58,7 +58,7 @@ export const StoryPosterCard = ({
         )}
       >
         {hasBgImage && (
-          <div className="h-full w-full absolute top-0 left-0 z-0">
+          <div className="size-full absolute top-0 left-0 z-0">
             <Image
               className="ed11y-ignore object-cover z-0"
               src={src}
@@ -68,7 +68,7 @@ export const StoryPosterCard = ({
               sizes="100vw"
             />
             <div
-              className={cnb("absolute h-full w-full bg-opacity-80 z-10", {
+              className={cnb("absolute size-full bg-opacity-80 z-10", {
                 "bg-stone-dark": bgColor === "stone-dark",
                 "bg-cardinal-red-dark": bgColor === "red",
               })}
