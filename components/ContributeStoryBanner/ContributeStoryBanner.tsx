@@ -76,10 +76,7 @@ export const ContributeStoryBanner = ({
           animation="slideInFromRight"
           className={styles.buttonWrapper}
         >
-          <Button
-            isLight={bgColor !== "red"}
-            href={links.googleDocShare}
-          >
+          <Button isLight={bgColor !== "red"} href={links.googleDocShare}>
             Share a memory
           </Button>
         </AnimateInView>
