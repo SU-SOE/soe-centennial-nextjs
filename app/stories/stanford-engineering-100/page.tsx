@@ -93,7 +93,7 @@ export default function page() {
             previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png"
             title="Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons"
             className="bg-cardinal-red-dark"
-            mediaUrl="https://www.youtube.com/embed/Da0hnrQkY1o?si=qJfnAyVohcut-JwZ"
+            mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
           />
           <OneCol className="rs-mt-5">
             <Text variant="overview" className="cen-drop-cap">
