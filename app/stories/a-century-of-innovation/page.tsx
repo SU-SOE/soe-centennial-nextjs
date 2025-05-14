@@ -185,12 +185,15 @@ export default function page() {
               <Link href="https://web.cvent.com/event/967c4a52-1358-4dbd-afdd-28816d7d1634/regProcessStep1:8d294b76-68c5-46ba-bcd8-65870a1a9f04?RefId=staffandfaculty&rp=22806104-f310-451a-b20f-54d8736a76bc">
                 Centennial Celebration and Showcase
               </Link>
-              , an afternoon party on the Science and Engineering Quad, complete
-              with a showcase of more than 50 projects highlighting the school’s
-              extraordinary breadth of research and education. Later, two
-              distinguished speaker events will feature discussions with faculty
-              and alumni, including Nvidia CEO Jensen Huang in late May, and
-              another to be announced for the fall.
+              , an afternoon party on the{" "}
+              <Link href="https://news.stanford.edu/stories/2025/05/engineering-quad-donor-gift">
+                newly named Robert Rosenkranz Science and Engineering Quad
+              </Link>
+              , complete with a showcase of more than 50 projects highlighting
+              the school’s extraordinary breadth of research and education.
+              Later, two distinguished speaker events will feature discussions
+              with faculty and alumni, including Nvidia CEO Jensen Huang in late
+              May, and another to be announced for the fall.
             </Text>
             <Text>
               A new, centennial-dedicated website –{" "}
