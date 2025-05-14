@@ -45,6 +45,7 @@ export const metadata: Metadata = {
 
 const storyData1 = [
   {
+    chapter: "Video",
     superhead: "Stanford Engineering at 100",
     heading: "Transformative Breakthroughs, Boundless Horizons",
     href: "/stories/stanford-engineering-100",
