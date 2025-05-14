@@ -714,7 +714,7 @@ export default function page() {
               <Footnotes
                 footnoteRefs={[{ id: "footnote24", number: 24 }]}
               />{" "}
-              The Computer Science Department was originally in the Depart- ment
+              The Computer Science Department was originally in the Department
               of Mathematics in the School of Humanities and Sciences, where it
               remained until 1985, when it was moved to the School of
               Engineering.
