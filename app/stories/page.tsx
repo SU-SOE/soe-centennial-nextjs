@@ -45,6 +45,13 @@ export const metadata: Metadata = {
 
 const storyData1 = [
   {
+    heading:
+      "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons",
+    href: "/stories/stanford-engineering-100",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+  },
+  {
     superhead: "A Century of Innovation",
     heading: "100 Years of Stanford Engineering",
     href: "/stories/a-century-of-innovation",
@@ -118,6 +125,7 @@ export default function page() {
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
