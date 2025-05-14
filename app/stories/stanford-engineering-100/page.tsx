@@ -112,12 +112,12 @@ export default function page() {
           <OneCol>
             <Text>
               You’ll hear from Dean Jennifer Widom, as well as her predecessors
-              Persis Drell, Jim Plummer, John Hennessey, and Jim Gibbons.
-              Stanford’s 13th President, Jon Levin, and several alumni who have
-              gone on to become titans of industry, including Jensen Huang and
-              Jerry Yang, share insights into the breakthroughs that have come
-              out of the Stanford School of Engineering and gone on to change
-              lives and shape society.
+              Persis Drell, Jim Plummer, John Hennessy, and Jim Gibbons.
+              Stanford’s 13th President, Jonathan Levin, and several alumni who
+              have gone on to become titans of industry, including Jensen Huang
+              and Jerry Yang, share insights into the breakthroughs that have
+              come out of the Stanford School of Engineering and gone on to
+              change lives and shape society.
             </Text>
             <Text>
               Join us as we walk through the milestones of the past and look
