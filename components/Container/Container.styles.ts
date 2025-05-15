@@ -6,6 +6,7 @@ export const widths = {
 };
 
 export const bgColors = {
+  archway: "bg-archway text-white",
   black: "bg-black text-white",
   white: "bg-white text-stone-dark",
   blue: "bg-cen-blue-xlight text-stone-dark",

@@ -150,6 +150,7 @@ export default function page() {
             <HorizontalLineart lineartType="C" className="rs-pt-6 !rs-pb-0" />
           </div>
           <AnimatedPosterCard
+            className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"
