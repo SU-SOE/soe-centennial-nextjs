@@ -102,6 +102,7 @@ export default function page() {
           <ul className="list-none p-0">
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
@@ -126,7 +127,6 @@ export default function page() {
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
                 stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
