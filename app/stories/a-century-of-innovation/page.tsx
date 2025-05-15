@@ -132,22 +132,23 @@ export default function page() {
               the science of flight. In the 1930s, electrical engineering
               professor Fred Terman encouraged William Hewlett and David Packard
               to start their namesake company – planting the seeds of Silicon
-              Valley. Professors William Hansen and Edward Ginzton, along with
-              the brothers Russell and Sigurd Varian, introduced the klystron
-              tube, a breakthrough that proved critical to WWII-era radar and
-              paved the way for satellite communications. In the decades that
-              followed, Stanford Engineering led advances across chemical
-              engineering, materials science, and robotics. After coining the
-              term “artificial intelligence,” professor John McCarthy helped
-              launch a new era in computing in the 1960s. By the 1990s,
-              engineering graduate students were creating companies like Yahoo!,
-              Google, and Nvidia, broadening the school’s entrepreneurial spirit
-              that began in the ’30s. In the 2000s, bioengineering professor
-              Karl Deisseroth pioneered optogenetics, revolutionizing the way we
-              study the brain by enabling scientists to turn living brain cells
-              on and off with light, and chemical engineering professor Zhenan
-              Bao developed artificial skin sensitive enough to detect the
-              weight of a butterfly.
+              Valley. Terman collaborated with Physics Professor William Hansen
+              and Professor of Electrical Engineering and Applied Physics Edward
+              Ginzton, along with the brothers Russell and Sigurd Varian, who
+              introduced the klystron tube, a breakthrough that proved critical
+              to WWII-era radar and paved the way for satellite communications.
+              In the decades that followed, Stanford Engineering led advances
+              across chemical engineering, materials science, and robotics.
+              After coining the term “artificial intelligence,” professor John
+              McCarthy helped launch a new era in computing in the 1960s. By the
+              1990s, engineering graduate students were creating companies like
+              Yahoo!, Google, and Nvidia, broadening the school’s
+              entrepreneurial spirit that began in the ’30s. In the 2000s,
+              bioengineering professor Karl Deisseroth pioneered optogenetics,
+              revolutionizing the way we study the brain by enabling scientists
+              to turn living brain cells on and off with light, and chemical
+              engineering professor Zhenan Bao developed artificial skin
+              sensitive enough to detect the weight of a butterfly.
             </Text>
             <Text>
               Today, Stanford Engineering faculty continue to push the
