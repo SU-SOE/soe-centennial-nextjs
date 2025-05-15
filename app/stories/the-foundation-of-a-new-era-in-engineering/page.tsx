@@ -444,10 +444,9 @@ export default function page() {
               Still in the early years of a legendary tenure, Terman would later
               become dean of the School of Engineering (1944–1958) and provost
               of Stanford University (1955–1965). He would be proclaimed a
-              “Father of Sili- con Valley” for urging innovative Stanford
-              students like Hewlett and Packard not only to develop new
-              technologies but also to commercialize them by founding start-up
-              companies.
+              “Father of Silicon Valley” for urging innovative Stanford students
+              like Hewlett and Packard not only to develop new technologies but
+              also to commercialize them by founding start-up companies.
               <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} /> In
               the decades to come, his initiatives and influence would define
               him as a leading force in the birth of Silicon Valley.
@@ -572,7 +571,7 @@ export default function page() {
           <OneCol className="rs-mb-4">
             <Text>
               Meanwhile, in electrical engineering, an extensive reimagining of
-              the junior- and senior-level curriculum began. Traditional
+              the junior and senior-level curriculum began. Traditional
               senior-level classes in electrical circuits and machinery were
               moved to the end of the junior year to accommodate the addition of
               electives in communication in the senior year, a shift that
