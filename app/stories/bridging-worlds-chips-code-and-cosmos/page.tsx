@@ -263,9 +263,9 @@ export default function page() {
           <div className="max-w-1500 w-full cc 2xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
-              className="rs-mb-5"
+              className="rs-mb-9"
               quoteColor="red"
-              width="full"
+              width="wide"
               teaser="The last five years have shown a dramatic increase, percentage-wise, in the number of women in Stanford Engineering. . . . The most important factor is that if a woman wants to become an engineer, she can."
               source="— Assistant Dean Alfred Kirkland, 1975"
             />
@@ -311,10 +311,10 @@ export default function page() {
               <MediaCaptionImage
                 isCaptionInset
                 rounded
-                aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098484/PC0141_b10_Engineering_Corner_0511_j5tkw9.jpg"
+                aspectRatio="3x4"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265172/PC0141_b10_Engineering_Corner_0511_EWS2_yxv22y.jpg"
                 alt="A building sign displaying the word 'Engineering' prominently, indicating the facility's purpose and focus."
-                caption="Special Collections & University Archives."
+                caption="Engineering Corner, 1974. The new shield design for the School of Engineering, introduced in 1967, was added to the building in the early 1970s, before the school moved into its new home in the Terman Engineering Center in 1977. The mascle (diamond with the center removed) framework is orange, engineering’s academic color, on a blue background, denoting Stanford Engineering’s commitment to graduate education. The triple redwood fronds, found on all Stanford University heraldry, symbolize, first, “the organization, transmission, and generation of knowledge which takes place in the School and on which the scholarly growth of engineering depends,” and, second, “the tripartite character of Stanford’s School of Engineering—students, faculty, and alumni.” | Special Collections & University Archives."
               />
             </OneCol>
           </TwoCol>
@@ -408,7 +408,7 @@ export default function page() {
           </OneCol>
           <AnimatedPosterCard
             isFullWidth
-            className="rs-mb-6"
+            className="rs-mb-9"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"
@@ -463,21 +463,21 @@ export default function page() {
             bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098480/fred_terman_1977_oq4exs.jpg"
             heading="An Unlikely Friendship"
           >
-            <TwoCol>
+            <TwoCol className="mx-auto max-w-full sm:max-w-[80%] lg:max-w-850 gap-40">
               <MediaCaptionImage
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098487/SC0122_s1_b278_f10_C958-007_bphivg.jpg"
-                alt="Portrait of Martin Hellman"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098480/martin_hellman_1978_rzmqww.jpg"
+                alt="Martin Hellman"
                 caption="Martin Hellman, 1978. Hellman earned graduate degrees in electrical engineering at Stanford (MS ’67, PhD ’69), and returned to join the faculty in 1971. He became professor emeritus in 1996. | Chuck Painter/Stanford News Service."
               />
               <MediaCaptionImage
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098486/SC0122_s1_b278_f09_C832-06_rj78ue.jpg"
-                alt="Portrait of Admiral Bobby Ray Inman"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098477/1024px-Admiral_Bobby_Ray_Inman__official_CIA_photo__1983_po2pik.jpg"
+                alt="Admiral Bobby Ray Inman"
                 caption="Admiral Bobby Ray Inman, 1983. Inman became director of the NSA in 1977 and served for four years. In 1981 he became deputy director of the Central Intelligence Agency, retiring in 1982. | CIA/Wikimedia Commons."
               />
             </TwoCol>
@@ -537,6 +537,7 @@ export default function page() {
                 private-sector information and prevent government overreach.
               </Text>
               <Quote
+                className="rs-mb-5"
                 quoteColor="red"
                 body={
                   <>
