@@ -620,7 +620,7 @@ export default function page() {
           <OneCol className="rs-mb-6">
             <Text>
               In the kind of collaboration that became a hallmark of Stanford
-              Engineer- ing, the Ryan Lab worked closely with industry and
+              Engineering, the Ryan Lab worked closely with industry and
               government. At a time when electrical engineering was focused on
               developing power plants to transmit electricity over high-tension
               wires to growing cities, the lab was the first at Stanford to be
