@@ -618,7 +618,7 @@ export default function page() {
           </TwoCol>
           <MediaCaptionImage
             aspectRatio="free"
-            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062203/SC3003_StanfordEngineeringNews-EngineeringBuildingsMap001_smtrdk.jpg"
+            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747770081/EngineeringBuildingsMap-cropped_pyfsvz.jpg"
             alt="Visual representation of the campus layout, featuring essential buildings highlighted in red."
           />
           <Container bgColor="blue" pt={7} pb={7}>
