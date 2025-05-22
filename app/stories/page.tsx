@@ -45,6 +45,30 @@ export const metadata: Metadata = {
 
 const storyData1 = [
   {
+    chapter: "Video",
+    superhead: "Stanford Engineering at 100",
+    heading: "Transformative Breakthroughs, Boundless Horizons",
+    href: "/stories/stanford-engineering-100",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+  },
+  {
+    superhead: "A Century of Innovation",
+    heading: "100 Years of Stanford Engineering",
+    href: "/stories/a-century-of-innovation",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+  },
+  {
+    heading: "Letter from Dean Widom",
+    href: "/letter-from-dean-widom",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
+  },
+];
+
+const storyData2 = [
+  {
     heading: "“Preparing roads over which culture may ride in comfort”",
     chapter: "Decade 2",
     href: "/stories/the-foundation-of-a-new-era-in-engineering",
@@ -52,27 +76,11 @@ const storyData1 = [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
   },
   {
-    superhead: "100 Years of Stanford Engineering",
-    heading: "A Century of Innovation",
-    href: "/stories/a-century-of-innovation",
+    chapter: "Decade 3",
+    heading: "The Terman era",
+    href: "/stories/the-terman-era",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-];
-
-const storyData2 = [
-  {
-    heading: "A period of transformation",
-    chapter: "Decade 4",
-    href: "/stories/a-period-of-transformation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
-  },
-  {
-    heading: "Letter from Dean Widom",
-    href: "/letter-from-dean-widom",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
   },
 ];
 
@@ -91,19 +99,10 @@ export default function page() {
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />
           </div>
-          <ul className="list-none">
-            <li className="cc">
-              <StoryPosterCard
-                hasBgImage
-                chapter="Decade 1"
-                heading="“Preparing roads over which culture may ride in comfort”"
-                dek="1925 – 1934"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
-                link="/stories/preparing-roads-culture-may-ride-comfort"
-              />
-            </li>
+          <ul className="list-none p-0">
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
@@ -117,15 +116,13 @@ export default function page() {
               <HorizontalLineart lineartType="D" />
             </li>
             <li className="cc">
-              <StoryCard
-                isHeadingLarge
-                isHorizontal
-                chapter="Decade 3"
-                chapterColor="digital-red"
-                heading="The Terman era"
-                href="/stories/the-terman-era"
-                imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg"
-                bgColor="red"
+              <StoryPosterCard
+                hasBgImage
+                chapter="Decade 1"
+                heading="“Preparing roads over which culture may ride in comfort”"
+                dek="1925 – 1934"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
+                link="/stories/preparing-roads-culture-may-ride-comfort"
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
@@ -136,9 +133,21 @@ export default function page() {
                 headerTag="h2"
               />
             </li>
+            <li className="cc">
+              <StoryCard
+                isHeadingLarge
+                isHorizontal
+                chapter="Decade 4"
+                chapterColor="stone"
+                heading="A period of transformation"
+                href="/stories/a-period-of-transformation"
+                imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
+                bgColor="stone-dark"
+              />
+            </li>
           </ul>
           <div aria-hidden="true" className="flex w-full justify-end rs-mb-8">
-            <HorizontalLineart lineartType="C" />
+            <HorizontalLineart lineartType="C" className="rs-pt-6 !rs-pb-0" />
           </div>
           <AnimatedPosterCard
             className="rs-mb-7"

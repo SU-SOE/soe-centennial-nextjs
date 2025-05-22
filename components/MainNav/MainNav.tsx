@@ -73,7 +73,7 @@ export const MainNav = ({ isLight = false }: Props) => {
                       <li>
                         <Text weight="normal" size="f1" mb="0">
                           <ActionLink whiteText href="/stories">
-                            Impact stories
+                            Centennial stories
                           </ActionLink>
                         </Text>
                       </li>

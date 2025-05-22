@@ -14,6 +14,7 @@ type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> &
       | "poster"
       | "poster-invert"
       | "heading"
+      | "dark-bg"
       | "default";
   };
 
@@ -45,6 +46,11 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
     case "heading":
       linkStyles =
         "transition-all ease-in-out duration-1000 text-digital-red-light hocus:text-stone-dark underline underline-offset-[5px] decoration-digital-red-light hocus:decoration-stone-dark group-hocus:decoration-stone-dark cursor-pointer decoration-4";
+      break;
+    case "dark-bg":
+      linkStyles =
+        "transition-all ease-in-out duration-500 underline underline-offset-2 decoration-2 text-white decoration-digital-red-light hocus:text-black hocus:bg-white/80 hocus:decoration-black";
+      break;
     default:
       break;
   }

@@ -360,7 +360,7 @@ export default function page() {
             }
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-6">
             <Text mb={6}>by Andrew Myers</Text>
           </div>
           <TwoCol className="rs-mb-5">
@@ -578,7 +578,7 @@ export default function page() {
             </Text>
             <Text>
               Under Bracewell’s guidance, construction began in 1959 on a radar
-              tele- scope that would train thirty-two 10-foot-diameter parabolic
+              telescope that would train thirty-two 10-foot-diameter parabolic
               antennas at the sun’s surface and employ them in unison—acting as
               one big antenna—to map temperature variations. Unlike the passive
               radio receivers that predated it, Bracewell’s telescope had a
@@ -829,7 +829,7 @@ export default function page() {
             <Text mb="none">
               In 1958, plans were made for the Harris J. Ryan High-Voltage
               Laboratory, a Stanford institution since 1926, to add a
-              10-kilowatt nuclear “teach- ing reactor” fueled by uranium on loan
+              10-kilowatt nuclear “teaching reactor” fueled by uranium on loan
               from the Atomic Energy Commission.
               <Footnotes footnoteRefs={[{ id: "footnote34", number: 34 }]} />
             </Text>
@@ -903,7 +903,7 @@ export default function page() {
               master’s degrees, 33 engineer’s degrees, and 75 doctorates.
               <Footnotes footnoteRefs={[{ id: "footnote38", number: 38 }]} />
               That leadership was reflected in the starting salaries graduates
-              reported during the mid- 1960s, with Stanford Engineering’s
+              reported during the mid-1960s, with Stanford Engineering’s
               averages well above the national averages.
               <Footnotes footnoteRefs={[{ id: "footnote39", number: 39 }]} />
             </Text>

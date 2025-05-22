@@ -46,7 +46,7 @@ export default function LetterFromDeanPage() {
               Letter from Dean Widom
             </Heading>
           </Container>
-          <TwoCol isSidebar>
+          <TwoCol isSidebar className="rs-mb-8">
             <OneCol>
               <Text variant="overview">
                 A century ago, a visionary group of Stanford University faculty

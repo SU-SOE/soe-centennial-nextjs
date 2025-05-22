@@ -18,7 +18,7 @@ export type StoryCardProps = HTMLAttributes<HTMLElement> &
     superhead?: string;
     body?: string;
     chapter?: string;
-    chapterColor?: "stone-dark" | "archway-dark" | "digital-red";
+    chapterColor?: "stone" | "stone-dark" | "archway-dark" | "digital-red";
     href: string;
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
@@ -108,6 +108,13 @@ export const StoryCard = ({
                 {heading}
               </Link>
             </Heading>
+            {chapter && (
+              <ChapterLabel
+                text={chapter}
+                className="order-first"
+                chipColor={chapterColor}
+              />
+            )}
             {superhead && (
               <Text
                 className="order-first"
@@ -117,13 +124,6 @@ export const StoryCard = ({
               >
                 {superhead}
               </Text>
-            )}
-            {chapter && (
-              <ChapterLabel
-                text={chapter}
-                className="order-first"
-                chipColor={chapterColor}
-              />
             )}
             {body && (
               <Text size="base" mb="0" className="rs-mt-neg1">

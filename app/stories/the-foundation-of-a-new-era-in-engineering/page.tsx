@@ -112,80 +112,80 @@ const galleryImages = [
 
 const footnotes = [
   {
-    id: "footnote-1",
+    id: "footnote1",
     text: "Annual Report of the President of Stanford University for the Forty-Fourth Academic Year Ending August 31, 1935, 208.",
     number: 1,
   },
   {
-    id: "footnote-2",
+    id: "footnote2",
     text: "Annual Report of the President of Stanford University for the Forty-Eighth Academic Year Ending August 31, 1939, 250.",
     number: 2,
   },
   {
-    id: "footnote-3",
+    id: "footnote3",
     text: "Biographical Memoirs, Volume 4 (Washington, DC: National Academies Press, 1998), 309–311.",
     number: 3,
   },
   {
-    id: "footnote-4",
+    id: "footnote4",
     text: "C. Stewart Gillmor, Fred Terman at Stanford: Building a Discipline, a University, and Silicon Valley (Stanford University Press, 2004), 118.",
     number: 4,
   },
-  { id: "footnote-5", text: "Ibid., 131.", number: 5 },
-  { id: "footnote-6", text: "Ibid., 167.", number: 6 },
-  { id: "footnote-7", text: "Ibid., 167, 253.", number: 7 },
+  { id: "footnote5", text: "Ibid., 131.", number: 5 },
+  { id: "footnote6", text: "Ibid., 167.", number: 6 },
+  { id: "footnote7", text: "Ibid., 167, 253.", number: 7 },
   {
-    id: "footnote-8",
+    id: "footnote8",
     text: "Duane Benson, “A 1939 Audio Oscillator Caught Disney’s Eye—And Helped Launch HP,” All About Circuits, January 1, 2024.",
     number: 8,
   },
   {
-    id: "footnote-9",
+    id: "footnote9",
     text: "Carolyn E. Tajnai, “Fred Terman, the Father of Silicon Valley,” IEEE Design & Test of Computers 2, no. 2 (April 1985).",
     number: 9,
   },
   {
-    id: "footnote-10",
+    id: "footnote10",
     text: "Biographical Memoirs, Volume 4, 309–311.",
     number: 10,
   },
   {
-    id: "footnote-11",
+    id: "footnote11",
     text: "Annual Report of the President of Stanford University for the Forty-Seventh Academic Year Ending August 31, 1938, 12.",
     number: 11,
   },
   {
-    id: "footnote-12",
+    id: "footnote12",
     text: "Charles H. House and Raymond H. Price, The HP Phenomenon: Innovation and Business Transformation (Stanford: Stanford University Press, 2009), 15.",
     number: 12,
   },
   {
-    id: "footnote-13",
+    id: "footnote13",
     text: "Annual Report of the President of Stanford University for the Forty-Eighth Academic Year Ending August 31, 1939, 11–12.",
     number: 13,
   },
-  { id: "footnote-14", text: "Ibid., 256.", number: 14 },
+  { id: "footnote14", text: "Ibid., 256.", number: 14 },
   {
-    id: "footnote-15",
+    id: "footnote15",
     text: "Annual Report of the President of Stanford University for the Forty-Ninth Academic Year Ending August 31, 1940, 7.",
     number: 15,
   },
-  { id: "footnote-16", text: "Ibid., 11.", number: 16 },
+  { id: "footnote16", text: "Ibid., 11.", number: 16 },
   {
-    id: "footnote-17",
+    id: "footnote17",
     text: "Annual Report of the President of Stanford University for the Fiftieth Academic Year Ending August 31, 1941, 12.",
     number: 17,
   },
-  { id: "footnote-18", text: "Ibid., 240.", number: 18 },
+  { id: "footnote18", text: "Ibid., 240.", number: 18 },
   {
-    id: "footnote-19",
+    id: "footnote19",
     text: "Annual Report of the President of Stanford University for the Year Ending 1942, 253.",
     number: 19,
   },
-  { id: "footnote-20", text: "Ibid.", number: 20 },
-  { id: "footnote-21", text: "Ibid., 256.", number: 21 },
+  { id: "footnote20", text: "Ibid.", number: 20 },
+  { id: "footnote21", text: "Ibid., 256.", number: 21 },
   {
-    id: "footnote-22",
+    id: "footnote22",
     text: "Annual Report of the President of Stanford University for the Year Ending 1944, 147.",
     number: 22,
   },
@@ -208,7 +208,7 @@ export default function page() {
             alt="A vintage black and white photograph depicting a diverse group of men and women gathered together posing for a photo."
             caption="Members of the Stanford Student Chapter of the American Society of Civil Engineers gather for a photo for the Stanford Quad yearbook, 1936. Charles Marx is seated sixth from right. Women were still a significant minority in engineering: the two women pictured are students Mary DeF. Atkins (sixth from left) and Margaret Woolverton (seventh from left), both seniors. | Special Collections & University Archives."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-5">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-5">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               width="wide"
@@ -444,10 +444,9 @@ export default function page() {
               Still in the early years of a legendary tenure, Terman would later
               become dean of the School of Engineering (1944–1958) and provost
               of Stanford University (1955–1965). He would be proclaimed a
-              “Father of Sili- con Valley” for urging innovative Stanford
-              students like Hewlett and Packard not only to develop new
-              technologies but also to commercialize them by founding start-up
-              companies.
+              “Father of Silicon Valley” for urging innovative Stanford students
+              like Hewlett and Packard not only to develop new technologies but
+              also to commercialize them by founding start-up companies.
               <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} /> In
               the decades to come, his initiatives and influence would define
               him as a leading force in the birth of Silicon Valley.
@@ -572,7 +571,7 @@ export default function page() {
           <OneCol className="rs-mb-4">
             <Text>
               Meanwhile, in electrical engineering, an extensive reimagining of
-              the junior- and senior-level curriculum began. Traditional
+              the junior and senior-level curriculum began. Traditional
               senior-level classes in electrical circuits and machinery were
               moved to the end of the junior year to accommodate the addition of
               electives in communication in the senior year, a shift that

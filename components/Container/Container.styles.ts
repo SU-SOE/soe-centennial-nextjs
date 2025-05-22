@@ -13,5 +13,6 @@ export const bgColors = {
   "fog-light": "bg-fog-light text-stone-dark",
   red: "bg-cardinal-red-x-dark text-white",
   "red-gradient": "bg-cen-red-gradient text-white",
+  stone: "bg-stone text-white",
   "stone-dark": "bg-stone-dark text-white",
 };
