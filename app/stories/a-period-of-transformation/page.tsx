@@ -793,7 +793,11 @@ export default function page() {
               Laboratory (SAIL) in 1962, professor John McCarthy had long since
               coined the term “artificial intelligence.” McCarthy, a giant in
               early AI, wanted to design computers that could simulate human
-              thought31 with applications in robotics, expert systems, speech
+              thought
+              <Footnotes
+                footnoteRefs={[{ id: "footnote31", number: 31 }]}
+              />{" "}
+              with applications in robotics, expert systems, speech
               understanding, and cognitive science. He developed the programming
               language Lisp, an acronym for list processing; played computer
               chess by telegraph against Russian opponents; and invented
