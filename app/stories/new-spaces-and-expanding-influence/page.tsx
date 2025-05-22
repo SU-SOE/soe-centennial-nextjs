@@ -452,7 +452,7 @@ export default function page() {
             alt="Two men shaking hands in front of a building, with a third man observing the interaction nearby."
             caption="Left to right: David Packard, William Hewlett, and Dean of Engineering Fred Terman attend the dedication of the Hewlett-Packard wing in Stanford’s Electronics Research Laboratory, 1952. | Stanford News Service."
           />
-          <div className="max-w-1500 w-full cc 3xl:p-0">
+          <div className="w-full cc">
             <Text mb={6}>by Andrew Myers</Text>
           </div>
           <TwoCol className="rs-mb-3">

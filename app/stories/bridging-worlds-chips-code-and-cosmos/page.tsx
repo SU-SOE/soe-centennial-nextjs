@@ -260,8 +260,10 @@ export default function page() {
             alt="Black and white photo featuring a bicycle with a camera mounted on it."
             caption="The cart, first developed in 1961, was updated in 1979 with a camera on a mechanical swivel to make it fully autonomous. It rolled at a consistent walking pace, following a white line. This tracking system worked sometimes, but inconsistencies in lighting, visual interference from other objects, or an abrupt curve could all throw the cart off course. In 1979, the cart successfully made its way 20 meters through a chair-strewn room in five hours without human intervention. | The Board of Trustees of the Leland Stanford Junior University."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0">
-            <Text mb={6}>by Andrew Myers</Text>
+          <div className="max-w-1500 w-full cc 3xl:p-0">
+            <div className="w-full cc md:px-0 md:max-w-600 lg:max-w-750 xl:max-w-850 2xl:max-w-1000">
+              <Text mb={6}>by Andrew Myers</Text>
+            </div>
             <Quote
               className="rs-mb-9"
               quoteColor="red"
@@ -270,8 +272,8 @@ export default function page() {
               source="— Assistant Dean Alfred Kirkland, 1975"
             />
           </div>
-          <TwoCol className="rs-mb-5">
-            <OneCol>
+          <div className="mx-auto cc flex flex-col lg:flex-row w-full justify-around gap-5 rs-mb-5">
+            <div className="w-full lg:w-1/2">
               <H2 className="mt-0">1975 – 1984</H2>
               <Text>
                 The world saw the rise of the microprocessor, the advent of the
@@ -306,9 +308,10 @@ export default function page() {
                 research.
                 <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
               </Text>
-            </OneCol>
-            <OneCol>
+            </div>
+            <div>
               <MediaCaptionImage
+                className="mx-auto max-w-350"
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
@@ -316,8 +319,8 @@ export default function page() {
                 alt="The words 1902 and engineering engraved into the side of the building along with the School of Engineering coat of arms."
                 caption="Engineering Corner, 1974. The new shield design for the School of Engineering, introduced in 1967, was added to the building in the early 1970s, before the school moved into its new home in the Terman Engineering Center in 1977. The mascle (diamond with the center removed) framework is orange, engineering’s academic color, on a blue background, denoting Stanford Engineering’s commitment to graduate education. The triple redwood fronds, found on all Stanford University heraldry, symbolize, first, “the organization, transmission, and generation of knowledge which takes place in the School and on which the scholarly growth of engineering depends,” and, second, “the tripartite character of Stanford’s School of Engineering—students, faculty, and alumni.” | Special Collections & University Archives."
               />
-            </OneCol>
-          </TwoCol>
+            </div>
+          </div>
           <BgImageWrapper
             className="rs-mb-5"
             hasBgImage
@@ -841,7 +844,7 @@ export default function page() {
                 rounded
                 isPortrait
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/james_gibbons_1984_sxd7k5.jpg"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747956759/james-gibbons-1984_square_dmrxmf.jpg"
                 alt="A black and white photo featuring a man dressed in a formal suit and tie."
                 caption="James Gibbons, 1984, near the start of his 12 years as dean of the Stanford School of Engineering. During his tenure, the Department of Computer Science moved into the School of Engineering, and the school launched a new computer science major, video instruction, and distance learning, which extended the reach of the school globally. Gibbons’s ties to industry led him to strengthen partnerships with Silicon Valley. | School of Engineering."
               />
