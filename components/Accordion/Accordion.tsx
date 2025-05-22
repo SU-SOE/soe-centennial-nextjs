@@ -68,11 +68,10 @@ export const Accordion = ({
   const allExpanded = openItems.every((item) => item);
 
   /**
-   * Focus on first accordion item after expanding/collapsing all
+   * Expanding/collapsing all accordions
    */
   const toggleAll = (shouldExpand: boolean) => {
     setOpenItems(items.map(() => shouldExpand));
-    firstItemRef.current?.focus();
   };
 
   const showControls = !hideControls && items?.length > 1;

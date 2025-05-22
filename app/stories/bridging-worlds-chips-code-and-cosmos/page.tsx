@@ -313,7 +313,7 @@ export default function page() {
                 rounded
                 aspectRatio="3x4"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265172/PC0141_b10_Engineering_Corner_0511_EWS2_yxv22y.jpg"
-                alt="A building sign displaying the word 'Engineering' prominently, indicating the facility's purpose and focus."
+                alt="The words 1902 and engineering engraved into the side of the building along with the School of Engineering coat of arms."
                 caption="Engineering Corner, 1974. The new shield design for the School of Engineering, introduced in 1967, was added to the building in the early 1970s, before the school moved into its new home in the Terman Engineering Center in 1977. The mascle (diamond with the center removed) framework is orange, engineering’s academic color, on a blue background, denoting Stanford Engineering’s commitment to graduate education. The triple redwood fronds, found on all Stanford University heraldry, symbolize, first, “the organization, transmission, and generation of knowledge which takes place in the School and on which the scholarly growth of engineering depends,” and, second, “the tripartite character of Stanford’s School of Engineering—students, faculty, and alumni.” | Special Collections & University Archives."
               />
             </OneCol>

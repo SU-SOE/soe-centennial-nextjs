@@ -449,7 +449,7 @@ export default function page() {
             heading="New spaces and expanding influence"
             dek="1965 – 1974"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg"
-            alt=""
+            alt="Two men shaking hands in front of a building, with a third man observing the interaction nearby."
             caption="Left to right: David Packard, William Hewlett, and Dean of Engineering Fred Terman attend the dedication of the Hewlett-Packard wing in Stanford’s Electronics Research Laboratory, 1952. | Stanford News Service."
           />
           <div className="max-w-1500 w-full cc 3xl:p-0">
@@ -857,7 +857,7 @@ export default function page() {
               rounded
               aspectRatio="8x5"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/SC0122_s1_b270_f10_5037-006_kle1ak.jpg"
-              alt="A group of people looking at an object displayed on top of stairs."
+              alt="A person sits inside a large, spherical metal structure with machinery, outdoors on a grassy field with trees and a truck in the background."
               caption="Students in the Design Engineering class, 1968 and 1969. In the late 1950s, Stanford Engineering’s Mechanical Engineering Design Division pioneered a new approach to engineering and design education, emphasizing hands-on, experiential learning through environments, including the Design Loft and Machine Shop (today, Product Realization Lab). Under the leadership of faculty John E. Arnold and Robert H. McKim, the Product Design program focused on teaching design as a creative practice, integrating engineering, arts, natural science, social science, and the humanities into a comprehensive design education to address real-world needs. The division aimed to prepare engineers who developed the ability to integrate technical and artistic skills with social and environmental understanding to create innovative solutions for complex challenges. This comprehensive design approach set the foundation for a broader emphasis on interdisciplinary design, which later influenced the emergence of design practices like Smart Product Design and Interaction Design and, eventually, the Hasso Plattner Institute of Design (d.school). | Stanford News Service."
             />
             <TwoCol className="lg:nth-4n-2:*:rs-mt-8 lg:nth-4n-3:*:rs-mt-8">
@@ -867,13 +867,13 @@ export default function page() {
                   rounded
                   aspectRatio="4x3"
                   imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062194/SC0122_s1_b272_f05_7266-05_exbwdd.jpg"
-                  alt=""
+                  alt="Four people paddle together in a small makeshift boat on a body of water, each using an oar to help move the vessel forward."
                 />
                 <MediaCaptionImage
                   rounded
                   aspectRatio="4x3"
                   imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062201/SC0122_s1_b272_f05_7270-06_qowjes.jpg"
-                  alt=""
+                  alt="Four men ride a homemade cart downhill through a grassy field, wearing helmets, smiling, and exuding excitement. A crowd watches in the background."
                 />
               </OneCol>
               <OneCol>
@@ -882,14 +882,14 @@ export default function page() {
                   rounded
                   aspectRatio="4x3"
                   imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b272_f05_7265-01_xeon8p.jpg"
-                  alt=""
+                  alt="Black-and-white image of a man wearing a helmet and goggles riding a bike over a makeshift ramp. A crowd watches in a grassy field, creating a lively atmosphere."
                 />
                 <MediaCaptionImage
                   className="max-w-450"
                   rounded
                   aspectRatio="3x4"
                   imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062193/SC0122_s1_b271_f05_6030-09_j3shzw.jpg"
-                  alt=""
+                  alt="A group of people watching at an object climb up a mini set of stairs made out of blocks."
                 />
               </OneCol>
             </TwoCol>
