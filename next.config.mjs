@@ -38,6 +38,11 @@ const nextConfig = {
         destination: "/404",
         permanent: true,
       },
+      {
+        source: "/events",
+        destination: "/events/centennial-perspectives-ai-future-computing",
+        permanent: true,
+      },
     ];
   },
 };
