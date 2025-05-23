@@ -18,29 +18,38 @@ import { Button } from "@/components/Cta";
 import { TwoCol } from "@/components/Layout";
 
 export const metadata: Metadata = {
-  title: "100 Years of Stanford Engineering",
+  title:
+    "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
   description:
-    "On May 15, 1925, the Stanford University Board of Trustees approved the creation of the School of Engineering. Over the past 100 years, the school has grown beyond anything its founders could have imagined, fostering interdisciplinary collaboration, entrepreneurial spirit, and bold thinking.",
+    "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+  keywords: [
+    "Stanford Engineering",
+    "Centennial Story",
+    "AI and Future of Computing",
+    "Engineering Legacy",
+    "Innovative Research",
+    "Speaker Series",
+  ],
   openGraph: {
-    title: "100 Years of Stanford Engineering",
+    title:
+      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "Celebrating a century of innovation, leadership, and engineering excellence at Stanford University.",
+      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
-        width: 1200,
-        height: 630,
-        alt: "100 Years of Stanford Engineering",
+        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
+        alt: "Descriptive alt text for the Open Graph image showcasing AI and computing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "100 Years of Stanford Engineering",
+    title:
+      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "Stanford Engineering celebrates 100 years of impact, innovation, and leadership in the field of engineering.",
+      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
     ],
   },
 };
