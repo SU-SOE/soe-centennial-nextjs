@@ -6,7 +6,6 @@ import React from "react";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { OneCol } from "@/components/Layout";
-import { H2 } from "@/components/Typography/Header";
 import { AgendaItem } from "@/components/Event/AgendaItem";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
