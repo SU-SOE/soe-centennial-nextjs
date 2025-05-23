@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { StoryCardProps } from "@/components/Story";
+import { StoryCard, StoryCardProps } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -15,6 +15,7 @@ import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { Button } from "@/components/Cta";
+import { TwoCol } from "@/components/Layout";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -151,18 +152,25 @@ const timelineFeatureCards = [
 
 const storyData: StoryCardProps[] = [
   {
-    heading: "“Preparing roads over which culture may ride in comfort”",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    chapter: "Decade 3",
+    heading: "The Terman era",
+    href: "/stories/the-terman-era",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743098633/Spr25_SoE-Voltage_Black2_square_kgslwr.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
   },
   {
-    heading: "The foundation of a new era in engineering",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
+    heading: "New spaces and expanding influence",
+    chapter: "Decade 5",
+    href: "/stories/new-spaces-and-expanding-influence",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+  },
+  {
+    chapter: "Decade 6",
+    heading: "Bridging worlds: chips, code, and cosmos",
+    href: "/stories/bridging-worlds-chips-code-and-cosmos",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
   },
 ];
 
@@ -197,20 +205,28 @@ export default function Home() {
           </div>
         </Container>
         <StoryFeature>
-          <div className="rs-mb-2 w-full max-w-1400 mx-auto">
-            <AnimateInView animation="slideUp">
+          <TwoCol className="rs-mb-4 w-full max-w-1400 mx-auto items-center">
+            <AnimateInView animation="slideUp" delay={0.3}>
               <div className="w-full max-w-1000">
                 <Heading font="dm-mono" size="f1" mb={1}>
                   Explore stories
                 </Heading>
-                <Text size="f5" weight="normal">
+                <Text size="f5" weight="normal" leading="tight">
                   Fundamental work in science and transformational breakthroughs
                   for one hundred years.
                 </Text>
               </div>
             </AnimateInView>
-          </div>
+            <StoryCard
+              animation="slideUp"
+              chapter="Decade 1"
+              heading="“Preparing roads over which culture may ride in comfort”"
+              imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
+              href="/stories/preparing-roads-culture-may-ride-comfort"
+            />
+          </TwoCol>
           <ExploreMore
+            isThreeCol
             hasButton
             stories={storyData}
             className="py-0 my-50"
