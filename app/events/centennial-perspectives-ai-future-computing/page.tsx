@@ -166,11 +166,8 @@ export default function page() {
             </AgendaItem>
             <AgendaItem number="07" title="Centennial Presidential Remarks">
               <Text size={1}>
-                <strong>John Hennessy</strong>, President Emeritus, James F. and
-                Mary Lynn Gibbons Professor and Professor of Electrical
-                Engineering and of Computer Science and{" "}
-                <strong>Jensen Huang</strong> (&apos;MS 92), President and CEO
-                of Nvidia
+                <strong>Jonathan Levin</strong>, President and Bing Presidential
+                Professor
               </Text>
             </AgendaItem>
           </OneCol>
