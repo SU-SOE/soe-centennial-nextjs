@@ -70,21 +70,25 @@ const exploreMoreData = [
 
 const events = [
   {
-    heading: "Stanford Engineering Centennial Celebration and Showcase",
+    heading: "Centennial Perspectives: AI and the Future of Computing",
     superhead: (
       <>
-        May 15, 2025 <br /> 3:30-7:30pm
+        May 29, 2025 <br />
+        4:15-6:30pm
       </>
     ),
     body: (
       <>
         <p>
-          Celebrate 100 years of innovation with an interactive showcase
-          featuring cutting-edge research, hands-on demos, and breakthrough
-          technologies.
+          As part of Stanford Engineering’s centennial celebration,{" "}
+          <em>Centennial Perspectives</em> is a speaker series that highlights
+          innovative research and its impact on society.
         </p>
-        <Button solid href="https://cvent.me/KgDZBV">
-          Register here
+        <Button
+          solid
+          href="/events/centennial-perspectives-ai-future-computing"
+        >
+          View the agenda
         </Button>
       </>
     ),
