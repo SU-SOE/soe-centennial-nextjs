@@ -107,7 +107,8 @@ export const StoryLineBanner = ({
         className={cnb(
           "relative flex items-center justify-start w-full z-0 *:text-white",
           {
-            "p-30 sm:p-50 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8": hasLineArt,
+            "px-30 py-70 sm:px-50 sm:py-80 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8":
+              hasLineArt,
             "rs-py-10 rs-px-2 2xl:px-0": !hasLineArt,
           },
         )}
