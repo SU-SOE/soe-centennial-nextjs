@@ -69,7 +69,7 @@ export default function page() {
           </OneCol>
           <OneCol>
             <Text as="h2" size="f5" className="mt-18">
-              Agenda
+              Program
             </Text>
             <AgendaItem number="01" title="Centennial Welcome">
               <Text size={1}>
@@ -88,16 +88,16 @@ export default function page() {
               title="Stanford Emerging Technology Review 2025"
             >
               <Text size={1}>
-                <strong>Condoleezza Rice</strong>, Tad & Dianne Taube Director
-                of the Hoover Institution, Denning Professor of Global Business
-                & the Economy
+                <strong>Sec. Condoleezza Rice</strong>, Tad & Dianne Taube
+                Director of the Hoover Institution, Denning Professor of Global
+                Business & the Economy
               </Text>
               <Text>
-                The Stanford Emerging Technology Review helps America&apos;s
-                public and private sectors better understand transformational
-                technologies so the United States can seize opportunities,
-                mitigate risks, and ensure its innovation ecosystem continues to
-                thrive.
+                The Stanford Emerging Technology Review helps decision makers in
+                America&apos;s public and private sectors better understand
+                transformational technologies so the United States can seize
+                opportunities, mitigate risks, and ensure its innovation
+                ecosystem continues to thrive.
               </Text>
             </AgendaItem>
             <AgendaItem
@@ -129,9 +129,9 @@ export default function page() {
                 Science
               </Text>
               <Text>
-                Tracing early developments in multi-core processing to recent
-                advances in data flow architectures highlights a growing need
-                for greater hardware specialization to achieve improved
+                Tracing his early work on multi-core processing and his more
+                current work on data flow, leading to the conclusion that more
+                specialization is needed to continue improving performance and
                 efficiency.
               </Text>
             </AgendaItem>
@@ -160,14 +160,14 @@ export default function page() {
                 <strong>John Hennessy</strong>, President Emeritus, James F. and
                 Mary Lynn Gibbons Professor and Professor of Electrical
                 Engineering and of Computer Science and{" "}
-                <strong>Jensen Huang</strong> (&apos;MS 92), President and CEO
+                <strong>Jensen Huang</strong> (MS &apos;92), President and CEO
                 of Nvidia
               </Text>
             </AgendaItem>
-            <AgendaItem number="07" title="Centennial Presidential Remarks">
+            <AgendaItem number="07" title="Centennial Message">
               <Text size={1}>
-                <strong>Jonathan Levin</strong>, President and Bing Presidential
-                Professor
+                <strong>Morris Chang</strong> (PhD &apos;64), Founding Chairman
+                of Taiwan Semiconductor Manufactuiring Company (TSMC)
               </Text>
             </AgendaItem>
           </OneCol>
@@ -175,14 +175,10 @@ export default function page() {
             <HorizontalLineart lineartType="D" />
           </div>
           <OneCol className="rs-mb-7">
-            <AgendaItem number="08" title="Centennial Message">
+            <AgendaItem number="08" title="Closing Remarks">
               <Text size={1}>
-                <strong>Morris Chang</strong> (PhD &apos;64), Founding Chairman
-                of Taiwan Semiconductor Manufactuiring Company (TSMC)
-              </Text>
-            </AgendaItem>
-            <AgendaItem number="09" title="Closing Remarks">
-              <Text size={1}>
+                <strong>Jonathan Levin</strong>, President and Bing Presidential
+                Professor <br />
                 <strong>Dean Jennifer Widom</strong>
               </Text>
             </AgendaItem>
