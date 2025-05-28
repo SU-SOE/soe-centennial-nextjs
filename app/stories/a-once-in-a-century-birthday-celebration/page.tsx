@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "On May 15, 2025, nearly 3,000 people gathered to celebrate 100 years of Stanford Engineering with research exhibits, live music, and remarks from leaders including Jennifer Widom, Donald Knuth, Jonathan Levin, and Andrew Luck.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748470500/Editedcakeimage_hzknqw.png",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
         alt: "Four-tier white cake with 'Stanford School of Engineering' written in frosting on the side and candles shaped like the number 100 on top.",
       },
     ],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description:
       "Stanford Engineering celebrated its 100th birthday with a campus-wide celebration, live music, research exhibits, and remarks from academic and industry leaders.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748470500/Editedcakeimage_hzknqw.png",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
     ],
   },
 };
@@ -86,7 +86,7 @@ export default function page() {
           <EmbedMediaHero
             autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748470500/Editedcakeimage_hzknqw.png"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
             title="A once-in-a-century birthday celebration"
             className="bg-cardinal-red-dark"
             mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
