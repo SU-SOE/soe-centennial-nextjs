@@ -5,9 +5,9 @@ import { Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
-import { OneCol, TwoCol } from "@/components/Layout";
+import { OneCol } from "@/components/Layout";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
-import { H1, H2 } from "@/components/Typography/Header";
+import { H1 } from "@/components/Typography/Header";
 
 export const metadata: Metadata = {
   title:
