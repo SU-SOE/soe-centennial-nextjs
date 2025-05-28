@@ -10,33 +10,38 @@ import { AgendaItem } from "@/components/Event/AgendaItem";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
-  title: "Story Template Title | 100 Years of Stanford Engineering",
+  title:
+    "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
   description:
-    "This is a placeholder description for a Centennial story. Update this text to reflect the unique content of the story page.",
+    "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
   keywords: [
     "Stanford Engineering",
     "Centennial Story",
-    "Placeholder Metadata",
+    "AI and Future of Computing",
     "Engineering Legacy",
+    "Innovative Research",
+    "Speaker Series",
   ],
   openGraph: {
-    title: "Placeholder Story Title | 100 Years of Stanford Engineering",
+    title:
+      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Open Graph description for a Centennial story. Update this to summarize the story’s content for social sharing.",
+      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
-        alt: "Descriptive alt text for the Open Graph image",
+        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg", // @TODO: Replace with actual image URL
+        alt: "Descriptive alt text for the Open Graph image showcasing AI and computing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Placeholder Story Title | 100 Years of Stanford Engineering",
+    title:
+      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Twitter description for a Centennial story. Update this for improved visibility and clarity on social platforms.",
+      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
+      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg", // @TODO: Replace with actual image URL
     ],
   },
 };
