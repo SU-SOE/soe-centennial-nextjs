@@ -86,7 +86,7 @@ export default function page() {
           <EmbedMediaHero
             autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748470500/Editedcakeimage_hzknqw.png"
             title="A once-in-a-century birthday celebration"
             className="bg-cardinal-red-dark"
             mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
