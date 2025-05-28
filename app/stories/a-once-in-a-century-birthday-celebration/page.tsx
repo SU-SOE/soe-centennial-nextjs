@@ -90,54 +90,25 @@ export default function page() {
             className="bg-cardinal-red-dark"
             mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
           />
-          <TwoCol className="rs-mt-5" isSidebar>
-            <OneCol>
-              <Text variant="overview" className="cen-drop-cap">
-                A once-in-a-century birthday celebration – on May 15, 2025,
-                exactly 100 years since the official start of the School of
-                Engineering, about 3,000 people gathered in the newly named
-                Robert Rosenkranz Science and Engineering Quad to mark the
-                occasion and celebrate.
-              </Text>
-              <Text>
-                The innovative spirit of the school was on full display as
-                attendees had the opportunity to explore over 50 hands-on
-                research exhibits hosted by faculty, students, and staff.
-                Professor Emeritus Donald Knuth, Dean Jennifer Widom, President
-                Jonathan Levin, and Stanford Football General Manager Andrew
-                Luck offered congratulatory remarks. The afternoon was capped
-                off with cake, live music courtesy of the Stanford Band, and a
-                visit from the beloved Stanford Tree.
-              </Text>
-            </OneCol>
-            <OneCol className="w-full lg:w-fit">
-              <H2 className="mt-0">Chyrons</H2>
-              <Text>
-                <strong>Jonathan Levin, &apos;94</strong>
-                <br />
-                President, Stanford University
-              </Text>
-              <Text>
-                <strong>Jennifer Widom</strong>
-                <br />
-                Fredrick Emmons Terman Dean
-                <br />
-                Stanford School of Engineering
-              </Text>
-              <Text>
-                <strong>Andrew Luck, &apos;12, MA &apos;23</strong>
-                <br />
-                General Manager, Stanford Football
-              </Text>
-              <Text mb="0">
-                <strong>Donald Knuth</strong>
-                <br />
-                Fletcher Jones Professor of Computer Science, Emeritus
-                <br />
-                Stanford School of Engineering
-              </Text>
-            </OneCol>
-          </TwoCol>
+          <OneCol className="rs-mt-5">
+            <Text variant="overview" className="cen-drop-cap">
+              A once-in-a-century birthday celebration – on May 15, 2025,
+              exactly 100 years since the official start of the School of
+              Engineering, about 3,000 people gathered in the newly named Robert
+              Rosenkranz Science and Engineering Quad to mark the occasion and
+              celebrate.
+            </Text>
+            <Text>
+              The innovative spirit of the school was on full display as
+              attendees had the opportunity to explore over 50 hands-on research
+              exhibits hosted by faculty, students, and staff. Professor
+              Emeritus Donald Knuth, Dean Jennifer Widom, President Jonathan
+              Levin, and Stanford Football General Manager Andrew Luck offered
+              congratulatory remarks. The afternoon was capped off with cake,
+              live music courtesy of the Stanford Band, and a visit from the
+              beloved Stanford Tree.
+            </Text>
+          </OneCol>
           <div className="flex w-full justify-end rs-mb-1">
             <HorizontalLineart lineartType="D" />
           </div>
