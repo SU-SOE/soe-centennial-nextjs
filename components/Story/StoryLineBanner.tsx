@@ -50,12 +50,12 @@ type StoryLineBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
   superhead?: string;
   chapter?: string;
-  dek?: string;
+  dek?: React.ReactNode;
   body?: string;
   byline?: string;
   bgColor?: "stone-dark" | "red";
-  caption?: string | React.ReactNode;
-  src: string;
+  caption?: React.ReactNode;
+  src?: string;
   alt?: string;
   lineVariant?: "a" | "b" | "default";
 };
@@ -80,32 +80,35 @@ export const StoryLineBanner = ({
       as="section"
       bgColor={bgColor}
       width="full"
-      className="cc pt-[121px] md:rs-pt-9 lg:w-full lg:rs-px-7 mb-20 flex items-center justify-center relative 2xl:cc"
+      className="cc pt-[16rem] rs-pb-5 md:rs-pt-9 lg:w-full lg:rs-px-7 mb-20 flex items-center justify-center relative 2xl:cc"
     >
-      <div className="h-full w-full absolute top-0 left-0 z-0">
-        <Image
-          className="ed11y-ignore object-cover z-[-20]"
-          src={src}
-          alt={alt || ""}
-          loading={"lazy"}
-          fill
-          sizes="100vw"
-        />
-        <div
-          className={cnb(
-            "absolute h-full w-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
-            {
-              "from-stone-dark to-transparent": bgColor === "stone-dark",
-              "from-cardinal-red-dark to-transparent": bgColor === "red",
-            },
-          )}
-        />
-      </div>
+      {src && (
+        <div className="h-full w-full absolute top-0 left-0 z-0">
+          <Image
+            className="ed11y-ignore object-cover z-[-20]"
+            src={src}
+            alt={alt || ""}
+            loading={"lazy"}
+            fill
+            sizes="100vw"
+          />
+          <div
+            className={cnb(
+              "absolute h-full w-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
+              {
+                "from-stone-dark to-transparent": bgColor === "stone-dark",
+                "from-cardinal-red-dark to-transparent": bgColor === "red",
+              },
+            )}
+          />
+        </div>
+      )}
       <Container
         className={cnb(
           "relative flex items-center justify-start w-full z-0 *:text-white",
           {
-            "p-30 sm:p-50 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8": hasLineArt,
+            "px-30 py-70 sm:px-50 sm:py-80 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8":
+              hasLineArt,
             "rs-py-10 rs-px-2 2xl:px-0": !hasLineArt,
           },
         )}
@@ -135,7 +138,7 @@ export const StoryLineBanner = ({
             </Text>
           )}
           {dek && (
-            <Text mb="none" size="f3" className="rs-mt-4">
+            <Text mb="0" size="f3" className="rs-mt-4">
               {dek}
             </Text>
           )}
@@ -145,7 +148,7 @@ export const StoryLineBanner = ({
             </Text>
           )}
           {byline && (
-            <Text mb="none" size="base" className="rs-mt-4">
+            <Text mb="0" size="base" className="rs-mt-4">
               {byline}
             </Text>
           )}
