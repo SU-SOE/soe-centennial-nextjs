@@ -29,8 +29,8 @@ export const metadata: Metadata = {
       "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg", // @TODO: Replace with actual image URL
-        alt: "Descriptive alt text for the Open Graph image showcasing AI and computing",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
+        alt: "Serene nighttime courtyard scene with palm trees silhouetted against the night sky.",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg", // @TODO: Replace with actual image URL
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
     ],
   },
 };
