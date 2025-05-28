@@ -11,39 +11,40 @@ import { H1 } from "@/components/Typography/Header";
 
 export const metadata: Metadata = {
   title:
-    "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons | 100 Years of Stanford Engineering",
+    "A Once-in-a-Century Birthday Celebration | 100 Years of Stanford Engineering",
   description:
-    "Celebrating 100 years of discovery, innovation, and global impact, this story spotlights Stanford Engineering's most influential leaders, groundbreaking moments, and enduring legacy of excellence.",
+    "On May 15, 2025, exactly 100 years since the founding of Stanford School of Engineering, nearly 3,000 people gathered in the newly named Robert Rosenkranz Science and Engineering Quad for a historic celebration featuring hands-on exhibits, keynote remarks, and community festivities.",
   keywords: [
     "Stanford Engineering",
-    "Centennial Story",
+    "Centennial Celebration",
     "Engineering Innovation",
     "Stanford Alumni",
     "Engineering Legacy",
     "Jennifer Widom",
-    "Jensen Huang",
-    "Jerry Yang",
+    "Donald Knuth",
+    "Andrew Luck",
+    "Jonathan Levin",
   ],
   openGraph: {
     title:
-      "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons | 100 Years of Stanford Engineering",
+      "A Once-in-a-Century Birthday Celebration | 100 Years of Stanford Engineering",
     description:
-      "This short film celebrates a century of innovation at Stanford Engineering, featuring leaders like Jennifer Widom, Persis Drell, and industry pioneers such as Jensen Huang and Jerry Yang.",
+      "On May 15, 2025, nearly 3,000 people gathered to celebrate 100 years of Stanford Engineering with research exhibits, live music, and remarks from leaders including Jennifer Widom, Donald Knuth, Jonathan Levin, and Andrew Luck.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093197/SOE100_DOC_Logo_sj4min.png",
-        alt: "Stanford Engineering 100th Anniversary Logo",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748470500/Editedcakeimage_hzknqw.png",
+        alt: "Four-tier white cake with 'Stanford School of Engineering' written in frosting on the side and candles shaped like the number 100 on top.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons | 100 Years of Stanford Engineering",
+      "A Once-in-a-Century Birthday Celebration | 100 Years of Stanford Engineering",
     description:
-      "A century of engineering excellence: watch Stanford’s leaders and alumni reflect on innovation, discovery, and impact around the world.",
+      "Stanford Engineering celebrated its 100th birthday with a campus-wide celebration, live music, research exhibits, and remarks from academic and industry leaders.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093197/SOE100_DOC_Logo_sj4min.png",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748470500/Editedcakeimage_hzknqw.png",
     ],
   },
 };
