@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { StoryCardProps } from "@/components/Story";
+import { StoryCard, StoryCardProps } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -15,36 +15,54 @@ import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { Button } from "@/components/Cta";
+import { TwoCol } from "@/components/Layout";
 
 export const metadata: Metadata = {
-  title: "100 Years of Stanford Engineering",
+  title:
+    "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
   description:
-    "On May 15, 1925, the Stanford University Board of Trustees approved the creation of the School of Engineering. Over the past 100 years, the school has grown beyond anything its founders could have imagined, fostering interdisciplinary collaboration, entrepreneurial spirit, and bold thinking.",
+    "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+  keywords: [
+    "Stanford Engineering",
+    "Centennial Story",
+    "AI and Future of Computing",
+    "Engineering Legacy",
+    "Innovative Research",
+    "Speaker Series",
+  ],
   openGraph: {
-    title: "100 Years of Stanford Engineering",
+    title:
+      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "Celebrating a century of innovation, leadership, and engineering excellence at Stanford University.",
+      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
-        width: 1200,
-        height: 630,
-        alt: "100 Years of Stanford Engineering",
+        url: "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
+        alt: "Descriptive alt text for the Open Graph image showcasing AI and computing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "100 Years of Stanford Engineering",
+    title:
+      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "Stanford Engineering celebrates 100 years of impact, innovation, and leadership in the field of engineering.",
+      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+      "https://res.cloudinary.com/your-cloud-name/image/upload/v1234567890/placeholder-image.jpg",
     ],
   },
 };
 
 const exploreMoreData = [
+  {
+    chapter: "Video",
+    superhead: "Stanford Engineering at 100",
+    heading: "Transformative Breakthroughs, Boundless Horizons",
+    href: "/stories/stanford-engineering-100",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+  },
   {
     superhead: "A Century of Innovation",
     heading: "100 Years of Stanford Engineering",
@@ -62,21 +80,25 @@ const exploreMoreData = [
 
 const events = [
   {
-    heading: "Stanford Engineering Centennial Celebration and Showcase",
+    heading: "Centennial Perspectives: AI and the Future of Computing",
     superhead: (
       <>
-        May 15, 2025 <br /> 3:30-7:30pm
+        May 29, 2025 <br />
+        4:15-6:30pm
       </>
     ),
     body: (
       <>
         <p>
-          Celebrate 100 years of innovation with an interactive showcase
-          featuring cutting-edge research, hands-on demos, and breakthrough
-          technologies.
+          As part of Stanford Engineering’s centennial celebration,{" "}
+          <em>Centennial Perspectives</em> is a speaker series that highlights
+          innovative research and its impact on society.
         </p>
-        <Button solid href="https://cvent.me/KgDZBV">
-          Register here
+        <Button
+          solid
+          href="/events/centennial-perspectives-ai-future-computing"
+        >
+          View the agenda
         </Button>
       </>
     ),
@@ -139,18 +161,25 @@ const timelineFeatureCards = [
 
 const storyData: StoryCardProps[] = [
   {
-    heading: "“Preparing roads over which culture may ride in comfort”",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
+    chapter: "Decade 3",
+    heading: "The Terman era",
+    href: "/stories/the-terman-era",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743098633/Spr25_SoE-Voltage_Black2_square_kgslwr.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
   },
   {
-    heading: "The foundation of a new era in engineering",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
+    heading: "New spaces and expanding influence",
+    chapter: "Decade 5",
+    href: "/stories/new-spaces-and-expanding-influence",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+  },
+  {
+    chapter: "Decade 6",
+    heading: "Bridging worlds: chips, code, and cosmos",
+    href: "/stories/bridging-worlds-chips-code-and-cosmos",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
   },
 ];
 
@@ -178,20 +207,28 @@ export default function Home() {
           </div>
         </Container>
         <StoryFeature>
-          <div className="rs-mb-2 w-full max-w-1400 mx-auto">
-            <AnimateInView animation="slideUp">
+          <TwoCol className="rs-mb-4 w-full max-w-1400 mx-auto items-center">
+            <AnimateInView animation="slideUp" delay={0.3}>
               <div className="w-full max-w-1000">
                 <Heading font="dm-mono" size="f1" mb={1}>
                   Explore stories
                 </Heading>
-                <Text size="f5" weight="normal">
+                <Text size="f5" weight="normal" leading="tight">
                   Fundamental work in science and transformational breakthroughs
                   for one hundred years.
                 </Text>
               </div>
             </AnimateInView>
-          </div>
+            <StoryCard
+              animation="slideUp"
+              chapter="Decade 1"
+              heading="“Preparing roads over which culture may ride in comfort”"
+              imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
+              href="/stories/preparing-roads-culture-may-ride-comfort"
+            />
+          </TwoCol>
           <ExploreMore
+            isThreeCol
             hasButton
             stories={storyData}
             className="py-0 my-50"
@@ -249,6 +286,7 @@ export default function Home() {
               </div>
             </AnimateInView>
             <ExploreMore
+              isThreeCol
               stories={exploreMoreData}
               className="py-0 m-0"
               cardBgColor="white"

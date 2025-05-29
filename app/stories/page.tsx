@@ -45,6 +45,14 @@ export const metadata: Metadata = {
 
 const storyData1 = [
   {
+    chapter: "Video",
+    superhead: "Stanford Engineering at 100",
+    heading: "Transformative Breakthroughs, Boundless Horizons",
+    href: "/stories/stanford-engineering-100",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+  },
+  {
     superhead: "A Century of Innovation",
     heading: "100 Years of Stanford Engineering",
     href: "/stories/a-century-of-innovation",
@@ -76,6 +84,23 @@ const storyData2 = [
   },
 ];
 
+const storyData3 = [
+  {
+    heading: "New spaces and expanding influence",
+    chapter: "Decade 5",
+    href: "/stories/new-spaces-and-expanding-influence",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+  },
+  {
+    chapter: "Decade 6",
+    heading: "Bridging worlds: chips, code, and cosmos",
+    href: "/stories/bridging-worlds-chips-code-and-cosmos",
+    imageUrl:
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
+  },
+];
+
 export default function page() {
   return (
     <div className="bg-cen-blue-xlight">
@@ -94,6 +119,7 @@ export default function page() {
           <ul className="list-none p-0">
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
@@ -136,11 +162,20 @@ export default function page() {
                 bgColor="stone-dark"
               />
             </li>
+            <li className="mx-auto w-full max-w-1200">
+              <ExploreMore
+                stories={storyData3}
+                className="py-0"
+                cardBgColor="white"
+                headerTag="h2"
+              />
+            </li>
           </ul>
           <div aria-hidden="true" className="flex w-full justify-end rs-mb-8">
             <HorizontalLineart lineartType="C" className="rs-pt-6 !rs-pb-0" />
           </div>
           <AnimatedPosterCard
+            className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
             link="/timeline"

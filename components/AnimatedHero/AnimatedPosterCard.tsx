@@ -10,6 +10,7 @@ import { MaskAnimation } from "./MaskAnimation";
 import { Button } from "@/components/Cta";
 import { useReducedMotion } from "motion/react";
 import { NoMotionSvg } from "./NoMotionSvg";
+import { cnb } from "cnbuilder";
 
 type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -19,9 +20,11 @@ type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   body?: string;
   buttonText: string;
   link: string;
+  isFullWidth?: boolean;
 };
 
 export const AnimatedPosterCard = ({
+  className,
   heading,
   superhead,
   chapter,
@@ -29,6 +32,7 @@ export const AnimatedPosterCard = ({
   body,
   buttonText,
   link,
+  isFullWidth,
   ...props
 }: AnimatedPosterCardProps) => {
   const prefersReducedMotion = useReducedMotion();
@@ -36,18 +40,35 @@ export const AnimatedPosterCard = ({
     <Container
       {...props}
       width="site"
-      className="2xl:p-0 2xl:w-full 2xl:max-w-1300 rs-mb-7"
+      className={cnb(
+        {
+          "2xl:p-0 2xl:w-full 2xl:max-w-1300": !isFullWidth,
+          "w-full max-w-full lg:px-10": isFullWidth,
+        },
+        className,
+      )}
     >
       <Container
         bgColor="red"
         width="full"
-        className="relative rounded-[30px] overflow-hidden group transition duration-1000 rs-py-7 rs-px-4"
+        className={cnb(
+          "relative rounded-[30px] overflow-hidden group transition duration-1000 rs-px-4",
+          {
+            "rs-py-7": !isFullWidth,
+            "rs-py-5": isFullWidth,
+          },
+        )}
       >
         <FlexBox
           alignItems="center"
           className="flex flex-col justify-between lg:flex-row z-50 relative lg:grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
-          <div className="w-full lg:w-1/2 max-w-480">
+          <div
+            className={cnb("max-w-480", {
+              "w-full lg:w-1/2": !isFullWidth,
+              "w-full lg:w-[40%]": isFullWidth,
+            })}
+          >
             {prefersReducedMotion ? (
               <NoMotionSvg />
             ) : (
@@ -59,7 +80,13 @@ export const AnimatedPosterCard = ({
               </>
             )}
           </div>
-          <div className="flex flex-col text-left rs-pt-3 [&_p]:max-w-800 [&_h*]:max-w-1100 w-full lg:min-w-1/2">
+          <div
+            className={cnb(
+              "flex flex-col text-left rs-pt-0 w-full lg:min-w-1/2",
+              { "[&_p]:max-w-800 [&_h*]:max-w-1100": !isFullWidth },
+              { "*:max-w-1000": isFullWidth },
+            )}
+          >
             <AnimateInView animation="slideUp" delay={0.5}>
               <Heading size="f4" weight="normal" mb="0">
                 {heading}

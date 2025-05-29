@@ -132,22 +132,23 @@ export default function page() {
               the science of flight. In the 1930s, electrical engineering
               professor Fred Terman encouraged William Hewlett and David Packard
               to start their namesake company – planting the seeds of Silicon
-              Valley. Professors William Hansen and Edward Ginzton, along with
-              the brothers Russell and Sigurd Varian, introduced the klystron
-              tube, a breakthrough that proved critical to WWII-era radar and
-              paved the way for satellite communications. In the decades that
-              followed, Stanford Engineering led advances across chemical
-              engineering, materials science, and robotics. After coining the
-              term “artificial intelligence,” professor John McCarthy helped
-              launch a new era in computing in the 1960s. By the 1990s,
-              engineering graduate students were creating companies like Yahoo!,
-              Google, and Nvidia, broadening the school’s entrepreneurial spirit
-              that began in the ’30s. In the 2000s, bioengineering professor
-              Karl Deisseroth pioneered optogenetics, revolutionizing the way we
-              study the brain by enabling scientists to turn living brain cells
-              on and off with light, and chemical engineering professor Zhenan
-              Bao developed artificial skin sensitive enough to detect the
-              weight of a butterfly.
+              Valley. Terman collaborated with Physics Professor William Hansen
+              and Professor of Electrical Engineering and Applied Physics Edward
+              Ginzton, along with the brothers Russell and Sigurd Varian, who
+              introduced the klystron tube, a breakthrough that proved critical
+              to WWII-era radar and paved the way for satellite communications.
+              In the decades that followed, Stanford Engineering led advances
+              across chemical engineering, materials science, and robotics.
+              After coining the term “artificial intelligence,” professor John
+              McCarthy helped launch a new era in computing in the 1960s. By the
+              1990s, engineering graduate students were creating companies like
+              Yahoo!, Google, and Nvidia, broadening the school’s
+              entrepreneurial spirit that began in the ’30s. In the 2000s,
+              bioengineering professor Karl Deisseroth pioneered optogenetics,
+              revolutionizing the way we study the brain by enabling scientists
+              to turn living brain cells on and off with light, and chemical
+              engineering professor Zhenan Bao developed artificial skin
+              sensitive enough to detect the weight of a butterfly.
             </Text>
             <Text>
               Today, Stanford Engineering faculty continue to push the
@@ -185,12 +186,15 @@ export default function page() {
               <Link href="https://web.cvent.com/event/967c4a52-1358-4dbd-afdd-28816d7d1634/regProcessStep1:8d294b76-68c5-46ba-bcd8-65870a1a9f04?RefId=staffandfaculty&rp=22806104-f310-451a-b20f-54d8736a76bc">
                 Centennial Celebration and Showcase
               </Link>
-              , an afternoon party on the Science and Engineering Quad, complete
-              with a showcase of more than 50 projects highlighting the school’s
-              extraordinary breadth of research and education. Later, two
-              distinguished speaker events will feature discussions with faculty
-              and alumni, including Nvidia CEO Jensen Huang in late May, and
-              another to be announced for the fall.
+              , an afternoon party on the{" "}
+              <Link href="https://news.stanford.edu/stories/2025/05/engineering-quad-donor-gift">
+                newly named Robert Rosenkranz Science and Engineering Quad
+              </Link>
+              , complete with a showcase of more than 50 projects highlighting
+              the school’s extraordinary breadth of research and education.
+              Later, two distinguished speaker events will feature discussions
+              with faculty and alumni, including Nvidia CEO Jensen Huang in late
+              May, and another to be announced for the fall.
             </Text>
             <Text>
               A new, centennial-dedicated website –{" "}

@@ -578,7 +578,7 @@ export default function page() {
             </Text>
             <Text>
               Under Bracewell’s guidance, construction began in 1959 on a radar
-              tele- scope that would train thirty-two 10-foot-diameter parabolic
+              telescope that would train thirty-two 10-foot-diameter parabolic
               antennas at the sun’s surface and employ them in unison—acting as
               one big antenna—to map temperature variations. Unlike the passive
               radio receivers that predated it, Bracewell’s telescope had a
@@ -793,7 +793,11 @@ export default function page() {
               Laboratory (SAIL) in 1962, professor John McCarthy had long since
               coined the term “artificial intelligence.” McCarthy, a giant in
               early AI, wanted to design computers that could simulate human
-              thought31 with applications in robotics, expert systems, speech
+              thought
+              <Footnotes
+                footnoteRefs={[{ id: "footnote31", number: 31 }]}
+              />{" "}
+              with applications in robotics, expert systems, speech
               understanding, and cognitive science. He developed the programming
               language Lisp, an acronym for list processing; played computer
               chess by telegraph against Russian opponents; and invented
@@ -825,7 +829,7 @@ export default function page() {
             <Text mb="none">
               In 1958, plans were made for the Harris J. Ryan High-Voltage
               Laboratory, a Stanford institution since 1926, to add a
-              10-kilowatt nuclear “teach- ing reactor” fueled by uranium on loan
+              10-kilowatt nuclear “teaching reactor” fueled by uranium on loan
               from the Atomic Energy Commission.
               <Footnotes footnoteRefs={[{ id: "footnote34", number: 34 }]} />
             </Text>
@@ -899,7 +903,7 @@ export default function page() {
               master’s degrees, 33 engineer’s degrees, and 75 doctorates.
               <Footnotes footnoteRefs={[{ id: "footnote38", number: 38 }]} />
               That leadership was reflected in the starting salaries graduates
-              reported during the mid- 1960s, with Stanford Engineering’s
+              reported during the mid-1960s, with Stanford Engineering’s
               averages well above the national averages.
               <Footnotes footnoteRefs={[{ id: "footnote39", number: 39 }]} />
             </Text>

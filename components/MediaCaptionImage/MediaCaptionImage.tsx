@@ -112,17 +112,31 @@ const MediaCaptionImage = ({
             )}
           >
             {!!imageSrc && (
-              <Parallax offset={isParallax ? 60 : 0}>
-                <picture>
-                  <Image
-                    src={imageSrc}
-                    alt={alt || ""}
-                    height="2000"
-                    width="2000"
-                    className={styles.image(isParallax)}
-                  />
-                </picture>
-              </Parallax>
+              <>
+                {isParallax ? (
+                  <Parallax offset={60}>
+                    <picture>
+                      <Image
+                        src={imageSrc}
+                        alt={alt || ""}
+                        height="2000"
+                        width="2000"
+                        className={styles.image(isParallax)}
+                      />
+                    </picture>
+                  </Parallax>
+                ) : (
+                  <picture>
+                    <Image
+                      src={imageSrc}
+                      alt={alt || ""}
+                      height="2000"
+                      width="2000"
+                      className={styles.image(isParallax)}
+                    />
+                  </picture>
+                )}
+              </>
             )}
           </div>
           {caption && (

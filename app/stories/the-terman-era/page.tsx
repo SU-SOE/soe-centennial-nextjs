@@ -309,7 +309,7 @@ export default function page() {
                 Donald Tresidder named Terman the third dean of the Stanford
                 School of Engineering, with a strong endorsement from the
                 engineering faculty. “Dr. Terman’s scholarly contributions in
-                the field of electrical engineer- ing and his administration of
+                the field of electrical engineering and his administration of
                 one of America’s largest war research projects place him among
                 the outstanding engineers in the country,” Tresidder said,
                 announcing Terman’s appointment.
@@ -363,7 +363,7 @@ export default function page() {
                 className="mb-0"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/hugh_skilling_dipkk1.jpg"
                 aspectRatio="1x1"
-                caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty- three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945. | Stanford News Service."
+                caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945. | Stanford News Service."
               />
             </StorySidebar>
           </TwoCol>
@@ -454,7 +454,7 @@ export default function page() {
                 className="mb-0"
                 aspectRatio="1x1"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00020166_001_bvjrae.jpg"
-                caption="Clarkson H. Oglesby originated the undergraduate construction option in civil engineering and in the mid- 1950s helped expand it into a program leading to the MS, engineer, and doctoral degrees. | Stanford News Service."
+                caption="Clarkson H. Oglesby originated the undergraduate construction option in civil engineering and in the mid-1950s helped expand it into a program leading to the MS, engineer, and doctoral degrees. | Stanford News Service."
               />
             </StorySidebar>
           </TwoCol>
@@ -544,7 +544,7 @@ export default function page() {
           <OneCol className="rs-mt-6">
             <Text>
               The Microwave Lab would exceed even Terman’s high expectations,
-              even- tually producing fundamental research in nuclear physics,
+              eventually producing fundamental research in nuclear physics,
               high-powered microwave tubes, microwave and transistor
               engineering, and plasma and laser physics. In the following
               decade, it would be developed into the Stanford Linear Accelerator
@@ -714,7 +714,7 @@ export default function page() {
               <Footnotes
                 footnoteRefs={[{ id: "footnote24", number: 24 }]}
               />{" "}
-              The Computer Science Department was originally in the Depart- ment
+              The Computer Science Department was originally in the Department
               of Mathematics in the School of Humanities and Sciences, where it
               remained until 1985, when it was moved to the School of
               Engineering.
@@ -729,7 +729,7 @@ export default function page() {
                 rounded
                 aspectRatio="4x3"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766095/CC183_avv3z0.jpg"
-                caption="John G. Herriot, professor of mathematics, when he became the first director of the newly founded Computation Center in 1953. In spring 1955, he taught the first programming course, “Theory and Operation of Computing Machines,” to twenty-five students using an IBM Card- Programmed Calculator, Model II. Computer Science was in the Department of Mathematics until 1985, when it was moved to the School of Engineering. | Stanford News Service."
+                caption="John G. Herriot, professor of mathematics, when he became the first director of the newly founded Computation Center in 1953. In spring 1955, he taught the first programming course, “Theory and Operation of Computing Machines,” to twenty-five students using an IBM Card-Programmed Calculator, Model II. Computer Science was in the Department of Mathematics until 1985, when it was moved to the School of Engineering. | Stanford News Service."
               />
             </div>
             <div>
@@ -806,7 +806,7 @@ export default function page() {
                 fluid mechanics—particularly in boundary-layer theory and
                 numerical models. She taught courses on boundary-layer theory;
                 introduced a novel, year-long sequence of courses in
-                mathematical hydro- and aerodynamics; developed new courses in
+                mathematical hydro and aerodynamics; developed new courses in
                 the theory of automatic controls; advised doctoral students for
                 dissertations in aerodynamic theory; and established the weekly
                 Fluid Mechanics Seminar, which continues at Stanford today.

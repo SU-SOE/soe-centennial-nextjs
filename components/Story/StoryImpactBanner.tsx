@@ -95,7 +95,6 @@ export const StoryImpactBanner = ({
       width="full"
       mb={5}
       className={cnb("relative", className)}
-      role="figure"
       aria-labelledby="hero-caption"
     >
       <Container

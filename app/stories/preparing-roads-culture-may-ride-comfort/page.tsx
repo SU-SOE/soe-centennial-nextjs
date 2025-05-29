@@ -457,7 +457,7 @@ export default function page() {
               aspectRatio="4x3"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
               alt="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925"
-              caption="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925. From left o right, the buildings today are the Frederick Emmons Terman Engineering Laboratory (500), the George Havas Engineering Building (520), and Mechanical Engineering (530). Also visible is the roof corner of what is today the Thomas F. Peterson Engineering Laboratory (550), home of the Hasso Plattner Institute of Design (d.school). | Berton W. Crandall photographs, Hoover Institution Library & Archives."
+              caption="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925. From left to right, the buildings today are the Frederick Emmons Terman Engineering Laboratory (500), the George Havas Engineering Building (520), and Mechanical Engineering (530). Also visible is the roof corner of what is today the Thomas F. Peterson Engineering Laboratory (550), home of the Hasso Plattner Institute of Design (d.school). | Berton W. Crandall photographs, Hoover Institution Library & Archives."
             />
           </BgImageWrapper>
           <OneCol>
@@ -620,7 +620,7 @@ export default function page() {
           <OneCol className="rs-mb-6">
             <Text>
               In the kind of collaboration that became a hallmark of Stanford
-              Engineer- ing, the Ryan Lab worked closely with industry and
+              Engineering, the Ryan Lab worked closely with industry and
               government. At a time when electrical engineering was focused on
               developing power plants to transmit electricity over high-tension
               wires to growing cities, the lab was the first at Stanford to be
