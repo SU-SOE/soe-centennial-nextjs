@@ -4,6 +4,7 @@ import { Quote } from "@/components/Quote";
 import {
   BgImageWrapper,
   ExploreMore,
+  Footnotes,
   FootnotesList,
   ScrollyBubble,
   Scrollytelling,
@@ -18,33 +19,38 @@ import { OneCol, TwoCol } from "@/components/Layout";
 import { H2 } from "@/components/Typography/Header";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
+import { TimelineCard } from "@/components/Timeline";
 
 export const metadata: Metadata = {
-  title: "Story Template Title | 100 Years of Stanford Engineering",
+  title: "Redevelopment and an earthquake | 100 Years of Stanford Engineering",
   description:
-    "This is a placeholder description for a Centennial story. Update this text to reflect the unique content of the story page.",
+    "The seventh decade of the School of Engineering began with a major development. After more than twenty years in the School of Humanities and Sciences—and much deliberation—in April 1985 approval came for the Department of Computer Science to move into the School of Engineering.",
   keywords: [
     "Stanford Engineering",
-    "Centennial Story",
-    "Placeholder Metadata",
+    "Redevelopment",
+    "Earthquake",
+    "Department of Computer Science",
     "Engineering Legacy",
+    "Stanford History",
   ],
   openGraph: {
-    title: "Placeholder Story Title | 100 Years of Stanford Engineering",
+    title:
+      "Redevelopment and an earthquake | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Open Graph description for a Centennial story. Update this to summarize the story’s content for social sharing.",
+      "The seventh decade of the School of Engineering began with a major development. In April 1985 approval came for the Department of Computer Science to move into the School of Engineering.",
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg",
-        alt: "Descriptive alt text for the Open Graph image",
+        alt: "Two people work at a vintage computer, surrounded by dot matrix printer paper and documents.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Placeholder Story Title | 100 Years of Stanford Engineering",
+    title:
+      "Redevelopment and an earthquake | 100 Years of Stanford Engineering",
     description:
-      "This is a placeholder Twitter description for a Centennial story. Update this for improved visibility and clarity on social platforms.",
+      "In April 1985, the Department of Computer Science got approval to move into the School of Engineering, marking a major development for the school.",
     images: [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg",
     ],
@@ -75,13 +81,237 @@ const exploreStoriesData = [
 const footnotesList = [
   {
     number: 1,
-    id: "footnotes1",
-    text: "Footnote 1",
+    id: "footnote1",
+    text: "Todd Ramming, “Computer Dept. to Switch Schools,” Stanford Daily, April 15, 1985, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1985/04/15?page=1&section=MODSMD_ARTICLE5#article",
   },
   {
     number: 2,
-    id: "footnotes2",
-    text: "Footnotes 2",
+    id: "footnote2",
+    text: "Stanford Historical Society Oral History Program, James F. Gibbons: A Series of Oral History Interviews, 40–41.",
+    sourceLink: "https://stacks.stanford.edu/file/xd819md3089/xd819md3089.pdf",
+  },
+  {
+    number: 3,
+    id: "footnote3",
+    text: "Stanford School of Engineering, Annual Report 1985–1986, 14.",
+    sourceLink: "",
+  },
+  {
+    number: 4,
+    id: "footnote4",
+    text: "Joel Shirkin, “Engineers Explore New Technology for Stuck-in-the-Past Building Industry,” Campus Report, April 2, 1986, 11.",
+    sourceLink:
+      "https://stacks.stanford.edu/file/gy848tf7680/gy848tf7680_31_0000.pdf",
+  },
+  {
+    number: 5,
+    id: "footnote5",
+    text: "Ben Liu, “The Next Dimension of Computer-Aided Design,” Stanford Daily, March 11, 1998, 7A.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1998/03/11?page=7&section=MODSMD_ARTICLE29#article",
+  },
+  {
+    number: 6,
+    id: "footnote6",
+    text: "Perry L. McCarty, Stanford’s Environmental Engineering and Science Program: The First Fifty Years (Stanford Environmental Engineering Special Publication, 2013), 25.",
+    sourceLink:
+      "https://web.stanford.edu/group/ews/50th/docs/eesfirst50years.pdf",
+  },
+  {
+    number: 7,
+    id: "footnote7",
+    text: "Amy Adams, “Robert Cannon, Stanford Engineer Who Set the Course for Future Robots, Dies at 93,” Stanford News, August 24, 2017.",
+    sourceLink:
+      "https://news.stanford.edu/2017/08/24/robert-cannon-engineer-set-course-future-robots-dies-93",
+  },
+  {
+    number: 8,
+    id: "footnote8",
+    text: "Department of Aeronautics and Astronautics, Stanford, Aeronautics and Astronautics 2008, September 11, 2007, 23.",
+    sourceLink:
+      "https://web.stanford.edu/~cantwell/History_of_AA_at_Stanford_and_AA_Vision_2008/AA_Vision_2008.pdf",
+  },
+  {
+    number: 9,
+    id: "footnote9",
+    text: "Stanford School of Engineering, Annual Report 1985–1986, 14.",
+    sourceLink: "",
+  },
+  {
+    number: 10,
+    id: "footnote10",
+    text: "“Hewlett Pledges Record $50 Million,” Campus Report, April 9, 1986, 1.",
+    sourceLink:
+      "https://stacks.stanford.edu/file/gy848tf7680/gy848tf7680_31_0000.pdf",
+  },
+  {
+    number: 11,
+    id: "footnote11",
+    text: "Ginny McCormick, “New Quad on the Block,” Stanford magazine (November/December 1999).",
+    sourceLink: "https://stanfordmag.org/contents/new-quad-on-the-block",
+  },
+  {
+    number: 12,
+    id: "footnote12",
+    text: "Andrew Myers, “Fearless: The Stanford Engineering Venture Fund at Twenty-Five,” Stanford Engineering, September 27, 2012.",
+    sourceLink:
+      "https://engineering.stanford.edu/news/fearless-stanford-engineering-venture-fund-twenty-five",
+  },
+  {
+    number: 13,
+    id: "footnote13",
+    text: "Martha Moody, “Engineering School Is Tops: Stanford Trains Largest Number of Engineers in Nation,” Stanford Daily, August 12, 1986, 3.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1986/08/12?page=3&section=MODSMD_ARTICLE8#article",
+  },
+  {
+    number: 14,
+    id: "footnote14",
+    text: "Leslie Saul, “Job Prospects Good for Grads: MSU Study Foresees Increase in Jobs Despite Stock Crash,” Stanford Daily, January 26, 1988, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1988/01/26?page=1&section=MODSMD_ARTICLE4#article",
+  },
+  {
+    number: 15,
+    id: "footnote15",
+    text: "Aaron Thode, “First Stanford Seminar Televised: Engineers Are Cheering as ‘Double E’ Hits TV,” Stanford Daily, February 2, 1990, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1990/02/02?page=1&section=MODSMD_ARTICLE4#article",
+  },
+  {
+    number: 16,
+    id: "footnote16",
+    text: "Bruce LeDesma, “Stanford Instructional Television Network: Network Brings Classes to Working Students,” Stanford Daily, November 20, 1987, 8.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1987/11/20?page=8&section=MODSMD_ARTICLE25#article",
+  },
+  {
+    number: 17,
+    id: "footnote17",
+    text: "Megan Himan, “Top Prize for SITN: Network Honored as Best in Nation,” Stanford Daily, December 2, 1994, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1993/12/02?page=1&section=MODSMD_ARTICLE1#article",
+  },
+  {
+    number: 18,
+    id: "footnote18",
+    text: "Mae C. Jemison, “Jemison’s Call to Action Leavened with Humor,” Stanford University News Service Archives, 1996.",
+    sourceLink: "https://stacks.stanford.edu/file/tf893kf5867/tf893kf5867.pdf",
+  },
+  {
+    number: 19,
+    id: "footnote19",
+    text: "Jenna Land, “‘The World Is Yours to See: Astronaut Still Looking Ahead,” Stanford Daily Archives, 1996.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1996/02/07?page=1&section=MODSMD_ARTICLE2#article",
+  },
+  {
+    number: 20,
+    id: "footnote20",
+    text: "Stanford Stories from the Archives digital exhibit, “Student life by decade: 1970s.”",
+    sourceLink: "https://exhibits.stanford.edu/stanford-stories/feature/1970s",
+  },
+  {
+    number: 21,
+    id: "footnote21",
+    text: "Black @ Stanford digital exhibit, “The Real News, 1973-12-03.”",
+    sourceLink:
+      "https://exhibits.stanford.edu/black-at-stanford/catalog/kc839pw8206",
+  },
+  {
+    number: 22,
+    id: "footnote22",
+    text: "Stanford Engineering: 2018 Heroes, “Mae Jemison.”",
+    sourceLink:
+      "https://engineering.stanford.edu/about/heroes/2018-heroes/mae-jemison",
+  },
+  {
+    number: 23,
+    id: "footnote23",
+    text: "Jason Bloomstein, “A Clogged Engineering Pipeline: Women and Minorities Face Academic and Institutional Obstacles,” Stanford Daily, February 21, 1989, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1989/02/21?page=1&section=MODSMD_ARTICLE2#article",
+  },
+  {
+    number: 24,
+    id: "footnote24",
+    text: "John Pollack, “Stanford Engineering Attracts Top Students,” Stanford Daily, May 12, 1987, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1987/05/12?page=1&section=MODSMD_ARTICLE5#article",
+  },
+  {
+    number: 25,
+    id: "footnote25",
+    text: "Lisa Nellor, “Entering a Male-Dominated Field: Women Find Many Obstacles on Engineering Path,” Stanford Daily, November 4, 1989, 2.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1989/11/14?page=2&section=MODSMD_ARTICLE9#article",
+  },
+  {
+    number: 26,
+    id: "footnote26",
+    text: "Ken Yew, “GE Gives Grant to Attract Minorities,” Stanford Daily, January 25, 1989, 2.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1989/01/25?page=2&section=MODSMD_ARTICLE9#article",
+  },
+  {
+    number: 27,
+    id: "footnote27",
+    text: "Elisa Nino-Murcia, “Techie Double Standards: Gender Bias, Obstacles Remain in Engineering,” Stanford Daily, December 4, 1992, 1.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1992/12/04?page=1&section=MODSMD_ARTICLE7#article",
+  },
+  {
+    number: 28,
+    id: "footnote28",
+    text: "Kerri Lee Alexander, “Mae Jemison, 1956–,” National Women’s History Museum, 2019.",
+    sourceLink:
+      "https://www.womenshistory.org/education-resources/biographies/mae-jemison",
+  },
+  {
+    number: 29,
+    id: "footnote29",
+    text: "“Ellen Ochoa,” NASA.",
+    sourceLink: "https://www.nasa.gov/people/ellen-ochoa",
+  },
+  {
+    number: 30,
+    id: "footnote30",
+    text: "Morgan Smith, “A Woman’s Right to Fly and Fight,” Smithsonian Magazine (August 2020).",
+    sourceLink:
+      "https://www.smithsonianmag.com/air-space-magazine/right-fly-and-fight-180975332/",
+  },
+  {
+    number: 31,
+    id: "footnote31",
+    text: "Nicholas Anderson, “Engineering School Opens Quake Center,” Stanford Daily, June 24, 1988, 2.",
+    sourceLink:
+      "https://archives.stanforddaily.com/1988/06/24?page=2&section=MODSMD_ARTICLE8#article",
+  },
+  {
+    number: 32,
+    id: "footnote32",
+    text: "“Computer Science @ Stanford,” Stanford Libraries.",
+    sourceLink: "https://exhibits.stanford.edu/cs/about/timeline",
+  },
+  {
+    number: 33,
+    id: "footnote33",
+    text: "Karen E. Bartholomew, Claude S. Brinegar, and Roxanne Nilan, eds., A Chronology of Stanford University and Its Founders, 1824–2000 (Stanford Historical Society, 2001), 132.",
+    sourceLink: "",
+  },
+  {
+    number: 34,
+    id: "footnote34",
+    text: "“25 Years Later: The Legacy of the Loma Prieta Quake at Stanford,” Stanford News, October 2014.",
+    sourceLink: "https://news-archive.stanford.edu/features/2014/loma-prieta/",
+  },
+  {
+    number: 35,
+    id: "footnote35",
+    text: "“Edward A (‘Ed’) Feigenbaum,” ACM A.M. Turing Awards.",
+    sourceLink: "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
   },
 ];
 
@@ -92,17 +322,17 @@ export default function page() {
       <main id="main-content">
         <article>
           <StoryImpactBanner
+            hasBgImage
             bgColor="stone-dark"
-            chapter="Decade 1"
-            heading="“Preparing roads over which culture may ride in comfort”"
-            dek="1925 – 1934"
+            chapter="Decade 7"
+            heading="Redevelopment and an earthquake"
+            dek="1985 – 1994"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg"
-            alt=""
+            alt="Two people work at a vintage computer, surrounded by dot matrix printer paper and documents."
           />
           <div className="max-w-1500 w-full cc 2xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
-              width="wide"
               teaser=". . . The future of computer science lay in engineering—in problem-solving, not in theory, and problem-solving is an essentially engineering thing to do."
               source="— Dean James Gibbons"
             />
@@ -110,7 +340,7 @@ export default function page() {
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>1985 – 1994</H2>
             <Text variant="overview">
               The seventh decade of the School of Engineering began with a major
@@ -120,16 +350,18 @@ export default function page() {
               the School of Engineering. The transition was completed by the end
               of the year. “Both schools are in favor of it,” said Norman
               Wessells, dean of the School of Humanities and Sciences. “The
-              department should be where it will function best.”(1) It was “a
-              very, very big deal,” Dean Gibbons later recalled. “[The
+              department should be where it will function best.”
+              <Footnotes footnoteRefs={[{ id: "footnote1", number: 1 }]} /> It
+              was “a very, very big deal,” Dean Gibbons later recalled. “[The
               Department of Computer Science] certainly was often number one in
               the country. . . . It was clear to me and to a few of my
               colleagues that the future of computer science lay in
               engineering—in problem-solving, not in theory, and problem-solving
-              is an essentially engineering thing to do.”(2)
+              is an essentially engineering thing to do.”
+              <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mb-5">
             <OneCol>
               <MediaCaptionImage
                 rounded
@@ -144,13 +376,16 @@ export default function page() {
               <Text>
                 The department also added an undergraduate degree in the fall of
                 1985, and, by the following June, seven students had earned
-                their BS degrees in computer science.(3) Signifying the growing
-                influence of computers and computational approaches across
-                engineering, in 1988 computer science faculty members Gene Golub
-                and Joseph Oliger founded a degree-granting program in
-                Scientific Computing and Computational Mathematics, a forerunner
-                of today’s Institute for Computational and Mathematical
-                Engineering (ICME), established in 2004.
+                their BS degrees in computer science.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote3", number: 3 }]}
+                />{" "}
+                Signifying the growing influence of computers and computational
+                approaches across engineering, in 1988 computer science faculty
+                members Gene Golub and Joseph Oliger founded a degree-granting
+                program in Scientific Computing and Computational Mathematics, a
+                forerunner of today’s Institute for Computational and
+                Mathematical Engineering (ICME), established in 2004.
               </Text>
               <Text>
                 While Stanford continued to dominate one of the newest fields in
@@ -168,24 +403,33 @@ export default function page() {
                 the Stanford Construction Institute, an affiliate program for
                 industrial sponsors who not only funded the program but also
                 provided practical and research opportunities to faculty and
-                students.(4) From the first industrial affiliate program in
-                1968, called the Computer Forum, the school would develop more
-                than fifty industrial affiliate programs, which provide
-                essential funding for research and innovation.
+                students.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote4", number: 4 }]}
+                />{" "}
+                From the first industrial affiliate program in 1968, called the
+                Computer Forum, the school would develop more than fifty
+                industrial affiliate programs, which provide essential funding
+                for research and innovation.
               </Text>
             </OneCol>
           </TwoCol>
           <Scrollytelling bgImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/W645-13_rc3tnj.jpg">
+            <H2 className="mx-auto  md:w-2/3 xl:w-1/2 mt-0" size={3}>
+              The Stanford Solar Car tests limits under extreme conditions
+            </H2>
             <MediaCaptionImage
               rounded
               isCaptionInset
-              aspectRatio="4x3"
+              isParallax
+              className="max-w-850 mx-auto"
+              aspectRatio="8x5"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/stanford_solar_car_u2yced.jpg"
               alt="A solar-powered vehicle stands parked outside a building with a person riding a bike in the background."
               caption="The Stanford Solar Car Project (SSCP) Luminos, 2013. Luminos was built to compete in the 2013 World Solar Challenge, a 2,000-mile trek across the Australian Outback. "
             />
             <ScrollyBubble>
-              <Text>
+              <Text mb="0">
                 The student-run, university-wide Stanford Solar Car Project
                 (SSCP) designs, builds, and races solar-powered vehicles in
                 international competitions every other year, to test the limits
@@ -199,6 +443,13 @@ export default function page() {
                 Engineering Center.
               </Text>
             </ScrollyBubble>
+            <MediaCaptionImage
+              className="rs-mt-3 max-w-1500 mx-auto"
+              aspectRatio="3x4"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748558326/Stanford-Daily_Solar-Car_vzamnx.jpg"
+              alt=""
+              caption="An excerpt from The Stanford Daily, vol. 195, no. 64, 1989. | Linda A. Cicero/Stanford News Service."
+            />
           </Scrollytelling>
           <OneCol>
             <Text>
@@ -213,7 +464,8 @@ export default function page() {
               enhance planning and coordination. CIFE researchers would go on to
               achieve improved plant maintenance systems, develop efficient pipe
               routing using mobile robots, and leverage the Internet for
-              construction efficiency.(5)
+              construction efficiency.
+              <Footnotes footnoteRefs={[{ id: "footnote5", number: 5 }]} />
             </Text>
             <Text>
               In 1991, the Department of Civil Engineering added an
@@ -225,7 +477,8 @@ export default function page() {
               management. Meanwhile, in the same department, Koseff and
               colleague Robert Street established the field of environmental
               fluid mechanics, pushing theoretical and experimental boundaries
-              in the study of rivers, lakes, and oceans.(6)
+              in the study of rivers, lakes, and oceans.
+              <Footnotes footnoteRefs={[{ id: "footnote6", number: 6 }]} />
             </Text>
             <Text>
               Keeping up with the trend of cross-disciplinary work, and with an
@@ -235,9 +488,11 @@ export default function page() {
               class of robots that were “deft, light and flexible and don’t use
               much energy.” Cannon noted that “the robots you see today in
               factories or in space are not very bright, and they are also
-              awfully clumsy.”(7) ARL faculty would make major contributions to
-              the field and extend human reach into distant and dangerous
-              environments.(8)
+              awfully clumsy.”
+              <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} /> ARL
+              faculty would make major contributions to the field and extend
+              human reach into distant and dangerous environments.
+              <Footnotes footnoteRefs={[{ id: "footnote8", number: 8 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
@@ -256,7 +511,8 @@ export default function page() {
               its location relative to the main quad. Expected to take fifteen
               years to complete, the project was considered at the time to be
               the largest campus redevelopment effort by any university in the
-              United States.(9)
+              United States.
+              <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} />
             </Text>
             <Text>
               “Stanford has been important to me and my family, to my company,
@@ -264,7 +520,8 @@ export default function page() {
               strengthened for the future so that it will continue to benefit
               society through educating promising young people and performing
               research essential to the progress of mankind,” Hewlett said at a
-              ceremony announcing the gift.(10)
+              ceremony announcing the gift.
+              <Footnotes footnoteRefs={[{ id: "footnote10", number: 10 }]} />
             </Text>
             <Text>
               The plans were grand, but two major incidents stalled them. First,
@@ -275,10 +532,11 @@ export default function page() {
               federal research funding. In late 1994, David Packard and Bill
               Hewlett together committed an additional $77.4 million, the
               biggest gift in Stanford history, to complete the Near West Campus
-              project.(11)
+              project.
+              <Footnotes footnoteRefs={[{ id: "footnote11", number: 11 }]} />
             </Text>
           </OneCol>
-          <TwoCol>
+          <TwoCol className="rs-mt-4">
             <MediaCaptionImage
               rounded
               isCaptionInset
@@ -314,13 +572,14 @@ export default function page() {
               matching funds for twenty additional graduate fellowships. The
               final $6 million transfer established SEVF II, which continues the
               mission with new volunteers, even higher returns, and increased
-              impact.(12)
+              impact.
+              <Footnotes footnoteRefs={[{ id: "footnote12", number: 12 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="D" />
           </div>
-          <TwoCol isSidebar>
+          <TwoCol isSidebar className="rs-mb-5">
             <OneCol>
               <H2>Quality over quantity</H2>
               <Text>
@@ -331,7 +590,8 @@ export default function page() {
                 top-quality program, not the biggest, said Robert Eustis,
                 professor of mechanical engineering and senior associate dean at
                 the School of Engineering. “We are large, but we’re about where
-                we want to be.”(13)
+                we want to be.”
+                <Footnotes footnoteRefs={[{ id: "footnote13", number: 13 }]} />
               </Text>
               <Text>
                 Many students might have been drawn to engineering for its
@@ -341,7 +601,8 @@ export default function page() {
                 survey of employers predicted a modest rise in hiring and an
                 increase in starting salaries, with Stanford graduates expected
                 to be at the high end of the starting salary range in every
-                discipline.(14)
+                discipline.
+                <Footnotes footnoteRefs={[{ id: "footnote14", number: 14 }]} />
               </Text>
               <H2>The Stanford Instructional Television Network</H2>
               <Text>
@@ -350,10 +611,13 @@ export default function page() {
                 engineering lectures, once available only to companies like IBM
                 and Hewlett-Packard, directly to dormitories experimentally
                 through Stanford’s SUNet cable network. By 1990, SITN would be
-                broadcasting classes by satellite nationwide.(15) Three years
-                later, the United States Distance Learning Association
-                recognized SITN as the “Most Outstanding Distance Education
-                Network in the U.S.”
+                broadcasting classes by satellite nationwide.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote15", number: 15 }]}
+                />{" "}
+                Three years later, the United States Distance Learning
+                Association recognized SITN as the “Most Outstanding Distance
+                Education Network in the U.S.”
               </Text>
               <Text>
                 Celebrating its twentieth anniversary in 1988, SITN markedly
@@ -364,9 +628,12 @@ export default function page() {
                 at SITN and the School of Engineering is to give companies
                 access to premier curriculum. We think it will be a significant
                 contribution to the economic prosperity and intellectual
-                vitality of American industry,” DiPaolo said.(17) SITN would
-                later be integrated into the Stanford Center for Professional
-                Development when it was founded in 1995.
+                vitality of American industry,” DiPaolo said.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote17", number: 17 }]}
+                />{" "}
+                SITN would later be integrated into the Stanford Center for
+                Professional Development when it was founded in 1995.
               </Text>
             </OneCol>
             <StorySidebar hasLineArt>
@@ -385,21 +652,22 @@ export default function page() {
             hasBgImage
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/STS047-37-003_large_rt36xm.jpg"
             bgColor="fog-light"
+            className="mb-0"
           >
             <MediaCaptionImage
               rounded
               isParallax
               isCaptionInset
-              aspectRatio="4x3"
+              aspectRatio="16x9"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/STS047-37-003_large_rt36xm.jpg"
               alt="A woman in a space suit floats in the vastness of space."
               caption="STS-47 Mission Specialist Mae C. Jemison floating in the Science Module aboard the Space Shuttle Endeavour, September 1992. |  NASA."
             />
           </BgImageWrapper>
-          <Container bgColor="blue">
+          <Container bgColor="blue" py={7} mb={7}>
             <TwoCol>
               <OneCol>
-                <H2>Mae Jemison</H2>
+                <H2 className="mt-0">Mae Jemison</H2>
                 <Text>
                   In her 1996 commencement speech, Mae C. Jemison (BS ’77
                   chemical engineering), America’s first female African American
@@ -411,21 +679,30 @@ export default function page() {
                   societies as though we are afraid of change, that we’re afraid
                   of things being a little bit different. And that’s keeping us
                   from formulating the right question so we can solve a
-                  problem.”(18)
+                  problem.”
+                  <Footnotes
+                    footnoteRefs={[{ id: "footnote18", number: 18 }]}
+                  />
                 </Text>
                 <Text>
                   Born in Atlanta and raised in Chicago, Mae Jemison was an
                   academic standout in high school who won a scholarship to
-                  attend Stanford University at the age of sixteen.(19) Jemison
-                  entered Stanford in 1973; the previous year had marked a
-                  turning point for women in America with the passage of Title
+                  attend Stanford University at the age of sixteen.
+                  <Footnotes
+                    footnoteRefs={[{ id: "footnote19", number: 19 }]}
+                  />{" "}
+                  Jemison entered Stanford in 1973; the previous year had marked
+                  a turning point for women in America with the passage of Title
                   IX, a portion of the United States Education Amendments of
                   1972 prohibiting discrimination on the basis of sex. On
                   campus, the social and political movements that had gripped
                   the university in the 1960s continued to escalate, reaching
                   new heights in the 1970s, when students were protesting the
                   war in Vietnam, Cambodia, and Laos while celebrating gay
-                  liberation and the rights of women and minorities.(20)
+                  liberation and the rights of women and minorities.
+                  <Footnotes
+                    footnoteRefs={[{ id: "footnote19", number: 19 }]}
+                  />
                 </Text>
                 <Text>
                   During this time, Jemison balanced her undergraduate studies
@@ -434,12 +711,15 @@ export default function page() {
                   finding opportunities to showcase her creative endeavors
                   through choreographing dance performances and participating in
                   socially conscious, student-produced plays through the Roble
-                  Hall Drama Workshop,(21) while also being involved in student
-                  politics and intramural sports. After graduating from Stanford
-                  in 1977, Jemison obtained a doctorate in medicine from Cornell
-                  University and, in 1992, became the first woman of color in
-                  space as an astronaut aboard the aptly named Space Shuttle
-                  Endeavour.
+                  Hall Drama Workshop,
+                  <Footnotes
+                    footnoteRefs={[{ id: "footnote21", number: 21 }]}
+                  />{" "}
+                  while also being involved in student politics and intramural
+                  sports. After graduating from Stanford in 1977, Jemison
+                  obtained a doctorate in medicine from Cornell University and,
+                  in 1992, became the first woman of color in space as an
+                  astronaut aboard the aptly named Space Shuttle Endeavour.
                 </Text>
                 <Text>
                   In the years since, Jemison has continued on trajectories of
@@ -449,7 +729,10 @@ export default function page() {
                   Spacelab and retiring from NASA, Jemison “received 9 honorary
                   doctorates and authored in 2012 the winning bid on DARPA’s 100
                   Year Starship project that aims to make human interstellar
-                  travel a reality within the next century.”(22)
+                  travel a reality within the next century.”
+                  <Footnotes
+                    footnoteRefs={[{ id: "footnote22", number: 22 }]}
+                  />
                 </Text>
                 <Text>
                   —Hanna Ahn <br />
@@ -468,7 +751,7 @@ export default function page() {
               <StorySidebar>
                 <Quote
                   quoteColor="red"
-                  teaser={
+                  body={
                     <>
                       “We each get a chance to choose our own path. . . .
                       Sometimes, it seems to me that we are running away from
@@ -476,7 +759,10 @@ export default function page() {
                       societies as though we are afraid of change, that we’re
                       afraid of things being a little bit different. And that’s
                       keeping us from formulating the right question so we can
-                      solve a problem.”(18)
+                      solve a problem.”
+                      <Footnotes
+                        footnoteRefs={[{ id: "footnote18", number: 18 }]}
+                      />
                     </>
                   }
                   source="— Astronaut Mae Jemison"
@@ -485,7 +771,7 @@ export default function page() {
             </TwoCol>
           </Container>
           <OneCol>
-            <H2>Focus on diversity</H2>
+            <H2 className="mt-0">Focus on diversity</H2>
             <Text>
               Despite the school’s growing global reputation and rising national
               rankings, Dean Gibbons in a 1987 report acknowledged concerns
@@ -499,68 +785,85 @@ export default function page() {
               you the goal of increasing the number of women and minority
               faculty across the University and within the school (of
               engineering) in particular,” Gibbons said to the faculty senate
-              when he presented his report.(24)
+              when he presented his report.
+              <Footnotes footnoteRefs={[{ id: "footnote24", number: 24 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
-          <OneCol>
-            <Text>
-              To counter these low numbers, members of a Latino engineering
-              student organization tutored local minority high school students
-              in algebra. The Women in Science and Engineering network began
-              matching undergraduate female engineering and science students
-              with graduate mentors, and students founded a chapter of the
-              nationwide Society of Women Engineers to sponsor speakers and
-              activities of interest to women and to reach out to local
-              students.(25)
-            </Text>
-            <Text>
-              To help in this effort to attract new minority and female faculty
-              and students in science, engineering, and management, the General
-              Electric Foundation in 1989 announced Faculty for the Future, a
-              $300,000 four-year series of research grants and student
-              fellowships.(26) Then, in 1993, Stanford joined a five-year
-              National Science Foundation program to increase the number of
-              minorities earning degrees in engineering and science. The grant
-              funded recruiting, the expansion of summer classes to incoming
-              freshmen, and financial assistance to minority graduate students.
-              The school itself pitched in an additional $1 million to bolster
-              the program.
-            </Text>
-            <Text>
-              By 1992, the ratios had improved a bit, but not enough. A study
-              conducted by the American Association of Engineering Societies
-              said women numbered one in five of undergraduate engineering
-              majors nationwide, while at Stanford the figure was slightly
-              better, at one in four. In certain departments, such as industrial
-              and mechanical engineering, Stanford’s number was a rosier one in
-              three.(27)
-            </Text>
-          </OneCol>
+          <TwoCol className="rs-mt-4 rs-mb-5">
+            <MediaCaptionImage
+              rounded
+              isCaptionInset
+              aspectRatio="3x4"
+              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/DF-SC-97-01109_gl3cqj.jpg"
+              alt="A woman in a flight suit, touching a piece of the plane."
+              caption="Jeannie Marie Flynn Leavitt, who entered the U.S. Air Force in 1992 after earning her master’s degree in aeronautics and astronautics from Stanford, 1993. Leavitt became the first woman entered into the Air Force fighter pilot training program and the Air Force’s first female fighter pilot in 1993, graduating first in her class. She was also the first woman to command a USAF combat fighter wing. | U.S. Air Force."
+            />
+            <OneCol>
+              <Text>
+                To counter these low numbers, members of a Latino engineering
+                student organization tutored local minority high school students
+                in algebra. The Women in Science and Engineering network began
+                matching undergraduate female engineering and science students
+                with graduate mentors, and students founded a chapter of the
+                nationwide Society of Women Engineers to sponsor speakers and
+                activities of interest to women and to reach out to local
+                students.
+                <Footnotes footnoteRefs={[{ id: "footnote25", number: 25 }]} />
+              </Text>
+              <Text>
+                To help in this effort to attract new minority and female
+                faculty and students in science, engineering, and management,
+                the General Electric Foundation in 1989 announced Faculty for
+                the Future, a $300,000 four-year series of research grants and
+                student fellowships.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote26", number: 26 }]}
+                />{" "}
+                Then, in 1993, Stanford joined a five-year National Science
+                Foundation program to increase the number of minorities earning
+                degrees in engineering and science. The grant funded recruiting,
+                the expansion of summer classes to incoming freshmen, and
+                financial assistance to minority graduate students. The school
+                itself pitched in an additional $1 million to bolster the
+                program.
+              </Text>
+              <Text>
+                By 1992, the ratios had improved a bit, but not enough. A study
+                conducted by the American Association of Engineering Societies
+                said women numbered one in five of undergraduate engineering
+                majors nationwide, while at Stanford the figure was slightly
+                better, at one in four. In certain departments, such as
+                industrial and mechanical engineering, Stanford’s number was a
+                rosier one in three.
+                <Footnotes footnoteRefs={[{ id: "footnote27", number: 27 }]} />
+              </Text>
+            </OneCol>
+          </TwoCol>
           <BgImageWrapper
             hasBgImage
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/W645-13_rc3tnj.jpg"
             bgColor="fog-light"
           >
-            <MediaCaptionImage
-              rounded
-              isCaptionInset
-              aspectRatio="8x5"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/IA_35_EllenOchoaZeroGravity_NatArch_255-STS-STS056-04-008-1_aaeyw6.jpg"
-              alt="A woman wearing a space suit poses before an American flag."
-              caption="Ellen Ochoa, who earned a master’s and doctorate in electrical engineering from Stanford, became the first Hispanic woman to go into space in 1993. She flew into space four times on Space Shuttle missions STS-56, STS-66, STS-96, and STS-110, logging nearly 1,000 hours in orbit. She went on to become the eleventh director of the Lyndon B. Johnson Space Center. | NASA."
-            />
-            <div>
-              {/* @TODO: Add TimelineItem */}
+            <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-76">
+              <TimelineCard
+                className="p-0"
+                heading="Learn more about Ellen Ochoa in the Timeline"
+                year="1993"
+                anchor="1993-first-hispanic-woman-to-go-into-space"
+                image="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265229/IA_35_EllenOchoa_NASAviaFlickr_29320023973_856ebf4a77_o-1_qftsts.webp"
+              />
               <MediaCaptionImage
                 rounded
                 isCaptionInset
-                aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/DF-SC-97-01109_gl3cqj.jpg"
-                alt="A woman in a flight suit, touching a piece of the plane."
-                caption="Jeannie Marie Flynn Leavitt, who entered the U.S. Air Force in 1992 after earning her master’s degree in aeronautics and astronautics from Stanford, 1993. Leavitt became the first woman entered into the Air Force fighter pilot training program and the Air Force’s first female fighter pilot in 1993, graduating first in her class. She was also the first woman to command a USAF combat fighter wing. | U.S. Air Force."
+                isParallax
+                className="w-full max-w-1000 lg:rs-mt-8"
+                aspectRatio="8x5"
+                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/IA_35_EllenOchoaZeroGravity_NatArch_255-STS-STS056-04-008-1_aaeyw6.jpg"
+                alt="A woman wearing a space suit poses before an American flag."
+                caption="Ellen Ochoa, who earned a master’s and doctorate in electrical engineering from Stanford, became the first Hispanic woman to go into space in 1993. She flew into space four times on Space Shuttle missions STS-56, STS-66, STS-96, and STS-110, logging nearly 1,000 hours in orbit. She went on to become the eleventh director of the Lyndon B. Johnson Space Center. | NASA."
               />
             </div>
           </BgImageWrapper>
@@ -569,19 +872,24 @@ export default function page() {
               Despite these many challenges, in 1992 alumna Mae Jemison, MD (BS
               ’77 chemical engineering) became the first African American woman
               in space, joining six other astronauts on the shuttle Endeavour
-              and orbiting the planet 127 times during its eight-day trip.(28) A
+              and orbiting the planet 127 times during its eight-day trip.
+              <Footnotes footnoteRefs={[{ id: "footnote28", number: 28 }]} /> A
               year later, engineering alumna Ellen Ochoa (MS ’81, PhD ’85
               electrical engineering) became the first Hispanic American woman
-              to travel in space.(29) And in 1994, Jeannie Marie Flynn Leavitt
-              (MS ’92 aeronautics and astronautics) became the first female
-              fighter pilot in the U.S. Air Force, graduating first in her
-              class.(30)
+              to travel in space.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote29", number: 29 }]}
+              />{" "}
+              And in 1994, Jeannie Marie Flynn Leavitt (MS ’92 aeronautics and
+              astronautics) became the first female fighter pilot in the U.S.
+              Air Force, graduating first in her class.
+              <Footnotes footnoteRefs={[{ id: "footnote30", number: 30 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <H2>A second center for earthquake science</H2>
             <Text>
               In 1988, Stanford and the U.S. Geological Survey united to open
@@ -592,7 +900,8 @@ export default function page() {
               large impact” in lessening the damage earthquakes cause. Likening
               the new center to the Center for Integrated Systems he had helped
               to found years earlier, Gibbons highlighted the center’s
-              cooperation between industry and government.(31)
+              cooperation between industry and government.
+              <Footnotes footnoteRefs={[{ id: "footnote31", number: 31 }]} />
             </Text>
             <Text>
               The founding of CREES proved providential when, in the following
@@ -605,18 +914,26 @@ export default function page() {
               . . At around 4:55 pm I asked why the proposed building couldn’t
               copy the pleasing fractal shapes of the main quad more closely.
               One of the planners said that those shapes were too susceptible to
-              earthquake damage. At 5:04 pm the quake struck.”(32) Amid a
-              campus-wide shutdown, Professor and Chair of Civil Engineering
-              Haresh Shah, with others from the John A. Blume Earthquake
-              Engineering Center, led inspections of campus buildings,
-              red-flagging twenty-six as unfit for use and limiting access to
-              another thirty-four.(33) More than two hundred campus structures
-              were damaged, some beyond repair. It would take over a decade to
-              restore them, at a cost of more than $160 million.(34)
+              earthquake damage. At 5:04 pm the quake struck.”
+              <Footnotes
+                footnoteRefs={[{ id: "footnote32", number: 32 }]}
+              />{" "}
+              Amid a campus-wide shutdown, Professor and Chair of Civil
+              Engineering Haresh Shah, with others from the John A. Blume
+              Earthquake Engineering Center, led inspections of campus
+              buildings, red-flagging twenty-six as unfit for use and limiting
+              access to another thirty-four.
+              <Footnotes
+                footnoteRefs={[{ id: "footnote33", number: 33 }]}
+              />{" "}
+              More than two hundred campus structures were damaged, some beyond
+              repair. It would take over a decade to restore them, at a cost of
+              more than $160 million.
+              <Footnotes footnoteRefs={[{ id: "footnote34", number: 34 }]} />
             </Text>
           </OneCol>
           <BgImageWrapper bgColor="blue">
-            <TwoCol>
+            <TwoCol className="items-center">
               <MediaCaptionImage
                 rounded
                 isCaptionInset
@@ -635,7 +952,7 @@ export default function page() {
               />
             </TwoCol>
           </BgImageWrapper>
-          <TwoCol isSidebar>
+          <TwoCol isSidebar className="rs-mb-5">
             <OneCol>
               <H2>New directions in funding</H2>
               <Text>
@@ -646,7 +963,8 @@ export default function page() {
                 design and construction of large scale artificial intelligence
                 systems.” At Stanford, Feigenbaum said, he was motivated to
                 shift from studying how humans think to developing the
-                technology for computers to think.(35)
+                technology for computers to think.
+                <Footnotes footnoteRefs={[{ id: "footnote35", number: 35 }]} />
               </Text>
               <Text>
                 In electrical engineering, graduate students Jerry Yang and
@@ -684,9 +1002,12 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-          <OneCol className="rs-mt-4 ms-mb-7">
-            <FootnotesList footnotes={footnotesList} />
-          </OneCol>
+
+          <Container pt={4} pb={7} bgColor="blue">
+            <OneCol className="rs-mt-4 ms-mb-7">
+              <FootnotesList footnotes={footnotesList} />
+            </OneCol>
+          </Container>
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
