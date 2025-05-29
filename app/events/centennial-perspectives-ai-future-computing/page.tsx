@@ -169,7 +169,7 @@ export default function page() {
                 of Nvidia
               </Text>
             </AgendaItem>
-            <AgendaItem number="07" title="Centennial Message">
+            <AgendaItem number="07" title="Centennial Video Message">
               <Text size={1}>
                 <strong>Morris Chang</strong> (PhD &apos;64), Founding Chairman
                 of Taiwan Semiconductor Manufactuiring Company (TSMC)
