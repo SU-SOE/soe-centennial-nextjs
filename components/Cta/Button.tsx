@@ -57,18 +57,13 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
     }
 
     return (
-      <Link
-        href={href}
-        className={cnb(buttonStyle, className)}
-        {...props}
-        ref={ref as React.Ref<HTMLAnchorElement>}
-      >
+      <Link href={href} className={cnb(buttonStyle, className)} {...props}>
         {children}
         <span className="whitespace-nowrap">
           &#65279;
           <ArrowRightIcon
             width={20}
-            className="ml-2 inline-block transition ease-in-out duration-500 ml-03em group-hover/button:translate-x-02em group-focus/button:translate-x-02em"
+            className="ml-2 inline-block transition ease-in-out duration-500 group-hover/button:translate-x-02em group-focus/button:translate-x-02em"
           />
         </span>
       </Link>

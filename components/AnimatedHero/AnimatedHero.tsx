@@ -14,7 +14,7 @@ export const AnimatedHero = () => {
   if (prefersReducedMotion) {
     return (
       <div className="relative bg-cardinal-red-x-dark w-screen h-fit rs-py-10 rs-mb-7">
-        <div className=" w-full h-full flex flex-row gap-200 items-center justify-center cc">
+        <div className=" size-full flex flex-row gap-200 items-center justify-center cc">
           <div className="w-full max-w-800">
             <div className="aspect-[1.12/1] rs-mb-1 w-full max-w-300">
               <NoMotionSvg />
@@ -44,7 +44,7 @@ export const AnimatedHero = () => {
 
   return (
     <div className="relative bg-cardinal-red-x-dark w-screen h-fit rs-py-10 rs-mb-7">
-      <div className=" w-full h-full flex flex-row gap-200 items-center justify-center cc">
+      <div className=" size-full flex flex-row gap-200 items-center justify-center cc">
         <div className="w-full max-w-800">
           <motion.div
             className="h-fit w-full aspect-[1.12/1] rs-mb-1"

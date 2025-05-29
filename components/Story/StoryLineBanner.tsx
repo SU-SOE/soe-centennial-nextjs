@@ -83,7 +83,7 @@ export const StoryLineBanner = ({
       className="cc pt-[16rem] rs-pb-5 md:rs-pt-9 lg:w-full lg:rs-px-7 mb-20 flex items-center justify-center relative 2xl:cc"
     >
       {src && (
-        <div className="h-full w-full absolute top-0 left-0 z-0">
+        <div className="size-full absolute top-0 left-0 z-0">
           <Image
             className="ed11y-ignore object-cover z-[-20]"
             src={src}
@@ -94,7 +94,7 @@ export const StoryLineBanner = ({
           />
           <div
             className={cnb(
-              "absolute h-full w-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
+              "absolute size-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
               {
                 "from-stone-dark to-transparent": bgColor === "stone-dark",
                 "from-cardinal-red-dark to-transparent": bgColor === "red",

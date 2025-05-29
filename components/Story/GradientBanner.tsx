@@ -32,7 +32,7 @@ export const GradientBanner = ({ children, ...props }: GradientBannerProps) => {
       <motion.div
         ref={ref}
         style={{ background: gradientPosition }}
-        className="flex flex-col justify-center text-white w-full h-full rs-py-9 cc *:font-dm-sans"
+        className="flex flex-col justify-center text-white size-full rs-py-9 cc *:font-dm-sans"
       >
         {children}
       </motion.div>

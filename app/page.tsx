@@ -194,14 +194,7 @@ export default function Home() {
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
-        <Container
-          as="section"
-          bgColor="blue"
-          width="full"
-          pt={8}
-          pb={8}
-          mb={6}
-        >
+        <Container as="section" bgColor="blue" width="full" py={8} mb={6}>
           <div className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800">
             <Heading font="dm-sans" size={2} weight="semibold" align="center">
               Stanford Engineering Centennial
@@ -243,7 +236,7 @@ export default function Home() {
           />
         </StoryFeature>
         <Container as="section" mt={10} mb={10} width="full">
-          <AnimatedLineartBanner className="mb-[-4rem]">
+          <AnimatedLineartBanner className="-mb-40">
             <div className="flex flex-col items-start md:rs-px-1">
               <Heading
                 align="left"
