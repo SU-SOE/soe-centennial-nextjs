@@ -21,7 +21,7 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   isNarrow?: boolean;
   src: string;
   alt?: string;
-  link: string;
+  href: string;
 };
 
 export const StoryPosterCard = ({
@@ -37,7 +37,7 @@ export const StoryPosterCard = ({
   isNarrow = false,
   src,
   alt,
-  link,
+  href,
   ...props
 }: StoryPosterCardProps) => {
   return (
@@ -83,7 +83,7 @@ export const StoryPosterCard = ({
             <AnimateInView animation="slideUp" delay={0.5}>
               <Heading size="f4" weight="normal" mb="0">
                 <Link
-                  href={link}
+                  href={href}
                   className="stretched-link"
                   linkType={bgColor === "white" ? "poster" : "poster-invert"}
                 >

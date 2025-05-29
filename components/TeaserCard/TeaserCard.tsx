@@ -48,7 +48,7 @@ export const TeaserCard = ({
               <Image
                 className="size-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
                 src={imageUrl}
-                alt={imageAlt || ""}
+                alt={alt || ""}
                 fill
                 sizes="(max-width: 768px) 100vw, 1000px"
               />

@@ -49,21 +49,18 @@ const storyData1 = [
     superhead: "Stanford Engineering at 100",
     heading: "Transformative Breakthroughs, Boundless Horizons",
     href: "/stories/stanford-engineering-100",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
   },
   {
     superhead: "A Century of Innovation",
     heading: "100 Years of Stanford Engineering",
     href: "/stories/a-century-of-innovation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
   },
   {
     heading: "Letter from Dean Widom",
     href: "/letter-from-dean-widom",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
   },
 ];
 
@@ -72,15 +69,13 @@ const storyData2 = [
     heading: "“Preparing roads over which culture may ride in comfort”",
     chapter: "Decade 2",
     href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
   },
   {
     chapter: "Decade 3",
     heading: "The Terman era",
     href: "/stories/the-terman-era",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
   },
 ];
 
@@ -89,15 +84,13 @@ const storyData3 = [
     heading: "New spaces and expanding influence",
     chapter: "Decade 5",
     href: "/stories/new-spaces-and-expanding-influence",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
   },
   {
     chapter: "Decade 6",
     heading: "Bridging worlds: chips, code, and cosmos",
     href: "/stories/bridging-worlds-chips-code-and-cosmos",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
   },
 ];
 
@@ -139,7 +132,7 @@ export default function page() {
                 heading="“Preparing roads over which culture may ride in comfort”"
                 dek="1925 – 1934"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
-                link="/stories/preparing-roads-culture-may-ride-comfort"
+                href="/stories/preparing-roads-culture-may-ride-comfort"
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
@@ -158,7 +151,7 @@ export default function page() {
                 chapterColor="stone"
                 heading="A period of transformation"
                 href="/stories/a-period-of-transformation"
-                imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
                 bgColor="stone-dark"
               />
             </li>
@@ -178,7 +171,7 @@ export default function page() {
             className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
-            link="/timeline"
+            href="/timeline"
             buttonText="Explore the timeline"
           />
           <ContributeStoryBanner hasLineArt bgColor="white" />
