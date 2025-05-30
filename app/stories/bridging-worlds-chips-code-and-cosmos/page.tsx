@@ -64,22 +64,19 @@ const exploreStoriesData = [
     heading: "“Preparing roads over which culture may ride in comfort",
     chapter: "Decade 1",
     href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
   },
   {
     heading: "100 years of Stanford Engineering",
     superhead: "A century of innovation",
     href: "/stories/a-century-of-innovation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
   },
   {
     heading: "New spaces and expanding influence",
     chapter: "Decade 5",
     href: "/stories/new-spaces-and-expanding-influence",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
   },
 ];
 
@@ -414,7 +411,7 @@ export default function page() {
             className="rs-mb-9"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
-            link="/timeline"
+            href="/timeline"
             buttonText="Explore the timeline"
           />
           <TwoCol className="rs-mb-6">

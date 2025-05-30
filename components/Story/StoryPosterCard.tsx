@@ -21,7 +21,7 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   isNarrow?: boolean;
   src: string;
   alt?: string;
-  link: string;
+  href: string;
 };
 
 export const StoryPosterCard = ({
@@ -37,7 +37,7 @@ export const StoryPosterCard = ({
   isNarrow = false,
   src,
   alt,
-  link,
+  href,
   ...props
 }: StoryPosterCardProps) => {
   return (
@@ -58,7 +58,7 @@ export const StoryPosterCard = ({
         )}
       >
         {hasBgImage && (
-          <div className="h-full w-full absolute top-0 left-0 z-0">
+          <div className="size-full absolute top-0 left-0 z-0">
             <Image
               className="ed11y-ignore object-cover z-0"
               src={src}
@@ -68,7 +68,7 @@ export const StoryPosterCard = ({
               sizes="100vw"
             />
             <div
-              className={cnb("absolute h-full w-full bg-opacity-80 z-10", {
+              className={cnb("absolute size-full bg-opacity-80 z-10", {
                 "bg-stone-dark": bgColor === "stone-dark",
                 "bg-cardinal-red-dark": bgColor === "red",
               })}
@@ -83,7 +83,7 @@ export const StoryPosterCard = ({
             <AnimateInView animation="slideUp" delay={0.5}>
               <Heading size="f4" weight="normal" mb="0">
                 <Link
-                  href={link}
+                  href={href}
                   className="stretched-link"
                   linkType={bgColor === "white" ? "poster" : "poster-invert"}
                 >
@@ -128,7 +128,7 @@ export const StoryPosterCard = ({
             delay={0.5}
             className="order-first lg:order-last w-full lg:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
           >
-            <div className="w-full h-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
+            <div className="size-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
               <Image src={src} alt={alt || ""} fill className="object-cover" />
             </div>
           </AnimateInView>

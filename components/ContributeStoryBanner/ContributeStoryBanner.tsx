@@ -14,11 +14,11 @@ import { HTMLAttributes } from "react";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import BannerLineart from "@/components/images/banner-lineart";
-import { Button } from "../Cta";
-import Link from "next/link";
+import { Button } from "@/components/Cta";
 import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./ContributeStoryBanner.styles";
-import { AnimateInView } from "../Animate";
+import { AnimateInView } from "@/components/Animate";
+import * as links from "@/utilities/externalLinks";
 
 type ContributeStoryBannerProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: "fog-light" | "red" | "blue" | "white";
@@ -47,12 +47,12 @@ export const ContributeStoryBanner = ({
           <AnimateInView animation="slideInFromLeft">
             <Heading mb={5} size="f4" weight="normal">
               Share{" "}
-              <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
+              <a
+                href={links.googleDocShare}
                 className={styles.underline(bgColor)}
               >
                 your Stanford Engineering memories
-              </Link>
+              </a>
             </Heading>
             <Text
               size={1}
@@ -76,10 +76,7 @@ export const ContributeStoryBanner = ({
           animation="slideInFromRight"
           className={styles.buttonWrapper}
         >
-          <Button
-            isLight={bgColor !== "red"}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
-          >
+          <Button isLight={bgColor !== "red"} href={links.googleDocShare}>
             Share a memory
           </Button>
         </AnimateInView>

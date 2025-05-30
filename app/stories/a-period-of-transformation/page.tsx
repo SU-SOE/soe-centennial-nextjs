@@ -99,22 +99,19 @@ const exploreStoriesData = [
     heading: "“Preparing roads over which culture may ride in comfort",
     chapter: "Decade 1",
     href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
   },
   {
     heading: "The foundation of a new era in engineering",
     chapter: "Decade 2",
     href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
   },
   {
     heading: "The Terman Era",
     chapter: "Decade 3",
     href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
   },
 ];
 

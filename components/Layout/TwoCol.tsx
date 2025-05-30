@@ -41,7 +41,7 @@ export const TwoCol = ({
         {
           "lg:*:w-1/2": !isSidebar,
           "lg:*:even:max-w-2/3 lg:*:odd:max-w-1/3": isSidebar,
-          "xl:max-w-900 2xl:max-w-[1300px]": isNarrow,
+          "xl:max-w-900 2xl:max-w-1300": isNarrow,
         },
         className,
       )}

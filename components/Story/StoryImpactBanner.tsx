@@ -105,7 +105,7 @@ export const StoryImpactBanner = ({
         className="relative pt-150 md:rs-pt-9"
       >
         {hasBgImage && (
-          <div className="h-full w-full absolute top-0 left-0 z-0">
+          <div className="size-full absolute top-0 left-0 z-0">
             <Image
               className="ed11y-ignore object-cover z-0"
               src={bgImageSrc || src}
@@ -116,7 +116,7 @@ export const StoryImpactBanner = ({
             />
             <div
               className={cnb(
-                "absolute h-full w-full bg-opacity-80 z-10 backdrop-blur-sm",
+                "absolute size-full bg-opacity-80 z-10 backdrop-blur-sm",
                 {
                   "bg-stone-dark": bgColor === "stone-dark",
                   "bg-cardinal-red-dark": bgColor === "red",
@@ -130,8 +130,8 @@ export const StoryImpactBanner = ({
           className={cnb("flex flex-col z-10 relative md:grid-gap", {
             "lg:flex-row": !isVertical,
             "w-full mx-auto": isVertical,
-            "max-w-[1100px]": isVertical && !isImageWide,
-            "max-w-[1500px]": isImageWide,
+            "max-w-1100": isVertical && !isImageWide,
+            "max-w-1500": isImageWide,
           })}
         >
           <AnimateInView
@@ -175,7 +175,7 @@ export const StoryImpactBanner = ({
           </AnimateInView>
           <FlexBox
             direction="col"
-            className={cnb("w-full h-full", {
+            className={cnb("size-full", {
               "md:1/3 lg:w-1/2": !isVertical,
             })}
           >
@@ -184,10 +184,10 @@ export const StoryImpactBanner = ({
               delay={0.3}
               className={cnb(
                 "w-full overflow-hidden relative rounded-[30px] mb-10",
-                { "aspect-[3/2] xl:max-h-[860px]": isVertical && !isImageWide },
+                { "aspect-[3/2] xl:max-h-[86rem]": isVertical && !isImageWide },
                 { "aspect-[15/7] xl:max-w-1500": isVertical && isImageWide },
                 {
-                  "aspect-[1/1] md:aspect-[2/3] xl:max-h-[860px]": !isVertical,
+                  "aspect-[1/1] md:aspect-[2/3] xl:max-h-[86rem]": !isVertical,
                 },
               )}
             >

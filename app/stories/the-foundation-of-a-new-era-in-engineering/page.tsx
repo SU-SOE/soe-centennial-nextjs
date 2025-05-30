@@ -64,22 +64,19 @@ const exploreStoriesData = [
     heading: "“Preparing roads over which culture may ride in comfort",
     chapter: "Decade 1",
     href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
   },
   {
     heading: "The Terman Era",
     chapter: "Decade 3",
     href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
   },
   {
     heading: "A period of transformation",
     chapter: "Decade 4",
     href: "/stories/a-period-of-transformation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
   },
 ];
 

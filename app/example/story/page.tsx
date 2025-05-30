@@ -26,24 +26,21 @@ const ExampleStoryPage = async () => {
       superhead: "The 5th Decade",
       chapter: "Chapter 5",
       href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/new-spaces-and-expanding-influence_dcvv7j_odpshs.jpg",
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986284/new-spaces-and-expanding-influence_dcvv7j_odpshs.jpg",
     },
     {
       heading: "Bridging Worlds: Chips, Code, and Cosmos",
       superhead: "The 6th Decade",
       chapter: "Chapter 6",
       href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/bridging-worlds_ma3ixq_gwcmqb.jpg",
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986283/bridging-worlds_ma3ixq_gwcmqb.jpg",
     },
     {
       heading: "Redevelopment and an Earthquake",
       superhead: "The 7th Decade",
       chapter: "Chapter 7",
       href: "/",
-      imageUrl:
-        "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg",
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1739986286/redevelopment_vprsob_erpl1p.jpg",
     },
   ];
   return (
@@ -276,7 +273,7 @@ const ExampleStoryPage = async () => {
             superhead="Change makers"
             heading="Untangling the web of racial inequality"
             body="Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo."
-            imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
             href="/"
           />
         </Container>
@@ -286,7 +283,7 @@ const ExampleStoryPage = async () => {
             superhead="Change makers"
             heading="Untangling the web of racial inequality"
             body="Lorem ipsum dolor sit amet consectetur. Cursus aliquet neque at aliquet penatibus commodo."
-            imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
             href="/"
             chapter="Chapter 1"
           />
@@ -297,7 +294,7 @@ const ExampleStoryPage = async () => {
             heading="Lorem ipsum dolor sit amet consect hendrerit"
             superhead="Change makers"
             body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-            imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
             href="/"
             chapter="Chapter 1"
           />
@@ -305,14 +302,14 @@ const ExampleStoryPage = async () => {
             heading="Lorem ipsum dolor sit amet consect hendrerit"
             superhead="Change makers"
             body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-            imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
             href="/"
           />
           <StoryCard
             heading="Lorem ipsum dolor sit amet consect hendrerit"
             superhead="Change makers"
             body="Quisque ante nunc, luctus nec aliquet in, gravida sed dui. Mauris posuere luctus varius."
-            imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
             href="/"
           />
         </ThreeCol>
@@ -332,7 +329,7 @@ const ExampleStoryPage = async () => {
               delay={0.5}
               superhead="Impact"
               heading="Lorem ipsum dolor sit amet consect hendrerit"
-              imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/1944_-_Stanford_Engineering_s_third_Dean_leujr9_dkho3h.jpg"
               href="/"
               className="max-w-full"
             />
@@ -346,7 +343,7 @@ const ExampleStoryPage = async () => {
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
           chapter="Chapter 1"
-          link="/"
+          href="/"
         />
         <StoryPosterCard
           bgColor="red"
@@ -354,7 +351,7 @@ const ExampleStoryPage = async () => {
           dek="The 1st Decade"
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-          link="/"
+          href="/"
         />
         <StoryPosterCard
           hasBgImage
@@ -364,7 +361,7 @@ const ExampleStoryPage = async () => {
           body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-          link="/"
+          href="/"
         />
         <StoryPosterCard
           isNarrow
@@ -373,7 +370,7 @@ const ExampleStoryPage = async () => {
           body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-          link="/"
+          href="/"
         />
         <StoryPosterCard
           isNarrow
@@ -383,7 +380,7 @@ const ExampleStoryPage = async () => {
           body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-          link="/"
+          href="/"
         />
         <StoryPosterCard
           isNarrow
@@ -393,7 +390,7 @@ const ExampleStoryPage = async () => {
           body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-          link="/"
+          href="/"
         />
         <StoryPosterCard
           isNarrow
@@ -404,7 +401,7 @@ const ExampleStoryPage = async () => {
           body="The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception."
           src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986289/1926_-_The_largest_university_electrical_lab_of_its_time_xdomjd_tinfym.jpg"
           caption="Caption/credit lorem ipsum dolar sit amet vestibulum perimentium"
-          link="/"
+          href="/"
         />
       </div>
     </div>

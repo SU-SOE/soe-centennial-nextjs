@@ -19,7 +19,7 @@ const SidebarLineart = ({ className, lineArtType }: SidebarLineartProps) => {
   return (
     <>
       {lineArtType === "default" && (
-        <div className="w-full h-full hidden lg:block">
+        <div className="size-full hidden lg:block">
           <svg
             aria-hidden="true"
             viewBox="0 0 467 1671"
@@ -64,7 +64,7 @@ const SidebarLineart = ({ className, lineArtType }: SidebarLineartProps) => {
         </div>
       )}
       {lineArtType === "medium" && (
-        <div className="w-full h-full hidden lg:block">
+        <div className="size-full hidden lg:block">
           <svg
             aria-hidden="true"
             width="355"
@@ -90,7 +90,7 @@ const SidebarLineart = ({ className, lineArtType }: SidebarLineartProps) => {
         </div>
       )}
       {lineArtType === "short" && (
-        <div className="w-full h-full hidden lg:block">
+        <div className="size-full hidden lg:block">
           <svg
             aria-hidden="true"
             viewBox="0 0 315 547"
@@ -114,7 +114,7 @@ const SidebarLineart = ({ className, lineArtType }: SidebarLineartProps) => {
         </div>
       )}
       {/* MD */}
-      <div className="w-full h-full lg:hidden">
+      <div className="size-full lg:hidden">
         <svg
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
