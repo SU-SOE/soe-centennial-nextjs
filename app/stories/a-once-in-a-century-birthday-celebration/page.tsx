@@ -88,8 +88,8 @@ export default function page() {
             isPreview
             previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
             title="A once-in-a-century birthday celebration"
-            className="bg-cardinal-red-dark"
-            mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
+            className="bg-cardinal-red"
+            mediaUrl="https://www.youtube.com/embed/nsxuADCSTYg?si=UDFuGGEGBzh2NiIU"
           />
           <OneCol className="rs-mt-5">
             <Text variant="overview" className="cen-drop-cap">
