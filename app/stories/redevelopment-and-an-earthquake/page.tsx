@@ -779,16 +779,17 @@ export default function page() {
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
-          <TwoCol className="rs-mt-4 rs-mb-5">
+          <div className="cc flex flex-col lg:flex-row w-full gap-[7.6rem] rs-mt-4 rs-mb-5 max-w-1500">
             <MediaCaptionImage
               rounded
               isCaptionInset
               aspectRatio="3x4"
+              className="w-full lg:w-2/5"
               imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/DF-SC-97-01109_gl3cqj.jpg"
               alt="A woman in a flight suit, touching a piece of the plane."
               caption="Jeannie Marie Flynn Leavitt, who entered the U.S. Air Force in 1992 after earning her master’s degree in aeronautics and astronautics from Stanford, 1993. Leavitt became the first woman entered into the Air Force fighter pilot training program and the Air Force’s first female fighter pilot in 1993, graduating first in her class. She was also the first woman to command a USAF combat fighter wing. | U.S. Air Force."
             />
-            <OneCol>
+            <OneCol className="w-full lg:w-3/5">
               <Text>
                 To counter these low numbers, members of a Latino engineering
                 student organization tutored local minority high school students
@@ -828,7 +829,7 @@ export default function page() {
                 <Footnotes footnoteRefs={[{ id: "footnote27", number: 27 }]} />
               </Text>
             </OneCol>
-          </TwoCol>
+          </div>
           <BgImageWrapper
             hasBgImage
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/W645-13_rc3tnj.jpg"
