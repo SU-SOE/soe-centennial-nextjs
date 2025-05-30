@@ -25,6 +25,7 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 export const StoryPosterCard = ({
+  className,
   heading,
   superhead,
   chapter,
@@ -44,7 +45,7 @@ export const StoryPosterCard = ({
     <Container
       {...props}
       width="site"
-      className="2xl:p-0 2xl:w-full 2xl:max-w-1400"
+      className={cnb("2xl:p-0 2xl:w-full 2xl:max-w-1400", className)}
     >
       <Container
         bgColor={bgColor}
