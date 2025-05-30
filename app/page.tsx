@@ -14,7 +14,6 @@ import { Metadata } from "next";
 import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
-import { Button } from "@/components/Cta";
 import { TwoCol } from "@/components/Layout";
 
 export const metadata: Metadata = {
@@ -77,32 +76,7 @@ const exploreMoreData = [
 
 const events = [
   {
-    heading: "Centennial Perspectives: AI and the Future of Computing",
-    superhead: (
-      <>
-        May 29, 2025 <br />
-        4:15-6:30pm
-      </>
-    ),
-    body: (
-      <>
-        <p>
-          As part of Stanford Engineering’s centennial celebration,{" "}
-          <em>Centennial Perspectives</em> is a speaker series that highlights
-          innovative research and its impact on society.
-        </p>
-        <Button
-          solid
-          href="/events/centennial-perspectives-ai-future-computing"
-        >
-          View the agenda
-        </Button>
-      </>
-    ),
-    isCard: true,
-  },
-
-  {
+    className: "*:w-full lg:*:max-w-700",
     heading: "Don’t miss out on upcoming centennial events!",
     superhead: "Stanford Engineering alumni",
     body: (
@@ -118,14 +92,14 @@ const events = [
           so that you receive all future centennial communications.
         </p>
         <p>
-          Please contact <br />
+          Please contact{" "}
           <Link
             linkType="dark-bg"
             href="mailto:engineering-alumni@stanford.edu"
           >
             engineering-alumni@stanford.edu
-          </Link>
-          <br /> if you have any questions.
+          </Link>{" "}
+          if you have any questions.
         </p>
       </>
     ),
