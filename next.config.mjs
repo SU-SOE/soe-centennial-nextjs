@@ -40,7 +40,13 @@ const nextConfig = {
       },
       {
         source: "/events",
+        destination: "/404",
         destination: "/events/centennial-perspectives-ai-future-computing",
+        permanent: true,
+      },
+      {
+        source: "/events/centennial-perspectives-ai-future-computing",
+        destination: "/404",
         permanent: true,
       },
     ];
