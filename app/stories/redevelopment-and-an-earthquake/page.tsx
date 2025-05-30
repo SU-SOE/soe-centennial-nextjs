@@ -701,7 +701,7 @@ export default function page() {
                   war in Vietnam, Cambodia, and Laos while celebrating gay
                   liberation and the rights of women and minorities.
                   <Footnotes
-                    footnoteRefs={[{ id: "footnote19", number: 19 }]}
+                    footnoteRefs={[{ id: "footnote20", number: 20 }]}
                   />
                 </Text>
                 <Text>
@@ -751,20 +751,7 @@ export default function page() {
               <StorySidebar>
                 <Quote
                   quoteColor="red"
-                  body={
-                    <>
-                      “We each get a chance to choose our own path. . . .
-                      Sometimes, it seems to me that we are running away from
-                      problems and reacting to issues in our world and our
-                      societies as though we are afraid of change, that we’re
-                      afraid of things being a little bit different. And that’s
-                      keeping us from formulating the right question so we can
-                      solve a problem.”
-                      <Footnotes
-                        footnoteRefs={[{ id: "footnote18", number: 18 }]}
-                      />
-                    </>
-                  }
+                  body="We each get a chance to choose our own path. . . . Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem."
                   source="— Astronaut Mae Jemison"
                 />
               </StorySidebar>
