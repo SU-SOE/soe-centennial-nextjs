@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { StoryCard, StoryCardProps } from "@/components/Story";
+import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -253,6 +253,16 @@ export default function Home() {
                 </Text>
               </div>
             </AnimateInView>
+            <StoryPosterCard
+              hasBgImage
+              bgColor="red"
+              className="rs-mb-5"
+              chapter="Video"
+              heading="A once-in-a-century birthday celebration"
+              body="May 15, 2025"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
+              link="/stories/a-once-in-a-century-birthday-celebration"
+            />
             <ExploreMore
               isThreeCol
               stories={exploreMoreData}

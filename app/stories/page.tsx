@@ -129,6 +129,17 @@ export default function page() {
             <HorizontalLineart lineartType="A" />
           </div>
           <ul className="list-none p-0">
+            <li>
+              <StoryPosterCard
+                hasBgImage
+                bgColor="red"
+                chapter="Video"
+                heading="A once-in-a-century birthday celebration"
+                body="May 15, 2025"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
+                link="/stories/a-once-in-a-century-birthday-celebration"
+              />
+            </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
                 isThreeCol
