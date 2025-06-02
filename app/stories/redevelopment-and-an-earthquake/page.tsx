@@ -367,7 +367,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0030_xmj24i.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0030_xmj24i.jpg"
                 alt="A diverse group of individuals focused on their computers while seated at tables."
                 caption="Students using computer terminals, 1985. | Special Collections & University Archives."
               />
@@ -424,7 +424,7 @@ export default function page() {
               isParallax
               className="max-w-850 mx-auto"
               aspectRatio="8x5"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/stanford_solar_car_u2yced.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/stanford_solar_car_u2yced.jpg"
               alt="A solar-powered vehicle stands parked outside a building with a person riding a bike in the background."
               caption="The Stanford Solar Car Project (SSCP) Luminos, 2013. Luminos was built to compete in the 2013 World Solar Challenge, a 2,000-mile trek across the Australian Outback. "
             />
@@ -446,7 +446,7 @@ export default function page() {
             <MediaCaptionImage
               className="rs-mt-3 max-w-1500 mx-auto"
               aspectRatio="3x4"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748558326/Stanford-Daily_Solar-Car_vzamnx.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748558326/Stanford-Daily_Solar-Car_vzamnx.jpg"
               alt=""
               caption="An excerpt from The Stanford Daily, vol. 195, no. 64, 1989. | Linda A. Cicero/Stanford News Service."
             />
@@ -541,7 +541,7 @@ export default function page() {
               rounded
               isCaptionInset
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg"
               alt="A construction site featuring machinery and workers, with a building visible in the background."
               caption="Redevelopment of the science and engineering buildings. The Near West Campus project, as it was known for its location relative to the main quad, involved removing five structures, remodeling two, and building four new structures, and was Stanford’s largest construction project ever. The project kicked off in 1986 with a gift from William Hewlett. In 1994, another gift from Hewlett and business partner David Packard provided funds to complete the project, which opened its doors in 1999. | Stanford University Planning Office."
             />
@@ -550,7 +550,7 @@ export default function page() {
               rounded
               isCaptionInset
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_AERIALS_01_009_smfqx1.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_AERIALS_01_009_smfqx1.jpg"
               alt="Aerial view of Stanford University's campus showcasing its iconic architecture and lush green spaces."
               caption="Aerial view of the Stanford campus showing construction of the Near West Campus project, 1994. | Stanford University Planning Office."
             />
@@ -642,7 +642,7 @@ export default function page() {
                 isCaptionInset
                 isPortrait
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482752/P8025899_w4032_q10_atlzw1.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482752/P8025899_w4032_q10_atlzw1.jpg"
                 alt="A man in a blue shirt stands confidently in front of tall and elegant pillars."
                 caption="Andy DiPaolo, director of the Stanford Instructional Television Network (SITN), 1994. The SITN was one of the largest distance education networks in the United States, delivering graduate degree programs, credit courses, certificate programs, and professional education to students in Silicon Valley and around the world. Although it had been offering courses to local professionals for more than a decade, SITN became available to students in 1987. It was later incorporated into the Stanford Center for Professional Development, which was founded under DiPaolo’s leadership in 1995. | Stanford Engineering Global and Online Education."
               />
@@ -659,7 +659,7 @@ export default function page() {
               isParallax
               isCaptionInset
               aspectRatio="16x9"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/STS047-37-003_large_rt36xm.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/STS047-37-003_large_rt36xm.jpg"
               alt="A woman in a space suit floats in the vastness of space."
               caption="STS-47 Mission Specialist Mae C. Jemison floating in the Science Module aboard the Space Shuttle Endeavour, September 1992. |  NASA."
             />
@@ -743,7 +743,7 @@ export default function page() {
                   rounded
                   isCaptionInset
                   aspectRatio="4x3"
-                  imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/mae_jamison_commencement_q1kmtb.jpg"
+                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/mae_jamison_commencement_q1kmtb.jpg"
                   alt="A smiling woman in a graduation gown stands confidently at the podium."
                   caption="Astronaut Mae Jemison (BS ’77 chemical engineering) was the keynote speaker at the university’s 105th Commencement in 1996. In her speech, Jemison challenged outgoing graduates to embrace personal and professional change and engage different perspectives to create new solutions: “We each get a chance to choose our own path. … Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem.” | Linda A. Cicero/Stanford News Service."
                 />
@@ -785,7 +785,7 @@ export default function page() {
               isCaptionInset
               aspectRatio="3x4"
               className="w-full lg:w-2/5"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/DF-SC-97-01109_gl3cqj.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/DF-SC-97-01109_gl3cqj.jpg"
               alt="A woman in a flight suit, touching a piece of the plane."
               caption="Jeannie Marie Flynn Leavitt, who entered the U.S. Air Force in 1992 after earning her master’s degree in aeronautics and astronautics from Stanford, 1993. Leavitt became the first woman entered into the Air Force fighter pilot training program and the Air Force’s first female fighter pilot in 1993, graduating first in her class. She was also the first woman to command a USAF combat fighter wing. | U.S. Air Force."
             />
@@ -849,7 +849,7 @@ export default function page() {
                 isParallax
                 className="w-full max-w-1000 lg:rs-mt-8"
                 aspectRatio="8x5"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/IA_35_EllenOchoaZeroGravity_NatArch_255-STS-STS056-04-008-1_aaeyw6.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/IA_35_EllenOchoaZeroGravity_NatArch_255-STS-STS056-04-008-1_aaeyw6.jpg"
                 alt="A woman wearing a space suit poses before an American flag."
                 caption="Ellen Ochoa, who earned a master’s and doctorate in electrical engineering from Stanford, became the first Hispanic woman to go into space in 1993. She flew into space four times on Space Shuttle missions STS-56, STS-66, STS-96, and STS-110, logging nearly 1,000 hours in orbit. She went on to become the eleventh director of the Lyndon B. Johnson Space Center. | NASA."
               />
@@ -926,7 +926,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/00006854_0002_ov5jy9.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/00006854_0002_ov5jy9.jpg"
                 alt="Black and white image of a building featuring a broken roof, where fragments have fallen onto a different part of the structure."
                 caption="Damage to Encina Hall from the Loma Prieta earthquake, 1989. Faculty from the John A. Blume Earthquake Engineering Center led teams that inspected all campus buildings after the quake hit on October 17. Altogether, more than 200 buildings sustained damage, some beyond repair. Building restoration took more than a decade to complete and cost nearly $160 million. | Special Collections & University Archives."
               />
@@ -934,7 +934,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/fn928pv3867_cea6di.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/fn928pv3867_cea6di.jpg"
                 alt="A black and white photo of a library featuring fallen bookshelves and books scattered on the floor."
                 caption="Damage to a library following the Loma Prieta earthquake in 1989. More than 750,000 books were salvaged at campus libraries following the quake. The west wing of Green Library was the hardest hit. | David C. Weber/Special Collections & University Archives."
               />
@@ -966,7 +966,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/jx362js8604_m05akb.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/jx362js8604_m05akb.jpg"
                 alt="Two men pose together in front of a Yahoo logo and website screenshots."
                 caption="Electrical engineering graduate students and Yahoo! founders David Filo (left) and Jerry Yang, 1994. They created a website that served as a directory of the nascent World Wide Web. By autumn 1994, the site, run by servers in a campus trailer, handled a million hits a day. The following year, venture funding helped launch Yahoo! into a major internet company. | School of Engineering."
               />
@@ -984,7 +984,7 @@ export default function page() {
                 isCaptionInset
                 isPortrait
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/fs075wb6787_kdhlkw.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482750/fs075wb6787_kdhlkw.jpg"
                 alt="A man in a suit jacket and glasses."
                 caption="Edward Feigenbaum, corecipient with Dabbala Rajagopal “Raj” Reddy of the 1994 A. M. Turing Award for their work in artificial intelligence, 1966. At the suggestion of Nobel Prize–winner Joshua Lederberg, Feigenbaum developed a way to predict the structure of chemical compounds. He went on to develop programs in other areas of molecular biology, medicine, and defense, among other fields. | School of Engineering."
               />

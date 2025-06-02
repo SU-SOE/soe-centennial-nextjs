@@ -2,7 +2,7 @@
  * MediaCaptionImage component props.
  *
  * @typedef {Object} MediaCaptionImageProps
- * @property {string} imageSrc - The source URL of the image.
+ * @property {string} src - The source URL of the image.
  * @property {string} [imageFocus] - The focus area of the image.
  * @property {boolean} [isLoadingEager] - If true, the image will be loaded eagerly.
  * @property {boolean} [isParallax=false] - If true, the image will have a parallax effect.
@@ -25,7 +25,7 @@
  *
  * @example
  * <MediaCaptionImage
- *   imageSrc="/path/to/image.jpg"
+ *   src="/path/to/image.jpg"
  *   alt="Description of image"
  *   caption="This is a caption"
  *   isParallax={true}
@@ -55,7 +55,7 @@ import { Text } from "../Typography";
 
 type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
   Omit<AnimateInViewProps, "children"> & {
-    imageSrc: string;
+    src: string;
     imageFocus?: string;
     isLoadingEager?: boolean;
     isParallax?: boolean;
@@ -74,7 +74,7 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
   };
 
 const MediaCaptionImage = ({
-  imageSrc,
+  src,
   imageFocus,
   isLoadingEager,
   isParallax = false,
@@ -111,13 +111,13 @@ const MediaCaptionImage = ({
               styles.imageWrapper(isPortrait, rounded),
             )}
           >
-            {!!imageSrc && (
+            {!!src && (
               <>
                 {isParallax ? (
                   <Parallax offset={60}>
                     <picture>
                       <Image
-                        src={imageSrc}
+                        src={src}
                         alt={alt || ""}
                         height="2000"
                         width="2000"
@@ -128,7 +128,7 @@ const MediaCaptionImage = ({
                 ) : (
                   <picture>
                     <Image
-                      src={imageSrc}
+                      src={src}
                       alt={alt || ""}
                       height="2000"
                       width="2000"

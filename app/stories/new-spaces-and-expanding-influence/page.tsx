@@ -537,7 +537,7 @@ export default function page() {
               isParallax
               rounded
               aspectRatio="16x9"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/00005967_0003_menves.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/00005967_0003_menves.jpg"
               alt="An old black and white image featuring individuals cycling and walking around."
               caption="The William F. Durand Building for Space Engineering and Science, 1969. The building was built to house the Department of Aeronautics and Astronautics. During this time, the department was receiving more than $1 million in research funding each year and more than 200 graduate students enrolled, surpassing MIT as the nation’s largest producer of PhD graduates in aeronautics and astronautics. | Stanford News Service."
             />
@@ -585,7 +585,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062190/Owen_Garriott_NASA_hgzrsm.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062190/Owen_Garriott_NASA_hgzrsm.jpg"
                 alt="A man wearing an astronaut suit sits in a space station."
                 caption="Electrical engineer Owen Garriott on board NASA’s Skylab 3, where he worked the first amateur radio from orbit, 1973. He also performed three spacewalks, logging 14 hours outside of Skylab. In the inaugural class of six scientist-astronauts selected by NASA in 1965, Garriott went on to fly on board a Space Shuttle mission in 1983, logging a lifetime total of 69 days, 18 hours, and 56 minutes off the planet. | NASA."
               />
@@ -615,7 +615,7 @@ export default function page() {
           </TwoCol>
           <MediaCaptionImage
             aspectRatio="free"
-            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747770081/EngineeringBuildingsMap-cropped_pyfsvz.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747770081/EngineeringBuildingsMap-cropped_pyfsvz.jpg"
             alt="Visual representation of the campus layout, featuring essential buildings highlighted in red."
           />
           <Container bgColor="blue" pt={7} pb={7}>
@@ -684,7 +684,7 @@ export default function page() {
               rounded
               className="max-w-850 mx-auto rs-mb-3"
               aspectRatio="3x2"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062197/E507-4_re5l3v.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062197/E507-4_re5l3v.jpg"
               alt="Several people focused on a computer screen, engaged in discussion and collaboration."
               caption="Visitors from France at the Artificial Intelligence Lab on computer music, 1975. Seated from left: Pierre Boulez, Steve Martin; standing from left: Andy Moorer, John Chowning, and Max Mathews. A computational music group founded by Chowning evolved into the Center for Computer Research in Music and Acoustics (CCRMA), which launched in June 1975. Because of the growing reputation of the computer music group at Stanford, Boulez had asked the team to participate in the planning stages of a music research institute being formed at the Centre Pompidou in Paris. | Stanford News Service."
             />
@@ -781,7 +781,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="2x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062195/A645-9_sl8lv5.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062195/A645-9_sl8lv5.jpg"
                 alt="A bearded man stands confidently in front of a chalkboard holding a pipe."
                 caption="Vinton Cerf in front of a blackboard filled with notes on Transmission Control Protocol/Internet Protocol (TCP/IP), circa 1974. TCP/IP, the foundational protocols that underpin the modern internet, were developed by Cerf in collaboration with Robert Kahn of DARPA. Later, Cerf and Kahn were corecipients of the 2004 A. M. Turing Award for these pioneering contributions. | Stanford News Service."
               />
@@ -835,14 +835,14 @@ export default function page() {
               <MediaCaptionImage
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062189/3523ScheinmanHydrArm_dlbnh9.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062189/3523ScheinmanHydrArm_dlbnh9.jpg"
                 alt="A man stands in front of a computer, holding a robotic arm."
                 caption="Mechanical Engineering student Victor Scheinman with a prototype hydraulic arm, 1969. The arm, now on display inside the Gates Computer Science Building, was one of two that were mounted to a table where researchers and students used it for research and teaching purposes for over 20 years, often focused on applications in the manufacturing industry. In 1974, a version of the Stanford Arm was able to assemble a Ford Model T water pump. | The Board of Trustees of the Leland Stanford Junior University."
               />
               <MediaCaptionImage
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062190/00015013_0001_yhghjo.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062190/00015013_0001_yhghjo.jpg"
                 alt="A diverse crowd gathered in front of a building, with their hands raised, indicating support in protest."
                 caption="Students demonstrating against the invasion of Laos by the South Vietnamese with U.S. air support, 1971. The students seized the Computation Center during 12 hours of confrontation and violence to protest the center’s use for war research. There were 12 arrests and no injuries. | Jose Mercado/Stanford News Service."
               />
@@ -853,7 +853,7 @@ export default function page() {
               isCaptionInset
               rounded
               aspectRatio="8x5"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/SC0122_s1_b270_f10_5037-006_kle1ak.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062196/SC0122_s1_b270_f10_5037-006_kle1ak.jpg"
               alt="A person sits inside a large, spherical metal structure with machinery, outdoors on a grassy field with trees and a truck in the background."
               caption="Students in the Design Engineering class, 1968 and 1969. In the late 1950s, Stanford Engineering’s Mechanical Engineering Design Division pioneered a new approach to engineering and design education, emphasizing hands-on, experiential learning through environments, including the Design Loft and Machine Shop (today, Product Realization Lab). Under the leadership of faculty John E. Arnold and Robert H. McKim, the Product Design program focused on teaching design as a creative practice, integrating engineering, arts, natural science, social science, and the humanities into a comprehensive design education to address real-world needs. The division aimed to prepare engineers who developed the ability to integrate technical and artistic skills with social and environmental understanding to create innovative solutions for complex challenges. This comprehensive design approach set the foundation for a broader emphasis on interdisciplinary design, which later influenced the emergence of design practices like Smart Product Design and Interaction Design and, eventually, the Hasso Plattner Institute of Design (d.school). | Stanford News Service."
             />
@@ -863,13 +863,13 @@ export default function page() {
                   className="rs-mb-5"
                   rounded
                   aspectRatio="4x3"
-                  imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062194/SC0122_s1_b272_f05_7266-05_exbwdd.jpg"
+                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062194/SC0122_s1_b272_f05_7266-05_exbwdd.jpg"
                   alt="Four people paddle together in a small makeshift boat on a body of water, each using an oar to help move the vessel forward."
                 />
                 <MediaCaptionImage
                   rounded
                   aspectRatio="4x3"
-                  imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062201/SC0122_s1_b272_f05_7270-06_qowjes.jpg"
+                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062201/SC0122_s1_b272_f05_7270-06_qowjes.jpg"
                   alt="Four men ride a homemade cart downhill through a grassy field, wearing helmets, smiling, and exuding excitement. A crowd watches in the background."
                 />
               </OneCol>
@@ -878,14 +878,14 @@ export default function page() {
                   className="rs-mb-5"
                   rounded
                   aspectRatio="4x3"
-                  imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b272_f05_7265-01_xeon8p.jpg"
+                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b272_f05_7265-01_xeon8p.jpg"
                   alt="Black-and-white image of a man wearing a helmet and goggles riding a bike over a makeshift ramp. A crowd watches in a grassy field, creating a lively atmosphere."
                 />
                 <MediaCaptionImage
                   className="max-w-450"
                   rounded
                   aspectRatio="3x4"
-                  imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062193/SC0122_s1_b271_f05_6030-09_j3shzw.jpg"
+                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062193/SC0122_s1_b271_f05_6030-09_j3shzw.jpg"
                   alt="A group of people watching at an object climb up a mini set of stairs made out of blocks."
                 />
               </OneCol>
@@ -907,7 +907,7 @@ export default function page() {
               rounded
               className="max-w-850 mx-auto rs-mb-2"
               aspectRatio="3x2"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062199/SC0122_s1_b278_f04_C388-13_ao2ojx.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062199/SC0122_s1_b278_f04_C388-13_ao2ojx.jpg"
               alt="A black and white image of a man surrounded by multiple monitors in a dimly lit room with onlookers in front of him."
               caption="The control room for the Stanford Instructional Television Network (SITN), showing James Angell lecturing, 1969. This network allowed employees of member companies within a 50-mile range of Hoover Tower to take classes offered by the School of Engineering as part of the Honors Cooperative Program (HCP). When the HCP was founded in 1954, students had to come to campus to attend classes. With the founding of SITN in 1969, students could begin attending the program remotely. The network eventually became part of the Stanford Center for Professional Development. | Special Collections & University Archives."
             />
@@ -942,7 +942,7 @@ export default function page() {
               isCaptionInset
               isPortrait
               aspectRatio="1x1"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062189/Barbara_Liskov_computer_scientist_2010_mxssrp.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062189/Barbara_Liskov_computer_scientist_2010_mxssrp.jpg"
               alt="A woman with curly hair smiles warmly at the camera."
               caption="Barbara Liskov, the first woman to receive a PhD in computer science from Stanford University, 1968. She was also among the first women to receive a PhD from a computer science department in the United States. For her PhD, Liskov worked with John McCarthy, focusing on chess endgames. In 2008, she became the second woman to receive the A. M. Turing Award. | Kenneth C. Zirkel/Wikimedia Commons."
             />
@@ -951,7 +951,7 @@ export default function page() {
               isCaptionInset
               isPortrait
               aspectRatio="1x1"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062203/00019306_001_elbcld.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062203/00019306_001_elbcld.jpg"
               alt="A black and white portrait of a man wearing glasses."
               caption="William M. Kays, May 1971. Kays began his career at Stanford as an undergraduate in engineering (’42), earned his MS (’47) and PhD (’51) in mechanical engineering, and went on to join the faculty in that department. By 1961, he was department chairman and in 1972 was appointed dean of the School of Engineering, in which role he served until 1984. Under Kays’s leadership, all of Stanford’s engineering departments ranked in the top five in their graduate fields nationally. The school increased its external funding of research and expanded the number of students, particularly women. The Center for Integrated Systems and the John A. Blume Earthquake Engineering Center were both established during his tenure. | Jose Mercado/Stanford News Service."
             />
@@ -960,7 +960,7 @@ export default function page() {
               isCaptionInset
               isPortrait
               aspectRatio="1x1"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062202/SC0122_s1_b278_f01_C076-02_vsvcbb.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062202/SC0122_s1_b278_f01_C076-02_vsvcbb.jpg"
               alt="A black and white portrait of a man wearing glasses."
               caption="Clayton Bates, professor of materials science and engineering and of electrical engineering, 1974. In 1972, following a 10-year career in industry, Bates became the first Black faculty member to hold a tenure-track appointment in the School of Engineering. Along with a group of graduate students, Bates founded the Stanford Society of Black Scientists and Engineers, an affiliate chapter of the National Society of Black Engineers. He also acted as a mentor and supporter of Black students in the areas of science, technology, engineering, and mathematics and advocated for equity in STEM education. His expertise was in solid-state physics, and he was particularly interested in photoelectronic materials and devices. His work focused on the unraveling of processes involved in the interaction of photons and electrons with the very complex materials used in photoelectronic sensing devices. | Stanford News Service."
             />
@@ -1015,7 +1015,7 @@ export default function page() {
               rounded
               className="max-w-850 mx-auto"
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062194/kenneth_arrow_ip1m0x.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062194/kenneth_arrow_ip1m0x.jpg"
               alt="A man in a suit and tie stands confidently as reporters gather around him, capturing the moment with their cameras."
               caption="Kenneth Arrow, professor of operations research, at his press conference after winning the Nobel Prize in Economic Sciences 1972. Arrow was on the faculty at Harvard University when he won the Nobel Prize for work he did while at Stanford for “pioneering contributions to general economic equilibrium theory and welfare theory.” Arrow returned to Stanford in 1979 and stayed until his retirement in 1991. | Chuck Painter/Stanford News Service."
             />
@@ -1095,7 +1095,7 @@ export default function page() {
               <MediaCaptionImage
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1746542722/00012017_015_cropped_ceonyc.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746542722/00012017_015_cropped_ceonyc.jpg"
                 alt=""
                 caption="Engineering Corner, 1974. The new shield design for the School of Engineering, introduced in 1967, was added to the building in the early 1970s, before the school moved into its new home in the Terman Engineering Center in 1977. The mascle (diamond with the center removed) framework is orange, engineering’s academic color, on a blue background, denoting Stanford Engineering’s commitment to graduate education. The triple redwood fronds, found on all Stanford University heraldry, symbolize, first, “the organization, transmission, and generation of knowledge which takes place in the School and on which the scholarly growth of engineering depends,” and, second, “the tripartite character of Stanford’s School of Engineering—students, faculty, and alumni.” | Special Collections & University Archives."
               />

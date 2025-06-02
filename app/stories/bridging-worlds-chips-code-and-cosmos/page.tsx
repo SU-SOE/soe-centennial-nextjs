@@ -312,7 +312,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265172/PC0141_b10_Engineering_Corner_0511_EWS2_yxv22y.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265172/PC0141_b10_Engineering_Corner_0511_EWS2_yxv22y.jpg"
                 alt="The words 1902 and engineering engraved into the side of the building along with the School of Engineering coat of arms."
                 caption="Engineering Corner, 1974. The new shield design for the School of Engineering, introduced in 1967, was added to the building in the early 1970s, before the school moved into its new home in the Terman Engineering Center in 1977. The mascle (diamond with the center removed) framework is orange, engineering’s academic color, on a blue background, denoting Stanford Engineering’s commitment to graduate education. The triple redwood fronds, found on all Stanford University heraldry, symbolize, first, “the organization, transmission, and generation of knowledge which takes place in the School and on which the scholarly growth of engineering depends,” and, second, “the tripartite character of Stanford’s School of Engineering—students, faculty, and alumni.” | Special Collections & University Archives."
               />
@@ -330,7 +330,7 @@ export default function page() {
               isCaptionInset
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098487/SC0122_s1_b278_f10_C958-007_bphivg.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098487/SC0122_s1_b278_f10_C958-007_bphivg.jpg"
               alt="Image of several people, with two men engaged in a discussion."
               caption="Haresh Shah, codirector of the John A. Blume Earthquake Engineering Center (left), shows John Blume one of the center’s testing machines. Since its founding, with help from a generous endowment from Blume, the Blume Center has functioned as the umbrella for all earthquake engineering activities at Stanford University. | Stanford News Service."
             />
@@ -338,7 +338,7 @@ export default function page() {
               isCaptionInset
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098486/SC0122_s1_b278_f09_C832-06_rj78ue.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098486/SC0122_s1_b278_f09_C832-06_rj78ue.jpg"
               alt="Two men in a laboratory working together on a complex machine."
               caption="Haresh Shah (left) and James Gere, 1974. Shah and Gere served as codirectors of the Blume Earthquake Engineering Center from 1974 to 1985. | Stanford News Service."
             />
@@ -382,7 +382,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098489/students_with_professor_shah_bltdv9.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098489/students_with_professor_shah_bltdv9.jpg"
                 alt="Two woman and a man reviewing documents together in a classroom setting."
                 caption="Engineering students with Professor Haresh Shah (right), May 1972. Stanford Engineering undertook a concerted effort to recruit women starting in the early 1970s. By 1979, a quarter of all engineering undergraduates were women, and engineering had become the number-one field of choice for women at Stanford. | Stanford News Service."
               />
@@ -420,7 +420,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098484/merkle_hellman_diffie_x5ud4w.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098484/merkle_hellman_diffie_x5ud4w.jpg"
                 alt="Three men examining a large paper document."
                 caption="From left to right, Ralph Merkle (U.C. Berkeley), Martin Hellman (Electrical Engineering), and Whitfield Diffie (EE graduate student and collaborator with Hellman), 1977. In 1976 Hellman and Diffie published the first public-key data encryption technology, a discovery that is viewed as the birth of modern cryptography. Hellman and Diffie won the 2015 A.M. Turing Award for this work. | Chuck Painter/Stanford News Service."
               />
@@ -468,7 +468,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098480/martin_hellman_1978_rzmqww.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098480/martin_hellman_1978_rzmqww.jpg"
                 alt="Martin Hellman"
                 caption="Martin Hellman, 1978. Hellman earned graduate degrees in electrical engineering at Stanford (MS ’67, PhD ’69), and returned to join the faculty in 1971. He became professor emeritus in 1996. | Chuck Painter/Stanford News Service."
               />
@@ -476,7 +476,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098477/1024px-Admiral_Bobby_Ray_Inman__official_CIA_photo__1983_po2pik.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098477/1024px-Admiral_Bobby_Ray_Inman__official_CIA_photo__1983_po2pik.jpg"
                 alt="Admiral Bobby Ray Inman"
                 caption="Admiral Bobby Ray Inman, 1983. Inman became director of the NSA in 1977 and served for four years. In 1981 he became deputy director of the Central Intelligence Agency, retiring in 1982. | CIA/Wikimedia Commons."
               />
@@ -722,7 +722,7 @@ export default function page() {
                 isCaptionInset
                 rounded
                 aspectRatio="3x4"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098485/jh189cy1846_b5hymt.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098485/jh189cy1846_b5hymt.jpg"
                 alt="Three men collaborating around a large document, engaged in discussion."
                 caption="Left to right: Stanford computer scientists John Shott, John Hennessy, and James D. Meindl. Hennessy established the microprocessor without interlocked pipeline stages (MIPS) project to develop computers with simpler instruction sets that could be completed in less time. This group developed the reduced instruction set computer (RISC) architecture, for which Hennessy and U.C. Berkeley collaborator David Patterson won the 2017 A. M. Turing Award. Today, virtually all tablets, phones, and smart devices run on RISC architectures. | Chuck Painter/Stanford News Service."
               />
@@ -757,7 +757,7 @@ export default function page() {
               isParallax
               rounded
               aspectRatio="16x9"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098483/meindl_mitterand_jobs_ku63wf.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747098483/meindl_mitterand_jobs_ku63wf.jpg"
               alt="A group of men in suits standing together outside."
               caption="French President François Mitterrand visits the Center for Integrated Systems (CIS) to learn about the emerging economic powerhouse called Silicon Valley, 1984. As a collaboration between Stanford and industry, CIS allowed faculty and graduate students from engineering, computer science, and applied physics to work on projects of interest to the microelectronics and computer science industries. From left to right: mainframe pioneer Gene Amdahl, Professor John Linvill, Intel cofounder Robert Noyce, Mitterrand, Vice Provost Gerald Lieberman, Professor James Meindl, Apple founder Steve Jobs, Nobel laureate and Professor Paul Berg, Genentech Chairman Thomas Perkins, Hewlett-Packard President John Young, venture capitalist (and future Stanford trustee) Burton McMurtry, and Professor Edward Feigenbaum. | Special Collections & University Archives."
             />
@@ -841,7 +841,7 @@ export default function page() {
                 rounded
                 isPortrait
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747956759/james-gibbons-1984_square_dmrxmf.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747956759/james-gibbons-1984_square_dmrxmf.jpg"
                 alt="A black and white photo featuring a man dressed in a formal suit and tie."
                 caption="James Gibbons, 1984, near the start of his 12 years as dean of the Stanford School of Engineering. During his tenure, the Department of Computer Science moved into the School of Engineering, and the school launched a new computer science major, video instruction, and distance learning, which extended the reach of the school globally. Gibbons’s ties to industry led him to strengthen partnerships with Silicon Valley. | School of Engineering."
               />
@@ -852,7 +852,7 @@ export default function page() {
               isParallax
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1747100146/Escondido_Mall_view_uwzgtp.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1747100146/Escondido_Mall_view_uwzgtp.jpg"
               alt="A group of men in suits standing together outside."
               caption="View of Escondido Mall from Lomita Mall, with engineering laboratories on the right and Meyer Library in the background, 1985. | Chuck Painter/Stanford News Service."
             />

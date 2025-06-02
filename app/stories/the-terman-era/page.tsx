@@ -351,14 +351,14 @@ export default function page() {
                 isPortrait
                 className="mb-0"
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/terman_qm422bp1949_5.57.39_PM_iqbfsd.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/terman_qm422bp1949_5.57.39_PM_iqbfsd.jpg"
                 caption="Fred Terman, dean of the Schoolof Engineering, circa 1950. |  Special Collections & University Archives."
               />
               <MediaCaptionImage
                 rounded
                 isPortrait
                 className="mb-0"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/hugh_skilling_dipkk1.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/hugh_skilling_dipkk1.jpg"
                 aspectRatio="1x1"
                 caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945. | Stanford News Service."
               />
@@ -450,7 +450,7 @@ export default function page() {
                 isPortrait
                 className="mb-0"
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00020166_001_bvjrae.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00020166_001_bvjrae.jpg"
                 caption="Clarkson H. Oglesby originated the undergraduate construction option in civil engineering and in the mid-1950s helped expand it into a program leading to the MS, engineer, and doctoral degrees. | Stanford News Service."
               />
             </StorySidebar>
@@ -469,7 +469,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766097/ginzton_kaplan_kdqwx8.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766097/ginzton_kaplan_kdqwx8.jpg"
               caption="Professor Edward Ginzton, left, and Dr. Henry Kaplan, a Stanford Medicine radiologist, in front of klystron gauges, circa 1953. Kaplan and Ginzton coinvented North America’s first medical linear accelerator, a 6-million-volt machine constructed at the Stanford Medical Center, then in San Francisco. The Stanford device was first used in 1955, soon after a similar device debuted in England. | Stanford News Service."
             />
             <MediaCaptionImage
@@ -479,7 +479,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/ginzton_accelerator_ifihwq.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/ginzton_accelerator_ifihwq.jpg"
               caption="Edward L. Ginzton with the Mark III linear accelerator, 1951. Ginzton earned his doctorate in electrical engineering at Stanford and was later appointed as a professor of electrical engineering and applied physics. He led a Stanford team that designed the world’s most powerful particle accelerator. | Stanford News Service."
             />
             <MediaCaptionImage
@@ -489,7 +489,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/mark_iii_linear_accelerator_hh3pcm.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/mark_iii_linear_accelerator_hh3pcm.jpg"
               alt="An indoor room filled with large machinery"
               caption="Mark III linear accelerator, 1952. This was one of many similarly named accelerators and detectors created and used at the Hansen Experimental Physics Laboratory (HEPL) and at the Stanford Linear Accelerator Center (SLAC). | Stanford News Service."
             />
@@ -500,7 +500,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/linear_accelerator_first_section_f7g4bv.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/linear_accelerator_first_section_f7g4bv.jpg"
               alt="Two men in an indoor room operating on a part of the Mark III linear accelerator"
               caption="First section of the Mark III linear accelerator, 1949. The accelerators were all built on campus at the Hansen Experimental Physics Lab (HEPL) and were precursors to the 2-mile accelerator later built at SLAC, the Stanford Linear Accelerator Center. | Stanford News Service."
             />
@@ -511,7 +511,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/hansen_accelerator_txakxp.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766100/hansen_accelerator_txakxp.jpg"
               alt="William W. Hansen standing by the Mark I electron linear accelerator prototype"
               caption="William W. Hansen with the 3-foot Mark I electron linear accelerator prototype, 1947. It was built, as all the Mark accelerators were, in the basement of the physics department in the Hansen Experimental Physics Lab (HEPL). | Stanford News Service."
             />
@@ -522,7 +522,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766102/ZZ470101_di0q15.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766102/ZZ470101_di0q15.jpg"
               alt=""
               caption="Felix Bloch, right, and William Hansen demonstrating a working model of equipment used in their research, 1947. Bloch, a Stanford professor of physics, invented a new technique of qualitative analysis by nuclear reaction; William Hansen was director of the Stanford Microwave Laboratory. | Stanford News Service."
             />
@@ -533,7 +533,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               captionTextColor="black"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006955_0005_mzu03z.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006955_0005_mzu03z.jpg"
               alt="Two men in a lab with large machinery"
               caption="Electrical engineering faculty Oswald Garrison Villard, Jr. (MEng ’43, PhD ’49), right, and Allen M. Peterson (BS ’48, MS ’49, PhD ’52) with equipment used to record meteors in the ionosphere, August 1950. Their pioneering work on reflecting radar signals off the ionosphere led to Villard’s 1959 debut of “over-the-horizon” radar, which transcended line-of-sight limitations and laid the foundation for advanced long-range surveillance and missile detection systems. | Special Collections & University Archives."
             />
@@ -574,7 +574,7 @@ export default function page() {
               rounded
               animation="fadeIn"
               aspectRatio="3x2"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/pb977cg5869_00_0001_knwaxb.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/pb977cg5869_00_0001_knwaxb.jpg"
               alt=""
               caption="Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. | Hatfield Aerial Surveys / Special Collections & University Archives."
             />
@@ -645,7 +645,7 @@ export default function page() {
               <MediaCaptionImage
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766103/PC0141_b07_Timoshenko_0120_vzth15.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766103/PC0141_b07_Timoshenko_0120_vzth15.jpg"
                 caption="Stephen P. Timoshenko teaching a class, 1948. A renowned expert, teacher, and writer widely regarded as the “father” of applied mechanics in the United States, he was born in the Russian Empire in 1878. Timoshenko taught at Stanford from 1936 to 1963 and was instrumental in the formation of the Division of Engineering Mechanics in 1949. | Special Collections & University Archives."
               />
             </div>
@@ -688,14 +688,14 @@ export default function page() {
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/00006962_0001_a0zehi.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/00006962_0001_a0zehi.jpg"
               alt="A grassy field with several mid-century buildings and parked cars in the background, partially framed by tree branches."
               caption="Images left and right. Housed in utilitarian buildings, the Electronics Research Laboratory (ERL) opened in 1951 and provided space for coordinating research operations in electrical engineering. The ERL was soon drawing $700,000 per year in research funding, resulting in expansion plans for an Applied Electronics Laboratory (AEL), approved just months later. | Stanford University Planning Office."
             />
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006962_0005_jhmwwj.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766094/00006962_0005_jhmwwj.jpg"
               alt="A modern, single-story building with large windows and flat roofs, partially shaded by large trees, and surrounded by bare ground."
             />
           </BgImageWrapper>
@@ -725,7 +725,7 @@ export default function page() {
               <MediaCaptionImage
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766095/CC183_avv3z0.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766095/CC183_avv3z0.jpg"
                 caption="John G. Herriot, professor of mathematics, when he became the first director of the newly founded Computation Center in 1953. In spring 1955, he taught the first programming course, “Theory and Operation of Computing Machines,” to twenty-five students using an IBM Card-Programmed Calculator, Model II. Computer Science was in the Department of Mathematics until 1985, when it was moved to the School of Engineering. | Stanford News Service."
               />
             </div>
@@ -767,7 +767,7 @@ export default function page() {
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766099/flugge-lotz_n5vuhj.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766099/flugge-lotz_n5vuhj.jpg"
               caption="Irmgard Flügge-Lotz. | Stanford News Service."
             />
             <ScrollyBubble>

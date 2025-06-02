@@ -333,7 +333,7 @@ export default function page() {
               rounded
               isCaptionInset
               aspectRatio="3x4"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/00007005_0011.jpg_mining_lab_kufz7t.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/00007005_0011.jpg_mining_lab_kufz7t.jpg"
               alt="A factory worker engages with a miniature ore-treating plant in a mining lab"
               caption="This undated photograph shows a miniature ore-treating plant in the mining lab. Stanford’s Department of Mining and Metallurgy was created in 1919 from the Geology and Mining Department, one of Stanford’s oldest departments, although the physics of metals had been studied since 1903. Study of metals would be the department’s main subject for nearly half a century. | Berton W. Crandall/Hoover Institution Library & Archives."
             />
@@ -345,7 +345,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/Engineering_faculty_c1920_sjiqvd.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/Engineering_faculty_c1920_sjiqvd.jpg"
                 alt="Black and white photo of two rows of men in three-pieced suits. Three sitting in front and six men sitting in back."
                 caption="Stanford’s Civil Engineering faculty at the time of Charles David Marx’s 1923 retirement. Marx is seated in the center of the bottom row. | Courtesy Barbara Wallace."
               />
@@ -383,7 +383,7 @@ export default function page() {
               rounded
               animation="fadeIn"
               aspectRatio="16x9"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742343299/engineering-corner-1910_1915_aoicg9.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742343299/engineering-corner-1910_1915_aoicg9.jpg"
               alt="The southeast corner of Stanford’s main quad, known as Engineering Corner"
               caption="The southeast corner of Stanford’s main quad, known as “Engineering Corner,” circa 1910–1915. The building was home to Engineering until 1977, when the school moved into the newly constructed Frederick E. Terman Engineering Center. | Special Collections & University Archives."
             />
@@ -429,7 +429,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/campus_aerial_view_crandall_m0r1jy.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726628/campus_aerial_view_crandall_m0r1jy.jpg"
                 alt="Aerial view of the Stanford campus, facing south, circa 1925"
                 caption="Aerial view of the Stanford campus, facing south, circa 1925. | Berton W. Crandall photographs, Hoover Institution Library & Archives."
               />
@@ -440,7 +440,7 @@ export default function page() {
                 rounded
                 isCaptionInset
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727935/60022_011_0001_gplnxp.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727935/60022_011_0001_gplnxp.jpg"
                 alt="View south from Memorial Church, showing Engineering school buildings 520 (left) and 530 (right), with the old clock tower between them, 1925"
                 caption="View south from Memorial Church, showing Engineering school buildings 520 (left) and 530 (right), with the old clock tower between them, 1925. Today they are Mechanical Engineering buildings. | Berton W. Crandall photographs, Hoover Institution Library & Archives."
               />
@@ -452,7 +452,7 @@ export default function page() {
               rounded
               isCaptionInset
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727934/60022_011_0005_gs4cil.jpg"
               alt="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925"
               caption="View of Engineering buildings on Escondido Mall behind Memorial Church, 1925. From left to right, the buildings today are the Frederick Emmons Terman Engineering Laboratory (500), the George Havas Engineering Building (520), and Mechanical Engineering (530). Also visible is the roof corner of what is today the Thomas F. Peterson Engineering Laboratory (550), home of the Hasso Plattner Institute of Design (d.school). | Berton W. Crandall photographs, Hoover Institution Library & Archives."
             />
@@ -539,7 +539,7 @@ export default function page() {
                 isPortrait
                 rounded
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/theodore_hoover_pv6obq.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726630/theodore_hoover_pv6obq.jpg"
                 alt="Portrait of Theodore Jesse Hoover (1871-1955)"
                 caption="Theodore Jesse Hoover (1871-1955) graduated from Stanford in 1901 with a BA degree in geology and mining. After a career in the international mining industry, he returned to Stanford in 1919 as a professor of mining and metallurgy. He played a pivotal role in the formation of the new School of Engineering and served as its first dean from 1925 until his retirement in 1936. Hoover was the elder brother of Herbert Hoover, one of the first graduates of Stanford University in 1895 and the 31st President of the United States from 1929 to 1933. | Special Collections & University Archives."
               />
@@ -551,7 +551,7 @@ export default function page() {
               rounded
               animation="fadeIn"
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007204_0003.jpg_Guggehneim_Lab_h3dwcp.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007204_0003.jpg_Guggehneim_Lab_h3dwcp.jpg"
               alt="Interior of the Guggenheim Aeronautics Laboratory, depicting a man alongside a large machine"
               caption="Inside the Guggenheim Aeronautics Laboratory in 1927, Professor William F. Durand, who had joined the Stanford faculty in 1904, collaborated with Professor Everett P. Lesley to build one of the first wind tunnels, which enabled rigorous study of propeller design. Today, dozens of Durand’s hand-carved wooden propeller designs are on display in the Terman Engineering Library on the second floor of Stanford’s Jen-Hsun Huang Engineering Center. | Berton W. Crandall/Hoover Institution Library & Archives."
             />
@@ -564,7 +564,7 @@ export default function page() {
             <MediaCaptionImage
               className="max-w-500 mx-auto"
               aspectRatio="5x8"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742839253/FPO-Stanford-Quad-logo-silo_vqitsd.png"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742839253/FPO-Stanford-Quad-logo-silo_vqitsd.png"
               alt=""
             />
             <ScrollyBubble>
@@ -712,7 +712,7 @@ export default function page() {
                   isPortrait
                   rounded
                   aspectRatio="1x1"
-                  imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/william_durand_o6qndb.jpg"
+                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741727933/william_durand_o6qndb.jpg"
                   alt="Portrait of William F. Durand"
                   caption="William F. Durand. | Special Collections & University Archives."
                 />
@@ -725,7 +725,7 @@ export default function page() {
               rounded
               animation="fadeIn"
               aspectRatio="16x9"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007002_0011.jpg_engineering_lab_exterior_atv43k.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741726626/00007002_0011.jpg_engineering_lab_exterior_atv43k.jpg"
               alt="Showcasing a plane parked in front of a historic building, with a group of men standing by, capturing a moment from aviation history."
               caption="In 1927, a gift from the Daniel Guggenheim Fund for the Promotion of Aeronautics helped create the new Daniel Guggenheim Experimental Laboratory of Aerodynamic and Aeronautic Engineering, located in the Engineering Lab buildings. The gift included $45,000 for equipment and $15,000 yearly for expenses for ten years. In this lab and others, Professor William F. Durand and his colleagues studied aerodynamics, naval propulsion, and engineering research methods. | Berton W. Crandall/Hoover Institution Library & Archives."
             />
