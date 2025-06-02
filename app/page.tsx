@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { StoryCardProps, StoryPosterCard } from "@/components/Story";
+import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
