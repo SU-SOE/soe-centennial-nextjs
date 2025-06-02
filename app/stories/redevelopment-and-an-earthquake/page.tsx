@@ -20,6 +20,7 @@ import { H2 } from "@/components/Typography/Header";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
 import { TimelineCard } from "@/components/Timeline";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "Redevelopment and an earthquake | 100 Years of Stanford Engineering",
@@ -58,24 +59,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    superhead: "A Century of Innovation",
-    heading: "100 Years of Stanford Engineering",
-    href: "/stories/a-century-of-innovation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    chapter: "Decade 6",
-    heading: "Bridging worlds: chips, code, and cosmos",
-    href: "/stories/bridging-worlds-chips-code-and-cosmos",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.storyInnovation,
+  storiesSource.decade6,
 ];
 
 const footnotesList = [

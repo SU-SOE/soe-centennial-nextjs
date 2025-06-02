@@ -8,6 +8,7 @@ import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { OneCol } from "@/components/Layout";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -49,23 +50,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort”",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743098633/Spr25_SoE-Voltage_Black2_square_kgslwr.jpg",
-  },
-  {
-    superhead: "A Century of Innovation",
-    heading: "100 Years of Stanford Engineering",
-    href: "/stories/a-century-of-innovation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    heading: "Letter from Dean Widom",
-    href: "/letter-from-dean-widom",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.storyInnovation,
+  storiesSource.deanWidomLetter,
 ];
 
 export default function page() {

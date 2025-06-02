@@ -6,7 +6,9 @@
 export const internalLinks = {
   home: "/",
   events: "/events",
+  may15Event: "/stories/a-once-in-a-century-birthday-celebration",
   stories: "/stories",
+  transformativeBreakthroughs: "/stories/stanford-engineering-100",
   deanWidomLetter: "/letter-from-dean-widom",
   storyInnovation: "/stories/a-century-of-innovation",
   decade1: "/stories/preparing-roads-culture-may-ride-comfort",
@@ -16,5 +18,5 @@ export const internalLinks = {
   decade5: "/stories/new-spaces-and-expanding-influence",
   decade6: "/stories/bridging-worlds-chips-code-and-cosmos",
   decade7: "/stories/redevelopment-and-an-earthquake",
-  decade8: "/",
+  decade8: "/stories/the-future-is-firmly-in-sight",
 } as const;

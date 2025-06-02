@@ -11,6 +11,7 @@ import React from "react";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { OneCol } from "@/components/Layout";
+import { internalLinks } from '@/utilities/internalLinks';
 
 export const metadata: Metadata = {
   title: "Story Template Title | 100 Years of Stanford Engineering",
@@ -60,7 +61,7 @@ const exploreStoriesData = [
   {
     heading: "A period of transformation",
     chapter: "Decade 4",
-    href: "/stories/a-period-of-transformation",
+    href: internalLinks.decade4,
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
   },
 ];

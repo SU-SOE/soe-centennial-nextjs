@@ -20,6 +20,7 @@ import { H2 } from "@/components/Typography/Header";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -60,24 +61,9 @@ export const metadata: Metadata = {
   },
 };
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    heading: "100 years of Stanford Engineering",
-    superhead: "A century of innovation",
-    href: "/stories/a-century-of-innovation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    heading: "New spaces and expanding influence",
-    chapter: "Decade 5",
-    href: "/stories/new-spaces-and-expanding-influence",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.storyInnovation,
+  storiesSource.decade5,
 ];
 
 const footnotesList = [

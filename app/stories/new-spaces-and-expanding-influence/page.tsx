@@ -20,6 +20,7 @@ import { Container } from "@/components/Container";
 import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Accordion } from "@/components/Accordion";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -80,24 +81,9 @@ const galleryImages = [
 ];
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    heading: "The Terman Era",
-    chapter: "Decade 3",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
-  },
-  {
-    heading: "100 years of Stanford Engineering",
-    superhead: "A century of innovation",
-    href: "/stories/a-century-of-innovation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.decade3,
+  storiesSource.storyInnovation,
 ];
 
 const accordionData = [

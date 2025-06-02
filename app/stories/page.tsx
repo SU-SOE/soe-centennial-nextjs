@@ -6,6 +6,7 @@ import { H1 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "Stories worth telling | 100 Years of Stanford Engineering",
@@ -44,73 +45,23 @@ export const metadata: Metadata = {
 };
 
 const storyData1 = [
-  {
-    chapter: "Video",
-    superhead: "Stanford Engineering at 100",
-    heading: "Transformative Breakthroughs, Boundless Horizons",
-    href: "/stories/stanford-engineering-100",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
-  },
-  {
-    superhead: "A Century of Innovation",
-    heading: "100 Years of Stanford Engineering",
-    href: "/stories/a-century-of-innovation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    heading: "Letter from Dean Widom",
-    href: "/letter-from-dean-widom",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
-  },
+  storiesSource.transformativeBreakthroughs,
+  storiesSource.storyInnovation,
+  storiesSource.deanWidomLetter,
 ];
 
 const storyData2 = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort”",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
-  },
-  {
-    chapter: "Decade 3",
-    heading: "The Terman era",
-    href: "/stories/the-terman-era",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
-  },
-  {
-    chapter: "Decade 4",
-    heading: "A period of transformation",
-    href: "/stories/a-period-of-transformation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
-  },
+  storiesSource.decade2,
+  storiesSource.decade3,
+  storiesSource.decade4,
 ];
 
-const storyCardData = {
-  heading: "New spaces and expanding influence",
-  chapter: "Decade 5",
-  href: "/stories/new-spaces-and-expanding-influence",
-  src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
-};
+const storyCardData = storiesSource.decade5;
 
 const storyData3 = [
-  {
-    chapter: "Decade 6",
-    heading: "Bridging worlds: chips, code, and cosmos",
-    href: "/stories/bridging-worlds-chips-code-and-cosmos",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
-  },
-  {
-    chapter: "Decade 7",
-    heading: "Redevelopment and an earthquake",
-    href: "/stories/redevelopment-and-an-earthquake",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg",
-  },
-  {
-    chapter: "Decade 8",
-    heading: "The future firmly in sight",
-    href: "/stories/tbd",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748483051/original_Google_server_gmqcoh.jpg",
-  },
+  storiesSource.decade6,
+  storiesSource.decade7,
+  storiesSource.decade8,
 ];
 
 export default function page() {

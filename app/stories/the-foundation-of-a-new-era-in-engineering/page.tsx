@@ -21,6 +21,7 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -60,24 +61,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    heading: "The Terman Era",
-    chapter: "Decade 3",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
-  },
-  {
-    heading: "A period of transformation",
-    chapter: "Decade 4",
-    href: "/stories/a-period-of-transformation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.decade3,
+  storiesSource.decade4,
 ];
 
 const galleryImages = [

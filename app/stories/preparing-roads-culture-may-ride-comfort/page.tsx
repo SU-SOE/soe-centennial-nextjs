@@ -22,6 +22,7 @@ import { Metadata } from "next";
 import { ImageGallery } from "@/components/ImageGallery";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { H2 } from "@/components/Typography/Header";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -59,24 +60,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "The foundation of a new era in engineering",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
-  },
-  {
-    heading: "The Terman Era",
-    chapter: "Decade 3",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
-  },
-  {
-    heading: "A period of transformation",
-    chapter: "Decade 4",
-    href: "/stories/a-period-of-transformation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
-  },
+  storiesSource.decade2,
+  storiesSource.decade3,
+  storiesSource.decade4,
 ];
 
 const galleryImages = [

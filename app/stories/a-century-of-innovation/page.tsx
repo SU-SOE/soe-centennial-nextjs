@@ -9,6 +9,7 @@ import { Text } from "@/components/Typography";
 import { OneCol } from "@/components/Layout";
 import { H2 } from "@/components/Typography/Header";
 import { Link } from "@/components/Cta";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "A Century of Innovation: 100 Years of Stanford Engineering",
@@ -48,24 +49,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    heading: "The foundation of a new era in engineering",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
-  },
-  {
-    heading: "The Terman Era",
-    chapter: "Decade 3",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.decade2,
+  storiesSource.decade3,
 ];
 
 export default function page() {
