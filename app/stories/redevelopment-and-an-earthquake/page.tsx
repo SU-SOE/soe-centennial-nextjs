@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { Container } from "@/components/Container";
 import { TimelineCard } from "@/components/Timeline";
 import { storiesSource } from "@/utilities/storiesSource";
+import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   title: "Redevelopment and an earthquake | 100 Years of Stanford Engineering",
@@ -453,6 +454,16 @@ export default function page() {
               construction efficiency.
               <Footnotes footnoteRefs={[{ id: "footnote5", number: 5 }]} />
             </Text>
+          </OneCol>
+          <AnimatedPosterCard
+            isFullWidth
+            className="rs-mb-6"
+            superhead="1925 – 2025"
+            heading="Explore the Centennial timeline"
+            href="/timeline"
+            buttonText="Explore the timeline"
+          />
+          <OneCol>
             <Text>
               In 1991, the Department of Civil Engineering added an
               environmental undergraduate degree track. Jeffrey Koseff, then
