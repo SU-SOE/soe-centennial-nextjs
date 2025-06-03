@@ -716,7 +716,7 @@ export default function page() {
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
-            sectionHeading="Explore more decades"
+            sectionHeading="Explore more"
             hasButton
           />
           <ContributeStoryBanner bgColor="red" hasLineArt />
