@@ -438,7 +438,7 @@ export default function page() {
               caption="An excerpt from The Stanford Daily, vol. 195, no. 64, 1989. | Linda A. Cicero/Stanford News Service."
             />
           </Scrollytelling>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               The Department of Civil Engineering embraced its new proximity to
               Computer Science (CS) and in January 1988 founded the Center for
