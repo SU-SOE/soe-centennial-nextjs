@@ -43,7 +43,6 @@ export const storiesSource = {
   decade1: {
     chapter: "Decade 1",
     heading: "“Preparing roads over which culture may ride in comfort”",
-    dek: "1925 – 1934",
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
     href: internalLinks.decade1,
   },
