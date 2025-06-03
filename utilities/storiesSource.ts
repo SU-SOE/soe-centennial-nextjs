@@ -87,6 +87,6 @@ export const storiesSource = {
     chapter: "Decade 8",
     heading: "The future firmly in sight",
     href: internalLinks.decade8,
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748483051/original_Google_server_gmqcoh.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748483048/110419-1941_mlzjyn.jpg",
   },
 } as const;
