@@ -413,7 +413,7 @@ export default function page() {
               aspectRatio="8x5"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/stanford_solar_car_u2yced.jpg"
               alt="A solar-powered vehicle stands parked outside a building with a person riding a bike in the background."
-              caption="The Stanford Solar Car Project (SSCP) Luminos, 2013. Luminos was built to compete in the 2013 World Solar Challenge, a 2,000-mile trek across the Australian Outback. "
+              caption="The Stanford Solar Car Project (SSCP) Luminos, 2013. Luminos was built to compete in the 2013 World Solar Challenge, a 2,000-mile trek across the Australian Outback. The student-run, university-wide SSCP designs, builds, and races solar-powered vehicles in international competitions every other year, to test the limits of their designs under extreme conditions. The project promotes innovation in renewable energy technologies and sustainable transportation and provides students with hands-on opportunities for cross-disciplinary collaboration. Of the fifteen vehicles constructed since the project began in 1989, Luminos was the most successful, placing fourth in the 2013 race and going on to log 10,000 miles. Today it is on display in the Huang Engineering Center."
             />
             <ScrollyBubble>
               <Text mb="0">

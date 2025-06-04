@@ -345,6 +345,7 @@ export default function page() {
             </OneCol>
             <MediaCaptionImage
               rounded
+              isCaptionInset
               aspectRatio="5x8"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483024/hewlett_center_exterior_adonpc.jpg"
               alt="A large white building stands prominently beside another structure as two men walk by."
@@ -597,7 +598,7 @@ export default function page() {
                 className="mb-0"
                 aspectRatio="1x1"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483021/john_hennessy_cjelw5.jpg"
-                caption="James Plummer, dean of the School of Engineering from 1999 to 2014, at a Stanford commencement celebration, 2005. As the longest-serving dean in the school’s history, Plummer led the school through a major expansion and greatly increased the number of students majoring in engineering. He also advocated for all engineering students to take advantage of liberal arts opportunities at Stanford. | Linda A. Cicero/Stanford News Service."
+                caption="John Hennessy, dean of the School of Engineering from 1996 to 1999. During Hennessy’s tenure, the school launched an online master’s degree in electrical engineering—the first fully online degree to be offered by the university. He also encouraged more multidisciplinary and interdisciplinary activities at the school while maintaining a first-rate academic profile, and oversaw a five-year plan that emphasized bioengineering and biomedical engineering. | Linda A. Cicero/Stanford News Service."
               />
               <MediaCaptionImage
                 rounded
@@ -606,7 +607,7 @@ export default function page() {
                 className="mb-0"
                 aspectRatio="1x1"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483046/james_plummer_fydgcs.jpg"
-                caption="Hugh Hildreth Skilling, 1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for twenty-three years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945. | Stanford News Service."
+                caption="James Plummer, dean of the School of Engineering from 1999 to 2014, at a Stanford commencement celebration, 2005. As the longest-serving dean in the school’s history, Plummer led the school through a major expansion and greatly increased the number of students majoring in engineering. He also advocated for all engineering students to take advantage of liberal arts opportunities at Stanford. | Linda A. Cicero/Stanford News Service."
               />
             </StorySidebar>
           </TwoCol>
