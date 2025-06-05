@@ -327,8 +327,8 @@ export default function page() {
                 The objective of STVP, Gibbons recalled, was “to teach
                 entrepreneurship . . . to help people understand what
                 entrepreneurship was. Not trying to make them entrepreneurs.”
-                <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
-                By connecting students with companies and the people who founded
+                <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} /> By
+                connecting students with companies and the people who founded
                 them, the program could “help people to understand technology
                 ventures, how they fail, what kind of personalities it takes,
                 what we know about success and failure.”
@@ -432,7 +432,7 @@ export default function page() {
             isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto max-w-1500 rs-mb-5"
+            className="cc mx-auto max-w-1500 rs-mb-5 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483023/vv883ww4376_bxyin5.jpg"
             alt="A group of men standing together posing for a photo."
             caption="Stanford President John Hennessy, alumni Sergey Brin and Larry Page, and computer science Professor Donald Knuth at a gathering on campus to celebrate Google, April 2005. | School of Engineering."
@@ -649,7 +649,7 @@ export default function page() {
             isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto max-w-1500 rs-mb-5"
+            className="cc mx-auto max-w-1500 rs-mb-5 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483049/A-CAM-2022SE-138_xvsrau.jpg"
             alt="A view of the David Packard Electrical Engineering building."
             caption="Exterior view of the David Packard Electrical Engineering Building, 2022. The Packard building was one of four new buildings constructed as part of the first phase of the Near West Campus project. The building became a home for the Electrical Engineering Department. A major renovation of the basement level was undertaken in 2023 to create the new Stanford Robotics Lab, which opened in 2024, along with several new makerspaces. | Linda A. Cicero/Stanford News Service."
@@ -877,7 +877,7 @@ export default function page() {
             rounded
             isParallax
             isCaptionInset
-            className="cc mx-auto rs-mb-5 rs-mt-8"
+            className="cc mx-auto rs-mb-5 rs-mt-8 2xl:p-0"
             aspectRatio="8x5"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483022/murray_and_taber_zw48mg.jpg"
             alt="A man inspects a large metal object, accompanied by another man who watches nearby."
