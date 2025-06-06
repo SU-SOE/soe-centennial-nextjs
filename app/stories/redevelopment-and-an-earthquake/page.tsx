@@ -434,7 +434,7 @@ export default function page() {
               className="rs-mt-3 max-w-1500 mx-auto"
               aspectRatio="3x4"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748558326/Stanford-Daily_Solar-Car_vzamnx.jpg"
-              alt=""
+              alt="A newspaper-style infographic titled “Solar car project to follow sun to national race” features an article by Jonathan Eisenberg and an illustrated U.S. map. The article discusses the Stanford Solar Race Car team, which is building a solar-powered vehicle to compete in the GM Sunrayce USA on July 9, 1990. The race spans 1,800 miles over 8.5 days, starting in Lake Buena Vista, Florida, and ending in Warren, Michigan, at the GM Tech Center. The route passes through Tallahassee, Florida; Frankfort, Kentucky; and Columbus, Ohio. The solar car is powered by special solar cells designed to convert a high percentage of sunlight into electricity, allowing the car to charge more efficiently. The vehicle is being constructed by sixty Stanford students and is supported by General Motors and other sponsors. The car’s design includes a “supercritical wing” shape to reduce drag. Students aim to raise about $400,000 in sponsorships and have a deadline of February 3, 1990, for completion. The map on the right visually traces the race path with labeled stops: Lake Buena Vista, Tallahassee, Frankfort, Columbus, and the finish line in Warren, Michigan. The map highlights the shaded and hilly terrain of the course. A caption below the map summarizes the route and project details."
               caption="An excerpt from The Stanford Daily, vol. 195, no. 64, 1989. | Linda A. Cicero/Stanford News Service."
             />
           </Scrollytelling>
@@ -657,7 +657,7 @@ export default function page() {
               isCaptionInset
               aspectRatio="16x9"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/STS047-37-003_large_rt36xm.jpg"
-              alt="A woman in a space suit floats in the vastness of space."
+              alt="Smiling woman with knees bent and feet crossed, hovers above the ground with science instruments on the wall all around her."
               caption="STS-47 Mission Specialist Mae C. Jemison floating in the Science Module aboard the Space Shuttle Endeavour, September 1992. |  NASA."
             />
           </BgImageWrapper>

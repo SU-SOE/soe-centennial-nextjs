@@ -95,7 +95,6 @@ export const StoryImpactBanner = ({
       width="full"
       mb={5}
       className={cnb("relative", className)}
-      aria-labelledby="hero-caption"
     >
       <Container
         bgColor={bgColor}
@@ -195,7 +194,7 @@ export const StoryImpactBanner = ({
             </AnimateInView>
             {(isCaptionInHero || bgColor === "white") && (
               <div className="mt-13">
-                <Text id="hero-caption" variant="caption" mb="none">
+                <Text variant="caption" mb="none">
                   {caption}
                 </Text>
               </div>
@@ -205,11 +204,7 @@ export const StoryImpactBanner = ({
       </Container>
       {!isCaptionInHero && bgColor !== "white" && (
         <div className="mt-13 cc">
-          <Text
-            id="hero-caption"
-            variant="caption"
-            className="max-w-prose-wide"
-          >
+          <Text variant="caption" className="max-w-prose-wide">
             {caption}
           </Text>
         </div>
