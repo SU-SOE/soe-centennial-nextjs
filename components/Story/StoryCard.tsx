@@ -23,8 +23,8 @@ export type StoryCardProps = HTMLAttributes<HTMLElement> &
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
     bgColor?: BgColorType;
-    imageUrl: string;
-    imageAlt?: string;
+    src: string;
+    alt?: string;
     isHorizontal?: boolean;
   };
 
@@ -39,8 +39,8 @@ export const StoryCard = ({
   headerTag = "h2",
   isHeadingLarge = false,
   bgColor = "white",
-  imageUrl,
-  imageAlt,
+  src,
+  alt,
   isHorizontal = false,
   className,
   animation,
@@ -74,16 +74,16 @@ export const StoryCard = ({
             bgColor && styles.bgColors[bgColor],
           )}
         >
-          {imageUrl && (
+          {src && (
             <div
               className={cnb("relative aspect-[1/1] w-full overflow-hidden", {
                 "lg:w-1/2": isHorizontal,
               })}
             >
               <Image
-                className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
-                src={imageUrl}
-                alt={imageAlt || ""}
+                className="size-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
+                src={src}
+                alt={alt || ""}
                 fill
                 sizes="(max-width: 768px) 100vw, 1000px"
               />

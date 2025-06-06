@@ -60,7 +60,7 @@ export const BgImageWrapper = ({
     >
       <Container bgColor={bgColor} width="site" pt={7} pb={7}>
         {hasBgImage && src && (
-          <div className="h-full w-full absolute top-0 left-0 z-0">
+          <div className="size-full absolute top-0 left-0 z-0">
             <Image
               className="ed11y-ignore object-cover z-0"
               src={src}
@@ -71,7 +71,7 @@ export const BgImageWrapper = ({
             />
             <div
               className={cnb(
-                "absolute h-full w-full bg-opacity-80 z-10 backdrop-blur-sm",
+                "absolute size-full bg-opacity-80 z-10 backdrop-blur-sm",
                 bgColor ? styles.bgColors[bgColor] : "",
               )}
             />

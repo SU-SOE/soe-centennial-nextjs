@@ -1,15 +1,10 @@
-import { cnb } from "cnbuilder";
 import { StanfordLogo } from "@/components/StanfordLogo";
 import { Container } from "@/components/Container";
 import { FlexBox } from "@/components/FlexBox";
 import * as styles from "./GlobalFooter.styles";
 
-type GlobalFooterProps = {
-  className?: string;
-};
-
-export const GlobalFooter = ({ className }: GlobalFooterProps) => (
-  <Container className={cnb(styles.root, className)} bgColor="red">
+export const GlobalFooter = () => (
+  <Container className={styles.root} bgColor="red">
     <FlexBox direction="col" className={styles.outerWrapper}>
       <div className={styles.logoWrapper}>
         <StanfordLogo

@@ -15,6 +15,7 @@ import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { TwoCol } from "@/components/Layout";
+import { internalLinks } from "@/utilities/internalLinks";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -50,21 +51,18 @@ const exploreMoreData = [
     superhead: "Stanford Engineering at 100",
     heading: "Transformative Breakthroughs, Boundless Horizons",
     href: "/stories/stanford-engineering-100",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
   },
   {
     superhead: "A Century of Innovation",
     heading: "100 Years of Stanford Engineering",
     href: "/stories/a-century-of-innovation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
   },
   {
     heading: "Letter from Dean Widom",
     href: "/letter-from-dean-widom",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
   },
 ];
 
@@ -128,23 +126,20 @@ const storyData: StoryCardProps[] = [
   {
     chapter: "Decade 3",
     heading: "The Terman era",
-    href: "/stories/the-terman-era",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
+    href: internalLinks.decade3,
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
   },
   {
     heading: "New spaces and expanding influence",
     chapter: "Decade 5",
-    href: "/stories/new-spaces-and-expanding-influence",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+    href: internalLinks.decade5,
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
   },
   {
     chapter: "Decade 6",
     heading: "Bridging worlds: chips, code, and cosmos",
-    href: "/stories/bridging-worlds-chips-code-and-cosmos",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
+    href: internalLinks.decade6,
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
   },
 ];
 
@@ -159,14 +154,7 @@ export default function Home() {
           className="bg-cardinal-red-dark"
           mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
         />
-        <Container
-          as="section"
-          bgColor="blue"
-          width="full"
-          pt={8}
-          pb={8}
-          mb={6}
-        >
+        <Container as="section" bgColor="blue" width="full" py={8} mb={6}>
           <div className="cc lg:p-0 mx-auto rs-pb-4 w-full max-w-800">
             <Heading font="dm-sans" size={2} weight="semibold" align="center">
               Stanford Engineering Centennial
@@ -195,7 +183,7 @@ export default function Home() {
               animation="slideUp"
               chapter="Decade 1"
               heading="“Preparing roads over which culture may ride in comfort”"
-              imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
               href="/stories/preparing-roads-culture-may-ride-comfort"
             />
           </TwoCol>
@@ -208,7 +196,7 @@ export default function Home() {
           />
         </StoryFeature>
         <Container as="section" mt={10} mb={10} width="full">
-          <AnimatedLineartBanner className="mb-[-4rem]">
+          <AnimatedLineartBanner className="-mb-40">
             <div className="flex flex-col items-start md:rs-px-1">
               <Heading
                 align="left"
@@ -265,7 +253,7 @@ export default function Home() {
               heading="A once-in-a-century birthday celebration"
               body="May 15, 2025"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
-              link="/stories/a-once-in-a-century-birthday-celebration"
+              href="/stories/a-once-in-a-century-birthday-celebration"
             />
             <ExploreMore
               isThreeCol

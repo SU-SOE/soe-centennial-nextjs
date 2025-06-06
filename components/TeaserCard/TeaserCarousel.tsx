@@ -60,7 +60,7 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
               ease: "easeInOut",
             }}
             onClick={() => setIsAutoplaying(!isAutoplaying)}
-            className="absolute w-full h-full m-0"
+            className="absolute size-full m-0"
             aria-label={`Previous slide ${prevIndex + 1}`}
           >
             <Image
@@ -81,7 +81,7 @@ const TeaserCarousel = ({ images }: TeaserCarouselProps) => {
               ease: "easeInOut",
             }}
             onClick={() => setIsAutoplaying(!isAutoplaying)}
-            className="absolute w-full h-full m-0"
+            className="absolute size-full m-0"
             aria-label={`Slide ${index + 1}`}
           >
             <Image

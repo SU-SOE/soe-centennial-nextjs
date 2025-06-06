@@ -28,7 +28,7 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
       </Container>
       <div className="relative w-full aspect-[16/9] bg-cool-grey lg:absolute lg:top-0 lg:left-0 h-auto z-10 overflow-hidden">
         <Image
-          className="absolute top-0 left-0 lg:left-[300px] z-0 w-full h-auto"
+          className="absolute top-0 left-0 lg:left-300 z-0 w-full h-auto"
           alt=""
           src="/assets/images/Hawa-Racine-Thiam.jpg"
           width={0}
@@ -36,28 +36,28 @@ export const FeatureHero = ({ children, ...props }: FeatureHeroProps) => {
           sizes="100vw"
         />
         <motion.div
-          className="absolute w-full h-full top-0 left-0 z-10"
+          className="absolute size-full top-0 left-0 z-10"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 3 }}
         >
-          <div className="w-full h-full bg-plum-dark absolute top-0 left-0 z-10" />
+          <div className="size-full bg-plum-dark absolute top-0 left-0 z-10" />
           <ShapeA
-            className="absolute bottom-10 left-10 lg:left-[300px] z-20 *:stroke-plum"
+            className="absolute bottom-10 left-10 lg:left-300 z-20 *:stroke-plum"
             height={800}
           />
         </motion.div>
-        <div className="absolute top-0 left-0 bg-transparent lg:bg-feature-gradient-rl bg-feature-gradient-bt w-full h-full z-50" />
+        <div className="absolute top-0 left-0 bg-transparent lg:bg-feature-gradient-rl bg-feature-gradient-bt size-full z-50" />
         <Image
-          className="absolute top-0 left-0 lg:left-[300px] z-20 w-full h-auto"
+          className="absolute top-0 left-0 lg:left-300 z-20 w-full h-auto"
           alt=""
           src="/assets/images/Hawa-Racine-Thiam_silhouette.png"
           width={0}
           height={0}
           sizes="100vw"
         />
-        <div className="absolute top-0 left-0 bg-feature-gradient-bt w-full h-full z-50" />
+        <div className="absolute top-0 left-0 bg-feature-gradient-bt size-full z-50" />
       </div>
     </FlexBox>
   );
