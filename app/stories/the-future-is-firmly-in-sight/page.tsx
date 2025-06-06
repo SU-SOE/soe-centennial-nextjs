@@ -280,7 +280,7 @@ export default function page() {
             alt="A server encased in colorful toy building blocks, located in the Jen-Hsun Huang Engineering Center."
             caption="The original server running the Google algorithm developed by engineering graduate students Larry Page and Sergey Brin, made up of ten 4-gigabyte disk drives, encased in toy building blocks, translucent plastic, and packing tape, 1996. This combined 40 GB of storage was considerably larger than what was required of most student projects at the time. It is now on display in the Jen-Hsun Huang Engineering Center. | Linda A. Cicero/Stanford News Service."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0 rs-mb-6">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-6">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               quoteColor="red"
@@ -432,7 +432,7 @@ export default function page() {
             isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto max-w-1500 rs-mb-5 2xl:p-0"
+            className="cc mx-auto max-w-1500 rs-mb-5 3xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483023/vv883ww4376_bxyin5.jpg"
             alt="A group of men standing together posing for a photo."
             caption="Stanford President John Hennessy, alumni Sergey Brin and Larry Page, and computer science Professor Donald Knuth at a gathering on campus to celebrate Google, April 2005. | School of Engineering."
@@ -649,7 +649,7 @@ export default function page() {
             isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto max-w-1500 rs-mb-5 2xl:p-0"
+            className="cc mx-auto max-w-1500 rs-mb-5 3xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483049/A-CAM-2022SE-138_xvsrau.jpg"
             alt="A view of the David Packard Electrical Engineering building."
             caption="Exterior view of the David Packard Electrical Engineering Building, 2022. The Packard building was one of four new buildings constructed as part of the first phase of the Near West Campus project. The building became a home for the Electrical Engineering Department. A major renovation of the basement level was undertaken in 2023 to create the new Stanford Robotics Lab, which opened in 2024, along with several new makerspaces. | Linda A. Cicero/Stanford News Service."
@@ -877,7 +877,7 @@ export default function page() {
             rounded
             isParallax
             isCaptionInset
-            className="cc mx-auto rs-mb-5 rs-mt-8 2xl:p-0"
+            className="cc mx-auto rs-mb-5 rs-mt-8 3xl:p-0"
             aspectRatio="8x5"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483022/murray_and_taber_zw48mg.jpg"
             alt="A man inspects a large metal object, accompanied by another man who watches nearby."

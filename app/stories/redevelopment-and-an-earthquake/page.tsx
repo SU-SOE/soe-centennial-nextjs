@@ -317,7 +317,7 @@ export default function page() {
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg"
             alt="Two people work at a vintage computer, surrounded by dot matrix printer paper and documents."
           />
-          <div className="max-w-1500 w-full cc 2xl:p-0">
+          <div className="max-w-1500 w-full cc 3xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               teaser=". . . The future of computer science lay in engineering—in problem-solving, not in theory, and problem-solving is an essentially engineering thing to do."
@@ -776,7 +776,7 @@ export default function page() {
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
-          <div className="cc 2xl:p-0 flex flex-col lg:flex-row w-full gap-[7.6rem] rs-mt-4 rs-mb-5 w-full max-w-1500">
+          <div className="cc 3xl:p-0 flex flex-col lg:flex-row w-full gap-[7.6rem] rs-mt-4 rs-mb-5 w-full max-w-1500">
             <MediaCaptionImage
               rounded
               isCaptionInset
