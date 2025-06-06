@@ -46,10 +46,36 @@ export const EmbedMediaHero = ({
    */
   const [hasWindow, setHasWindow] = useState(false);
   const playerWrapperRef = useRef<HTMLDivElement>(null);
+  const playerRef = useRef<ReactPlayer>(null);
 
   useEffect(() => {
     setHasWindow(typeof window !== "undefined");
   }, []);
+
+  // Handle focus management when video starts playing
+  const handlePlay = () => {
+    // Small delay to ensure the video element is fully rendered
+    setTimeout(() => {
+      if (playerRef.current) {
+        const internalPlayer = playerRef.current.getInternalPlayer();
+
+        // For different player types, focus the appropriate element
+        if (internalPlayer && typeof internalPlayer.focus === "function") {
+          internalPlayer.focus();
+        } else if (playerWrapperRef.current) {
+          // Fallback: focus the video element directly
+          const videoElement =
+            playerWrapperRef.current.querySelector("video, iframe");
+          if (
+            videoElement &&
+            typeof (videoElement as HTMLElement).focus === "function"
+          ) {
+            (videoElement as HTMLElement).focus();
+          }
+        }
+      }
+    }, 100);
+  };
 
   // If the space key is pressed, do not scroll the page and click the element
   const handleSpaceKeyDown = (event: KeyboardEvent) => {
@@ -108,6 +134,7 @@ export const EmbedMediaHero = ({
         <div className={styles.mediaWrapper} ref={playerWrapperRef}>
           {hasWindow && (
             <ReactPlayer
+              ref={playerRef}
               width="100%"
               height="100%"
               url={mediaUrl}
@@ -120,6 +147,7 @@ export const EmbedMediaHero = ({
               // This previewAriaLabel prop is not documented but it is in the React Player source code
               previewAriaLabel={isPreview ? previewAriaLabel : undefined}
               className="group"
+              onPlay={handlePlay}
             />
           )}
         </div>
