@@ -11,9 +11,9 @@ import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   title:
-    "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+    "Event Ended: Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
   description:
-    "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+    "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
   keywords: [
     "Stanford Engineering",
     "Centennial Story",
@@ -21,12 +21,13 @@ export const metadata: Metadata = {
     "Engineering Legacy",
     "Innovative Research",
     "Speaker Series",
+    "Event Ended",
   ],
   openGraph: {
     title:
-      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+      "Event Ended: Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+      "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+      "Event Ended: Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
     description:
-      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+      "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
     ],
