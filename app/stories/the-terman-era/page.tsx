@@ -355,7 +355,7 @@ export default function page() {
                 className="mb-0"
                 aspectRatio="1x1"
                 imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766101/terman_qm422bp1949_5.57.39_PM_iqbfsd.jpg"
-                caption="Fred Terman, dean of the Schoolof Engineering, circa 1950. |  Special Collections & University Archives."
+                caption="Fred Terman, dean of the School of Engineering, circa 1950. |  Special Collections & University Archives."
               />
               <MediaCaptionImage
                 rounded
