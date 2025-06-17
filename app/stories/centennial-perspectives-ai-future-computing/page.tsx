@@ -4,10 +4,10 @@ import { Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
-import { OneCol } from "@/components/Layout";
+import { OneCol, TwoCol } from "@/components/Layout";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
-import { ExploreMore } from "@/components/Story";
+import { ExploreMore, StoryCard, StorySidebar } from "@/components/Story";
 
 export const metadata: Metadata = {
   title:
@@ -91,33 +91,44 @@ export default function page() {
             className="bg-cardinal-red-dark"
             mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
           />
-          <OneCol className="rs-mt-5">
-            <Text variant="overview" className="cen-drop-cap" mb="none">
-              Join us for a conversation exploring AI and the Future of
-              Computing, hosted by Dean Jennifer Widom.
-            </Text>
-            <Text>
-              This event features a conversation between Jensen Huang (MS
-              &apos;92), founder, president, and CEO of NVIDIA, and John
-              Hennessy, Stanford President Emeritus and professor of electrical
-              engineering and of computer science; talks by engineering faculty
-              Srabanti Chowdhury, Carlos Guestrin, and Kunle Olukotun; closing
-              remarks from Stanford President Jonathan Levin, and a special
-              appearance from Morris Chang (PhD &apos;64), Founding Chairman of
-              Taiwan Semiconductor Manufacturing Company (TSMC).
-            </Text>
-            <Text>
-              Hoover Institution Director Condoleezza Rice introduces the 2025{" "}
-              <em>Stanford Emerging Technology Review</em>.
-            </Text>
-            <Text>
-              <em>
-                As part of Stanford Engineering’s centennial celebration,
-                Centennial Perspectives is a speaker series that highlights
-                innovative research and its impact on society.
-              </em>
-            </Text>
-          </OneCol>
+          <TwoCol className="rs-mt-5" isSidebar>
+            <OneCol>
+              <Text variant="overview" className="cen-drop-cap" mb="none">
+                Join us for a conversation exploring AI and the Future of
+                Computing, hosted by Dean Jennifer Widom.
+              </Text>
+              <Text>
+                This event features a conversation between Jensen Huang (MS
+                &apos;92), founder, president, and CEO of NVIDIA, and John
+                Hennessy, Stanford President Emeritus and professor of
+                electrical engineering and of computer science; talks by
+                engineering faculty Srabanti Chowdhury, Carlos Guestrin, and
+                Kunle Olukotun; closing remarks from Stanford President Jonathan
+                Levin, and a special appearance from Morris Chang (PhD
+                &apos;64), Founding Chairman of Taiwan Semiconductor
+                Manufacturing Company (TSMC).
+              </Text>
+              <Text>
+                Hoover Institution Director Condoleezza Rice introduces the 2025{" "}
+                <em>Stanford Emerging Technology Review</em>.
+              </Text>
+              <Text>
+                <em>
+                  As part of Stanford Engineering’s centennial celebration,
+                  Centennial Perspectives is a speaker series that highlights
+                  innovative research and its impact on society.
+                </em>
+              </Text>
+            </OneCol>
+            <StorySidebar>
+              <StoryCard
+                chapter="Past Event"
+                heading="Explore the Program"
+                body="Includes session titles and presenter names."
+                href="/events/centennial-perspectives-ai-future-computing"
+              />
+            </StorySidebar>
+          </TwoCol>
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="C" />
           </div>
