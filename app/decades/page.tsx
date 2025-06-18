@@ -73,8 +73,8 @@ export default function page() {
         <article>
           <div className="cc rs-mt-8">
             <H1 className="max-w-1000 w-full">
-              Ten decades of <br />
-              world-changing stories
+              Ten decades <br />
+              in transformation
             </H1>
           </div>
           <div className="flex w-full justify-start rs-mb-7">
