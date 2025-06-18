@@ -2,68 +2,59 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import React from "react";
 import { Metadata } from "next";
-import { H1 } from "@/components/Typography/Header";
+import { H1, Text } from "@/components/Typography";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { storiesSource } from "@/utilities/storiesSource";
 import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
+import { TwoCol } from "@/components/Layout";
 
 export const metadata: Metadata = {
-  title: "Stories worth telling | 100 Years of Stanford Engineering",
+  title: "Ten decades in transformation | 100 Years of Stanford Engineering",
   description:
-    "Explore inspiring stories that celebrate the legacy, innovation, and impact of the Stanford School of Engineering over the past centennial.",
+    "Explore the Stanford Engineering Centennial stories that walk you through each decade from 1925 – 2025.",
   keywords: [
-    "Stanford history",
     "Stanford Engineering",
-    "School of Engineering",
-    "technological advancement",
-    "engineering legacy",
-    "innovation",
-    "centennial celebration",
-    "engineering stories",
+    "Centennial Stories",
+    "Transformation",
+    "Decades Overview",
+    "1925-2025",
+    "Engineering History",
   ],
   openGraph: {
-    title: "Stories worth telling | 100 Years of Stanford Engineering",
+    title: "Ten decades in transformation | 100 Years of Stanford Engineering",
     description:
-      "A curated collection of stories highlighting the people, breakthroughs, and ideas that shaped a century of engineering at Stanford.",
+      "Explore the Stanford Engineering Centennial stories that walk you through each decade from 1925 – 2025.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-        alt: "Historic Stanford engineering class in session, circa 1925",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialDecades_Transformation.jpg",
+        alt: "Historical collage showing Stanford Engineering milestones from each decade.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stories worth telling | 100 Years of Stanford Engineering",
+    title: "Ten decades in transformation | 100 Years of Stanford Engineering",
     description:
-      "Discover the remarkable people and ideas that shaped 100 years of Stanford Engineering.",
+      "Explore the Stanford Engineering Centennial stories that walk you through each decade from 1925 – 2025.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialDecades_Transformation.jpg",
     ],
   },
 };
 
-const storyData1 = [
-  storiesSource.transformativeBreakthroughs,
-  storiesSource.storyInnovation,
-  storiesSource.deanWidomLetter,
-];
+const posterCardData1 = storiesSource.decade1;
 
-const storyData2 = [
-  storiesSource.decade2,
-  storiesSource.decade3,
-  storiesSource.decade4,
-];
+const storyData1 = [storiesSource.decade2, storiesSource.decade3];
 
-const storyCardData = storiesSource.decade5;
+const storyCardData = storiesSource.decade4;
 
-const storyData3 = [
-  storiesSource.decade6,
-  storiesSource.decade7,
-  storiesSource.decade8,
-];
+const storyData2 = [storiesSource.decade5, storiesSource.decade6];
+
+const posterCardData2 = storiesSource.decade7;
+
+const storyData3 = [storiesSource.decade8];
 
 export default function page() {
   return (
@@ -72,56 +63,28 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-1000 w-full">
-              Ten decades <br />
-              in transformation
-            </H1>
+            <TwoCol className="max-w-1500 w-full">
+              <H1 className="mt-0">
+                Ten decades <br />
+                in transformation
+              </H1>
+              <Text size="f2">
+                Explore the Stanford Engineering Centennial stories that walk
+                you through each decade from 1925 – 2025.
+              </Text>
+            </TwoCol>
           </div>
-          <div className="flex w-full justify-start rs-mb-7">
-            <HorizontalLineart lineartType="A" />
+          <div className="flex w-full justify-end rs-mb-7">
+            <HorizontalLineart lineartType="C" />
           </div>
           <StoriesNav />
           <ul className="list-none p-0">
-            <li>
-              <StoryPosterCard
-                hasBgImage
-                bgColor="red"
-                chapter="Video"
-                heading="A once-in-a-century birthday celebration"
-                body="May 15, 2025"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
-                href="/stories/a-once-in-a-century-birthday-celebration"
-              />
-            </li>
-            <li className="mx-auto w-full max-w-1200">
-              <ExploreMore
-                isThreeCol
-                stories={storyData1}
-                className="py-0"
-                cardBgColor="white"
-                headerTag="h2"
-              />
-            </li>
-            <li
-              aria-hidden="true"
-              className="flex w-full justify-start rs-mb-8"
-            >
-              <HorizontalLineart lineartType="D" />
-            </li>
             <li className="cc">
-              <StoryPosterCard
-                hasBgImage
-                chapter="Decade 1"
-                heading="“Preparing roads over which culture may ride in comfort”"
-                dek="1925 – 1934"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
-                href="/stories/preparing-roads-culture-may-ride-comfort"
-              />
+              <StoryPosterCard hasBgImage {...posterCardData1} />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
-                stories={storyData2}
+                stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
                 headerTag="h2"
@@ -138,7 +101,17 @@ export default function page() {
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
+                stories={storyData2}
+                className="py-0"
+                cardBgColor="white"
+                headerTag="h2"
+              />
+            </li>
+            <li className="cc">
+              <StoryPosterCard hasBgImage {...posterCardData2} />
+            </li>
+            <li className="mx-auto w-full max-w-1200">
+              <ExploreMore
                 stories={storyData3}
                 className="py-0"
                 cardBgColor="white"

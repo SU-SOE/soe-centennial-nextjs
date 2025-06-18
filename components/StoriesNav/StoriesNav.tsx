@@ -8,12 +8,13 @@ const navigationItems = [
   { label: "All stories", href: "/stories" },
   { label: "Decade stories", href: "/decades" },
   { label: "Video stories", href: "/videos" },
+  { label: "Event Coverage", href: "/events" },
 ];
 
 export const StoriesNav = () => {
   const pathname = usePathname();
   return (
-    <div className="mx-auto max-w-600 flex flex-row gap-26 items-center justify-between rs-mb-1">
+    <div className="mx-auto max-w-800 flex flex-row gap-26 items-center justify-between rs-mb-5">
       <Text mb="0">View</Text>
       <div className="flex flex-row gap-10">
         {navigationItems.map((item, key) => (
