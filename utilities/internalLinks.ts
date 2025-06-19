@@ -6,7 +6,8 @@
 export const internalLinks = {
   home: "/",
   events: "/events",
-  may15Event: "/stories/a-once-in-a-century-birthday-celebration",
+  may15EventVideo: "/stories/a-once-in-a-century-birthday-celebration",
+  sizzleReel: "/stories/glimpse-100-years-stanford-engineering",
   stories: "/stories",
   transformativeBreakthroughs: "/stories/stanford-engineering-100",
   deanWidomLetter: "/letter-from-dean-widom",

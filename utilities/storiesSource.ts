@@ -15,12 +15,18 @@
 import { internalLinks } from "./internalLinks";
 
 export const storiesSource = {
-  may15Event: {
+  may15EventVideo: {
     chapter: "Video",
     heading: "A once-in-a-century birthday celebration",
     body: "May 15, 2025",
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
-    href: internalLinks.may15Event,
+    href: internalLinks.may15EventVideo,
+  },
+  sizzleReel: {
+    chapter: "Video",
+    heading: "A glimpse into 100 years of Stanford Engineering",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+    href: internalLinks.sizzleReel,
   },
   transformativeBreakthroughs: {
     chapter: "Video",

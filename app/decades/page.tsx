@@ -13,7 +13,7 @@ import { TwoCol } from "@/components/Layout";
 export const metadata: Metadata = {
   title: "Ten decades in transformation | 100 Years of Stanford Engineering",
   description:
-    "Explore the Stanford Engineering Centennial stories that walk you through each decade from 1925 – 2025.",
+    "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
   keywords: [
     "Stanford Engineering",
     "Centennial Stories",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ten decades in transformation | 100 Years of Stanford Engineering",
     description:
-      "Explore the Stanford Engineering Centennial stories that walk you through each decade from 1925 – 2025.",
+      "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialDecades_Transformation.jpg",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ten decades in transformation | 100 Years of Stanford Engineering",
     description:
-      "Explore the Stanford Engineering Centennial stories that walk you through each decade from 1925 – 2025.",
+      "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
     images: [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialDecades_Transformation.jpg",
     ],
@@ -65,12 +65,12 @@ export default function page() {
           <div className="cc rs-mt-8">
             <TwoCol className="max-w-1500 w-full">
               <H1 className="mt-0">
-                Ten decades <br />
-                in transformation
+                Ten decades of <br />
+                global impact
               </H1>
               <Text size="f2">
-                Explore the Stanford Engineering Centennial stories that walk
-                you through each decade from 1925 – 2025.
+                Explore the Stanford Engineering Centennial stories capturing
+                each decade from 1925-2025
               </Text>
             </TwoCol>
           </div>
