@@ -79,7 +79,7 @@ const exploreStoriesData = [
     chapter: "Decade 5",
     href: "/stories/new-spaces-and-expanding-influence",
     imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
   },
 ];
 
