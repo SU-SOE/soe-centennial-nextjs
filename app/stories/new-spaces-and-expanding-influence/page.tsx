@@ -609,10 +609,11 @@ export default function page() {
                 published, some radio science research was conducted elsewhere
                 in California and as far away as Antarctica. One major new
                 building, the Space Engineering Building (later named for
-                William F. Durand), was under construction.9 A summary of the
-                extensive facilities follows (numbers correspond to the
-                buildings shown on the schematic drawing). | Special Collections
-                & University Archives.
+                William F. Durand), was under construction.
+                <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} /> A
+                summary of the extensive facilities follows (numbers correspond
+                to the buildings shown on the schematic drawing). | Special
+                Collections & University Archives.
               </Text>
             </OneCol>
           </TwoCol>
@@ -714,9 +715,9 @@ export default function page() {
               the Internet. On October 29, 1969, the Stanford Research Institute
               (SRI) received the first message—“LO”—ever sent over the ARPANET
               from its first node at UCLA, making Stanford the second node.
-              <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
-              sss In 1971, SAIL successfully joined the growing ARPANET, too,
-              helping pave the way for further breakthroughs from Stanford.
+              <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} /> In
+              1971, SAIL successfully joined the growing ARPANET, too, helping
+              pave the way for further breakthroughs from Stanford.
             </Text>
           </OneCol>
           <div className="flex w-full justify-end">
