@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
 const posterCardData1 = storiesSource.may15EventVideo;
 
-const storyData1 = [storiesSource.decade2, storiesSource.decade3];
+const storyData1 = [storiesSource.may29EventProgram];
 
 export default function page() {
   return (

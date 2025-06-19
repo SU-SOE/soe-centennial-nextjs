@@ -73,7 +73,7 @@ export default function page() {
         <article>
           <div className="cc rs-mt-8">
             <H1 className="max-w-1000 w-full">
-              Ten decades of <br />
+              A century of <br />
               world-changing stories
             </H1>
           </div>

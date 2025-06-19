@@ -6,6 +6,7 @@
 export const internalLinks = {
   home: "/",
   events: "/events",
+  may29EventProgram: "/events/centennial-perspectives-ai-future-computing",
   may15EventVideo: "/stories/a-once-in-a-century-birthday-celebration",
   sizzleReel: "/stories/glimpse-100-years-stanford-engineering",
   stories: "/stories",

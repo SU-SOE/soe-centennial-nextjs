@@ -15,6 +15,12 @@
 import { internalLinks } from "./internalLinks";
 
 export const storiesSource = {
+  may29EventProgram: {
+    chapter: "Event Program",
+    heading: "Centennial Perspectives: AI and the Future of Computing",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
+    href: internalLinks.may29EventProgram,
+  },
   may15EventVideo: {
     chapter: "Video",
     heading: "A once-in-a-century birthday celebration",
