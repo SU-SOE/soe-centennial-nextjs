@@ -94,30 +94,28 @@ export default function page() {
           <TwoCol className="rs-mt-5" isSidebar>
             <OneCol>
               <Text variant="overview" className="cen-drop-cap" mb="none">
-                Join us for a conversation exploring AI and the Future of
-                Computing, hosted by Dean Jennifer Widom.
+                Stanford Engineering has played a major role in shaping the
+                computing era, from very early innovations in electrical
+                engineering to the creation of the first internet protocols, to
+                the rise of AI and deep learning. This cutting-edge work
+                continues today in research led by our faculty and students, and
+                in key leadership positions held by our alumni.
               </Text>
               <Text>
-                This event features a conversation between Jensen Huang (MS
-                &apos;92), founder, president, and CEO of NVIDIA, and John
-                Hennessy, Stanford President Emeritus and professor of
-                electrical engineering and of computer science; talks by
-                engineering faculty Srabanti Chowdhury, Carlos Guestrin, and
-                Kunle Olukotun; closing remarks from Stanford President Jonathan
-                Levin, and a special appearance from Morris Chang (PhD
-                &apos;64), Founding Chairman of Taiwan Semiconductor
-                Manufacturing Company (TSMC).
-              </Text>
-              <Text>
-                Hoover Institution Director Condoleezza Rice introduces the 2025{" "}
-                <em>Stanford Emerging Technology Review</em>.
-              </Text>
-              <Text>
-                <em>
-                  As part of Stanford Engineering’s centennial celebration,
-                  Centennial Perspectives is a speaker series that highlights
-                  innovative research and its impact on society.
-                </em>
+                At our May 29 event, “Centennial Perspectives: AI and the Future
+                of Computing,” a full audience joined us in Hauck Auditorium to
+                reflect on Stanford Engineering’s legacy in computing and to
+                look ahead to what’s on the horizon. The event, hosted by Dean
+                Jennifer Widom, featured a keynote conversation between Jensen
+                Huang (MS ’92), founder and CEO of NVIDIA, and Stanford
+                President Emeritus John Hennessy, and talks by faculty members
+                Srabanti Chowdhury on next-generation chips, Kunle Olukotun on
+                computer system architecture, and Carlos Guestrin on a new
+                generation of AI tools. Hoover Institution Director Condoleezza
+                Rice introduced the 2025 Stanford Emerging Technology Review,
+                TSMC Founding Chairman Morris Chang (PhD ’64) shared a video
+                message to congratulate the school on its centennial, and
+                Stanford President Jonathan Levin shared closing remarks.
               </Text>
             </OneCol>
             <StorySidebar>
