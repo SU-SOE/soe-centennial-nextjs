@@ -118,6 +118,7 @@ export const StoryImpactBanner = ({
               className={cnb(
                 "absolute h-full w-full bg-opacity-80 z-10 backdrop-blur-sm",
                 {
+                  "bg-archway": bgColor === "archway",
                   "bg-stone-dark": bgColor === "stone-dark",
                   "bg-cardinal-red-dark": bgColor === "red",
                 },
