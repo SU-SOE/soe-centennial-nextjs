@@ -42,8 +42,8 @@ export const metadata: Metadata = {
       "The seventh decade of the School of Engineering began with a major development. In April 1985 approval came for the Department of Computer Science to move into the School of Engineering.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg",
-        alt: "Two people work at a vintage computer, surrounded by dot matrix printer paper and documents.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg",
+        alt: "A construction site featuring machinery and workers, with a building visible in the background.",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "In April 1985, the Department of Computer Science got approval to move into the School of Engineering, marking a major development for the school.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg",
     ],
   },
 };
@@ -314,8 +314,8 @@ export default function page() {
             chapter="Decade 7"
             heading="Redevelopment and an earthquake"
             dek="1985 – 1994"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/SC0122_1998-144_b02_Computers_1985_0033_g5ol5n.jpg"
-            alt="Two people work at a vintage computer, surrounded by dot matrix printer paper and documents."
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg"
+            alt="A construction site featuring machinery and workers, with a building visible in the background."
           />
           <div className="max-w-1500 w-full cc 3xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
@@ -413,7 +413,7 @@ export default function page() {
               aspectRatio="8x5"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482749/stanford_solar_car_u2yced.jpg"
               alt="A solar-powered vehicle stands parked outside a building with a person riding a bike in the background."
-              caption="The Stanford Solar Car Project (SSCP) Luminos, 2013. Luminos was built to compete in the 2013 World Solar Challenge, a 2,000-mile trek across the Australian Outback. The student-run, university-wide SSCP designs, builds, and races solar-powered vehicles in international competitions every other year, to test the limits of their designs under extreme conditions. The project promotes innovation in renewable energy technologies and sustainable transportation and provides students with hands-on opportunities for cross-disciplinary collaboration. Of the fifteen vehicles constructed since the project began in 1989, Luminos was the most successful, placing fourth in the 2013 race and going on to log 10,000 miles. Today it is on display in the Huang Engineering Center."
+              caption="Linda A. Cicero/Stanford News Service."
             />
             <ScrollyBubble>
               <Text mb="0">
@@ -435,7 +435,7 @@ export default function page() {
               aspectRatio="3x4"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748558326/Stanford-Daily_Solar-Car_vzamnx.jpg"
               alt="A newspaper-style infographic titled “Solar car project to follow sun to national race” features an article by Jonathan Eisenberg and an illustrated U.S. map. The article discusses the Stanford Solar Race Car team, which is building a solar-powered vehicle to compete in the GM Sunrayce USA on July 9, 1990. The race spans 1,800 miles over 8.5 days, starting in Lake Buena Vista, Florida, and ending in Warren, Michigan, at the GM Tech Center. The route passes through Tallahassee, Florida; Frankfort, Kentucky; and Columbus, Ohio. The solar car is powered by special solar cells designed to convert a high percentage of sunlight into electricity, allowing the car to charge more efficiently. The vehicle is being constructed by sixty Stanford students and is supported by General Motors and other sponsors. The car’s design includes a “supercritical wing” shape to reduce drag. Students aim to raise about $400,000 in sponsorships and have a deadline of February 3, 1990, for completion. The map on the right visually traces the race path with labeled stops: Lake Buena Vista, Tallahassee, Frankfort, Columbus, and the finish line in Warren, Michigan. The map highlights the shaded and hilly terrain of the course. A caption below the map summarizes the route and project details."
-              caption="An excerpt from The Stanford Daily, vol. 195, no. 64, 1989. | Linda A. Cicero/Stanford News Service."
+              caption="An excerpt from The Stanford Daily, vol. 195, no. 64, 1989."
             />
           </Scrollytelling>
           <OneCol className="rs-mb-5">
@@ -619,13 +619,16 @@ export default function page() {
               <Text>
                 Celebrating its twentieth anniversary in 1988, SITN markedly
                 increased access to Stanford courses and soon became so popular
-                that interest far outpaced capacity.16 Andy DiPaolo, SITN
-                director, saw this evolution as a reflection of the quality of
-                the faculty and the content. “The key to what we’re trying to do
-                at SITN and the School of Engineering is to give companies
-                access to premier curriculum. We think it will be a significant
-                contribution to the economic prosperity and intellectual
-                vitality of American industry,” DiPaolo said.
+                that interest far outpaced capacity.
+                <Footnotes
+                  footnoteRefs={[{ id: "footnote16", number: 16 }]}
+                />{" "}
+                Andy DiPaolo, SITN director, saw this evolution as a reflection
+                of the quality of the faculty and the content. “The key to what
+                we’re trying to do at SITN and the School of Engineering is to
+                give companies access to premier curriculum. We think it will be
+                a significant contribution to the economic prosperity and
+                intellectual vitality of American industry,” DiPaolo said.
                 <Footnotes
                   footnoteRefs={[{ id: "footnote17", number: 17 }]}
                 />{" "}
@@ -641,7 +644,7 @@ export default function page() {
                 aspectRatio="1x1"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482752/P8025899_w4032_q10_atlzw1.jpg"
                 alt="A man in a blue shirt stands confidently in front of tall and elegant pillars."
-                caption="Andy DiPaolo, director of the Stanford Instructional Television Network (SITN), 1994. The SITN was one of the largest distance education networks in the United States, delivering graduate degree programs, credit courses, certificate programs, and professional education to students in Silicon Valley and around the world. Although it had been offering courses to local professionals for more than a decade, SITN became available to students in 1987. It was later incorporated into the Stanford Center for Professional Development, which was founded under DiPaolo’s leadership in 1995. | Stanford Engineering Global and Online Education."
+                caption="Andy DiPaolo, director of the Stanford Instructional Television Network (SITN), 1994. The SITN was one of the largest distance education networks in the United States, delivering graduate degree programs, credit courses, certificate programs, and professional education to students in Silicon Valley and around the world. Although it had been offering courses to local professionals for more than a decade, SITN became available to students in 1987. It was later incorporated into the Stanford Center for Professional Development, which was founded under DiPaolo’s leadership in 1995. | Stanford Engineering Center for Global and Online Education."
               />
             </StorySidebar>
           </TwoCol>
@@ -736,14 +739,6 @@ export default function page() {
                   Assistant University Archivist for <br />
                   Special Collections & University Archives
                 </Text>
-                <MediaCaptionImage
-                  rounded
-                  isCaptionInset
-                  aspectRatio="4x3"
-                  src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/mae_jamison_commencement_q1kmtb.jpg"
-                  alt="A smiling woman in a graduation gown stands confidently at the podium."
-                  caption="Astronaut Mae Jemison (BS ’77 chemical engineering) was the keynote speaker at the university’s 105th Commencement in 1996. In her speech, Jemison challenged outgoing graduates to embrace personal and professional change and engage different perspectives to create new solutions: “We each get a chance to choose our own path. … Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem.” | Linda A. Cicero/Stanford News Service."
-                />
               </OneCol>
               <StorySidebar>
                 <Quote
@@ -751,6 +746,21 @@ export default function page() {
                   body="We each get a chance to choose our own path. . . . Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem."
                   source="— Astronaut Mae Jemison"
                 />
+                <StorySidebar
+                  hasLineArt
+                  lineArtType="short"
+                  className="rs-mt-3"
+                >
+                  <MediaCaptionImage
+                    rounded
+                    isPortrait
+                    isCaptionInset
+                    aspectRatio="1x1"
+                    src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482748/mae_jamison_commencement_q1kmtb.jpg"
+                    alt="A smiling woman in a graduation gown stands confidently at the podium."
+                    caption="Astronaut Mae Jemison, who graduated from Stanford University in 1977, was the keynote speaker at the univeristy's 105th commencement in 1996. | Linda A. Cicero/Stanford News Service."
+                  />
+                </StorySidebar>
               </StorySidebar>
             </TwoCol>
           </Container>
@@ -939,7 +949,7 @@ export default function page() {
           </BgImageWrapper>
           <TwoCol isSidebar className="rs-mb-5">
             <OneCol>
-              <H2>New directions in funding</H2>
+              <H2>Innovation abounds</H2>
               <Text>
                 Early proponents of artificial intelligence Edward Feigenbaum,
                 professor of computer science, and Dabbala Rajagopal “Raj” Reddy
