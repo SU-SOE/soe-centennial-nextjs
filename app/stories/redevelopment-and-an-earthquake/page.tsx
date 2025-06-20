@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg",
-        alt: "Two people work at a vintage computer, surrounded by dot matrix printer paper and documents.",
+        alt: "A construction site featuring machinery and workers, with a building visible in the background.",
       },
     ],
   },
@@ -315,7 +315,7 @@ export default function page() {
             heading="Redevelopment and an earthquake"
             dek="1985 – 1994"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg"
-            alt="Two people work at a vintage computer, surrounded by dot matrix printer paper and documents."
+            alt="A construction site featuring machinery and workers, with a building visible in the background."
           />
           <div className="max-w-1500 w-full cc 3xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>
