@@ -7,6 +7,8 @@ import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { storiesSource } from "@/utilities/storiesSource";
+import { OneCol } from "@/components/Layout";
+import { Text } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title:
@@ -75,8 +77,17 @@ export default function page() {
             previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg"
             mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
           />
+          <OneCol className="rs-mt-5">
+            <Text variant="overview" className="cen-drop-cap" mb="0">
+              The Stanford School of Engineering celebrates its 100-year
+              anniversary in 2025! Please enjoy this glimpse of the
+              breakthroughs, discoveries, and innovations from the school,
+              reshaping industries, improving lives, and expanding the
+              boundaries of human knowledge.
+            </Text>
+          </OneCol>
           <div className="flex w-full justify-end rs-mb-1">
-            <HorizontalLineart lineartType="D" />
+            <HorizontalLineart />
           </div>
           <ExploreMore
             width="site"
