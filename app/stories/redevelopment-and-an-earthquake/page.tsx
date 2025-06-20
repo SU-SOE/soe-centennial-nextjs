@@ -775,9 +775,12 @@ export default function page() {
               only 23 percent of the student body were women. A 1989 Stanford
               Daily reporter laid it out plainly: “From the undergraduate to the
               faculty level, the numbers of women and minorities in engineering
-              continue to lag far behind those of white males.”23 “We share with
-              you the goal of increasing the number of women and minority
-              faculty across the University and within the school (of
+              continue to lag far behind those of white males.”
+              <Footnotes
+                footnoteRefs={[{ id: "footnote23", number: 23 }]}
+              />{" "}
+              “We share with you the goal of increasing the number of women and
+              minority faculty across the University and within the school (of
               engineering) in particular,” Gibbons said to the faculty senate
               when he presented his report.
               <Footnotes footnoteRefs={[{ id: "footnote24", number: 24 }]} />
