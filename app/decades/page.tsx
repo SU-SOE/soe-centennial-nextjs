@@ -63,14 +63,14 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <TwoCol className="max-w-1500 w-full">
+            <TwoCol className="max-w-1500 w-full items-end">
               <H1 className="mt-0">
                 Ten decades of <br />
                 global impact
               </H1>
               <Text size="f2">
                 Explore the Stanford Engineering Centennial stories capturing
-                each decade from 1925-2025
+                each decade from 1925-2025.
               </Text>
             </TwoCol>
           </div>
