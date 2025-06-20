@@ -71,6 +71,7 @@ export default function page() {
             <H2>Past event programs</H2>
             <div className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"

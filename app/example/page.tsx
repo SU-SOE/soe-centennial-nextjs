@@ -3,7 +3,6 @@ import { Masthead } from "@/components/Masthead";
 import { FeatureHero } from "@/components/Banner";
 import { PageTitle } from "@/components/PageTitle";
 import { GradientBanner } from "@/components/Story/GradientBanner";
-import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage";
 import { Container } from "@/components/Container";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
@@ -12,6 +11,7 @@ import { StoryImpactBanner } from "@/components/Story";
 import { Button } from "@/components/Cta/Button";
 import { H2, H3, H4, H5 } from "@/components/Typography/Header";
 import { Metadata } from "next";
+import { AnimatedHero } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -20,7 +20,8 @@ export const metadata: Metadata = {
 const ExamplePage = async () => {
   return (
     <div>
-      <Masthead />
+      <Masthead logoColor="white-red" bgColor="red" />
+      <AnimatedHero />
       <FeatureHero>
         <Heading
           as="h1"
@@ -66,11 +67,6 @@ const ExamplePage = async () => {
       <HorizontalLineart className="rs-pl-10" lineartType="B" />
       <PageTitle heading="100 years of" bigText="Impact" />
       <Container width="site" py={9} className="font-dm-sans">
-        <MediaCaptionImage
-          src="https://placecats.com/neo/1500/1000"
-          caption="Caption/credit lorem ipsum aspect ratio square"
-          aspectRatio="1x1"
-        />
         <Text className="type-3 intro-text">
           Overview style lorem ipsum dolar sit amet vestibulum parimentium elit
           rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod
@@ -128,28 +124,25 @@ const ExamplePage = async () => {
           rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
           efficitur scelerisque urna et sollicitudin.
         </Text>
-        <Text className="big-paragraph">
-          <ul>
-            <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
-            <li>
-              Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu
-              fermentum nec massa mollis donec efficitur scelerisque urna et
-              sollicitudin.
-            </li>
-            <li>
-              Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi
-              praesent dapibus odio aliquam dignissim nisi nisi pharetra
-              faucibus elit
-            </li>
-            <li>
-              Donec efficitur scelerisque urna et sollicitudin. Donec euismod
-              enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam
-              euismod enim lobortis ante porttitor aliquam praesent Sodales
-              consequat arcu in egestas Aliquam condimentum viverra eros, in
-              dapibus purus faucibus ut
-            </li>
-          </ul>
-        </Text>
+        <ul className="big-paragraph">
+          <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
+          <li>
+            Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu
+            fermentum nec massa mollis donec efficitur scelerisque urna et
+            sollicitudin.
+          </li>
+          <li>
+            Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi praesent
+            dapibus odio aliquam dignissim nisi nisi pharetra faucibus elit
+          </li>
+          <li>
+            Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim
+            a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod
+            enim lobortis ante porttitor aliquam praesent Sodales consequat arcu
+            in egestas Aliquam condimentum viverra eros, in dapibus purus
+            faucibus ut
+          </li>
+        </ul>
         <Text className="big-paragraph">
           Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
           erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
@@ -157,28 +150,25 @@ const ExamplePage = async () => {
           rhoncus in. Donec efficitur scelerisque urna et sollicitudin. Donec
           efficitur scelerisque urna et sollicitudin.
         </Text>
-        <Text className="big-paragraph">
-          <ol>
-            <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
-            <li>
-              Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu
-              fermentum nec massa mollis donec efficitur scelerisque urna et
-              sollicitudin.
-            </li>
-            <li>
-              Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi
-              praesent dapibus odio aliquam dignissim nisi nisi pharetra
-              faucibus elit
-            </li>
-            <li>
-              Donec efficitur scelerisque urna et sollicitudin. Donec euismod
-              enim a dui convallis, quis suscipit leo vestibulum. Duis aliquam
-              euismod enim lobortis ante porttitor aliquam praesent Sodales
-              consequat arcu in egestas Aliquam condimentum viverra eros, in
-              dapibus purus faucibus ut
-            </li>
-          </ol>
-        </Text>
+        <ol className="big-paragraph">
+          <li>Fusce sem enim, tempus nec massa id, mollis faucibus sem.</li>
+          <li>
+            Sem enim, tempus nec massa id, mollis faucibus sem imperdiet eu
+            fermentum nec massa mollis donec efficitur scelerisque urna et
+            sollicitudin.
+          </li>
+          <li>
+            Ut ipsum erat, imperdiet eu fermentum sed, egestas quis mi praesent
+            dapibus odio aliquam dignissim nisi nisi pharetra faucibus elit
+          </li>
+          <li>
+            Donec efficitur scelerisque urna et sollicitudin. Donec euismod enim
+            a dui convallis, quis suscipit leo vestibulum. Duis aliquam euismod
+            enim lobortis ante porttitor aliquam praesent Sodales consequat arcu
+            in egestas Aliquam condimentum viverra eros, in dapibus purus
+            faucibus ut
+          </li>
+        </ol>
         <Text className="big-paragraph">
           Fusce sem enim, tempus nec massa id, mollis faucibus sem. Ut ipsum
           erat, imperdiet eu fermentum sed, egestas quis mi. Praesent nec
@@ -262,15 +252,6 @@ const ExamplePage = async () => {
       </div>
 
       <Container width="site" py={8} className="font-dm-sans">
-        <MediaCaptionImage
-          src="https://placecats.com/neo/1500/1000"
-          caption="Caption/credit lorem ipsum aspect ratio square"
-          aspectRatio="1x1"
-        />
-        <MediaCaptionImage
-          src="https://placecats.com/neo/1500/1000"
-          caption="Caption/credit lorem ipsum aspect ratio 16/9"
-        />
         <p className="overview">
           Overview style lorem ipsum dolar sit amet vestibulum parimentium elit
           rhoncus donec. Scelerisque urna et euismod in daphibus nec leo euismod
