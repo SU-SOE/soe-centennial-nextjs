@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "In May 1965, a renovated building near Engineering Corner was named after Fred Terman, honoring his legacy at Stanford. The dedication featured Stanford President Wallace Sterling and former students David Packard and Joseph Pettit.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
         alt: "Fred Terman and others at the dedication of the Terman Engineering Building, 1965",
       },
     ],
@@ -54,23 +54,23 @@ export const metadata: Metadata = {
     description:
       "Fred Terman's legacy was honored in 1965 when a Stanford building was named for him, with David Packard and Joseph Pettit among those commemorating the moment.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
     ],
   },
 };
 
 const galleryImages = [
   {
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
-    alt: "Several people standing together in front of the Frederick Emmons Terman Engineering Labratory.",
-    caption:
-      "Fred Terman and his family at the dedication of the Frederick Emmons Terman Engineering Laboratory, May 31, 1965. The renovated 16,000-square-foot building across from Engineering Corner—which had been the site of his office when he was chair of Electrical Engineering before World War II—was named in Terman’s honor just days after he had announced his retirement as Stanford vice president and provost. “If I could relive my life I could not do any better than to play the same record over again,” Terman said. | Stanford News Service.",
-  },
-  {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062201/SC0122_s1_b269_f13_3354-11_chjrjo.jpg",
     alt: "Four individuals, including three men and one woman, reveals the sign for the Jack A. McCullough Building.",
     caption:
       "Opening of the Jack A. McCullough Building, 1965. Left to right: Mr. and Mrs. McCullough, Stanford trustee David Packard, and Stanford President Wallace Sterling. The building originally housed several groups focused on materials research, including the Center for Materials Research, which brought together faculty from engineering, physics, chemistry, and other fields. The center continues to support interdisciplinary materials research taking place in the Geballe Laboratory for Advanced Materials and the Stanford Institute for Materials and Energy Sciences. | Stanford News Service.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
+    alt: "Several people standing together in front of the Frederick Emmons Terman Engineering Labratory.",
+    caption:
+      "Fred Terman and his family at the dedication of the Frederick Emmons Terman Engineering Laboratory, May 31, 1965. The renovated 16,000-square-foot building across from Engineering Corner—which had been the site of his office when he was chair of Electrical Engineering before World War II—was named in Terman’s honor just days after he had announced his retirement as Stanford vice president and provost. “If I could relive my life I could not do any better than to play the same record over again,” Terman said. | Stanford News Service.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062193/faculty_meeting_1972_iz9iq9.jpg",
@@ -426,14 +426,14 @@ export default function page() {
       <main id="main-content">
         <article>
           <StoryImpactBanner
-            isCaptionInHero
+            isVertical
+            hasBgImage
             bgColor="archway"
             chapter="Decade 5"
             heading="New spaces and expanding influence"
             dek="1965 – 1974"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg"
-            alt="Two men shaking hands in front of a building, with a third man observing the interaction nearby."
-            caption="Left to right: David Packard, William Hewlett, and Dean of Engineering Fred Terman attend the dedication of the Hewlett-Packard wing in Stanford’s Electronics Research Laboratory, 1952. | Stanford News Service."
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg"
+            alt="Several people standing together in front of the Frederick Emmons Terman Engineering Labratory."
           />
           <div className="w-full cc">
             <Text mb={6}>by Andrew Myers</Text>
@@ -592,10 +592,11 @@ export default function page() {
                 published, some radio science research was conducted elsewhere
                 in California and as far away as Antarctica. One major new
                 building, the Space Engineering Building (later named for
-                William F. Durand), was under construction.9 A summary of the
-                extensive facilities follows (numbers correspond to the
-                buildings shown on the schematic drawing). | Special Collections
-                & University Archives.
+                William F. Durand), was under construction.
+                <Footnotes footnoteRefs={[{ id: "footnote9", number: 9 }]} /> A
+                summary of the extensive facilities follows (numbers correspond
+                to the buildings shown on the schematic drawing). | Special
+                Collections & University Archives.
               </Text>
             </OneCol>
           </TwoCol>
@@ -697,9 +698,9 @@ export default function page() {
               the Internet. On October 29, 1969, the Stanford Research Institute
               (SRI) received the first message—“LO”—ever sent over the ARPANET
               from its first node at UCLA, making Stanford the second node.
-              <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} />
-              sss In 1971, SAIL successfully joined the growing ARPANET, too,
-              helping pave the way for further breakthroughs from Stanford.
+              <Footnotes footnoteRefs={[{ id: "footnote15", number: 15 }]} /> In
+              1971, SAIL successfully joined the growing ARPANET, too, helping
+              pave the way for further breakthroughs from Stanford.
             </Text>
           </OneCol>
           <div className="flex w-full justify-end">

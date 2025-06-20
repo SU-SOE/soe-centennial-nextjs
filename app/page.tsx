@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/Masthead";
 import { TimelineHorizontalCard } from "@/components/Timeline";
 import { TimelineFeature } from "@/components/Timeline/TimelineFeature";
-import { StoryCard, StoryCardProps, StoryPosterCard } from "@/components/Story";
+import { StoryCard, StoryPosterCard } from "@/components/Story";
 import { Container } from "@/components/Container";
 import { StoryFeature } from "@/components/Story/StoryFeature";
 import { Heading, Text } from "@/components/Typography";
@@ -15,7 +15,7 @@ import { EventsSection } from "@/components/Event";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { TwoCol } from "@/components/Layout";
-import { internalLinks } from "@/utilities/internalLinks";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "100 Years of Stanford Engineering",
@@ -122,25 +122,10 @@ const timelineFeatureCards = [
   "2017-trailblazing-leadership-jennifer-widom-is-appointed-dean-of-stanford-engineering-celebrating-27-years-of-academic-excellence",
 ];
 
-const storyData: StoryCardProps[] = [
-  {
-    chapter: "Decade 3",
-    heading: "The Terman era",
-    href: internalLinks.decade3,
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
-  },
-  {
-    heading: "New spaces and expanding influence",
-    chapter: "Decade 5",
-    href: internalLinks.decade5,
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
-  },
-  {
-    chapter: "Decade 6",
-    heading: "Bridging worlds: chips, code, and cosmos",
-    href: internalLinks.decade6,
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
-  },
+const storyData = [
+  storiesSource.decade3,
+  storiesSource.decade5,
+  storiesSource.decade6,
 ];
 
 export default function Home() {
