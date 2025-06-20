@@ -83,7 +83,11 @@ export default function page() {
           <StoriesNav />
           <ul className="list-none p-0">
             <li>
-              <StoryCard isHorizontal {...storiesSource.may15EventVideo} />
+              <StoryCard
+                isHorizontal
+                isHeadingLarge
+                {...storiesSource.may15EventVideo}
+              />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
