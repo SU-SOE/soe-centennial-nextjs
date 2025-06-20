@@ -1,4 +1,5 @@
 export * from "./Heading";
+export * from "./Header";
 export * from "./Paragraph";
 export * from "./SrOnlyText";
 export * from "./Text";
