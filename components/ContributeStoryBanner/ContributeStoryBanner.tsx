@@ -45,7 +45,7 @@ export const ContributeStoryBanner = ({
       <div className={styles.contentWrapper}>
         <FlexBox direction="col" className={styles.textWrapper}>
           <AnimateInView animation="slideInFromLeft">
-            <Heading mb={5} size="f4" weight="normal">
+            <Heading mb={3} size="f4" weight="normal">
               Share{" "}
               <a
                 href={links.googleDocShare}
@@ -54,12 +54,7 @@ export const ContributeStoryBanner = ({
                 your Stanford Engineering memories
               </a>
             </Heading>
-            <Text
-              size={1}
-              mb="none"
-              font="dm-mono"
-              className={styles.subText(hasLineArt)}
-            >
+            <Text size={1} mb="none" font="dm-mono" className={styles.subText}>
               Be a part of the celebration
             </Text>
             <Text size="base" mb="none">
