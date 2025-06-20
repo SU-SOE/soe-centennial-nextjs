@@ -192,7 +192,7 @@ export default function page() {
             className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
-            link="/timeline"
+            href="/timeline"
             buttonText="Explore the timeline"
           />
           <ContributeStoryBanner bgColor="white" hasLineArt />

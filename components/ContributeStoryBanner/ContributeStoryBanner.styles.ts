@@ -26,9 +26,6 @@ export const underline = (bgColor: string) =>
     "text-stone-dark hocus:text-digital-red-light": bgColor !== "red",
   });
 
-export const subText = (hasLineArt: boolean) =>
-  cnb("order-first font-dm-mono mb-1", {
-    "mt-70": hasLineArt,
-  });
+export const subText = "order-first font-dm-mono rs-mb-0";
 
 export const buttonWrapper = "shrink-0 z-50 my-48 md:mb-0";

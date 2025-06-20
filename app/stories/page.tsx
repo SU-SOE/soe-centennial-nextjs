@@ -6,6 +6,7 @@ import { H1 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "Stories worth telling | 100 Years of Stanford Engineering",
@@ -44,61 +45,23 @@ export const metadata: Metadata = {
 };
 
 const storyData1 = [
-  {
-    chapter: "Video",
-    superhead: "Stanford Engineering at 100",
-    heading: "Transformative Breakthroughs, Boundless Horizons",
-    href: "/stories/stanford-engineering-100",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
-  },
-  {
-    superhead: "A Century of Innovation",
-    heading: "100 Years of Stanford Engineering",
-    href: "/stories/a-century-of-innovation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    heading: "Letter from Dean Widom",
-    href: "/letter-from-dean-widom",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
-  },
+  storiesSource.transformativeBreakthroughs,
+  storiesSource.storyInnovation,
+  storiesSource.deanWidomLetter,
 ];
 
 const storyData2 = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort”",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
-  },
-  {
-    chapter: "Decade 3",
-    heading: "The Terman era",
-    href: "/stories/the-terman-era",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766096/CC146_s4mzgg.jpg",
-  },
+  storiesSource.decade2,
+  storiesSource.decade3,
+  storiesSource.decade4,
 ];
 
+const storyCardData = storiesSource.decade5;
+
 const storyData3 = [
-  {
-    heading: "New spaces and expanding influence",
-    chapter: "Decade 5",
-    href: "/stories/new-spaces-and-expanding-influence",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
-  },
-  {
-    chapter: "Decade 6",
-    heading: "Bridging worlds: chips, code, and cosmos",
-    href: "/stories/bridging-worlds-chips-code-and-cosmos",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747098478/SC1041_SAIL_CartDeck_2_htazm5.jpg",
-  },
+  storiesSource.decade6,
+  storiesSource.decade7,
+  storiesSource.decade8,
 ];
 
 export default function page() {
@@ -125,7 +88,7 @@ export default function page() {
                 heading="A once-in-a-century birthday celebration"
                 body="May 15, 2025"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
-                link="/stories/a-once-in-a-century-birthday-celebration"
+                href="/stories/a-once-in-a-century-birthday-celebration"
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
@@ -150,11 +113,12 @@ export default function page() {
                 heading="“Preparing roads over which culture may ride in comfort”"
                 dek="1925 – 1934"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
-                link="/stories/preparing-roads-culture-may-ride-comfort"
+                href="/stories/preparing-roads-culture-may-ride-comfort"
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
@@ -165,16 +129,14 @@ export default function page() {
               <StoryCard
                 isHeadingLarge
                 isHorizontal
-                chapter="Decade 4"
                 chapterColor="stone"
-                heading="A period of transformation"
-                href="/stories/a-period-of-transformation"
-                imageUrl="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg"
                 bgColor="stone-dark"
+                {...storyCardData}
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData3}
                 className="py-0"
                 cardBgColor="white"
@@ -189,7 +151,7 @@ export default function page() {
             className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
-            link="/timeline"
+            href="/timeline"
             buttonText="Explore the timeline"
           />
           <ContributeStoryBanner hasLineArt bgColor="white" />

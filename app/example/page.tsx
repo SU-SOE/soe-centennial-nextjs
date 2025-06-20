@@ -67,7 +67,7 @@ const ExamplePage = async () => {
       <PageTitle heading="100 years of" bigText="Impact" />
       <Container width="site" py={9} className="font-dm-sans">
         <MediaCaptionImage
-          imageSrc="https://placecats.com/neo/1500/1000"
+          src="https://placecats.com/neo/1500/1000"
           caption="Caption/credit lorem ipsum aspect ratio square"
           aspectRatio="1x1"
         />
@@ -263,12 +263,12 @@ const ExamplePage = async () => {
 
       <Container width="site" py={8} className="font-dm-sans">
         <MediaCaptionImage
-          imageSrc="https://placecats.com/neo/1500/1000"
+          src="https://placecats.com/neo/1500/1000"
           caption="Caption/credit lorem ipsum aspect ratio square"
           aspectRatio="1x1"
         />
         <MediaCaptionImage
-          imageSrc="https://placecats.com/neo/1500/1000"
+          src="https://placecats.com/neo/1500/1000"
           caption="Caption/credit lorem ipsum aspect ratio 16/9"
         />
         <p className="overview">

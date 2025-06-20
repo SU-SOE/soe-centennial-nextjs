@@ -2,7 +2,7 @@
  * MediaCaptionImage component props.
  *
  * @typedef {Object} MediaCaptionImageProps
- * @property {string} imageSrc - The source URL of the image.
+ * @property {string} src - The source URL of the image.
  * @property {string} [imageFocus] - The focus area of the image.
  * @property {boolean} [isLoadingEager] - If true, the image will be loaded eagerly.
  * @property {boolean} [isParallax=false] - If true, the image will have a parallax effect.
@@ -25,7 +25,7 @@
  *
  * @example
  * <MediaCaptionImage
- *   imageSrc="/path/to/image.jpg"
+ *   src="/path/to/image.jpg"
  *   alt="Description of image"
  *   caption="This is a caption"
  *   isParallax={true}
@@ -44,19 +44,18 @@ import {
   Parallax,
   AnimateInViewProps,
 } from "@/components/Animate";
-import { WidthBox } from "@/components/WidthBox";
+import { Container } from "@/components/Container";
 import {
   imageAspectRatios,
   ImageAspectRatioType,
   PaddingType,
 } from "@/utilities/datasource";
-import { WidthType } from "@/components/Container";
 import * as styles from "./MediaCaptionImage.styles";
 import { Text } from "../Typography";
 
 type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
   Omit<AnimateInViewProps, "children"> & {
-    imageSrc: string;
+    src: string;
     imageFocus?: string;
     isLoadingEager?: boolean;
     isParallax?: boolean;
@@ -70,13 +69,12 @@ type MediaCaptionImageProps = HTMLAttributes<HTMLElement> &
     isFullHeight?: boolean;
     isPortrait?: boolean;
     boundingWidth?: "site" | "full";
-    width?: WidthType;
     spacingTop?: PaddingType;
     spacingBottom?: PaddingType;
   };
 
 const MediaCaptionImage = ({
-  imageSrc,
+  src,
   imageFocus,
   isLoadingEager,
   isParallax = false,
@@ -84,7 +82,6 @@ const MediaCaptionImage = ({
   caption,
   aspectRatio = "16x9",
   isFullHeight = false,
-  boundingWidth = "full",
   spacingTop,
   spacingBottom,
   isCaptionInset,
@@ -99,9 +96,9 @@ const MediaCaptionImage = ({
   ...props
 }: MediaCaptionImageProps) => {
   return (
-    <WidthBox
+    <Container
       {...props}
-      boundingWidth={boundingWidth}
+      width="full"
       pt={spacingTop}
       pb={spacingBottom}
       className={cnb(className, styles.root(isFullHeight))}
@@ -114,13 +111,13 @@ const MediaCaptionImage = ({
               styles.imageWrapper(isPortrait, rounded),
             )}
           >
-            {!!imageSrc && (
+            {!!src && (
               <>
                 {isParallax ? (
                   <Parallax offset={60}>
                     <picture>
                       <Image
-                        src={imageSrc}
+                        src={src}
                         alt={alt || ""}
                         height="2000"
                         width="2000"
@@ -131,7 +128,7 @@ const MediaCaptionImage = ({
                 ) : (
                   <picture>
                     <Image
-                      src={imageSrc}
+                      src={src}
                       alt={alt || ""}
                       height="2000"
                       width="2000"
@@ -162,7 +159,7 @@ const MediaCaptionImage = ({
           )}
         </figure>
       </AnimateInView>
-    </WidthBox>
+    </Container>
   );
 };
 

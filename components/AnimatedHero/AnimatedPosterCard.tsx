@@ -7,7 +7,7 @@ import { Heading, Text } from "@/components/Typography";
 import { ChapterLabel } from "@/components/Story/ChapterLabel";
 import { AnimateInView } from "@/components/Animate";
 import { MaskAnimation } from "./MaskAnimation";
-import { Button } from "../Cta";
+import { Button } from "@/components/Cta";
 import { useReducedMotion } from "motion/react";
 import { NoMotionSvg } from "./NoMotionSvg";
 import { cnb } from "cnbuilder";
@@ -19,7 +19,7 @@ type AnimatedPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   dek?: string;
   body?: string;
   buttonText: string;
-  link: string;
+  href: string;
   isFullWidth?: boolean;
 };
 
@@ -31,7 +31,7 @@ export const AnimatedPosterCard = ({
   dek,
   body,
   buttonText,
-  link,
+  href,
   isFullWidth,
   ...props
 }: AnimatedPosterCardProps) => {
@@ -117,7 +117,7 @@ export const AnimatedPosterCard = ({
               )}
             </AnimateInView>
             <AnimateInView animation="slideUp" delay={1} className="rs-mt-2">
-              <Button href={link}>{buttonText}</Button>
+              <Button href={href}>{buttonText}</Button>
             </AnimateInView>
           </div>
         </FlexBox>

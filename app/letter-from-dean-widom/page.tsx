@@ -127,7 +127,7 @@ export default function LetterFromDeanPage() {
                 rounded
                 className="mb-0 max-w-500 lg:max-w-full"
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg"
                 alt="Dean Jennifer Widom surrounded by a group of students, all wearing matching red Stanford Engineering t-shirts and waving to the camera"
               />
             </StorySidebar>
