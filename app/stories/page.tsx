@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 };
 
 const storyData1 = [
-  storiesSource.transformativeBreakthroughs,
+  storiesSource.may15EventVideo,
   storiesSource.storyInnovation,
   storiesSource.deanWidomLetter,
 ];
@@ -85,7 +85,7 @@ export default function page() {
               <StoryCard
                 isHorizontal
                 isHeadingLarge
-                {...storiesSource.may15EventVideo}
+                {...storiesSource.transformativeBreakthroughs}
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
