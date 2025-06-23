@@ -64,6 +64,7 @@ export default function page() {
               <StoryPosterCard
                 hasBgImage
                 bgColor="stone-dark"
+                widePreviewImage
                 {...posterCardData1}
               />
             </li>

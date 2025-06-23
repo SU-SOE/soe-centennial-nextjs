@@ -19,6 +19,7 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   caption?: string;
   hasBgImage?: boolean;
   isNarrow?: boolean;
+  widePreviewImage?: boolean;
   src: string;
   alt?: string;
   href: string;
@@ -35,6 +36,7 @@ export const StoryPosterCard = ({
   bgColor = "stone-dark",
   caption,
   hasBgImage = false,
+  widePreviewImage = false,
   isNarrow = false,
   src,
   alt,
@@ -127,9 +129,22 @@ export const StoryPosterCard = ({
           <AnimateInView
             animation="slideUp"
             delay={0.5}
-            className="order-first lg:order-last w-full lg:max-w-[175px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-[350]"
+            className={cnb("order-first lg:order-last w-full ", {
+              "lg:max-w-200 lg:max-w-350 xl:max-w-450 2xl:max-w-500":
+                widePreviewImage,
+              "lg:max-w-[17.5rem] lg:max-w-[26rem] xl:max-w-320 2xl:max-w-350":
+                !widePreviewImage,
+            })}
           >
-            <div className="size-full overflow-hidden relative rounded-[30px] mb-10 aspect-[1/1] border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight">
+            <div
+              className={cnb(
+                "size-full overflow-hidden relative rounded-[30px] mb-10 border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight",
+                {
+                  "aspect-[8/5]": widePreviewImage,
+                  "aspect-[1/1]": !widePreviewImage,
+                },
+              )}
+            >
               <Image src={src} alt={alt || ""} fill className="object-cover" />
             </div>
           </AnimateInView>
