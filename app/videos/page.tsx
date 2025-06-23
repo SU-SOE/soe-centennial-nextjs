@@ -53,10 +53,7 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-1000 w-full">
-              Explore through <br />
-              video
-            </H1>
+            <H1 className="max-w-700 w-full">Explore through video</H1>
           </div>
           <div className="flex w-full justify-end rs-mb-7">
             <HorizontalLineart lineartType="B" />

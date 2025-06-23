@@ -8,7 +8,6 @@ import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { storiesSource } from "@/utilities/storiesSource";
 import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
-import { TwoCol } from "@/components/Layout";
 
 export const metadata: Metadata = {
   title: "Ten decades in transformation | 100 Years of Stanford Engineering",
@@ -63,16 +62,15 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <TwoCol className="max-w-1500 w-full items-end">
-              <H1 className="mt-0">
-                Ten decades of <br />
-                global impact
+            <div className="flex flex-col lg:flex-row w-full max-w-1500 gap-26 lg:gap-[7.6rem] lg:items-end">
+              <H1 className="mt-0 w-full max-w-700">
+                Ten decades of global impact
               </H1>
               <Text size="f2">
                 Explore the Stanford Engineering Centennial stories capturing
                 each decade from 1925-2025.
               </Text>
-            </TwoCol>
+            </div>
           </div>
           <div className="flex w-full justify-end rs-mb-7">
             <HorizontalLineart lineartType="C" />

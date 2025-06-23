@@ -72,9 +72,8 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-1000 w-full">
-              A century of <br />
-              world-changing stories
+            <H1 className="max-w-800 w-full">
+              A century of world-changing stories
             </H1>
           </div>
           <div className="flex w-full justify-start rs-mb-7">
@@ -82,7 +81,7 @@ export default function page() {
           </div>
           <StoriesNav />
           <ul className="list-none p-0">
-            <li>
+            <li className="cc">
               <StoryCard
                 isHorizontal
                 isHeadingLarge

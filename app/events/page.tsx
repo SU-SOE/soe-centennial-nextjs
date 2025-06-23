@@ -54,10 +54,7 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-1000 w-full">
-              Centennial event <br />
-              coverage
-            </H1>
+            <H1 className="max-w-700 w-full">Centennial event coverage</H1>
           </div>
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />

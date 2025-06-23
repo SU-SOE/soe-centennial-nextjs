@@ -14,15 +14,16 @@ const navigationItems = [
 export const StoriesNav = () => {
   const pathname = usePathname();
   return (
-    <div className="mx-auto max-w-800 flex flex-row gap-26 items-center justify-between rs-mb-5">
+    <div className="cc lg:p-0 lg:w-full mx-auto lg:max-w-800 flex flex-wrap lg:flex-row gap-10 lg:gap-26 items-center justify-center lg:justify-between rs-mb-5">
       <Text mb="0">View</Text>
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-wrap lg:flex-row items-center justify-center lg:justify-between gap-10">
         {navigationItems.map((item, key) => (
           <Button
             hideArrow
             key={key}
             href={item.href}
             isLight
+            className="py-8 px-16 lg:rs-px-1 lg:rs-py-0"
             solid={pathname === item.href}
             disabled={pathname === item.href}
           >
