@@ -68,7 +68,7 @@ export const storiesSource = {
     heading: "New spaces and expanding influence",
     chapter: "Decade 5",
     href: internalLinks.decade5,
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062204/SC0122_s1_b269_f15_3586-11_g8v14c.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746062200/SC0122_s1_b269_f10_3000-09_bw3duf.jpg",
   },
   decade6: {
     chapter: "Decade 6",
