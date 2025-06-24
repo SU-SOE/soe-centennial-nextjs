@@ -140,7 +140,7 @@ export const StoryPosterCard = ({
               className={cnb(
                 "size-full overflow-hidden relative rounded-[30px] mb-10 border-5 border-transparent transition duration-1000 group-hocus:border-digital-red-xlight",
                 {
-                  "aspect-[8/5]": widePreviewImage,
+                  "aspect-[16/9]": widePreviewImage,
                   "aspect-[1/1]": !widePreviewImage,
                 },
               )}

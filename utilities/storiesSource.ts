@@ -38,7 +38,7 @@ export const storiesSource = {
     chapter: "Video",
     superhead: "Stanford Engineering at 100",
     heading: "Transformative Breakthroughs, Boundless Horizons",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png",
     href: internalLinks.transformativeBreakthroughs,
   },
   storyInnovation: {
