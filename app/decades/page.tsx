@@ -62,8 +62,8 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <div className="flex flex-col lg:flex-row w-full max-w-1500 gap-26 lg:gap-[7.6rem] lg:items-end">
-              <H1 className="mt-0 w-full max-w-700">
+            <div className="flex flex-col lg:flex-row w-full max-w-1500 gap-0 lg:gap-[7.6rem] lg:items-end">
+              <H1 className="mt-0 w-full text-left lg:max-w-700">
                 Ten decades of global impact
               </H1>
               <Text size="f2">
