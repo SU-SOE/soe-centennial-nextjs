@@ -42,8 +42,8 @@ export const metadata: Metadata = {
       "The seventh decade of the School of Engineering began with a major development. In April 1985 approval came for the Department of Computer Science to move into the School of Engineering.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg",
-        alt: "A construction site featuring machinery and workers, with a building visible in the background.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_AERIALS_01_009_smfqx1.jpg",
+        alt: "Aerial view of Stanford University's campus showcasing its iconic architecture and lush green spaces.",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "In April 1985, the Department of Computer Science got approval to move into the School of Engineering, marking a major development for the school.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_AERIALS_01_009_smfqx1.jpg",
     ],
   },
 };
@@ -314,8 +314,8 @@ export default function page() {
             chapter="Decade 7"
             heading="Redevelopment and an earthquake"
             dek="1985 – 1994"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg"
-            alt="A construction site featuring machinery and workers, with a building visible in the background."
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_AERIALS_01_009_smfqx1.jpg"
+            alt="Aerial view of Stanford University's campus showcasing its iconic architecture and lush green spaces."
           />
           <div className="max-w-1500 w-full cc 3xl:p-0">
             <Text mb={6}>by Andrew Myers</Text>

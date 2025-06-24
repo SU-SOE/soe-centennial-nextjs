@@ -23,7 +23,7 @@ import { storiesSource } from "@/utilities/storiesSource";
 import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
-  title: "The future is firmly in sight | 100 Years of Stanford Engineering",
+  title: "The future firmly in sight | 100 Years of Stanford Engineering",
   description:
     "The eighth decade of Stanford Engineering opened amid a global revolution in communication technology and with a new century on the horizon. The ten years ahead would see groundbreaking research, expanding and evolving departments, and growing interest in Stanford Engineering’s signature leadership in entrepreneurship, innovation in engineering education, and broadening interdisciplinary research programs.",
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Interdisciplinary Research",
   ],
   openGraph: {
-    title: "The future is firmly in sight | 100 Years of Stanford Engineering",
+    title: "The future firmly in sight | 100 Years of Stanford Engineering",
     description:
       "The eighth decade of Stanford Engineering opened amid a global revolution in communication technology and with a new century on the horizon. The ten years ahead would see groundbreaking research, expanding and evolving departments, and growing interest in Stanford Engineering’s signature leadership in entrepreneurship, innovation in engineering education, and broadening interdisciplinary research programs.",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The future is firmly in sight | 100 Years of Stanford Engineering",
+    title: "The future firmly in sight | 100 Years of Stanford Engineering",
     description:
       "The eighth decade of Stanford Engineering opened amid a global revolution in communication technology and with a new century on the horizon. The ten years ahead would see groundbreaking research, expanding and evolving departments, and growing interest in Stanford Engineering’s signature leadership in entrepreneurship, innovation in engineering education, and broadening interdisciplinary research programs.",
     images: [
@@ -274,7 +274,7 @@ export default function page() {
             hasBgImage
             bgColor="stone-dark"
             chapter="Decade 8"
-            heading="The future is firmly in sight"
+            heading="The future firmly in sight"
             dek="1995 – 2004"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483048/110419-1941_mlzjyn.jpg"
             alt="A server encased in colorful toy building blocks, located in the Jen-Hsun Huang Engineering Center."

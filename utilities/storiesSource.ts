@@ -92,7 +92,7 @@ export const storiesSource = {
     chapter: "Decade 7",
     heading: "Redevelopment and an earthquake",
     href: internalLinks.decade7,
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_SEQ_04_015_kxa1kp.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748482751/PC0062_2008-194_AERIALS_01_009_smfqx1.jpg",
   },
   decade8: {
     chapter: "Decade 8",
