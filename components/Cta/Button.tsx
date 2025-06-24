@@ -36,25 +36,19 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
     const buttonStyle = cnb(
       // Base styles
       "group/button flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg border-4 border-digital-red-xlight no-underline font-normal",
-
-      // Visual styles
       {
+        // Visual styles
         "text-digital-red-light": isLight && !solid,
         "text-white": !isLight,
         "text-white bg-digital-red": solid,
         "px-48 py-22 type-0": big,
         "rs-px-1 rs-py-0 text-16 md:text-18": !big,
-      },
-
-      // Interactive styles
-      !disabled && {
+        // Interactive styles
         "cursor-pointer hocus:text-white hocus:bg-digital-red hocus:underline":
-          true,
-        "hocus:bg-digital-red-xlight": solid,
+          !disabled,
+        "hocus:bg-digital-red-xlight": solid && !disabled,
+        "cursor-not-allowed pointer-events-none": disabled,
       },
-
-      // Disabled styles
-      disabled && "cursor-not-allowed pointer-events-none",
     );
 
     Button.displayName = "Button";
