@@ -29,8 +29,8 @@ export const metadata: Metadata = {
       "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg",
-        alt: "Serene nighttime courtyard scene with palm trees silhouetted against the night sky.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
+        alt: "A man in a black leather jacket sits on a chair next to a small table with flowers, in front of a sign that reads Stanford University.",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
     ],
   },
 };

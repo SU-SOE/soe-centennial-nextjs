@@ -18,14 +18,14 @@ export const storiesSource = {
   may29EventProgram: {
     chapter: "Event Program",
     heading: "Centennial Perspectives: AI and the Future of Computing",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
     href: internalLinks.may29EventProgram,
   },
   may15EventVideo: {
     chapter: "Video",
     heading: "A once-in-a-century birthday celebration",
     body: "May 15, 2025",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750457292/100thCentennial_26_oaom4v.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888036/100thCentennial_Cake_square_l5udmt.jpg",
     href: internalLinks.may15EventVideo,
   },
   sizzleReel: {
