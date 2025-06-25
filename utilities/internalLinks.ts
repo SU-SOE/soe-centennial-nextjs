@@ -20,5 +20,5 @@ export const internalLinks = {
   decade5: "/stories/new-spaces-and-expanding-influence",
   decade6: "/stories/bridging-worlds-chips-code-and-cosmos",
   decade7: "/stories/redevelopment-and-an-earthquake",
-  decade8: "/stories/the-future-is-firmly-in-sight",
+  decade8: "/stories/the-future-firmly-in-sight",
 } as const;

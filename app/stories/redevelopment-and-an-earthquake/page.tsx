@@ -310,6 +310,7 @@ export default function page() {
         <article>
           <StoryImpactBanner
             hasBgImage
+            isVertical
             bgColor="stone-dark"
             chapter="Decade 7"
             heading="Redevelopment and an earthquake"
