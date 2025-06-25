@@ -7,6 +7,7 @@ import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { storiesSource } from "@/utilities/storiesSource";
+import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
 
 export const metadata: Metadata = {
   title: "Stories worth telling | 100 Years of Stanford Engineering",
@@ -45,8 +46,8 @@ export const metadata: Metadata = {
 };
 
 const storyData1 = [
+  storiesSource.may15EventVideo,
   storiesSource.transformativeBreakthroughs,
-  storiesSource.storyInnovation,
   storiesSource.deanWidomLetter,
 ];
 
@@ -71,24 +72,20 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-1000 w-full">
-              Ten decades of <br />
-              world-changing stories
+            <H1 className="max-w-800 w-full">
+              A century of world-changing stories
             </H1>
           </div>
           <div className="flex w-full justify-start rs-mb-7">
             <HorizontalLineart lineartType="A" />
           </div>
+          <StoriesNav />
           <ul className="list-none p-0">
-            <li>
-              <StoryPosterCard
-                hasBgImage
-                bgColor="red"
-                chapter="Video"
-                heading="A once-in-a-century birthday celebration"
-                body="May 15, 2025"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
-                href="/stories/a-once-in-a-century-birthday-celebration"
+            <li className="cc">
+              <StoryCard
+                isHorizontal
+                isHeadingLarge
+                {...storiesSource.storyInnovation}
               />
             </li>
             <li className="mx-auto w-full max-w-1200">

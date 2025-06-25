@@ -15,18 +15,30 @@
 import { internalLinks } from "./internalLinks";
 
 export const storiesSource = {
-  may15Event: {
+  may29EventProgram: {
+    chapter: "Event Program",
+    heading: "Centennial Perspectives: AI and the Future of Computing",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
+    href: internalLinks.may29EventProgram,
+  },
+  may15EventVideo: {
     chapter: "Video",
     heading: "A once-in-a-century birthday celebration",
     body: "May 15, 2025",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
-    href: internalLinks.may15Event,
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750457292/100thCentennial_26_oaom4v.jpg",
+    href: internalLinks.may15EventVideo,
+  },
+  sizzleReel: {
+    chapter: "Video",
+    heading: "A glimpse into 100 years of Stanford Engineering",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+    href: internalLinks.sizzleReel,
   },
   transformativeBreakthroughs: {
     chapter: "Video",
     superhead: "Stanford Engineering at 100",
     heading: "Transformative Breakthroughs, Boundless Horizons",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png",
     href: internalLinks.transformativeBreakthroughs,
   },
   storyInnovation: {
