@@ -9,7 +9,8 @@ import { storiesSource } from "@/utilities/storiesSource";
 import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
 
 export const metadata: Metadata = {
-  title: "Explore through video | 100 Years of Stanford Engineering",
+  title:
+    "Explore Stanford Engineering's Centennial through video | 100 Years of Stanford Engineering",
   description:
     "Dive into the Stanford Engineering Centennial stories and witness transformative engineering feats through engaging videos.",
   keywords: [
@@ -21,23 +22,25 @@ export const metadata: Metadata = {
     "Engineering Feats",
   ],
   openGraph: {
-    title: "Explore through video | 100 Years of Stanford Engineering",
+    title:
+      "Explore Stanford Engineering's Centennial through video | 100 Years of Stanford Engineering",
     description:
       "Dive into the Stanford Engineering Centennial stories and witness transformative engineering feats through engaging videos.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialVideo_Explore.jpg",
-        alt: "Snapshot of Stanford Engineering video footage showing historic and modern achievements.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png",
+        alt: "A collage of Stanford engineering students and faculty",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Explore through video | 100 Years of Stanford Engineering",
+    title:
+      "Explore Stanford Engineering's Centennial through video | 100 Years of Stanford Engineering",
     description:
       "Dive into the Stanford Engineering Centennial stories and witness transformative engineering feats through engaging videos.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialVideo_Explore.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1747093198/SOE100_DOC_NoLogo_r49m0c.png",
     ],
   },
 };

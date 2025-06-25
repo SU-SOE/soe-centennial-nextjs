@@ -270,7 +270,6 @@ export default function page() {
       <main id="main-content">
         <article>
           <StoryImpactBanner
-            isVertical
             hasBgImage
             bgColor="stone-dark"
             chapter="Decade 8"
@@ -432,7 +431,7 @@ export default function page() {
             isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto max-w-1500 rs-mb-5 3xl:p-0"
+            className="cc mx-auto w-full 2xl:max-w-1500 rs-mb-5 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483023/vv883ww4376_bxyin5.jpg"
             alt="A group of men standing together posing for a photo."
             caption="Stanford President John Hennessy, alumni Sergey Brin and Larry Page, and computer science Professor Donald Knuth at a gathering on campus to celebrate Google, April 2005. | School of Engineering."
@@ -649,7 +648,7 @@ export default function page() {
             isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto max-w-1500 rs-mb-5 3xl:p-0"
+            className="cc mx-auto w-full 2xl:max-w-1500 rs-mb-5 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483049/A-CAM-2022SE-138_xvsrau.jpg"
             alt="A view of the David Packard Electrical Engineering building."
             caption="Exterior view of the David Packard Electrical Engineering Building, 2022. The Packard building was one of four new buildings constructed as part of the first phase of the Near West Campus project. The building became a home for the Electrical Engineering Department. A major renovation of the basement level was undertaken in 2023 to create the new Stanford Robotics Lab, which opened in 2024, along with several new makerspaces. | Linda A. Cicero/Stanford News Service."
@@ -877,7 +876,7 @@ export default function page() {
             rounded
             isParallax
             isCaptionInset
-            className="cc mx-auto rs-mb-5 rs-mt-8 3xl:p-0"
+            className="cc mx-auto w-full xl:max-w-1500 rs-mb-5 rs-mt-8 xl:p-0"
             aspectRatio="8x5"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748483022/murray_and_taber_zw48mg.jpg"
             alt="A man inspects a large metal object, accompanied by another man who watches nearby."

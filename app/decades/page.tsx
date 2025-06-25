@@ -10,7 +10,7 @@ import { storiesSource } from "@/utilities/storiesSource";
 import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
 
 export const metadata: Metadata = {
-  title: "Ten decades in transformation | 100 Years of Stanford Engineering",
+  title: "Ten decades of global impact | 100 Years of Stanford Engineering",
   description:
     "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
   keywords: [
@@ -22,23 +22,23 @@ export const metadata: Metadata = {
     "Engineering History",
   ],
   openGraph: {
-    title: "Ten decades in transformation | 100 Years of Stanford Engineering",
+    title: "Ten decades of global impact | 100 Years of Stanford Engineering",
     description:
       "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialDecades_Transformation.jpg",
-        alt: "Historical collage showing Stanford Engineering milestones from each decade.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+        alt: "Historic Stanford engineering class in session, circa 1925",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ten decades in transformation | 100 Years of Stanford Engineering",
+    title: "Ten decades of global impact | 100 Years of Stanford Engineering",
     description:
       "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialDecades_Transformation.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
     ],
   },
 };

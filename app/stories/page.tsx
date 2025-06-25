@@ -10,7 +10,8 @@ import { storiesSource } from "@/utilities/storiesSource";
 import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
 
 export const metadata: Metadata = {
-  title: "Stories worth telling | 100 Years of Stanford Engineering",
+  title:
+    "A century of world-changing stories | 100 Years of Stanford Engineering",
   description:
     "Explore inspiring stories that celebrate the legacy, innovation, and impact of the Stanford School of Engineering over the past centennial.",
   keywords: [
@@ -24,23 +25,25 @@ export const metadata: Metadata = {
     "engineering stories",
   ],
   openGraph: {
-    title: "Stories worth telling | 100 Years of Stanford Engineering",
+    title:
+      "A century of world-changing stories | 100 Years of Stanford Engineering",
     description:
       "A curated collection of stories highlighting the people, breakthroughs, and ideas that shaped a century of engineering at Stanford.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-        alt: "Historic Stanford engineering class in session, circa 1925",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+        alt: "A collage of Stanford engineering students and faculty",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stories worth telling | 100 Years of Stanford Engineering",
+    title:
+      "A century of world-changing stories | 100 Years of Stanford Engineering",
     description:
       "Discover the remarkable people and ideas that shaped 100 years of Stanford Engineering.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
     ],
   },
 };
@@ -104,14 +107,7 @@ export default function page() {
               <HorizontalLineart lineartType="D" />
             </li>
             <li className="cc">
-              <StoryPosterCard
-                hasBgImage
-                chapter="Decade 1"
-                heading="“Preparing roads over which culture may ride in comfort”"
-                dek="1925 – 1934"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg"
-                href="/stories/preparing-roads-culture-may-ride-comfort"
-              />
+              <StoryPosterCard hasBgImage {...storiesSource.decade1} />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore

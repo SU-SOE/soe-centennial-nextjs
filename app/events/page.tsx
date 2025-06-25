@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "Catch all the highlights and insightful moments from the Stanford Engineering Centennial events, showcasing groundbreaking research and inspiring discussions.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialEvent_Coverage.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750885012/100thCentennial_A162_O5A1684_m621fu.jpg",
         alt: "Image capturing speakers and audience at a Stanford Engineering Centennial event.",
       },
     ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Catch all the highlights and insightful moments from the Stanford Engineering Centennial events, showcasing groundbreaking research and inspiring discussions.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/CentennialEvent_Coverage.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1750885012/100thCentennial_A162_O5A1684_m621fu.jpg",
     ],
   },
 };

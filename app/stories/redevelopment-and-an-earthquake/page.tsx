@@ -790,7 +790,7 @@ export default function page() {
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
-          <div className="cc 3xl:p-0 flex flex-col lg:flex-row w-full gap-[7.6rem] rs-mt-4 rs-mb-5 w-full max-w-1500">
+          <div className="cc 2xl:p-0 flex flex-col lg:flex-row w-full gap-[7.6rem] rs-mt-4 rs-mb-5 w-full max-w-1500">
             <MediaCaptionImage
               rounded
               isCaptionInset
