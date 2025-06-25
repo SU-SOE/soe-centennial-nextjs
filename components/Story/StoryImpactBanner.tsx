@@ -127,8 +127,8 @@ export const StoryImpactBanner = ({
         )}
         <FlexBox
           alignItems="center"
-          className={cnb("flex flex-col z-10 relative md:grid-gap", {
-            "lg:flex-row": !isVertical,
+          className={cnb("flex flex-col z-10 relative", {
+            "md:grid-gap lg:flex-row": !isVertical,
             "w-full mx-auto": isVertical,
             "max-w-1100": isVertical && !isImageWide,
             "max-w-1500": isImageWide,
@@ -136,9 +136,10 @@ export const StoryImpactBanner = ({
         >
           <AnimateInView
             animation="sharpen"
-            className={cnb("flex flex-col text-center rs-mb-5 rs-mt-7", {
-              "items-center [&_p]:max-w-800 [&_h*]:max-w-1100": isVertical,
-              "max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
+            className={cnb("flex flex-col text-center rs-mt-7", {
+              "rs-mb-6 items-center [&_p]:max-w-800 [&_h*]:max-w-1100":
+                isVertical,
+              "rs-mb-5 max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
                 !isVertical,
             })}
           >
