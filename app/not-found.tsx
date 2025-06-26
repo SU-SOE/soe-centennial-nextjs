@@ -14,7 +14,7 @@ export default function NotFound() {
         width="site"
         className="relative min-h-1500 pt-150 md:pt-200"
       >
-        <div className="h-full w-full absolute top-0 left-0 z-0">
+        <div className="size-full absolute top-0 left-0 z-0">
           <Image
             className="ed11y-ignore object-cover z-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1739986290/stangord-campus-1948_d7gus7_f6if28.jpg"
@@ -23,9 +23,9 @@ export default function NotFound() {
             fill
             sizes="100vw"
           />
-          <div className="absolute h-full w-full bg-opacity-80 z-10 bg-cardinal-red-dark" />
+          <div className="absolute size-full bg-opacity-80 z-10 bg-cardinal-red-dark" />
         </div>
-        <div className="flex flex-col rs-mb-8 rs-mt-7 max-w-700 md:w-2/3 xl:w-1/2 text-left md:m-0 z-10 relative ">
+        <div className="flex flex-col rs-mb-8 rs-mt-7 max-w-700 md:w-2/3 xl:w-1/2 text-left md:m-0 z-10 relative">
           <Heading size="f6" weight="normal" mb="none">
             Oops, this moment in time hasn’t been documented yet!
           </Heading>

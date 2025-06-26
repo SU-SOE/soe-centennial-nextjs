@@ -5,6 +5,7 @@ import * as styles from "./LocalFooter.styles";
 import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { ActionLink, Button, Link } from "@/components/Cta";
 import { SocialSharing } from "./Socials";
+import * as links from "@/utilities/externalLinks";
 
 export const LocalFooter = () => (
   <Container
@@ -35,7 +36,7 @@ export const LocalFooter = () => (
           className="rs-mt-5 hidden xl:block"
         >
           This site created in partnership with{" "}
-          <Link href="https://uit.stanford.edu/sws" linkType="dark-bg">
+          <Link href={links.sws} linkType="dark-bg">
             Stanford Web Services
           </Link>
         </Text>
@@ -62,10 +63,7 @@ export const LocalFooter = () => (
               Mark this milestone by sharing one of your favorite memories of
               Stanford Engineering.
             </Text>
-            <Button
-              solid
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
-            >
+            <Button solid href={links.googleDocShare}>
               Share a memory
             </Button>
           </section>
@@ -76,10 +74,7 @@ export const LocalFooter = () => (
             <Text size="small" mb="base">
               Learn how your generosity can have transformational impact.
             </Text>
-            <Button
-              solid
-              href="https://engineering.stanford.edu/get-involved/support-engineering"
-            >
+            <Button solid href={links.supportEngineering}>
               Support Engineering
             </Button>
           </section>
@@ -93,7 +88,7 @@ export const LocalFooter = () => (
             className="rs-mt-2 block xl:hidden"
           >
             This site created in partnership with{" "}
-            <Link href="https://uit.stanford.edu/sws" linkType="dark-bg">
+            <Link href={links.sws} linkType="dark-bg">
               Stanford Web Services
             </Link>
           </Text>

@@ -46,9 +46,9 @@ export const TeaserCard = ({
           {/* {imageUrl && (
             <div className="relative shadow-2xl trnaslate-all ease-in-out duration-500 rotate-[10deg] group-hocus:rotate-[8deg] mx-28 aspect-[2/3] w-full max-w-300 overflow-hidden">
               <Image
-                className="w-full h-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
+                className="size-full object-cover object-center group-hocus-within:scale-105 transition duration-1000"
                 src={imageUrl}
-                alt={imageAlt || ""}
+                alt={alt || ""}
                 fill
                 sizes="(max-width: 768px) 100vw, 1000px"
               />

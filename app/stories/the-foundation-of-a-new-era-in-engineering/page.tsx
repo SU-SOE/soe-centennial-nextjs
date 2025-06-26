@@ -21,6 +21,7 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -60,27 +61,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    heading: "The Terman Era",
-    chapter: "Decade 3",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
-  },
-  {
-    heading: "A period of transformation",
-    chapter: "Decade 4",
-    href: "/stories/a-period-of-transformation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/PC0141_b12_Dish_0088_EWS_emptkd.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.decade3,
+  storiesSource.decade4,
 ];
 
 const galleryImages = [
@@ -258,7 +241,7 @@ export default function page() {
                 isPortrait
                 rounded
                 aspectRatio="1x1"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/ck707sy2214_yejfci.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/ck707sy2214_yejfci.jpg"
                 alt="Vintage portrait of Samuel B. Morris"
                 caption="Samuel B. Morris, professor of civil engineering and the second dean of the School of Engineering from 1936 to 1944, adjusted course schedules and curriculum during the Great Depression and World War II to help students who needed to work or study during the summer. Hundreds of soldiers enrolled in 1943 as part of the Army Specialized Training Program. | Special Collections & University Archives."
               />
@@ -290,7 +273,7 @@ export default function page() {
             animation="sharpen"
             rounded
             aspectRatio="3x2"
-            imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/kn908nr7305_ffxjaj.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/kn908nr7305_ffxjaj.jpg"
             alt="Vintage portrait of Frederick Terman"
             caption="Frederick Terman, 1938. Terman became head of the Department of Electrical Engineering in 1937. He served as dean of the School of Engineering from 1944 to 1958 and as provost of the university from 1955 to 1965. | Special Collections & University Archives."
             className="max-w-800 mx-auto rs-mb-5"
@@ -321,7 +304,7 @@ export default function page() {
               isParallax
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509516/00018325_004_optimized_wqc3n8.jpg"
               alt="Display of the Type A klystron tool"
               caption="Type A klystron, 1937. The klystron was the first significantly powerful source of radio waves in the microwave range. As the foundational technology in the burgeoning microwave industry, it would be used in military radar detection, commercial air navigation, satellite communications,  high-energy particle accelerators, and other technologies. | Special Collections  & University Archives."
             />
@@ -332,7 +315,7 @@ export default function page() {
                 animation="slideUp"
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00021082_004_nhnrna.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/00021082_004_nhnrna.jpg"
                 alt="A group of five men huddled around the klystron tool"
                 caption="Physics researchers Russell Varian (‘25, MA ‘27) and Sigurd Varian and Stanford physics professor William Hansen collaborated with colleagues in electrical engineering to invent the klystron. Posing with the klystron in 1939 are (clockwise from lower left) Russell H. Varian, Sigurd F. Varian, David L. Webster, William W. Hansen, and John R. Woodyard. | Special Collections & University Archives."
               />
@@ -341,7 +324,7 @@ export default function page() {
                 delay={0.5}
                 rounded
                 aspectRatio="4x3"
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zm384pb3271_pw5s9z.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zm384pb3271_pw5s9z.jpg"
                 alt="A pair of brother, Russel H. Varian on the left and Sugurd Varian on the right, standing in front of a large machine."
                 caption="Brothers Russell H. Varian (left) and Sigurd Varian (right) went on to found Varian Associates, one of the earliest high-tech companies in Silicon Valley and the first to lease land from the university in what became the Stanford Industrial Park (renamed Stanford Research Park in 1974). | Special Collections & University Archives."
               />
@@ -351,7 +334,7 @@ export default function page() {
               delay={0.3}
               rounded
               aspectRatio="3x4"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906505/00018323_004_haa3ul.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906505/00018323_004_haa3ul.jpg"
               alt="Professor William Hansen standing by a unit of klystron"
               caption="Associate Professor William Hansen tests a unit of the  klystron in 1939. The klystron was based on his earlier invention,  the “rhumbatron.” | Special Collections & University Archives."
             />
@@ -425,7 +408,7 @@ export default function page() {
               animation="slideUp"
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/hewlett_packard_yijywt.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906509/hewlett_packard_yijywt.jpg"
               alt="William Hewlett and David Packerd, standing in front of the first precision audio oscillator."
               caption="William Hewlett and David Packard (seated), 1939. As graduate students in the School of Engineering, they developed the first precision audio oscillator, a low-cost method of measuring audio frequencies. The device became the foundation for their company, known around the world today as HP. | Courtesy Hewlett-Packard Corporate Archives."
             />
@@ -434,7 +417,7 @@ export default function page() {
               delay={0.5}
               rounded
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zx844pk9013_viuv37.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906513/zx844pk9013_viuv37.jpg"
               alt="Wiilliam Hewlett and David Parkard, smiling at one another as they work in their shop"
               caption="William Hewlett and David Packard working together in their shop, circa 1942. | Special Collections & University Archives."
             />
@@ -489,7 +472,7 @@ export default function page() {
             <MediaCaptionImage
               rounded
               aspectRatio="3x4"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509511/nz029jf0057_optimized_eoovla.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742509511/nz029jf0057_optimized_eoovla.jpg"
               alt="David Packard, wearing athletic attire, crouches on grass outdoors, poised to sprint forward."
             />
             <Quote
@@ -590,7 +573,7 @@ export default function page() {
             <MediaCaptionImage
               animation="sharpen"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00008355_001_ocomle.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1741906502/00008355_001_ocomle.jpg"
               alt="A pair of men reviewing a large piece of machinery"
               caption="Professor Arthur B. Domonoske, at right, 1939. Domonoske, who joined Stanford in 1927 to become head of the Department  of Mechanical Engineering, published about the principles of aircraft engine design. | Special Collections & University Archives."
             />
@@ -733,7 +716,7 @@ export default function page() {
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
-            sectionHeading="Explore more decades"
+            sectionHeading="Explore more"
             hasButton
           />
           <ContributeStoryBanner bgColor="red" hasLineArt />

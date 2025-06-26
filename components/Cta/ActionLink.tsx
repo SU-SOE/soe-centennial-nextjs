@@ -32,7 +32,7 @@ export const ActionLink = ({
           width={25}
           className={cnb(
             "transition ease-in-out duration-1000 ml-03em group-hover/action:translate-x-02em group-focus/action:translate-x-02em inline",
-            whiteText ? "text-digital-red-xlight" : "text-digital-red-light ",
+            whiteText ? "text-digital-red-xlight" : "text-digital-red-light",
           )}
         />
       </span>

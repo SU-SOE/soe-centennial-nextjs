@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { Container } from "@/components/Container";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "A period of transformation | 100 Years of Stanford Engineering",
@@ -95,27 +96,9 @@ const galleryImages = [
 ];
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
-  },
-  {
-    heading: "The foundation of a new era in engineering",
-    chapter: "Decade 2",
-    href: "/stories/the-foundation-of-a-new-era-in-engineering",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
-  },
-  {
-    heading: "The Terman Era",
-    chapter: "Decade 3",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1744766098/hewlett-packard_dedication_i3tnua.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.decade2,
+  storiesSource.decade3,
 ];
 
 const footnotes = [
@@ -442,7 +425,7 @@ export default function page() {
                 isPortrait
                 aspectRatio="1x1"
                 rounded
-                imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/pettit_jn566pd7749_bm0d7v.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/pettit_jn566pd7749_bm0d7v.jpg"
                 alt="A black and white portrait of a man wearing a suit and tie."
                 caption="Joseph Pettit, 1958. A professor of electrical engineering, Pettit served as dean of the School of Engineering from 1958 to 1972. He oversaw a time of growth for the school, during which the school became third in the nation in the number of advanced degrees conferred and the Department of Aeronautics and Astronautics, embracing the Space Age, was founded. | Special Collections & University Archives."
               />
@@ -453,7 +436,7 @@ export default function page() {
               isParallax
               aspectRatio="16x9"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/computation_corner_dedication_o4xkzy.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/computation_corner_dedication_o4xkzy.jpg"
               alt="A room filled with several men gathered around a couple of computers, engaged in discussion and collaboration."
               caption="Dedication of the Computation Center at Polya Hall, 1963, when computer science was still part of the Department of Mathematics. The IBM 7090 or the Burroughs B5000 may be the machines pictured here. | Special Collections & University Archives."
             />
@@ -531,7 +514,7 @@ export default function page() {
               rounded
               isCaptionInset
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371508/rm634fy8400_esg6hs.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371508/rm634fy8400_esg6hs.jpg"
               alt="A group of people standing in front of a nuclear reactor"
               caption="Left to right: Stanford electrical engineers John Linvill and James Gibbons, with Gerald Pearson of Bell Labs, March 1958. Gibbons, who would later become dean of the School of Engineering, holds a four-layer Shockley diode, the first semiconductor device ever made at Stanford—and presumably at any university. Gibbons had been taught to build semiconductor devices by William Shockley. Pearson, who had coinvented the solar cell battery while at Bell Labs, joined the Stanford electrical engineering faculty in 1960. | Courtesy James Gibbons."
             />
@@ -542,7 +525,7 @@ export default function page() {
               rounded
               isCaptionInset
               aspectRatio="4x3"
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/U9427_ffbey1.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/U9427_ffbey1.jpg"
               alt="Ronald Bracewell standing in front of a radio telescope"
               caption="Ronald Bracewell in 1959, standing in front of the Stanford Radio Astronomy Observatory, which he designed and built. Also known as Heliopolis, the Observatory was made up of thirty-two 10-foot-diameter parabolic antennas arranged in a cross. Together they measured solar activity and the sun’s temperature. The algorithms Bracewell developed to recreate images from scans were later used in computer-assisted tomography (CAT) scans for medical diagnosis. The array was demolished in 2006. | Special Collections & University Archives."
             />
@@ -652,7 +635,7 @@ export default function page() {
               isCaptionInset
               aspectRatio="16x9"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745544985/SC0122_s1_b267_f05_0594-04_dxnlq1.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745544985/SC0122_s1_b267_f05_0594-04_dxnlq1.jpg"
               alt="Large radio telescope dish under construction on a grassy hill, surrounded by scaffolding and construction equipment, with a clear sky in the background."
               caption="The Stanford “Dish” radio telescope under construction in the Stanford foothills, 1961. A 70-ton, 150-foot steel and aluminum parabolic antenna with a surface spanning nearly half an acre, it was designed and built by the Stanford Research Institute for the U.S. government with support from the U.S. Air Force Office of Aerospace Research and the Defense Support Agency. In the 1940s, a group of Stanford’s electrical engineers––including Robert A. Helliwell, Laurence A. Manning, and O. G. Villard, Jr.—had tested the idea that radio signals bounced off meteor trails. As faculty, they formed the core of Stanford’s Radio Science Laboratory, later joined by professors Ronald Bracewell, Allen M. Peterson, and others. More than a decade later, the Dish enabled vastly expanded studies of scattering effects in Earth’s ionosphere and was used to detect Soviet radar by capturing radio signals that bounced off the moon. The Dish is still used today for satellite calibrations, spacecraft command and telemetry, and radio astronomy measurements. | Stanford News Service."
             />
@@ -700,7 +683,7 @@ export default function page() {
               isParallax
               aspectRatio="8x5"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/PC0086_b02_AP01_eewigz.jpg"
               alt="A detailed map of the Stanford Industrial Park highlighting buildings and pathways."
               caption="Map of the park, showing the growth of Varian Associates, Hewlett-Packard, Fairchild, Xerox, and other businesses, August 17, 1962. | Special Collections & University Archives."
             />
@@ -743,7 +726,7 @@ export default function page() {
               captionTextColor="black"
               aspectRatio="9x16"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/SC0122_1981-087_b01_f005_ldesrt.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/SC0122_1981-087_b01_f005_ldesrt.jpg"
               alt="A detailed map of the Stanford Industrial Park highlighting buildings and pathways."
               caption="Map of the park, showing the growth  of Varian Associates, Hewlett-Packard, Fairchild, Xerox, and other businesses, August 17, 1962. | Special Collections & University Archives."
             />
@@ -842,7 +825,7 @@ export default function page() {
               isParallax
               aspectRatio="8x5"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745372793/00007002_0010_1_xasael.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745372793/00007002_0010_1_xasael.jpg"
               alt="Black and white photograph of individuals on bicycles in front of a building with a clock tower."
               caption="The Engineering Laboratories with old clock tower (left) and Engineering Corner, 1960. | Special Collections & University Archives."
             />
@@ -851,14 +834,14 @@ export default function page() {
             <MediaCaptionImage
               aspectRatio="3x4"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371508/nuclear_reactor_c14sww.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371508/nuclear_reactor_c14sww.jpg"
               alt="A black and white image depicting several individuals standing around a large machine."
               caption="Nuclear reactor in Stanford’s Nuclear Technology Laboratory, in the former Harris J. Ryan High-Voltage Laboratory, 1961. The 10-kilowatt teaching reactor was on loan from the Atomic Energy Commission. | Stanford News Service."
             />
             <MediaCaptionImage
               aspectRatio="3x4"
               rounded
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/U7477_neflff.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371509/U7477_neflff.jpg"
               alt="Two men engaged in hands-on work with a large metal object."
               caption="Engineering professor George Leppert (right) and graduate student Gary Vliet take measurements in Stanford’s subcritical nuclear assembly, 1958. The apparatus, which operated like a reactor but could not sustain a chain reaction, was located in Stanford’s Nuclear Technology Laboratory. The nuclear engineering program, led by Professor Leppert, was developed in the Mechanical Engineering Department in 1955. | Stanford News Service."
             />
@@ -891,7 +874,7 @@ export default function page() {
               aspectRatio="3x4"
               rounded
               isCaptionInset
-              imageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/SC0122_s1_b268_f06_1546-11_anr8um.jpg"
+              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371517/SC0122_s1_b268_f06_1546-11_anr8um.jpg"
               alt="Three individuals, two men and a woman, stand in front of the Thomas F. Peterson Engineering Laboratory building."
               caption="Provost Frederick E. Terman (left), former dean of the School of Engineering, and Dean Joseph M. Pettit with Mrs. Thomas F. Peterson, 1963. The Thomas F. Peterson Engineering Laboratory—named in memory of her late husband, whose support made the facility possible—was dedicated in May 1963. | Stanford News Service."
             />
