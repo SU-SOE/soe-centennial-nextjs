@@ -2,7 +2,7 @@ import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import React from "react";
 import { Metadata } from "next";
-import { H1 } from "@/components/Typography/Header";
+import { H1, Text } from "@/components/Typography";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ExploreMore, StoryCard, StoryPosterCard } from "@/components/Story";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
@@ -10,63 +10,50 @@ import { storiesSource } from "@/utilities/storiesSource";
 import { StoriesNav } from "@/components/StoriesNav/StoriesNav";
 
 export const metadata: Metadata = {
-  title:
-    "A century of world-changing stories | 100 Years of Stanford Engineering",
+  title: "Ten decades of global impact | 100 Years of Stanford Engineering",
   description:
-    "Explore inspiring stories that celebrate the legacy, innovation, and impact of the Stanford School of Engineering over the past centennial.",
+    "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
   keywords: [
-    "Stanford history",
     "Stanford Engineering",
-    "School of Engineering",
-    "technological advancement",
-    "engineering legacy",
-    "innovation",
-    "centennial celebration",
-    "engineering stories",
+    "Centennial Stories",
+    "Transformation",
+    "Decades Overview",
+    "1925-2025",
+    "Engineering History",
   ],
   openGraph: {
-    title:
-      "A century of world-changing stories | 100 Years of Stanford Engineering",
+    title: "Ten decades of global impact | 100 Years of Stanford Engineering",
     description:
-      "A curated collection of stories highlighting the people, breakthroughs, and ideas that shaped a century of engineering at Stanford.",
+      "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-        alt: "A collage of Stanford engineering students and faculty",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
+        alt: "Historic Stanford engineering class in session, circa 1925",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "A century of world-changing stories | 100 Years of Stanford Engineering",
+    title: "Ten decades of global impact | 100 Years of Stanford Engineering",
     description:
-      "Discover the remarkable people and ideas that shaped 100 years of Stanford Engineering.",
+      "Explore the Stanford Engineering Centennial stories capturing each decade from 1925-2025",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743096833/Spr25_SoE-Voltage_Black_w46ine.jpg",
     ],
   },
 };
 
-const storyData1 = [
-  storiesSource.may15EventVideo,
-  storiesSource.transformativeBreakthroughs,
-  storiesSource.deanWidomLetter,
-];
+const posterCardData1 = storiesSource.decade1;
 
-const storyData2 = [
-  storiesSource.decade2,
-  storiesSource.decade3,
-  storiesSource.decade4,
-];
+const storyData1 = [storiesSource.decade2, storiesSource.decade3];
 
-const storyCardData = storiesSource.decade5;
+const storyCardData = storiesSource.decade4;
 
-const storyData3 = [
-  storiesSource.decade6,
-  storiesSource.decade7,
-  storiesSource.decade8,
-];
+const storyData2 = [storiesSource.decade5, storiesSource.decade6];
+
+const posterCardData2 = storiesSource.decade7;
+
+const storyData3 = [storiesSource.decade8];
 
 export default function page() {
   return (
@@ -75,44 +62,27 @@ export default function page() {
       <main id="main-content">
         <article>
           <div className="cc rs-mt-8">
-            <H1 className="max-w-800 w-full">
-              A century of world-changing stories
-            </H1>
+            <div className="flex flex-col lg:flex-row w-full max-w-1500 gap-0 lg:gap-[7.6rem] lg:items-end">
+              <H1 className="mt-0 w-full text-left lg:max-w-700">
+                Ten decades of global impact
+              </H1>
+              <Text size="f2">
+                Explore the Stanford Engineering Centennial stories capturing
+                each decade from 1925-2025.
+              </Text>
+            </div>
           </div>
-          <div className="flex w-full justify-start rs-mb-7">
-            <HorizontalLineart lineartType="A" />
+          <div className="flex w-full justify-end rs-mb-7">
+            <HorizontalLineart lineartType="C" />
           </div>
           <StoriesNav />
           <ul className="list-none p-0">
             <li className="cc">
-              <StoryCard
-                isHorizontal
-                isHeadingLarge
-                {...storiesSource.storyInnovation}
-              />
+              <StoryPosterCard hasBgImage {...posterCardData1} />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
                 stories={storyData1}
-                className="py-0"
-                cardBgColor="white"
-                headerTag="h2"
-              />
-            </li>
-            <li
-              aria-hidden="true"
-              className="flex w-full justify-start rs-mb-8"
-            >
-              <HorizontalLineart lineartType="D" />
-            </li>
-            <li className="cc">
-              <StoryPosterCard hasBgImage {...storiesSource.decade1} />
-            </li>
-            <li className="mx-auto w-full max-w-1200">
-              <ExploreMore
-                isThreeCol
-                stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
                 headerTag="h2"
@@ -129,7 +99,17 @@ export default function page() {
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
+                stories={storyData2}
+                className="py-0"
+                cardBgColor="white"
+                headerTag="h2"
+              />
+            </li>
+            <li className="cc">
+              <StoryPosterCard hasBgImage {...posterCardData2} />
+            </li>
+            <li className="mx-auto w-full max-w-1200">
+              <ExploreMore
                 stories={storyData3}
                 className="py-0"
                 cardBgColor="white"

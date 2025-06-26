@@ -4,8 +4,11 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { LinkProps } from "next/dist/client/link";
 import { cnb } from "cnbuilder";
 
-type Props = HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement> &
-  LinkProps & {
+type Props = Omit<
+  HtmlHTMLAttributes<HTMLAnchorElement | HTMLButtonElement>,
+  "href"
+> &
+  Omit<LinkProps, "href"> & {
     href: string;
     linkType?:
       | "timeline"
@@ -58,7 +61,7 @@ const NextLink = ({ href, children, className, linkType, ...props }: Props) => {
   return (
     <Link {...props} href={href} className={cnb(linkStyles, className)}>
       {children}
-      {href.startsWith("mailto") && (
+      {href?.startsWith("mailto") && (
         <span className="whitespace-nowrap">
           &#65279;
           <EnvelopeIcon width={20} className="ml-4 inline-block" />

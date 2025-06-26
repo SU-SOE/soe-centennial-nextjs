@@ -17,12 +17,13 @@ import { EngLogoLockup } from "@/components/Logo/EngLogoLockup";
 import { useRef } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 import { useFocusOutside } from "@/utilities/hook/useFocusOutside";
+import * as links from "@/utilities/externalLinks";
 
-type Props = {
+type MainNavProps = {
   isLight?: boolean;
 };
 
-export const MainNav = ({ isLight = false }: Props) => {
+export const MainNav = ({ isLight = false }: MainNavProps) => {
   const preferReducedMotion = useReducedMotion();
   const panelRef = useRef<HTMLElement | null>(null);
 
@@ -94,10 +95,7 @@ export const MainNav = ({ isLight = false }: Props) => {
                           Mark this milestone by sharing one of your favorite
                           memories of Stanford Engineering.
                         </Text>
-                        <Button
-                          solid
-                          href="https://docs.google.com/forms/d/e/1FAIpQLSfUppz2bgwGKJpEzZU7CohEwFr7m_drQbdLydU2TPo6cXPZeg/viewform"
-                        >
+                        <Button solid href={links.googleDocShare}>
                           Submit your story
                         </Button>
                       </section>
@@ -109,10 +107,7 @@ export const MainNav = ({ isLight = false }: Props) => {
                           Learn how your generosity can have transformational
                           impact.
                         </Text>
-                        <Button
-                          solid
-                          href="https://engineering.stanford.edu/get-involved/support-engineering"
-                        >
+                        <Button solid href={links.supportEngineering}>
                           Support Engineering
                         </Button>
                       </section>

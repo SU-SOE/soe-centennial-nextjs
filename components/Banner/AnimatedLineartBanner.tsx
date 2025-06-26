@@ -25,7 +25,7 @@ export const AnimatedLineartBanner = ({
       <HorizontalLineart
         stroke={stroke}
         lineartType={lineartType}
-        className="ml-auto rs-pl-5 md:rs-pl-8 max-w-[160rem] 2xl:max-w-[200rem] 3xl:max-w-[250rem] 3xl:rs-pr-5"
+        className="ml-auto pl-38 md:pl-126 2xl:pl-133 max-w-[160rem] 2xl:max-w-[200rem] 3xl:max-w-[250rem] 3xl:pr-76"
       />
     </Container>
   );
