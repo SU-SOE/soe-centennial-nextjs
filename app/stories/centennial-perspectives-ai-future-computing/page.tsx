@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Join us for a conversation exploring AI and the Future of Computing, hosted by Dean Jennifer Widom. This event features a conversation between Jensen Huang (MS ’92), founder, president, and CEO of NVIDIA, and John Hennessy, Stanford President Emeritus and professor of electrical engineering and of computer science; talks by engineering faculty Srabanti Chowdhury, Carlos Guestrin, and Kunle Olukotun; closing remarks from Stanford President Jonathan Levin, and a special appearance from Morris Chang (PhD '64), Founding Chairman of Taiwan Semiconductor Manufacturing Company (TSMC).\n\nHoover Institution Director Condoleezza Rice introduces the 2025 Stanford Emerging Technology Review.\n\nAs part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg",
         alt: "Serene nighttime courtyard scene with palm trees silhouetted against the night sky.",
       },
     ],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Join us for a conversation exploring AI and the Future of Computing, hosted by Dean Jennifer Widom. This event features a conversation between Jensen Huang (MS ’92), founder, president, and CEO of NVIDIA, and John Hennessy, Stanford President Emeritus and professor of electrical engineering and of computer science; talks by engineering faculty Srabanti Chowdhury, Carlos Guestrin, and Kunle Olukotun; closing remarks from Stanford President Jonathan Levin, and a special appearance from Morris Chang (PhD '64), Founding Chairman of Taiwan Semiconductor Manufacturing Company (TSMC).\n\nHoover Institution Director Condoleezza Rice introduces the 2025 Stanford Emerging Technology Review.\n\nAs part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg",
     ],
   },
 };
@@ -86,7 +86,7 @@ export default function page() {
           <EmbedMediaHero
             autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg"
             title="Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons"
             className="bg-cardinal-red-dark"
             mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
