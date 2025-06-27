@@ -30,8 +30,8 @@ export const metadata: Metadata = {
       "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
-        alt: "Serene nighttime courtyard scene with palm trees silhouetted against the night sky.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
+        alt: "A man in a black leather jacket sits on a chair next to a small table with flowers, in front of a sign that reads Stanford University.",
       },
     ],
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748457049/100thCentennial_May29_ykkfur.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
     ],
   },
 };
@@ -193,7 +193,7 @@ export default function page() {
             className="rs-mb-7"
             superhead="1925 – 2025"
             heading="Explore the Centennial timeline"
-            link="/timeline"
+            href="/timeline"
             buttonText="Explore the timeline"
           />
           <ContributeStoryBanner bgColor="white" hasLineArt />

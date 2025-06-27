@@ -1,18 +1,18 @@
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import { ExploreMore } from "@/components/Story";
-import { Text } from "@/components/Typography";
 import React from "react";
 import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
-import { OneCol } from "@/components/Layout";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { storiesSource } from "@/utilities/storiesSource";
+import { OneCol } from "@/components/Layout";
+import { Text } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title:
-    "A Once-in-a-Century Birthday Celebration | 100 Years of Stanford Engineering",
+    "A glimpse into 100 years of Stanford Engineering | 100 Years of Stanford Engineering",
   description:
     "On May 15, 2025, exactly 100 years since the founding of Stanford School of Engineering, nearly 3,000 people gathered in the newly named Robert Rosenkranz Science and Engineering Quad for a historic celebration featuring hands-on exhibits, keynote remarks, and community festivities.",
   keywords: [
@@ -28,24 +28,24 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "A Once-in-a-Century Birthday Celebration | 100 Years of Stanford Engineering",
+      "A glimpse into 100 years of Stanford Engineering | 100 Years of Stanford Engineering",
     description:
       "On May 15, 2025, nearly 3,000 people gathered to celebrate 100 years of Stanford Engineering with research exhibits, live music, and remarks from leaders including Jennifer Widom, Donald Knuth, Jonathan Levin, and Andrew Luck.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
-        alt: "Four-tier white cake with 'Stanford School of Engineering' written in frosting on the side and candles shaped like the number 100 on top.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
+        alt: "100 years of Stanford Engineering 1925-2025",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "A Once-in-a-Century Birthday Celebration | 100 Years of Stanford Engineering",
+      "A glimpse into 100 years of Stanford Engineering | 100 Years of Stanford Engineering",
     description:
       "Stanford Engineering celebrated its 100th birthday with a campus-wide celebration, live music, research exhibits, and remarks from academic and industry leaders.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg",
     ],
   },
 };
@@ -64,38 +64,30 @@ export default function page() {
         <article>
           <div className="cc bg-cardinal-red text-white">
             <H1 className="m-0 rs-pt-8 rs-pb-1 flex flex-col text-center">
-              A once-in-a-century birthday celebration
+              <span className="fluid-type-2">A glimpse into</span>
+              <span className="fluid-type-5">
+                100 years of Stanford Engineering
+              </span>
             </H1>
           </div>
           <EmbedMediaHero
-            autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
-            title="A once-in-a-century birthday celebration"
+            title="A glimpse into 100 years of Stanford Engineering"
             className="bg-cardinal-red"
-            mediaUrl="https://www.youtube.com/embed/nsxuADCSTYg?si=fcS-9_GRgC9wsqtV"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1740704737/centennial-yt-cover_dnwrxg.jpg"
+            mediaUrl="https://youtu.be/2xD0_THX4Kg?si=_-iEUv3vmzWTykFP"
           />
           <OneCol className="rs-mt-5">
-            <Text variant="overview" className="cen-drop-cap">
-              A once-in-a-century birthday celebration – on May 15, 2025,
-              exactly 100 years since the official start of the School of
-              Engineering, about 3,000 people gathered in the newly named Robert
-              Rosenkranz Science and Engineering Quad to mark the occasion and
-              celebrate.
-            </Text>
-            <Text>
-              The innovative spirit of the school was on full display as
-              attendees had the opportunity to explore over 50 hands-on research
-              exhibits hosted by faculty, students, and staff. Professor
-              Emeritus Donald Knuth, Dean Jennifer Widom, President Jonathan
-              Levin, and Stanford Football General Manager Andrew Luck offered
-              congratulatory remarks. The afternoon was capped off with cake,
-              live music courtesy of the Stanford Band, and a visit from the
-              beloved Stanford Tree.
+            <Text variant="overview" className="cen-drop-cap" mb="0">
+              The Stanford School of Engineering celebrates its 100-year
+              anniversary in 2025! Please enjoy this glimpse of the
+              breakthroughs, discoveries, and innovations from the school,
+              reshaping industries, improving lives, and expanding the
+              boundaries of human knowledge.
             </Text>
           </OneCol>
           <div className="flex w-full justify-end rs-mb-1">
-            <HorizontalLineart lineartType="D" />
+            <HorizontalLineart />
           </div>
           <ExploreMore
             width="site"
