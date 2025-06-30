@@ -21,4 +21,5 @@ export const internalLinks = {
   decade6: "/stories/bridging-worlds-chips-code-and-cosmos",
   decade7: "/stories/redevelopment-and-an-earthquake",
   decade8: "/stories/the-future-firmly-in-sight",
+  decade9: "/stories/designing-for-the-future",
 } as const;
