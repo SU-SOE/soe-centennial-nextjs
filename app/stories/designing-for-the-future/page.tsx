@@ -307,6 +307,7 @@ export default function page() {
         <article>
           <StoryImpactBanner
             isVertical
+            hasBgImage
             bgColor="stone-dark"
             chapter="Decade 9"
             heading="Designing for the future"
@@ -315,7 +316,7 @@ export default function page() {
             alt="Aerial view of the Stanford Science and Engineering Quad."
             caption="Aerial view of the four completed buildings that made up the new Science and Engineering Quad, facing southeast, 2014. | Todd Quam/School of Engineering."
           />
-          <div className="max-w-1500 w-full cc 3xl:p-0">
+          <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-5">
             <Text mb={6}>by Andrew Myers</Text>
             <Quote
               quoteColor="red"
@@ -324,9 +325,9 @@ export default function page() {
               source="— Dean James Plummer, 2010"
             />
           </div>
-          <TwoCol>
+          <TwoCol className="rs-mb-6" isSidebar>
             <OneCol>
-              <H2>2005 – 2014</H2>
+              <H2 className="mt-0">2005 – 2014</H2>
               <Text variant="overview">
                 The fall of 2005 brought a new program to the school and
                 university: the cross-disciplinary Hasso Plattner Institute of
@@ -354,7 +355,7 @@ export default function page() {
                 for classes like “Design for Extreme Affordability,” which
                 targeted innovations at under-resourced communities.
               </Text>
-              <Text>
+              <Text mb="0">
                 “Design is about meeting human needs,” Kelley said. With a
                 curriculum based on the principle of empathy, students sought to
                 understand the users’ intentions through observation and then
@@ -363,7 +364,7 @@ export default function page() {
                 <Footnotes footnoteRefs={[{ id: "footnote2", number: 2 }]} />
               </Text>
             </OneCol>
-            <StorySidebar hasLineArt>
+            <StorySidebar hasLineArt lineArtType="medium">
               <MediaCaptionImage
                 rounded
                 isCaptionInset
@@ -376,19 +377,18 @@ export default function page() {
             </StorySidebar>
           </TwoCol>
           <MediaCaptionImage
-            isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto w-full 2xl:max-w-1500 rs-mb-5 2xl:p-0"
+            className="cc mx-auto w-full 2xl:max-w-1500 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063587/dschoolcohort_udyq7y.jpg"
             alt="A group of individuals seated on vibrant orange couches."
             caption="The d.school’s early cohort in 2006 (clockwise from left): David Kelley, Bernard Roth, James Patell, Tina Seelig, Robert Sutton, Alex Kazaks, George Kembel, David Beach, Perry Klebahn, Julian Gorodsky, and Charlotte Burgess-Auburn. | Courtesy d.school."
           />
-          <div className="flex w-full justify-end">
-            <HorizontalLineart lineartType="B" />
+          <div className="flex w-full justify-start">
+            <HorizontalLineart lineartType="A" />
           </div>
-          <OneCol>
-            <H2>A new quad takes shape</H2>
+          <OneCol className="rs-mb-5">
+            <H2 className="mt-0">A new quad takes shape</H2>
             <Text>
               In the early 2000s, after the new buildings of the Near West
               Campus project had opened in 1999, a new project broke ground to
@@ -416,6 +416,7 @@ export default function page() {
           <BgImageWrapper
             hasBgImage
             bgColor="fog-light"
+            className="rs-mb-5"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063587/aerial-campus-view-2011_ju9wny.jpg"
           >
             <MediaCaptionImage
@@ -427,7 +428,7 @@ export default function page() {
               caption="Aerial view of campus facing east, 2011. The new Science and Engineering Quad is visible on the left, with the final building still under construction. Then known as Building 4, that building would later become the Shriram Center for Bioengineering and Chemical Engineering. | Linda A. Cicero/Stanford News Service."
             />
           </BgImageWrapper>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               In early 2008, this new era for the School of Engineering
               commenced with the dedication of the Jerry Yang and Akiko Yamazaki
@@ -488,14 +489,13 @@ export default function page() {
               <Footnotes footnoteRefs={[{ id: "footnote5", number: 5 }]} />
             </Text>
           </OneCol>
-          <div className="cc">
-            <Quote
-              width="wide"
-              quoteColor="red"
-              teaser="I hope that students will find inspiration here, and that Stanford will be as important in shaping their lives as it has been in mine."
-              source="— Jen-Hsun Huang"
-            />
-          </div>
+          <Quote
+            width="wide"
+            className="cc 2xl:max-w-1000 2xl:p-0 mx-auto rs-mb-6"
+            quoteColor="red"
+            teaser="I hope that students will find inspiration here, and that Stanford will be as important in shaping their lives as it has been in mine."
+            source="— Jen-Hsun Huang"
+          />
           <OneCol>
             <Text>
               In tribute to that history, the Huang Center included several
@@ -523,11 +523,11 @@ export default function page() {
               among several buildings on campus.
             </Text>
           </OneCol>
-          <div className="flex w-full justify-end">
-            <HorizontalLineart lineartType="B" />
+          <div className="flex w-full justify-end rs-mb-4">
+            <HorizontalLineart lineartType="C" />
           </div>
           <ImageGallery images={galleryImages} />
-          <OneCol>
+          <OneCol className="rs-mt-5">
             <Text>
               “One of the major trends in bioengineering . . . has been the move
               toward molecular-level engineering,” said Russ Altman, professor
@@ -566,7 +566,7 @@ export default function page() {
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" />
           </div>
-          <TwoCol>
+          <TwoCol className="rs-my-5">
             <div>
               <MediaCaptionImage
                 rounded
@@ -578,7 +578,7 @@ export default function page() {
               />
             </div>
             <OneCol>
-              <H2>MOOC’s moment</H2>
+              <H2 className="mt-0">MOOC’s moment</H2>
               <Text>
                 In 2008, the School of Engineering began a bold experiment in
                 universal education, offering materials from several of its most
@@ -625,14 +625,18 @@ export default function page() {
               </Text>
             </OneCol>
           </TwoCol>
-          <BgImageWrapper bgColor="blue" isTwoCol isImgOffset>
+          <BgImageWrapper bgColor="blue" isTwoCol>
             <MediaCaptionImage
+              animation="slideInFromLeft"
+              delay={0.3}
               rounded
               aspectRatio="4x3"
+              className="lg:rs-mt-7"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063592/xm262js0452_onvjmg.jpg"
               alt="A man in a blue shirt typing on a laptop, seated at a desk with multiple monitors."
             />
             <MediaCaptionImage
+              animation="slideInFromRight"
               rounded
               aspectRatio="4x3"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063592/zb772gz3468_g4gbez.jpg"
@@ -641,7 +645,7 @@ export default function page() {
             />
           </BgImageWrapper>
           <OneCol>
-            <H2>Economic woes weigh</H2>
+            <H2 className="mt-0">Economic woes weigh</H2>
             <Text>
               Despite decades of success, in the wake of a global financial
               crisis in late 2008, the School of Engineering was pressed into
@@ -660,9 +664,9 @@ export default function page() {
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="B" />
+            <HorizontalLineart lineartType="A" />
           </div>
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               Amid the worst financial crisis since the Great Depression, the
               popularity of engineering programs remained high across campus and
@@ -802,7 +806,7 @@ export default function page() {
             </ScrollyBubble>
           </Scrollytelling>
           <OneCol>
-            <H2>A new breed of engineer</H2>
+            <H2 className="mt-0">A new breed of engineer</H2>
             <Text>
               At a faculty senate meeting in 2010, Dean Plummer laid out a case
               for what set the Stanford School of Engineering apart from other
@@ -836,11 +840,11 @@ export default function page() {
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
-            <HorizontalLineart lineartType="B" />
+            <HorizontalLineart lineartType="D" />
           </div>
-          <TwoCol>
+          <TwoCol className="rs-mt-6 rs-mb-5">
             <OneCol>
-              <H2>Research breakthroughs</H2>
+              <H2 className="mt-0">Research breakthroughs</H2>
               <Text>
                 Even in the school’s storied history, the ninth decade at the
                 Stanford School of Engineering was a notable period of research.
@@ -874,7 +878,7 @@ export default function page() {
                 source="— Sebastian Thrun"
               />
             </OneCol>
-            <div>
+            <div className="lg:rs-mt-6">
               <MediaCaptionImage
                 rounded
                 isCaptionInset
@@ -886,15 +890,14 @@ export default function page() {
             </div>
           </TwoCol>
           <MediaCaptionImage
-            isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto w-full 2xl:max-w-1500 rs-mb-5 2xl:p-0"
+            className="cc mx-auto w-full 2xl:max-w-1500 rs-mb-4 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063592/stanley-2005_b5sfsk.jpg"
             alt="A Red Bull-themed blue Volkswagen car parked outside a building, with a crowd of onlookers nearby."
             caption="The Stanford Racing Team’s autonomous robotic car, Stanley, in front of the William Gates Computer Science Building, 2005. Significant advances that enabled Stanley’s success included improved long-range terrain perception, real-time collision avoidance, and stable vehicle control on slippery and rugged terrain. | Linda A. Cicero/Stanford News Service."
           />
-          <OneCol>
+          <OneCol className="rs-mb-5">
             <Text>
               In 2005, bioengineer and psychiatrist Karl Deisseroth published
               his first paper on optogenetics, demonstrating the ability to turn
@@ -961,24 +964,27 @@ export default function page() {
             />
             <TwoCol>
               <MediaCaptionImage
+                className="mt-0 lg:rs-mt-8"
+                animation="slideUp"
+                delay={0.3}
                 rounded
-                aspectRatio="3x4"
+                aspectRatio="4x3"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063586/Deisseroth_SteveFisch_qku6aw.jpg"
                 alt="A  man dressed in a blue shirt looks at a device, reflecting a moment of focus and attention."
                 caption="Karl Deisseroth, professor of bioengineering, 2017. In 2005, Deisseroth announced a novel way of activating individual genes in neurons using light. The technique, called optogenetics, allowed for new insights into animal behavior and the nervous system. He later developed a technique called CLARITY that revealed the brain’s structures in incredible detail. | Steve Fisch, Stanford School of Medicine."
               />
               <MediaCaptionImage
+                animation="slideUp"
                 rounded
-                className="mt-0 lg:rs-mt-8"
-                aspectRatio="3x4"
+                aspectRatio="4x3"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063591/Shenoy_MG_6677_eac9lg.jpg"
                 alt="A man in jeans and a shirt leans casually against a wall."
                 caption="Krishna Shenoy, professor of electrical engineering, 2012. Shenoy and his collaborators developed brain-computer interface technologies using implanted microchips and algorithms that interpreted neural signals. Their work led to advances enabling paralyzed people to move a computer cursor and, years later, to “type” with their thoughts. | Joel Simon/Shenoy Lab."
               />
             </TwoCol>
           </BgImageWrapper>
-          <OneCol>
-            <H2>A new dean</H2>
+          <OneCol className="rs-mb-4">
+            <H2 className="mt-0">A new dean</H2>
             <Text>
               In October 2013, Jim Plummer announced that he would step down as
               dean the following summer, ending the longest-serving tenure of
@@ -1003,17 +1009,16 @@ export default function page() {
             </Text>
           </OneCol>
           <MediaCaptionImage
-            isParallax
             rounded
             aspectRatio="8x5"
-            className="cc mx-auto w-full 2xl:max-w-850 rs-mb-5 2xl:p-0"
+            className="cc mx-auto w-full 2xl:max-w-850 rs-mb-4 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063585/bb752wg6044_oaptql.jpg"
             alt="Three men in suits standing side by side."
             caption="From left to right: James Gibbons, James Plummer, and John Hennessy at Plummer’s farewell party, 2014. Gibbons, Plummer, and Hennessy were each deans of Stanford Engineering. Plummer’s 14-year tenure was defined by achievements that expanded the scholarship of the school and created interdisciplinary connections with other schools. | Rod Searcey."
           />
-          <TwoCol>
+          <TwoCol className="rs-mb-6">
             <OneCol>
-              <Text variant="overview">
+              <Text>
                 The following summer, President Hennessy and Provost John
                 Etchemendy identified the next Frederick Emmons Terman Dean of
                 the School of Engineering, Persis Drell, a professor of physics
@@ -1045,12 +1050,12 @@ export default function page() {
                 the remarkable decade to come.
               </Text>
             </OneCol>
-            <StorySidebar hasLineArt>
+            <StorySidebar hasLineArt lineArtType="short">
               <MediaCaptionImage
                 rounded
                 isPortrait
                 aspectRatio="1x1"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063589/PC0139_Persis_Drell_2014-09-05_2866_m5xet1.jpg"
+                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751403113/Persis_Drell_square_wllame.jpg"
                 alt="A woman with gray hair wearing a black and white top, smiling softly against a neutral background."
                 caption="Persis Drell, 2014. Drell, a professor of physics and former director of SLAC National Accelerator Laboratory, followed James Plummer as dean of Stanford Engineering. | Saul Bromberger/Sandra Hoover."
               />
