@@ -18,7 +18,7 @@ export const storiesSource = {
   may29EventProgram: {
     chapter: "Event Program",
     heading: "Centennial Perspectives: AI and the Future of Computing",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
     href: internalLinks.may29EventProgram,
   },
   may29EventVideo: {
