@@ -61,7 +61,12 @@ export default function page() {
             <HorizontalLineart lineartType="A" />
           </div>
           <StoriesNav />
-          <StoryPosterCard hasBgImage bgColor="red" {...posterCardData1} />
+          <StoryPosterCard
+            className="rs-mb-5"
+            hasBgImage
+            bgColor="red"
+            {...posterCardData1}
+          />
           <StoryPosterCard
             hasBgImage
             bgColor="stone-dark"

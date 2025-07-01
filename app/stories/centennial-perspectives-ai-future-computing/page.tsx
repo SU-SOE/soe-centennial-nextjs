@@ -8,6 +8,7 @@ import { OneCol, TwoCol } from "@/components/Layout";
 import { EmbedMediaHero } from "@/components/EmbedVideoHero";
 import { H1 } from "@/components/Typography/Header";
 import { ExploreMore, StoryCard, StorySidebar } from "@/components/Story";
+import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title:
@@ -47,26 +48,9 @@ export const metadata: Metadata = {
 };
 
 const exploreStoriesData = [
-  {
-    heading: "“Preparing roads over which culture may ride in comfort”",
-    chapter: "Decade 1",
-    href: "/stories/preparing-roads-culture-may-ride-comfort",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1743098633/Spr25_SoE-Voltage_Black2_square_kgslwr.jpg",
-  },
-  {
-    superhead: "A Century of Innovation",
-    heading: "100 Years of Stanford Engineering",
-    href: "/stories/a-century-of-innovation",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    heading: "Letter from Dean Widom",
-    href: "/letter-from-dean-widom",
-    imageUrl:
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
-  },
+  storiesSource.decade1,
+  storiesSource.storyInnovation,
+  storiesSource.deanWidomLetter,
 ];
 
 export default function page() {
@@ -120,6 +104,7 @@ export default function page() {
             </OneCol>
             <StorySidebar>
               <StoryCard
+                bgColor="blue"
                 chapter="Past Event"
                 heading="Explore the Program"
                 body="Includes session titles and presenter names."
