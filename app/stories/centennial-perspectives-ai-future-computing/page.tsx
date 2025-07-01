@@ -87,9 +87,9 @@ export default function page() {
             autoplay
             isPreview
             previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1750884146/PerspectivesEvent_5.29.25_A136_O5A3240_repz7y.jpg"
-            title="Stanford Engineering at 100: Transformative Breakthroughs, Boundless Horizons"
+            title="Centennial Perspectives: AI and the Future of Computing"
             className="bg-cardinal-red-dark"
-            mediaUrl="https://www.youtube.com/embed/EVPcfyJWREY?si=Q1hkwbH5k7BHXBgs"
+            mediaUrl="https://www.youtube.com/embed/vKXdfHKhto0?si=NG8_wWsFYXXwQL4e"
           />
           <TwoCol className="rs-mt-5" isSidebar>
             <OneCol>
