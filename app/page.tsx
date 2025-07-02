@@ -46,24 +46,9 @@ export const metadata: Metadata = {
 };
 
 const exploreMoreData = [
-  {
-    chapter: "Video",
-    superhead: "Stanford Engineering at 100",
-    heading: "Transformative Breakthroughs, Boundless Horizons",
-    href: "/stories/stanford-engineering-100",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1747235639/SOE100_DOC_NoLogo-cropped_prv11s.png",
-  },
-  {
-    superhead: "A Century of Innovation",
-    heading: "100 Years of Stanford Engineering",
-    href: "/stories/a-century-of-innovation",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg",
-  },
-  {
-    heading: "Letter from Dean Widom",
-    href: "/letter-from-dean-widom",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1746202451/WelcomeDay_GroupPhoto_cropped_phbtkf.jpg",
-  },
+  storiesSource.may15EventVideo,
+  storiesSource.transformativeBreakthroughs,
+  storiesSource.storyInnovation,
 ];
 
 const events = [
@@ -230,21 +215,24 @@ export default function Home() {
                 </Text>
               </div>
             </AnimateInView>
+
             <StoryPosterCard
-              hasBgImage
-              bgColor="red"
               className="rs-mb-5"
-              chapter="Video"
-              heading="A once-in-a-century birthday celebration"
-              body="May 15, 2025"
-              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png"
-              href="/stories/a-once-in-a-century-birthday-celebration"
+              hasBgImage
+              widePreviewImage
+              bgColor="red"
+              {...storiesSource.may29EventVideo}
             />
             <ExploreMore
               isThreeCol
               stories={exploreMoreData}
-              className="py-0 m-0"
+              className="py-0 rs-mb-5"
               cardBgColor="white"
+            />
+            <StoryCard
+              isHorizontal
+              isHeadingLarge
+              {...storiesSource.deanWidomLetter}
             />
           </div>
         </Container>
