@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { ImageGallery } from "@/components/ImageGallery";
 import { Container } from "@/components/Container";
+import { TimelineCard } from "@/components/Timeline";
 
 export const metadata: Metadata = {
   title: "Designing for the future",
@@ -566,18 +567,15 @@ export default function page() {
           <div className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" />
           </div>
-          <TwoCol className="rs-my-5">
-            <div>
-              <MediaCaptionImage
-                rounded
-                isCaptionInset
-                aspectRatio="8x5"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063588/jennifer_widom_schv7f.jpg"
-                alt="A woman with short dark hair sits in front of a screen displaying 'Introduction to Databases' with a red database icon."
-                caption="Computer science professor and future dean Jennifer Widom, promoting one of the first massive online open courses (MOOCs), 2011. Her course on databases was one of three available for free worldwide. Over time, the program has grown to include hundreds of courses with millions of enrollees. | Stanford Engineering."
-              />
-            </div>
-            <OneCol>
+          <TwoCol className="rs-my-5" isSidebar leftSidebar>
+            <TimelineCard
+              className="p-0"
+              heading="Learn more about Jennifer Widom in the Timeline"
+              year="2011"
+              anchor="2011-leading-the-online-education-revolution-professor-jennifer-widom-launches-one-of-stanfords-first-moocs"
+              image="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265420/jennifer-widom_srdoc9.jpg"
+            />
+            <div className="max-w-800 mx-auto">
               <H2 className="mt-0">MOOC’s moment</H2>
               <Text>
                 In 2008, the School of Engineering began a bold experiment in
@@ -623,7 +621,7 @@ export default function page() {
                 company Udacity, which initially offered MOOCs and later shifted
                 to offer vocational courses for professionals.
               </Text>
-            </OneCol>
+            </div>
           </TwoCol>
           <BgImageWrapper bgColor="blue" isTwoCol>
             <MediaCaptionImage

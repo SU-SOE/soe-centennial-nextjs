@@ -22,6 +22,7 @@ import { cnb } from "cnbuilder";
 
 type ColProps = ContainerProps & {
   isSidebar?: boolean;
+  leftSidebar?: boolean;
   isNarrow?: boolean;
   bgColor?: BgColorType;
 };
@@ -30,6 +31,7 @@ export const TwoCol = ({
   children,
   className,
   isSidebar = false,
+  leftSidebar = false,
   isNarrow = false,
   ...props
 }: ColProps) => {
@@ -40,7 +42,8 @@ export const TwoCol = ({
         "flex flex-col lg:flex-row w-full gap-[7.6rem]",
         {
           "lg:*:w-1/2": !isSidebar,
-          "lg:*:even:max-w-2/3 lg:*:odd:max-w-1/3": isSidebar,
+          "lg:*:even:max-w-2/3 lg:*:odd:max-w-1/3": isSidebar && !leftSidebar,
+          "lg:*:odd:max-w-2/3 lg:*:event:max-w-1/3": isSidebar && leftSidebar,
           "xl:max-w-900 2xl:max-w-1300": isNarrow,
         },
         className,
