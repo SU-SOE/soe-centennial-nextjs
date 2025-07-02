@@ -70,6 +70,7 @@ export default function page() {
           />
           <StoryPosterCard
             hasBgImage
+            imageLeft
             bgColor="stone-dark"
             {...posterCardData2}
           />
