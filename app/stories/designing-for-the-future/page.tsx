@@ -570,13 +570,13 @@ export default function page() {
           <TwoCol className="rs-my-5" isSidebar leftSidebar>
             <TimelineCard
               wideImage
-              className="p-0"
+              className="p-0 mx-auto lg:m-0"
               heading="Learn more about Jennifer Widom in the Timeline"
               year="2011"
               anchor="2011-leading-the-online-education-revolution-professor-jennifer-widom-launches-one-of-stanfords-first-moocs"
               image="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063588/jennifer_widom_schv7f.jpg"
             />
-            <div className="max-w-800 mx-auto">
+            <div className="max-w-850 mx-auto">
               <H2 className="mt-0">MOOC’s moment</H2>
               <Text>
                 In 2008, the School of Engineering began a bold experiment in
