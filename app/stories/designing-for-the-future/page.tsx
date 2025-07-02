@@ -209,40 +209,40 @@ const footnotesList = [
   {
     number: 17,
     id: "footnote17",
-    text: "Eric Messinger, “Blending Arts, Engineering,” Stanford Daily, January 22, 2010, 2.",
-    sourceLink:
-      "https://archives.stanforddaily.com/2010/01/22?page=2§ion=MODSMD_ARTICLE7#article",
-  },
-  {
-    number: 18,
-    id: "footnote18",
-    text: "“Huang Center Dedicated, Lauded as Stanford’s Engineering Anchor,” Stanford Engineering.",
-    sourceLink:
-      "https://engineering.stanford.edu/news/huang-center-dedicated-lauded-stanfords-engineering-anchor",
-  },
-  {
-    number: 19,
-    id: "footnote19",
     text: "Transcript: “An Evening with Morris Chang in conversation with Jen-Hsun Huang,” October 17, 2007, Computer History Museum, Mountain View, California.",
     sourceLink:
       "https://archive.computerhistory.org/resources/access/text/2012/05/102658254-05-01-acc.pdf",
   },
   {
-    number: 20,
-    id: "footnote20",
+    number: 18,
+    id: "footnote18",
     text: "Video: “Stanford Engineering Hero Lecture: Morris Chang in conversation with President John L. Hennessy.",
     sourceLink: "https://youtu.be/wEh3ZgbvBrE?si=TsoXJEzYskJQUvaa&t=313",
   },
   {
-    number: 21,
-    id: "footnote21",
+    number: 19,
+    id: "footnote19",
     text: "Artist-rendered timeline of the collaboration and friendship between Morris Chang and Jensen Huang, displayed in Morris and Sophie Chang’s office in Taipei.",
     sourceLink: "",
   },
   {
+    number: 20,
+    id: "footnote20",
+    text: "“Huang center dedicated, lauded as Stanford’s engineering anchor,” Stanford Engineering, October 2015.",
+    sourceLink:
+      "https://engineering.stanford.edu/news/huang-center-dedicated-lauded-stanfords-engineering-anchor",
+  },
+  {
+    number: 21,
+    id: "footnote21",
+    text: "Eric Messinger, “Blending Arts, Engineering,” Stanford Daily, January 22, 2010, 2.",
+    sourceLink:
+      "https://archives.stanforddaily.com/2010/01/22?page=2§ion=MODSMD_ARTICLE7#article",
+  },
+  {
     number: 22,
     id: "footnote22",
-    text: "“Huang center dedicated, lauded as Stanford’s engineering anchor,” Stanford Engineering, October 2015.",
+    text: "“Huang Center Dedicated, Lauded as Stanford’s Engineering Anchor,” Stanford Engineering.",
     sourceLink:
       "https://engineering.stanford.edu/news/huang-center-dedicated-lauded-stanfords-engineering-anchor",
   },
@@ -742,7 +742,7 @@ export default function page() {
             <ScrollyBubble>
               <Text>
                 Huang had phoned TSMC in 1993,{" "}
-                <Footnotes footnoteRefs={[{ id: "footnote19", number: 19 }]} />{" "}
+                <Footnotes footnoteRefs={[{ id: "footnote17", number: 17 }]} />{" "}
                 when his small, “fabless” company was looking to outsource
                 manufacturing to an established “fab.” But the connection was
                 made only after Huang personally wrote to Chang a few years
@@ -754,7 +754,7 @@ export default function page() {
                 What struck Huang when he first visited Chang at TSMC was that,
                 instead of emphasizing the company’s capabilities—which were
                 many—Chang focused on two core values: trust and integrity.{" "}
-                <Footnotes footnoteRefs={[{ id: "footnote20", number: 20 }]} />
+                <Footnotes footnoteRefs={[{ id: "footnote18", number: 18 }]} />
               </Text>
               <Text>
                 As the two men grew to know each other over the years, their
@@ -769,7 +769,7 @@ export default function page() {
                 In 2001, Huang’s gift to Chang on his seventieth birthday
                 described the TSMC founder as “a wise explorer, discovering a
                 path forward, leading the way.”{" "}
-                <Footnotes footnoteRefs={[{ id: "footnote21", number: 21 }]} />{" "}
+                <Footnotes footnoteRefs={[{ id: "footnote19", number: 19 }]} />{" "}
                 Chang had dinner at the Huang family home, and later, Huang
                 celebrated his fiftieth birthday with Chang and Sophie at their
                 home in Taiwan. As a gift, Huang was invited to select from a
@@ -783,7 +783,7 @@ export default function page() {
                 Auditorium in the Jen-Hsun Huang Engineering Center— the new
                 headquarters for the School of Engineering made possible by a
                 generous gift from Jensen and Lori Huang.{" "}
-                <Footnotes footnoteRefs={[{ id: "footnote22", number: 22 }]} />
+                <Footnotes footnoteRefs={[{ id: "footnote20", number: 20 }]} />
               </Text>
               <Text>
                 More recently, when it was time for an upgrade of the Stanford
@@ -792,7 +792,7 @@ export default function page() {
                 on-site scientific collaborators helped to ensure that the
                 facility would remain at the forefront of chip research and
                 innovation.{" "}
-                <Footnotes footnoteRefs={[{ id: "footnote23", number: 23 }]} />
+                <Footnotes footnoteRefs={[{ id: "footnote21", number: 21 }]} />
               </Text>
               <Text>
                 In an artist-rendered timeline of their collaboration and
@@ -826,7 +826,7 @@ export default function page() {
               artist’s breadth and taste. This combination of tradition and
               innovation would be necessary for Stanford to remain a top
               engineering program.{" "}
-              <Footnotes footnoteRefs={[{ id: "footnote17", number: 17 }]} />
+              <Footnotes footnoteRefs={[{ id: "footnote22", number: 22 }]} />
             </Text>
             <Text>
               Speaking at the Huang Building dedication later that year, Plummer
@@ -835,7 +835,7 @@ export default function page() {
               can excel in areas including teamwork, communications,
               entrepreneurship and design. They also must be able to navigate in
               a global economy and across cultures.”{" "}
-              <Footnotes footnoteRefs={[{ id: "footnote18", number: 18 }]} />
+              <Footnotes footnoteRefs={[{ id: "footnote23", number: 23 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start">
