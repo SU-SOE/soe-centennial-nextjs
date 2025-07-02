@@ -569,11 +569,12 @@ export default function page() {
           </div>
           <TwoCol className="rs-my-5" isSidebar leftSidebar>
             <TimelineCard
+              wideImage
               className="p-0"
               heading="Learn more about Jennifer Widom in the Timeline"
               year="2011"
               anchor="2011-leading-the-online-education-revolution-professor-jennifer-widom-launches-one-of-stanfords-first-moocs"
-              image="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265420/jennifer-widom_srdoc9.jpg"
+              image="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063588/jennifer_widom_schv7f.jpg"
             />
             <div className="max-w-800 mx-auto">
               <H2 className="mt-0">MOOC’s moment</H2>

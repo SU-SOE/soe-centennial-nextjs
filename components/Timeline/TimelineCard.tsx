@@ -8,6 +8,10 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "@/components/Cta/Link";
 import { AnimateInView } from "@/components/Animate";
 
+export type CardProps = types.TimelineCardProps & {
+  wideImage?: boolean;
+};
+
 export const TimelineCard = ({
   heading,
   year,
@@ -21,8 +25,9 @@ export const TimelineCard = ({
   align = "left",
   uuid,
   className,
+  wideImage = false,
   ...props
-}: types.TimelineCardProps) => {
+}: CardProps) => {
   return (
     <AnimateInView {...props}>
       <div
@@ -76,8 +81,9 @@ export const TimelineCard = ({
                 src={image}
                 alt={alt}
                 trapezoidAngle={align}
-                size={"large"}
+                size="large"
                 className="relative z-10"
+                imageClasses={wideImage ? "aspect-[8/5]" : ""}
               />
             </div>
           )}
