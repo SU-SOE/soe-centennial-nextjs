@@ -72,18 +72,18 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751063590/rb514kc0656_yj7qgh.jpg",
-    alt: "Aerial view of Stanford University's campus, showcasing its iconic architecture and lush green surroundings.",
-    caption:
-      "Aerial view of campus facing east, 2011. The new Science and Engineering Quad is visible on the left, with the final building still under construction. Then known as Building 4, that building would later become the Shriram Center for Bioengineering and Chemical Engineering. | Linda A. Cicero/Stanford News Service.",
-  },
-  {
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751063591/vr758kf1949_nxkxjb.jpg",
     alt: "A group of people strolls through a courtyard in front of a building.",
     caption:
       "Exterior and interior views of the Shriram Center for Bioengineering and Chemical Engineering, named after a gift from university trustee Kavitark “Ram” Shriram and his wife, Vidjealatchoumy “Vijay” Shriram. Opening in 2014, the Shriram Building completed the final phase of the new Science and Engineering Quad. Its 208,000 square feet house the Departments of Chemical Engineering and Bioengineering, along with teaching space and labs. | Tim Maloney/School of Engineering.",
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751063587/fz107qj0976_wllrv9.jpg",
+    alt: "A walkway lined with tall palm trees on both sides, flanked by modern buildings. People walk along the path under a clear blue sky.",
+    caption:
+      "The palm-lined pathway into the new Science and Engineering Quad, with a distant view of the arched entry to the main quad. The SEQ was designed to align with the original plan for university construction and to maintain architectural consistency across campus buildings. | Stanford Engineering.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751063591/vr758kf1949_nxkxjb.jpg",
     alt: "A panoramic view of the Jen-Hsun Huang Engineering Center on Stanford University campus, showcasing its modern architecture and vibrant green spaces.",
     caption:
       "Exterior view of the Jen-Hsun Huang Engineering Center. The Huang Center opened in 2010 as the administrative headquarters for the School of Engineering. Its 130,000 square feet contain the dean’s suite, offices, classrooms, a conference center, a library, and a café. It also exhibits displays of major Stanford Engineering milestones, including the original Yahoo! servers. | Tim Griffith/School of Engineering.",
