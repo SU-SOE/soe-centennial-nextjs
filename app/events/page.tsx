@@ -85,7 +85,7 @@ export default function page() {
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"
-                headerTag="h2"
+                headerTag="h3"
               />
             </div>
           </Container>
