@@ -18,7 +18,8 @@ export const storiesSource = {
   may29EventProgram: {
     chapter: "Event Program",
     heading: "Centennial Perspectives: AI and the Future of Computing",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
+    body: "May 29, 2025",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
     href: internalLinks.may29EventProgram,
   },
   may15EventVideo: {
@@ -26,6 +27,7 @@ export const storiesSource = {
     heading: "A once-in-a-century birthday celebration",
     body: "May 15, 2025",
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888036/100thCentennial_Cake_square_l5udmt.jpg",
+    alt: "Four-tier white cake with 'Stanford School of Engineering' written in frosting on the side and candles shaped like the number 100 on top.",
     href: internalLinks.may15EventVideo,
   },
   sizzleReel: {

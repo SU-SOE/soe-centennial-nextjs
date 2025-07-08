@@ -15,7 +15,7 @@ export const StoriesNav = () => {
   const pathname = usePathname();
   return (
     <nav
-      aria-label="stories-nav"
+      aria-label="Stories Menu"
       className="cc lg:p-0 lg:w-full mx-auto lg:max-w-800 flex flex-wrap lg:flex-row gap-10 lg:gap-26 items-center justify-center lg:justify-between rs-mb-5"
     >
       <Text mb="0">View</Text>
