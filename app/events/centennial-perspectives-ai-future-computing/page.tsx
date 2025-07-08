@@ -11,7 +11,7 @@ import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   title:
-    "Event Ended: Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+    "Past Event: Centennial Perspectives | 100 Years of Stanford Engineering",
   description:
     "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Event Ended: Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+      "Past Event: Centennial Perspectives | 100 Years of Stanford Engineering",
     description:
       "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Event Ended: Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+      "Past Event: Centennial Perspectives | 100 Years of Stanford Engineering",
     description:
       "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
