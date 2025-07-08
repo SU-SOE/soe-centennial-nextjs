@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   },
 };
 
-const posterCardData1 = storiesSource.may15EventVideo;
+const posterCardData1 = storiesSource.may29EventVideo;
+const posterCardData2 = storiesSource.may15EventVideo;
 
 const storyData1 = [storiesSource.may29EventProgram];
 
@@ -60,7 +61,19 @@ export default function page() {
             <HorizontalLineart lineartType="A" />
           </div>
           <StoriesNav />
-          <StoryPosterCard hasBgImage bgColor="red" {...posterCardData1} />
+          <StoryPosterCard
+            className="rs-mb-5"
+            hasBgImage
+            widePreviewImage
+            bgColor="red"
+            {...posterCardData1}
+          />
+          <StoryPosterCard
+            hasBgImage
+            imageLeft
+            bgColor="stone-dark"
+            {...posterCardData2}
+          />
           <div aria-hidden="true" className="flex w-full justify-end">
             <HorizontalLineart lineartType="B" className="rs-pt-6" />
           </div>

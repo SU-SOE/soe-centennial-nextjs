@@ -18,6 +18,7 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: BgColorType;
   caption?: string;
   hasBgImage?: boolean;
+  imageLeft?: boolean;
   isNarrow?: boolean;
   widePreviewImage?: boolean;
   src: string;
@@ -36,6 +37,7 @@ export const StoryPosterCard = ({
   bgColor = "stone-dark",
   caption,
   hasBgImage = false,
+  imageLeft = false,
   widePreviewImage = false,
   isNarrow = false,
   src,
@@ -134,6 +136,7 @@ export const StoryPosterCard = ({
                 widePreviewImage,
               "lg:max-w-[17.5rem] lg:max-w-[26rem] xl:max-w-320 2xl:max-w-350":
                 !widePreviewImage,
+              "lg:order-first": imageLeft,
             })}
           >
             <div
