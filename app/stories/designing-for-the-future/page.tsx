@@ -24,7 +24,7 @@ import { Container } from "@/components/Container";
 import { TimelineCard } from "@/components/Timeline";
 
 export const metadata: Metadata = {
-  title: "Designing for the future",
+  title: "Designing for the future | 100 Years of Stanford Engineering",
   description:
     "The fall of 2005 brought a new program to the school and university: the cross-disciplinary Hasso Plattner Institute of Design, dubbed the d.school. The institute embodied Stanford Engineering’s collaborative spirit as it welcomed students from across the university to participate in its innovative offerings. The d.school institutionalized the concept of “design thinking,” championed by world-renowned industrial designer and School of Engineering alumnus and professor of mechanical engineering David Kelley (MS ’78), who became the d.school’s first director.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Innovation",
   ],
   openGraph: {
-    title: "Designing for the future",
+    title: "Designing for the future | 100 Years of Stanford Engineering",
     description:
       "The fall of 2005 brought a new program to the school and university: the cross-disciplinary Hasso Plattner Institute of Design, dubbed the d.school. The institute embodied Stanford Engineering’s collaborative spirit as it welcomed students from across the university to participate in its innovative offerings. The d.school institutionalized the concept of “design thinking,” championed by world-renowned industrial designer and School of Engineering alumnus and professor of mechanical engineering David Kelley (MS ’78), who became the d.school’s first director.",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Designing for the future",
+    title: "Designing for the future | 100 Years of Stanford Engineering",
     description:
       "The fall of 2005 brought a new program to the school and university: the cross-disciplinary Hasso Plattner Institute of Design, dubbed the d.school, which embodied Stanford Engineering’s collaborative spirit and institutionalized the concept of “design thinking.”",
     images: [
