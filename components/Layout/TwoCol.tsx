@@ -39,7 +39,7 @@ export const TwoCol = ({
     <Container
       {...props}
       className={cnb(
-        "flex flex-col lg:flex-row w-full gap-[7.6rem]",
+        "flex flex-col lg:flex-row w-full gap-[7.6rem] justify-center",
         {
           "lg:*:w-1/2": !isSidebar,
           "lg:*:even:max-w-2/3 lg:*:odd:max-w-1/3": isSidebar && !leftSidebar,

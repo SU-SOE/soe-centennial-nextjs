@@ -84,7 +84,12 @@ export const StoryPosterCard = ({
           alignItems="center"
           className="flex flex-col justify-between lg:flex-row z-50 relative grid-gap w-full 2xl:mx-auto 2xl:max-w-1300"
         >
-          <div className="flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100">
+          <div
+            className={cnb(
+              "flex flex-col text-left [&_p]:max-w-800 [&_h*]:max-w-1100",
+              { grow: imageLeft },
+            )}
+          >
             <AnimateInView animation="slideUp" delay={0.5}>
               <Heading size="f4" weight="normal" mb="0">
                 <Link

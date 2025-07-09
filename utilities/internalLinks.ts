@@ -23,4 +23,5 @@ export const internalLinks = {
   decade7: "/stories/redevelopment-and-an-earthquake",
   decade8: "/stories/the-future-firmly-in-sight",
   decade9: "/stories/designing-for-the-future",
+  decade10: "/stories/defining-the-next-era",
 } as const;
