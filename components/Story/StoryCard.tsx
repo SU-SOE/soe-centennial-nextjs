@@ -23,7 +23,7 @@ export type StoryCardProps = HTMLAttributes<HTMLElement> &
     headerTag?: "h2" | "h3";
     isHeadingLarge?: boolean;
     bgColor?: BgColorType;
-    src: string;
+    src?: string;
     alt?: string;
     isHorizontal?: boolean;
   };

@@ -45,9 +45,13 @@ export const metadata: Metadata = {
   },
 };
 
-const posterCardData1 = storiesSource.transformativeBreakthroughs;
+const posterCardData1 = storiesSource.may29EventVideo;
 
-const storyData1 = [storiesSource.may15EventVideo, storiesSource.sizzleReel];
+const storyData1 = [
+  storiesSource.transformativeBreakthroughs,
+  storiesSource.may15EventVideo,
+  storiesSource.sizzleReel,
+];
 
 export default function page() {
   return (
@@ -66,13 +70,14 @@ export default function page() {
             <li>
               <StoryPosterCard
                 hasBgImage
-                bgColor="stone-dark"
+                bgColor="red"
                 widePreviewImage
                 {...posterCardData1}
               />
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
+                isThreeCol
                 stories={storyData1}
                 className="py-0"
                 cardBgColor="white"

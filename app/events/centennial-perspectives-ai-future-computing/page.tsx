@@ -11,9 +11,9 @@ import { AnimatedPosterCard } from "@/components/AnimatedHero";
 
 export const metadata: Metadata = {
   title:
-    "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+    "Past Event: Centennial Perspectives | 100 Years of Stanford Engineering",
   description:
-    "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+    "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
   keywords: [
     "Stanford Engineering",
     "Centennial Story",
@@ -21,27 +21,28 @@ export const metadata: Metadata = {
     "Engineering Legacy",
     "Innovative Research",
     "Speaker Series",
+    "Event Ended",
   ],
   openGraph: {
     title:
-      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+      "Past Event: Centennial Perspectives | 100 Years of Stanford Engineering",
     description:
-      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+      "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
-        alt: "A man in a black leather jacket sits on a chair next to a small table with flowers, in front of a sign that reads Stanford University.",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
+        alt: "A woman speaks at a podium during an event titled 'Centennial Perspectives: AI and the Future of Computing' at Stanford Engineering. A red banner with 'The Persistence' is visible in the background.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Centennial Perspectives: AI and the Future of Computing | 100 Years of Stanford Engineering",
+      "Past Event: Centennial Perspectives | 100 Years of Stanford Engineering",
     description:
-      "As part of Stanford Engineering’s centennial celebration, Centennial Perspectives is a speaker series that highlights innovative research and its impact on society.",
+      "The Centennial Perspectives series concluded as part of Stanford Engineering’s centennial celebration, highlighting innovative research and its impact on society.",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
     ],
   },
 };
