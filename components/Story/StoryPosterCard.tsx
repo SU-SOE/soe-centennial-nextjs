@@ -18,6 +18,7 @@ type StoryPosterCardProps = HTMLAttributes<HTMLDivElement> & {
   bgColor?: BgColorType;
   caption?: string;
   hasBgImage?: boolean;
+  imageLeft?: boolean;
   isNarrow?: boolean;
   widePreviewImage?: boolean;
   src: string;
@@ -36,6 +37,7 @@ export const StoryPosterCard = ({
   bgColor = "stone-dark",
   caption,
   hasBgImage = false,
+  imageLeft = false,
   widePreviewImage = false,
   isNarrow = false,
   src,
@@ -129,11 +131,13 @@ export const StoryPosterCard = ({
           <AnimateInView
             animation="slideUp"
             delay={0.5}
-            className={cnb("order-first lg:order-last w-full ", {
+            className={cnb("order-first w-full ", {
               "lg:max-w-200 lg:max-w-350 xl:max-w-450 2xl:max-w-500":
                 widePreviewImage,
               "lg:max-w-[17.5rem] lg:max-w-[26rem] xl:max-w-320 2xl:max-w-350":
                 !widePreviewImage,
+              "lg:order-last": !imageLeft,
+              "lg:order-first": imageLeft,
             })}
           >
             <div

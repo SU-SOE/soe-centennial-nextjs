@@ -18,8 +18,16 @@ export const storiesSource = {
   may29EventProgram: {
     chapter: "Event Program",
     heading: "Centennial Perspectives: AI and the Future of Computing",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888021/Program-card_Image_ekohdp.jpg",
+    body: "May 29, 2025",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
     href: internalLinks.may29EventProgram,
+  },
+  may29EventVideo: {
+    chapter: "Video",
+    heading: "Centennial Perspectives: AI and the Future of Computing",
+    body: "May 29, 2025",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750888038/Henessy_and_Jenson_square_oj9w3v.jpg",
+    href: internalLinks.may29EventVideo,
   },
   may15EventVideo: {
     chapter: "Video",
