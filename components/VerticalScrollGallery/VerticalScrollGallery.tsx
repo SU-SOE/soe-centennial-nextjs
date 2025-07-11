@@ -17,7 +17,7 @@ type GalleryImage = {
   src: string;
   alt: string;
   caption?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 type VerticalScrollGalleryProps = {
@@ -184,16 +184,16 @@ export const VerticalScrollGallery = ({
         {galleryImages.map((item, key) => (
           <div
             key={key}
-            className="relative overflow-clip w-full flex flex-col lg:flex-row bg-fog-light"
+            className="relative overflow-clip w-full flex flex-col xl:flex-row bg-fog-light"
           >
-            <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight lg:w-1/3 flex flex-col justify-center items-center">
+            <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center items-center">
               {item.children}
             </div>
             <ImageSlide
               src={item.src}
               alt={item.alt}
               caption={item.caption}
-              className="w-full lg:w-2/3 lg:sticky lg:top-0 lg:h-screen"
+              className="w-full order-first xl:order-last xl:w-2/3 xl:sticky xl:top-0 xl:h-screen"
             />
           </div>
         ))}
@@ -202,34 +202,35 @@ export const VerticalScrollGallery = ({
   }
 
   return (
-    <div ref={containerRef} className="w-full relative">
-      {galleryImages.map((item, key) => (
-        <div
-          key={key}
-          className="relative w-full flex flex-row bg-fog-light"
-          style={{ minHeight: "100vh" }}
-        >
+    <div
+      ref={containerRef}
+      className="relative w-full flex flex-col xl:flex-row bg-fog-light"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="flex flex-col w-full xl:w-1/3">
+        {galleryImages.map((item, key) => (
           <div
-            className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight lg:w-1/3 flex flex-col rs-pt-7"
+            key={key}
+            className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight flex flex-col rs-pt-7"
             data-content-section
           >
             {item.children}
           </div>
+        ))}
+      </div>
 
-          <div className="fixed top-0 right-0 lg:w-2/3 h-screen pointer-events-none">
-            {contentLengths.length > 0 &&
-              galleryImages.map((item, key) => (
-                <GalleryImage
-                  key={key}
-                  item={item}
-                  index={key}
-                  contentLengths={contentLengths}
-                  scrollYProgress={scrollYProgress}
-                />
-              ))}
-          </div>
-        </div>
-      ))}
+      <div className="sticky top-0 right-0 w-full h-screen pointer-events-none">
+        {contentLengths.length > 0 &&
+          galleryImages.map((item, key) => (
+            <GalleryImage
+              key={key}
+              item={item}
+              index={key}
+              contentLengths={contentLengths}
+              scrollYProgress={scrollYProgress}
+            />
+          ))}
+      </div>
     </div>
   );
 };

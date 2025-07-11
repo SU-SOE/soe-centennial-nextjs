@@ -16,6 +16,7 @@ import { AnimateInView } from "@/components/Animate";
 import { ExploreMore } from "@/components/Story/ExploreMore";
 import { Metadata } from "next";
 import { TimelineCard } from "@/components/Timeline";
+import { Quote } from "@/components/Quote";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -54,7 +55,7 @@ const ExampleStoryPage = async () => {
         "Aerial view of campus facing east, 2011. The new Science and Engineering Quad is visible on the left, with the final building still under construction. Then known as Building 4, that building would later become the Shriram Center for Bioengineering and Chemical Engineering. | Linda A. Cicero/Stanford News Service.",
       children: (
         <>
-          <H2>A new quad takes shape</H2>
+          <H2 className="mt-0">A new quad takes shape</H2>
           <Text>
             In the early 2000s, after the new buildings of the Near West Campus
             project had opened in 1999, a new project broke ground to complete
@@ -86,9 +87,10 @@ const ExampleStoryPage = async () => {
       children: (
         <>
           <TimelineCard
+            className="p-0"
             heading="Sustainable innovation hub: The Jerry Yang and Akiko Yamazaki Environment and Energy Building (Y2E2) opens its doors to tackle climate change"
             year="2008"
-            anchor=""
+            anchor="2008-sustainable-innovation-hub-the-jerry-yang-and-akiko-yamazaki-environment-and-energy-building-y2e2-opens-its-doors-to-tackle-climate-challenge"
           />
           <Text>
             In early 2008, this new era for the School of Engineering commenced
@@ -114,12 +116,116 @@ const ExampleStoryPage = async () => {
       alt: "An exterior view of the James and Anna Marie Spilker Engineering and Applied Science Building on Stanford University campus, showcasing its gorgeous architecture with a vibriant blue sky.",
       caption:
         "Exterior view of the James and Anna Marie Spilker Engineering and Applied Science Building. Opening in 2010, the 100,000-square-foot Spilker Building was the second of the four Science and Engineering Quad buildings to be completed. When it opened, it housed the independent E. L. Ginzton Laboratory, offices for the Department of Applied Physics, and nanoscale facilities. | Joel Simon/Stanford Engineering.",
+      children: (
+        <>
+          <TimelineCard
+            className="p-0"
+            heading="Engineering excellence: Unveiling the James and Anna Marie Spilker Building—a hub for applied science and innovation"
+            year="2010"
+            anchor="2010-engineering-excellence-unveiling-the-james-and-anna-marie-spilker-buildinga-hub-for-applied-science-and-innovation"
+          />
+          <Text>
+            Next up was the James and Anna Marie Spilker Engineering and Applied
+            Science Building, which opened in September 2010. James Spilker, a
+            consulting professor at Stanford and a principal contributor to the
+            original Global Positioning System (GPS), had pioneered work in
+            signal design to enable precise tracking of satellites, which had a
+            profound impact on communications and technology. His wife, Anna
+            Marie, was an economist and Bay Area real estate investor. The
+            Spilker Building became a noted center for nanoscale science and
+            engineering. The following month, the Jen-Hsun Huang Engineering
+            Center was dedicated as well. The Science and Engineering Quad was
+            now three-quarters complete.
+          </Text>
+        </>
+      ),
     },
     {
       src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742265221/vr758kf1949_nv217v.jpg",
       alt: "A panoramic view of the Jen-Hsun Huang Engineering Center on Stanford University campus, showcasing its modern architecture and vibrant green spaces.",
       caption:
         "Exterior view of the Jen-Hsun Huang Engineering Center. The Huang Center opened in 2010 as the administrative headquarters for the School of Engineering. Its 130,000 square feet contain the dean’s suite, offices, classrooms, a conference center, a library, and a café. It also exhibits displays of major Stanford Engineering milestones, including the original Yahoo! servers. | Tim Griffith/School of Engineering.",
+      children: (
+        <>
+          <TimelineCard
+            className="p-0"
+            heading="Engineering leadership: The Jen-Hsun Huang Engineering Center opens as a hub for innovation and collaboration at Stanford"
+            year="2010"
+            anchor="2010-engineering-leadership-the-jen-hsun-huang-engineering-center-opens-as-a-hub-for-innovation-and-collaboration-at-stanford"
+          />
+          <Text>
+            The Huang Center, boasting 130,000 square feet, became the
+            headquarters of Stanford Engineering, home to the dean’s suite,
+            offices, classrooms, a conference center, machine shops, a café, and
+            the new Frederick Emmons Terman Engineering Library. The Huang
+            Center was named for alumnus and Nvidia cofounder Jen-Hsun “Jensen”
+            Huang (MS ’92 electrical engineering), who, with his wife, Lori,
+            pledged the $30 million gift that made the building possible.
+          </Text>
+          <Text>
+            “To build a better future we must invest in tomorrow’s innovators,”
+            Huang said. “There is no better place to do this than Stanford. . .
+            . I hope that students will find inspiration here, and that Stanford
+            will be as important in shaping their lives as it has been in mine.”
+            (5)
+          </Text>
+          <Quote
+            className="rs-mb-4"
+            quoteColor="red"
+            teaser="I hope that students will find inspiration here, and that Stanford will be as important in shaping their lives as it has been in mine."
+            source="— Jen-Hsun Huang (5)"
+          />
+          <Text>
+            In tribute to that history, the Huang Center included several
+            memorial “Engineering Touchstones” throughout: the original servers
+            that Yahoo! founders Jerry Yang (who became chair of Stanford
+            University’s Board of Trustees in 2021) and David Filo had used to
+            categorize Web pages; toy-block-framed servers assembled by Google
+            founders Sergey Brin and Larry Page to index the Internet; copies of
+            Donald Knuth’s seminal book series The Art of Computer Programming;
+            models of Perry McCarty’s anaerobic bioreactor; early examples of
+            nanocharacterization; and an artful display of many of the
+            hand-carved wooden propellers William Durand had used to test
+            designs.
+          </Text>
+        </>
+      ),
+    },
+    {
+      src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742266772/rb514kc0656_koxjid.jpg",
+      alt: "A group of people strolls through a courtyard in front of a building.",
+      caption:
+        "Exterior and interior views of the Shriram Center for Bioengineering and Chemical Engineering, named after a gift from university trustee Kavitark “Ram” Shriram and his wife, Vidjealatchoumy “Vijay” Shriram. Opening in 2014, the Shriram Building completed the final phase of the new Science and Engineering Quad. Its 208,000 square feet house the Departments of Chemical Engineering and Bioengineering, along with teaching space and labs. | Tim Maloney/School of Engineering.",
+      children: (
+        <>
+          <TimelineCard
+            className="p-0"
+            heading="Scientific advancement: The Shriram Center for Bioengineering and Chemical Engineering opens its doors, completing Stanford’s Science and Engineering Quad"
+            year="2014"
+            anchor="2014-scientific-advancement-the-shriram-center-for-bioengineering-and-chemical-engineering-opens-its-doors-completing-stanfords-science-and-engineering-quad"
+          />
+          <Text>
+            The fourth and final building, the Shriram Center for Bioengineering
+            and Chemical Engineering, opened its doors in 2014. It bore the
+            names of university trustee Kavitark “Ram” Shriram and his wife,
+            Vidjealatchoumy “Vijay” Shriram, who made a $61 million gift in
+            support of the project. At more than 208,000 square feet of space,
+            the Shriram Center was the largest of the four structures in the
+            Science and Engineering Quad. The building provided a consolidated
+            home for the Departments of Chemical Engineering and Bioengineering,
+            which had been previously spread among several buildings on campus.
+          </Text>
+          <Text>
+            “One of the major trends in bioengineering . . . has been the move
+            toward molecular-level engineering,” said Russ Altman, professor and
+            then-chair of bioengineering. “Our colleagues in chemical
+            engineering have been thinking at this level for several decades, so
+            the interface between chemical engineering and biological
+            engineering will create opportunities at the biochemical engineering
+            and chemical biology frontier that should be very exciting.” (6)
+          </Text>
+        </>
+      ),
     },
   ];
 
