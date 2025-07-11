@@ -486,7 +486,7 @@ export default function page() {
             className="cc mx-auto w-full 2xl:max-w-850 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294122/russ_altman_qrzz8a.jpg"
             alt="A man with glasses and headphones speaks enthusiastically into a microphone."
-            caption="Russ Altman, professor of bioengineering and of genetics, recording <em>The Future of Everything</em>, 2018. Launched as a SiriusXM radio show in 2017, it later became a podcast, and transitioned to Stanford Engineering in 2022. In 2024, it surpassed 250 episodes. The show explores how the research and technological advances of today will lead to the innovations of tomorrow. Altman has interviewed faculty from across the university about their research. | Amanda Law/School of Engineering."
+            caption="Russ Altman, professor of bioengineering and of genetics, recording The Future of Everything, 2018. Launched as a SiriusXM radio show in 2017, it later became a podcast, and transitioned to Stanford Engineering in 2022. In 2024, it surpassed 250 episodes. The show explores how the research and technological advances of today will lead to the innovations of tomorrow. Altman has interviewed faculty from across the university about their research. | Amanda Law/School of Engineering."
           />
           <OneCol>
             <Text>
@@ -986,7 +986,7 @@ export default function page() {
                 aspectRatio="4x3"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294117/oceanonek-inspect_copy_tsppjz.jpg"
                 alt="A scuba diver extends a fist to an orange underwater robot."
-                caption="A human diver with Ocean One, a humanoid robot designed by Oussama Khatib, professor of computer science, 2016. Ocean One is fitted with pressure sensors on each hand that provide a human pilot with a sense of touch. The robot successfully retrieved artifacts from the wreck of <em>La Lune</em>, the flagship of King Louis XIV. "
+                caption="A human diver with Ocean One, a humanoid robot designed by Oussama Khatib, professor of computer science, 2016. Ocean One is fitted with pressure sensors on each hand that provide a human pilot with a sense of touch. The robot successfully retrieved artifacts from the wreck of La Lune, the flagship of King Louis XIV. "
               />
               <MediaCaptionImage
                 animation="slideUp"
@@ -996,6 +996,7 @@ export default function page() {
                 aspectRatio="4x3"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294113/crispi-camera-deck_alesqg.jpg"
                 alt="An orange robot diver uses equipment to examine the interior of a rusted, coral-encrusted shipwreck underwater, with fish and marine life visible around the structure."
+                caption="Ocean One exploring La Lune, which sank in the Mediterranean Ocean off the coast of France. | Frederic Osada/DRASSM/Stanford."
               />
             </TwoCol>
           </BgImageWrapper>
@@ -1081,7 +1082,7 @@ export default function page() {
               initiative, and undergraduate programs in computer science, data
               science, and symbolic systems, which together comprised 25 percent
               of undergraduate majors.{" "}
-              <Footnotes footnoteRefs={[{ id: "footnote25", number: 25 }]} />
+              <Footnotes footnoteRefs={[{ id: "footnote26", number: 26 }]} />
             </Text>
           </OneCol>
           <div className="flex w-full justify-start rs-mb-3">
@@ -1140,15 +1141,6 @@ export default function page() {
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294123/WelcomeDay_GroupPhotos_9.26.24_01_O5A0256_msl1am.jpg"
               alt="A diverse group of smiling individuals wearing red Stanford Engineering T-shirts wave at the camera."
               caption="Dean Jennifer Widom, center, with new graduate students at the Dean’s Welcome event, September 2024. | Saul Bromberger/Stanford Engineering."
-            />
-            <MediaCaptionImage
-              rounded
-              isCaptionInset
-              aspectRatio="3x4"
-              className="max-w-450 mt-0 lg:rs-mt-7"
-              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294117/mechanical_engineering_student_ffw3wz.jpg"
-              alt="Researcher in a lab coat works intently on electronic components at a cluttered desk."
-              caption="Mechanical Engineering student, 1970. | Stanford News Service."
             />
           </TwoCol>
           <Container pt={4} pb={7} bgColor="blue">
