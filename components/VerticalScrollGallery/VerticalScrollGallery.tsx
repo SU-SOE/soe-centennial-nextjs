@@ -1,6 +1,6 @@
 "use client";
 
-import React, { HTMLAttributes, useRef } from "react";
+import React, { HTMLAttributes, useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import {
   motion,
@@ -70,53 +70,72 @@ export const ImageSlide = ({
 const GalleryImage = ({
   item,
   index,
-  totalItems,
+  contentLengths,
   scrollYProgress,
 }: {
   item: GalleryImage;
   index: number;
-  totalItems: number;
+  contentLengths: number[];
   scrollYProgress: MotionValue<number>;
 }) => {
-  const firstImageOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.8 / totalItems, 1 / totalItems],
-    [1, 1, 0],
+  // Calculate cumulative content positions based on content lengths
+  const totalContentLength = contentLengths.reduce(
+    (sum, length) => sum + length,
+    0,
+  );
+  const cumulativeLength = contentLengths
+    .slice(0, index)
+    .reduce((sum, length) => sum + length, 0);
+  const currentContentLength = contentLengths[index];
+
+  // Convert content positions to scroll progress ratios
+  const startRatio = cumulativeLength / totalContentLength;
+  const endRatio =
+    (cumulativeLength + currentContentLength) / totalContentLength;
+
+  // Add smooth transition areas
+  const transitionZone = Math.min(
+    (currentContentLength * 0.2) / totalContentLength,
+    0.1,
   );
 
-  const lastImageOpacity = useTransform(
-    scrollYProgress,
-    [(index - 0.2) / totalItems, index / totalItems, 1],
-    [0, 1, 1],
-  );
-
-  const middleImageOpacity = useTransform(
+  const middleOpacity = useTransform(
     scrollYProgress,
     [
-      (index - 0.2) / totalItems,
-      index / totalItems,
-      (index + 0.8) / totalItems,
-      (index + 1) / totalItems,
+      Math.max(0, startRatio - transitionZone),
+      startRatio,
+      endRatio,
+      Math.min(1, endRatio + transitionZone),
     ],
     [0, 1, 1, 0],
   );
 
-  // Choose which opacity to use based on index
-  // First image should not fade in
-  // Last image should not fade out
-  let opacity;
+  const firstOpacity = useTransform(
+    scrollYProgress,
+    [0, endRatio, Math.min(1, endRatio + transitionZone)],
+    [1, 1, 0],
+  );
+
+  const lastOpacity = useTransform(
+    scrollYProgress,
+    [Math.max(0, startRatio - transitionZone), startRatio, 1],
+    [0, 1, 1],
+  );
+
+  // Determine opacity based on item index
+  let finalOpacity;
   if (index === 0) {
-    opacity = firstImageOpacity;
-  } else if (index === totalItems - 1) {
-    opacity = lastImageOpacity;
+    finalOpacity = firstOpacity;
+  } else if (index === contentLengths.length - 1) {
+    finalOpacity = lastOpacity;
   } else {
-    opacity = middleImageOpacity;
+    finalOpacity = middleOpacity;
   }
 
   return (
     <motion.div
       style={{
-        opacity,
+        opacity: finalOpacity,
         zIndex: 10 + index,
       }}
       className="absolute inset-0"
@@ -136,11 +155,27 @@ export const VerticalScrollGallery = ({
 }: VerticalScrollGalleryProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
+  const [contentLengths, setContentLengths] = useState<number[]>([]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
   });
+
+  // Measure content lengths after component mounts
+  useEffect(() => {
+    if (containerRef.current) {
+      const contentDivs = containerRef.current.querySelectorAll(
+        "[data-content-section]",
+      );
+      const lengths = Array.from(contentDivs).map((div) => {
+        const element = div as HTMLElement;
+        // Use scroll height to account for all content including overflow
+        return element.scrollHeight;
+      });
+      setContentLengths(lengths);
+    }
+  }, [galleryImages]);
 
   // Reduced motion fallback
   if (prefersReducedMotion) {
@@ -171,22 +206,27 @@ export const VerticalScrollGallery = ({
       {galleryImages.map((item, key) => (
         <div
           key={key}
-          className="relative w-full flex flex-row bg-fog-light min-h-screen"
+          className="relative w-full flex flex-row bg-fog-light"
+          style={{ minHeight: "100vh" }}
         >
-          <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight lg:w-1/3 flex flex-col rs-pt-7">
+          <div
+            className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight lg:w-1/3 flex flex-col rs-pt-7"
+            data-content-section
+          >
             {item.children}
           </div>
 
           <div className="fixed top-0 right-0 lg:w-2/3 h-screen pointer-events-none">
-            {galleryImages.map((item, key) => (
-              <GalleryImage
-                key={key}
-                item={item}
-                index={key}
-                totalItems={galleryImages.length}
-                scrollYProgress={scrollYProgress}
-              />
-            ))}
+            {contentLengths.length > 0 &&
+              galleryImages.map((item, key) => (
+                <GalleryImage
+                  key={key}
+                  item={item}
+                  index={key}
+                  contentLengths={contentLengths}
+                  scrollYProgress={scrollYProgress}
+                />
+              ))}
           </div>
         </div>
       ))}
