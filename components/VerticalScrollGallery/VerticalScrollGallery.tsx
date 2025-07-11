@@ -173,7 +173,7 @@ export const VerticalScrollGallery = ({
           key={key}
           className="relative w-full flex flex-row bg-fog-light min-h-screen"
         >
-          <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight lg:w-1/3 flex flex-col justify-center items-center">
+          <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight lg:w-1/3 flex flex-col rs-pt-7">
             {item.children}
           </div>
 
