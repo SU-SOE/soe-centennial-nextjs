@@ -67,7 +67,7 @@ const galleryImages = [
   },
   {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751063587/dz034ps1409_w4ilkw.jpg",
-    alt: "An exterior view of the James and Anna Marie Spilker Engineering and Applied Science Building on Stanford University campus, showcasing its gorgeous architecture with a vibriant blue sky.",
+    alt: "Exterior view of the Spilker Engineering and Applied Science Building at Stanford, with striking architecture and a clear blue sky.",
     caption:
       "Exterior view of the James and Anna Marie Spilker Engineering and Applied Science Building. Opening in 2010, the 100,000-square-foot Spilker Building was the second of the four Science and Engineering Quad buildings to be completed. When it opened, it housed the independent E. L. Ginzton Laboratory, offices for the Department of Applied Physics, and nanoscale facilities. | Joel Simon/Stanford Engineering.",
   },
@@ -639,7 +639,7 @@ export default function page() {
               rounded
               aspectRatio="4x3"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751063592/zb772gz3468_g4gbez.jpg"
-              alt=""
+              alt="A woman with long brown hair wearing a red sweater sits and smiles in front of bookshelves filled with books."
               caption="Andrew Ng (left) and Daphne Koller (above), cofounders of Coursera, 2014 and 2011. Originally developed by students as a platform to run Stanford’s massive open online courses (MOOCs), Coursera became a popular platform for delivering thousands of university courses and degrees to people worldwide. | Ng photo: Norbert von der Groeben/School of Engineering; Koller photo: Linda A. Cicero/Stanford News Service."
             />
           </BgImageWrapper>
@@ -735,8 +735,9 @@ export default function page() {
               isCaptionInset
               className="max-w-850 mx-auto"
               aspectRatio="1x1"
+              captionTextColor="black"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265147/Cartoon_EWS_qtpizx.jpg"
-              alt="A comic panel shows three men at a Stanford Engineering event in 2014. One speaks into a microphone, praising Morris for TSMC's achievements."
+              alt="Black-and-white comic panel depicting an event at Stanford Engineering in 2014. Two elderly men, one labeled “Morris,” are seated in front of a Stanford Engineering building. A man holding a microphone, labeled “Jensen,” is giving a speech. A speech bubble from Jensen says, “Morris has built TSMC into the semiconductor platform that the world relies on to build everything.” The caption reads: “2014 – Morris is honored as a Stanford Engineering Hero. Jensen gave the opening speech highlighting Morris' achievements.”"
               caption="A drawing of (left to right) Morris Chang, John Hennessy, and Jensen Huang at the event recognizing Chang as a Stanford Engineering “Hero” in April 2014. The panel is from the artist-rendered timeline of the collaboration and friendship between Morris Chang and Jensen Huang. | Courtesy Morris Chang."
             />
             <ScrollyBubble>
