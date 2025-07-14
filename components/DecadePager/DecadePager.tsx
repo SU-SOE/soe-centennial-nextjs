@@ -4,12 +4,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { internalLinks } from "@/utilities/internalLinks";
+import { Button } from "../Cta";
 
 type DecadePagerProps = {
   currentDecade: number;
 };
 
-export default function DecadePager({ currentDecade }: DecadePagerProps) {
+export const DecadePager = ({ currentDecade }: DecadePagerProps) => {
   const router = useRouter();
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -48,29 +49,23 @@ export default function DecadePager({ currentDecade }: DecadePagerProps) {
         )}
       </AnimatePresence>
 
-      <div className="flex justify-between mt-10">
+      <div className="cc flex justify-around rs-mt-1">
         {prevHref ? (
-          <button
-            onClick={() => handleNavigate(prevHref)}
-            className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-          >
-            ← Decade {currentDecade - 1}
-          </button>
+          <Button solid onClick={() => handleNavigate(prevHref)}>
+            Decade {currentDecade - 1}
+          </Button>
         ) : (
           <div />
         )}
 
         {nextHref ? (
-          <button
-            onClick={() => handleNavigate(nextHref)}
-            className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-          >
+          <Button solid onClick={() => handleNavigate(nextHref)}>
             Decade {currentDecade + 1} →
-          </button>
+          </Button>
         ) : (
           <div />
         )}
       </div>
     </div>
   );
-}
+};

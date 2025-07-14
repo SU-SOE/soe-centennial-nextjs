@@ -22,8 +22,7 @@ import { Metadata } from "next";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
 import { storiesSource } from "@/utilities/storiesSource";
-import { PageTransitionWrapper } from "@/components/DecadePager/PageTransitionWrapper";
-import DecadePager from "@/components/DecadePager/DecadePager";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title:

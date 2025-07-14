@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
 import { storiesSource } from "@/utilities/storiesSource";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title:
@@ -229,7 +230,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -846,6 +847,7 @@ export default function page() {
           <OneCol className="rs-mt-4 ms-mb-7">
             <FootnotesList footnotes={footnotesList} />
           </OneCol>
+          <DecadePager currentDecade={6} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
@@ -855,6 +857,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }

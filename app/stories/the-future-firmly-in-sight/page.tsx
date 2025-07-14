@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { storiesSource } from "@/utilities/storiesSource";
 import { Container } from "@/components/Container";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "The future firmly in sight | 100 Years of Stanford Engineering",
@@ -265,7 +266,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -917,6 +918,7 @@ export default function page() {
               <FootnotesList footnotes={footnotesList} />
             </OneCol>
           </Container>
+          <DecadePager currentDecade={8} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
@@ -926,6 +928,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
