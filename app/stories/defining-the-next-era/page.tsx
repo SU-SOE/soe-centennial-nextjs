@@ -314,7 +314,7 @@ export default function page() {
             aspectRatio="8x5"
             className="cc mx-auto w-full 2xl:max-w-1200 2xl:p-0 rs-mt-3 rs-mb-5"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294106/3d-bioprinting_ymve5o.jpg"
-            alt="A 3D printer actively creating a unique piece of art."
+            alt="An injection needle extends below the arm of a 3D printer and hovers over a clear block with orange vein-like contents."
             caption="A 3D bioprinter in Mark Skylar-Scott’s lab prints a sample of heart tissue, 2022. | Andrew Brodhead/Stanford University Communications."
           />
           <TwoCol className="rs-mb-5" isSidebar>
@@ -1099,7 +1099,7 @@ export default function page() {
               isCaptionInset
               aspectRatio="8x5"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294122/SUBB_SD_View_from_JSW_Main_Quad_yevmri.jpg"
-              alt="illustration of a building's exterior with glass facades and a cylindrical section."
+              alt="Illustration of a 4-story sandstone-colored building covered with large windows and a red sloping roof."
               caption="Exterior rendering of the Computing and Data Science building, opened in 2025. The building, nicknamed CoDa, is home to faculty from the Departments of Computer Science and Statistics, a cross-university data science initiative, and undergraduate programs in computer science, data science, and symbolic systems. Built jointly with the School of Humanities and Sciences, the building reflects the growing importance of data science in all areas of scholarship. | LMN Architects."
             />
           </BgImageWrapper>
