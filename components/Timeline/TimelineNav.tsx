@@ -56,7 +56,7 @@ export const TimelineNav = () => {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 w-full h-fit bg-white border-t border-gray-200 shadow-lg rounded z-[500] bg-cen-blue-xlight"
+      className="fixed bottom-0 left-0 right-0 w-full h-fit border-t border-white shadow-lg rounded-lg z-[500] bg-cen-blue-xlight"
       aria-label="Navigate by Decade"
     >
       <ul className="flex flex-row flex-wrap list-none gap-27 justify-center px-20 py-34 h-fit">
