@@ -66,7 +66,7 @@ export const TimelineNav = () => {
               <button
                 onClick={() => handleClick(decade)}
                 className={`
-                relative transition-colors duration-200 hover:text-digital-red-light hocus:underline font-dm-mono
+                relative transition-colors duration-200 hover:text-digital-red-light hocus:underline font-dm-mono type-1
                 ${activeSection === decade ? "text-digital-red-light underline" : "text-stone-dark"}
               `}
               >
