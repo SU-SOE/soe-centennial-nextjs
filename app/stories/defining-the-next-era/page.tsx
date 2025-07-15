@@ -427,7 +427,7 @@ export default function page() {
               happen, Wong said, offering the examples of the “electroceutical”
               devices developed by SystemX researcher Ada Poon to treat diseases
               electronically or the data communication devices from researcher
-              Jelena Vuˇckovi´c that use photons to transmit data.{" "}
+              Jelena Vučković that use photons to transmit data.{" "}
               <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} />
             </Text>
           </OneCol>
@@ -464,7 +464,7 @@ export default function page() {
                 aspectRatio="3x4"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1752082593/Jelena_Vuckovic_centered_qya0xa.jpg"
                 alt="A woman with glasses and dark hair smiles confidently outdoors."
-                caption="Jelena Vučković, professor of electrical engineering, 2023. A pioneer in quantum photonics, Vučković leads the Nanoscale and Quantum Photonics Lab. Her research focuses on developing semiconductor-based photonic systems for quantum and classical information processing and transforming photonics with inverse design techniques. | School of Engineering."
+                caption="Jelena Vuckovic, professor of electrical engineering, 2023. A pioneer in quantum photonics, Vučković leads the Nanoscale and Quantum Photonics Lab. Her research focuses on developing semiconductor-based photonic systems for quantum and classical information processing and transforming photonics with inverse design techniques. | School of Engineering."
               />
             </TwoCol>
           </BgImageWrapper>
