@@ -580,8 +580,7 @@ export default function page() {
               <MediaCaptionImage
                 rounded
                 isCaptionInset
-                isPortrait
-                aspectRatio="1x1"
+                aspectRatio="3x4"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1752084260/AlexandraBoehm_square_ta60zr.jpg"
                 alt="A woman with dark hair in a bun smiles warmly, wearing a blue shirt and black blazer."
                 caption="Environmental engineer Alexandria Boehm, 2024. When the COVID-19 pandemic struck, Boehm developed a new approach to detecting community-wide virus levels in wastewater, enabling health officials to track the prevalence of the virus in communities. | Stanford Engineering."
@@ -865,6 +864,12 @@ export default function page() {
                   engineering would play in charting a course to a sustainable
                   future.
                 </Text>
+                <Quote
+                  className="rs-mb-4"
+                  quoteColor="red"
+                  teaser="As is often said, we do not inherit the Earth from our ancestors, we borrow it from our children. We must create a future in which humans and nature thrive together."
+                  source="— Arun Majumdar, Professor of Mechanical Engineering, Former Co-director of the Precourt Institute for Energy, and Co-chair of the 2015 SoE Future planning committee"
+                />
                 <Text>
                   “As is often said, we do not inherit the Earth from our
                   ancestors, we borrow it from our children. We must create a
