@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 
 export type TimelineItem = {
+  decadeAnchor?: string;
   year: string;
   heading: string;
   body: string;

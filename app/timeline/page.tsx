@@ -1,4 +1,3 @@
-import { BackToTop } from "@/components/BackToTop/";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import TimelineList from "@/components/Timeline/TimelineList";
@@ -98,8 +97,6 @@ const TimelinePage = async () => {
         <main id="main-content">
           <TimelineList timelineData={timelineData} />
           <ContributeStoryBanner bgColor="blue" />
-
-          <BackToTop />
         </main>
       </div>
     </div>
