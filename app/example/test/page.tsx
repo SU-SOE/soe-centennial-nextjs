@@ -1,8 +1,9 @@
-import { H2, Text } from "@/components/Typography";
+import { H2, Heading, Text } from "@/components/Typography";
 import { VerticalScrollGallery } from "@/components/VerticalScrollGallery";
 import { Metadata } from "next";
-import { TimelineCard } from "@/components/Timeline";
 import { Quote } from "@/components/Quote";
+import { Link } from "@/components/Cta";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
@@ -48,12 +49,27 @@ const ExampleStoryPage = async () => {
         "Exterior of the Jerry Yang and Akiko Yamazaki Environment and Energy Building (Y2E2). Dedicated in 2008, Y2E2 became the first of the four buildings that composed the new Science and Engineering Quad. Named in honor of a gift from Jerry Yang (’90), cofounder of Yahoo!, and Akiko Yamazaki (’90), the building houses departments and institutes focused on studying and developing solutions for sustainability challenges, particularly climate change. | Tim Griffith/School of Engineering.",
       children: (
         <>
-          <TimelineCard
-            className="p-0"
-            heading="Sustainable innovation hub: The Jerry Yang and Akiko Yamazaki Environment and Energy Building (Y2E2) opens its doors to tackle climate change"
-            year="2008"
-            anchor="2008-sustainable-innovation-hub-the-jerry-yang-and-akiko-yamazaki-environment-and-energy-building-y2e2-opens-its-doors-to-tackle-climate-challenge"
-          />
+          <Text font="dm-mono" size={2} weight="normal" mb="base">
+            2008
+          </Text>
+          <Heading leading="normal" size={1} font="dm-sans" weight="normal">
+            <Link
+              linkType="timeline"
+              className="font-inherit group"
+              href="/timeline#2008-sustainable-innovation-hub-the-jerry-yang-and-akiko-yamazaki-environment-and-energy-building-y2e2-opens-its-doors-to-tackle-climate-challenge"
+            >
+              Sustainable innovation hub: The Jerry Yang and Akiko Yamazaki
+              Environment and Energy Building (Y2E2) opens its doors to tackle
+              climate change
+              <span className="whitespace-nowrap">
+                &#65279;
+                <ArrowRightIcon
+                  width={25}
+                  className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline"
+                />
+              </span>
+            </Link>
+          </Heading>
           <Text>
             In early 2008, this new era for the School of Engineering commenced
             with the dedication of the Jerry Yang and Akiko Yamazaki Environment
@@ -80,12 +96,26 @@ const ExampleStoryPage = async () => {
         "Exterior view of the James and Anna Marie Spilker Engineering and Applied Science Building. Opening in 2010, the 100,000-square-foot Spilker Building was the second of the four Science and Engineering Quad buildings to be completed. When it opened, it housed the independent E. L. Ginzton Laboratory, offices for the Department of Applied Physics, and nanoscale facilities. | Joel Simon/Stanford Engineering.",
       children: (
         <>
-          <TimelineCard
-            className="p-0"
-            heading="Engineering excellence: Unveiling the James and Anna Marie Spilker Building—a hub for applied science and innovation"
-            year="2010"
-            anchor="2010-engineering-excellence-unveiling-the-james-and-anna-marie-spilker-buildinga-hub-for-applied-science-and-innovation"
-          />
+          <Text font="dm-mono" size={2} weight="normal" mb="base">
+            2010
+          </Text>
+          <Heading leading="normal" size={1} font="dm-sans" weight="normal">
+            <Link
+              linkType="timeline"
+              className="font-inherit group"
+              href="/timeline#2010-engineering-excellence-unveiling-the-james-and-anna-marie-spilker-buildinga-hub-for-applied-science-and-innovation"
+            >
+              Engineering excellence: Unveiling the James and Anna Marie Spilker
+              Building—a hub for applied science and innovation
+              <span className="whitespace-nowrap">
+                &#65279;
+                <ArrowRightIcon
+                  width={25}
+                  className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline"
+                />
+              </span>
+            </Link>
+          </Heading>
           <Text>
             Next up was the James and Anna Marie Spilker Engineering and Applied
             Science Building, which opened in September 2010. James Spilker, a
@@ -109,12 +139,26 @@ const ExampleStoryPage = async () => {
         "Exterior view of the Jen-Hsun Huang Engineering Center. The Huang Center opened in 2010 as the administrative headquarters for the School of Engineering. Its 130,000 square feet contain the dean’s suite, offices, classrooms, a conference center, a library, and a café. It also exhibits displays of major Stanford Engineering milestones, including the original Yahoo! servers. | Tim Griffith/School of Engineering.",
       children: (
         <>
-          <TimelineCard
-            className="p-0"
-            heading="Engineering leadership: The Jen-Hsun Huang Engineering Center opens as a hub for innovation and collaboration at Stanford"
-            year="2010"
-            anchor="2010-engineering-leadership-the-jen-hsun-huang-engineering-center-opens-as-a-hub-for-innovation-and-collaboration-at-stanford"
-          />
+          <Text font="dm-mono" size={2} weight="normal" mb="base">
+            2010
+          </Text>
+          <Heading leading="normal" size={1} font="dm-sans" weight="normal">
+            <Link
+              linkType="timeline"
+              className="font-inherit group"
+              href="/timeline#2010-engineering-leadership-the-jen-hsun-huang-engineering-center-opens-as-a-hub-for-innovation-and-collaboration-at-stanford"
+            >
+              Engineering leadership: The Jen-Hsun Huang Engineering Center
+              opens as a hub for innovation and collaboration at Stanford
+              <span className="whitespace-nowrap">
+                &#65279;
+                <ArrowRightIcon
+                  width={25}
+                  className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline"
+                />
+              </span>
+            </Link>
+          </Heading>
           <Text>
             The Huang Center, boasting 130,000 square feet, became the
             headquarters of Stanford Engineering, home to the dean’s suite,
@@ -160,12 +204,27 @@ const ExampleStoryPage = async () => {
         "Exterior and interior views of the Shriram Center for Bioengineering and Chemical Engineering, named after a gift from university trustee Kavitark “Ram” Shriram and his wife, Vidjealatchoumy “Vijay” Shriram. Opening in 2014, the Shriram Building completed the final phase of the new Science and Engineering Quad. Its 208,000 square feet house the Departments of Chemical Engineering and Bioengineering, along with teaching space and labs. | Tim Maloney/School of Engineering.",
       children: (
         <>
-          <TimelineCard
-            className="p-0"
-            heading="Scientific advancement: The Shriram Center for Bioengineering and Chemical Engineering opens its doors, completing Stanford’s Science and Engineering Quad"
-            year="2014"
-            anchor="2014-scientific-advancement-the-shriram-center-for-bioengineering-and-chemical-engineering-opens-its-doors-completing-stanfords-science-and-engineering-quad"
-          />
+          <Text font="dm-mono" size={2} weight="normal" mb="base">
+            2014
+          </Text>
+          <Heading leading="normal" size={1} font="dm-sans" weight="normal">
+            <Link
+              linkType="timeline"
+              className="font-inherit group"
+              href="/timeline#2014-scientific-advancement-the-shriram-center-for-bioengineering-and-chemical-engineering-opens-its-doors-completing-stanfords-science-and-engineering-quad"
+            >
+              Scientific advancement: The Shriram Center for Bioengineering and
+              Chemical Engineering opens its doors, completing Stanford’s
+              Science and Engineering Quad
+              <span className="whitespace-nowrap">
+                &#65279;
+                <ArrowRightIcon
+                  width={25}
+                  className="transition ml-03em group-hocus:translate-x-02em text-digital-red-light inline"
+                />
+              </span>
+            </Link>
+          </Heading>
           <Text>
             The fourth and final building, the Shriram Center for Bioengineering
             and Chemical Engineering, opened its doors in 2014. It bore the

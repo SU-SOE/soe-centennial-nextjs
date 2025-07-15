@@ -37,11 +37,11 @@ export const ImageSlide = ({
   return (
     <Container
       {...props}
-      className={cnb("rs-px-5 h-screen relative", className)}
+      className={cnb("rs-px-5 h-fit xl:h-screen relative", className)}
       bgColor="fog-light"
       width="full"
-      pt={7}
-      pb={7}
+      pt={5}
+      pb={6}
     >
       <div className="size-full absolute top-0 left-0 z-0">
         <Image
@@ -54,13 +54,14 @@ export const ImageSlide = ({
         />
         <div className="absolute size-full bg-opacity-80 z-10 backdrop-blur-sm bg-fog-light" />
       </div>
-      <Container width="full" className="relative z-50 h-screen">
+      <Container width="full" className="relative z-50 xl:h-screen">
         <MediaCaptionImage
           rounded
           src={src}
           alt={alt}
           caption={caption}
           aspectRatio="4x3"
+          className="max-w-1300 mx-auto"
         />
       </Container>
     </Container>
@@ -209,17 +210,24 @@ export const VerticalScrollGallery = ({
     >
       <div className="flex flex-col w-full xl:w-1/3">
         {galleryImages.map((item, key) => (
-          <div
-            key={key}
-            className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight flex flex-col rs-pt-7"
-            data-content-section
-          >
-            {item.children}
-          </div>
+          <React.Fragment key={key}>
+            <div
+              className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight flex flex-col rs-pt-5 rs-pb-5"
+              data-content-section
+            >
+              {item.children}
+            </div>
+            <ImageSlide
+              src={item.src}
+              alt={item.alt}
+              caption={item.caption}
+              className="block w-full h-fit xl:hidden"
+            />
+          </React.Fragment>
         ))}
       </div>
 
-      <div className="sticky top-0 right-0 w-full h-screen pointer-events-none">
+      <div className="sticky top-0 right-0 w-full h-screen pointer-events-none hidden xl:block">
         {contentLengths.length > 0 &&
           galleryImages.map((item, key) => (
             <GalleryImage
