@@ -68,3 +68,17 @@ export const trapezoidSvg = (align: string) =>
       "rotate-180": align === "left",
     },
   );
+
+//  Timeline Nav
+export const navButton = (activeSection: string, decade: string) =>
+  cnb(
+    "relative transition-colors duration-200 border-4 rounded-xl font-dm-mono type-0 py-10 px-13 hocus:text-white hocus:bg-cardinal-red-xdark hocus:border-digital-red-light hocus:underline",
+    {
+      "text-white bg-cardinal-red-xdark border-digital-red-light":
+        activeSection === decade,
+      "text-stone-dark bg-white border-white": activeSection !== decade,
+    },
+  );
+
+export const expandButton =
+  "relative transition-colors duration-200 border-4 rounded-xl font-dm-mono type-0 py-10 px-13 text-stone-dark bg-white border-white hocus:text-white hocus:bg-cardinal-red-xdark hocus:border-digital-red-light hocus:underline";

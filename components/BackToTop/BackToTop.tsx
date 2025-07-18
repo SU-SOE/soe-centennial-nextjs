@@ -5,7 +5,11 @@ import { Button } from "../Cta";
 import { cnb } from "cnbuilder";
 import { ArrowUpIcon } from "@heroicons/react/16/solid";
 
-export const BackToTop = () => {
+type BackToTopProps = {
+  className?: string;
+};
+
+export const BackToTop = ({ className }: BackToTopProps) => {
   const { value, setFalse, setTrue } = useBoolean(false);
 
   const onScroll = useCallback(() => {
@@ -35,6 +39,7 @@ export const BackToTop = () => {
           "visible opacity-100": value,
           "invisible opacity-0": !value,
         },
+        className,
       )}
       onClick={onButtonClick}
     >

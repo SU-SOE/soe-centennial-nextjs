@@ -1,7 +1,18 @@
 import { useState, useEffect, useMemo } from "react";
+import { motion, useScroll, useSpring } from "motion/react";
+import * as styles from "./Timeline.styles";
+import { BackToTop } from "../BackToTop";
 
 export const TimelineNav = () => {
   const [activeSection, setActiveSection] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   // Array of decades to create anchor links
   const decades = useMemo(
@@ -21,10 +32,14 @@ export const TimelineNav = () => {
     [],
   );
 
+  // Split decades for mobile display
+  const firstRowDecades = useMemo(() => decades.slice(0, 5), [decades]); // 1925-1965
+  const secondRowDecades = useMemo(() => decades.slice(5), [decades]); // 1975-2025
+
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -60% 0px", // Trigger when section is 20% from top
+      rootMargin: "-20% 0px -60% 0px",
       threshold: 0.1,
     };
 
@@ -44,7 +59,32 @@ export const TimelineNav = () => {
       }
     });
 
-    return () => observer.disconnect();
+    // Observer for hiding nav when reaching TimelineContribBanner Id
+    const hideNavObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target.id === "TimelineContribBanner") {
+            setIsVisible(!entry.isIntersecting);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -20% 0px",
+        threshold: 0,
+      },
+    );
+
+    // Observe the TimelineContribBanner
+    const bannerElement = document.getElementById("TimelineContribBanner");
+    if (bannerElement) {
+      hideNavObserver.observe(bannerElement);
+    }
+
+    return () => {
+      observer.disconnect();
+      hideNavObserver.disconnect();
+    };
   }, [decades]);
 
   const handleClick = (decade: string) => {
@@ -55,32 +95,104 @@ export const TimelineNav = () => {
   };
 
   return (
-    <nav
-      className="fixed bottom-0 left-0 right-0 w-full h-fit border-t border-white shadow-lg rounded-lg z-[500] bg-cen-blue-xlight"
-      aria-label="Navigate by Decade"
-    >
-      <ul className="flex flex-row flex-wrap list-none gap-27 justify-center px-20 py-34 h-fit">
-        {decades.map((decade, key) => (
-          <>
+    <>
+      <BackToTop className="bottom-150 z-[501]" />
+      <motion.nav
+        className="fixed bottom-0 left-0 right-0 w-full h-fit shadow-lg rounded-lg z-[500] bg-cen-blue-xlight"
+        aria-label="Navigate by Decade"
+        initial={{ y: 0 }}
+        animate={{ y: isVisible ? 0 : "100%" }}
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 30,
+          duration: 0.3,
+        }}
+      >
+        {/* Scroll Progress Bar */}
+        <motion.div
+          className="absolute top-0 left-0 right-0 h-5 bg-digital-red-light origin-left z-10"
+          style={{ scaleX }}
+        />
+
+        {/* Desktop Navigation */}
+        <ul className="hidden lg:flex flex-row flex-wrap list-none gap-50 justify-center px-20 pt-30 pb-26 h-fit">
+          {decades.map((decade, key) => (
             <li key={key}>
               <button
                 onClick={() => handleClick(decade)}
-                className={`
-                relative transition-colors duration-200 hover:text-digital-red-light hocus:underline font-dm-mono type-1
-                ${activeSection === decade ? "text-digital-red-light underline" : "text-stone-dark"}
-              `}
+                aria-label={`Jump to ${decade} section`}
+                aria-current={activeSection === decade ? "location" : undefined}
+                className={styles.navButton(activeSection, decade)}
               >
                 {decade}
               </button>
             </li>
-            {key < decades.length - 1 && (
-              <li className="hidden lg:block" aria-hidden="true">
-                &#8226;
+          ))}
+        </ul>
+
+        {/* Mobile Navigation */}
+        <div className="lg:hidden px-20 py-34">
+          {/* First Row - Always visible */}
+          <ul className="flex flex-row list-none gap-8 justify-center mb-16">
+            {firstRowDecades.map((decade, key) => (
+              <li key={key}>
+                <button
+                  onClick={() => handleClick(decade)}
+                  aria-current={
+                    activeSection === decade ? "location" : undefined
+                  }
+                  className={styles.navButton(activeSection, decade)}
+                >
+                  {decade}
+                </button>
               </li>
-            )}
-          </>
-        ))}
-      </ul>
-    </nav>
+            ))}
+            {/* Expand/Collapse Button */}
+            <li>
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className={styles.expandButton}
+                aria-expanded={isExpanded}
+                aria-controls="additional-decades"
+              >
+                {isExpanded ? "- Less Decades" : "+ More Decades"}
+              </button>
+            </li>
+          </ul>
+
+          {/* Second Row - Expandable */}
+          <motion.div
+            id="additional-decades"
+            initial={false}
+            animate={{
+              height: isExpanded ? "auto" : 0,
+              opacity: isExpanded ? 1 : 0,
+            }}
+            transition={{
+              height: { duration: 0.3, ease: "easeInOut" },
+              opacity: { duration: 0.2, delay: isExpanded ? 0.1 : 0 },
+            }}
+            className="overflow-hidden"
+          >
+            <ul className="flex flex-row list-none gap-8 justify-center">
+              {secondRowDecades.map((decade, key) => (
+                <li key={key}>
+                  <button
+                    onClick={() => handleClick(decade)}
+                    aria-current={
+                      activeSection === decade ? "location" : undefined
+                    }
+                    className={styles.navButton(activeSection, decade)}
+                  >
+                    {decade}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </motion.nav>
+    </>
   );
 };
