@@ -57,11 +57,12 @@ export const ImageSlide = ({
       <Container width="full" className="relative z-50 xl:h-screen">
         <MediaCaptionImage
           rounded
+          isCaptionFullWidth
           src={src}
           alt={alt}
           caption={caption}
           aspectRatio="4x3"
-          className="max-w-1300 mx-auto"
+          className="max-h-[90%] mx-auto"
         />
       </Container>
     </Container>
@@ -166,7 +167,7 @@ const GalleryItem = ({
     >
       {/* Content section */}
       <div
-        className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center items-center rs-pt-5 rs-pb-5"
+        className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center rs-pt-5 rs-pb-5"
         data-content-section
       >
         {item.children}
