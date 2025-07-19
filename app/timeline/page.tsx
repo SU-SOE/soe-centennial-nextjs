@@ -1,4 +1,3 @@
-import { BackToTop } from "@/components/BackToTop";
 import { ContributeStoryBanner } from "@/components/ContributeStoryBanner";
 import { Masthead } from "@/components/Masthead";
 import TimelineList from "@/components/Timeline/TimelineList";
