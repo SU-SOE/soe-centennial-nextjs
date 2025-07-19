@@ -140,14 +140,48 @@ const GalleryImage = ({
         zIndex: 10 + index,
       }}
       className="absolute inset-0"
+      aria-hidden="true"
     >
       <ImageSlide
         src={item.src}
-        alt={item.alt}
+        alt=""
         caption={item.caption}
         className="w-full h-full object-cover"
       />
     </motion.div>
+  );
+};
+
+const GalleryItem = ({
+  item,
+  index,
+}: {
+  item: GalleryImage;
+  index: number;
+}) => {
+  return (
+    <div
+      key={index}
+      className="relative overflow-clip w-full flex flex-col xl:flex-row bg-fog-light"
+    >
+      {/* Content section */}
+      <div
+        className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center items-center rs-pt-5 rs-pb-5"
+        data-content-section
+      >
+        {item.children}
+      </div>
+
+      {/* Image section - mobile always visible, desktop for screen readers only */}
+      <div className="w-full xl:w-2/3">
+        <ImageSlide
+          src={item.src}
+          alt={item.alt}
+          caption={item.caption}
+          className="block w-full h-fit xl:sr-only"
+        />
+      </div>
+    </div>
   );
 };
 
@@ -187,14 +221,14 @@ export const VerticalScrollGallery = ({
             key={key}
             className="relative overflow-clip w-full flex flex-col xl:flex-row bg-fog-light"
           >
-            <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center items-center">
+            <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center items-center rs-pt-5 rs-pb-5">
               {item.children}
             </div>
             <ImageSlide
               src={item.src}
               alt={item.alt}
               caption={item.caption}
-              className="w-full order-first xl:order-last xl:w-2/3 xl:sticky xl:top-0 xl:h-screen"
+              className="w-full xl:w-2/3 xl:sticky xl:top-0 xl:h-screen"
             />
           </div>
         ))}
@@ -205,33 +239,20 @@ export const VerticalScrollGallery = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full flex flex-col xl:flex-row bg-fog-light"
+      className="relative w-full bg-fog-light"
       style={{ minHeight: "100vh" }}
     >
-      <div className="flex flex-col w-full xl:w-1/3">
-        {galleryImages.map((item, key) => (
-          <React.Fragment key={key}>
-            <div
-              className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight flex flex-col rs-pt-5 rs-pb-5"
-              data-content-section
-            >
-              {item.children}
-            </div>
-            <ImageSlide
-              src={item.src}
-              alt={item.alt}
-              caption={item.caption}
-              className="block w-full h-fit xl:hidden"
-            />
-          </React.Fragment>
-        ))}
-      </div>
+      {/* Content sections */}
+      {galleryImages.map((item, key) => (
+        <GalleryItem key={`content-${key}`} item={item} index={key} />
+      ))}
 
-      <div className="sticky top-0 right-0 w-full h-screen pointer-events-none hidden xl:block">
+      {/* Sticky image container for desktop cross-fade animation */}
+      <div className="fixed top-0 right-0 w-full xl:w-2/3 h-screen pointer-events-none hidden xl:block z-0">
         {contentLengths.length > 0 &&
           galleryImages.map((item, key) => (
             <GalleryImage
-              key={key}
+              key={`image-${key}`}
               item={item}
               index={key}
               contentLengths={contentLengths}
