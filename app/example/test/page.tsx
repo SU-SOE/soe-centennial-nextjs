@@ -1,5 +1,8 @@
 import { H2, Heading, Text } from "@/components/Typography";
-import { VerticalScrollGallery } from "@/components/VerticalScrollGallery";
+import {
+  VerticalImageGallery,
+  VerticalScrollGallery,
+} from "@/components/VerticalScrollGallery";
 import { Metadata } from "next";
 import { Quote } from "@/components/Quote";
 import { Link } from "@/components/Cta";
@@ -253,6 +256,7 @@ const ExampleStoryPage = async () => {
   return (
     <div>
       <VerticalScrollGallery galleryImages={demoImages} />
+      <VerticalImageGallery images={demoImages} />
     </div>
   );
 };
