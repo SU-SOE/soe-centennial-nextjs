@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { TimelineCard } from "@/components/Timeline";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
+import { VerticalImageGallery } from "@/components/VerticalScrollGallery";
 
 export const metadata: Metadata = {
   title: "Defining the next era | 100 Years of Stanford Engineering",
@@ -57,6 +58,27 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+const imageGallery = [
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751294113/Fig.1d_fld1zh.jpg",
+    alt: "Two gloved hands stretch a transparent, flexible electronic sheet with a grid pattern against a clear blue sky.",
+    caption:
+      "Flexible, wearable, skin-like sensors developed by Zhenan Bao and her lab, 2024. The sensors, which use intrinsically stretchable transistors and integrated circuits, are designed to monitor human health, diagnose diseases, and provide opportunities for improved, autonomous treatments. | Courtesy Bao Group.",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751294117/oceanonek-inspect_copy_tsppjz.jpg",
+    alt: "A scuba diver extends a fist to an orange underwater robot.",
+    caption:
+      "A human diver with Ocean One, a humanoid robot designed by Oussama Khatib, professor of computer science, 2016. Ocean One is fitted with pressure sensors on each hand that provide a human pilot with a sense of touch. The robot successfully retrieved artifacts from the wreck of La Lune, the flagship of King Louis XIV. ",
+  },
+  {
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751294113/crispi-camera-deck_alesqg.jpg",
+    alt: "An orange robot diver uses equipment to examine the interior of a rusted, coral-encrusted shipwreck underwater, with fish and marine life visible around the structure.",
+    caption:
+      "Ocean One exploring La Lune, which sank in the Mediterranean Ocean off the coast of France. | Frederic Osada/DRASSM/Stanford.",
+  },
+];
 
 const exploreStoriesData = [
   storiesSource.decade1,
@@ -486,7 +508,7 @@ export default function page() {
             className="cc mx-auto w-full 2xl:max-w-850 2xl:p-0"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294122/russ_altman_qrzz8a.jpg"
             alt="A man with glasses and headphones speaks enthusiastically into a microphone."
-            caption="Russ Altman, professor of bioengineering and of genetics, recording <em>The Future of Everything</em>, 2018. Launched as a SiriusXM radio show in 2017, it later became a podcast, and transitioned to Stanford Engineering in 2022. In 2024, it surpassed 250 episodes. The show explores how the research and technological advances of today will lead to the innovations of tomorrow. Altman has interviewed faculty from across the university about their research. | Amanda Law/School of Engineering."
+            caption="Russ Altman, professor of bioengineering and of genetics, recording The Future of Everything, 2018. Launched as a SiriusXM radio show in 2017, it later became a podcast, and transitioned to Stanford Engineering in 2022. In 2024, it surpassed 250 episodes. The show explores how the research and technological advances of today will lead to the innovations of tomorrow. Altman has interviewed faculty from across the university about their research. | Amanda Law/School of Engineering."
           />
           <OneCol>
             <Text>
@@ -968,37 +990,7 @@ export default function page() {
               </Text>
             </OneCol>
           </TwoCol>
-          <BgImageWrapper bgColor="blue">
-            <MediaCaptionImage
-              rounded
-              aspectRatio="8x5"
-              className="rs-mb-6"
-              src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294113/Fig.1d_fld1zh.jpg"
-              alt="Two gloved hands stretch a transparent, flexible electronic sheet with a grid pattern against a clear blue sky."
-              caption="Flexible, wearable, skin-like sensors developed by Zhenan Bao and her lab, 2024. The sensors, which use intrinsically stretchable transistors and integrated circuits, are designed to monitor human health, diagnose diseases, and provide opportunities for improved, autonomous treatments. | Courtesy Bao Group."
-            />
-            <TwoCol className="justify-center">
-              <MediaCaptionImage
-                animation="slideUp"
-                delay={0.3}
-                isCaptionInset
-                rounded
-                aspectRatio="4x3"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294117/oceanonek-inspect_copy_tsppjz.jpg"
-                alt="A scuba diver extends a fist to an orange underwater robot."
-                caption="A human diver with Ocean One, a humanoid robot designed by Oussama Khatib, professor of computer science, 2016. Ocean One is fitted with pressure sensors on each hand that provide a human pilot with a sense of touch. The robot successfully retrieved artifacts from the wreck of <em>La Lune</em>, the flagship of King Louis XIV. "
-              />
-              <MediaCaptionImage
-                animation="slideUp"
-                className="mt-0 lg:rs-mt-8"
-                isCaptionInset
-                rounded
-                aspectRatio="4x3"
-                src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294113/crispi-camera-deck_alesqg.jpg"
-                alt="An orange robot diver uses equipment to examine the interior of a rusted, coral-encrusted shipwreck underwater, with fish and marine life visible around the structure."
-              />
-            </TwoCol>
-          </BgImageWrapper>
+          <VerticalImageGallery images={imageGallery} />
           <OneCol className="rs-mt-6 rs-mb-5">
             <H2 className="mt-0">The Stanford Emerging Technology Review</H2>
             <Text>
