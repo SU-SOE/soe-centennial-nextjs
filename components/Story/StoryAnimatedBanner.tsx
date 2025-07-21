@@ -2,7 +2,7 @@
 
 import { HTMLAttributes } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import { cnb } from "cnbuilder";
 import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
@@ -39,7 +39,7 @@ export const StoryAnimatedBanner = ({
   ...props
 }: StoryAnimatedBannerProps) => {
   // Animation variants for the overlay image
-  const overlayVariants = {
+  const overlayVariants: Variants = {
     initial: {
       scale: 1.1,
       opacity: 1,
@@ -55,7 +55,7 @@ export const StoryAnimatedBanner = ({
   };
 
   // Animation variants for the background image blur
-  const backgroundVariants = {
+  const backgroundVariants: Variants = {
     initial: {
       filter: "blur(8px)",
       scale: 1.1,
@@ -71,7 +71,7 @@ export const StoryAnimatedBanner = ({
   };
 
   // Animation variants for the background overlay and text content
-  const contentVariants = {
+  const contentVariants: Variants = {
     initial: {
       opacity: 0,
       y: 30,
@@ -87,7 +87,7 @@ export const StoryAnimatedBanner = ({
     },
   };
 
-  const overlayGradientVariants = {
+  const overlayGradientVariants: Variants = {
     initial: {
       opacity: 0,
     },
