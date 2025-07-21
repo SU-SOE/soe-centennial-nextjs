@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { TimelineCard } from "@/components/Timeline";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
+import { StoryAnimatedBanner } from "@/components/Story/StoryAnimatedBanner";
 
 export const metadata: Metadata = {
   title: "Defining the next era | 100 Years of Stanford Engineering",
@@ -246,6 +247,15 @@ export default function page() {
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
+          <StoryAnimatedBanner
+            chapter="Decade 10"
+            heading="Defining the next era"
+            dek="2015 – 2025"
+            overlayImage="https://res.cloudinary.com/duv7bozlj/image/upload/v1753071475/Hero-WelcomeDay_GroupPhotos_PNG-A1_sw9jia.png"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1753071473/Hero-WelcomeDay_GroupPhotos_PNG-B1_b0u6vy.png"
+            alt="A diverse group of smiling individuals wearing red Stanford Engineering T-shirts wave at the camera."
+            caption="Dean Jennifer Widom, center, with new graduate students at the Dean’s Welcome event, September 2024. | Saul Bromberger/Stanford Engineering."
+          />
           <StoryImpactBanner
             isVertical
             hasBgImage
