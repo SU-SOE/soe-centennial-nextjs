@@ -6,12 +6,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { internalLinks } from "@/utilities/internalLinks";
 import { Button } from "../Cta";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
+import { cnb } from "cnbuilder";
 
 type DecadePagerProps = {
   currentDecade: number;
+  transparent?: boolean;
 };
 
-export const DecadePager = ({ currentDecade }: DecadePagerProps) => {
+export const DecadePager = ({
+  currentDecade,
+  transparent,
+}: DecadePagerProps) => {
   const router = useRouter();
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -56,7 +61,10 @@ export const DecadePager = ({ currentDecade }: DecadePagerProps) => {
             solid
             onClick={() => handleNavigate(prevHref)}
             aria-label={`Go to previous decade: Decade ${currentDecade - 1}`}
-            className="group"
+            className={cnb("group", {
+              "p-0 m-0 bg-transparent border-none hocus:bg-transparent":
+                transparent,
+            })}
           >
             <span className="whitespace-nowrap">
               &#65279;
@@ -76,7 +84,10 @@ export const DecadePager = ({ currentDecade }: DecadePagerProps) => {
             solid
             onClick={() => handleNavigate(nextHref)}
             aria-label={`Go to next decade: Decade ${currentDecade + 1}`}
-            className="group"
+            className={cnb("group", {
+              "p-0 m-0 bg-transparent border-none hocus:bg-transparent":
+                transparent,
+            })}
           >
             Decade {currentDecade + 1}
             <span className="whitespace-nowrap">
