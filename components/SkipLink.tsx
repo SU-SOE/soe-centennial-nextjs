@@ -26,6 +26,7 @@ export const Skiplink = ({
       href={href}
       onFocus={() => ref.current?.scrollIntoView()}
       className={cnb("skiplink", className)}
+      tabIndex={-1}
     >
       {children}
     </a>

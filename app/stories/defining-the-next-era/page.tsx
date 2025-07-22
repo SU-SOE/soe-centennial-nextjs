@@ -315,7 +315,7 @@ export default function page() {
             aspectRatio="8x5"
             className="cc mx-auto w-full 2xl:max-w-1200 2xl:p-0 rs-mt-3 rs-mb-5"
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294106/3d-bioprinting_ymve5o.jpg"
-            alt="A 3D printer actively creating a unique piece of art."
+            alt="An injection needle extends below the arm of a 3D printer and hovers over a clear block with orange vein-like contents."
             caption="A 3D bioprinter in Mark Skylar-Scott’s lab prints a sample of heart tissue, 2022. | Andrew Brodhead/Stanford University Communications."
           />
           <TwoCol className="rs-mb-5" isSidebar>
@@ -428,7 +428,7 @@ export default function page() {
               happen, Wong said, offering the examples of the “electroceutical”
               devices developed by SystemX researcher Ada Poon to treat diseases
               electronically or the data communication devices from researcher
-              Jelena Vuˇckovi´c that use photons to transmit data.{" "}
+              Jelena Vučković that use photons to transmit data.{" "}
               <Footnotes footnoteRefs={[{ id: "footnote7", number: 7 }]} />
             </Text>
           </OneCol>
@@ -465,7 +465,7 @@ export default function page() {
                 aspectRatio="3x4"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1752082593/Jelena_Vuckovic_centered_qya0xa.jpg"
                 alt="A woman with glasses and dark hair smiles confidently outdoors."
-                caption="Jelena Vučković, professor of electrical engineering, 2023. A pioneer in quantum photonics, Vučković leads the Nanoscale and Quantum Photonics Lab. Her research focuses on developing semiconductor-based photonic systems for quantum and classical information processing and transforming photonics with inverse design techniques. | School of Engineering."
+                caption="Jelena Vuckovic, professor of electrical engineering, 2023. A pioneer in quantum photonics, Vučković leads the Nanoscale and Quantum Photonics Lab. Her research focuses on developing semiconductor-based photonic systems for quantum and classical information processing and transforming photonics with inverse design techniques. | School of Engineering."
               />
             </TwoCol>
           </BgImageWrapper>
@@ -581,8 +581,7 @@ export default function page() {
               <MediaCaptionImage
                 rounded
                 isCaptionInset
-                isPortrait
-                aspectRatio="1x1"
+                aspectRatio="3x4"
                 src="https://res.cloudinary.com/duv7bozlj/image/upload/v1752084260/AlexandraBoehm_square_ta60zr.jpg"
                 alt="A woman with dark hair in a bun smiles warmly, wearing a blue shirt and black blazer."
                 caption="Environmental engineer Alexandria Boehm, 2024. When the COVID-19 pandemic struck, Boehm developed a new approach to detecting community-wide virus levels in wastewater, enabling health officials to track the prevalence of the virus in communities. | Stanford Engineering."
@@ -866,6 +865,12 @@ export default function page() {
                   engineering would play in charting a course to a sustainable
                   future.
                 </Text>
+                <Quote
+                  className="rs-mb-4"
+                  quoteColor="red"
+                  teaser="As is often said, we do not inherit the Earth from our ancestors, we borrow it from our children. We must create a future in which humans and nature thrive together."
+                  source="— Arun Majumdar, Professor of Mechanical Engineering, Former Co-director of the Precourt Institute for Energy, and Co-chair of the 2015 SoE Future planning committee"
+                />
                 <Text>
                   “As is often said, we do not inherit the Earth from our
                   ancestors, we borrow it from our children. We must create a
@@ -1100,7 +1105,7 @@ export default function page() {
               isCaptionInset
               aspectRatio="8x5"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294122/SUBB_SD_View_from_JSW_Main_Quad_yevmri.jpg"
-              alt="illustration of a building's exterior with glass facades and a cylindrical section."
+              alt="Illustration of a 4-story sandstone-colored building covered with large windows and a red sloping roof."
               caption="Exterior rendering of the Computing and Data Science building, opened in 2025. The building, nicknamed CoDa, is home to faculty from the Departments of Computer Science and Statistics, a cross-university data science initiative, and undergraduate programs in computer science, data science, and symbolic systems. Built jointly with the School of Humanities and Sciences, the building reflects the growing importance of data science in all areas of scholarship. | LMN Architects."
             />
           </BgImageWrapper>

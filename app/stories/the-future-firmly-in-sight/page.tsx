@@ -681,7 +681,7 @@ export default function page() {
                 <Footnotes footnoteRefs={[{ id: "footnote19", number: 19 }]} />
               </Text>
               <Text>
-                In 2002 the Department of Industrial Engineering and Engineering
+                In 2000 the Department of Industrial Engineering and Engineering
                 Management, the Department of Engineering-Economic Systems, and
                 the Department of Operations Research were merged into a single
                 entity known as the Department of Management Science and
