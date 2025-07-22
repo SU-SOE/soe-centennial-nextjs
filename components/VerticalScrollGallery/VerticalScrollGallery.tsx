@@ -43,7 +43,7 @@ export const VerticalScrollGallery = ({
             key={key}
             className="relative overflow-clip w-full flex flex-col xl:flex-row bg-fog-light"
           >
-            <div className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center rs-pt-5 rs-pb-5">
+            <div className="relative cc xl:rs-pl-6 xl:rs-pr-4 bg-cen-blue-xlight xl:w-1/3 flex flex-col justify-center rs-pt-5 rs-pb-5">
               {item.children}
             </div>
             <ImageSlide

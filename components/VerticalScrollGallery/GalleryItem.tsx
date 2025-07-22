@@ -15,7 +15,7 @@ export const GalleryItem = ({
     <div key={index} className="relative overflow-clip w-full bg-fog-light">
       {/* Content section */}
       <div
-        className="relative rs-pl-6 rs-pr-4 bg-cen-blue-xlight flex flex-col justify-center rs-pt-5 rs-pb-5"
+        className="relative cc xl:rs-pl-6 xl:rs-pr-4 bg-cen-blue-xlight flex flex-col justify-center rs-pt-5 rs-pb-5"
         data-content-section
       >
         {item.children}
