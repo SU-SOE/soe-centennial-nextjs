@@ -861,7 +861,7 @@ export default function page() {
               the Fred Terman era was etched into history.
             </Text>
           </OneCol>
-          <DecadePager currentDecade={3} />
+          <DecadePager />
           <Container mt={4} mb={7}>
             <OneCol>
               <FootnotesList footnotes={footnotes} />

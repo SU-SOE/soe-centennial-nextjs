@@ -1149,7 +1149,7 @@ export default function page() {
               caption="Dean Jennifer Widom, center, with new graduate students at the Dean’s Welcome event, September 2024. | Saul Bromberger/Stanford Engineering."
             />
           </TwoCol>
-          <DecadePager currentDecade={10} />
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />

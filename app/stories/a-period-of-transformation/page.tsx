@@ -898,7 +898,7 @@ export default function page() {
               telescopes, and beyond—that were all yet to come.
             </Text>
           </OneCol>
-          <DecadePager currentDecade={4} />
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol>
               <FootnotesList footnotes={footnotes} />

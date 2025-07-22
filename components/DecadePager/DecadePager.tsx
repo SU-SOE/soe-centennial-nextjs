@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { internalLinks } from "@/utilities/internalLinks";
 import { Button } from "../Cta";
@@ -9,16 +9,26 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
 import { cnb } from "cnbuilder";
 
 type DecadePagerProps = {
-  currentDecade: number;
   transparent?: boolean;
 };
 
-export const DecadePager = ({
-  currentDecade,
-  transparent,
-}: DecadePagerProps) => {
+export const DecadePager = ({ transparent }: DecadePagerProps) => {
   const router = useRouter();
+  const pathname = usePathname();
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const currentDecade = useMemo(() => {
+    const urlToDecade: Record<string, number> = {};
+
+    Object.entries(internalLinks).forEach(([key, url]) => {
+      const decadeMatch = key.match(/^decade(\d+)$/);
+      if (decadeMatch) {
+        urlToDecade[url] = parseInt(decadeMatch[1], 10);
+      }
+    });
+
+    return urlToDecade[pathname] || 1;
+  }, [pathname]);
 
   const getDecadeHref = (decade: number): string | null => {
     const key = `decade${decade}` as keyof typeof internalLinks;
@@ -42,7 +52,10 @@ export const DecadePager = ({
   };
 
   return (
-    <nav className="relative rs-mb-5" aria-label="Decade navigation">
+    <nav
+      className={cnb("relative", { "rs-mb-5": !transparent })}
+      aria-label="Decade navigation"
+    >
       <AnimatePresence>
         {isTransitioning && (
           <motion.div
@@ -55,7 +68,12 @@ export const DecadePager = ({
         )}
       </AnimatePresence>
 
-      <div className="cc flex justify-around rs-mt-1">
+      <div
+        className={cnb("w-full flex ", {
+          "justify-between px-50": transparent,
+          "cc justify-around rs-mt-1": !transparent,
+        })}
+      >
         {prevHref ? (
           <Button
             solid

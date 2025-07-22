@@ -1002,7 +1002,7 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-          <DecadePager currentDecade={7} />
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />

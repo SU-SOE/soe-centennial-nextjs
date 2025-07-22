@@ -1089,7 +1089,7 @@ export default function page() {
               />
             </OneCol>
           </TwoCol>
-          <DecadePager currentDecade={5} />
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol>
               <FootnotesList footnotes={footnotes} />

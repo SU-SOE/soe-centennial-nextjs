@@ -844,7 +844,7 @@ export default function page() {
               caption="View of Escondido Mall from Lomita Mall, with engineering laboratories on the right and Meyer Library in the background, 1985. | Chuck Painter/Stanford News Service."
             />
           </Container>
-          <DecadePager currentDecade={6} />
+          <DecadePager />
           <OneCol className="rs-mt-4 ms-mb-7">
             <FootnotesList footnotes={footnotesList} />
           </OneCol>
