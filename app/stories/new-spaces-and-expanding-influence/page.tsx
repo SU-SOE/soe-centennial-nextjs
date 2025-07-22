@@ -1089,12 +1089,12 @@ export default function page() {
               />
             </OneCol>
           </TwoCol>
+          <DecadePager currentDecade={5} />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol>
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
-          <DecadePager currentDecade={5} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}

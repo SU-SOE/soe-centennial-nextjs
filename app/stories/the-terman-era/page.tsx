@@ -861,12 +861,12 @@ export default function page() {
               the Fred Terman era was etched into history.
             </Text>
           </OneCol>
+          <DecadePager currentDecade={3} />
           <Container mt={4} mb={7}>
             <OneCol>
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
-          <DecadePager currentDecade={3} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}

@@ -913,12 +913,12 @@ export default function page() {
               future firmly in its sights.
             </Text>
           </OneCol>
+          <DecadePager currentDecade={8} />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />
             </OneCol>
           </Container>
-          <DecadePager currentDecade={8} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}

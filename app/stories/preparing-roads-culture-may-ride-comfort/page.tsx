@@ -729,12 +729,12 @@ export default function page() {
               School of Engineering was positioned for growth and leadership.
             </Text>
           </OneCol>
+          <DecadePager currentDecade={1} />
           <Container mt={4} mb={7}>
             <OneCol>
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
-          <DecadePager currentDecade={1} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}

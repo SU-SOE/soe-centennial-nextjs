@@ -709,12 +709,12 @@ export default function page() {
               Engineering and the world.
             </Text>
           </OneCol>
+          <DecadePager currentDecade={2} />
           <Container mt={4} mb={7}>
             <OneCol>
               <FootnotesList footnotes={footnotes} />
             </OneCol>
           </Container>
-          <DecadePager currentDecade={2} />
           <ExploreMore
             width="site"
             stories={exploreStoriesData}
