@@ -138,11 +138,6 @@ export const VerticalImageGallery = ({ images }: VerticalImageGalleryProps) => {
           />
         </div>
       ))}
-
-      {/* Scroll spacers */}
-      {images.map((_, key) => (
-        <div key={`spacer-${key}`} className="h-screen w-full" />
-      ))}
     </div>
   );
 };
