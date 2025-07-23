@@ -24,6 +24,7 @@ import { TimelineCard } from "@/components/Timeline";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "@/components/Cta";
 import { VerticalScrollGallery } from "@/components/VerticalScrollGallery";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "Designing for the future | 100 Years of Stanford Engineering",
@@ -513,7 +514,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -1130,6 +1131,7 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />
@@ -1144,6 +1146,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }

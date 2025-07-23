@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { storiesSource } from "@/utilities/storiesSource";
 import { Container } from "@/components/Container";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "The future firmly in sight | 100 Years of Stanford Engineering",
@@ -265,7 +266,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -374,7 +375,7 @@ export default function page() {
               program in electrical engineering.
               <Footnotes footnoteRefs={[{ id: "footnote6", number: 6 }]} /> The
               program was targeted to working professionals—engineers, computer
-              scientists, and technology Managers—and offered thirty courses in
+              scientists, and technology managers—and offered thirty courses in
               electrical engineering, all online. Professors could deliver
               lectures, distribute handouts, notes, and exams, and interact with
               students, all electronically. “In the industrial age we went to
@@ -680,7 +681,7 @@ export default function page() {
                 <Footnotes footnoteRefs={[{ id: "footnote19", number: 19 }]} />
               </Text>
               <Text>
-                In 2002 the Department of Industrial Engineering and Engineering
+                In 2000 the Department of Industrial Engineering and Engineering
                 Management, the Department of Engineering-Economic Systems, and
                 the Department of Operations Research were merged into a single
                 entity known as the Department of Management Science and
@@ -912,6 +913,7 @@ export default function page() {
               future firmly in its sights.
             </Text>
           </OneCol>
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />
@@ -926,6 +928,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }

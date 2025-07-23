@@ -22,6 +22,7 @@ import { TimelineCard } from "@/components/Timeline";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
 import { VerticalImageGallery } from "@/components/VerticalScrollGallery";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "Defining the next era | 100 Years of Stanford Engineering",
@@ -264,7 +265,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -1139,6 +1140,7 @@ export default function page() {
               caption="Dean Jennifer Widom, center, with new graduate students at the Dean’s Welcome event, September 2024. | Saul Bromberger/Stanford Engineering."
             />
           </TwoCol>
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />
@@ -1153,6 +1155,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
