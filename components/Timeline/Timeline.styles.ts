@@ -81,4 +81,4 @@ export const navButton = (activeSection: string, decade: string) =>
   );
 
 export const expandButton =
-  "relative transition-colors duration-200 border-4 rounded-xl font-dm-mono type-0 py-10 px-13 text-stone-dark bg-white border-white hocus:text-white hocus:bg-cardinal-red-xdark hocus:border-digital-red-light hocus:underline";
+  "relative transition-colors duration-200 border-4 rounded-xl font-dm-mono type-0 px-5 py-10 md:px-13 text-stone-dark bg-white border-white hocus:text-white hocus:bg-cardinal-red-xdark hocus:border-digital-red-light hocus:underline";

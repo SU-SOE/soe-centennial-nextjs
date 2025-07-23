@@ -32,9 +32,12 @@ export const TimelineNav = () => {
     [],
   );
 
-  // Split decades for mobile display
-  const firstRowDecades = useMemo(() => decades.slice(0, 5), [decades]); // 1925-1965
-  const secondRowDecades = useMemo(() => decades.slice(5), [decades]); // 1975-2025
+  // Split decades for medium display
+  const firstRowDecades = useMemo(() => decades.slice(0, 4), [decades]); // 1925-1955
+  const secondRowDecades = useMemo(() => decades.slice(4), [decades]); // 1965-2025
+
+  const mobileFirstRow = useMemo(() => decades.slice(0, 2), [decades]); // 1925-1935
+  const mobileSecondRow = useMemo(() => decades.slice(2), [decades]); // 1945-2025
 
   useEffect(() => {
     const observerOptions = {
@@ -96,7 +99,7 @@ export const TimelineNav = () => {
 
   return (
     <>
-      <BackToTop className="bottom-150 z-[501]" />
+      <BackToTop className="bottom-200 md:bottom-150 z-[501]" />
       <motion.nav
         className="fixed bottom-0 left-0 right-0 w-full h-fit shadow-lg rounded-lg z-[500] bg-cen-blue-xlight"
         aria-label="Navigate by Decade"
@@ -131,8 +134,8 @@ export const TimelineNav = () => {
           ))}
         </ul>
 
-        {/* Mobile Navigation */}
-        <div className="lg:hidden px-20 py-34">
+        {/* Tablet Navigation */}
+        <div className="hidden md:block lg:hidden px-20 py-34">
           {/* First Row - Always visible */}
           <ul className="flex flex-row list-none gap-8 justify-center mb-16">
             {firstRowDecades.map((decade, key) => (
@@ -156,7 +159,7 @@ export const TimelineNav = () => {
                 aria-expanded={isExpanded}
                 aria-controls="additional-decades"
               >
-                {isExpanded ? "- Less Decades" : "+ More Decades"}
+                {isExpanded ? "- Less decades" : "+ More decades"}
               </button>
             </li>
           </ul>
@@ -177,6 +180,68 @@ export const TimelineNav = () => {
           >
             <ul className="flex flex-row list-none gap-8 justify-center">
               {secondRowDecades.map((decade, key) => (
+                <li key={key}>
+                  <button
+                    onClick={() => handleClick(decade)}
+                    aria-current={
+                      activeSection === decade ? "location" : undefined
+                    }
+                    className={styles.navButton(activeSection, decade)}
+                  >
+                    {decade}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden px-20 py-34">
+          {/* First Row - Always visible */}
+          <ul className="flex flex-row list-none gap-8 justify-center mb-16">
+            {mobileFirstRow.map((decade, key) => (
+              <li key={key}>
+                <button
+                  onClick={() => handleClick(decade)}
+                  aria-current={
+                    activeSection === decade ? "location" : undefined
+                  }
+                  className={styles.navButton(activeSection, decade)}
+                >
+                  {decade}
+                </button>
+              </li>
+            ))}
+            {/* Expand/Collapse Button */}
+            <li>
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className={styles.expandButton}
+                aria-expanded={isExpanded}
+                aria-controls="additional-decades"
+              >
+                {isExpanded ? "- Less decades" : "+ More decades"}
+              </button>
+            </li>
+          </ul>
+
+          {/* Second Row - Expandable */}
+          <motion.div
+            id="additional-decades"
+            initial={false}
+            animate={{
+              height: isExpanded ? "auto" : 0,
+              opacity: isExpanded ? 1 : 0,
+            }}
+            transition={{
+              height: { duration: 0.3, ease: "easeInOut" },
+              opacity: { duration: 0.2, delay: isExpanded ? 0.1 : 0 },
+            }}
+            className="overflow-hidden"
+          >
+            <ul className="flex flex-row flex-wrap list-none gap-8 justify-center">
+              {mobileSecondRow.map((decade, key) => (
                 <li key={key}>
                   <button
                     onClick={() => handleClick(decade)}
