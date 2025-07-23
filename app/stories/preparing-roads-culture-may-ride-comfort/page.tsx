@@ -23,6 +23,7 @@ import { ImageGallery } from "@/components/ImageGallery";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { H2 } from "@/components/Typography/Header";
 import { storiesSource } from "@/utilities/storiesSource";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title:
@@ -181,7 +182,7 @@ const footnotes = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -728,6 +729,7 @@ export default function page() {
               School of Engineering was positioned for growth and leadership.
             </Text>
           </OneCol>
+          <DecadePager />
           <Container mt={4} mb={7}>
             <OneCol>
               <FootnotesList footnotes={footnotes} />
@@ -742,6 +744,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
