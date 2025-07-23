@@ -135,9 +135,9 @@ export const TimelineNav = () => {
         </ul>
 
         {/* Tablet Navigation */}
-        <div className="hidden md:block lg:hidden px-20 py-34">
+        <div className="hidden md:block lg:hidden pt-[2rem] pb-[1.5rem] md:px-20 md:py-34">
           {/* First Row - Always visible */}
-          <ul className="flex flex-row list-none gap-8 justify-center mb-16">
+          <ul className="flex flex-row list-none gap-8 justify-center p-0">
             {firstRowDecades.map((decade, key) => (
               <li key={key}>
                 <button
@@ -176,9 +176,9 @@ export const TimelineNav = () => {
               height: { duration: 0.3, ease: "easeInOut" },
               opacity: { duration: 0.2, delay: isExpanded ? 0.1 : 0 },
             }}
-            className="overflow-hidden"
+            className="overflow-hidden pt-16"
           >
-            <ul className="flex flex-row list-none gap-8 justify-center">
+            <ul className="flex flex-row list-none gap-8 justify-center p-0">
               {secondRowDecades.map((decade, key) => (
                 <li key={key}>
                   <button
@@ -197,9 +197,9 @@ export const TimelineNav = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden px-20 py-34">
+        <div className="md:hidden pt-[2rem] pb-[1.5rem] md:px-20 md:py-34">
           {/* First Row - Always visible */}
-          <ul className="flex flex-row list-none gap-8 justify-center mb-16">
+          <ul className="flex flex-row list-none gap-8 justify-center p-0">
             {mobileFirstRow.map((decade, key) => (
               <li key={key}>
                 <button
@@ -238,9 +238,9 @@ export const TimelineNav = () => {
               height: { duration: 0.3, ease: "easeInOut" },
               opacity: { duration: 0.2, delay: isExpanded ? 0.1 : 0 },
             }}
-            className="overflow-hidden"
+            className="overflow-hidden pt-16"
           >
-            <ul className="flex flex-row flex-wrap list-none gap-8 justify-center">
+            <ul className="flex flex-row flex-wrap list-none gap-8 justify-center p-0">
               {mobileSecondRow.map((decade, key) => (
                 <li key={key}>
                   <button
