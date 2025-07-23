@@ -109,32 +109,46 @@ export const VerticalImageGallery = ({ images }: VerticalImageGalleryProps) => {
   }
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full bg-fog-light"
-      style={{ minHeight: `${images.length * 100}vh` }}
-    >
-      {/* Sticky image container for cross-fade animation */}
-      <div className="sticky top-0 w-full h-screen pointer-events-none z-0">
-        {images.map((image, key) => (
-          <SimpleGalleryImage
-            key={`image-${key}`}
-            image={image}
-            index={key}
-            totalImages={images.length}
-            scrollYProgress={scrollYProgress}
-          />
-        ))}
-      </div>
+    <div>
+      <div
+        ref={containerRef}
+        style={{ minHeight: `${images.length * 100}vh` }}
+        className="hidden xl:block relative w-full bg-fog-light"
+      >
+        {/* Sticky image container for cross-fade animation */}
+        <div className="block sticky top-0 w-full h-screen pointer-events-none z-0">
+          {images.map((image, key) => (
+            <SimpleGalleryImage
+              key={`image-${key}`}
+              image={image}
+              index={key}
+              totalImages={images.length}
+              scrollYProgress={scrollYProgress}
+            />
+          ))}
+        </div>
 
-      {/* Semantic images for screen readers */}
-      {images.map((image, key) => (
+        {/* Semantic images for screen readers */}
+        {/* {images.map((image, key) => (
         <div key={`semantic-${key}`} className="sr-only">
           <ImageSlide
             src={image.src}
             alt={image.alt}
             caption={image.caption}
             className="w-full h-screen"
+          />
+        </div>
+      ))} */}
+      </div>
+
+      {/* Image section - mobile only, desktop uses sticky container */}
+      {images.map((image, key) => (
+        <div key={key} className="w-full xl:hidden">
+          <ImageSlide
+            src={image.src}
+            alt={image.alt}
+            caption={image.caption}
+            className="w-full h-full"
           />
         </div>
       ))}
