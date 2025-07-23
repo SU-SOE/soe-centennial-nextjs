@@ -374,7 +374,7 @@ export default function page() {
               program in electrical engineering.
               <Footnotes footnoteRefs={[{ id: "footnote6", number: 6 }]} /> The
               program was targeted to working professionals—engineers, computer
-              scientists, and technology Managers—and offered thirty courses in
+              scientists, and technology managers—and offered thirty courses in
               electrical engineering, all online. Professors could deliver
               lectures, distribute handouts, notes, and exams, and interact with
               students, all electronically. “In the industrial age we went to
