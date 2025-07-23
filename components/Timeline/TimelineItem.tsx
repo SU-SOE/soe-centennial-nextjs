@@ -7,6 +7,8 @@ import { HTMLAttributes, forwardRef } from "react";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 type TimelineItemProps = HTMLAttributes<HTMLButtonElement> & {
+  /** Optional decade anchor id */
+  decadeAnchor?: string;
   /** The main title of the timeline item. */
   heading: string;
   /** The year associated with this timeline item. */
@@ -30,6 +32,7 @@ type TimelineItemProps = HTMLAttributes<HTMLButtonElement> & {
 export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
   (
     {
+      decadeAnchor,
       heading,
       year,
       image,
