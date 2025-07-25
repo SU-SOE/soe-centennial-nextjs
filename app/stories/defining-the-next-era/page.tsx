@@ -8,7 +8,6 @@ import {
   FootnotesList,
   ScrollyBubble,
   Scrollytelling,
-  StoryImpactBanner,
   StorySidebar,
 } from "@/components/Story";
 import { H2, Text } from "@/components/Typography";
