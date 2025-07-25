@@ -5,7 +5,11 @@ import { Button } from "../Cta";
 import { cnb } from "cnbuilder";
 import { ArrowUpIcon } from "@heroicons/react/16/solid";
 
-export const BackToTop = () => {
+type BackToTopProps = {
+  className?: string;
+};
+
+export const BackToTop = ({ className }: BackToTopProps) => {
   const { value, setFalse, setTrue } = useBoolean(false);
 
   const onScroll = useCallback(() => {
@@ -30,11 +34,12 @@ export const BackToTop = () => {
     <Button
       solid
       className={cnb(
-        "fixed bottom-10 right-10 z-[500] transition-all duration-300 !rs-px-0 !py-[1.2em] !text-16",
+        "fixed bottom-10 right-10 z-[500] transition-all duration-300 !rs-px-0 !py-[0.8em] !text-16",
         {
           "visible opacity-100": value,
           "invisible opacity-0": !value,
         },
+        className,
       )}
       onClick={onButtonClick}
     >

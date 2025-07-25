@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1740503452/Dean-Widom-cropped_s2ocbf.jpg",
         width: 1200,
         height: 630,
-        alt: "Letter from Dean Widom",
+        alt: "Dean Jennifer Widom surrounded by a group of students, all wearing matching red Stanford Engineering t-shirts and waving to the camera.",
       },
     ],
   },

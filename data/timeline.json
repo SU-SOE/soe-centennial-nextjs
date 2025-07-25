@@ -1,5 +1,6 @@
 [
   {
+    "decadeAnchor": "1925", 
     "year": "1925",
     "heading": "Board of Trustees approval",
     "body": "On May 15, 1925, when the Stanford University Board of Trustees officially approved the proposal to create the new School of Engineering, the decision was anything but the start of engineering at Stanford. The education of engineers had been a founding intention for the university, with an engineering curriculum in place since its inception.",
@@ -108,6 +109,7 @@
     "anchor": "1927-stanfords-guggenheim-experimental-lab-advances-aeronautics"
   },
   {
+    "decadeAnchor": "1935",
     "year": "1936-1944",
     "heading": "Stanford Engineering’s second dean",
     "body": "Samuel B. Morris, professor of civil engineering and the second dean of the School of Engineering from 1936 to 1944, adjusted course schedules and curriculum during the Great Depression and World War II to help students who needed to work or study during the summer. Hundreds of soldiers enrolled in 1943 as part of the Army Specialized Training Program. | Special Collections & University Archives.",
@@ -243,6 +245,7 @@
     "anchor": "1944-stanford-engineerings-third-dean"
   },
   {
+    "decadeAnchor": "1945",
     "year": "1944-1945",
     "heading": "Hugh Hildreth Skilling serves 23 years as head of electrical engineering at Stanford",
     "body": "Hugh Hildreth Skilling,1946. Skilling began his career at Stanford in 1926 as an undergraduate teaching assistant in physics. Promoted to associate professor in 1939, he later became head of the Department of Electrical Engineering, a post he held for 23 years. He served as acting dean of the School of Engineering from fall 1944 through the end of 1945. | Stanford News Service.",
@@ -342,6 +345,7 @@
     "anchor": "1951-the-electronics-research-laboratory"
   },
   {
+    "decadeAnchor": "1955",
     "year": "1955",
     "heading": "The first programming course",
     "body": "John G. Herriot, professor of mathematics, when he became the first director of the newly founded Computation Center in 1953. In spring 1955, he taught the first programming course, <em>Theory and Operation of Computing Machines,</em> to 25 students using an IBM Card-Programmed Calculator, Model II. Computer science was in the Department of Mathematics until 1985, when it was moved to the School of Engineering. | Stanford News Service.",
@@ -477,6 +481,7 @@
     "anchor": "1963-dedication-of-the-thomas-f-peterson-engineering-laboratory"
   },
   {
+    "decadeAnchor": "1965",
     "year": "1965",
     "heading": "Dedication of the Frederick Emmons Terman Engineering Laboratory",
     "body": "Fred Terman and his family at the dedication of the Frederick Emmons Terman Engineering Laboratory, May 31, 1965. The renovated 16,000-square-foot building across from Engineering Corner—which had been the site of his office when he was chair of Electrical Engineering before World War II—was named in Terman’s honor just days after he had announced his retirement as Stanford vice president and provost. “If I could relive my life I could not do any better than to play the same record over again,” Terman said. | Stanford News Service.",
@@ -531,6 +536,7 @@
     "anchor": "1973-first-amateur-radio-from-orbit"
   },
   {
+    "decadeAnchor": "1975",
     "year": "1975",
     "heading": "Launch of the Center for Computer Research in Music and Acoustics (CCRMA)",
     "body": "Visitors from France at the Artificial Intelligence Lab on computer music, 1975. Seated from left: Pierre Boulez, Steve Martin; standing from left: Andy Moorer, John Chowning, and Max Mathews. A computational music group founded by Chowning evolved into the Center for Computer Research in Music and Acoustics (CCRMA), which launched in June 1975. Because of the growing reputation of the computer music group at Stanford, Boulez had asked the team to participate in the planning stages of a music research institute being formed at the Centre Pompidou in Paris. | Stanford News Service.",
@@ -720,6 +726,7 @@
     "anchor": "1989-solar-car-project-to-follow-sun-to-national-race"
   },
   {
+    "decadeAnchor": "1985",
     "year": "1985",
     "heading": "Digitizing education: Students engage with computer terminals",
     "body": "Students using computer terminals, 1985. | Special Collections & University Archives.",
@@ -756,6 +763,7 @@
     "anchor": "1994-stanford-instructional-television-network-sitn"
   },
   {
+    "decadeAnchor": "1995",
     "year": "1996",
     "heading": "105th Commencement keynote speaker",
     "body": "Astronaut Mae Jemison (BS ’77 chemical engineering) was the keynote speaker at the university’s 105th Commencement in 1996. In her speech, Jemison challenged outgoing graduates to embrace personal and professional change and engage different perspectives to create new solutions: “We each get a chance to choose our own path. … Sometimes, it seems to me that we are running away from problems and reacting to issues in our world and our societies as though we are afraid of change, that we’re afraid of things being a little bit different. And that’s keeping us from formulating the right question so we can solve a problem.” | Linda A. Cicero/Stanford News Service.",
@@ -846,6 +854,7 @@
     "anchor": "1996-romeo-and-juliet-human-like-robots"
   },
   {
+    "decadeAnchor": "2005",
     "year": "2005",
     "heading": "Sergey Brin and Larry Page collaborate",
     "body": "Stanford President John Hennessy, alumni Sergey Brin and Larry Page, and computer science Professor Donald Knuth at a gathering on campus to celebrate Google, April 2005. | School of Engineering.",
@@ -1143,6 +1152,7 @@
     "anchor": "2022-printing-the-future-of-medicine-mark-skylar-scotts-lab-advances-heart-tissue-engineering-with-cutting-edge-3d-bioprinter"
   },
   {
+    "decadeAnchor": "2015",
     "year": "2015",
     "heading": "Leading sustainability: Dean Persis Drell and Stanford leadership discuss environmental innovation at the Central Energy Facility tour",
     "body": "Dean Persis Drell (center), Stanford President John Hennessy (right), and Jennifer Widom, before a faculty senate meeting held at the Central Energy Facility, 2015. Members of the senate toured the newly opened energy facility following the meeting. The system eliminates 150,000 tons of carbon dioxide annually and reduces total campus water use by about 15 percent. | Linda A. Cicero/Stanford News Service.",
@@ -1332,6 +1342,7 @@
     "anchor": "2021-championing-sustainability-chemical-engineer-william-tarpeh-pioneers-innovative-resource-recovery-from-liquid-waste-stream"
   },
   {
+    "decadeAnchor": "2025",
     "year": "2025",
     "heading": "A new space: Stanford unveils the Computing and Data Science building (CoDa) to foster interdisciplinary innovation in data research",
     "body": "Exterior rendering of the Computing and Data Science building, opened in 2025. The building, nicknamed CoDa, is home to faculty from the Departments of Computer Science and Statistics, a cross-university data science initiative, and undergraduate programs in computer science, data science, and symbolic systems. Built jointly with the School of Humanities and Sciences, the building reflects the growing importance of data science in all areas of scholarship. | LMN Architects.",

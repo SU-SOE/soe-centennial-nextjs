@@ -13,18 +13,6 @@ const nextConfig = {
         hostname: 'res.cloudinary.com',
         pathname: '/**',
       },
-      // Stanford Media source with wildcard
-      {
-        protocol: 'https',
-        hostname: 'www-media.stanford.edu',
-        pathname: '/**',
-      },
-      // ImgBB source with wildcard
-      {
-        protocol: 'https',
-        hostname: 'i.ibb.co',
-        pathname: '/**',
-      },
     ],
   },
   async redirects() {

@@ -65,7 +65,7 @@ export const TimelineItemFull = forwardRef<
             leading="display"
             mb="none"
             size={2}
-            className="mb-10"
+            className="rs-mt-2 md:mt-0 mb-10"
             align="left"
           >
             {year}

@@ -48,6 +48,7 @@ import { Heading, Text } from "../Typography";
 import { cnb } from "cnbuilder";
 import { ChapterLabel } from "./ChapterLabel";
 import { AnimateInView } from "../Animate";
+import { DecadePager } from "../DecadePager";
 
 type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   heading: string;
@@ -97,112 +98,118 @@ export const StoryImpactBanner = ({
       className={cnb("relative", className)}
     >
       <Container
+        width="full"
         bgColor={bgColor}
-        width="site"
         pt={9}
-        pb={8}
+        pb={3}
         className="relative pt-150 md:rs-pt-9"
       >
-        {hasBgImage && (
-          <div className="size-full absolute top-0 left-0 z-0">
-            <Image
-              className="ed11y-ignore object-cover z-0"
-              src={bgImageSrc || src}
-              alt=""
-              loading={"lazy"}
-              fill
-              sizes="100vw"
-            />
-            <div
-              className={cnb(
-                "absolute size-full bg-opacity-80 z-10 backdrop-blur-sm",
-                {
-                  "bg-archway": bgColor === "archway",
-                  "bg-stone-dark": bgColor === "stone-dark",
-                  "bg-cardinal-red-dark": bgColor === "red",
-                },
-              )}
-            />
-          </div>
-        )}
-        <FlexBox
-          alignItems="center"
-          className={cnb("flex flex-col z-10 relative", {
-            "md:grid-gap lg:flex-row": !isVertical,
-            "w-full mx-auto": isVertical,
-            "max-w-1100": isVertical && !isImageWide,
-            "max-w-1500": isImageWide,
-          })}
-        >
-          <AnimateInView
-            animation="sharpen"
-            className={cnb("flex flex-col text-center rs-mt-7", {
-              "rs-mb-6 items-center [&_p]:max-w-800 [&_h*]:max-w-1100":
-                isVertical,
-              "rs-mb-5 max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
-                !isVertical,
-            })}
-          >
-            <Heading as="h1" size={6} weight="normal" mb="none">
-              {heading}
-            </Heading>
-            {superhead && (
-              <Text className="order-first" mb={2} font="dm-mono">
-                {superhead}
-              </Text>
-            )}
-            {chapter && (
-              <ChapterLabel
-                chipColor={chapterColor}
-                className="order-first rs-mb-0"
-                text={chapter}
+        <Container width="site" pb={6}>
+          {hasBgImage && (
+            <div className="size-full absolute top-0 left-0 z-0">
+              <Image
+                className="ed11y-ignore object-cover z-0"
+                src={bgImageSrc || src}
+                alt=""
+                loading={"lazy"}
+                fill
+                sizes="100vw"
               />
-            )}
-            {dek && (
-              <Text mb="none" size="f3" className="rs-mt-1">
-                {dek}
-              </Text>
-            )}
-            {body && (
-              <Text mb="none" size={1} className="rs-mt-1">
-                {body}
-              </Text>
-            )}
-            {byline && (
-              <Text mb="none" size="base" className="rs-mt-0">
-                {byline}
-              </Text>
-            )}
-          </AnimateInView>
+              <div
+                className={cnb(
+                  "absolute size-full bg-opacity-80 z-10 backdrop-blur-sm",
+                  {
+                    "bg-archway": bgColor === "archway",
+                    "bg-stone-dark": bgColor === "stone-dark",
+                    "bg-cardinal-red-dark": bgColor === "red",
+                  },
+                )}
+              />
+            </div>
+          )}
           <FlexBox
-            direction="col"
-            className={cnb("size-full", {
-              "md:1/3 lg:w-1/2": !isVertical,
+            alignItems="center"
+            className={cnb("flex flex-col z-10 relative", {
+              "md:grid-gap lg:flex-row": !isVertical,
+              "w-full mx-auto": isVertical,
+              "max-w-1100": isVertical && !isImageWide,
+              "max-w-1500": isImageWide,
             })}
           >
             <AnimateInView
-              animation="slideUp"
-              delay={0.3}
-              className={cnb(
-                "w-full overflow-hidden relative rounded-[30px] mb-10",
-                { "aspect-[3/2] xl:max-h-[86rem]": isVertical && !isImageWide },
-                { "aspect-[15/7] xl:max-w-1500": isVertical && isImageWide },
-                {
-                  "aspect-[1/1] md:aspect-[2/3] xl:max-h-[86rem]": !isVertical,
-                },
-              )}
+              animation="sharpen"
+              className={cnb("flex flex-col text-center rs-mt-7", {
+                "rs-mb-6 items-center [&_p]:max-w-800 [&_h*]:max-w-1100":
+                  isVertical,
+                "rs-mb-5 max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
+                  !isVertical,
+              })}
             >
-              <Image src={src} alt={alt} fill className="object-cover" />
-            </AnimateInView>
-            {(isCaptionInHero || bgColor === "white") && (
-              <div className="mt-13">
-                <Text variant="caption" mb="none">
-                  {caption}
+              <Heading as="h1" size={6} weight="normal" mb="none">
+                {heading}
+              </Heading>
+              {superhead && (
+                <Text className="order-first" mb={2} font="dm-mono">
+                  {superhead}
                 </Text>
-              </div>
-            )}
+              )}
+              {chapter && (
+                <ChapterLabel
+                  chipColor={chapterColor}
+                  className="order-first rs-mb-0"
+                  text={chapter}
+                />
+              )}
+              {dek && (
+                <Text mb="none" size="f3" className="rs-mt-1">
+                  {dek}
+                </Text>
+              )}
+              {body && (
+                <Text mb="none" size={1} className="rs-mt-1">
+                  {body}
+                </Text>
+              )}
+              {byline && (
+                <Text mb="none" size="base" className="rs-mt-0">
+                  {byline}
+                </Text>
+              )}
+            </AnimateInView>
+            <FlexBox
+              direction="col"
+              className={cnb("size-full", {
+                "md:1/3 lg:w-1/2": !isVertical,
+              })}
+            >
+              <AnimateInView
+                animation="slideUp"
+                delay={0.3}
+                className={cnb(
+                  "w-full overflow-hidden relative rounded-[30px] mb-10",
+                  {
+                    "aspect-[3/2] xl:max-h-[86rem]": isVertical && !isImageWide,
+                  },
+                  { "aspect-[15/7] xl:max-w-1500": isVertical && isImageWide },
+                  {
+                    "aspect-[1/1] md:aspect-[2/3] xl:max-h-[86rem]":
+                      !isVertical,
+                  },
+                )}
+              >
+                <Image src={src} alt={alt} fill className="object-cover" />
+              </AnimateInView>
+              {(isCaptionInHero || bgColor === "white") && (
+                <div className="mt-13">
+                  <Text variant="caption" mb="none">
+                    {caption}
+                  </Text>
+                </div>
+              )}
+            </FlexBox>
           </FlexBox>
-        </FlexBox>
+        </Container>
+        <DecadePager transparent />
       </Container>
       {!isCaptionInHero && bgColor !== "white" && (
         <div className="mt-13 cc">

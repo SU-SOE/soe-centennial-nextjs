@@ -10,6 +10,7 @@ interface TimelineImageProps {
   size?: types.SizeType;
   trapezoidAngle?: "left" | "right";
   className?: string;
+  imageClasses?: string;
   isExpanded?: boolean;
 }
 
@@ -19,6 +20,7 @@ export const TimelineImage = ({
   size = "medium",
   trapezoidAngle = "left",
   className,
+  imageClasses,
   isExpanded = false,
 }: TimelineImageProps) => {
   const imageSize = styles.size[size];
@@ -31,6 +33,7 @@ export const TimelineImage = ({
           "aspect-[1/1] relative h-full transform ease-in-out perspective-1000 flex items-center justify-center",
           trapezoidType,
           imageSize,
+          imageClasses,
         )}
       >
         {isExpanded && (

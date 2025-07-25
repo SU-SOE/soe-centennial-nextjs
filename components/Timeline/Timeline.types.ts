@@ -22,6 +22,7 @@ export type SizeType = keyof typeof styles.size;
 export type TimelineCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<AnimateInViewProps, "children"> & {
     as?: TimelineCardElementType;
+    decadeAnchor?: string;
     heading: string;
     year: string;
     body?: string;

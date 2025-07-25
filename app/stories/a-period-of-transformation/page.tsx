@@ -22,6 +22,7 @@ import { Container } from "@/components/Container";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { ImageGallery } from "@/components/ImageGallery";
 import { storiesSource } from "@/utilities/storiesSource";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "A period of transformation | 100 Years of Stanford Engineering",
@@ -325,7 +326,7 @@ const footnotes = [
 ];
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isBgDark isOverlap />
       <main id="main-content">
         <article>
@@ -897,6 +898,7 @@ export default function page() {
               telescopes, and beyond—that were all yet to come.
             </Text>
           </OneCol>
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol>
               <FootnotesList footnotes={footnotes} />
@@ -911,6 +913,6 @@ export default function page() {
           <ContributeStoryBanner hasLineArt bgColor="red" />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }

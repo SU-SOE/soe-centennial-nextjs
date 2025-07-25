@@ -53,7 +53,9 @@ const storyData2 = [storiesSource.decade5, storiesSource.decade6];
 
 const posterCardData2 = storiesSource.decade7;
 
-const storyData3 = [storiesSource.decade8];
+const storyData3 = [storiesSource.decade8, storiesSource.decade9];
+
+const posterCardData3 = storiesSource.decade10;
 
 export default function page() {
   return (
@@ -115,6 +117,9 @@ export default function page() {
                 cardBgColor="white"
                 headerTag="h2"
               />
+            </li>
+            <li className="cc">
+              <StoryPosterCard imageLeft hasBgImage {...posterCardData3} />
             </li>
           </ul>
           <div aria-hidden="true" className="flex w-full justify-end rs-mb-8">

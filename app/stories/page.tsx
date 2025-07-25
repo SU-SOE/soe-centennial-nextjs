@@ -54,19 +54,17 @@ const storyData1 = [
   storiesSource.deanWidomLetter,
 ];
 
-const storyData2 = [
-  storiesSource.decade2,
-  storiesSource.decade3,
-  storiesSource.decade4,
-];
+const storyData2 = [storiesSource.decade2, storiesSource.decade3];
 
-const storyCardData = storiesSource.decade5;
+const storyCardData = storiesSource.decade4;
 
-const storyData3 = [
-  storiesSource.decade6,
-  storiesSource.decade7,
-  storiesSource.decade8,
-];
+const storyData3 = [storiesSource.decade5, storiesSource.decade6];
+
+const storyCardData2 = storiesSource.decade7;
+
+const storyData4 = [storiesSource.decade8, storiesSource.decade9];
+
+const storyCardData3 = storiesSource.decade10;
 
 export default function page() {
   return (
@@ -111,7 +109,6 @@ export default function page() {
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
                 stories={storyData2}
                 className="py-0"
                 cardBgColor="white"
@@ -129,12 +126,25 @@ export default function page() {
             </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
                 stories={storyData3}
                 className="py-0"
                 cardBgColor="white"
                 headerTag="h2"
               />
+            </li>
+            <li className="cc">
+              <StoryPosterCard hasBgImage {...storyCardData2} />
+            </li>
+            <li className="mx-auto w-full max-w-1200">
+              <ExploreMore
+                stories={storyData4}
+                className="py-0"
+                cardBgColor="white"
+                headerTag="h2"
+              />
+            </li>
+            <li className="cc">
+              <StoryPosterCard hasBgImage imageLeft {...storyCardData3} />
             </li>
           </ul>
           <div aria-hidden="true" className="flex w-full justify-end rs-mb-8">

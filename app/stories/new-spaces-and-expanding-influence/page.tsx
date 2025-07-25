@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Accordion } from "@/components/Accordion";
 import { storiesSource } from "@/utilities/storiesSource";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title:
@@ -421,7 +422,7 @@ const footnotes = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -1088,6 +1089,7 @@ export default function page() {
               />
             </OneCol>
           </TwoCol>
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol>
               <FootnotesList footnotes={footnotes} />
@@ -1102,6 +1104,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
