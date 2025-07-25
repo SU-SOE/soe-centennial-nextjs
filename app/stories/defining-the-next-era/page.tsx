@@ -251,19 +251,7 @@ export default function page() {
             chapter="Decade 10"
             heading="Defining the next era"
             dek="2015 – 2025"
-            overlayImage="https://res.cloudinary.com/duv7bozlj/image/upload/v1753071475/Hero-WelcomeDay_GroupPhotos_PNG-A1_sw9jia.png"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1753071473/Hero-WelcomeDay_GroupPhotos_PNG-B1_b0u6vy.png"
-            alt="A diverse group of smiling individuals wearing red Stanford Engineering T-shirts wave at the camera."
-            caption="Dean Jennifer Widom, center, with new graduate students at the Dean’s Welcome event, September 2024. | Saul Bromberger/Stanford Engineering."
-          />
-          <StoryImpactBanner
-            isVertical
-            hasBgImage
-            bgColor="stone-dark"
-            chapter="Decade 10"
-            heading="Defining the next era"
-            dek="2015 – 2025"
-            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294123/WelcomeDay_GroupPhotos_9.26.24_01_O5A0256_msl1am.jpg"
+            src="https://res.cloudinary.com/duv7bozlj/image/upload/v1753476658/Hero_WelcomeDay_GroupPhotos_ukcdo1.png"
             alt="A diverse group of smiling individuals wearing red Stanford Engineering T-shirts wave at the camera."
             caption="Dean Jennifer Widom, center, with new graduate students at the Dean’s Welcome event, September 2024. | Saul Bromberger/Stanford Engineering."
           />

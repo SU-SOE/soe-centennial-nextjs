@@ -19,7 +19,6 @@ type StoryAnimatedBannerProps = HTMLAttributes<HTMLDivElement> & {
   byline?: string;
   bgColor?: "stone-dark" | "red";
   caption?: React.ReactNode;
-  overlayImage: string;
   src: string;
   alt?: string;
 };
@@ -33,27 +32,10 @@ export const StoryAnimatedBanner = ({
   body,
   byline,
   caption,
-  overlayImage,
   src,
   alt,
   ...props
 }: StoryAnimatedBannerProps) => {
-  // Animation variants for the overlay image
-  const overlayVariants: Variants = {
-    initial: {
-      scale: 1.1,
-      opacity: 1,
-    },
-    animate: {
-      scale: 1,
-      opacity: 0,
-      transition: {
-        scale: { duration: 1, ease: "easeOut" },
-        opacity: { duration: 0.5, delay: 0.5, ease: "easeOut" },
-      },
-    },
-  };
-
   // Animation variants for the background image blur
   const backgroundVariants: Variants = {
     initial: {
@@ -110,21 +92,6 @@ export const StoryAnimatedBanner = ({
           width="full"
           className="cc pt-[16rem] rs-pb-5 md:rs-pt-9 lg:w-full lg:rs-px-7 mb-20 flex items-center justify-center relative 2xl:cc overflow-hidden"
         >
-          {/* Overlay image that starts zoomed in and fades away */}
-          <motion.div
-            className="size-full absolute top-0 left-0 z-10"
-            variants={overlayVariants}
-          >
-            <Image
-              className="ed11y-ignore object-cover"
-              src={overlayImage}
-              alt=""
-              loading={"lazy"}
-              fill
-              sizes="100vw"
-            />
-          </motion.div>
-
           {/* Main background image that starts blurred and comes into focus */}
           <motion.div
             className="size-full absolute top-0 left-0 z-0"
