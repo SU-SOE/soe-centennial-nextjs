@@ -8,8 +8,9 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "@/components/Cta/Link";
 import { AnimateInView } from "@/components/Animate";
 
-export type CardProps = types.TimelineCardProps & {
+export type CardProps = Omit<types.TimelineCardProps, "image"> & {
   wideImage?: boolean;
+  image?: string;
 };
 
 export const TimelineCard = ({

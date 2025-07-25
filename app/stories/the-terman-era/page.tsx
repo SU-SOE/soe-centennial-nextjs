@@ -22,6 +22,7 @@ import { Metadata } from "next";
 import { H2, H3 } from "@/components/Typography/Header";
 import { HorizontalLineart } from "@/components/images/horizontal-lineart";
 import { storiesSource } from "@/utilities/storiesSource";
+import { PageTransitionWrapper, DecadePager } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "The Terman Era | 100 Years of Stanford Engineering",
@@ -241,7 +242,7 @@ const footnotes = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white" isBgDark isOverlap />
       <main id="main-content">
         <article>
@@ -860,6 +861,7 @@ export default function page() {
               the Fred Terman era was etched into history.
             </Text>
           </OneCol>
+          <DecadePager />
           <Container mt={4} mb={7}>
             <OneCol>
               <FootnotesList footnotes={footnotes} />
@@ -874,6 +876,6 @@ export default function page() {
           <ContributeStoryBanner hasLineArt bgColor="red" />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
