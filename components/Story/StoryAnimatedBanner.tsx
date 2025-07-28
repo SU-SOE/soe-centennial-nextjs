@@ -127,10 +127,7 @@ export const StoryAnimatedBanner = ({
           >
             {/* Text content that fades in with the background overlay */}
             <motion.div variants={contentVariants}>
-              <FlexBox
-                direction="col"
-                className="z-50 max-w-full lg:max-w-[670px]"
-              >
+              <FlexBox direction="col" className="z-50 max-w-full lg:max-w-600">
                 <Heading as="h1" size="f6" weight="normal" mb="0">
                   {heading}
                 </Heading>
