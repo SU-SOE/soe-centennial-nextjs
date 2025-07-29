@@ -253,7 +253,7 @@ const decade9Images = [
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1742266772/rb514kc0656_koxjid.jpg",
     alt: "A group of people strolls through a courtyard in front of a building.",
     caption:
-      "Exterior and interior views of the Shriram Center for Bioengineering and Chemical Engineering, named after a gift from university trustee Kavitark “Ram” Shriram and his wife, Vidjealatchoumy “Vijay” Shriram. Opening in 2014, the Shriram Building completed the final phase of the new Science and Engineering Quad. Its 208,000 square feet house the Departments of Chemical Engineering and Bioengineering, along with teaching space and labs. | Tim Maloney/School of Engineering.",
+      "Exterior views of the Shriram Center for Bioengineering and Chemical Engineering, named after a gift from university trustee Kavitark “Ram” Shriram and his wife, Vidjealatchoumy “Vijay” Shriram. Opening in 2014, the Shriram Building completed the final phase of the new Science and Engineering Quad. Its 208,000 square feet house the Departments of Chemical Engineering and Bioengineering, along with teaching space and labs. | Tim Maloney/School of Engineering.",
     children: (
       <>
         <Text font="dm-mono" size={2} weight="normal" mb="base">

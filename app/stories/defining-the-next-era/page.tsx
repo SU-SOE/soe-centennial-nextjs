@@ -1048,7 +1048,7 @@ export default function page() {
               aspectRatio="4x3"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1751294114/Hoover_EmergingTechEvent_11-14-23_PatrickBeaudouin_IMG_0478_p9zypf.jpg"
               alt="Three women in professional attire are engaged in a friendly conversation against a white wall."
-              caption="From left to right, Zhenan Bao, Allison Okamura, and Jennifer Widom prior to the Stanford Emerging Technology Review launch event, 2023. The School of Engineering and the Hoover Institution jointly launched the Review to capture diverse views from across Stanford on recent technological breakthroughs. | Hoover Institution/Patrick Beaudouin."
+              caption="From left to right, Zhenan Bao, Allison Okamura, and Jennifer Widom prior to the Stanford Emerging Technology Review launch event, 2023. The School of Engineering and the Hoover Institution jointly launched the Review to capture diverse views from across Stanford on recent technological breakthroughs. | Patrick Beaudouin/Hoover Institution."
             />
           </TwoCol>
           <OneCol>
