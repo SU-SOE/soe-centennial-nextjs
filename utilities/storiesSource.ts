@@ -109,4 +109,16 @@ export const storiesSource = {
     href: internalLinks.decade8,
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748483048/110419-1941_mlzjyn.jpg",
   },
+  decade9: {
+    chapter: "Decade 9",
+    heading: "Designing for the future",
+    href: internalLinks.decade9,
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751063589/mb981vc1736_zqcgqv.jpg",
+  },
+  decade10: {
+    chapter: "Decade 10",
+    heading: "Defining the next era",
+    href: internalLinks.decade10,
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751294123/WelcomeDay_GroupPhotos_9.26.24_01_O5A0256_msl1am.jpg",
+  },
 } as const;

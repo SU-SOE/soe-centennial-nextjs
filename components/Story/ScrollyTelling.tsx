@@ -90,7 +90,7 @@ export const Scrollytelling = ({
                 {heading && (
                   <Heading
                     as={headingLevel || "h2"}
-                    size={5}
+                    size="f3"
                     color="stone-dark"
                     align="center"
                     className="relative z-10 mb-02em whitespace-pre-line"

@@ -21,6 +21,7 @@ import MediaCaptionImage from "@/components/MediaCaptionImage/MediaCaptionImage"
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
 import { Container } from "@/components/Container";
 import { storiesSource } from "@/utilities/storiesSource";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title:
@@ -229,7 +230,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -843,6 +844,7 @@ export default function page() {
               caption="View of Escondido Mall from Lomita Mall, with engineering laboratories on the right and Meyer Library in the background, 1985. | Chuck Painter/Stanford News Service."
             />
           </Container>
+          <DecadePager />
           <OneCol className="rs-mt-4 ms-mb-7">
             <FootnotesList footnotes={footnotesList} />
           </OneCol>
@@ -855,6 +857,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
