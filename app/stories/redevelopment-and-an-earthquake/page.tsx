@@ -22,6 +22,7 @@ import { Container } from "@/components/Container";
 import { TimelineCard } from "@/components/Timeline";
 import { storiesSource } from "@/utilities/storiesSource";
 import { AnimatedPosterCard } from "@/components/AnimatedHero";
+import { DecadePager, PageTransitionWrapper } from "@/components/DecadePager";
 
 export const metadata: Metadata = {
   title: "Redevelopment and an earthquake | 100 Years of Stanford Engineering",
@@ -304,7 +305,7 @@ const footnotesList = [
 
 export default function page() {
   return (
-    <>
+    <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
       <main id="main-content">
         <article>
@@ -1001,7 +1002,7 @@ export default function page() {
               />
             </StorySidebar>
           </TwoCol>
-
+          <DecadePager />
           <Container pt={4} pb={7} bgColor="blue">
             <OneCol className="rs-mt-4 ms-mb-7">
               <FootnotesList footnotes={footnotesList} />
@@ -1016,6 +1017,6 @@ export default function page() {
           <ContributeStoryBanner bgColor="red" hasLineArt />
         </article>
       </main>
-    </>
+    </PageTransitionWrapper>
   );
 }
