@@ -44,6 +44,7 @@ import { cnb } from "cnbuilder";
 import { FlexBox } from "@/components/FlexBox";
 import Image from "next/image";
 import { ChapterLabel } from "./ChapterLabel";
+import { DecadePager } from "../DecadePager";
 
 type StoryLineBannerProps = HTMLAttributes<HTMLDivElement> & {
   hasLineArt?: boolean;
@@ -80,80 +81,88 @@ export const StoryLineBanner = ({
       as="section"
       bgColor={bgColor}
       width="full"
-      className="cc pt-[16rem] rs-pb-5 md:rs-pt-9 lg:w-full lg:rs-px-7 mb-20 flex items-center justify-center relative 2xl:cc"
+      pb={3}
+      className="relative pt-[16rem] md:rs-pt-9 mb-20 overflow-hidden"
     >
-      {src && (
-        <div className="size-full absolute top-0 left-0 z-0">
-          <Image
-            className="ed11y-ignore object-cover z-[-20]"
-            src={src}
-            alt={alt || ""}
-            loading={"lazy"}
-            fill
-            sizes="100vw"
-          />
-          <div
-            className={cnb(
-              "absolute size-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
-              {
-                "from-stone-dark to-transparent": bgColor === "stone-dark",
-                "from-cardinal-red-dark to-transparent": bgColor === "red",
-              },
-            )}
-          />
-        </div>
-      )}
       <Container
-        className={cnb(
-          "relative flex items-center justify-start w-full z-0 *:text-white",
-          {
-            "px-30 py-70 sm:px-50 sm:py-80 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8":
-              hasLineArt,
-            "rs-py-10 rs-px-2 2xl:px-0": !hasLineArt,
-          },
-        )}
         width="full"
+        pb={6}
+        className="flex items-center justify-center cc lg:w-full lg:rs-px-7 2xl:cc"
       >
-        {hasLineArt && (
-          <BannerLineart
-            variant={lineVariant}
-            className="absolute top-0 left-0 flex justify-center items-center z-[-10]"
-          />
+        {src && (
+          <div className="size-full absolute top-0 left-0 z-0">
+            <Image
+              className="ed11y-ignore object-cover z-[-20]"
+              src={src}
+              alt={alt || ""}
+              loading={"lazy"}
+              fill
+              sizes="100vw"
+            />
+            <div
+              className={cnb(
+                "absolute size-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
+                {
+                  "from-stone-dark to-transparent": bgColor === "stone-dark",
+                  "from-cardinal-red-dark to-transparent": bgColor === "red",
+                },
+              )}
+            />
+          </div>
         )}
-        <FlexBox
-          direction="col"
-          className={cnb("z-50 max-w-full lg:max-w-[670px]", {
-            "rs-mt-2": hasLineArt,
-          })}
+        <Container
+          className={cnb(
+            "relative flex items-center justify-start w-full z-0 *:text-white",
+            {
+              "px-30 py-70 sm:px-50 sm:py-80 md:p-68 lg:p-100 xl:rs-py-10 xl:rs-px-8":
+                hasLineArt,
+              "rs-py-10 rs-px-2 2xl:px-0": !hasLineArt,
+            },
+          )}
+          width="full"
         >
-          <Heading as="h1" size="f6" weight="normal" mb="0">
-            {heading}
-          </Heading>
-          {chapter && (
-            <ChapterLabel className="order-first rs-mb-0" text={chapter} />
+          {hasLineArt && (
+            <BannerLineart
+              variant={lineVariant}
+              className="absolute top-0 left-0 flex justify-center items-center z-[-10]"
+            />
           )}
-          {superhead && (
-            <Text className="order-first" mb={2} font="dm-mono">
-              {superhead}
-            </Text>
-          )}
-          {dek && (
-            <Text mb="0" size="f3" className="rs-mt-4">
-              {dek}
-            </Text>
-          )}
-          {body && (
-            <Text variant="overview" mb="none" className="rs-mt-1">
-              {body}
-            </Text>
-          )}
-          {byline && (
-            <Text mb="0" size="base" className="rs-mt-4">
-              {byline}
-            </Text>
-          )}
-        </FlexBox>
+          <FlexBox
+            direction="col"
+            className={cnb("z-50 max-w-full lg:max-w-[670px]", {
+              "rs-mt-2": hasLineArt,
+            })}
+          >
+            <Heading as="h1" size="f6" weight="normal" mb="0">
+              {heading}
+            </Heading>
+            {chapter && (
+              <ChapterLabel className="order-first rs-mb-0" text={chapter} />
+            )}
+            {superhead && (
+              <Text className="order-first" mb={2} font="dm-mono">
+                {superhead}
+              </Text>
+            )}
+            {dek && (
+              <Text mb="0" size="f3" className="rs-mt-4">
+                {dek}
+              </Text>
+            )}
+            {body && (
+              <Text variant="overview" mb="none" className="rs-mt-1">
+                {body}
+              </Text>
+            )}
+            {byline && (
+              <Text mb="0" size="base" className="rs-mt-4">
+                {byline}
+              </Text>
+            )}
+          </FlexBox>
+        </Container>
       </Container>
+      <DecadePager transparent />
     </Container>
     {caption && (
       <div className="mt-13 cc">
