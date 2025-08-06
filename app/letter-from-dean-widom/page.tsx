@@ -39,7 +39,7 @@ export default function LetterFromDeanPage() {
   return (
     <>
       <Masthead />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <article>
           <Container width="site">
             <Heading as="h1" size="f6" mb={8} className="rs-mt-7 w-fit mx-auto">

@@ -244,7 +244,7 @@ export default function page() {
   return (
     <PageTransitionWrapper>
       <Masthead logoColor="white" isBgDark isOverlap />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <article>
           <StoryImpactBanner
             isCaptionInHero

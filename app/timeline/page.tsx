@@ -52,7 +52,7 @@ const TimelinePage = async () => {
   //   return (
   //     <>
   //       <Masthead />
-  //       <main id="main-content" className="cc rs-mb-6">
+  //       <main id="main-content" tabIndex={-1}  className="cc rs-mb-6">
   //         <div className="max-w-900 mx-auto">
   //           <H1>Timeline page</H1>
   //           <Text>
@@ -94,7 +94,7 @@ const TimelinePage = async () => {
       </div>
       <div className="relative top-0 z-50">
         <Masthead bgColor="none" />
-        <main id="main-content">
+        <main id="main-content" tabIndex={-1}>
           <TimelineList timelineData={timelineData} />
           <ContributeStoryBanner bgColor="blue" id="TimelineContribBanner" />
         </main>
