@@ -724,7 +724,6 @@ export default function page() {
             </ScrollyBubble>
             <MediaCaptionImage
               className="max-w-[72.5rem] mx-auto"
-              captionTextColor="black"
               aspectRatio="9x16"
               rounded
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745371511/SC0122_1981-087_b01_f005_ldesrt.jpg"

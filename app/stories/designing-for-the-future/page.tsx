@@ -805,7 +805,6 @@ export default function page() {
               isCaptionInset
               className="max-w-850 mx-auto"
               aspectRatio="1x1"
-              captionTextColor="black"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1742265147/Cartoon_EWS_qtpizx.jpg"
               alt="Black-and-white comic panel depicting an event at Stanford Engineering in 2014. Two elderly men, one labeled “Morris,” are seated in front of a Stanford Engineering building. A man holding a microphone, labeled “Jensen,” is giving a speech. A speech bubble from Jensen says, “Morris has built TSMC into the semiconductor platform that the world relies on to build everything.” The caption reads: “2014 – Morris is honored as a Stanford Engineering Hero. Jensen gave the opening speech highlighting Morris' achievements.”"
               caption="A drawing of (left to right) Morris Chang, John Hennessy, and Jensen Huang at the event recognizing Chang as a Stanford Engineering “Hero” in April 2014. The panel is from the artist-rendered timeline of the collaboration and friendship between Morris Chang and Jensen Huang. | Courtesy Morris Chang."
