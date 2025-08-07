@@ -95,7 +95,7 @@ export const StoryImpactBanner = ({
       as="header"
       width="full"
       mb={5}
-      className={cnb("relative", className)}
+      className={cnb("relative text-white", className)}
     >
       <Container
         width="full"
@@ -213,7 +213,7 @@ export const StoryImpactBanner = ({
       </Container>
       {!isCaptionInHero && bgColor !== "white" && (
         <div className="mt-13 cc">
-          <Text variant="caption" className="max-w-prose-wide">
+          <Text variant="caption" className="max-w-prose-wide text-black">
             {caption}
           </Text>
         </div>

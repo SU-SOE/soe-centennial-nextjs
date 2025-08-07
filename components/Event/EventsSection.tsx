@@ -30,7 +30,7 @@ export const EventsSection = ({
       {...props}
       as="section"
       width="full"
-      className={cnb("relative", className)}
+      className={cnb("relative text-white", className)}
     >
       <Container bgColor={src ? "stone-dark" : ""} width="full" pt={7} pb={10}>
         {src && (

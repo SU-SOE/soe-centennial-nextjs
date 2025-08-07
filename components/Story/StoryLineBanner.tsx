@@ -82,7 +82,7 @@ export const StoryLineBanner = ({
       bgColor={bgColor}
       width="full"
       pb={3}
-      className="relative pt-[16rem] md:rs-pt-9 mb-20 overflow-hidden"
+      className="relative pt-[16rem] md:rs-pt-9 mb-20 overflow-hidden text-white"
     >
       <Container
         width="full"
@@ -166,7 +166,11 @@ export const StoryLineBanner = ({
     </Container>
     {caption && (
       <div className="mt-13 cc">
-        <Text id="hero-caption" variant="caption" className="max-w-prose-wide">
+        <Text
+          id="hero-caption"
+          variant="caption"
+          className="max-w-prose-wide text-black"
+        >
           {caption}
         </Text>
       </div>
