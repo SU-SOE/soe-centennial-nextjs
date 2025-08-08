@@ -145,7 +145,14 @@ export const StoryImpactBanner = ({
                   !isVertical,
               })}
             >
-              <Heading as="h1" size={6} weight="normal" mb="none">
+              <Heading
+                id="page-title"
+                tabIndex={-1}
+                as="h1"
+                size={6}
+                weight="normal"
+                mb="none"
+              >
                 {heading}
               </Heading>
               {superhead && (
