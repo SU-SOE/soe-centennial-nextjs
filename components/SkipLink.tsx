@@ -12,7 +12,7 @@ type SkiplinkProps = Omit<
 };
 
 export const Skiplink = ({
-  href = "#main-content",
+  href = "#page-title",
   children = "Skip to main content",
   className,
   ...rest

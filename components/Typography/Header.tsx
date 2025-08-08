@@ -10,7 +10,14 @@ type Props = Omit<TypographyProps, "as"> &
 
 export const H1 = ({ children, className, ...props }: Props) => {
   return (
-    <Heading {...props} as="h1" size="f6" className={cnb("rs-mt-2", className)}>
+    <Heading
+      {...props}
+      id="page-title"
+      tabIndex={-1}
+      as="h1"
+      size="f6"
+      className={cnb("rs-mt-2", className)}
+    >
       {children}
     </Heading>
   );
@@ -76,7 +83,11 @@ type HeadingProps = Props & {
 const Header = ({ children, level = 1, ...props }: HeadingProps) => {
   switch (level) {
     case 1:
-      return <H1 {...props}>{children}</H1>;
+      return (
+        <H1 id="page-title" tabIndex={-1} {...props}>
+          {children}
+        </H1>
+      );
     case 2:
       return <H2 {...props}>{children}</H2>;
     case 3:
