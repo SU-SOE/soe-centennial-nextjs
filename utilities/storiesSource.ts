@@ -68,7 +68,7 @@ export const storiesSource = {
     href: internalLinks.decade1,
   },
   decade2: {
-    heading: "“Preparing roads over which culture may ride in comfort”",
+    heading: "The foundation of a new era in engineering",
     chapter: "Decade 2",
     href: internalLinks.decade2,
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
