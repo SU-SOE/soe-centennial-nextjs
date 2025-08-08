@@ -57,7 +57,7 @@ export default function page() {
   return (
     <div className="bg-cen-blue-xlight">
       <Masthead logoColor="default" />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <article>
           <div className="cc rs-mt-8">
             <H1 className="max-w-700 w-full">Explore through video</H1>

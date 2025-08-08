@@ -89,14 +89,20 @@ export const Slideshow = ({
       ".slick-slide:not(.slick-active) a",
     );
     if (hiddenLinks) {
-      [...hiddenLinks].map((link) => link.setAttribute("tabindex", "-1"));
+      [...hiddenLinks].map((link) => {
+        link.setAttribute("tabindex", "-1");
+        link.setAttribute("aria-hidden", "true");
+      });
     }
 
     const visibleLinks = slideShowRef.current?.querySelectorAll(
       ".slick-slide.slick-active a",
     );
     if (visibleLinks) {
-      [...visibleLinks].map((link) => link.removeAttribute("tabindex"));
+      [...visibleLinks].map((link) => {
+        link.removeAttribute("tabindex");
+        link.removeAttribute("aria-hidden");
+      });
     }
   };
 

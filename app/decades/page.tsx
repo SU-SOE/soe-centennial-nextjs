@@ -61,7 +61,7 @@ export default function page() {
   return (
     <div className="bg-cen-blue-xlight">
       <Masthead logoColor="default" />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <article>
           <div className="cc rs-mt-8">
             <div className="flex flex-col lg:flex-row w-full max-w-1500 gap-0 lg:gap-[7.6rem] lg:items-end">

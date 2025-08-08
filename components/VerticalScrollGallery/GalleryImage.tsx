@@ -77,7 +77,6 @@ export const GalleryImage = ({
         zIndex: 10 + index,
       }}
       className="absolute inset-0"
-      aria-hidden="true"
     >
       <ImageSlide
         src={item.src}

@@ -70,7 +70,7 @@ export const storiesSource = {
   decade2: {
     heading: "“Preparing roads over which culture may ride in comfort”",
     chapter: "Decade 2",
-    href: internalLinks.decade1,
+    href: internalLinks.decade2,
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1741906517/00007000_0009_pvv788.jpg",
   },
   decade3: {

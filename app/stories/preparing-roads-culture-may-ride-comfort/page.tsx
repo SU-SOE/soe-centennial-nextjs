@@ -184,7 +184,7 @@ export default function page() {
   return (
     <PageTransitionWrapper>
       <Masthead logoColor="white-red" isOverlap isBgDark />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <article>
           <StoryImpactBanner
             isVertical
