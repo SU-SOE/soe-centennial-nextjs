@@ -86,7 +86,7 @@ const MediaCaptionImage = ({
   spacingBottom,
   isCaptionInset,
   isCaptionFullWidth,
-  captionTextColor = "stone-dark",
+  captionTextColor = "black",
   rounded = false,
   animation = "none",
   isPortrait = false,

@@ -34,7 +34,7 @@ const MediaImage = ({ src, alt, caption, className }: MediaImageProps) => {
       </div>
       {caption && (
         <figcaption className="mt-4">
-          <Text className="max-w-prose-wide text-stone-dark">{caption}</Text>
+          <Text className="max-w-prose-wide text-black">{caption}</Text>
         </figcaption>
       )}
     </figure>

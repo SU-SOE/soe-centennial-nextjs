@@ -8,6 +8,7 @@ import { Container } from "@/components/Container";
 import { Heading, Text } from "@/components/Typography";
 import { FlexBox } from "@/components/FlexBox";
 import { ChapterLabel } from "./ChapterLabel";
+import { DecadePager } from "../DecadePager";
 
 type StoryAnimatedBannerProps = HTMLAttributes<HTMLDivElement> & {
   hasLineArt?: boolean;
@@ -90,76 +91,87 @@ export const StoryAnimatedBanner = ({
           as="section"
           bgColor={bgColor}
           width="full"
-          className="cc pt-[16rem] rs-pb-5 md:rs-pt-9 lg:w-full lg:rs-px-7 mb-20 flex items-center justify-center relative 2xl:cc overflow-hidden"
+          pb={3}
+          className="relative pt-[16rem] md:rs-pt-9 mb-20 overflow-hidden text-white"
         >
-          {/* Main background image that starts blurred and comes into focus */}
-          <motion.div
-            className="size-full absolute top-0 left-0 z-0"
-            variants={backgroundVariants}
-          >
-            <Image
-              className="ed11y-ignore object-cover z-[-20]"
-              src={src}
-              alt={alt || ""}
-              loading={"lazy"}
-              fill
-              sizes="100vw"
-            />
-
-            {/* Background overlay gradient that appears after image is in focus */}
-            <motion.div
-              className={cnb(
-                "absolute size-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
-                {
-                  "from-stone-dark to-transparent": bgColor === "stone-dark",
-                  "from-cardinal-red-dark to-transparent": bgColor === "red",
-                },
-              )}
-              variants={overlayGradientVariants}
-            />
-          </motion.div>
-
           <Container
-            className={cnb(
-              "relative flex items-center justify-start w-full z-20 *:text-white rs-py-10 rs-px-2 2xl:px-0",
-            )}
             width="full"
+            pb={6}
+            className="flex items-center justify-center cc lg:w-full lg:rs-px-7 2xl:cc"
           >
-            {/* Text content that fades in with the background overlay */}
-            <motion.div variants={contentVariants}>
-              <FlexBox direction="col" className="z-50 max-w-full lg:max-w-600">
-                <Heading as="h1" size="f6" weight="normal" mb="0">
-                  {heading}
-                </Heading>
-                {chapter && (
-                  <ChapterLabel
-                    className="order-first rs-mb-0"
-                    text={chapter}
-                  />
+            {/* Main background image that starts blurred and comes into focus */}
+            <motion.div
+              className="size-full absolute top-0 left-0 z-0"
+              variants={backgroundVariants}
+            >
+              <Image
+                className="ed11y-ignore object-cover z-[-20]"
+                src={src}
+                alt={alt || ""}
+                loading={"lazy"}
+                fill
+                sizes="100vw"
+              />
+
+              {/* Background overlay gradient that appears after image is in focus */}
+              <motion.div
+                className={cnb(
+                  "absolute size-full bg-opacity-80 z-[-10] bg-gradient-to-r from-10%",
+                  {
+                    "from-stone-dark to-transparent": bgColor === "stone-dark",
+                    "from-cardinal-red-dark to-transparent": bgColor === "red",
+                  },
                 )}
-                {superhead && (
-                  <Text className="order-first" mb={2} font="dm-mono">
-                    {superhead}
-                  </Text>
-                )}
-                {dek && (
-                  <Text mb="0" size="f3" className="rs-mt-4">
-                    {dek}
-                  </Text>
-                )}
-                {body && (
-                  <Text variant="overview" mb="none" className="rs-mt-1">
-                    {body}
-                  </Text>
-                )}
-                {byline && (
-                  <Text mb="0" size="base" className="rs-mt-4">
-                    {byline}
-                  </Text>
-                )}
-              </FlexBox>
+                variants={overlayGradientVariants}
+              />
             </motion.div>
+
+            <Container
+              className={cnb(
+                "relative flex items-center justify-start w-full z-20 *:text-white rs-py-10 rs-px-2 2xl:px-0",
+              )}
+              width="full"
+            >
+              {/* Text content that fades in with the background overlay */}
+              <motion.div variants={contentVariants}>
+                <FlexBox
+                  direction="col"
+                  className="z-50 max-w-full lg:max-w-600"
+                >
+                  <Heading as="h1" size="f6" weight="normal" mb="0">
+                    {heading}
+                  </Heading>
+                  {chapter && (
+                    <ChapterLabel
+                      className="order-first rs-mb-0"
+                      text={chapter}
+                    />
+                  )}
+                  {superhead && (
+                    <Text className="order-first" mb={2} font="dm-mono">
+                      {superhead}
+                    </Text>
+                  )}
+                  {dek && (
+                    <Text mb="0" size="f3" className="rs-mt-4">
+                      {dek}
+                    </Text>
+                  )}
+                  {body && (
+                    <Text variant="overview" mb="none" className="rs-mt-1">
+                      {body}
+                    </Text>
+                  )}
+                  {byline && (
+                    <Text mb="0" size="base" className="rs-mt-4">
+                      {byline}
+                    </Text>
+                  )}
+                </FlexBox>
+              </motion.div>
+            </Container>
           </Container>
+          <DecadePager transparent />
         </Container>
 
         {caption && (
@@ -167,7 +179,7 @@ export const StoryAnimatedBanner = ({
             <Text
               id="hero-caption"
               variant="caption"
-              className="max-w-prose-wide"
+              className="max-w-prose-wide text-black"
             >
               {caption}
             </Text>
