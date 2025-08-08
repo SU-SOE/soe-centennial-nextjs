@@ -22,7 +22,6 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
     {
       href,
       big = false,
-      disabled = false,
       solid = false,
       isLight = false,
       buttonElem = false,
@@ -40,14 +39,9 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
         // Visual styles
         "text-digital-red-light": isLight && !solid,
         "text-white": !isLight,
-        "text-white bg-digital-red": solid,
+        "text-white bg-digital-red hocus:bg-digital-red-xlight": solid,
         "px-48 py-22 type-0": big,
         "rs-px-1 rs-py-0 text-16 md:text-18": !big,
-        // Interactive styles
-        "cursor-pointer hocus:text-white hocus:bg-digital-red hocus:underline":
-          !disabled,
-        "hocus:bg-digital-red-xlight": solid && !disabled,
-        "cursor-not-allowed pointer-events-none": disabled,
       },
     );
 
