@@ -24,6 +24,8 @@ const ExamplePage = async () => {
       <AnimatedHero />
       <FeatureHero>
         <Heading
+          id="page-title"
+          tabIndex={-1}
           as="h1"
           leading="none"
           className="2xl:whitespace-pre-line font-normal -mt-01em rs-mb-8 xl:max-w-1200"

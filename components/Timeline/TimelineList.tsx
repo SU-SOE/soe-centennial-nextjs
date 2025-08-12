@@ -150,6 +150,8 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
       <>
         <Container width="site" pt={8}>
           <Heading
+            id="page-title"
+            tabIndex={-1}
             leading="tight"
             size={6}
             as="h1"
