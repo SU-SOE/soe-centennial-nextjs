@@ -128,12 +128,12 @@ export const StoryAnimatedBanner = ({
 
             <Container
               className={cnb(
-                "relative flex items-center justify-start w-full z-20 *:text-white rs-py-10 rs-px-2 2xl:px-0",
+                "relative flex items-center justify-start w-full z-20 rs-py-10 rs-px-2 2xl:px-0",
               )}
               width="full"
             >
               {/* Text content that fades in with the background overlay */}
-              <motion.div variants={contentVariants}>
+              <motion.div variants={contentVariants} className="text-white">
                 <FlexBox
                   direction="col"
                   className="z-50 max-w-full lg:max-w-600"
