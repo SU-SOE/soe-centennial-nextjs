@@ -70,7 +70,6 @@ export const SimpleGalleryImage = ({
         zIndex: 10 + index,
       }}
       className="absolute inset-0"
-      aria-hidden="true"
     >
       <ImageSlide
         src={image.src}

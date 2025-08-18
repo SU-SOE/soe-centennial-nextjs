@@ -133,7 +133,14 @@ export const StoryLineBanner = ({
               "rs-mt-2": hasLineArt,
             })}
           >
-            <Heading as="h1" size="f6" weight="normal" mb="0">
+            <Heading
+              id="page-title"
+              tabIndex={-1}
+              as="h1"
+              size="f6"
+              weight="normal"
+              mb="0"
+            >
               {heading}
             </Heading>
             {chapter && (
