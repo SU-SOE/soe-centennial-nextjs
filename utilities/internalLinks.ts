@@ -5,7 +5,7 @@
 
 export const internalLinks = {
   home: "/",
-  events: "/events",
+  events: "/stories/events",
   may29EventProgram: "/events/centennial-perspectives-ai-future-computing",
   may29EventVideo: "/stories/centennial-perspectives-ai-future-computing",
   may15EventVideo: "/stories/a-once-in-a-century-birthday-celebration",
@@ -24,4 +24,6 @@ export const internalLinks = {
   decade8: "/stories/the-future-firmly-in-sight",
   decade9: "/stories/designing-for-the-future",
   decade10: "/stories/defining-the-next-era",
+  videos: "/stories/videos",
+  decades: "/stories/decades",
 } as const;

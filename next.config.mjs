@@ -26,6 +26,21 @@ const nextConfig = {
         destination: "/404",
         permanent: true,
       },
+      {
+        source: "/decades",
+        destination: "/stories/decades",
+        permanent: true,
+      },
+      {
+        source: "/videos",
+        destination: "/stories/videos",
+        permanent: true,
+      },
+      {
+        source: "/events",
+        destination: "/stories/events",
+        permanent: true,
+      },
     ];
   },
 };

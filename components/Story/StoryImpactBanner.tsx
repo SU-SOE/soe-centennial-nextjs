@@ -138,14 +138,21 @@ export const StoryImpactBanner = ({
           >
             <AnimateInView
               animation="sharpen"
-              className={cnb("flex flex-col text-center rs-mt-7", {
+              className={cnb("flex flex-col text-center rs-mt-7 text-white", {
                 "rs-mb-6 items-center [&_p]:max-w-800 [&_h*]:max-w-1100":
                   isVertical,
                 "rs-mb-5 max-w-700 md:w-2/3 xl:w-1/2 md:text-left md:m-0 items-center md:items-start":
                   !isVertical,
               })}
             >
-              <Heading as="h1" size={6} weight="normal" mb="none">
+              <Heading
+                id="page-title"
+                tabIndex={-1}
+                as="h1"
+                size={6}
+                weight="normal"
+                mb="none"
+              >
                 {heading}
               </Heading>
               {superhead && (

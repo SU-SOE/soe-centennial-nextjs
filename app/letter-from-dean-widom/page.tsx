@@ -42,7 +42,14 @@ export default function LetterFromDeanPage() {
       <main id="main-content" tabIndex={-1}>
         <article>
           <Container width="site">
-            <Heading as="h1" size="f6" mb={8} className="rs-mt-7 w-fit mx-auto">
+            <Heading
+              id="page-title"
+              tabIndex={-1}
+              as="h1"
+              size="f6"
+              mb={8}
+              className="rs-mt-7 w-fit mx-auto"
+            >
               Letter from Dean Widom
             </Heading>
           </Container>

@@ -22,7 +22,6 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
     {
       href,
       big = false,
-      disabled = false,
       solid = false,
       isLight = false,
       buttonElem = false,
@@ -35,19 +34,14 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
   ) => {
     const buttonStyle = cnb(
       // Base styles
-      "group/button flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg border-4 border-digital-red-xlight no-underline font-normal",
+      "group/button flex flex-row items-center justify-center sm:block font-dm-sans w-fit transition rounded-lg border-4 border-digital-red-xlight no-underline font-normal hocus:text-white hocus:underline",
       {
         // Visual styles
-        "text-digital-red-light": isLight && !solid,
+        "text-digital-red-light hocus:bg-digital-red": isLight && !solid,
         "text-white": !isLight,
-        "text-white bg-digital-red": solid,
+        "text-white bg-digital-red hocus:bg-digital-red-light": solid,
         "px-48 py-22 type-0": big,
         "rs-px-1 rs-py-0 text-16 md:text-18": !big,
-        // Interactive styles
-        "cursor-pointer hocus:text-white hocus:bg-digital-red hocus:underline":
-          !disabled,
-        "hocus:bg-digital-red-xlight": solid && !disabled,
-        "cursor-not-allowed pointer-events-none": disabled,
       },
     );
 

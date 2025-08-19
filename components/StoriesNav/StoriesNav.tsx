@@ -3,12 +3,13 @@ import React from "react";
 import { Button } from "@/components/Cta";
 import { usePathname } from "next/navigation";
 import { Text } from "../Typography";
+import { internalLinks } from "@/utilities/internalLinks";
 
 const navigationItems = [
-  { label: "All stories", href: "/stories" },
-  { label: "Decade stories", href: "/decades" },
-  { label: "Video stories", href: "/videos" },
-  { label: "Event Coverage", href: "/events" },
+  { label: "All stories", href: internalLinks.stories },
+  { label: "Decade stories", href: internalLinks.decades },
+  { label: "Video stories", href: internalLinks.videos },
+  { label: "Event Coverage", href: internalLinks.events },
 ];
 
 export const StoriesNav = () => {
@@ -28,8 +29,6 @@ export const StoriesNav = () => {
               isLight
               className="py-8 px-16 lg:rs-px-1 lg:rs-py-0"
               solid={pathname === item.href}
-              disabled={pathname === item.href}
-              tabIndex={pathname === item.href ? -1 : 0}
             >
               {item.label}
             </Button>
