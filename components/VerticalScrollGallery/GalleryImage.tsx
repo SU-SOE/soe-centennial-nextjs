@@ -80,7 +80,7 @@ export const GalleryImage = ({
     >
       <ImageSlide
         src={item.src}
-        alt=""
+        alt={item.alt}
         caption={item.caption}
         className="w-full h-full object-cover"
       />
