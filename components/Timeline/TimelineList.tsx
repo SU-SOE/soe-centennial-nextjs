@@ -43,9 +43,13 @@ type TimelineProps = {
 };
 
 // Helper function to clean props
-const getItemProps = (item: TimelineItemData) => {
-  const { decadeAnchor, ...cleanProps } = item;
-  return cleanProps;
+const getItemProps = (
+  item: TimelineItemData,
+  exclude: string[] = ["decadeAnchor", "body"],
+) => {
+  const result = { ...item };
+  exclude.forEach((key) => delete (result as Record<string, unknown>)[key]);
+  return result;
 };
 
 const TimelineList = ({ timelineData }: TimelineProps) => {
@@ -243,7 +247,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                           className="w-full"
                         >
                           <TimelineItemFull
-                            {...getItemProps(row[0])} // Only take the first item
+                            {...getItemProps(row[0], ["decadeAnchor"])} // Only take the first item
                             id={row[0].uuid}
                             aria-expanded={expandedUuid === row[0].uuid}
                             aria-controls={row[0].anchor}
@@ -284,7 +288,7 @@ const TimelineList = ({ timelineData }: TimelineProps) => {
                           >
                             <AnimateInView animation="slideUp" delay={delay}>
                               <TimelineItem
-                                {...getItemProps(item)}
+                                {...getItemProps(item, ["body"])}
                                 id={item.uuid}
                                 aria-expanded={expandedUuid === item.uuid}
                                 aria-controls={item.anchor}
