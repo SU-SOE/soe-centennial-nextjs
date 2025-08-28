@@ -47,6 +47,7 @@ export const TimelineItemFull = forwardRef<
         )}
         onClick={onClick}
         tabIndex={0}
+        aria-label={`${isExpanded ? "Collapse" : "Expand"} details for ${heading}`}
       >
         <TimelineImage
           src={image}

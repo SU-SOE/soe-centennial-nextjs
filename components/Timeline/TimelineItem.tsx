@@ -15,6 +15,8 @@ type TimelineItemProps = HTMLAttributes<HTMLButtonElement> & {
   year: string;
   /** The URL of the image for this timeline item. */
   image: string;
+  /** The alt text for the image. */
+  alt: string;
   /** The size variant of the item (e.g. small, medium, large). */
   size?: types.SizeType;
   /** Defines the trapezoid shape direction. */
@@ -36,6 +38,7 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
       heading,
       year,
       image,
+      alt,
       size = "medium",
       trapezoid = "left",
       className,
@@ -64,10 +67,11 @@ export const TimelineItem = forwardRef<HTMLButtonElement, TimelineItemProps>(
         )}
         onClick={onClick}
         tabIndex={0}
+        aria-label={`${isExpanded ? "Collapse" : "Expand"} details for ${heading}`}
       >
         <TimelineImage
           src={image}
-          alt=""
+          alt={alt || ""}
           size={size}
           trapezoidAngle={trapezoid}
           isExpanded={isExpanded}
