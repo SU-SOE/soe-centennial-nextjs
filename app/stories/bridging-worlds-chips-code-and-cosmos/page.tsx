@@ -428,11 +428,13 @@ export default function page() {
                 In 1976, computer scientists Martin Hellman and Whitfield Diffie
                 announced the world’s first public-key data encryption
                 technology. Their research had faced heavy opposition from the
-                National Security Agency, which held that In 1976, computer
-                scientists Martin Hellman and Whitfield Diffie announced the
-                world’s first public-key data encryption technology. Their
-                research had faced heavy opposition from the National Security
-                Agency, which held that
+                National Security Agency, which held that such technology was
+                the provenance of government agencies and warned that the
+                findings would weaken national security by enabling widespread
+                access to encryption technology. To prevent its publication, the
+                NSA applied pressure on the journal, on Stanford, and on the
+                National Science Foundation, attempting to delay or halt the
+                research by arguing that it posed a national security threat.
               </Text>
               <Text>
                 Decades later, the pair would share the 2015 A.M. Turing Award.
