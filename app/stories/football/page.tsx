@@ -58,7 +58,7 @@ export default function page() {
         <article>
           <div className="cc bg-cardinal-red text-white">
             <H1 className="m-0 rs-pt-8 rs-pb-1 flex flex-col text-center">
-              Stanford Football Highlight
+              Stanford Football Highlights
             </H1>
           </div>
           <EmbedMediaHero
