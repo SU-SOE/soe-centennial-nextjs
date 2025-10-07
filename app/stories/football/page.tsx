@@ -30,15 +30,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
-        alt: "Four-tier white cake with 'Stanford School of Engineering' written in frosting on the side and candles shaped like the number 100 on top.",
+        alt: "",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Stanford Football Highlights | 100 Years of Stanford Engineering",
-    description:
-      "Stanford Engineering celebrated its 100th birthday with a campus-wide celebration, live music, research exhibits, and remarks from academic and industry leaders.",
+    description: "",
     images: [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1748471475/100thCentennial_cakeimage_uvzm3z.png",
     ],
