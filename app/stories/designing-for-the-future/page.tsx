@@ -1009,7 +1009,7 @@ export default function page() {
               Women were making strides in other engineering disciplines, too.
               In the Department of Management Science and Engineering, Margaret
               Brandeau devised a mathematical model for optimally allocating
-              resources among HIV prevention strategies in subSaharan Africa,
+              resources among HIV prevention strategies in sub-Saharan Africa,
               helping policymakers maximize the impact of limited public health
               resources. In 2011, Jennifer Dionne’s work in materials science
               and engineering showed how light-based techniques could be used to
