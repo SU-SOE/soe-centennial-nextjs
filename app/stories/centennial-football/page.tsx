@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1759973730/100th_Centennial_Tailgate_xzkl1x.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
         alt: "",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Centennial Football | 100 Years of Stanford Engineering",
     description: "",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1759973730/100th_Centennial_Tailgate_xzkl1x.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
     ],
   },
 };
@@ -64,7 +64,7 @@ export default function page() {
           <EmbedMediaHero
             autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1759973730/100th_Centennial_Tailgate_xzkl1x.jpg"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg"
             title="Centennial Football"
             className="bg-cardinal-red"
             mediaUrl="https://www.youtube.com/embed/nsxuADCSTYg?si=fcS-9_GRgC9wsqtV"
