@@ -67,7 +67,7 @@ export default function page() {
             previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg"
             title="Centennial Football"
             className="bg-cardinal-red"
-            mediaUrl="https://www.youtube.com/embed/nsxuADCSTYg?si=fcS-9_GRgC9wsqtV"
+            mediaUrl="https://www.youtube.com/embed/rT7vaa4owk8?si=lcFgf9HL_KOasg8T"
           />
           <OneCol className="rs-mt-5">
             <Text variant="overview" className="cen-drop-cap">
