@@ -220,8 +220,8 @@ export default function Home() {
               className="rs-mb-5"
               hasBgImage
               widePreviewImage
-              bgColor="red"
-              {...storiesSource.may29EventVideo}
+              bgColor="stone-dark"
+              {...storiesSource.footballEventVideo}
             />
             <ExploreMore
               isThreeCol

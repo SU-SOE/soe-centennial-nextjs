@@ -22,6 +22,13 @@ export const storiesSource = {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
     href: internalLinks.may29EventProgram,
   },
+  footballEventVideo: {
+    chapter: "Video",
+    heading: "Stanford Engineering Centennial Football Celebration",
+    body: "September 27, 2025",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
+    href: internalLinks.footballEventVideo,
+  },
   may29EventVideo: {
     chapter: "Video",
     heading: "Centennial Perspectives: AI and the Future of Computing",
