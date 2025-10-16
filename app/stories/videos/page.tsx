@@ -46,6 +46,7 @@ export const metadata: Metadata = {
 };
 
 const posterCardData1 = storiesSource.may29EventVideo;
+const posterCardData2 = storiesSource.footballEventVideo;
 
 const storyData1 = [
   storiesSource.transformativeBreakthroughs,
@@ -67,6 +68,16 @@ export default function page() {
           </div>
           <StoriesNav />
           <ul className="list-none p-0">
+            <li>
+              <StoryPosterCard
+                className="rs-mb-5"
+                hasBgImage
+                imageLeft
+                widePreviewImage
+                bgColor="stone-dark"
+                {...posterCardData2}
+              />
+            </li>
             <li>
               <StoryPosterCard
                 hasBgImage

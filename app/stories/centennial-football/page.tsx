@@ -12,32 +12,37 @@ import { storiesSource } from "@/utilities/storiesSource";
 
 export const metadata: Metadata = {
   title: "Centennial Football | 100 Years of Stanford Engineering",
-  description: "",
+  description:
+    "On September 27, 2025, Stanford Engineering teamed up with Stanford Football for a one-of-a-kind celebration marking the School of Engineering’s centennial. Before the Cardinal faced off against San Jose State University, Dean Jennifer Widom and Football General Manager Andrew Luck (BS ’12, MA ’23) led the players in “The Walk” to the stadium, riding a motorized couch built by the student Moonshot Club, followed by the Solar Car team’s latest vehicle, Azimuth. A centennial-themed tailgate brought together faculty, students, staff, and alumni to celebrate, with engineering exhibits and remarks from Widom and Luck. In the stadium they joined the whole Stanford community to cheer the Cardinal to a thrilling last-minute 30-29 victory.",
   keywords: [
     "Stanford Engineering",
+    "Stanford Football",
     "Centennial Celebration",
-    "Engineering Innovation",
-    "Stanford Alumni",
-    "Engineering Legacy",
     "Jennifer Widom",
-    "Donald Knuth",
     "Andrew Luck",
-    "Jonathan Levin",
+    "Moonshot Club",
+    "Solar Car Team",
+    "Azimuth",
+    "Tailgate",
+    "Stanford vs San Jose State",
+    "Victory",
   ],
   openGraph: {
     title: "Centennial Football | 100 Years of Stanford Engineering",
-    description: "",
+    description:
+      "On September 27, 2025, Stanford Engineering teamed up with Stanford Football for a one-of-a-kind celebration marking the School of Engineering’s centennial. Before the Cardinal faced off against San Jose State University, Dean Jennifer Widom and Football General Manager Andrew Luck (BS ’12, MA ’23) led the players in “The Walk” to the stadium, riding a motorized couch built by the student Moonshot Club, followed by the Solar Car team’s latest vehicle, Azimuth. A centennial-themed tailgate brought together faculty, students, staff, and alumni to celebrate, with engineering exhibits and remarks from Widom and Luck. In the stadium they joined the whole Stanford community to cheer the Cardinal to a thrilling last-minute 30-29 victory.",
     images: [
       {
         url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
-        alt: "",
+        alt: "Stanford community celebrating during the centennial football game against San Jose State University.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Centennial Football | 100 Years of Stanford Engineering",
-    description: "",
+    description:
+      "Stanford Engineering and Stanford Football teamed up on September 27, 2025, for a unique centennial celebration. The event included 'The Walk' led by Dean Jennifer Widom and Andrew Luck, a tailgate with engineering exhibits, and a thrilling game where the Cardinal secured a last-minute 30-29 victory against San Jose State University.",
     images: [
       "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
     ],
