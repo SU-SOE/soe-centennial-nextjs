@@ -24,7 +24,7 @@ export const storiesSource = {
   },
   footballEventVideo: {
     chapter: "Video",
-    heading: "Stanford Engineering Centennial football celebration",
+    heading: "Stanford Engineering centennial football celebration",
     body: "September 27, 2025",
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
     href: internalLinks.footballEventVideo,
