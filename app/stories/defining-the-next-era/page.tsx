@@ -528,7 +528,7 @@ export default function page() {
               <H2 className="mt-0">New era in artificial intelligence</H2>
               <Text>
                 Since the inception of the term “artificial intelligence” in the
-                1950s by soonto-be Stanford faculty member John McCarthy,
+                1950s by soon-to-be Stanford faculty member John McCarthy,
                 Stanford had been in the vanguard of the field. As the field
                 blossomed in the 2010s with advances in computing power, vast
                 amounts of data, and new machine-learning techniques, it also
