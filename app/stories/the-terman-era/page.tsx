@@ -558,14 +558,14 @@ export default function page() {
               alt=""
               caption="Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. | Hatfield Aerial Surveys / Special Collections & University Archives."
             />
+            <Quote
+              className="rs-my-6"
+              width="wide"
+              quoteColor="red"
+              teaser="[Western universities] can serve as catalysts that speed the reaction by which the discoveries of pure science are turned to practical uses that advance industrial technology and create new industries.”"
+              source="— Fred Terman"
+            />
           </Container>
-          <Quote
-            className="rs-my-6"
-            width="wide"
-            quoteColor="red"
-            teaser="[Western universities] can serve as catalysts that speed the reaction by which the discoveries of pure science are turned to practical uses that advance industrial technology and create new industries.”"
-            source="— Fred Terman"
-          />
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
