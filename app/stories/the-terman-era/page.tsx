@@ -747,6 +747,7 @@ export default function page() {
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
+              className="w-full lg:min-w-650 mx-auto md:w-2/3 xl:w-1/2 mx-auto"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766099/flugge-lotz_n5vuhj.jpg"
               caption="Irmgard Flügge-Lotz. | Stanford News Service."
             />
