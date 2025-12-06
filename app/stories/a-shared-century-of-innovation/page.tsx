@@ -63,6 +63,8 @@ const exploreStoriesData = [
 ];
 
 export default function page() {
+  const extLink =
+    "transition-all ease-in-out duration-1000 underline text-stone-dark hocus:text-digital-red hocus:decoration-digital-red";
   return (
     <>
       <Masthead logoColor="white-red" isOverlap isBgDark />
@@ -101,7 +103,7 @@ export default function page() {
               region on the map and impacted Stanford’s trajectory, says Charles
               Eesley, professor of management science and engineering and
               faculty director of the{" "}
-              <a href="https://stvp.stanford.edu/">
+              <a className={extLink} href="https://stvp.stanford.edu/">
                 Stanford Technology Ventures Program
               </a>
               . “I think that’s what forms the cornerstone of the
@@ -343,11 +345,17 @@ export default function page() {
             <Text>
               For those desiring a formalized interdisciplinary experience, the
               two schools have collaborated to offer joint MS/MBA degrees in
-              <a href="https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/ms-cs">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/ms-cs"
+              >
                 computer science
               </a>{" "}
               and{" "}
-              <a href="https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/ms-ee">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/ms-ee"
+              >
                 electrical engineering
               </a>
               . Highly rigorous, the three-year programs require participants to
@@ -478,32 +486,53 @@ export default function page() {
             </Text>
             <Text>
               Resources range from major academic centers, including{" "}
-              <a href="https://stvp.stanford.edu/">
+              <a className={extLink} href="https://stvp.stanford.edu/">
                 Stanford Technology Ventures Program
               </a>{" "}
               (STVP), the{" "}
-              <a href="https://www.gsb.stanford.edu/experience/about/centers-institutes/ces">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/about/centers-institutes/ces"
+              >
                 Center for Entrepreneurial Studies
               </a>{" "}
               (CES), and the{" "}
-              <a href="https://www.gsb.stanford.edu/experience/about/centers-institutes/csi">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/about/centers-institutes/csi"
+              >
                 Center for Social Innovation
               </a>{" "}
               (CSI) to programs including{" "}
-              <a href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom/venture-studio">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom/venture-studio"
+              >
                 Stanford Venture Studio
               </a>
-              , <a href="https://dschool.stanford.edu/">Stanford d.school</a>,
-              the{" "}
-              <a href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom/botha-chan-innovation">
+              ,{" "}
+              <a className={extLink} href="https://dschool.stanford.edu/">
+                Stanford d.school
+              </a>
+              , the{" "}
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom/botha-chan-innovation"
+              >
                 Botha Chan Innovation Program
               </a>
               , the{" "}
-              <a href="https://www.gsb.stanford.edu/experience/learning/social-innovation/fellowships/idif">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/learning/social-innovation/fellowships/idif"
+              >
                 Impact Design Immersion Fellowship
               </a>
               , and the{" "}
-              <a href="https://stvp.stanford.edu/mayfield-fellows-program">
+              <a
+                className={extLink}
+                href="https://stvp.stanford.edu/mayfield-fellows-program"
+              >
                 Mayfield Fellows program
               </a>
               .
@@ -534,18 +563,24 @@ export default function page() {
             <Text>
               Students can also participate in dozens of cross-disciplinary
               courses, including{" "}
-              <a href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/courses/formation-new-ventures">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/courses/formation-new-ventures"
+              >
                 Formation of New Ventures
               </a>
               , a case-based course where faculty and successful entrepreneurs
               teach students about the myriad issues faced by all new founders;
-              <a href="https://extreme.stanford.edu/">
+              <a className={extLink} href="https://extreme.stanford.edu/">
                 Design for Extreme Affordability
               </a>
               , a two-quarter course bringing together students from across
               disciplines to work with social sector partners and vulnerable
               communities on real-world problems; and{" "}
-              <a href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/courses/startup-garage">
+              <a
+                className={extLink}
+                href="https://www.gsb.stanford.edu/experience/learning/entrepreneurship/courses/startup-garage"
+              >
                 Startup Garage
               </a>
               , an intensive and hands-on course taught by expert faculty and
@@ -599,14 +634,20 @@ export default function page() {
             </Text>
             <Text>
               The online{" "}
-              <a href="https://teamformationhub.stanford.edu/">
+              <a
+                className={extLink}
+                href="https://teamformationhub.stanford.edu/"
+              >
                 Team Formation Hub
               </a>{" "}
               is a useful resource for finding students with similar
               entrepreneurial interests and complementary skillsets, says
               Whitman, as are the multiple team-formation sessions hosted across
               campus each year and the annual{" "}
-              <a href="https://treehacks.com/">TreeHacks session</a>.
+              <a className={extLink} href="https://treehacks.com/">
+                TreeHacks session
+              </a>
+              .
             </Text>
             <Text>
               “Our goal is to ensure our entrepreneurially minded alumni leave
