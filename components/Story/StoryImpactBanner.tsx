@@ -65,6 +65,7 @@ type StoryImpactBannerProps = HTMLAttributes<HTMLDivElement> & {
   isImageWide?: boolean;
   isCaptionInHero?: boolean;
   bgImageSrc?: string;
+  disablePager?: boolean;
   src: string;
   alt: string;
 };
@@ -85,6 +86,7 @@ export const StoryImpactBanner = ({
   isVertical = false,
   isImageWide = false,
   isCaptionInHero = false,
+  disablePager = false,
   src,
   alt,
   ...props
@@ -216,7 +218,7 @@ export const StoryImpactBanner = ({
             </FlexBox>
           </FlexBox>
         </Container>
-        <DecadePager transparent />
+        {!disablePager && <DecadePager transparent />}
       </Container>
       {!isCaptionInHero && bgColor !== "white" && (
         <div className="mt-13 cc">

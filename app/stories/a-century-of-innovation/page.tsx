@@ -71,6 +71,7 @@ export default function page() {
             src="https://res.cloudinary.com/duv7bozlj/image/upload/v1745960409/Centennial-launch-story-image_dexebg.jpg"
             alt="A collage of Stanford engineering students and faculty"
             caption="Images courtesy of James Gibbons, Andrew Brodhead, Special Collections & University Archives, Federic Osada, Stanford News Service."
+            disablePager
           />
           <div className="max-w-1500 w-full cc 3xl:p-0 rs-mb-6">
             <Text mb={6}>By Andrew Myers and Julie Greicius</Text>
