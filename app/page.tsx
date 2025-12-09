@@ -45,8 +45,12 @@ export const metadata: Metadata = {
   },
 };
 
-const exploreMoreData = [
+const exploreMoreDataRow1 = [
   storiesSource.may15EventVideo,
+  storiesSource.footballEventVideo,
+];
+
+const exploreMoreDataRow2 = [
   storiesSource.transformativeBreakthroughs,
   storiesSource.storyInnovation,
 ];
@@ -215,17 +219,20 @@ export default function Home() {
                 </Text>
               </div>
             </AnimateInView>
-
             <StoryPosterCard
               className="rs-mb-5"
               hasBgImage
               widePreviewImage
               bgColor="stone-dark"
-              {...storiesSource.footballEventVideo}
+              {...storiesSource.sharedInnovation}
             />
             <ExploreMore
-              isThreeCol
-              stories={exploreMoreData}
+              stories={exploreMoreDataRow1}
+              className="py-0 rs-mb-5"
+              cardBgColor="white"
+            />
+            <ExploreMore
+              stories={exploreMoreDataRow2}
               className="py-0 rs-mb-5"
               cardBgColor="white"
             />

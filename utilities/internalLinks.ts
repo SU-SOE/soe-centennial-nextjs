@@ -27,4 +27,5 @@ export const internalLinks = {
   decade10: "/stories/defining-the-next-era",
   videos: "/stories/videos",
   decades: "/stories/decades",
+  sharedInnovation: "/stories/a-shared-century-of-innovation",
 } as const;
