@@ -53,8 +53,8 @@ export const Quote = ({
         <blockquote>
           {teaser && (
             <Text
+              useDefaultTracking
               size="quote-lg"
-              leading="normal"
               font="dm-sans"
               className={styles.teaser}
             >
@@ -63,8 +63,8 @@ export const Quote = ({
           )}
           {body && (
             <Text
+              useDefaultTracking
               size="quote-md"
-              leading="normal"
               font="dm-sans"
               className={styles.body}
             >

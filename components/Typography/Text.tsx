@@ -19,9 +19,6 @@ export type TypographyProps = {
   variant?: types.TextVariantType;
   leading?: types.FontLeadingType;
   mb?: MarginType;
-  /**
-   * If true, use default tracking for the font - for DM Sans
-   */
   useDefaultTracking?: boolean;
   italic?: boolean;
   srOnly?: boolean;
@@ -47,7 +44,7 @@ export const Text = ({
   variant,
   leading,
   mb,
-  useDefaultTracking = font === "dm-sans",
+  useDefaultTracking,
   italic,
   srOnly,
   uppercase,
@@ -74,7 +71,11 @@ export const Text = ({
         italic ? "italic" : "",
         srOnly ? "sr-only" : "",
         uppercase ? "uppercase" : "",
-        useDefaultTracking ? "tracking-normal" : "",
+        useDefaultTracking
+          ? "tracking-normal"
+          : font === "dm-mono"
+            ? "tracking-[0.2rem]"
+            : "tracking-tight",
         className,
       )}
     >
