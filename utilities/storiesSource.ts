@@ -128,4 +128,10 @@ export const storiesSource = {
     href: internalLinks.decade10,
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751294123/WelcomeDay_GroupPhotos_9.26.24_01_O5A0256_msl1am.jpg",
   },
+  sharedInnovation: {
+    heading:
+      "Stanford GSB and the School of Engineering: A Shared Century of Innovation",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1764957043/key-8_Decade1_v2_xgunpi.jpg",
+    href: internalLinks.sharedInnovation,
+  },
 } as const;

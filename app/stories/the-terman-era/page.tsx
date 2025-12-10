@@ -558,14 +558,14 @@ export default function page() {
               alt=""
               caption="Aerial view showing the Stanford Industrial Park area before major development, ca. 1953. | Hatfield Aerial Surveys / Special Collections & University Archives."
             />
+            <Quote
+              className="rs-my-6"
+              width="wide"
+              quoteColor="red"
+              teaser="[Western universities] can serve as catalysts that speed the reaction by which the discoveries of pure science are turned to practical uses that advance industrial technology and create new industries.”"
+              source="— Fred Terman"
+            />
           </Container>
-          <Quote
-            className="rs-my-6"
-            width="wide"
-            quoteColor="red"
-            teaser="[Western universities] can serve as catalysts that speed the reaction by which the discoveries of pure science are turned to practical uses that advance industrial technology and create new industries.”"
-            source="— Fred Terman"
-          />
           <div className="flex w-full justify-start">
             <HorizontalLineart lineartType="C" />
           </div>
@@ -747,6 +747,7 @@ export default function page() {
             <MediaCaptionImage
               rounded
               aspectRatio="4x3"
+              className="w-full lg:min-w-650 mx-auto md:w-2/3 xl:w-1/2 mx-auto"
               src="https://res.cloudinary.com/duv7bozlj/image/upload/v1744766099/flugge-lotz_n5vuhj.jpg"
               caption="Irmgard Flügge-Lotz. | Stanford News Service."
             />

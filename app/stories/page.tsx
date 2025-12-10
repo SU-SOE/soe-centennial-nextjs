@@ -48,8 +48,11 @@ export const metadata: Metadata = {
   },
 };
 
-const storyData1 = [
+const storyDataRow1 = [
+  storiesSource.footballEventVideo,
   storiesSource.may15EventVideo,
+];
+const storyDataRow2 = [
   storiesSource.transformativeBreakthroughs,
   storiesSource.deanWidomLetter,
 ];
@@ -89,10 +92,29 @@ export default function page() {
                 {...storiesSource.storyInnovation}
               />
             </li>
+            <li>
+              <StoryPosterCard
+                className="rs-my-5"
+                hasBgImage
+                widePreviewImage
+                bgColor="stone-dark"
+                {...storiesSource.sharedInnovation}
+              />
+            </li>
+            <li aria-hidden="true" className="flex w-full justify-end rs-mb-8">
+              <HorizontalLineart lineartType="B" />
+            </li>
             <li className="mx-auto w-full max-w-1200">
               <ExploreMore
-                isThreeCol
-                stories={storyData1}
+                stories={storyDataRow1}
+                className="py-0"
+                cardBgColor="white"
+                headerTag="h2"
+              />
+            </li>
+            <li className="mx-auto w-full max-w-1200">
+              <ExploreMore
+                stories={storyDataRow2}
                 className="py-0"
                 cardBgColor="white"
                 headerTag="h2"

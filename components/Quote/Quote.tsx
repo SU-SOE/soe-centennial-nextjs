@@ -52,12 +52,22 @@ export const Quote = ({
         <QuoteMark className="rs-mb-0" fill={quoteColor} />
         <blockquote>
           {teaser && (
-            <Text size="quote-lg" font="dm-sans" className={styles.teaser}>
+            <Text
+              size="quote-lg"
+              leading="normal"
+              font="dm-sans"
+              className={styles.teaser}
+            >
               {teaser}
             </Text>
           )}
           {body && (
-            <Text size="quote-md" font="dm-sans" className={styles.body}>
+            <Text
+              size="quote-md"
+              leading="normal"
+              font="dm-sans"
+              className={styles.body}
+            >
               {body}&quot;
             </Text>
           )}

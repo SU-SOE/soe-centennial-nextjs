@@ -52,15 +52,15 @@ module.exports = function () {
       },
       '.cen-quote-lg': {
         ...theme('decanter.typography.type3'),
-        lineHeight: theme('lineHeight.display'),
+        lineHeight: theme('lineHeight.normal'),
       },
       '.cen-quote-md': {
         ...theme('decanter.typography.type2'),
-        lineHeight: theme('lineHeight.display'),
+        lineHeight: theme('lineHeight.normal'),
       },
       '.cen-quote-sm': {
         ...theme('decanter.typography.type0'),
-        lineHeight: theme('lineHeight.display'),
+        lineHeight: theme('lineHeight.normal'),
       },
     };
 
