@@ -226,6 +226,14 @@ export default function Home() {
               bgColor="stone-dark"
               {...storiesSource.sharedInnovation}
             />
+            <StoryPosterCard
+              className="rs-mb-5"
+              hasBgImage
+              imageLeft
+              widePreviewImage
+              bgColor="red"
+              {...storiesSource.dec7EventVideo}
+            />
             <ExploreMore
               stories={exploreMoreDataRow1}
               className="py-0 rs-mb-5"

@@ -7,6 +7,7 @@ export const internalLinks = {
   home: "/",
   events: "/stories/events",
   may29EventProgram: "/events/centennial-perspectives-ai-future-computing",
+  dec7EventVideo: "/stories/big-ideas-begin-here-sergey-brin",
   footballEventVideo: "/stories/centennial-football",
   may29EventVideo: "/stories/centennial-perspectives-ai-future-computing",
   may15EventVideo: "/stories/a-once-in-a-century-birthday-celebration",
