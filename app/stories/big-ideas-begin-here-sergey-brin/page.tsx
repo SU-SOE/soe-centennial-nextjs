@@ -75,7 +75,7 @@ export default function page() {
             previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1765487972/SergeyBrin_12.7.2025_dfmtn5.jpg"
             title="Big ideas begin here: Sergey Brin at Stanford"
             className="bg-cardinal-red"
-            mediaUrl="https://www.youtube.com/embed/7vX4ekDXog8?si=66ZZ3tM2hlvxdiH5"
+            mediaUrl="https://www.youtube.com/embed/0nlNX94FcUE?si=MAIIbJHM5Edb0HhD"
           />
           <OneCol className="rs-mt-5">
             <Text variant="overview" className="cen-drop-cap">
