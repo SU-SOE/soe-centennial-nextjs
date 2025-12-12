@@ -188,7 +188,7 @@ export default function page() {
               was possible.
             </Text>
             <Text>
-              Only seven years after the armistice that ended World War II, the
+              Only seven years after the armistice that ended World War I, the
               state was in the midst of great change. Industry — manufacturing,
               construction, agriculture, and petroleum — was booming, there was
               a technological revolution, and prosperity was on the rise.
@@ -221,13 +221,15 @@ export default function page() {
               the first floor of Jordan Hall.
             </Text>
             <Text>
-              Hoover devised a decidedly startup solution: pushing for and
-              receiving support from scores of well-placed Pacific Coast
-              businessmen and firms to finance a graduate school of business at
-              Stanford. It would take barely a year for Stanford GSB to open,
-              with its inaugural complement of 16 MBA students and two faculty
-              members operating in two classrooms next to the biology labs on
-              the first floor of Jordan Hall.
+              At the same time, Stanford President Ray Lyman Wilbur and a select
+              faculty committee chaired by mechanical engineering professor
+              Horatio Ward Stebbins, noting increasing national dissatisfaction
+              with the state of engineering education, decided to pool the
+              university’s individual engineering departments under the umbrella
+              of a single school: the School of Engineering. It would offer both
+              a four-year undergraduate and a two-year graduate degree, and
+              feature a radically new curriculum – one that was broad and
+              included liberal arts electives from all fields.
             </Text>
             <Text>
               Designed to help students expand their worldview and better
