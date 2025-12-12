@@ -65,6 +65,13 @@ export default function page() {
           <StoryPosterCard
             className="rs-mb-5"
             hasBgImage
+            widePreviewImage
+            bgColor="red"
+            {...storiesSource.dec7EventVideo}
+          />
+          <StoryPosterCard
+            className="rs-mb-5"
+            hasBgImage
             imageLeft
             widePreviewImage
             bgColor="stone-dark"

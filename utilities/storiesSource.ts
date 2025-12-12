@@ -22,6 +22,13 @@ export const storiesSource = {
     src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1751409856/PerspectivesEvent_5.29.25_jybidv.jpg",
     href: internalLinks.may29EventProgram,
   },
+  dec7EventVideo: {
+    chapter: "Video",
+    heading: "Big ideas begin here: Sergey Brin at Stanford",
+    body: "December 7, 2025",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1765487972/SergeyBrin_12.7.2025_dfmtn5.jpg",
+    href: internalLinks.dec7EventVideo,
+  },
   footballEventVideo: {
     chapter: "Video",
     heading: "Stanford Engineering centennial football celebration",
