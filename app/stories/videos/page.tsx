@@ -73,6 +73,15 @@ export default function page() {
                 className="rs-mb-5"
                 hasBgImage
                 widePreviewImage
+                bgColor="stone-dark"
+                {...storiesSource.jan15EventVideo}
+              />
+            </li>
+            <li>
+              <StoryPosterCard
+                className="rs-mb-5"
+                hasBgImage
+                widePreviewImage
                 bgColor="red"
                 {...storiesSource.dec7EventVideo}
               />
