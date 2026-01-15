@@ -48,7 +48,7 @@ export default function page() {
         <article>
           <div className="cc bg-cardinal-red text-white">
             <H1 className="m-0 rs-pt-8 rs-pb-1 flex flex-col text-center">
-              A glimpse into Stanford Engineering's centennial celebrations
+              A glimpse into Stanford Engineering&apos;s centennial celebrations
             </H1>
           </div>
           <EmbedMediaHero
@@ -61,7 +61,8 @@ export default function page() {
           />
           <OneCol className="rs-mt-5">
             <Text variant="overview" className="cen-drop-cap">
-              In 2025, the Stanford School of Engineering marked its 100-year anniversary. Please enjoy this glimpse into the celebrations that were hosted throughout the year.
+              In 2025, the Stanford School of Engineering marked its 100-year anniversary. Please enjoy this glimpse into the celebrations 
+              that were hosted throughout the year.
             </Text>
           </OneCol>
           <div className="flex w-full justify-end rs-mb-1">
