@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: "",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg",
         alt: "",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "A glimpse into Stanford Engineering's centennial celebrations",
     description: "",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg",
     ],
   },
 };
@@ -54,8 +54,8 @@ export default function page() {
           <EmbedMediaHero
             autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1760551199/Stanford_-SJSU_Bests_nrnr23.jpg"
-            title="Video Story Placeholder"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg"
+            title="A glimpse into Stanford Engineering's centennial celebrations"
             className="bg-cardinal-red"
             mediaUrl="https://www.youtube.com/embed/dnyaqjpb39k?si=CBaZgVXGTjGd8G9E"
           />
