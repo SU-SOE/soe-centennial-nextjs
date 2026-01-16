@@ -67,6 +67,21 @@ export default function page() {
             hasBgImage
             widePreviewImage
             bgColor="red"
+            {...storiesSource.jan20LongEventVideo}
+          />
+          <StoryPosterCard
+            className="rs-mb-5"
+            hasBgImage
+            imageLeft
+            widePreviewImage
+            bgColor="stone-dark"
+            {...storiesSource.jan20EventVideo}
+          />
+          <StoryPosterCard
+            className="rs-mb-5"
+            hasBgImage
+            widePreviewImage
+            bgColor="red"
             {...storiesSource.dec7EventVideo}
           />
           <StoryPosterCard

@@ -6,7 +6,10 @@
 export const internalLinks = {
   home: "/",
   events: "/stories/events",
-  jan15EventVideo: "/stories/glimpse-stanford-engineerings-centennial-celebrations",
+  jan20EventVideo:
+    "/stories/glimpse-stanford-engineerings-centennial-celebrations",
+  jan20LongEventVideo:
+    "/stories/looking-back-stanford-engineerings-centennial-celebrations",
   may29EventProgram: "/events/centennial-perspectives-ai-future-computing",
   dec7EventVideo: "/stories/big-ideas-begin-here-sergey-brin",
   footballEventVideo: "/stories/centennial-football",
