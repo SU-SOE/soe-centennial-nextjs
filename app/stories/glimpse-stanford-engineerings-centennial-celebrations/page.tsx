@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     description: "",
     images: [
       {
-        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg",
-        alt: "",
+        url: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768595106/100thCentennial_d504r2.jpg",
+        alt: "Nighttime view of the Stanford Engineering building, with banners and a project Stanford Engineering 1925–2025 sign",
       },
     ],
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "A glimpse into Stanford Engineering's centennial celebrations",
     description: "",
     images: [
-      "https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg",
+      "https://res.cloudinary.com/duv7bozlj/image/upload/v1768595106/100thCentennial_d504r2.jpg",
     ],
   },
 };
@@ -54,7 +54,7 @@ export default function page() {
           <EmbedMediaHero
             autoplay
             isPreview
-            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg"
+            previewImageSrc="https://res.cloudinary.com/duv7bozlj/image/upload/v1768595106/100thCentennial_d504r2.jpg"
             title="A glimpse into Stanford Engineering's centennial celebrations"
             className="bg-cardinal-red"
             mediaUrl="https://www.youtube.com/embed/dnyaqjpb39k?si=CBaZgVXGTjGd8G9E"

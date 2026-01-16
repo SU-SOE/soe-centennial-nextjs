@@ -19,8 +19,8 @@ export const storiesSource = {
     chapter: "Video",
     heading: "A glimpse into Stanford Engineering's centennial celebrations",
     body: "January 20, 2026",
-    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg",
-    alt: "A collage of Stanford engineering students and faculty",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768595106/100thCentennial_d504r2.jpg",
+    alt: "Nighttime view of the Stanford Engineering building, with banners and a project Stanford Engineering 1925–2025 sign",
     href: internalLinks.jan20EventVideo,
   },
   jan20LongEventVideo: {
