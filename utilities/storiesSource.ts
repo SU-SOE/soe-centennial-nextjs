@@ -15,6 +15,14 @@
 import { internalLinks } from "./internalLinks";
 
 export const storiesSource = {
+  jan15EventVideo: {
+    chapter: "Video",
+    heading: " A glimpse into Stanford Engineering's centennial celebrations",
+    body: "January 2026",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768504239/100thCentennial_A189_M9A8842_dgukbw.jpg",
+    alt: "A collage of Stanford engineering students and faculty",
+    href: internalLinks.jan15EventVideo,
+  },
   may29EventProgram: {
     chapter: "Event Program",
     heading: "Centennial Perspectives: AI and the Future of Computing",

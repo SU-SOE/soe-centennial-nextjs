@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 };
 
 const storyDataRow1 = [
+  storiesSource.jan15EventVideo,
   storiesSource.footballEventVideo,
   storiesSource.may15EventVideo,
 ];
