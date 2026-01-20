@@ -15,6 +15,22 @@
 import { internalLinks } from "./internalLinks";
 
 export const storiesSource = {
+  jan20EventVideo: {
+    chapter: "Video",
+    heading: "A glimpse into Stanford Engineering's centennial celebrations",
+    body: "January 20, 2026",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1768595106/100thCentennial_d504r2.jpg",
+    alt: "Nighttime view of the Stanford Engineering building, with banners and a project Stanford Engineering 1925–2025 sign",
+    href: internalLinks.jan20EventVideo,
+  },
+  jan20LongEventVideo: {
+    chapter: "Video",
+    heading: "Looking back at Stanford Engineering’s centennial celebrations",
+    body: "January 20, 2026",
+    src: "https://res.cloudinary.com/duv7bozlj/image/upload/v1750885012/100thCentennial_A162_O5A1684_m621fu.jpg",
+    alt: "Two people add notes to a Centennial Memory Wall filled with red and white sticky notes forming the number 100 for Stanford Engineering's 1925-2025 celebration.",
+    href: internalLinks.jan20LongEventVideo,
+  },
   may29EventProgram: {
     chapter: "Event Program",
     heading: "Centennial Perspectives: AI and the Future of Computing",

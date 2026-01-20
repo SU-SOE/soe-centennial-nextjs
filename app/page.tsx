@@ -45,14 +45,9 @@ export const metadata: Metadata = {
   },
 };
 
-const exploreMoreDataRow1 = [
-  storiesSource.may15EventVideo,
-  storiesSource.footballEventVideo,
-];
-
-const exploreMoreDataRow2 = [
-  storiesSource.transformativeBreakthroughs,
-  storiesSource.storyInnovation,
+const videoHighlightData = [
+  storiesSource.jan20LongEventVideo,
+  storiesSource.jan20EventVideo,
 ];
 
 const events = [
@@ -226,21 +221,8 @@ export default function Home() {
               bgColor="stone-dark"
               {...storiesSource.sharedInnovation}
             />
-            <StoryPosterCard
-              className="rs-mb-5"
-              hasBgImage
-              imageLeft
-              widePreviewImage
-              bgColor="red"
-              {...storiesSource.dec7EventVideo}
-            />
             <ExploreMore
-              stories={exploreMoreDataRow1}
-              className="py-0 rs-mb-5"
-              cardBgColor="white"
-            />
-            <ExploreMore
-              stories={exploreMoreDataRow2}
+              stories={videoHighlightData}
               className="py-0 rs-mb-5"
               cardBgColor="white"
             />

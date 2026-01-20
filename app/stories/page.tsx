@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 };
 
 const storyDataRow1 = [
+  storiesSource.jan20EventVideo,
   storiesSource.footballEventVideo,
   storiesSource.may15EventVideo,
 ];
@@ -99,6 +100,16 @@ export default function page() {
                 widePreviewImage
                 bgColor="stone-dark"
                 {...storiesSource.sharedInnovation}
+              />
+            </li>
+            <li>
+              <StoryPosterCard
+                className="rs-mb-5"
+                hasBgImage
+                imageLeft
+                widePreviewImage
+                bgColor="red"
+                {...storiesSource.jan20LongEventVideo}
               />
             </li>
             <li aria-hidden="true" className="flex w-full justify-end rs-mb-8">
