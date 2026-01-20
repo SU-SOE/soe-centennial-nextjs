@@ -50,17 +50,6 @@ const videoHighlightData = [
   storiesSource.jan20EventVideo,
 ];
 
-const exploreMoreDataRow1 = [
-  storiesSource.dec7EventVideo,
-  storiesSource.may15EventVideo,
-  storiesSource.footballEventVideo,
-];
-
-const exploreMoreDataRow2 = [
-  storiesSource.transformativeBreakthroughs,
-  storiesSource.storyInnovation,
-];
-
 const events = [
   {
     className: "*:w-full lg:*:max-w-700",
@@ -234,17 +223,6 @@ export default function Home() {
             />
             <ExploreMore
               stories={videoHighlightData}
-              className="py-0 rs-mb-5"
-              cardBgColor="white"
-            />
-            <ExploreMore
-              isThreeCol
-              stories={exploreMoreDataRow1}
-              className="py-0 rs-mb-5"
-              cardBgColor="white"
-            />
-            <ExploreMore
-              stories={exploreMoreDataRow2}
               className="py-0 rs-mb-5"
               cardBgColor="white"
             />
